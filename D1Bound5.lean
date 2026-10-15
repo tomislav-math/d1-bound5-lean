@@ -16,3 +16,7 @@ import D1Bound5.MaximalCoordinates
 import D1Bound5.FullRingClassification
 import D1Bound5.NormCompatibility
 import D1Bound5.IrregularGrowth
+import D1Bound5.RootPerturbation
+import D1Bound5.TailErrorBounds
+import D1Bound5.TailAnalytic
+import D1Bound5.TailAnalyticMain

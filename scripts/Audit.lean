@@ -58,3 +58,23 @@ run_cmd do
 
 #print axioms D1Bound5.irregular_growth
 #check @D1Bound5.irregular_growth
+
+#print axioms D1Bound5.normalized_root_perturbation
+
+#print axioms D1Bound5.exists_sign_root_perturbation
+
+#print axioms D1Bound5.tail_error_sum_lt_one
+
+#print axioms D1Bound5.tail_sum_root_bounds
+
+#print axioms D1Bound5.exists_ring_sign_root_perturbation
+
+#print axioms D1Bound5.exists_aligned_square_roots
+
+#print axioms D1Bound5.no_regular_large_tail_core
+
+#print axioms D1Bound5.tail_irregular_of_four_le
+
+#print axioms D1Bound5.IsD1Tuple.tail_irregular_and_growth_of_four_le
+#check @D1Bound5.tail_irregular_of_four_le
+#check @D1Bound5.IsD1Tuple.tail_irregular_and_growth_of_four_le
