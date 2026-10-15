@@ -1,0 +1,39 @@
+name: Private Lean checks
+
+# Manual only. Confirm this input only after checking the free Actions allowance.
+"on":
+  workflow_dispatch:
+    inputs:
+      free_allowance_confirmed:
+        description: Existing free Actions allowance has been verified
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: ${{ inputs.free_allowance_confirmed }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      LEAN_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6
+        with:
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'false'
+          use-github-cache: 'false'
+          check-reservoir-eligibility: 'false'
+      - name: Fetch pinned public dependency cache
+        run: bash scripts/fetch_cache.sh
+      - name: Build, axiom audit and kernel replay
+        run: bash scripts/check.sh --replay
