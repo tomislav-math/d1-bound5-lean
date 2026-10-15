@@ -1,0 +1,32 @@
+CROSS-REVIEW OF APP-01–APP-04
+
+Frozen manuscript SHA-256: 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70.
+Read proposals/approximation.json and the actual source passages at lines 878–1035, 1038–1060, 1174–1197, 1331–1405, 1666–1706, 1772–1853, and 1854–2010. No source or proposal edit made.
+
+Disposition: all four proposals preserve the mathematics and may be accepted as exposition changes. No mandatory amendment found. All exact old strings and cited labels were checked against the frozen source.
+
+APP-01 — ACCEPT
+The matrix Q_k is nonsingular by eq:ordinary-residue-det. The evaluation vector has first coordinate Hz≠0. Column divisibility makes the nonzero row value a multiple of H in O_K, so division by H gives a nonzero algebraic integer of modulus at least one. Thus the new sentence is literally true, not just a metaphor for an approximation argument. The subsequent comparison with approximation errors is eq:ordinary-root-transfer, and interval exclusion is supplied later by eq:ff-window. It does not claim that these first estimates alone cover every D. Integrality over Z before specialization and the absence of a UFD assumption are preserved.
+
+APP-02 — ACCEPT
+The role distinction is correct. The eventual interval chain starts from a structural lower bound, uses the finite families at particular orders to bridge gaps, and ends with O_j for every j≥5. The preceding Section 4 also supplies the fixed-order M bridge; the replacement does not state that all bridges originate in Section 5, merely that this section's finite constructions supply intervening intervals. “At every order” refers to the availability of the two-entry family, not to a claim that all orders must occur in the final tail. The replacement is a useful explanation of why additional finite families follow an all-order construction.
+
+APP-03 — ACCEPT
+Mappings checked individually:
+• P is exactly the four rows R_ab, H=R_ab+R_bs−R_as, T_ab, V=T_as−T_bs in eq:ff-prows. The residual is mathcal R(q), and mathcal R(1)<3 is explicitly proved after eq:ff-P.
+• Q consists of the five rows L_ab,L_as,L_bs,L_at,L_bt, whose determinant is eq:ff-qdet. Their derived inequality is 1<55T³C²/Z+3TZ/(2A²C⁴), giving the printed Q endpoints.
+• M is eq:ordinary-three-M, with U=(8/9)608² B³S⁸C³ and V=(3920/81)B²S⁵/(A³C⁶). This gives l=4M_m²B⁶S¹⁶C⁵ and u=A⁶C¹¹/(4R_m²B⁴S¹⁰), exactly the table.
+• N3,bs is N3 specialized at x=b,y=s, so X=B,Y=S. This gives l=4M_n²S¹⁴C⁷ and u=B⁸C¹¹/(4R_bs²S⁶). The retained gap supplies the guards.
+• O_j is eq:ordinary-integer-k with k=j. The sharper R_2 there is weakened to 2AC²/(5B), so U=3C(42B³C)^j/B and V=1/[2(2AC²/(5B))^j]. Applying eq:ff-window gives exactly the displayed l and u.
+The interval conversion reference is sufficient because its statement already includes closed endpoints, possible emptiness, and the common guards, all supplied in the immediately preceding paragraph. Replacing the repeated derivation does not remove a unique hypothesis or a proof needed elsewhere.
+
+APP-04 — ACCEPT
+The actual normalized overlap condition is
+  u_left/(1+epsilon) > l_right/(1−epsilon),
+equivalently u_left/l_right > h=(1+epsilon)/(1−epsilon)=4001/3999.
+The starting condition is instead G>l_Q/(1−epsilon), where G=A²C⁷/(S²T⁴) and D>G by eq:integrated-6. The replacement correctly distinguishes this first comparison from the subsequent ones and explicitly includes the epsilon factors. The table column names really are “lower quantity” and “required constant,” so that wording is more accurate than the original reference to left and right columns.
+For example, the Q→N2 raw ratio is A⁴C²/(36·735²B⁸T²). Substitution of C>A²T⁵/S² and T>2ABS gives 256A¹⁶S⁴/(36·735²), so the required constant includes h exactly as printed. The initial ratio G/l_Q similarly exceeds 1024A²⁰B¹⁰/12100. No exponent or factor is silently lost.
+The term “requires” describes the sufficient comparisons used to run this chosen chain. It does not assert necessity for any conceivable exclusion proof, and is clear in context.
+
+Truth classification of new explanatory claims
+All substantive new sentences are true within their stated contextual scope. No constants, hypotheses, interval endpoints, labels, order branches, exceptional cases, normalizations, or theorem conclusions are changed. No unfamiliar terminology is introduced. The mappings in APP-03 also help the later Sections 8–9 tables because those reuse the same family labels. Rendered validation remains necessary only if the proposals are eventually integrated.

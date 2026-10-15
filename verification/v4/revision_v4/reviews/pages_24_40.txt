@@ -1,0 +1,34 @@
+READ-ONLY VISUAL AND LINEAR-READER AUDIT — V4, PAGES 24–40
+
+Artifact: revision_v4/final_build/D1_bound5-v4.pdf
+Expected PDF SHA-256: e31656ca74ed839a09ede3a9d4e6a26a5ba2d2f13b5b6c959e13259fe3e87644
+Source SHA-256 supplied by coordinator: 776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3
+
+Method: Visually inspected every full rendered page, page-24.png through page-40.png inclusive, using view_image with original detail. These are individual full-page inspections, not contact-sheet-only checks. Also extracted pages 24–40 with pdftotext -layout to check reference-placeholder text and aid linear reading. No PDF/source edits, recompilation, font changes, margin changes, or preamble changes were performed.
+
+Result: PASS. No required local layout fixes found in this range. No clipped or overlapping formula, unreadable table, visibly unresolved reference placeholder, or disruptive page break was observed. Formulas remain inside the text block; equation numbers and footer page numbers are separate and readable. This is a visual/reader-flow review, not a new mathematical verification or a hyperlink-target audit.
+
+Per-page record (all viewed at original detail):
+
+24 — PASS. Coefficient arrays, residual formulas, (5.14), (5.15), determinant, and closing contradiction fit cleanly. No collision with equation numbers or footer.
+25 — PASS. Small coefficient-sum table and polynomial list are legible; exponents/subscripts are distinct. Explanation of (5.16) continues in a natural order.
+26 — PASS. (5.17), Section 5.4 heading, three-row array, (5.18), and final residual bound are fully visible. Heading has substantive following text.
+27 — PASS. Section 5.5 begins with the hypotheses and defines notation before Table 2. Table 2 is compact but readable, with clear columns and no formula overlap. Interval-induction discussion follows the table coherently. The ordinary-tail paragraph continues normally onto page 28.
+28 — PASS. Continued ordinary-tail argument, extra hypotheses (5.19), Table 3, its worked quotient explanation, chain choices, and conclusion read in a coherent sequence. Table 3 is the densest item in this range but is readable at full-page original detail; column rules and substitutions do not overlap formulas. Both branching conditions and equality-case sentence are easy to locate.
+29 — PASS. Proposition 6.1 gives the concrete application immediately after the common interval machinery. Constants, references to Section 5.5/Table 3/(5.19), smallest quotient, and final ordinary-tail inequality are visible and readable. No premature conclusion or missing visible connecting text was found.
+30 — PASS. Section 7 and 7.1 headings, Lemma 7.2, determinant proof, products, and sums fit with adequate separation. The proof ends on the same page.
+31 — PASS. Lemma 7.3 assumptions, (7.1)–(7.3), residue formulas, and final three-part bound fit within the text block. Long formulas remain legible.
+32 — PASS. Lemma 7.3 closes before Section 7.2 begins. The integral, rational comparisons, new assumptions, (7.4), and bottom exact comparisons are fully visible. No footer collision.
+33 — PASS. Lemma 7.4 and its case analysis are dense but readable. Display equations and referenced estimates fit cleanly; proof continues normally onto page 34.
+34 — PASS. Lemma 7.4 conclusion and Lemma 7.5 start are clearly separated. (7.7) and reversible-identity formulas are visible. Minor optional flow polish only: the last sentence introduces lambda_±, displays it, then completes with “have product one” at the top of page 35. This is understandable and does not warrant a mandatory fix.
+35 — PASS. Continuation of Lemma 7.5, descent explanation, Lemma 7.6, square-test array, and (7.8) fit. No broken formula or overlap. The page-34 sentence continuation is immediately clear.
+36 — PASS. Finite-calculation explanation leads into Table 4. Table caption and column headers are readable, all rows are aligned, and the continuation note is visible above the footer.
+37 — PASS. Table 4 repeats its column headers, has a clearly separated total row, and ends before Lemma 7.7. No row splitting or clipped table contents. Lemma proof continues normally to page 38.
+38 — PASS. Lemma 7.7 ends, followed by Lemmas 7.8 and 7.9. Displayed bounds, square roots, and subscripts remain legible. No collision or ambiguous reference placeholder.
+39 — PASS. Lemma 7.9 continuation, logarithmic bound, Pell/convergent argument, and closing display fit cleanly. Long prose paragraphs remain readable and correctly follow the formulas.
+40 — PASS. Recurrences, count table, Lemma 7.9 conclusion, and Lemma 7.10 are well separated. Count table is clearly readable. Final relation fits above the footer; continuation to the following page is ordinary proof flow.
+
+Common interval linear-reading assessment:
+The common interval section is on pages 27–28, with its first concrete application on page 29 (rather than pages 29–32). The sequence is coherent: common hypotheses and notation; forbidden endpoint Table 2; general induction/ordinary-tail explanation; application hypotheses; overlap Table 3; an example showing how its quotient is obtained; explicit branch chain; equality cases; tail criterion; then Proposition 6.1 supplies numerical constants and checks the minimum. All visible cross-references in these pages render as readable numbered references, with no “??” placeholders. No local rewrite or layout repair is needed for this sequence.
+
+Recommended action: retain the current font, margins, preamble, and layout. The page-34/35 sentence break may be left as-is; it is cosmetic only.

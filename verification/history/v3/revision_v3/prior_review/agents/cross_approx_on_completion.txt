@@ -1,0 +1,21 @@
+Independent cross-review of completion.json by approximation reviewer
+
+Authority: input/D1_bound5-v2.tex, SHA-256 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70.
+Read the three completion proposals, their source blocks, and current proof consumers. Reconstructed interval machinery independently in the approximation report before reading these proposals. Source unchanged. This review tests the new prose, not every finite computation cited by the completion reviewer.
+
+COMP-01: Accept the mathematical content, with a small scope clarification recommended.
+The two added sentences accurately describe the proof: Proposition prop:pr-H2 excludes the five regions by the common interval chain (3050–3144), leaving N(a)=1 with B<8 or N(a)=2 with B<4; field reduction and bounded pair enumeration follow (3185–3240). For each retained pair, the same interval comparison excludes S>=15 (3504–3516), and the remaining third entries are enumerated with N(s)<=224 (3519–3545). This does not introduce a fourth-entry enumeration.
+However, 'the forbidden intervals cover every value of D allowed by the growth estimates' is conditional on being in a region of B or S that the proof is excluding. Without the condition, a very literal reading could take it as a global claim that would already finish the one-small proof. Recommended exact sentence:
+'We bound $B$ and $S$ by showing that, in each range to be excluded, the forbidden intervals cover every value of $D$ allowed by the growth estimates.'
+Keep the remainder of the proposed paragraph. This changes only explanatory scope and leaves all conclusions and thresholds fixed.
+
+COMP-02: Accept as true and correctly scoped.
+At 3691–3701 the growing ordinary tail excludes N(t)>=N_0 for each of the fifty-six triples and (1,3,8). The rational triple is then excluded by t<32 and t>48 (3703–3715). For the fifty-six other triples, the printed finite complement uses T>2BS directly in 38 cases (3721–3722), the irregular-triple quadratic in 16 further cases (3730–3754), and a square calculation after the same quadratic in the last two cases (3756–3772). Thus the summary's 'growth of an irregular triple, with a separate square calculation for the last two cases' represents the actual proof. The word 'last' refers to the proof's last two cases, not to an asserted position in the table. No formula or statement change is needed.
+
+COMP-03: Accept the enclosure comparison; recommend one normalization-aware wording adjustment.
+The new inequality Phi<=phi_1 is exact. Put d_0=|b-s|/S and v=B/S as at 2919–2920. Since d_bs=|b-s|^2 and s_0=S^2, sqrt(d_bs^6/s_0^6)=d_0^6. Since b_0=B^2, sqrt(b_0*d_bs^5/s_0^6)=v*d_0^5. Monotonicity of square root therefore identifies the square root of the displayed maximum with Phi, and the upward rational enclosure gives phi_1>=Phi. At 2920 the corresponding coefficient is kappa*Phi, while 3577 sets R_bs=kappa*phi_1, where kappa=3535/409600>0.
+The text currently says that R_bs 'bounds the relabeled residual from above'. R_bs is specifically the scalar residual constant after factoring out the anchor and C powers from eq:ff-point-residual. To avoid making the normalization disappear in the explanation, use:
+'The other enclosure satisfies $\Phi\le\phi_1$, so the displayed $R_{bs}$ is a valid residual constant for $N_{3,bs}$.'
+This is the precise claim needed by the upper endpoint in 3642 and the overlap at 3668. It changes no coefficient and requires no new assumption.
+
+Overall: all three proposals improve orientation and preserve the actual proof route. No mathematical blocker. Recommend the two small wording refinements above before treating the prose as ready. No source edit, integration or rendered acceptance is claimed.

@@ -1,0 +1,245 @@
+{
+  "baseline_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "output_sha256": "a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5",
+  "baseline": "input/D1_bound5-v2.tex",
+  "output": "D1_bound5-v3.tex",
+  "changes": [
+    {
+      "id": "SM-04",
+      "category": "exposition",
+      "reason": "Resolve the local collision between the tuple entry s and log10(S)",
+      "old": "If $s=\\log_{10}S\\ge49$, then $400<10^3$ gives\n$\\log_{10}D>8s-3$. This contradicts\n\\eqref{sm:five-uniform-continuous}, since\n$(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing\nand equals $1/375$ at $49$.",
+      "new": "If $x=\\log_{10}S\\ge49$, then $400<10^3$ gives $\\log_{10}D>8x-3$. This contradicts~\\eqref{sm:five-uniform-continuous}, since $(8x-3)-g(x)=x-227/5-(4047/25)/(x-4)$ is increasing and equals $1/375$ at $49$.",
+      "before_offset": 85274,
+      "final_line_start": 2262,
+      "final_line_end": 2262
+    },
+    {
+      "id": "APP-03",
+      "category": "exposition",
+      "reason": "Identify P, Q, M and the relabelled/ordinary rows before the first table",
+      "old": "For the finite two-anchor and three-anchor constructions, these are\ncoefficient and residual bounds in the indicated integral normalizations.\nUse the row \\(P\\) with residual constant \\(3\\), and put\n\\(H_P=\\max(BS^3,B^3S^2)\\).\n\nIn the following table, \\((l,u)\\) denotes the forbidden closed interval\n\\([l/(1-\\epsilon),u/(1+\\epsilon)]\\) for \\(D\\). This conversion follows\nby making both summands of the corresponding strict integral-form\nbound at most \\(1/2\\), and using\n\\((1-\\epsilon)CD<|\\sqrt{cd+1}|^2<(1+\\epsilon)CD\\).",
+      "new": "For the finite constructions, these constants bound the coefficients and residuals in their stated integral normalizations. In the table, $P$ denotes the four quadratic rows in~\\eqref{eq:ff-prows}, $Q$ the five linear rows with determinant~\\eqref{eq:ff-qdet}, and $M$ the estimate~\\eqref{eq:ordinary-three-M}. For $P$, use $\\mathcal R(1)<3$ and put $H_P=\\max(BS^3,B^3S^2)$. The row $N_{3,bs}$ uses $N_3$ with fixed entries $b,s$, and $O_j$ uses~\\eqref{eq:ordinary-integer-k} at $k=j$. Each pair $(l,u)$ denotes the forbidden closed interval $[l/(1-\\epsilon),u/(1+\\epsilon)]$ for $D$, by~\\eqref{eq:ff-window}.",
+      "before_offset": 71507,
+      "final_line_start": 1916,
+      "final_line_end": 1916
+    },
+    {
+      "id": "EARLY02",
+      "category": "exposition",
+      "reason": "Make the L4 nonvanishing inference explicit",
+      "old": "The form \\(L_4\\) satisfies the hypotheses of Lemma~\\ref{lem:direct-four}.\nIt is nonzero because\n\\[\n \\frac{C^2}{17BS^3T/A}>\n \\frac9{17}A^3\\frac{BT}{S}>\n \\frac{18}{17}A^3B^2>1.\n\\]\n",
+      "new": "The form $L_4$ on $(a,b,s,t)$, evaluated at $(c,d)$, satisfies the hypotheses of Lemma~\\ref{lem:direct-four}. If it vanished, that lemma would give $D<17ABSTC^3$. Together with $D>A^2C^5/S^2$, this would imply $C^2<17BS^3T/A$, contrary to\n\\[\n \\frac{C^2}{17BS^3T/A}>\n \\frac9{17}A^3\\frac{BT}{S}>\n \\frac{18}{17}A^3B^2>1.\n\\]\n",
+      "before_offset": 31494,
+      "final_line_start": 865,
+      "final_line_end": 871
+    },
+    {
+      "id": "SM-02",
+      "category": "exposition",
+      "reason": "Identify which interpolation entry has modulus P",
+      "old": "For two small anchors and an interpolation modulus $P\\ge10^8$,\nCorollary~\\ref{cor:ordinary-height-envelope} gives",
+      "new": "Taking $a,b$ as anchors and any of $s,t,c$ with modulus $P\\ge10^8$ as the interpolation entry, Corollary~\\ref{cor:ordinary-height-envelope} gives",
+      "before_offset": 84547,
+      "final_line_start": 2238,
+      "final_line_end": 2238
+    },
+    {
+      "id": "EARLY01",
+      "category": "exposition",
+      "reason": "Explain what the interpolation weights accomplish The integrated exposition review clarified that the combinations, not the tuple entries, must be nonzero.",
+      "old": "\\section{Interpolation of square roots}\n\n",
+      "new": "\\section{Interpolation of square roots}\n\nWe construct integral combinations of square roots by interpolation. The interpolation weights cancel the low-order terms involving the fixed entries, leaving an explicit remainder. When these combinations are nonzero, bounds for them give gaps between the last two entries. We also bound the ranges in which these combinations can vanish.\n\n",
+      "before_offset": 20296,
+      "final_line_start": 528,
+      "final_line_end": 532
+    },
+    {
+      "id": "APP-02",
+      "category": "exposition",
+      "reason": "Explain the role of the finite approximation families",
+      "old": "We give finite formulas for every row used in this section. As before, we prove the required divisibility in the polynomial ring over $\\mathbb Z$ before evaluating the tuple entries.",
+      "new": "The interval arguments below begin with a structural lower bound and end with the two-entry estimates at every order. The finite constructions in this section supply the intervening forbidden intervals. We give finite formulas for every row used here and prove the required divisibility in the polynomial ring over $\\mathbb Z$ before evaluating the tuple entries.",
+      "before_offset": 48908,
+      "final_line_start": 1340,
+      "final_line_end": 1340
+    },
+    {
+      "id": "APP-04",
+      "category": "exposition",
+      "reason": "Explain what the endpoint comparisons require",
+      "old": "The initial bound \\eqref{eq:integrated-6} and the interval endpoints yield the following\nsufficient strict comparisons. The left column of quantities must exceed\nthe right column. The first two use \\(C>A^2T^5/S^2,\\ T>2ABS\\).\nThe remaining comparisons use $C>KA^7B^5S^3$.",
+      "new": "The first comparison puts $\\mathcal G$ above the lower endpoint of $Q$, so~\\eqref{eq:integrated-6} places $D$ above that endpoint. Each later comparison requires the preceding upper endpoint to exceed the next lower endpoint, with the factors $1\\mp\\epsilon$ included. The table gives sufficient strict comparisons, so the lower quantity must exceed the required constant. The first two use $C>A^2T^5/S^2$ and $T>2ABS$, and the remaining comparisons use~\\eqref{eq:large-gap}.",
+      "before_offset": 73558,
+      "final_line_start": 1935,
+      "final_line_end": 1935
+    },
+    {
+      "id": "COMP-02",
+      "category": "exposition",
+      "reason": "State the upper-cutoff and lower-growth completion mechanism",
+      "old": "We apply the same argument to these fifty-six triples and to $(1,3,8)$.",
+      "new": "For each of these fifty-six triples and for $(1,3,8)$, the forbidden intervals\ngive a bound $N(t)<N_0$. We then contradict this bound using the growth of an\nirregular triple, with a separate square calculation for the last two cases.",
+      "before_offset": 144230,
+      "final_line_start": 3549,
+      "final_line_end": 3551
+    },
+    {
+      "id": "COMP-03",
+      "category": "exposition",
+      "reason": "Identify the upward enclosure of the relabelled residual constant",
+      "old": "Indeed, $\\mathcal Q\\le q_1$ and $\\mu/(a_0b_0)\\le\\mu/b_0$,\nso the coefficient of $T^5/S^2$ in Lemma~\\ref{lem:retained-gap}\nis at least $K$.\nThe same lemma gives $C>\\max(1000,200S,4T)$ and $D>1000C$,",
+      "new": "Indeed, $\\mathcal Q\\le q_1$ and $\\mu/(a_0b_0)\\le\\mu/b_0$,\nso the coefficient of $T^5/S^2$ in Lemma~\\ref{lem:retained-gap}\nis at least $K$. The other enclosure satisfies $\\Phi\\le\\phi_1$, so the\ndisplayed $R_{bs}$ is a valid residual constant for $N_{3,bs}$.\nThe same lemma gives $C>\\max(1000,200S,4T)$ and $D>1000C$,",
+      "before_offset": 145716,
+      "final_line_start": 3587,
+      "final_line_end": 3591
+    },
+    {
+      "id": "COLD-05",
+      "category": "exposition",
+      "reason": "Make the size-condition statement conditional on the retained-gap lemma",
+      "old": "All their size hypotheses follow from\nLemma~\\ref{lem:retained-gap}.",
+      "new": "Whenever Lemma~\\ref{lem:retained-gap} applies, it supplies all the size hypotheses used in this table.",
+      "before_offset": 120153,
+      "final_line_start": 2921,
+      "final_line_end": 2921
+    },
+    {
+      "id": "NAV-01",
+      "category": "navigation",
+      "reason": "Give the field-reduction lemma a stable label.",
+      "old": "\\begin{lemma}\nUnder Proposition~\\ref{prop:pr-H2}, either the first pair is",
+      "new": "\\begin{lemma}\\label{lem:pr-field}\nUnder Proposition~\\ref{prop:pr-H2}, either the first pair is",
+      "before_offset": 131005,
+      "final_line_start": 3178,
+      "final_line_end": 3179
+    },
+    {
+      "id": "NAV-02",
+      "category": "navigation",
+      "reason": "Give the common S<15 proposition a stable label.",
+      "old": "\\begin{proposition}\nNo ordered sextuple whose first pair is $(1,3)$ or one of the pairs in",
+      "new": "\\begin{proposition}\\label{prop:pr-S15}\nNo ordered sextuple whose first pair is $(1,3)$ or one of the pairs in",
+      "before_offset": 136811,
+      "final_line_start": 3355,
+      "final_line_end": 3356
+    },
+    {
+      "id": "NAV-03",
+      "category": "navigation",
+      "reason": "Cite the field restriction at the finite field list.",
+      "old": "We enumerate the remaining pairs directly. For squarefree",
+      "new": "We enumerate the remaining pairs in the fields allowed by\nLemma~\\ref{lem:pr-field}. For squarefree",
+      "before_offset": 131906,
+      "final_line_start": 3198,
+      "final_line_end": 3199
+    },
+    {
+      "id": "NAV-04",
+      "category": "navigation",
+      "reason": "Cite the exact S<15 reduction at the norm cutoff.",
+      "old": "The norm cutoff is exact because \\(S<15\\) and the norm is integral.",
+      "new": "The norm cutoff is exact because Proposition~\\ref{prop:pr-S15}\ngives \\(S<15\\) and the norm is integral.",
+      "before_offset": 143006,
+      "final_line_start": 3520,
+      "final_line_end": 3521
+    },
+    {
+      "id": "NAV-05",
+      "category": "navigation",
+      "reason": "Cite the reduction at the start of the fixed-triple completion.",
+      "old": "The preceding reduction gives $S<15$. For the forty pairs in",
+      "new": "Proposition~\\ref{prop:pr-S15} gives $S<15$. For the forty pairs in",
+      "before_offset": 144066,
+      "final_line_start": 3544,
+      "final_line_end": 3544
+    },
+    {
+      "id": "AUTHOR-01",
+      "category": "author metadata",
+      "reason": "Copy author names and order from matrices10 .tex.",
+      "old": "\\author{}",
+      "new": "\\author{Zrinka Franu\\v{s}i\\'{c} \\and Tomislav Pejkovi\\'{c}}",
+      "before_offset": 720,
+      "final_line_start": 17,
+      "final_line_end": 17
+    },
+    {
+      "id": "LIT-01",
+      "category": "literature",
+      "reason": "Cite the requested monograph for general background only.",
+      "old": "Ad\\v zaga obtained the uniform bound",
+      "new": "For a general account of Diophantine tuples and their connections with\nelliptic curves, see Dujella~\\cite{Dujella24}.\n\nAd\\v zaga obtained the uniform bound",
+      "before_offset": 1657,
+      "final_line_start": 39,
+      "final_line_end": 42
+    },
+    {
+      "id": "LIT-02",
+      "category": "literature",
+      "reason": "State the precise connection with the open existence question; do not claim to solve it.",
+      "old": "the same approximation estimates as for the other pairs. We do not\ndetermine whether the bound of five is attained.",
+      "new": "the same approximation estimates as for the other pairs.\n\nDujella~\\cite[Problem~1.11]{DujellaOpen} asks whether a $D(1)$-quintuple\nexists in the ring of integers of an imaginary quadratic field.\nOur bound does not settle this question.",
+      "before_offset": 3735,
+      "final_line_start": 75,
+      "final_line_end": 79
+    },
+    {
+      "id": "DECL-01",
+      "category": "declarations",
+      "reason": "Copy Funding and Use of artificial intelligence verbatim from matrices10 .tex; reserve two-digit bibliography labels.",
+      "old": "\\begin{thebibliography}{9}",
+      "new": "\\par\\medskip\n\\noindent\\textbf{Funding.} The authors were supported by the Croatian Science Foundation under the project no. IP-2022-10-5008 (TEBAG). The authors acknowledge support from the project ``Implementation of cutting-edge research and its application as part of the Scientific Center of Excellence for Quantum and Complex Systems, and Representations of Lie Algebras'', Grant No. PK.1.1.10.0004, co-financed by the European Union through the European Regional Development Fund -- Competitiveness and Cohesion Programme 2021--2027. This research was funded by the European Union's NextGenerationEU through the National Recovery and Resilience Plan 2021--2026 Institutional grant of University of Zagreb Faculty of Science (IK IA 1.1.3. Impact4Math).\n\n\\medskip\n\\noindent\\textbf{Use of artificial intelligence.} The authors used ChatGPT 6 (OpenAI) and Claude Opus 5.5 (Anthropic) to assist with developing proofs, constructing examples and counterexamples, searching the literature, writing code for exact computations, and drafting and revising the manuscript. The authors take full responsibility for the content of this paper.\n\n\\begin{thebibliography}{99}",
+      "before_offset": 156689,
+      "final_line_start": 3859,
+      "final_line_end": 3865
+    },
+    {
+      "id": "LIT-03",
+      "category": "literature",
+      "reason": "Add exactly the verified monograph and open-problems source, without additional research papers.",
+      "old": "\\bibitem{F10}",
+      "new": "\\bibitem{Dujella24} A.~Dujella, \\emph{Diophantine $m$-tuples and Elliptic\nCurves}, Developments in Mathematics \\textbf{79}, Springer, Cham, 2024.\n\\href{https://doi.org/10.1007/978-3-031-56724-7}{doi:10.1007/978-3-031-56724-7}.\n\n\\bibitem{DujellaOpen} A.~Dujella, \\emph{Open problems on Diophantine\n$m$-tuples and elliptic curves}, version of 15 October 2026.\n\\url{https://web.math.pmf.unizg.hr/~duje/pdf/open2.pdf}\n(accessed 15 October 2026).\n\n\\bibitem{F10}",
+      "before_offset": 158871,
+      "final_line_start": 3886,
+      "final_line_end": 3895
+    },
+    {
+      "id": "AUTHOR-02",
+      "category": "author metadata",
+      "reason": "Copy the identical affiliation and both emails from matrices10 .tex in a shared block; keep emails after Croatia on the same line and avoid an isolated final author block.",
+      "old": "\\end{document}",
+      "new": "\\bigskip\n\\noindent Zrinka Franu\\v{s}i\\'{c} and Tomislav Pejkovi\\'{c}\\\\\nDepartment of Mathematics, Faculty of Science\\\\\nUniversity of Zagreb\\\\\nBijenička cesta 30, 10000 Zagreb, Croatia. \\texttt{fran@math.hr}, \\texttt{pejkovic@math.hr}\n\\end{document}",
+      "before_offset": 160575,
+      "final_line_start": 3917,
+      "final_line_end": 3922
+    },
+    {
+      "id": "LAYOUT-01",
+      "category": "local layout",
+      "reason": "Keep the complete two-alternative statement of Lemma 7.7 on one page.",
+      "old": "\\begin{lemma}\\label{sm:bs7-unit-axes}\nLet $d$ be positive and squarefree, and put $t=\\sqrt{-d}$. Every nonzero common extension of $\\{-1,1\\}$ has one of the forms\n\\begin{align*}\n z&=\\pm(dv^2+1),& u^2-dv^2&=2,\\\\\n z&=\\pm2uvt,& u^2-dv^2&=1,\n\\end{align*}\nwhere $u,v\\in\\mathbb Z$ and $v\\ne0$. In particular $|z|\\ge d+1$.\n\\end{lemma}",
+      "new": "\\begin{samepage}\n\\begin{lemma}\\label{sm:bs7-unit-axes}\nLet $d$ be positive and squarefree, and put $t=\\sqrt{-d}$. Every nonzero common extension of $\\{-1,1\\}$ has one of the forms\n\\begin{align*}\n z&=\\pm(dv^2+1),& u^2-dv^2&=2,\\\\\n z&=\\pm2uvt,& u^2-dv^2&=1,\n\\end{align*}\nwhere $u,v\\in\\mathbb Z$ and $v\\ne0$. In particular $|z|\\ge d+1$.\n\\end{lemma}\n\\end{samepage}",
+      "before_offset": 97510,
+      "final_line_start": 2462,
+      "final_line_end": 2471
+    },
+    {
+      "id": "LAYOUT-02",
+      "category": "local layout",
+      "reason": "Keep Table 3 with its classification, before the following lemma; use a local nonfloating block with the standard caption.",
+      "old": "\\begin{table}[htbp]\n\\centering\n\\begin{tabular}{ccclc}\n\\toprule\n$d$&$j$&Small triple&Extension&Orbit size\\\\\n\\midrule\n1&1&$\\{-2-2t,-2+2t,2\\}$&$60$&2\\\\\n1&2&$\\{-2-t,-t,2-t\\}$&$15t$&2\\\\\n1&3&$\\{-2-t,2t,2-t\\}$&$-40t$&2\\\\\n1&4&$\\{-2,-1-2t,1\\}$&$4+12t$&4\\\\\n2&1&$\\{-2,1-t,1+t\\}$&$-24$&2\\\\\n3&1&$\\{(-3-t)/2,(-3+t)/2,1\\}$&$8$&2\\\\\n3&2&$\\{(-3-t)/2,(1-3t)/2,1\\}$&$-12+4t$&4\\\\\n3&3&$\\{(-1-t)/2,-t,(1-t)/2\\}$&none&2\\\\\n7&1&$\\{(-5-t)/2,(-5+t)/2,1\\}$&$24$&2\\\\\n7&2&$\\{(-5-t)/2,t,(5-t)/2\\}$&$-32t$&2\\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Small triples and all their further nonzero extensions of modulus at most $10^{40}$. Here $t=\\sqrt{-d}$.}\n\\label{sm:six-small-triples-table}\n\\end{table}",
+      "new": "\\par\\medskip\n\\noindent\\begin{minipage}{\\textwidth}\n\\makeatletter\\def\\@captype{table}\\makeatother\n\\centering\n\\begin{tabular}{ccclc}\n\\toprule\n$d$&$j$&Small triple&Extension&Orbit size\\\\\n\\midrule\n1&1&$\\{-2-2t,-2+2t,2\\}$&$60$&2\\\\\n1&2&$\\{-2-t,-t,2-t\\}$&$15t$&2\\\\\n1&3&$\\{-2-t,2t,2-t\\}$&$-40t$&2\\\\\n1&4&$\\{-2,-1-2t,1\\}$&$4+12t$&4\\\\\n2&1&$\\{-2,1-t,1+t\\}$&$-24$&2\\\\\n3&1&$\\{(-3-t)/2,(-3+t)/2,1\\}$&$8$&2\\\\\n3&2&$\\{(-3-t)/2,(1-3t)/2,1\\}$&$-12+4t$&4\\\\\n3&3&$\\{(-1-t)/2,-t,(1-t)/2\\}$&none&2\\\\\n7&1&$\\{(-5-t)/2,(-5+t)/2,1\\}$&$24$&2\\\\\n7&2&$\\{(-5-t)/2,t,(5-t)/2\\}$&$-32t$&2\\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Small triples and all their further nonzero extensions of modulus at most $10^{40}$. Here $t=\\sqrt{-d}$.}\n\\label{sm:six-small-triples-table}\n\\end{minipage}\\par\\medskip",
+      "before_offset": 112942,
+      "final_line_start": 2693,
+      "final_line_end": 2715
+    }
+  ],
+  "not_applied": [
+    "Optional additional prose proposals",
+    "Global section reorder",
+    "Relocation of the long four-root lemma",
+    "Deletion of local transfer/square-test explanations"
+  ],
+  "style": "Existing preamble, 12pt Latin Modern, margins, macros and empty date preserved."
+}

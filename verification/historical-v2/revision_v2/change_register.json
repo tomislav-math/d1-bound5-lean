@@ -1,0 +1,885 @@
+{
+  "baseline": "upload/D1_bound5-v1(1).tex",
+  "baseline_sha256": "74582db5fd0ad43195a3ea235cfd324813f04e3d0cb82387a9930b7c4f26c228",
+  "output": "output/D1_bound5-v2.tex",
+  "output_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "edits": [
+    {
+      "id": "P02",
+      "line_at_application": 387,
+      "old": "\\subsection{Fourth-entry gaps with a small first entry}",
+      "new": "\\subsection{Fourth-entry gaps}",
+      "reason": "The expanded existing lemma also treats A>=3."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 390,
+      "old": "Let an ordered quadruple have \\(1\\le A<3\\le B\\le S\\le T\\).\nIn each row of the following table, the first two columns imply\n\\(T>tABS\\). The number \\(\\alpha\\) is a rational lower bound for \\(A\\),\nused in the proof.",
+      "new": "Let an ordered quadruple have \\(1\\le A\\le B\\le S\\le T\\), with\n\\(B\\ge3\\). If \\(A\\ge3\\), then \\(T>3ABS\\).\nIf \\(A<3\\), the first two columns of each row in the following\ntable imply \\(T>tABS\\). The number \\(\\alpha\\) is a rational lower\nbound for \\(A\\), used in the proof.",
+      "reason": "Extend the existing lemma statement; retain its five-row table."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 451,
+      "old": "In every row \\(AB>5\\). Set",
+      "new": "In every case considered here, \\(AB>5\\). Set",
+      "reason": "Include the new all-large case in the analytic hypotheses."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 473,
+      "old": "By Lemma~\\ref{lem:tail-irregular},\n\\(\\tau=T/(ABS)>2/A>2/3\\).\nFor fixed \\(\\tau>0\\), substituting \\(T=\\tau ABS\\) and \\(S\\ge B\\) gives",
+      "new": "Put \\(\\tau=T/(ABS)\\). For fixed \\(\\tau>0\\), substituting\n\\(T=\\tau ABS\\) and \\(S\\ge B\\) gives",
+      "reason": "Defer the small-A lower bound to its branch; the majorant itself holds for every positive tau."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 486,
+      "old": "In these positive expressions, replace \\(A,B\\) by the rational lower\nbounds \\(\\alpha,B_0\\) from the table. From now on, evaluate \\(k_1,k_2\\),\nand hence \\(K_1,L_1,Q_1\\), at \\(A=\\alpha,B=B_0\\). Let",
+      "new": "In these positive expressions, replace \\(A,B\\) by rational lower\nbounds \\(\\alpha,B_0\\). Evaluate \\(k_1,k_2\\), and hence\n\\(K_1,L_1,Q_1\\), at \\(A=\\alpha,B=B_0\\). Let",
+      "reason": "Allow the new choice alpha=B0=3 as well as the existing table choices."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 497,
+      "old": " F(\\tau)=2K_1\\tau+L_1P_0+\\frac{J_0}{\\tau}.\n\\]\nFor all five explicitly listed triples",
+      "new": " F(\\tau)=2K_1\\tau+L_1P_0+\\frac{J_0}{\\tau}.\n\\]\nIf \\(A\\ge3\\), take \\(\\alpha=B_0=3\\).\nLemma~\\ref{lem:product-four} gives \\(\\tau>2\\), while direct rational\nsubstitution gives \\(F(2)<7/10\\) and \\(F(3)<19/20\\).\nConvexity excludes \\(2<\\tau\\le3\\).\n\nIf \\(A<3\\), use the lower bounds in the table.\nLemma~\\ref{lem:tail-irregular} gives \\(\\tau>2/A>2/3\\).\nFor all five explicitly listed triples",
+      "reason": "Prove the all-large strengthening and then continue with the unchanged five-row small-A proof."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 1917,
+      "old": "Lemma~\\ref{lem:product-four} gives \\(T>2ABS\\) and hence \\(AT>162\\).\nWe may therefore apply the row \\(H=48,\\lambda=19/200\\) of\nLemma~\\ref{lem:retained-gap}. In addition to all the approximation guards,\nit gives\n\\begin{equation}\\label{eq:integrated-6}\nC>\\frac{A^2T^5}{S^2},\\qquad\n D>\\mathcal G:=\\frac{A^2C^7}{S^2T^4}.\n\\end{equation}\nPut\n\\[\n \\mathcal Q=\\frac{|(a-b)(a-s)(b-s)|}{BS^2},\\qquad\n c_*=\\frac{9999}{10000}\\left(\\frac{200}{19}\\right)^2.\n\\]\nThe retained inequality and \\(T>2ABS\\) yield\n\\[\n C>32c_*\\left(\\frac1{\\mathcal Q}-\\frac{\\mu}{A^2B^2}\\right)^2\n                         A^7B^5S^3.\n\\]\nSince \\(A^2B^2\\ge81\\) and \\(0<\\mathcal Q\\le8\\),\n\\[\n 32c_*\\left(1-\\frac{8\\mu}{81}\\right)^2\n =\\frac{5468347165039}{1582031250}>3456.\n\\]\nConsequently, with \\(K=54\\) and \\(\\beta=3456\\),\n\\begin{equation}\\label{eq:large-gap}\n C>K A^7B^5S^3,\\qquad\n C>\\frac{\\beta}{\\mathcal Q^2}A^7B^5S^3.\n\\end{equation}\nThe second estimate will be retained at one junction.\n\n\\paragraph{A bound for $\\mathcal Q^2\\Phi$.}\nWrite \\(u=A/B,\\ v=B/S,\\ w=|b-s|/S\\), and\n\\(\\Phi=\\max(w^6,vw^5)\\). The identities\n\\[\n (a-b)(a-s)=a^2-a(b+s)+bs,\\qquad\n |b+s|^2=2B^2+2S^2-|b-s|^2\n\\]\ngive\n\\[\n \\mathcal Q\\le w[1+u^2v+u\\sqrt{2+2v^2-w^2}]\n \\le w[2+\\sqrt{4-w^2}].\n\\]\nIf \\(w\\ge v\\), substitute \\(x=\\sqrt{4-w^2}\\) to obtain\n\\[\n \\mathcal Q^2\\Phi\\le(2-x)^4(2+x)^6\n \\le F:=\\left(\\frac85\\right)^4\\left(\\frac{12}{5}\\right)^6.\n\\]\nIndeed the logarithmic derivative on \\((0,2)\\) has the sign of\n\\(4-10x\\), so the maximum occurs at \\(x=2/5\\).\nIf \\(w<v\\le1\\), then \\(\\mathcal Q\\le4w\\) and\n\\(\\mathcal Q^2\\Phi\\le16vw^7\\le16<F\\).\nThus the same bound holds in every case.\n\n",
+      "new": "Lemma~\\ref{lem:five-frontier-gaps} gives \\(T>3ABS\\) and hence \\(AT>243\\).\nWe may therefore apply the row \\(H=48,\\lambda=19/200\\) of\nLemma~\\ref{lem:retained-gap}. It gives all the required size conditions and\n\\begin{equation}\\label{eq:integrated-6}\nC>\\frac{A^2T^5}{S^2},\\qquad\n D>\\mathcal G:=\\frac{A^2C^7}{S^2T^4}.\n\\end{equation}\nPut\n\\[\n \\mathcal Q=\\frac{|(a-b)(a-s)(b-s)|}{BS^2},\\qquad\n c_*=\\frac{9999}{10000}\\left(\\frac{200}{19}\\right)^2.\n\\]\nThe retained inequality and \\(T>3ABS\\) give\n\\[\n C>3^5c_*\\left(\\frac1{\\mathcal Q}-\\frac{\\mu}{A^2B^2}\\right)^2\n                         A^7B^5S^3.\n\\]\nSince \\(A^2B^2\\ge81\\) and \\(0<\\mathcal Q\\le8\\),\n\\[\n 3^5c_*\\left(\\frac18-\\frac{\\mu}{81}\\right)^2\n =\\frac{16405041495117}{40000000000}>400.\n\\]\nConsequently, with \\(K=400\\),\n\\begin{equation}\\label{eq:large-gap}\n C>KA^7B^5S^3.\n\\end{equation}\n\n",
+      "reason": "The stronger fourth-entry bound supplies a uniform gap coefficient exceeding400; the separate phase maximization is no longer needed."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 1960,
+      "old": " \\kappa=\\frac{3535}{409600},\\quad R_{bs}=\\kappa\\Phi.",
+      "new": " R_{bs}=\\frac{35}{32}.",
+      "reason": "Use the existing uniform N3 residual for the relabeled pair b,s."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 1964,
+      "old": "The \\(b,s\\) residual retains its actual anchor distance. The adaptive\nrow \\(P\\) is used for \\(S\\ge2B\\), while the universal row \\(P_0\\)\nis used for \\(S<2B\\).",
+      "new": "The adaptive row \\(P\\) is used for \\(S\\ge2B\\), while the universal\nrow \\(P_0\\) is used for \\(S<2B\\).",
+      "reason": "Remove the now false description of a distance-sensitive residual in this section."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 1995,
+      "old": "The remaining comparisons use $C>KA^7B^5S^3$, except for\n$N_{3,bs}\\to A_4$.",
+      "new": "The remaining comparisons use $C>KA^7B^5S^3$.",
+      "reason": "Every junction now follows from the same coarse gap."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 2012,
+      "old": "\\(N_{3,bs}\\to A_4\\)&\\(\\beta^2A^{14}\\)&\\(16\\kappa^2F^2M_4^2h\\)\\\\",
+      "new": "\\(N_{3,bs}\\to A_4\\)&\\(K^2A^{14}\\)&\\(16R_{bs}^2M_4^2h\\)\\\\",
+      "reason": "Direct endpoint division with uniform residual and the coarse gap gives this sufficient comparison."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 2020,
+      "old": "comparisons follow by substituting \\(A=B=S=3\\), \\(K=54,\\beta=3456\\)",
+      "new": "comparisons follow by substituting \\(A=B=S=3\\), \\(K=400\\)",
+      "reason": "Use the new constant without any phase coefficient."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 2024,
+      "old": " \\frac{\\beta^2 3^{14}}{16\\kappa^2F^2M_4^2h}\n =\\frac{4003515472412109375}{3611631944665923584}>1.",
+      "new": " \\frac{K^2 3^{14}}{16R_{bs}^2M_4^2h}\n =\\frac{1224133953984}{844113475625}>\\frac75.",
+      "reason": "The new tightest quotient is exact and exceeds7/5; all other original strict comparisons still hold."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 2040,
+      "old": "The exceptional phase junction uses the second bound in\n\\eqref{eq:large-gap}. Direct endpoint division requires\n\\[\n C^2>16M_4^2R_{bs}^2h\\,B^{10}S^6.\n\\]\nIt follows from \\(C>\\beta A^7B^5S^3/\\mathcal Q^2\\),\n\\(R_{bs}=\\kappa\\Phi\\), and \\(\\mathcal Q^2\\Phi\\le F\\), by the\ndisplayed rational comparison.",
+      "new": "For \\(N_{3,bs}\\to A_4\\), the endpoint quotient is\n\\[\n \\frac{C^2}{16M_4^2R_{bs}^2h\\,B^{10}S^6}.\n\\]\nSubstituting \\eqref{eq:large-gap} gives the corresponding table entry.",
+      "reason": "Record the direct algebraic reduction replacing the phase-dependent argument."
+    },
+    {
+      "id": "P02",
+      "line_at_application": 2059,
+      "old": " \\frac{54A^8BS^3}{105}\\ge\\frac{54\\cdot3^{12}}{105}>1.",
+      "new": " \\frac{400A^8BS^3}{105}\\ge\\frac{400\\cdot3^{12}}{105}>1.",
+      "reason": "Carry the strengthened gap into the ordinary-family tail condition."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1683,
+      "old": "There are two choices of matrices. The universal matrix consists of\nthe six rows\n\\begin{equation}\\label{eq:ff-p0rows}\n R_{ab},R_{bs},R_{as},T_{ab},T_{bs},T_{sa}.\n\\end{equation}\nIn columns $(Q_0,Q_a,Q_b,Q_s)$, the determinant of its first three\nrows and $T_{ab}$ is\n\\begin{equation}\\label{eq:ff-p0det}\n 15750a^2b^2s^2(a-b)^4(a-s)(b-s)F_s,\n \\quad F_s=7(2s-a-b)+6c[3s^2-(a+b)s-ab].\n\\end{equation}\nThe alternative four-row matrix is\n\\begin{equation}\\label{eq:ff-prows}\n R_{ab},\\quad H=R_{ab}+R_{bs}-R_{as},\\quad\n T_{ab},\\quad V=T_{as}-T_{bs};\n\\end{equation}\nits determinant is\n\\begin{equation}\\label{eq:ff-pdet}\n -78750a^2b^2s^2(a-b)^5(a-s)(b-s)F_s.\n\\end{equation}\nBoth identities are checked from the printed rows by expanding only\nthe constant and linear coefficients in $c$. Replacement of the column indexed by $0$ by its $O(c^{-5})$ residual makes their determinant degree at\nmost $2+2+2-5=1$. Thus this finite expansion verifies the complete\nidentities, with no unspecified higher coefficients.\n\nThe universal matrix always has rank four. Its cyclic minors have\nthe nonzero products displayed in \\eqref{eq:ff-p0det}\ntimes $F_a,F_b,F_s$, up to signs. With\n$\\sigma_1=a+b+s$, $\\sigma_2=ab+as+bs$, these factors are\n\\[\n F_x=7(3x-\\sigma_1)+6c(3x^2-\\sigma_2).\n\\]\nIf all three vanished, subtracting the equations for $s,b$ and $s,a$\nwould give $7+6c(s+b)=7+6c(s+a)=0$, contrary to $c\\ne0$ and $a\\ne b$.\nFor the four-row matrix it suffices to prove $F_s\\ne0$.\nIf $S\\ge2B$, then\n\\[\n |3s^2-(a+b)s-ab|\\ge\\tfrac74S^2,\\qquad |2s-a-b|\\le3S,\n\\]\nso the $c$ term dominates under \\eqref{eq:ff-pguards}.\nAlternatively, if\n\\begin{equation}\\label{eq:ff-allSrank}\n B\\ge qA,\\qquad q\\ge18/17,\\qquad S\\ge3,\n\\end{equation}\nthen for every $S\\ge B$,\n\\[\n |3s^2-(a+b)s-ab|\\ge(2-2/q)S^2,\n \\qquad |2s-a-b|\\le(3+1/q)S.\n\\]\nIndeed $6C(2-2/q)S^2\\ge1200(2-2/q)S^3$\nis strictly larger than $7(3+1/q)S$ already at $q=18/17$, $S=3$.\nThus the matrix has rank four under these hypotheses.",
+      "new": "Use the four rows\n\\begin{equation}\\label{eq:ff-prows}\n R_{ab},\\quad H=R_{ab}+R_{bs}-R_{as},\\quad\n T_{ab},\\quad V=T_{as}-T_{bs}.\n\\end{equation}\nIn columns $(Q_0,Q_a,Q_b,Q_s)$, their determinant is\n\\begin{equation}\\label{eq:ff-pdet}\n -78750a^2b^2s^2(a-b)^5(a-s)(b-s)F_s,\n\\end{equation}\nwhere\n\\[\n F_s=7(2s-a-b)+6c[3s^2-(a+b)s-ab].\n\\]\nReplacing column zero by its $O(c^{-5})$ residual shows that the\npolynomial determinant has degree at most $2+2+2-5=1$ in $c$.\nExpanding its constant and linear coefficients from the displayed rows\ngives the identity.\n\nSuppose that $F_s=0$. If $3s^2-(a+b)s-ab\\ne0$, this algebraic integer\nhas modulus at least one, and\n\\[\n 6C\\le7|2s-a-b|\\le28S,\n\\]\ncontrary to $C\\ge200S$. Otherwise $a+b=2s$ and $ab=s^2$, so\n$a=b=s$, again a contradiction. Thus the matrix has rank four.",
+      "reason": "Prove unconditional rank by integrality and remove the unnecessary six-row alternative."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1771,
+      "old": "Under either rank condition above, and $B\\ge qA$, we conclude that",
+      "new": "For every $q\\ge1$ with $B\\ge qA$, we conclude that",
+      "reason": "The four-row estimate now needs no additional rank hypothesis."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1781,
+      "old": "In particular,\n\\[\n \\mathcal R(1)=\\frac{35}{16}+\\tau\\,5268\n              =\\frac{65233}{28416}<\\frac{23}{10}.\n\\]\nThus $23/10$ is a valid residual constant without a ratio restriction\nwhenever $S\\ge2B$.\n\nFor the complementary range $S<2B$, use the universal matrix\n\\eqref{eq:ff-p0rows} and put\n$H_0=\\max(S^4,B^5)$, $J_0=\\max(S,B^2)$.\nThe degree sums of its $R$ rows are $(84,408,384)$ and those of its\n$T$ rows are $(252,1224,1200)$. Their anchor monomials are at most\n$S^4\\le H_0$ and $S^5<32B^5\\le32H_0$, respectively. Hence their\napproximation coefficient is less than\n\\[\n \\frac{101}{100}\\max\\left(384+\\frac{408}{1000}+\\frac{84}{10^6},\n 32\\left(1200+\\frac{1224}{1000}+\\frac{252}{10^6}\\right)\\right)\n <39000.\n\\]\nThe first residual monomials in an $R$ row are bounded by $S/A^3$,\nand in a $T$ row by $S^2/A^3$. From \\eqref{eq:ff-leading}, their\nleading absolute coefficient sums are $15/128$ and $25/16$; their\noriginal integer coefficient sums are $876$ and $2676$.\nUsing $S\\le J_0$ and $S^2<4J_0$ gives the residual coefficient\n\\[\n \\max\\left(\\frac{15}{128}+\\tau\\,876,\n       4\\left(\\frac{25}{16}+\\tau\\,2676\\right)\\right)\n =\\frac{45961}{7104}<\\frac{13}{2}.\n\\]\nThus, throughout $S<2B$,\n\\begin{equation}\\label{eq:ff-P0}\n 1<\\frac{39000H_0C^3}{Z}+\\frac{13J_0Z}{2A^3C^5}.\n\\end{equation}\nWhen $B\\ge3$, $S<2B\\le B^2$ implies $J_0=B^2$.\nEquations \\eqref{eq:ff-P} and \\eqref{eq:ff-P0}, together with\n\\eqref{eq:ff-window}, specify their closed forbidden intervals.",
+      "new": "In particular,\n\\[\n \\mathcal R(1)=\\frac{35}{16}+\\tau\\,5268<3.\n\\]\nEquation~\\eqref{eq:ff-P}, together with \\eqref{eq:ff-window}, gives\nits closed forbidden interval.",
+      "reason": "Use the clean sufficient constant 3 and delete the now unnecessary P0 construction."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1906,
+      "old": "The adaptive row \\(P\\) is used for \\(S\\ge2B\\), while the universal\nrow \\(P_0\\) is used for \\(S<2B\\). Put\n\\(H_P=\\max(BS^3,B^3S^2)\\), \\(H_0=\\max(S^4,B^5)\\).",
+      "new": "Use the row \\(P\\) with residual constant \\(3\\), and put\n\\(H_P=\\max(BS^3,B^3S^2)\\).",
+      "reason": "Use P throughout the all-large proof."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1919,
+      "old": "\\(P\\)&\\(4\\cdot2400^2H_P^2C^5\\)&\\(A^6C^9/(4\\cdot145^2S^4)\\)\\\\",
+      "new": "\\(P\\)&\\(4\\cdot2400^2H_P^2C^5\\)&\\(A^6C^9/(4\\cdot3^2S^4)\\)\\\\",
+      "reason": "P has the same normalization and permits residual constant 3."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1920,
+      "old": "\\(P_0\\)&\\(4\\cdot39000^2H_0^2C^5\\)&\\(A^6C^9/(4\\cdot300^2B^4)\\)\\\\\n",
+      "new": "",
+      "reason": "Remove unused P0 interval."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1943,
+      "old": "\\(N_2\\to P_0,\\ H_0=S^4\\)&\\(K^2A^{20}B^4/4\\)&\\(25\\cdot39000^2h\\)\\\\\n",
+      "new": "",
+      "reason": "Remove unused P0 overlap."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1943,
+      "old": "\\(N_2\\to P_0,\\ H_0=B^5\\)&\\(K^2A^{20}B^2\\)&\\(25\\cdot39000^2h\\)\\\\\n",
+      "new": "",
+      "reason": "Remove unused P0 overlap."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1945,
+      "old": "\\(P_0\\to A_3\\)&\\(K^2A^{20}\\)&\\(16\\cdot300^2M_3^2h\\)\\\\\n",
+      "new": "",
+      "reason": "Remove unused P0 overlap."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1943,
+      "old": "16\\cdot145^2M_n^2h",
+      "new": "16\\cdot3^2M_n^2h",
+      "reason": "Update the P outgoing overlap to the same residual constant 3."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1944,
+      "old": "16\\cdot145^2M_3^2h",
+      "new": "16\\cdot3^2M_3^2h",
+      "reason": "Update the P outgoing overlap to the same residual constant 3."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1968,
+      "old": "For \\(P_0\\), \\(S<2B\\) bounds \\(B^6/S^2>B^4/4\\), and \\(S\\ge B\\)\nbounds \\(S^6/B^4\\ge B^2\\). ",
+      "new": "",
+      "reason": "Remove the unused P0 exponent reductions."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1983,
+      "old": "Start with \\(\\mathcal G,Q,N_2\\), then use \\(P\\) if \\(S\\ge2B\\) and\n\\(P_0\\) otherwise. If \\(S\\ge B^2\\), continue through \\(N_3\\);\notherwise continue through \\(A_3,M,N_3\\). The first choice is compatible\nbecause \\(B\\ge3\\) implies \\(B^2\\ge2B\\).",
+      "new": "Start with \\(\\mathcal G,Q,N_2,P\\). If \\(S\\ge B^2\\), continue through\n\\(N_3\\); otherwise continue through \\(A_3,M,N_3\\).",
+      "reason": "Delete the P/P0 branch while retaining the necessary next branch."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 3100,
+      "old": " Its rank condition holds for \\(q\\ge18/17\\) under the size\nassumptions already established.",
+      "new": "",
+      "reason": "The old sufficient ratio condition is no longer needed in the five regions."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 3486,
+      "old": "Its rank condition is satisfied, and its largest residual bound is",
+      "new": "Its largest residual bound is",
+      "reason": "Remove the redundant rank-condition sentence in the fixed-pair calculation."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 3615,
+      "old": "Here $B/A\\ge\\sqrt5>18/17$ and $S\\ge3$, so the all-$S$ rank\ncondition \\eqref{eq:ff-allSrank} applies.\n",
+      "new": "",
+      "reason": "Remove the obsolete rank reference in the fifty-six-triple calculation."
+    },
+    {
+      "id": "CA1-CA2",
+      "line_at_application": 1764,
+      "old": "Sum the original absolute integer coefficients, before Taylor\ncancellation, with weight $x^{2-j-k}$. This gives $W_i(x)$.",
+      "new": "Use the divided root-column polynomials of \\eqref{eq:ff-prows}, with\nthe combinations defining $H$ and $V$ already performed. Sum the absolute\nvalues of their integer coefficients with weight $x^{2-j-k}$, before\nmultiplication by the binomial coefficients. This gives $W_i(x)$.",
+      "reason": "Clarify which coefficient cancellations precede the W_i absolute-value bounds."
+    },
+    {
+      "id": "IR",
+      "line_at_application": 122,
+      "old": "With \\(H=A+B+C\\), integrality and the triangle inequality give\n\\[\n H^2+5\\ge |uv|+1\\ge |u|+|v|\\ge|u+v|\\ge4ABC-2H.\n\\]\nThus \\(q(C)\\ge0\\), where \\(q(X)=(A+B+X+1)^2+4-4ABX\\).",
+      "new": "Since \\(u,v\\) are nonzero algebraic integers,\n\\(|u|+|v|\\le|uv|+1\\). Hence\n\\begin{equation}\\label{eq:irregular-quadratic}\n 0\\le C^2-2\\bigl(|1+2ab|-|a+b|\\bigr)C\n      +|(a-b)^2-4|+2|a+b|+1.\n\\end{equation}\nUsing \\(|1+2ab|\\ge2AB-1\\), \\(|a+b|\\le A+B\\), and\n\\(|(a-b)^2-4|\\le(A+B)^2+4\\), we obtain \\(q(C)\\ge0\\),\nwhere \\(q(X)=(A+B+X+1)^2+4-4ABX\\).",
+      "reason": "Retain the actual pair coefficients in the existing integral-completion argument. The statement and endpoint calculations of Lemma 2.1 remain unchanged."
+    },
+    {
+      "id": "IR",
+      "line_at_application": 3715,
+      "old": "Here are complete finite algorithms for the remaining table entries.\nWrite $\\omega^2-\\tau\\omega+\\nu=0$, where $\\tau\\in\\{0,1\\}$,\nand let $\\Delta=4\\nu-\\tau^2$. The identity\n\\[\n 4N(u+v\\omega)=(2u+\\tau v)^2+\\Delta v^2\n\\]\nenumerates the closed norm ball $N(z)\\le M$ by\n\\[\n |v|\\le\\lfloor\\sqrt{4M/\\Delta}\\rfloor,\\qquad\n |2u+\\tau v|\\le\\lfloor\\sqrt{4M-\\Delta v^2}\\rfloor.\n\\]\nAll roots, including zero, are retained. For each of the forty pairs\nin Table~\\ref{tab:pr-forty-pairs}, enumerate $N(r)\\le23$ and form\n$s=\\overline a(r^2-1)/a_0$ whenever both coordinates of the numerator\nare divisible by $a_0$. Retain precisely those $s$ distinct from $a,b$\nwith $b_0\\le N(s)\\le224$ and $bs+1$ a square.\nCompleteness follows from $N(r)=|as+1|<15\\sqrt2+1<23$.\nThe resulting fifty-seven triples include $(1,-3,3)$, excluded by\nLemma~\\ref{lem:pr-one-three}. The other fifty-six are listed below.\n\nFor each retained triple, enumerate $N(r)\\le284$ and form\n$t=\\overline a(r^2-1)/a_0$ with the same coordinate divisibility test.\nRetain precisely $t\\notin\\{a,b,s\\}$ with $s_0\\le N(t)\\le40000$\nfor which $bt+1$ and $st+1$ are squares.\nThis is complete for $|t|\\le200$, because\n$N(r)=|at+1|\\le200\\sqrt2+1<284$.\nAll square tests can be made by constructing the set of squares of\nroots of norm at most $3001$. Indeed, every tested target has\nmodulus at most $|st|+1<3001$. Ring operations are exactly\n\\[\n (u,v)(u',v')=(uu'-\\nu vv',\\ uv'+u'v+\\tau vv'),\\qquad\n \\overline{(u,v)}=(u+\\tau v,-v).\n\\]\nThese finite loops specify the search including all boundary cases.\nThe last column lists every resulting fourth norm with its multiplicity.\nA dash denotes an empty set. In each row there is at most one fourth entry with norm at most $40000$. Every listed norm is at least the corresponding\n$N_0$, whereas every $N_0\\le21270<40000$.\nThus the finite complement $N(t)<N_0$ is empty in every case.\n\n",
+      "new": "The fifty-six triples in Table~\\ref{tab:fixed56} were enumerated at the\nend of Section~\\ref{sec:pair-reduction}. We now exclude $N(t)<N_0$.\nLemma~\\ref{lem:tail-irregular} gives $T>2BS$. In thirty-eight rows,\n$4b_0s_0\\ge N_0$, so this already contradicts $N(t)<N_0$.\n\nFor the other rows, put\n\\[\n q=b+s,\\qquad h=1+2bs,\\qquad \\delta=(b-s)^2-4,\n\\]\nand define\n\\[\n f(X)=X^2-2(|h|-|q|)X+|\\delta|+2|q|+1.\n\\]\nThe triple $(b,s,t)$ is irregular by Lemma~\\ref{lem:tail-irregular},\nso \\eqref{eq:irregular-quadratic} gives $f(T)\\ge0$.\nThis quadratic is convex. For $X\\ge0$, the bounds\n$|h|\\ge2BS-1$, $|q|\\le B+S$ and\n$|\\delta|\\le(B+S)^2+4$ give\n\\[\n f(X)\\le(B+S+X+1)^2+4-4BSX.\n\\]\nThe endpoint calculation in the proof of\nLemma~\\ref{lem:irregular-growth} therefore gives $f(2BS)<0$.\n\nFor sixteen of the remaining rows, substitution of the displayed\nentries and $N_0$ gives $f(\\sqrt{N_0})<-100$. These are exact checks\nusing the rational enclosures defined above. Explicitly,\n$[N(h)]_--[N(q)]_+>0$, and\n\\[\n \\begin{split}\n f(\\sqrt{N_0})\\le{}&N_0\n -2\\bigl([N(h)]_--[N(q)]_+\\bigr)[N_0]_-\\\\\n &+[N(\\delta)]_++2[N(q)]_++1<-100.\n \\end{split}\n\\]\nConvexity excludes $2BS<T<\\sqrt{N_0}$ in each of these rows.\n\nThe two remaining triples are\n$(a,b,s)=(1,-3,-2\\pm2\\sqrt{-2})$, both with $N_0=1024$.\nHere $N(q)=33$, $N(h)=457$ and $N(\\delta)=153$, so\n\\[\n f(30)=901-60\\sqrt{457}+62\\sqrt{33}+\\sqrt{153}<-5.\n\\]\nUse $\\sqrt{457}>213/10$, $\\sqrt{33}<29/5$ and\n$\\sqrt{153}<62/5$. Convexity gives $T>30$.\nWrite $t+1=(u+v\\sqrt{-2})^2$ with $u,v\\in\\mathbb Z$.\nIf $30<T<32$, then\n\\[\n 29<|t+1|=u^2+2v^2<33.\n\\]\nThe values $30$ and $31$ are impossible modulo $16$.\nFor $u^2+2v^2=32$, reduction modulo $16$ forces $4\\mid u,v$,\nand then $u=0$, $v=\\pm4$. This gives $t=-33$, contrary to $T<32$.\nThus $N(t)<N_0$ is impossible in the last two rows as well.\n\n",
+      "reason": "Replace duplicated third-entry enumeration and the fourth-entry disk search by the existing irregular quadratic, sixteen exact endpoint checks and the elementary exceptional annulus argument."
+    },
+    {
+      "id": "IR",
+      "line_at_application": 3770,
+      "old": "\\begin{longtable}{r|r r|r|r|r|r}\n\\caption{All remaining triples and the common cutoff procedure. Pair indices refer to Table~\\ref{tab:pr-forty-pairs}; coordinates mean $u+v\\omega$.}\\label{tab:fixed56}\\\\\nPair&$u$&$v$&$N(s)$&$M_{bs}$&$N_0$&fourth norms through $40000$\\\\\\hline\n\\endfirsthead\nPair&$u$&$v$&$N(s)$&$M_{bs}$&$N_0$&fourth norms through $40000$\\\\\\hline\n\\endhead\n0 & -4 & -2 & 20 & 285 & 1024 & 4160 \\\\\n0 & 4 & -2 & 20 & 285 & 1024 & 4160 \\\\\n0 & 0 & 5 & 25 & 1368 & 1934 & 4225 \\\\\n1 & 0 & 10 & 100 & 42 & 2311 & 28224 \\\\\n2 & -4 & 4 & 32 & 2238 & 4770 & 9945 \\\\\n2 & 8 & 1 & 65 & 72 & 2359 & 23680 \\\\\n3 & 6 & 9 & 117 & 44 & 3896 & -- \\\\\n4 & -4 & -4 & 32 & 396 & 3299 & 9280 \\\\\n4 & -4 & 4 & 32 & 396 & 3299 & 9280 \\\\\n5 & -1 & 8 & 65 & 172 & 4857 & 28800 \\\\\n6 & 7 & 6 & 85 & 29 & 2018 & 32800 \\\\\n7 & -2 & -2 & 12 & 474 & 1024 & 1056 \\\\\n7 & -2 & 2 & 12 & 474 & 1024 & 1056 \\\\\n8 & 1 & 4 & 33 & 133 & 1024 & 5472 \\\\\n9 & 6 & 6 & 108 & 56 & 4775 & -- \\\\\n10 & -13 & 13 & 169 & 77 & 13059 & -- \\\\\n11 & -8 & 16 & 192 & 60 & 12244 & -- \\\\\n12 & -9 & 6 & 63 & 74 & 2301 & 16576 \\\\\n13 & -10 & 1 & 91 & 180 & 9744 & -- \\\\\n14 & -6 & 9 & 63 & 35 & 1195 & 10416 \\\\\n15 & -1 & 10 & 91 & 37 & 1760 & 24768 \\\\\n16 & -4 & -4 & 48 & 430 & 7354 & 33712 \\\\\n16 & 8 & -8 & 64 & 271 & 7441 & -- \\\\\n17 & 7 & -2 & 39 & 78 & 1024 & 8512 \\\\\n18 & 6 & 9 & 171 & 48 & 7943 & -- \\\\\n19 & 11 & 1 & 133 & 48 & 6361 & -- \\\\\n20 & -6 & -3 & 63 & 473 & 14404 & -- \\\\\n20 & -10 & 9 & 91 & 272 & 14608 & -- \\\\\n21 & -4 & 8 & 48 & 155 & 2461 & 13888 \\\\\n22 & -5 & 4 & 21 & 422 & 1622 & 3648 \\\\\n22 & -1 & -4 & 21 & 422 & 1622 & 3648 \\\\\n23 & 4 & -8 & 48 & 4138 & 21270 & 38025 \\\\\n23 & -1 & 12 & 133 & 78 & 8968 & -- \\\\\n24 & 7 & 7 & 147 & 41 & 5928 & -- \\\\\n25 & -5 & -2 & 45 & 381 & 5913 & 19680 \\\\\n25 & -5 & 2 & 45 & 381 & 5913 & 19680 \\\\\n26 & -2 & 4 & 84 & 186 & 8435 & -- \\\\\n27 & -6 & -2 & 60 & 370 & 9706 & 36960 \\\\\n27 & -6 & 2 & 60 & 370 & 9706 & 36960 \\\\\n28 & -3 & 4 & 105 & 197 & 13453 & -- \\\\\n29 & 1 & 5 & 56 & 67 & 1517 & 14848 \\\\\n30 & 6 & 7 & 176 & 57 & 11143 & -- \\\\\n31 & -3 & -1 & 15 & 646 & 1451 & 2304 \\\\\n31 & -3 & 3 & 27 & 261 & 1460 & 4800 \\\\\n32 & 0 & 5 & 75 & 94 & 3590 & 31680 \\\\\n33 & -4 & -1 & 24 & 579 & 3059 & 6400 \\\\\n33 & -4 & 3 & 40 & 263 & 3090 & 11904 \\\\\n34 & -1 & 5 & 96 & 115 & 6843 & -- \\\\\n35 & -5 & -1 & 35 & 532 & 5592 & 14400 \\\\\n35 & -5 & 3 & 55 & 266 & 5661 & 24640 \\\\\n36 & -2 & 5 & 119 & 133 & 11532 & -- \\\\\n37 & -6 & -1 & 48 & 499 & 9289 & 28224 \\\\\n37 & -6 & 3 & 72 & 269 & 9415 & -- \\\\\n38 & -4 & 0 & 16 & 540 & 1281 & 5200 \\\\\n38 & 4 & -4 & 32 & 182 & 2561 & 12240 \\\\\n39 & 8 & 4 & 80 & 38 & 6401 & 30160 \\\\\n\\end{longtable}",
+      "new": "\\begin{longtable}{r|r r|r|r|r}\n\\caption{All remaining triples and the common cutoff procedure. Pair indices refer to Table~\\ref{tab:pr-forty-pairs}; coordinates mean $u+v\\omega$.}\\label{tab:fixed56}\\\\\nPair&$u$&$v$&$N(s)$&$M_{bs}$&$N_0$\\\\\\hline\n\\endfirsthead\nPair&$u$&$v$&$N(s)$&$M_{bs}$&$N_0$\\\\\\hline\n\\endhead\n0 & -4 & -2 & 20 & 285 & 1024 \\\\\n0 & 4 & -2 & 20 & 285 & 1024 \\\\\n0 & 0 & 5 & 25 & 1368 & 1934 \\\\\n1 & 0 & 10 & 100 & 42 & 2311 \\\\\n2 & -4 & 4 & 32 & 2238 & 4770 \\\\\n2 & 8 & 1 & 65 & 72 & 2359 \\\\\n3 & 6 & 9 & 117 & 44 & 3896 \\\\\n4 & -4 & -4 & 32 & 396 & 3299 \\\\\n4 & -4 & 4 & 32 & 396 & 3299 \\\\\n5 & -1 & 8 & 65 & 172 & 4857 \\\\\n6 & 7 & 6 & 85 & 29 & 2018 \\\\\n7 & -2 & -2 & 12 & 474 & 1024 \\\\\n7 & -2 & 2 & 12 & 474 & 1024 \\\\\n8 & 1 & 4 & 33 & 133 & 1024 \\\\\n9 & 6 & 6 & 108 & 56 & 4775 \\\\\n10 & -13 & 13 & 169 & 77 & 13059 \\\\\n11 & -8 & 16 & 192 & 60 & 12244 \\\\\n12 & -9 & 6 & 63 & 74 & 2301 \\\\\n13 & -10 & 1 & 91 & 180 & 9744 \\\\\n14 & -6 & 9 & 63 & 35 & 1195 \\\\\n15 & -1 & 10 & 91 & 37 & 1760 \\\\\n16 & -4 & -4 & 48 & 430 & 7354 \\\\\n16 & 8 & -8 & 64 & 271 & 7441 \\\\\n17 & 7 & -2 & 39 & 78 & 1024 \\\\\n18 & 6 & 9 & 171 & 48 & 7943 \\\\\n19 & 11 & 1 & 133 & 48 & 6361 \\\\\n20 & -6 & -3 & 63 & 473 & 14404 \\\\\n20 & -10 & 9 & 91 & 272 & 14608 \\\\\n21 & -4 & 8 & 48 & 155 & 2461 \\\\\n22 & -5 & 4 & 21 & 422 & 1622 \\\\\n22 & -1 & -4 & 21 & 422 & 1622 \\\\\n23 & 4 & -8 & 48 & 4138 & 21270 \\\\\n23 & -1 & 12 & 133 & 78 & 8968 \\\\\n24 & 7 & 7 & 147 & 41 & 5928 \\\\\n25 & -5 & -2 & 45 & 381 & 5913 \\\\\n25 & -5 & 2 & 45 & 381 & 5913 \\\\\n26 & -2 & 4 & 84 & 186 & 8435 \\\\\n27 & -6 & -2 & 60 & 370 & 9706 \\\\\n27 & -6 & 2 & 60 & 370 & 9706 \\\\\n28 & -3 & 4 & 105 & 197 & 13453 \\\\\n29 & 1 & 5 & 56 & 67 & 1517 \\\\\n30 & 6 & 7 & 176 & 57 & 11143 \\\\\n31 & -3 & -1 & 15 & 646 & 1451 \\\\\n31 & -3 & 3 & 27 & 261 & 1460 \\\\\n32 & 0 & 5 & 75 & 94 & 3590 \\\\\n33 & -4 & -1 & 24 & 579 & 3059 \\\\\n33 & -4 & 3 & 40 & 263 & 3090 \\\\\n34 & -1 & 5 & 96 & 115 & 6843 \\\\\n35 & -5 & -1 & 35 & 532 & 5592 \\\\\n35 & -5 & 3 & 55 & 266 & 5661 \\\\\n36 & -2 & 5 & 119 & 133 & 11532 \\\\\n37 & -6 & -1 & 48 & 499 & 9289 \\\\\n37 & -6 & 3 & 72 & 269 & 9415 \\\\\n38 & -4 & 0 & 16 & 540 & 1281 \\\\\n38 & 4 & -4 & 32 & 182 & 2561 \\\\\n39 & 8 & 4 & 80 & 38 & 6401 \\\\\n\\end{longtable}",
+      "reason": "Remove the obsolete fourth-norm column. Preserve all 56 rows and their first six columns, including every N0."
+    },
+    {
+      "id": "IR",
+      "line_at_application": 3841,
+      "old": "analytic argument excludes $N(t)\\ge N_0$, and the finite computation\nexcludes $N(t)<N_0$. This contradiction proves the assertion.",
+      "new": "analytic argument excludes $N(t)\\ge N_0$, and the preceding argument\nexcludes $N(t)<N_0$. This contradiction proves the assertion.",
+      "reason": "Update the final proposition to refer to the quadratic and norm argument rather than a removed finite fourth-entry computation."
+    },
+    {
+      "id": "N01",
+      "line_at_application": 181,
+      "old": "Write \\(q=7/13+125/216\\), \\(r_0=625/1053\\). It follows that",
+      "new": "Write \\(q_0=7/13+125/216\\), \\(r_0=625/1053\\). It follows that",
+      "reason": "Distinguish this analytic coefficient from the finite-field parameter later in the same proof."
+    },
+    {
+      "id": "N01",
+      "line_at_application": 184,
+      "old": "\\frac q{\\sqrt{AC}}",
+      "new": "\\frac{q_0}{\\sqrt{AC}}",
+      "reason": "Distinguish this analytic coefficient from the finite-field parameter later in the same proof."
+    },
+    {
+      "id": "N01",
+      "line_at_application": 191,
+      "old": "\\frac q2",
+      "new": "\\frac{q_0}{2}",
+      "reason": "Distinguish this analytic coefficient from the finite-field parameter later in the same proof."
+    },
+    {
+      "id": "N01",
+      "line_at_application": 193,
+      "old": "\\frac{7q}{24}",
+      "new": "\\frac{7q_0}{24}",
+      "reason": "Distinguish this analytic coefficient from the finite-field parameter later in the same proof."
+    },
+    {
+      "id": "N02",
+      "line_at_application": 1331,
+      "old": "% Complete finite-form construction. Requires amsmath,amssymb,amsthm,booktabs.\n% The containing article defines lemma and proposition environments.\n",
+      "new": "",
+      "reason": "Remove stale assembly comments invisible in the PDF."
+    },
+    {
+      "id": "N03",
+      "line_at_application": 2110,
+      "old": "Use the order-one matrix in Lemma~\\ref{lem:ordinary-residue-construction}\nwith \\(m=4\\). For \\(j\\ge1\\), write",
+      "new": "Use the order-one matrix in Lemma~\\ref{lem:ordinary-residue-construction}\nwith \\(m=4\\), and put\n\\[\n H=\\prod_{i=1}^4a_i,\\qquad\n \\Delta=\\prod_{1\\le i<j\\le4}(a_i-a_j).\n\\]\nFor \\(j\\ge1\\), write",
+      "reason": "Restate the imported definitions, without globally renaming symbols."
+    },
+    {
+      "id": "N05",
+      "line_at_application": 1366,
+      "old": "Neither $r_x$ nor $v_x$ is divided out, so this proof also covers zero\nsquare values supplied by the tuple.",
+      "new": "Neither $r_x$ nor $v_x$ is divided out.",
+      "reason": "The local size guards already rule out these zero roots; preserve all global and descent allowances."
+    },
+    {
+      "id": "P01",
+      "line_at_application": 1533,
+      "old": "The large-circle contribution vanishes, since $P>k+1/2$, and the\ntwo boundary values differ in modulus by $2t^{k+1/2}$.",
+      "new": "The large-circle contribution vanishes, since $P>k+1/2$, and the\ndifference of the two boundary values of the numerator has modulus\n$2t^{k+1/2}$.",
+      "reason": ""
+    },
+    {
+      "id": "P03",
+      "line_at_application": 2267,
+      "old": "If $s=\\log_{10}S\\ge49$, this contradicts\n\\eqref{sm:five-uniform-continuous}. The difference\n$s-227/5-(4047/25)/(s-4)$ is increasing and equals $1/375$ at $49$.",
+      "new": "If $s=\\log_{10}S\\ge49$, then $400<10^3$ gives\n$\\log_{10}D>8s-3$. This contradicts\n\\eqref{sm:five-uniform-continuous}, since\n$(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing\nand equals $1/375$ at $49$.",
+      "reason": ""
+    },
+    {
+      "id": "P04",
+      "line_at_application": 2195,
+      "old": "For six ordered entries with anchor moduli $A\\le B\\le S\\le T$, interpolation modulus $P$ and final modulus $Q$, assume",
+      "new": "Let $a,b,s,t,p,q$ be six distinct tuple entries, with moduli\n$A\\le B\\le S\\le T\\le P\\le Q$. Assume",
+      "reason": ""
+    },
+    {
+      "id": "P05",
+      "line_at_application": 3160,
+      "old": "Full-ring parity makes \\(k\\) an integer.",
+      "new": "If $\\Delta$ is odd, then $e\\equiv f$ and $g\\equiv h\\pmod2$.\nIf $\\Delta$ is even, then $e$ and $g$ are even.\nIn either case $k$ is an integer.",
+      "reason": ""
+    },
+    {
+      "id": "P06i",
+      "line_at_application": 411,
+      "old": "The coherent integral root matrix of order four is nonsingular by the\neven-dimensional congruence above. We estimate its determinant more\nclosely.",
+      "new": "The $4\\times4$ integral matrix constructed above is nonsingular by\nthe same congruence argument. We now sharpen the determinant estimate.",
+      "reason": ""
+    },
+    {
+      "id": "P06ii",
+      "line_at_application": 535,
+      "old": "These choices,\nmade coherently for all anchors, define",
+      "new": "We call the fixed entries $a_1,\\ldots,a_m$ the anchors.\nWith the common branch choices above, define",
+      "reason": ""
+    },
+    {
+      "id": "P06iii",
+      "line_at_application": 1893,
+      "old": "In particular the ordinary all-order construction has its strict\n\\(C>4B,\\ AC>1000\\) hypotheses.",
+      "new": "In particular, the two-entry construction in\nProposition~\\ref{lem:ordinary-all-orders} applies because\n$C>4B$ and $AC>1000$.",
+      "reason": ""
+    },
+    {
+      "id": "P06v",
+      "line_at_application": 1935,
+      "old": "\\paragraph{All junctions.}",
+      "new": "\\paragraph{Overlap of consecutive intervals.}",
+      "reason": ""
+    },
+    {
+      "id": "P06v",
+      "line_at_application": 1986,
+      "old": "\\paragraph{Coverage and the infinite tail.}",
+      "new": "\\paragraph{Exclusion of all remaining values of $D$.}",
+      "reason": ""
+    },
+    {
+      "id": "P06vi",
+      "line_at_application": 1999,
+      "old": "The ordinary consecutive-overlap quotient increases by\n\\((R_2/H_2)^2\\) on incrementing its order.",
+      "new": "The ratio of the upper endpoint of $O_j$ to the lower endpoint of\n$O_{j+1}$ is multiplied by $(R_2/H_2)^2$ when $j$ increases by one.",
+      "reason": ""
+    },
+    {
+      "id": "P07",
+      "line_at_application": 2910,
+      "old": "R^{\\rm old}",
+      "new": "R_*",
+      "reason": ""
+    },
+    {
+      "id": "P07",
+      "line_at_application": 3089,
+      "old": "\\begin{equation}\\label{eq:pr-ratio-residual}\n R_k=R_k^{\\rm old}\\frac{101}{200}\n             \\left(\\frac{1+1/q}{2}\\right)^{2k}.\n\\end{equation}",
+      "new": "\\begin{equation}\\label{eq:pr-ratio-residual}\n R_k=R_*\\frac{101}{200}\n             \\left(\\frac{1+1/q}{2}\\right)^{2k}.\n\\end{equation}",
+      "reason": ""
+    },
+    {
+      "id": "P07",
+      "line_at_application": 3495,
+      "old": "\\begin{equation}\\label{eq:pr-fixed-R}\n R_k=R_k^{\\rm old}\\frac{101}{200}\n                 \\left(\\frac{n_{ab}}{4n_b}\\right)^k.\n\\end{equation}",
+      "new": "\\begin{equation}\\label{eq:pr-fixed-R}\n R_k=R_*\\frac{101}{200}\n                 \\left(\\frac{n_{ab}}{4n_b}\\right)^k.\n\\end{equation}",
+      "reason": ""
+    },
+    {
+      "id": "P07",
+      "line_at_application": 2904,
+      "old": "\\label{eq:pr-family-parameters}\n\\begin{array}{c|rrrrr}\n &N_2&N_3&A_3&A_4&A_5\\\\ \\hline\n k&2&3&3&4&5\\\\\n P&6&9&8&11&14\\\\\n g&2&4&4&2&4\\\\\n R_*&5/4&35/32&35/16&63/8&495/64 .\n\\end{array}\n\\end{equation}",
+      "new": "\\label{eq:pr-family-parameters}\n\\begin{array}{c|rrrrr}\n &N_2&N_3&A_3&A_4&A_5\\\\ \\hline\n k&2&3&3&4&5\\\\\n P&6&9&8&11&14\\\\\n g&2&4&4&2&4\\\\\n R_*&5/4&35/32&35/16&63/8&495/64 .\n\\end{array}\n\\end{equation}\nHere $R_*$ is the residual constant for the corresponding family\nin Table~\\ref{tab:ff-parameters}.",
+      "reason": ""
+    },
+    {
+      "id": "P08",
+      "line_at_application": 2943,
+      "old": "\\(N_3^{bs}\\)&\\(4M_{bs}^2S^{14}C^7\\)&\\(B^8C^{11}/(4R_{bs}^2S^6)\\)\\\\",
+      "new": "\\(N_{3,bs}\\)&\\(4M_{bs}^2S^{14}C^7\\)&\\(B^8C^{11}/(4R_{bs}^2S^6)\\)\\\\",
+      "reason": ""
+    },
+    {
+      "id": "P08",
+      "line_at_application": 2977,
+      "old": "\\(N_3\\)--\\(N_3^{bs}\\)&\\(G^4A^{36}B^8/(16R_n^2M_{bs}^2h)\\)&\\(S\\le B^3\\)\\\\",
+      "new": "\\(N_3\\)--\\(N_{3,bs}\\)&\\(G^4A^{36}B^8/(16R_n^2M_{bs}^2h)\\)&\\(S\\le B^3\\)\\\\",
+      "reason": ""
+    },
+    {
+      "id": "P08",
+      "line_at_application": 2978,
+      "old": "\\(N_3^{bs}\\)--\\(A_4\\)&\\(\\rho^2A^{14}/(16M_4^2h)\\)&pointwise bound\\\\",
+      "new": "\\(N_{3,bs}\\)--\\(A_4\\)&\\(\\rho^2A^{14}/(16M_4^2h)\\)&pointwise bound\\\\",
+      "reason": ""
+    },
+    {
+      "id": "P08",
+      "line_at_application": 3003,
+      "old": "to \\(A_4\\); otherwise use \\(N_3^{bs},A_4\\). Then use",
+      "new": "to \\(A_4\\); otherwise use \\(N_{3,bs},A_4\\). Then use",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 1987,
+      "old": "If \\(S\\ge B^2\\), continue through\n\\(N_3\\); otherwise continue through \\(A_3,M,N_3\\).",
+      "new": "If $S\\ge B^2$, continue through $N_3$. Otherwise continue through $A_3,M,N_3$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 1988,
+      "old": "If \\(S\\ge B^3\\), continue to \\(A_4\\); otherwise use \\(N_{3,bs},A_4\\).",
+      "new": "If $S\\ge B^3$, continue to $A_4$. Otherwise use $N_{3,bs},A_4$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 2526,
+      "old": "is rational only when one coordinate vanishes; integrality of a purely imaginary root forces",
+      "new": "is rational only when one coordinate vanishes. Integrality of a purely imaginary root forces",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 2963,
+      "old": "Sufficient overlap quotients; each must exceed one.",
+      "new": "Sufficient overlap quotients, each required to exceed one.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 2986,
+      "old": "and \\(T>2BS\\); the others use",
+      "new": "and $T>2BS$. The others use",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 2994,
+      "old": "\\(C^2/(16R_{bs}^2M_4^2B^{10}S^6h)\\);\nsubstitution gives",
+      "new": "$C^2/(16R_{bs}^2M_4^2B^{10}S^6h)$. Substitution gives",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 2995,
+      "old": "The remaining entries follow by the same divisions; all substitutions",
+      "new": "The remaining entries follow by the same divisions. All substitutions",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3000,
+      "old": "to \\(N_3\\); otherwise use \\(A_3,M,N_3\\).",
+      "new": "to $N_3$. Otherwise use $A_3,M,N_3$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3001,
+      "old": "to \\(A_4\\); otherwise use \\(N_{3,bs},A_4\\).",
+      "new": "to $A_4$. Otherwise use $N_{3,bs},A_4$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3111,
+      "old": "polynomials at \\(x=1/q\\); their maximum is strictly below",
+      "new": "polynomials at $x=1/q$. Their maximum is strictly below",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3163,
+      "old": "give \\(3ef=gh\\) and \\(X+\\Delta V=8\\); multiplication gives",
+      "new": "give $3ef=gh$ and $X+\\Delta V=8$. Multiplication gives",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3202,
+      "old": "\\((\\pm1\\pm\\sqrt{-31})/2\\); they give",
+      "new": "$(\\pm1\\pm\\sqrt{-31})/2$. They give",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3257,
+      "old": "condition; no arbitrary unit multiplication is used.",
+      "new": "condition. No arbitrary unit multiplication is used.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3262,
+      "old": "The forty first-pair representatives; coordinates mean $x+y\\omega_d$.",
+      "new": "The forty first-pair representatives. Coordinates mean $x+y\\omega_d$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3779,
+      "old": "Pair indices refer to Table~\\ref{tab:pr-forty-pairs}; coordinates mean $u+v\\omega$.",
+      "new": "Pair indices refer to Table~\\ref{tab:pr-forty-pairs}. Coordinates mean $u+v\\omega$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 210,
+      "old": "It suffices to enumerate the squarefree \\(q\\)\nwith \\(\\Delta\\le64\\):",
+      "new": "It suffices to enumerate the following squarefree values of $q$ with $\\Delta\\le64$.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3163,
+      "old": "Moreover\n\\(V=3f^2X/g^2\\), so \\(X,V>0\\), and \\(k\\ne0\\): otherwise\n\\(g^2=3e^2\\), impossible for nonzero integers.",
+      "new": "Moreover $V=3f^2X/g^2$, so $X,V>0$. Also $k\\ne0$, since $k=0$ would give $g^2=3e^2$, which is impossible for nonzero integers.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3177,
+      "old": "Such a positive entry cannot\ncoexist with \\(-x\\): the equation \\(px-1=2w^2\\) has an odd left\nside.",
+      "new": "Such a positive entry cannot coexist with $-x$, because the equation $px-1=2w^2$ has an odd left side.",
+      "reason": ""
+    },
+    {
+      "id": "P10-P11",
+      "line_at_application": 3233,
+      "old": "This root range is exhaustive: \\(N(r)=|ab+1|\\le AB+1<9\\) in the\nfirst case, and \\(AB+1\\le\\sqrt{30}+1<7\\) in the second.",
+      "new": "The root range is exhaustive because $N(r)=|ab+1|\\le AB+1<9$ in the first case and $AB+1\\le\\sqrt{30}+1<7$ in the second.",
+      "reason": ""
+    },
+    {
+      "id": "P12",
+      "line_at_application": 1852,
+      "old": "\\section{Exclusion when every entry has modulus at least three}",
+      "new": "\\section{Entries of modulus at least three}",
+      "reason": ""
+    },
+    {
+      "id": "P13",
+      "line_at_application": 64,
+      "old": "\\cite{W}",
+      "new": "\\cite[Lemma~3.1]{W}",
+      "reason": ""
+    },
+    {
+      "id": "P13",
+      "line_at_application": 67,
+      "old": "\\cite{Cipu25}",
+      "new": "\\cite[pp.~27--30]{Cipu25}",
+      "reason": ""
+    },
+    {
+      "id": "P13-P14-FK",
+      "line_at_application": 67,
+      "old": "Extensions of $\\{1,3\\}$ in\n$\\mathbb Z[\\sqrt{-d}]$ were studied by Franu\\v{s}i\\'c~\\cite{F10} and\nKreso and Franu\\v{s}i\\'c~\\cite{FK11}. Here this pair is covered by the\nsame approximation estimates as the other pairs. We do not determine\nwhether the bound of five is attained.",
+      "new": "Franu\\v{s}i\\'c~\\cite[Theorem~1]{F10} proved that\n$\\{1,3\\}$ cannot be extended to a Diophantine quintuple in\n$\\mathbb Z[\\sqrt{-d}]$ for positive squarefree $d\\ne2$.\nFranu\\v{s}i\\'c and Kreso~\\cite[Corollary~1.2]{FK11} treated $d=2$.\nFor $d\\equiv3\\pmod4$, this subring is properly contained in\n$\\mathcal O_K$. We handle the pair in the full ring of integers using\nthe same approximation estimates as for the other pairs. We do not\ndetermine whether the bound of five is attained.",
+      "reason": ""
+    },
+    {
+      "id": "FK-bibliography",
+      "line_at_application": 3888,
+      "old": "\\bibitem{FK11} D.~Kreso and Z.~Franu\\v{s}i\\'c, \\emph{Non-extensibility\nof the pair $\\{1,3\\}$ to a Diophantine quintuple in\n$\\mathbb Z[\\sqrt{-d}]$}, arXiv:1312.5241v1 (2013).\n\\href{https://doi.org/10.48550/arXiv.1312.5241}{Preprint doi:10.48550/arXiv.1312.5241}.\n\n",
+      "new": "\\bibitem{FK11} Z.~Franu\\v{s}i\\'c and D.~Kreso, Nonextensibility\nof the pair $\\{1,3\\}$ to a Diophantine quintuple in\n$\\mathbb Z[\\sqrt{-2}]$, \\emph{J. Comb. Number Theory}\n\\textbf{3} (2011), no.~3.\n\\href{https://web.math.pmf.unizg.hr/~fran/clanci/dz-web.pdf}{Author's version}.\n\\href{https://doi.org/10.48550/arXiv.1312.5241}{Preprint doi:10.48550/arXiv.1312.5241}.\n\n",
+      "reason": "Published author order/title/year. Disputed journal pages omitted. Existing preprint DOI explicitly remains a preprint identifier."
+    },
+    {
+      "id": "P09",
+      "line_at_application": 539,
+      "old": "\\begin{equation}\\label{eq:coherent-form}\n L_m=-\\Delta_m z+\n \\sum_{i=1}^m\n \\frac{\\Delta_m a_i^{m-2}}{\\prod_{j\\ne i}(a_i-a_j)}R_i\n \\ \\in\\mathcal O_K.\n\\end{equation}",
+      "new": "\\begin{equation*}\n L_m=-\\Delta_m z+\n \\sum_{i=1}^m\n \\frac{\\Delta_m a_i^{m-2}}{\\prod_{j\\ne i}(a_i-a_j)}R_i\n \\ \\in\\mathcal O_K.\n\\end{equation*}",
+      "reason": "eq:coherent-form"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1389,
+      "old": "\\begin{equation}\\label{eq:ff-zcomparison}\n (1-\\varepsilon)CD\\le Z^2\\le(1+\\varepsilon)CD.\n\\end{equation}",
+      "new": "\\begin{equation*}\n (1-\\varepsilon)CD\\le Z^2\\le(1+\\varepsilon)CD.\n\\end{equation*}",
+      "reason": "eq:ff-zcomparison"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1527,
+      "old": "\\begin{equation}\\label{eq:ff-two-det}\n \\det \\widetilde Q=\\Delta(xy)^{m-1}c^{k-m}(x-y)^{4k-1},\\qquad\n \\Delta=4^k\\binom{k+1/2}{m}16^kJ.\n\\end{equation}",
+      "new": "\\begin{equation*}\n \\det \\widetilde Q=\\Delta(xy)^{m-1}c^{k-m}(x-y)^{4k-1},\\qquad\n \\Delta=4^k\\binom{k+1/2}{m}16^kJ.\n\\end{equation*}",
+      "reason": "eq:ff-two-det"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1545,
+      "old": "\\begin{equation}\\label{eq:ff-beta}\n \\beta=\\frac{(2k+2)!(2P-2k-2)!}\n {4^P(k+1)!(P-k-1)!P!}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n \\beta=\\frac{(2k+2)!(2P-2k-2)!}\n {4^P(k+1)!(P-k-1)!P!}.\n\\end{equation*}",
+      "reason": "eq:ff-beta"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1602,
+      "old": "\\begin{equation}\\label{eq:ff-two-inequality}\n 1<\\frac{M Y^{P-2}C^{k+1}}Z\n       +\\frac{R Y^kZ}{X^{k+1}C^{P-k}},\n\\end{equation}",
+      "new": "\\begin{equation*}\n 1<\\frac{M Y^{P-2}C^{k+1}}Z\n       +\\frac{R Y^kZ}{X^{k+1}C^{P-k}},\n\\end{equation*}",
+      "reason": "eq:ff-two-inequality"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1618,
+      "old": "\\begin{equation}\\label{eq:ff-two-endpoints}\n l=4M^2Y^{2P-4}C^{2k+1},\\qquad\n u=\\frac{X^{2k+2}C^{2P-2k-1}}{4R^2Y^{2k}}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n l=4M^2Y^{2P-4}C^{2k+1},\\qquad\n u=\\frac{X^{2k+2}C^{2P-2k-1}}{4R^2Y^{2k}}.\n\\end{equation*}",
+      "reason": "eq:ff-two-endpoints"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1662,
+      "old": "\\begin{equation}\\label{eq:ff-pzero}\n Q_0=-\\sum_{t=u,v}\\left[\n tP_{t,2}c^2+(tP_{t,1}+P_{t,2}/2)c\n              +tP_{t,0}+P_{t,1}/2-P_{t,2}/(8t)\\right].\n\\end{equation}",
+      "new": "\\begin{equation*}\n Q_0=-\\sum_{t=u,v}\\left[\n tP_{t,2}c^2+(tP_{t,1}+P_{t,2}/2)c\n              +tP_{t,0}+P_{t,1}/2-P_{t,2}/(8t)\\right].\n\\end{equation*}",
+      "reason": "eq:ff-pzero"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1672,
+      "old": "\\begin{equation}\\label{eq:ff-pcancel}\n \\sum_{t=u,v}\\left(b_nt^{1-n}P_{t,0}\n       +b_{n+1}t^{-n}P_{t,1}+b_{n+2}t^{-n-1}P_{t,2}\\right).\n\\end{equation}",
+      "new": "\\begin{equation*}\n \\sum_{t=u,v}\\left(b_nt^{1-n}P_{t,0}\n       +b_{n+1}t^{-n}P_{t,1}+b_{n+2}t^{-n-1}P_{t,2}\\right).\n\\end{equation*}",
+      "reason": "eq:ff-pcancel"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1692,
+      "old": "\\begin{equation}\\label{eq:ff-pdet}\n -78750a^2b^2s^2(a-b)^5(a-s)(b-s)F_s,\n\\end{equation}",
+      "new": "\\begin{equation*}\n -78750a^2b^2s^2(a-b)^5(a-s)(b-s)F_s,\n\\end{equation*}",
+      "reason": "eq:ff-pdet"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1714,
+      "old": "\\begin{equation}\\label{eq:ff-pdegrees}\n \\begin{array}{c|rrr}\n  R_{ab}&84&408&384\\\\\n  H&210&840&720\\\\\n  T_{ab}&252&1224&1200\\\\\n  V&492&2424&2352.\n \\end{array}\n\\end{equation}",
+      "new": "\\begin{equation*}\n \\begin{array}{c|rrr}\n  R_{ab}&84&408&384\\\\\n  H&210&840&720\\\\\n  T_{ab}&252&1224&1200\\\\\n  V&492&2424&2352.\n \\end{array}\n\\end{equation*}",
+      "reason": "eq:ff-pdegrees"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1797,
+      "old": "\\begin{equation}\\label{eq:ff-qguards}\n C\\ge4T,\\qquad AC\\ge1000.\n\\end{equation}",
+      "new": "\\begin{equation*}\n C\\ge4T,\\qquad AC\\ge1000.\n\\end{equation*}",
+      "reason": "eq:ff-qguards"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 1849,
+      "old": "\\begin{equation}\\label{eq:ff-Q}\n 1<\\frac{55T^3C^2}{Z}+\\frac{3TZ}{2A^2C^4}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n 1<\\frac{55T^3C^2}{Z}+\\frac{3TZ}{2A^2C^4}.\n\\end{equation*}",
+      "reason": "eq:ff-Q"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 2198,
+      "old": "\\begin{equation}\\label{sm:six-V-hypotheses}\n P\\ge\\max\\{4T,1000\\},\\qquad Q\\ge4P,\n \\qquad P^2\\ge\\frac{32BST}{A^3}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n P\\ge\\max\\{4T,1000\\},\\qquad Q\\ge4P,\n \\qquad P^2\\ge\\frac{32BST}{A^3}.\n\\end{equation*}",
+      "reason": "sm:six-V-hypotheses"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 2221,
+      "old": "\\begin{equation}\\label{sm:six-V-constants}\n \\frac{100}{1-\\varepsilon}<101,\n \\qquad \\frac4{9(1+\\varepsilon)}>\\frac25.\n\\end{equation}",
+      "new": "\\begin{equation*}\n \\frac{100}{1-\\varepsilon}<101,\n \\qquad \\frac4{9(1+\\varepsilon)}>\\frac25.\n\\end{equation*}",
+      "reason": "sm:six-V-constants"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 2264,
+      "old": "\\begin{equation}\\label{sm:five-two-small-lower}\n D>\\frac25\\frac{A^2C^5}{T^2}\n  >\\frac{243}{81920}A^7S^5T^3\n  >\\frac{S^5T^3}{400}\\ge\\frac{S^8}{400}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n D>\\frac25\\frac{A^2C^5}{T^2}\n  >\\frac{243}{81920}A^7S^5T^3\n  >\\frac{S^5T^3}{400}\\ge\\frac{S^8}{400}.\n\\end{equation*}",
+      "reason": "sm:five-two-small-lower"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 2322,
+      "old": "\\begin{equation}\\label{sm:five-bounded-four-lower}\n D>\\frac{C^7}{100M^6}=10^{-50}C^7.\n\\end{equation}",
+      "new": "\\begin{equation*}\n D>\\frac{C^7}{100M^6}=10^{-50}C^7.\n\\end{equation*}",
+      "reason": "sm:five-bounded-four-lower"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 2905,
+      "old": "\\begin{equation}\\label{eq:pr-family-parameters}\n\\begin{array}{c|rrrrr}\n &N_2&N_3&A_3&A_4&A_5\\\\ \\hline\n k&2&3&3&4&5\\\\\n P&6&9&8&11&14\\\\\n g&2&4&4&2&4\\\\\n R_*&5/4&35/32&35/16&63/8&495/64 .\n\\end{array}\n\\end{equation}",
+      "new": "\\begin{equation*}\n\\begin{array}{c|rrrrr}\n &N_2&N_3&A_3&A_4&A_5\\\\ \\hline\n k&2&3&3&4&5\\\\\n P&6&9&8&11&14\\\\\n g&2&4&4&2&4\\\\\n R_*&5/4&35/32&35/16&63/8&495/64 .\n\\end{array}\n\\end{equation*}",
+      "reason": "eq:pr-family-parameters"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3091,
+      "old": "\\begin{equation}\\label{eq:pr-ratio-residual}\n R_k=R_*\\frac{101}{200}\n             \\left(\\frac{1+1/q}{2}\\right)^{2k}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n R_k=R_*\\frac{101}{200}\n             \\left(\\frac{1+1/q}{2}\\right)^{2k}.\n\\end{equation*}",
+      "reason": "eq:pr-ratio-residual"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3397,
+      "old": "\\begin{equation}\\label{eq:pr-pair-defect}\n c_{ij}=2\\{k_{ij}(k_{ik}k_{jl}+k_{il}k_{jk})\n                  +k_{ij}^2k_{kl}\\}-\\frac12.\n\\end{equation}",
+      "new": "\\begin{equation*}\n c_{ij}=2\\{k_{ij}(k_{ik}k_{jl}+k_{il}k_{jk})\n                  +k_{ij}^2k_{kl}\\}-\\frac12.\n\\end{equation*}",
+      "reason": "eq:pr-pair-defect"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3472,
+      "old": "\\begin{equation}\\label{eq:pr-fixed-M}\n \\frac{101}{100g}\\max_{\\mathrm{rows}}\n \\sum_{j=1}^2\\sum_{\\ell=0}^k\n \\frac{|p_{j,\\ell}(a,b)|}{B^{P-2}C_0^{k-\\ell}}\n\\end{equation}",
+      "new": "\\begin{equation*}\n \\frac{101}{100g}\\max_{\\mathrm{rows}}\n \\sum_{j=1}^2\\sum_{\\ell=0}^k\n \\frac{|p_{j,\\ell}(a,b)|}{B^{P-2}C_0^{k-\\ell}}\n\\end{equation*}",
+      "reason": "eq:pr-fixed-M"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3492,
+      "old": "\\begin{equation}\\label{eq:pr-fixed-R}\n R_k=R_*\\frac{101}{200}\n                 \\left(\\frac{n_{ab}}{4n_b}\\right)^k.\n\\end{equation}",
+      "new": "\\begin{equation*}\n R_k=R_*\\frac{101}{200}\n                 \\left(\\frac{n_{ab}}{4n_b}\\right)^k.\n\\end{equation*}",
+      "reason": "eq:pr-fixed-R"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3498,
+      "old": "\\begin{equation}\\label{eq:pr-fixed-Rp}\n R_p=\\frac{15+80x+150x^2+280x^3+35x^4}{256}\n +\\frac{21(885+1144x+435x^2+2634x^3+170x^4)}{1024\\cdot999}.\n\\end{equation}",
+      "new": "\\begin{equation*}\n R_p=\\frac{15+80x+150x^2+280x^3+35x^4}{256}\n +\\frac{21(885+1144x+435x^2+2634x^3+170x^4)}{1024\\cdot999}.\n\\end{equation*}",
+      "reason": "eq:pr-fixed-Rp"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3618,
+      "old": "\\begin{equation}\\label{eq:fixed56-residual}\n R_k=R_*\\frac{101}{200}\\left(\\frac{d_{ab}}{4b_0}\\right)^k,\n \\qquad (R_*,k)=\n (5/4,2),(35/32,3),(35/16,3),(63/8,4),(495/64,5).\n\\end{equation}",
+      "new": "\\begin{equation*}\n R_k=R_*\\frac{101}{200}\\left(\\frac{d_{ab}}{4b_0}\\right)^k,\n \\qquad (R_*,k)=\n (5/4,2),(35/32,3),(35/16,3),(63/8,4),(495/64,5).\n\\end{equation*}",
+      "reason": "eq:fixed56-residual"
+    },
+    {
+      "id": "P09",
+      "line_at_application": 3685,
+      "old": "\\begin{equation}\\label{eq:fixed56-cutoff}\n N_0=\\max\\bigl(1024,n_\\infty,\\{n_e\\}_e,\\eta\\bigr),\\qquad\n \\eta=\\begin{cases}1,&a_0=1,\\\\4a_0b_0s_0+1,&a_0=2.\\end{cases}\n\\end{equation}",
+      "new": "\\begin{equation*}\n N_0=\\max\\bigl(1024,n_\\infty,\\{n_e\\}_e,\\eta\\bigr),\\qquad\n \\eta=\\begin{cases}1,&a_0=1,\\\\4a_0b_0s_0+1,&a_0=2.\\end{cases}\n\\end{equation*}",
+      "reason": "eq:fixed56-cutoff"
+    },
+    {
+      "id": "P09 unused macro",
+      "line_at_application": 15,
+      "old": "\\newcommand{\\NN}{\\mathrm N}\n",
+      "new": "",
+      "reason": ""
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 108,
+      "old": "\\label{sec:structural-growth}",
+      "new": "",
+      "reason": "sec:structural-growth"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 522,
+      "old": "\\label{sec:coherent-interpolation}",
+      "new": "",
+      "reason": "sec:coherent-interpolation"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 1331,
+      "old": "\\label{sec:finiteforms}",
+      "new": "",
+      "reason": "sec:finiteforms"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 1855,
+      "old": "\\label{sec:all-large}",
+      "new": "",
+      "reason": "sec:all-large"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 2011,
+      "old": "\\label{sec:small-entries}",
+      "new": "",
+      "reason": "sec:small-entries"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 3547,
+      "old": "\\label{sec:fixed56}",
+      "new": "",
+      "reason": "sec:fixed56"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 3185,
+      "old": "\\label{lem:pr-field24}",
+      "new": "",
+      "reason": "lem:pr-field24"
+    },
+    {
+      "id": "P09 unused source label",
+      "line_at_application": 3361,
+      "old": "\\label{prop:pr-S15}",
+      "new": "",
+      "reason": "prop:pr-S15"
+    },
+    {
+      "id": "QA01",
+      "line_at_application": 70,
+      "old": "For $d\\equiv3\\pmod4$, this subring is properly contained in\n$\\mathcal O_K$.",
+      "new": "For $d\\equiv3\\pmod4$, the ring $\\mathbb Z[\\sqrt{-d}]$ is properly contained\nin the full ring of integers of $\\mathbb Q(\\sqrt{-d})$.",
+      "reason": "Make the field in the new historical statement explicit before K is parameterized."
+    },
+    {
+      "id": "QA02",
+      "line_at_application": 3543,
+      "old": "They are listed,\nwith their fourth-entry bounds, in the final finite-prefix table below.",
+      "new": "They are listed, together with their cutoffs $N_0$, in\nTable~\\ref{tab:fixed56}.",
+      "reason": "Describe the final table after deletion of the fourth-entry search."
+    },
+    {
+      "id": "QA03",
+      "line_at_application": 1644,
+      "old": "\\begin{equation}\\label{eq:ff-pguards}\n C\\ge200S,\\qquad AC\\ge1000,\\qquad C\\ge1000.\n\\end{equation}",
+      "new": "\\begin{equation*}\n C\\ge200S,\\qquad AC\\ge1000,\\qquad C\\ge1000.\n\\end{equation*}",
+      "reason": "The unconditional rank proof removed the only reference to this numbered display. Keep all hypotheses unchanged."
+    },
+    {
+      "id": "QA04",
+      "line_at_application": 1898,
+      "old": " \\epsilon=\\frac1{4000},\\quad h=\\frac{4001}{3999},\\quad\n",
+      "new": " \\epsilon=\\frac1{4000},\\quad h=\\frac{4001}{3999}.\n",
+      "reason": "Remove a trailing empty spacing command and end the constant-definition display."
+    }
+  ],
+  "dispositions": [
+    {
+      "id": "N04",
+      "status": "not applied",
+      "reason": "Optional basis-parameter harmonization was not recommended as necessary. Existing local definitions are consistent."
+    },
+    {
+      "id": "P06iv and conditional phrases",
+      "status": "superseded",
+      "reason": "The accepted P02 and unconditional-P changes remove those passages."
+    },
+    {
+      "id": "P10 removed P0 prose",
+      "status": "superseded",
+      "reason": "Whole P0 residual argument removed."
+    }
+  ],
+  "number_of_edits": 122,
+  "baseline_lines": 3969,
+  "output_lines": 3904,
+  "undefined_references": [],
+  "font_margins_packages_unchanged": true,
+  "original_preserved": true
+}

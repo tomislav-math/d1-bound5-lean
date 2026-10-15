@@ -1,0 +1,268 @@
+--- D1_bound5-v2.tex
++++ D1_bound5-v3.tex
+@@ -14,7 +14,7 @@
+ \newcommand{\OK}{\mathcal O_K}
+ \numberwithin{equation}{section}
+ \title{A uniform bound of five for Diophantine tuples\\in imaginary quadratic integer rings}
+-\author{}
++\author{Zrinka Franu\v{s}i\'{c} \and Tomislav Pejkovi\'{c}}
+ \date{}
+ \begin{document}
+ \maketitle
+@@ -35,6 +35,9 @@
+ $x,y\in\mathcal A$ are distinct. Zero is allowed as such a square.
+ Equivalently, the square roots may be required to lie in $K$. A square
+ root in $K$ of an algebraic integer is again in $\mathcal O_K$.
++
++For a general account of Diophantine tuples and their connections with
++elliptic curves, see Dujella~\cite{Dujella24}.
+ 
+ Ad\v zaga obtained the uniform bound $42$ for these tuples~\cite{A}.
+ Cipu and Fujita proved the bound $24$ for both $D(1)$-tuples and
+@@ -69,8 +72,11 @@
+ Franu\v{s}i\'c and Kreso~\cite[Corollary~1.2]{FK11} treated $d=2$.
+ For $d\equiv3\pmod4$, the ring $\mathbb Z[\sqrt{-d}]$ is properly contained
+ in the full ring of integers of $\mathbb Q(\sqrt{-d})$. We handle the pair in the full ring of integers using
+-the same approximation estimates as for the other pairs. We do not
+-determine whether the bound of five is attained.
++the same approximation estimates as for the other pairs.
++
++Dujella~\cite[Problem~1.11]{DujellaOpen} asks whether a $D(1)$-quintuple
++exists in the ring of integers of an imaginary quadratic field.
++Our bound does not settle this question.
+ 
+ Fix one complex embedding of $K$. We write $N(z)=z\overline z=|z|^2$.
+ For $z\in\mathcal O_K\setminus\{0\}$ this is a positive integer, so
+@@ -521,6 +527,8 @@
+ 
+ \section{Interpolation of square roots}
+ 
++We construct integral combinations of square roots by interpolation. The interpolation weights cancel the low-order terms involving the fixed entries, leaving an explicit remainder. When these combinations are nonzero, bounds for them give gaps between the last two entries. We also bound the ranges in which these combinations can vanish.
++
+ Let \(a_1,\ldots,a_m,p,q\) be distinct tuple entries, \(m=2,3,4\), with
+ \(1\le A_1\le\cdots\le A_m\le P=|p|\le Q=|q|\) and \(A_1P>1\).
+ Choose \(\eta^2=pq\), put \(x=1/p,y=1/q\), and use
+@@ -854,8 +862,7 @@
+ Repeat this five-entry argument on \(a,b,s,c,d\). Here
+ \(C>2ABS\) and \(AC\ge H\). This gives the first inequality in
+ \eqref{eq:retained-start} and \(D/C>A^2C^4/S^2\ge C^2>1000\).
+-The form \(L_4\) satisfies the hypotheses of Lemma~\ref{lem:direct-four}.
+-It is nonzero because
++The form $L_4$ on $(a,b,s,t)$, evaluated at $(c,d)$, satisfies the hypotheses of Lemma~\ref{lem:direct-four}. If it vanished, that lemma would give $D<17ABSTC^3$. Together with $D>A^2C^5/S^2$, this would imply $C^2<17BS^3T/A$, contrary to
+ \[
+  \frac{C^2}{17BS^3T/A}>
+  \frac9{17}A^3\frac{BT}{S}>
+@@ -1330,7 +1337,7 @@
+ 
+ \section{Finite integral approximation forms}
+ 
+-We give finite formulas for every row used in this section. As before, we prove the required divisibility in the polynomial ring over $\mathbb Z$ before evaluating the tuple entries.
++The interval arguments below begin with a structural lower bound and end with the two-entry estimates at every order. The finite constructions in this section supply the intervening forbidden intervals. We give finite formulas for every row used here and prove the required divisibility in the polynomial ring over $\mathbb Z$ before evaluating the tuple entries.
+ 
+ \subsection{From polynomial rows to inequalities}
+ 
+@@ -1906,16 +1913,7 @@
+  M_m=\frac89\,608^2,\quad R_m=\frac{3920}{81},\quad
+  R_{bs}=\frac{35}{32}.
+ \]
+-For the finite two-anchor and three-anchor constructions, these are
+-coefficient and residual bounds in the indicated integral normalizations.
+-Use the row \(P\) with residual constant \(3\), and put
+-\(H_P=\max(BS^3,B^3S^2)\).
+-
+-In the following table, \((l,u)\) denotes the forbidden closed interval
+-\([l/(1-\epsilon),u/(1+\epsilon)]\) for \(D\). This conversion follows
+-by making both summands of the corresponding strict integral-form
+-bound at most \(1/2\), and using
+-\((1-\epsilon)CD<|\sqrt{cd+1}|^2<(1+\epsilon)CD\).
++For the finite constructions, these constants bound the coefficients and residuals in their stated integral normalizations. In the table, $P$ denotes the four quadratic rows in~\eqref{eq:ff-prows}, $Q$ the five linear rows with determinant~\eqref{eq:ff-qdet}, and $M$ the estimate~\eqref{eq:ordinary-three-M}. For $P$, use $\mathcal R(1)<3$ and put $H_P=\max(BS^3,B^3S^2)$. The row $N_{3,bs}$ uses $N_3$ with fixed entries $b,s$, and $O_j$ uses~\eqref{eq:ordinary-integer-k} at $k=j$. Each pair $(l,u)$ denotes the forbidden closed interval $[l/(1-\epsilon),u/(1+\epsilon)]$ for $D$, by~\eqref{eq:ff-window}.
+ \begin{center}\small
+ \begin{tabular}{c|c|c}
+ row&\(l\)&\(u\)\\\hline
+@@ -1934,10 +1932,7 @@
+ The last row is available for every positive integer \(j\).
+ 
+ \paragraph{Overlap of consecutive intervals.}
+-The initial bound \eqref{eq:integrated-6} and the interval endpoints yield the following
+-sufficient strict comparisons. The left column of quantities must exceed
+-the right column. The first two use \(C>A^2T^5/S^2,\ T>2ABS\).
+-The remaining comparisons use $C>KA^7B^5S^3$.
++The first comparison puts $\mathcal G$ above the lower endpoint of $Q$, so~\eqref{eq:integrated-6} places $D$ above that endpoint. Each later comparison requires the preceding upper endpoint to exceed the next lower endpoint, with the factors $1\mp\epsilon$ included. The table gives sufficient strict comparisons, so the lower quantity must exceed the required constant. The first two use $C>A^2T^5/S^2$ and $T>2ABS$, and the remaining comparisons use~\eqref{eq:large-gap}.
+ \begin{center}\small
+ \begin{tabular}{c|c|c}
+ junction and additional condition&lower quantity&required constant\\\hline
+@@ -2240,8 +2235,7 @@
+ $(a,s,t,c)$. In the last one the row entries are $(a,b,s)$ and the
+ column entries are $(t,c,d)$.
+ 
+-For two small anchors and an interpolation modulus $P\ge10^8$,
+-Corollary~\ref{cor:ordinary-height-envelope} gives
++Taking $a,b$ as anchors and any of $s,t,c$ with modulus $P\ge10^8$ as the interpolation entry, Corollary~\ref{cor:ordinary-height-envelope} gives
+ \begin{equation}\label{sm:five-uniform-continuous}
+  \log_{10}D<g(\log_{10}P),\qquad
+  g(x)=7x+\frac{212}{5}+\frac{4047/25}{x-4}.
+@@ -2265,11 +2259,7 @@
+   >\frac{243}{81920}A^7S^5T^3
+   >\frac{S^5T^3}{400}\ge\frac{S^8}{400}.
+ \end{equation*}
+-If $s=\log_{10}S\ge49$, then $400<10^3$ gives
+-$\log_{10}D>8s-3$. This contradicts
+-\eqref{sm:five-uniform-continuous}, since
+-$(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing
+-and equals $1/375$ at $49$.
++If $x=\log_{10}S\ge49$, then $400<10^3$ gives $\log_{10}D>8x-3$. This contradicts~\eqref{sm:five-uniform-continuous}, since $(8x-3)-g(x)=x-227/5-(4047/25)/(x-4)$ is increasing and equals $1/375$ at $49$.
+ Therefore $S<10^{49}$. In the whole case $S\ge10^8$, convexity gives
+ $\log_{10}D<389$, since $g(8)<139$ and $g(49)=389-1/375$.
+ 
+@@ -2469,6 +2459,7 @@
+ \multicolumn{3}{r}{Total} & 36931 & 36854\\
+ \end{longtable}
+ 
++\begin{samepage}
+ \begin{lemma}\label{sm:bs7-unit-axes}
+ Let $d$ be positive and squarefree, and put $t=\sqrt{-d}$. Every nonzero common extension of $\{-1,1\}$ has one of the forms
+ \begin{align*}
+@@ -2477,6 +2468,7 @@
+ \end{align*}
+ where $u,v\in\mathbb Z$ and $v\ne0$. In particular $|z|\ge d+1$.
+ \end{lemma}
++\end{samepage}
+ \begin{proof}
+ Choose integral roots $r^2=z+1$ and $s^2=1-z$, and write $2r=U+Vt$, $2s=X+Yt$. The equation $r^2+s^2=2$ gives
+ \begin{equation*}
+@@ -2698,7 +2690,9 @@
+ Testing the third anchor condition and removing zero and the original three entries gives the extension column of the table. Thus the finite procedure proves all its assertions.
+ \end{proof}
+ 
+-\begin{table}[htbp]
++\par\medskip
++\noindent\begin{minipage}{\textwidth}
++\makeatletter\def\@captype{table}\makeatother
+ \centering
+ \begin{tabular}{ccclc}
+ \toprule
+@@ -2718,7 +2712,7 @@
+ \end{tabular}
+ \caption{Small triples and all their further nonzero extensions of modulus at most $10^{40}$. Here $t=\sqrt{-d}$.}
+ \label{sm:six-small-triples-table}
+-\end{table}
++\end{minipage}\par\medskip
+ 
+ 
+ 
+@@ -2924,8 +2918,7 @@
+ 
+ The approximation inequalities proved above imply that \(D\) avoids
+ every closed interval \([l/(1-\varepsilon),u/(1+\varepsilon)]\) in
+-Table~\ref{tab:pr-windows}. All their size hypotheses follow from
+-Lemma~\ref{lem:retained-gap}. Both expressions in the maximum defining
++Table~\ref{tab:pr-windows}. Whenever Lemma~\ref{lem:retained-gap} applies, it supplies all the size hypotheses used in this table. Both expressions in the maximum defining
+ the lower endpoint of \(P\) must be checked. The ordinary family
+ \(O_j\) in this table is available for every positive integer \(j\).
+ \begin{table}[htbp]
+@@ -3182,7 +3175,7 @@
+ product plus one is congruent to two. This includes the possible zero square value when an entry is $-1$.
+ \end{proof}
+ 
+-\begin{lemma}
++\begin{lemma}\label{lem:pr-field}
+ Under Proposition~\ref{prop:pr-H2}, either the first pair is
+ $(1,3)$ up to simultaneous negation, or the field has absolute
+ discriminant $\Delta\le24$.
+@@ -3202,7 +3195,8 @@
+ which is the stated alternative.
+ \end{proof}
+ 
+-We enumerate the remaining pairs directly. For squarefree
++We enumerate the remaining pairs in the fields allowed by
++Lemma~\ref{lem:pr-field}. For squarefree
+ \[
+  d\in\{1,2,3,5,6,7,11,15,19,23\},
+ \]
+@@ -3358,7 +3352,7 @@
+ 
+ \subsection{A common bound \texorpdfstring{$S<15$}{S<15}}
+ 
+-\begin{proposition}
++\begin{proposition}\label{prop:pr-S15}
+ No ordered sextuple whose first pair is $(1,3)$ or one of the pairs in
+ Table~\ref{tab:pr-forty-pairs} has $S\ge15$.
+ \end{proposition}
+@@ -3523,7 +3517,8 @@
+ Table~\ref{tab:pr-forty-pairs}, enumerate \(s\) by
+ \eqref{eq:pr-disk} with \(L=224\), retain \(N(s)\ge N(b)\) and
+ \(s\ne a,b\), and test \(as+1\) and \(bs+1\) for being squares.
+-The norm cutoff is exact because \(S<15\) and the norm is integral.
++The norm cutoff is exact because Proposition~\ref{prop:pr-S15}
++gives \(S<15\) and the norm is integral.
+ An exact full-ring square test, including zero, is as follows.
+ For \(z=(z_x,z_y)\), put \(p=2z_x+tz_y\), \(q=z_y\).
+ Require \(N(z)=n^2\) with \(n\ge0\) integral, then require integers
+@@ -3546,12 +3541,14 @@
+ 
+ \section{Completion for one small entry}
+ 
+-The preceding reduction gives $S<15$. For the forty pairs in
++Proposition~\ref{prop:pr-S15} gives $S<15$. For the forty pairs in
+ Table~\ref{tab:pr-forty-pairs}, it leaves fifty-six triples.
+ By Lemma~\ref{lem:pr-one-three}, any sextuple containing the
+ additional pair $(1,3)$ consists of positive rational integers.
+ The conditions $3<s<15$, $s+1$ square and $3s+1$ square give $s=8$.
+-We apply the same argument to these fifty-six triples and to $(1,3,8)$.
++For each of these fifty-six triples and for $(1,3,8)$, the forbidden intervals
++give a bound $N(t)<N_0$. We then contradict this bound using the growth of an
++irregular triple, with a separate square calculation for the last two cases.
+ 
+ \subsection{A common fourth-entry cutoff}
+ 
+@@ -3589,7 +3586,8 @@
+ \end{equation}
+ Indeed, $\mathcal Q\le q_1$ and $\mu/(a_0b_0)\le\mu/b_0$,
+ so the coefficient of $T^5/S^2$ in Lemma~\ref{lem:retained-gap}
+-is at least $K$.
++is at least $K$. The other enclosure satisfies $\Phi\le\phi_1$, so the
++displayed $R_{bs}$ is a valid residual constant for $N_{3,bs}$.
+ The same lemma gives $C>\max(1000,200S,4T)$ and $D>1000C$,
+ which supply all approximation hypotheses in this section.
+ 
+@@ -3858,7 +3856,13 @@
+ modulus, and prove the assertion.
+ \end{proof}
+ 
+-\begin{thebibliography}{9}
++\par\medskip
++\noindent\textbf{Funding.} The authors were supported by the Croatian Science Foundation under the project no. IP-2022-10-5008 (TEBAG). The authors acknowledge support from the project ``Implementation of cutting-edge research and its application as part of the Scientific Center of Excellence for Quantum and Complex Systems, and Representations of Lie Algebras'', Grant No. PK.1.1.10.0004, co-financed by the European Union through the European Regional Development Fund -- Competitiveness and Cohesion Programme 2021--2027. This research was funded by the European Union's NextGenerationEU through the National Recovery and Resilience Plan 2021--2026 Institutional grant of University of Zagreb Faculty of Science (IK IA 1.1.3. Impact4Math).
++
++\medskip
++\noindent\textbf{Use of artificial intelligence.} The authors used ChatGPT 6 (OpenAI) and Claude Opus 5.5 (Anthropic) to assist with developing proofs, constructing examples and counterexamples, searching the literature, writing code for exact computations, and drafting and revising the manuscript. The authors take full responsibility for the content of this paper.
++
++\begin{thebibliography}{99}
+ \bibitem{A} N.~Ad\v zaga, On the size of Diophantine $m$-tuples in
+ imaginary quadratic number rings, \emph{Bull. Math. Sci.} \textbf{11}
+ (2021), 1950020.
+@@ -3878,6 +3882,15 @@
+ quadratic fields}, lecture slides, Representation Theory XIX,
+ Dubrovnik, 24 June 2025. Joint work in progress with Y.~Fujita.
+ \href{https://web.math.pmf.unizg.hr/~congress/Dubrovnik25/Slides-NT-25/Cipu.pdf}{Lecture slides}.
++
++\bibitem{Dujella24} A.~Dujella, \emph{Diophantine $m$-tuples and Elliptic
++Curves}, Developments in Mathematics \textbf{79}, Springer, Cham, 2024.
++\href{https://doi.org/10.1007/978-3-031-56724-7}{doi:10.1007/978-3-031-56724-7}.
++
++\bibitem{DujellaOpen} A.~Dujella, \emph{Open problems on Diophantine
++$m$-tuples and elliptic curves}, version of 15 October 2026.
++\url{https://web.math.pmf.unizg.hr/~duje/pdf/open2.pdf}
++(accessed 15 October 2026).
+ 
+ \bibitem{F10} Z.~Franu\v{s}i\'c, On the extension of the Diophantine
+ pair $\{1,3\}$ in $\mathbb Z[\sqrt d]$, \emph{J. Integer Seq.}
+@@ -3901,4 +3914,9 @@
+ version at commit \texttt{768dda32edc7}.
+ \href{https://github.com/natanaelwf/Solving-Open-Problems/blob/768dda32edc7166f9dd094b419df250b1e008531/dujella-problems-1.12-1.13/README.md}{Pinned preprint}.
+ \end{thebibliography}
++\bigskip
++\noindent Zrinka Franu\v{s}i\'{c} and Tomislav Pejkovi\'{c}\\
++Department of Mathematics, Faculty of Science\\
++University of Zagreb\\
++Bijenička cesta 30, 10000 Zagreb, Croatia. \texttt{fran@math.hr}, \texttt{pejkovic@math.hr}
+ \end{document}

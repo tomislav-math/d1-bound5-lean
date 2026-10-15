@@ -1,0 +1,86 @@
+D1_bound5-v2 — Armstrong / Loher diagnostic review
+15 October 2026
+
+Verdict
+
+The useful next step is a small exposition revision. I found no new substantive mathematical error and no sound reason to replace the proof, delete a formal result, or undertake another global rewrite. Ten short local changes would make the argument easier to follow. Adding two missing result labels is also worthwhile. A local lemma relocation is optional. The source of v2 remains unchanged.
+
+The strongest changes are to identify the P, Q and M constructions before their first interval table, expose the inference proving L4 is nonzero, and remove a genuine local collision in which s denotes both a tuple entry and log10(S). The remaining recommendations explain existing mechanisms. They do not strengthen the theorem, introduce new assumptions or change numerical constants.
+
+This is a diagnostic and a set of reviewed proposals, not a new article version. The proposed prose has not been integrated or typeset. Every precise source location below refers to the frozen 3904-line v2 source, SHA-256 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70.
+
+How the skills were applied
+
+The review used the actual latex-math-writing and math-paper-campaign skills, with their writing-rules, artisan-writing, house-style, route-polish, shared-controls and control-artifacts references. Their exact snapshots and hashes are in the package. The author's established preferences override the default house preamble. There is no recommendation to change the font, size, margins, packages or macros, or to introduce a custom .sty file.
+
+The principal reviewer read every source line. Six additional reviewers covered architecture, Sections 1–3, Sections 4–6, Section 7, Sections 8–10, and a whole-paper reading without prior audit notes. The architecture review accounts for all 37 formal statements, their mathematical roles, dependencies and consumers. No nonprincipal statement lacks a consumer. Five cross-reviews tested the new explanatory sentences against the actual proofs rather than accepting plausible prose on stylistic grounds.
+
+The main distinction throughout was between a mathematical defect, a missing explanation of a valid inference, and an optional stylistic preference. A shorter proof is not automatically easier to read. In particular, useful local hypotheses, numerical guards and specialized interval tables should remain.
+
+Recommended changes, in order
+
+1. SM-04, lines 2268–2272. Replace the dummy logarithmic variable s by x. The next case again needs s as the third tuple entry. This is a real local notation collision, although the intended mathematical argument is recoverable. The same function is increasing and still equals exactly 1/375 at x=49.
+
+2. APP-03, lines 1909–1918. Add the key to the first interval table. P is the four quadratic rows, Q is the five linear rows, M is the normalized three-anchor estimate, N_{3,bs} is N3 on b,s, and O_j is the ordinary family at order j. Replace the repeated interval-conversion explanation with its existing precise equation reference. This gives the reader the missing provenance of the table labels without adding a new notation system.
+
+3. EARLY02, lines 857–863. Explain the displayed nonvanishing comparison. If L4 vanished, the four-anchor lemma would imply D<17ABSTC^3. The already established D>A^2C^5/S^2 would then imply C^2<17BS^3T/A, contrary to the existing display. The proof is already valid, but stating this bridge avoids making the reader reconstruct it across two lemmas.
+
+4. SM-02, lines 2243–2244. Say that the interpolation entry is one of s,t,c and P is its modulus. The later applications are P=S, P=T and P=C. This prevents P from looking like an arbitrary continuous parameter. All relevant hypotheses of the height bound hold for these choices when P>=10^8.
+
+5. EARLY01, at the start of Section 3. Explain that the interpolation weights cancel the lower-order terms involving the fixed entries, while integrality makes the nonzero forms produce gaps. Also announce that vanishing must be treated separately. The qualification about the fixed entries is essential, since the separate term 1-f(xy) remains.
+
+6. APP-02, at the start of Section 5. Explain why finite families are needed after an all-order construction. They provide the intermediate excluded intervals connecting the structural lower bound to the ordinary family used at arbitrarily high orders.
+
+7. APP-04, before the Section 6 overlap table. State that each later comparison places the preceding upper endpoint beyond the next lower endpoint, with the epsilon factors included. Distinguish the first comparison, which uses the structural lower bound. Keep the existing tables and branch conditions.
+
+8. COMP-02, at the start of Section 9. State that the interval argument yields N(t)<N0 for each fixed triple, and the irregular-triple growth contradicts that bound, with a separate square calculation in the final two cases. This explains why the long cutoff calculation completes the proof without enumerating fourth entries.
+
+9. COMP-03, immediately after the justification of the fixed-triple gap. Say explicitly that Phi<=phi1, so the displayed R_bs is a valid residual constant for N_{3,bs}. This reconnects the squared-norm enclosure to its earlier modulus interpretation. It is a normalized residual constant, not the whole residual expression.
+
+10. COLD-05, lines 2925–2929. Make the reusable size-condition sentence explicitly conditional on the retained-gap lemma applying. The later five-region and fixed-pair applications already verify its hypotheses. This avoids an unconditional reading of a common calculation before those checks.
+
+All ten exact English replacements appear below and in proposals/reviewed_register.json. Their original source blocks occur uniquely. A dry application in memory finds no conflicting replacement and leaves all 37 formal statements byte-for-byte unchanged. Every reference in the proposed text resolves. These mechanical controls are separate from the human mathematical reviews.
+
+Secondary architecture changes
+
+ARCH-01, optional. The architecture reviewer recommends moving the complete four-root order-one lemma and its proof, currently lines 2080–2188, nearer its only later use in the three-small-entry proposition. This removes a 109-line interruption from the two-small-entry argument. The Section 7 reviewer prefers keeping the final small-triple argument uninterrupted. Both placements are mathematically valid. I would leave this move outside the minimal revision, or test a location before the small-anchor-alternative lemma so that that lemma remains adjacent to the proposition. Keep all hypotheses, constants and labels. Any move needs a final reference, transition and layout check.
+
+ARCH-05. Give stable labels to the discriminant lemma and the S<15 proposition, then cite them where the finite field and third-entry lists are introduced. They already have distinct mathematical roles. Adding labels is more useful than adding another summary theorem.
+
+Do not reorder entire case sections. The existing order is coherent, and the potential gain does not justify a large move. The optional local placement question does not justify a broader reorder.
+
+Optional wording and rejected reductions
+
+The five other exact prose proposals in the register are optional. They explain the target of the tail-irregularity proof, the arithmetic purpose of the residue construction, the two small-entry proof routes, the two cases with three small entries, or the reduction of B and S. They are not mathematical repairs. Do not insert all of them automatically if the ten main changes already give enough orientation.
+
+The cross-reviews caught several ways in which explanatory prose could become overbroad. The reviewed register restricts the finite graph to extensions of modulus at least three, restricts the interval-coverage statement to the ranges being excluded, and preserves the normalization of the residual constant. The original reviewer drafts remain in the package for traceability; the reviewed register is the authoritative wording of these proposals.
+
+The architecture reviewer proposed shortening the second root-transfer proof by citing the first. The approximation reviewer identified useful local explanation of consistent signs, the sharper 101/100 constant and the fact that no possibly zero supplied root is divided out. My recommendation is to retain the local proof. A few saved lines do not compensate for extra backward reading here.
+
+The identical half-coordinate square test could be replaced by a reference, but the short local restatement helps reproduce the triple computation. Defer that deletion. In particular, keep the later square test in omega coordinates unless the coordinate conversion is also made explicit.
+
+The repeated four-anchor contradiction at lines 2201–2206 is a permissible minor deletion after the preceding lemma is invoked. Its benefit is small. Keep the hypotheses, the common coherent-root convention and the subsequent derivation of the new interval.
+
+Do not merge the general and separated three-anchor lemmas. Their separation hypotheses and conclusions differ. Do not delete the preliminary product gap in favor of its sharper successor, whose proof uses it. Keep the logarithmic height corollary, which has separate consumers. Keep the reversible descent as a reusable completeness argument for both finite searches. Keep the specialized interval tables and exact finite search bounds.
+
+Visual refinements after prose editing
+
+All 58 pages were visually inspected individually at 105 dpi. No clipped text, collisions, missing rows or corrupted glyphs were found. Two optional page-flow repairs remain. Table 3 floats to page 42 inside the proof of Lemma 7.13, which starts on page 41. Prefer to keep the table with the preceding classification. The final conditions of Lemma 7.7 are stranded on page 37 after the alternatives on page 36. Try keeping that short statement together. The principal reviewer also inspected these two page images. Recheck the neighboring pages after any eventual changes, since the proposed prose will itself change page breaks. These are local layout improvements, not grounds for changing global typography.
+
+What was checked again
+
+The source identity was checked throughout. A fresh LaTeX build produces 58 pages with no warnings, undefined references, multiply defined references, overfull boxes or underfull boxes. The current retrieved PDF, the prior delivered PDF and the fresh build have identical extracted text and identical RGB pixels at 96 dpi on every page, despite different PDF byte hashes. This is a content comparison, not an assumption about why their bytes differ.
+
+Small exact arithmetic checks were rerun and saved. The Section 6 check confirms all 15 sufficient overlap comparisons, the coefficient exceeding 400 and the ordinary-tail condition. The final-section check independently regenerates the 40 pair representatives and 146 raw pairs, the 57 third entries, the removal of the exceptional triple, the remaining 56 rows, and the complement split 38/16/2. It confirms the 16 quadratic endpoint bounds and the last two modular exclusions, as well as the five regional phase, gap, residual, overlap and tail comparisons. These scripts use integer arithmetic and exact fractions.
+
+The final-section checker uses the printed coefficient and N0 values as inputs. It does not regenerate all finite-family polynomials or rederive the N0 certificates. The expensive graphs through 10^550 were not rerun in this exposition review. Their prior v2 verification remains separate evidence, available in D1_bound5-v2_verification.zip. The present checks are not presented as a second complete mathematical certification.
+
+The existing citation passages were read, but no new external citation verification or theorem substitution was undertaken. In particular, this review does not reprove Bennett's general determinant identity. The present argument still treats (1,3) without the He–Togbe–Ziegler theorem. No new bibliographic claim is proposed.
+
+The audit package contains the six reviewer reports, five cross-reviews, the 37-statement dependency ledger, source and skill hashes, exact proposal register, executable bounded checks, their outputs and baseline build logs. The page-by-page visual record is included separately. These records document what was done and its limits. They do not turn a human proof review into formal verification.
+
+The packaged check commands were also executed successfully from a separately extracted copy, so their local inputs and paths were tested as delivered.
+
+Exact proposed replacement text
+
+The following blocks are unapplied proposals for the existing v2 source. The JSON register additionally includes each exact old block, preservation notes and cross-review provenance.

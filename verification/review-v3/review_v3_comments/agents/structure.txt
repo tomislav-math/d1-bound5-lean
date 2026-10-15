@@ -1,0 +1,198 @@
+Assessment of comments 10, 12, 17, 18, 19 and 20(c)
+================================================
+
+Source inspected: output/D1_bound5-v3.tex
+SHA256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+This is an assessment only. No manuscript was edited.
+
+10. Narrow numerical margins
+----------------------------
+The observation is correct; it is not an error. Independent rational
+checks in review_v3_comments/checks/structure_exact.py give the following.
+
+* In Lemma 2.3, the first determinant coefficient is exactly
+  177857168963752525/358132358185625664 = 0.4966241248..., strictly below 1/2.
+* In the first region of Proposition 8.1, H/(kappa F_p) is exactly
+  2614153965395362651850193/126365990912000000000
+  = 20687.163900102..., greater than the displayed lower bound 20687.
+* The five uniform M values exceed their exact defining rational bounds
+  by 0.3979495, 0.18796269458, 0.11028503478, 0.69093085228536,
+  0.26457921317964662, respectively. These are ceilings of explicitly
+  given rational quantities; margins below one are expected.
+
+Recommendation: retain exact rational/integer checks and publish their
+scripts with a frozen version. Do not weaken or inflate constants merely
+because their decimal margins are small. If the manuscript adopts the
+smaller M constants discussed in comment 9, regenerate the relevant
+endpoint comparisons and displayed exact quotients from those constants.
+
+12. The second bound in Lemma 2.3 can be strengthened
+----------------------------------------------------
+The reviewer is right. Lemma 2.2 applies to the second assertion too,
+giving D>2BC>=6C and D>18. Hence
+  A^2+B^2+C^2+D^2 < (13/12)D^2.
+Even keeping the current bound ||E||_2<1/8 yields
+  |det N| < (325/512)(13/12+(5/8)/324)D^2
+          = (914225/1327104)D^2.
+The integral determinant bound ABCD<=|det N| then gives
+  D > (1327104/914225)ABC > (29/20)ABC.
+Thus 1.36 is a valid but unnecessarily weak proposed coefficient.
+
+A cleaner improvement uses the already displayed weighted row sums
+1/9 and 11/96 without rounding their maximum up to 1/8.
+The entrywise majorant is a symmetric nonnegative matrix, so its spectral
+radius bounds ||E||_2 and is at most its maximum weighted row sum. Therefore
+  ||E||_2 < 11/96.
+Put s=1/2+11/96=59/96 and h=3/2+11/96=155/96.
+Exactly the existing singular-value and rank-one argument gives
+  |det N| < hs^2(s+sum A_i^2)
+          < hs^2(13/12+s/324)D^2
+          = (18212679025/27518828544)D^2
+          < (2/3)D^2.
+The last strict inequality has exact margin
+  2/3-18212679025/27518828544
+    =133206671/27518828544 >0.
+Consequently the simple strengthened conclusion D>(3/2)ABC is valid.
+No analytic assertion beyond those already used in the proof is needed.
+
+Recommendation: this is a genuine, low-cost optional improvement. If
+improving the statement, use the clean 3/2 instead of decimal 1.36, replace
+only this proof segment, and leave subsequent calculations at their
+existing weaker constants. Every previous use of D>(3/8)ABC remains valid.
+It does not itself shorten the main argument or reduce the finite graphs,
+so do not undertake a new global numerical optimization solely for it.
+
+17. Notation: several actual conflicts remain, but scope matters
+--------------------------------------------------------------
+The review's field-basis complaint is still present in the frozen v3:
+* Introduction, lines 95--98: omega^2-tau omega+nu=0 and Delta=4nu-tau^2.
+* Lemma 2.2, lines 210--218: omega^2=t omega-h and Delta=4h-t^2.
+* End of section 5.2, lines 1644--1645: the introduction's tau,nu are used.
+* Section 8.3, lines 3203--3235: omega^2=t omega-u, with t and u then
+  appearing in ring multiplication, norm, disk enumeration, and orbit rule.
+* Section 8.5, lines 3523--3531: t is still the basis trace in the square
+  test, despite t denoting the fourth tuple entry elsewhere nearby.
+
+Simply changing every field-basis t to tau is unsafe for readability:
+Proposition 8.4 uses tau=59/20, and section 5.3 uses
+tau=21/(1024*999). The field discriminant also appears explicitly in
+Lemma 8.2 and Lemma 8.3. Recommended coherent field notation is therefore
+  omega, tau_K, nu_K, Delta_K
+with omega^2-tau_K omega+nu_K=0. It avoids introducing a new local/global
+collision when the reviewer suggestion is implemented. The field
+parameter d may remain in the enumeration sections; the q in Lemma 2.2
+was introduced because that proof already uses d for a tuple member.
+There is no reason to rename every tuple member d across the manuscript.
+
+Actual Delta uses:
+* Delta as field discriminant: intro, finite tail check, pair (1,3),
+  field reduction, enumeration and square test.
+* Delta_m as a Vandermonde product: section 3, introduced at line 539.
+* Unsubscripted Delta as a Vandermonde product: sections 4 and 7.1.
+* Delta as the five numerical determinant constants: section 5.2,
+  explicitly scoped by the sentence at line 1415.
+
+Minimal remedy: use Delta_K for the field discriminant and a distinct
+symbol, e.g. c_det, for the five numerical determinant constants. Retain
+Delta_m and the locally defined Delta for Vandermonde products. A full
+Vandermonde rename throughout all polynomials is not needed to remove the
+real ambiguity. If editorial uniformity is preferred, Delta_m can be
+used consistently for the m-anchor Vandermonde, but this is a larger
+mechanical change requiring formula-by-formula correspondence checks.
+
+K really denotes both the field and scalar coefficients. There are small
+local scalar occurrences K=400 in section 6 and K=B^2S^4T^6 in section 7.1,
+as well as K for retained-gap coefficients in sections 8.4 and 9.1.
+The first two could harmlessly become kappa_0 and K_4. The latter K is an
+explicit local scalar with substantial table use; retaining it is not a
+mathematical ambiguity when its definition is repeated. Avoid introducing
+many new glyphs just to enforce globally unique names for every local h,
+F, Q, k, H. In particular H=32 or 48 is explicitly a row parameter,
+whereas H as an anchor product and H as a gap coefficient have separate
+local definitions. A rename of the 32/48 parameter to H_0 is possible,
+but H_0 is already used for the ordinary tail later, so it is not an
+automatic global improvement.
+
+Recommendation: do the field-basis/discriminant cleanup and numerical
+determinant-constant rename first. Use a compact conventions paragraph
+(or at most a short table) listing only recurring global symbols:
+K, O_K, N(z), capital moduli, omega, tau_K, nu_K, Delta_K,
+and Vandermonde products. Do not add an encyclopedic list of every local
+constant or rename all uses of H,h,K,F,Q,k in one pass.
+
+18. Computational reproducibility
+---------------------------------
+The abstract (lines 26--27) says "complete search bounds and output tables"
+are included. The introduction (lines 111--112) says "complete output
+tables". The manuscript does include enumeration procedures and result
+tables, but it does not print all graph vertices/edges or all 1016
+per-field outputs. The phrase "complete output tables" invites a stronger
+reading than the actual contents support.
+
+Suggested abstract wording:
+  "The remaining cases are reduced to finite computations. We give
+  explicit search bounds and enumeration procedures, together with
+  tables of the resulting counts and cutoff constants."
+Suggested final conventions wording:
+  "The finite-sum formulas, bounded enumeration procedures, and tables
+  of counts and cutoff constants are included in the article."
+An availability sentence with an actual permanent URL can be added once
+the computation archive is publicly deposited. Do not claim a public
+repository exists before it does.
+
+The reviewer subsequently reconstructed all counts from the descriptions,
+so the stronger claim that they are impossible to verify without the
+authors' code is not supported. The mathematical algorithms are described;
+publishing executable implementations makes verification far easier and
+reduces transcription risk. The assertion that a journal will "almost
+certainly" require code is speculative without a target journal policy.
+
+Recommendation: use the existing exact verification packages as the basis
+of a single frozen reproducibility archive. Include the canonical TeX hash,
+script-to-result mapping, dependencies, command order, expected exact
+outputs, and an unambiguous runner. The newly claimed external ZIP has not
+been supplied to this agent; its stated contents must not be treated as
+locally inspected evidence. The author's own available checks and the
+reviewer's new independent package should remain distinguishable.
+
+19. Case roadmap
+----------------
+The introduction already identifies 0,1,>=2 small entries in prose, and the
+final proof explicitly references the three closing propositions. A short
+three-row map in the introduction would improve navigation but is optional,
+not a missing logical step. The correct rows, confirmed in the v3 AUX, are
+  0 small entries: section 6, Proposition 6.1 (prop:no-all-large-six)
+  1 small entry: sections 8--9, Proposition 9.1 (prop:one-small)
+  >=2 small entries: section 7, Proposition 7.1 (sm:main).
+The map should replace redundant overview prose, rather than repeating it.
+
+For sections 8--9 the accurate route is:
+  Proposition 8.1 + Lemma 8.3 -> 40 tabulated first pairs, plus (1,3)
+  Proposition 8.4 -> S<15 for all 41 pairs
+  40 tabulated pairs -> 57 triples, of which (1,-3,3) is already excluded
+  remaining 56 triples; exceptional pair (1,3) -> (1,3,8)
+  section 9 -> cutoff N(t)<N_0 for those 56+1 triples
+  section 9.2 -> 38+16+2 contradictions for the 56, and a separate
+                 t<32<t lower-bound contradiction for (1,3,8).
+The positive-rational (1,3) branch is understood after choosing simultaneous
+negation. Do not describe all 57 third-entry candidates as arising from the
+41 pairs, or accidentally discard the special (1,3,8) branch.
+
+Much of this is already stated at the end of section 8.5 and opening of
+section 9. A short opening paragraph in section 8 identifying the four
+stages would be sufficient. A second full table or diagram is unnecessary.
+
+20(c). Removing DOI links
+------------------------
+Do not adopt. The user explicitly prefers DOI links, and they aid source
+verification. No journal-specific contrary requirement has been identified.
+Retain all verified DOI links; retain official URLs for items without DOI.
+
+Summary of recommendations
+--------------------------
+Accept: precise computational-output wording; package reproducibility;
+field-basis/discriminant consistency; keep DOI links.
+Useful but optional: a concise case roadmap; clean local strengthening
+D>(3/2)ABC with no downstream recalibration.
+Avoid: speculative claims about journal requirements; a large global
+notation rewrite; treating narrow but exact inequalities as errors.

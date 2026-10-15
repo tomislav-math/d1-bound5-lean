@@ -1,0 +1,422 @@
+{
+  "authority_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "scope": "Diagnostic only. These replacements have NOT been applied to v2.",
+  "recommended_order": [
+    "SM-04",
+    "APP-03",
+    "EARLY02",
+    "SM-02",
+    "EARLY01",
+    "APP-02",
+    "APP-04",
+    "COMP-02",
+    "COMP-03",
+    "COLD-05"
+  ],
+  "recommended": [
+    {
+      "id": "SM-04",
+      "severity": "minor notation defect",
+      "priority": 1,
+      "location": "Proof of sm:bs7-cutoff, lines 2268–2272",
+      "old": "If $s=\\log_{10}S\\ge49$, then $400<10^3$ gives\n$\\log_{10}D>8s-3$. This contradicts\n\\eqref{sm:five-uniform-continuous}, since\n$(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing\nand equals $1/375$ at $49$.",
+      "replacement": "If $x=\\log_{10}S\\ge49$, then $400<10^3$ gives $\\log_{10}D>8x-3$. This contradicts~\\eqref{sm:five-uniform-continuous}, since $(8x-3)-g(x)=x-227/5-(4047/25)/(x-4)$ is increasing and equals $1/375$ at $49$.",
+      "why": "The letter s already denotes the third tuple entry, and that meaning is needed again for the anchors (a,b,s) in the next case. Giving s the value log10(S) creates a genuine local notation collision. Use the dummy real variable x already used in the definition of g.",
+      "contract": "Only the dummy logarithmic variable changes. The same condition, lower bound, increasing difference and exact endpoint value remain. Tuple entry s retains its original meaning.",
+      "dependencies": [
+        "sm:five-uniform-continuous",
+        "sm:bs7-cutoff"
+      ],
+      "check": "The next case uses anchors (a,b,s) at line 2277, so the conflict is not merely a symbol reused in disjoint proofs. Substitution x=log10(S) leaves all mathematics unchanged; at x=49 the difference is 1/375.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true,
+      "origin": "proposals/small.json",
+      "line_start": 2268,
+      "line_end": 2272,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_early_on_small.txt",
+      "title": "Resolve the local collision between the tuple entry s and log10(S)"
+    },
+    {
+      "id": "APP-03",
+      "severity": "useful definition/order repair",
+      "source_lines": "1909–1918",
+      "old": "For the finite two-anchor and three-anchor constructions, these are\ncoefficient and residual bounds in the indicated integral normalizations.\nUse the row \\(P\\) with residual constant \\(3\\), and put\n\\(H_P=\\max(BS^3,B^3S^2)\\).\n\nIn the following table, \\((l,u)\\) denotes the forbidden closed interval\n\\([l/(1-\\epsilon),u/(1+\\epsilon)]\\) for \\(D\\). This conversion follows\nby making both summands of the corresponding strict integral-form\nbound at most \\(1/2\\), and using\n\\((1-\\epsilon)CD<|\\sqrt{cd+1}|^2<(1+\\epsilon)CD\\).",
+      "replacement": "For the finite constructions, these constants bound the coefficients and residuals in their stated integral normalizations. In the table, $P$ denotes the four quadratic rows in~\\eqref{eq:ff-prows}, $Q$ the five linear rows with determinant~\\eqref{eq:ff-qdet}, and $M$ the estimate~\\eqref{eq:ordinary-three-M}. For $P$, use $\\mathcal R(1)<3$ and put $H_P=\\max(BS^3,B^3S^2)$. The row $N_{3,bs}$ uses $N_3$ with fixed entries $b,s$, and $O_j$ uses~\\eqref{eq:ordinary-integer-k} at $k=j$. Each pair $(l,u)$ denotes the forbidden closed interval $[l/(1-\\epsilon),u/(1+\\epsilon)]$ for $D$, by~\\eqref{eq:ff-window}.",
+      "reason": "The first interval table uses P, Q, and M without explicitly identifying them as table labels for earlier constructions. N_{3,bs} and O_j also require a reader to infer the relabeling and order. Mapping the existing labels costs little and replaces a repeated proof of the already established interval conversion.",
+      "mathematical_preservation": "P is exactly the four-row matrix of eq:ff-prows with inequality eq:ff-P; Q is exactly the five-row matrix with determinant eq:ff-qdet and bound at lines 1848–1852; M is eq:ordinary-three-M. The N3 row on b,s has the printed substitutions A→B and B→S. The O_j endpoint follows from U=3CH_2^j/B and V=1/(2(2AC^2/(5B))^j). The closed endpoints and epsilon factors are unchanged. The removed conversion explanation is proved at lines 1386–1398 and is now cited.",
+      "dependencies": [
+        "eq:ff-prows",
+        "eq:ff-P",
+        "eq:ff-qdet",
+        "eq:ordinary-three-M",
+        "eq:ordinary-integer-k",
+        "eq:ff-window",
+        "tab:ff-parameters"
+      ],
+      "origin": "proposals/approximation.json",
+      "line_start": 1909,
+      "line_end": 1918,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_completion_on_approx.txt",
+      "title": "Identify P, Q, M and the relabelled/ordinary rows before the first table",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "EARLY02",
+      "severity": "useful local proof clarification",
+      "rank": 2,
+      "source_lines": "857–863",
+      "old": "The form \\(L_4\\) satisfies the hypotheses of Lemma~\\ref{lem:direct-four}.\nIt is nonzero because\n\\[\n \\frac{C^2}{17BS^3T/A}>\n \\frac9{17}A^3\\frac{BT}{S}>\n \\frac{18}{17}A^3B^2>1.\n\\]\n",
+      "replacement": "The form $L_4$ on $(a,b,s,t)$, evaluated at $(c,d)$, satisfies the hypotheses of Lemma~\\ref{lem:direct-four}. If it vanished, that lemma would give $D<17ABSTC^3$. Together with $D>A^2C^5/S^2$, this would imply $C^2<17BS^3T/A$, contrary to\n\\[\n \\frac{C^2}{17BS^3T/A}>\n \\frac9{17}A^3\\frac{BT}{S}>\n \\frac{18}{17}A^3B^2>1.\n\\]\n",
+      "reason": "The current nonvanishing sentence jumps straight to a dimensionless ratio. The reader must go back to the vanishing conclusion of the four-anchor lemma, identify P=C and Q=D, and independently combine it with the just-proved fifth-power gap to discover why this particular ratio appears. The replacement makes precisely that inference visible.",
+      "mathematical_contract": "No change to the existing display, hypotheses, constants, or conclusions. The contradiction is D>A^2 C^5/S^2 and D<17ABST C^3, which would imply C^2<17BS^3T/A. The previously established C>1000 and D>1000C give the exact lemma hypotheses. Distinctness of all anchors and terminal entries is inherited from the sextuple.",
+      "dependencies": [
+        "lem:direct-four",
+        "eq:retained-start",
+        "lem:product-five"
+      ],
+      "independent_check": "Expanded both sides and cancelled the strictly positive factors A, C^3 and S^2. The printed ratio is >1 using C>3ABST, T>2ABS, A>=1 and B>=3. No additional lower bound, strict ordering of equal moduli, or zero-root exclusion is introduced.",
+      "origin": "proposals/early.json",
+      "line_start": 857,
+      "line_end": 864,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_small_on_early.txt",
+      "title": "Make the L4 nonvanishing inference explicit",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "SM-02",
+      "severity": "useful local clarification",
+      "priority": 1,
+      "location": "Proof of sm:bs7-cutoff, lines 2243–2244",
+      "old": "For two small anchors and an interpolation modulus $P\\ge10^8$,\nCorollary~\\ref{cor:ordinary-height-envelope} gives",
+      "replacement": "Taking $a,b$ as anchors and any of $s,t,c$ with modulus $P\\ge10^8$ as the interpolation entry, Corollary~\\ref{cor:ordinary-height-envelope} gives",
+      "why": "P is introduced as an interpolation modulus without specifying which of the sextuple entries it represents. The proof subsequently switches from P=S to P=T and finally P=C. Naming those choices makes the repeated upper bound intelligible and rules out an accidental reading in which P is a free real parameter.",
+      "contract": "No stronger envelope is asserted. The two anchors remain a,b, the final entry remains d, and all three allowable interpolation entries precede d and are distinct from the anchors. The hypotheses C>4B, AC>1000, D>=C in the cited corollary hold for P>=10^8 and B<3.",
+      "dependencies": [
+        "cor:ordinary-height-envelope",
+        "sm:bs7-cutoff",
+        "sm:five-uniform-continuous"
+      ],
+      "check": "Inspected all uses of sm:five-uniform-continuous in lines 2270, 2286, 2303 and 2335. They use P=S, P=T, P=T and P=C respectively. The rational parameters h=31/10,r=-9/10,u=17/5 and function g are untouched.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true,
+      "origin": "proposals/small.json",
+      "line_start": 2243,
+      "line_end": 2244,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_early_on_small.txt",
+      "title": "Identify which interpolation entry has modulus P"
+    },
+    {
+      "id": "EARLY01",
+      "severity": "useful exposition repair",
+      "rank": 1,
+      "source_lines": "522–545",
+      "old": "\\section{Interpolation of square roots}\n\n",
+      "replacement": "\\section{Interpolation of square roots}\n\nWe construct integral combinations of square roots by interpolation. The interpolation weights cancel the low-order terms involving the fixed entries, leaving an explicit remainder. Bounds for these combinations give gaps between the last two entries when they are nonzero. We also bound the ranges in which these combinations can vanish.\n\n",
+      "reason": "The section currently begins with six definitions before saying what the weighted combination accomplishes. A cold reader can reconstruct the cancellation only at lines 550–564 and must wait until the later lemmas to see why vanishing is a separate obstruction. This opening states the mechanism and its limitation without adding notation.",
+      "mathematical_contract": "No change to any statement or definition. The cancelled terms are the nonconstant degrees 1 through m−1 in the weighted anchor sum, as shown in the partial-fraction identity. The term 1−f(xy) remains, so the wording deliberately does not claim cancellation of every low-degree term of L_m. Bounds and zero cases are those already proved for m=2,3,4. All distinctness, full-ring, equal-modulus, branch and size assumptions remain in place.",
+      "dependencies": [
+        "eq:coherent-exact",
+        "eq:coherent-tail",
+        "lem:interpolation-parameters",
+        "lem:strong-two-anchor",
+        "lem:direct-four",
+        "lem:retained-gap"
+      ],
+      "independent_check": "Reconstructed the barycentric weighted sum and its constant term before reading revision_v2/agents/structural.md. Checked the new sentences against the exact identity and the later nonzero/zero alternatives. No numerical rerun is needed for this explanatory insertion.",
+      "origin": "proposals/early.json",
+      "line_start": 522,
+      "line_end": 524,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_small_on_early.txt",
+      "title": "Explain what the interpolation weights accomplish",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "APP-02",
+      "severity": "useful exposition repair",
+      "source_lines": "1333",
+      "old": "We give finite formulas for every row used in this section. As before, we prove the required divisibility in the polynomial ring over $\\mathbb Z$ before evaluating the tuple entries.",
+      "replacement": "The interval arguments below begin with a structural lower bound and end with the two-entry estimates at every order. The finite constructions in this section supply the intervening forbidden intervals. We give finite formulas for every row used here and prove the required divisibility in the polynomial ring over $\\mathbb Z$ before evaluating the tuple entries.",
+      "reason": "The existing opening repeats the polynomial-divisibility convention but gives no reason to introduce several finite families after an all-order construction. The replacement states the distinct role of these finite forms.",
+      "mathematical_preservation": "The finite bridge and all-order tail are explicitly realized at lines 1987–2008 and 3000–3014. This is an explanation of the applications, not a claim that a finite family alone covers an unbounded range or that any one family dominates another. All coefficient formulas, integrality checks, and guards remain.",
+      "dependencies": [
+        "eq:ff-window",
+        "eq:ordinary-integer-k",
+        "lines 1987–2008",
+        "lines 3000–3014"
+      ],
+      "origin": "proposals/approximation.json",
+      "line_start": 1333,
+      "line_end": 1333,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_completion_on_approx.txt",
+      "title": "Explain the role of the finite approximation families",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "APP-04",
+      "severity": "useful explanation of table",
+      "source_lines": "1937–1940",
+      "old": "The initial bound \\eqref{eq:integrated-6} and the interval endpoints yield the following\nsufficient strict comparisons. The left column of quantities must exceed\nthe right column. The first two use \\(C>A^2T^5/S^2,\\ T>2ABS\\).\nThe remaining comparisons use $C>KA^7B^5S^3$.",
+      "replacement": "The first comparison puts $\\mathcal G$ above the lower endpoint of $Q$, so~\\eqref{eq:integrated-6} places $D$ above that endpoint. Each later comparison requires the preceding upper endpoint to exceed the next lower endpoint, with the factors $1\\mp\\epsilon$ included. The table gives sufficient strict comparisons, so the lower quantity must exceed the required constant. The first two use $C>A^2T^5/S^2$ and $T>2ABS$, and the remaining comparisons use~\\eqref{eq:large-gap}.",
+      "reason": "A reader has to reconstruct the meaning of a junction and the factor h from the endpoint table. State exactly which endpoints are compared before the list of algebraic sufficient conditions.",
+      "mathematical_preservation": "For a junction X→Y the actual requirement is u_X/(1+epsilon)>l_Y/(1-epsilon), equivalent to u_X/l_Y>h. The first line instead compares G to l_Q/(1-epsilon). The first two lower estimates were independently rederived, and all fifteen displayed sufficient numerical comparisons were checked with exact fractions at A=B=S=3, K=400. No sufficient condition is weakened and the separate branch conditions stay in the table.",
+      "dependencies": [
+        "eq:integrated-6",
+        "eq:large-gap",
+        "lines 1914–1934",
+        "lines 1943–1958",
+        "lines 1987–2008"
+      ],
+      "origin": "proposals/approximation.json",
+      "line_start": 1937,
+      "line_end": 1940,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_completion_on_approx.txt",
+      "title": "Explain what the endpoint comparisons require",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "COMP-02",
+      "severity": "useful exposition, nonblocking",
+      "location": "Section 9 opening, line 3554",
+      "old": "We apply the same argument to these fifty-six triples and to $(1,3,8)$.",
+      "replacement": "For each of these fifty-six triples and for $(1,3,8)$, the forbidden intervals\ngive a bound $N(t)<N_0$. We then contradict this bound using the growth of an\nirregular triple, with a separate square calculation for the last two cases.",
+      "reason": "Explains why the lengthy N0 calculation completes the proof. The existing sentence says that the same argument applies but does not identify the upper bound or how the unenumerated fourth entry is excluded.",
+      "preserved_hypotheses_and_consumers": "Preserves the fifty-six listed triples and separate positive rational triple (1,3,8), the strict N(t)<N0 conclusion, and all cutoff and complement arguments. Consumers are the common-cutoff subsection, finite-complement subsection, and prop:one-small.",
+      "mathematical_check": "True. For each fixed triple the chain excludes N(t)≥N0. The rational triple is contradicted by T>48 and T<32. Of the 56 listed triples, 38 use T>2BS directly, 16 use the irregular-triple quadratic, and two additionally use the square equation t+1=(u+v√−2)^2. Fresh checks reproduced the exact partition 38/16/2 and the mod-16 exclusions. The overview does not assert a fourth-entry enumeration or use He–Togbe–Ziegler.",
+      "status": "RECOMMENDED_UNAPPLIED",
+      "line_start": 3554,
+      "origin": "proposals/completion.json",
+      "line_end": 3554,
+      "independent_review": "agents/cross_approx_on_completion.txt",
+      "title": "State the upper-cutoff and lower-growth completion mechanism",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "COMP-03",
+      "severity": "small exposition improvement, nonblocking",
+      "location": "Section 9.1, immediately after the justification of eq:fixed56-gap, lines 3589–3594",
+      "old": "Indeed, $\\mathcal Q\\le q_1$ and $\\mu/(a_0b_0)\\le\\mu/b_0$,\nso the coefficient of $T^5/S^2$ in Lemma~\\ref{lem:retained-gap}\nis at least $K$.\nThe same lemma gives $C>\\max(1000,200S,4T)$ and $D>1000C$,",
+      "replacement": "Indeed, $\\mathcal Q\\le q_1$ and $\\mu/(a_0b_0)\\le\\mu/b_0$,\nso the coefficient of $T^5/S^2$ in Lemma~\\ref{lem:retained-gap}\nis at least $K$. The other enclosure satisfies $\\Phi\\le\\phi_1$, so the\ndisplayed $R_{bs}$ is a valid residual constant for $N_{3,bs}$.\nThe same lemma gives $C>\\max(1000,200S,4T)$ and $D>1000C$,",
+      "reason": "The q1 enclosure is interpreted in the current prose, whereas the adjacent phi1 enclosure is used without explicitly reconnecting its norm formula to the earlier modulus quantity Phi. One sentence keeps the retained distances recognizable through the change to squared-norm arithmetic.",
+      "preserved_hypotheses_and_consumers": "Preserves all enclosure definitions, positivity tests, K, Rbs, norm-two guard and size hypotheses. Consumers are N3,bs in Table tab:fixed56-windows and the N3,bs--A4 overlap. No new restriction is introduced.",
+      "mathematical_check": "True. Since d_bs=|b−s|² and s0=S², sqrt(d_bs^6/s0^6)=d0^6. Since b0=B², sqrt(b0*d_bs^5/s0^6)=(B/S)d0^5. The square root of their maximum is exactly Phi, and the upward rational enclosure gives phi1≥Phi. Section 8 gives the actual relabeled residual bound κPhi; the displayed κphi1 is therefore an upper bound.",
+      "status": "RECOMMENDED_UNAPPLIED",
+      "line_start": 3590,
+      "origin": "proposals/completion.json",
+      "line_end": 3593,
+      "independent_review": "agents/cross_approx_on_completion.txt",
+      "title": "Identify the upward enclosure of the relabelled residual constant",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "COLD-05",
+      "origin": "agents/cold_reader.txt",
+      "old": "All their size hypotheses follow from\nLemma~\\ref{lem:retained-gap}.",
+      "replacement": "Whenever Lemma~\\ref{lem:retained-gap} applies, it supplies all the size hypotheses used in this table.",
+      "severity": "Low-cost clarification of the conditional scope",
+      "reason": "The common interval calculation is a reusable template. Its later applications first establish the retained-gap hypotheses. Make that dependency conditional at the table entrance.",
+      "mathematical_contract": "No hypothesis is removed or newly assumed. Preserve the explicit AT and T guards in the five-region and fixed-pair applications.",
+      "dependencies": [
+        "lem:retained-gap",
+        "prop:pr-H2",
+        "eq:pr-fixed-fourth-gap"
+      ],
+      "line_start": 2927,
+      "line_end": 2928,
+      "status": "RECOMMENDED_UNAPPLIED",
+      "independent_review": "agents/cross_completion_on_cold05.txt",
+      "title": "Make the size-condition statement conditional on the retained-gap lemma",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    }
+  ],
+  "optional": [
+    {
+      "id": "EARLY03",
+      "severity": "useful proof orientation",
+      "rank": 3,
+      "source_lines": "149–153",
+      "old": "Suppose instead \\(d=b+c+2r\\), \\(r^2=bc+1\\). First let \\(C\\ge4\\).\nChoose \\(\\beta^2=b,\\gamma^2=c\\) so that\n",
+      "replacement": "Suppose instead \\(d=b+c+2r\\), \\(r^2=bc+1\\). First let \\(C\\ge4\\). We choose the roots of $ab+1$, $ac+1$, and $ad+1$ so that the sum of the first two differs from the third by less than one. Integrality will force equality, and squaring will yield a contradiction.\nChoose \\(\\beta^2=b,\\gamma^2=c\\) so that\n",
+      "reason": "The proof launches directly into several nested analytic square-root approximations and constants. Its target, the small integral difference u+v−w, is only revealed thirty-five lines later. Naming that target before the estimates explains why the branch choices and error budget are being made.",
+      "mathematical_contract": "The added prose applies only to the explicitly opened C>=4 case. It describes exactly the chosen roots u, v, w and the inequality |u+v−w|<1 proved below. The contradiction uses 2(ar−uv)=1 in the full integer ring. The finite 3<=B<=C<4 case is untouched. The sign choice for r already covers both regular completions.",
+      "dependencies": [
+        "lem:tail-irregular",
+        "lem:irregular-growth"
+      ],
+      "independent_check": "Reconstructed the analytic proof through p=beta+gamma, the relative perturbation delta/(ap^2), the convex endpoint estimate, and 2(ar−uv)=1. All three roots are integral and the proof does not require strict inequalities between A, B or C.",
+      "origin": "proposals/early.json",
+      "line_start": 150,
+      "line_end": 152,
+      "status": "OPTIONAL_UNAPPLIED",
+      "independent_review": "agents/cross_small_on_early.txt",
+      "title": "The proof launches directly into several nested analytic square-root approximations and constants",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "APP-01",
+      "severity": "useful exposition repair",
+      "source_lines": "878",
+      "old": "We construct simultaneous approximations using two or three fixed tuple entries.  All polynomial divisions below are performed over $\\mathbb Z$ before specializing the fixed entries. No unique factorization assumption on $\\mathcal O_K$ is needed.",
+      "replacement": "We construct simultaneous approximations using fixed tuple entries. Nonsingular coefficient matrices and column divisibility give a nonzero algebraic integer after the tuple roots are substituted. Comparing its modulus, which is at least one, with the approximation errors will exclude intervals for the last modulus. All polynomial divisions below are performed over $\\mathbb Z$ before specializing the fixed entries. No unique factorization assumption on $\\mathcal O_K$ is needed.",
+      "reason": "The section opening names a construction but postpones its arithmetic purpose until the end of the first long proof. State the actual integrality mechanism before the residue formulas.",
+      "mathematical_preservation": "All three new explanatory sentences are true by lines 1026–1035. The matrix acts on a nonzero common evaluation vector, the column factors clear anchor denominators, and a nonzero algebraic integer has modulus at least one. The later inequalities exclude intervals, without claiming that the unrefined bound alone covers every modulus. No statement, parameter, threshold, or polynomial division changes. The opening omits the anchor count rather than assigning one count to all later constructions. Section 4 itself treats two and three fixed entries, while Section 5 also uses four.",
+      "dependencies": [
+        "lem:ordinary-residue-construction",
+        "eq:ordinary-root-transfer",
+        "eq:ordinary-residue-det",
+        "lines 1026–1035"
+      ],
+      "origin": "proposals/approximation.json",
+      "line_start": 878,
+      "line_end": 878,
+      "status": "OPTIONAL_UNAPPLIED",
+      "independent_review": "agents/cross_completion_on_approx.txt",
+      "title": "The section opening names a construction but postpones its arithmetic purpose until the end of the first long proof",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    },
+    {
+      "id": "SM-01",
+      "severity": "useful exposition",
+      "priority": 2,
+      "location": "Section 7 opening, lines 2019–2021",
+      "old": "The finite calculations below use exact integer algorithms, finite\nsearch domains and complete tables. Their completeness follows from a\nreversible descent. The search radius is proved below.",
+      "replacement": "The finite calculations below use exact integer algorithms, finite search domains and complete tables. For exactly two small entries whose product is not $-1$, we bound the third large entry and construct the graph on their common extensions of modulus at least three inside that disk. Reversible descent proves completeness, and the absence of triangles excludes a sextuple. The pairs with product $-1$ are treated separately. For three small entries, a finite classification leaves at most one further entry below a fixed radius, and approximation estimates exclude three further entries.",
+      "why": "The current opening promises finite calculations but leaves their link to the six-entry obstruction implicit. This names the third-large-entry cutoff, explains why triangle-freeness suffices, and distinguishes the three-small route before the two long auxiliary proofs.",
+      "contract": "Orientation only. No theorem, proof, bound, algorithm, table, exception or label is changed. The graph claim is explicitly restricted to pairs with ab+1 nonzero. Small means modulus below 3 as already defined.",
+      "dependencies": [
+        "sm:bs7-cutoff",
+        "sm:bs7-descent",
+        "sm:bs7-finite-pairs",
+        "sm:bs7-unit-pair",
+        "sm:bs7-eisenstein",
+        "sm:six-small-triple-classification",
+        "sm:five-three-small"
+      ],
+      "check": "Sentence by sentence against Section 7. A two-small sextuple has S,T,C below the cutoff, so they would give a triangle. Nondegenerate pairs have complete descent graphs. The two product-minus-one classes are treated separately. The triple table has at most one further entry within 10^40, and the final proposition rules out three further entries.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true,
+      "origin": "proposals/small.json",
+      "line_start": 2018,
+      "line_end": 2020,
+      "status": "OPTIONAL_UNAPPLIED",
+      "independent_review": "agents/cross_early_on_small.txt",
+      "title": "The current opening promises finite calculations but leaves their link to the six-entry obstruction implicit"
+    },
+    {
+      "id": "SM-03",
+      "severity": "useful proof orientation",
+      "priority": 2,
+      "location": "Proof of sm:five-three-small, lines 2784–2785",
+      "old": "We record the approximation bounds needed below. For a further\npair of ordered moduli $R\\le V\\le E$, the two small anchors give",
+      "replacement": "If three further entries existed, either all three would have modulus greater than $R$, or the unique entry in the disk would provide a fourth anchor. The first case uses the growth alternatives in Lemma~\\ref{sm:five-small-anchor-alternative} and the height upper bound. The second uses two overlapping forbidden intervals. We first record the approximation bounds for a further pair of ordered moduli $R\\le V\\le E$. The two small anchors give",
+      "why": "The proof presents three estimates before revealing why two different intervals and the bounded fourth anchor are needed. The proposed bridge exposes the exhaustive case split and the distinct use of each estimate before the numerical preparations.",
+      "contract": "Orientation only. The at-most-one bounded extension assertion remains conditional. The disk is the same closed radius-10^40 disk. The all-large case still uses the ordinary height upper bound together with the coherent-form alternatives; the bounded-extension case still uses the four-anchor and three-anchor windows. No assumption of existence of the bounded extension is added.",
+      "dependencies": [
+        "sm:six-small-triple-classification",
+        "sm:five-small-anchor-alternative",
+        "sm:five-small-upper",
+        "sm:five-three-small-window",
+        "sm:five-four-fixed-window",
+        "sm:five-three-small"
+      ],
+      "check": "Checked the case split against lines 2826–2871. At most one additional entry has modulus <=R. In the first branch the growth alternatives plus the upper bound give a contradiction. In the other branch the fourth anchor has modulus <85 and the two forbidden intervals overlap.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true,
+      "origin": "proposals/small.json",
+      "line_start": 2784,
+      "line_end": 2785,
+      "status": "OPTIONAL_UNAPPLIED",
+      "independent_review": "agents/cross_early_on_small.txt",
+      "title": "The proof presents three estimates before revealing why two different intervals and the bounded fourth anchor are needed"
+    },
+    {
+      "id": "COMP-01",
+      "severity": "useful exposition, nonblocking",
+      "location": "Section 8 opening, lines 2884–2891",
+      "old": "The preceding small-entry and all-large arguments reduce the proof to this\ncase. All norms below are the field norms, so \\(N(z)=|z|^2\\) is a\nnonnegative rational integer.",
+      "replacement": "The preceding small-entry and all-large arguments reduce the proof to this\ncase. We bound $B$ and $S$ by showing that, in each range to be excluded, the forbidden intervals cover every\nvalue of $D$ allowed by the growth estimates. The possible first pairs and\nthird entries can then be enumerated. All norms below are the field norms,\nso $N(z)=|z|^2$ is a nonnegative rational integer.",
+      "reason": "Before the common interval tables and five-region calculation, the current opening identifies the remaining case but leaves the role of the long calculation to the section title. These two sentences connect the forbidden intervals to the finite first-pair and third-entry reductions.",
+      "preserved_hypotheses_and_consumers": "Preserves 1≤A<3≤B≤S≤T≤C≤D, the field-norm convention, all constants and tables. Consumers are Proposition prop:pr-H2, the fixed-pair S<15 proposition, the third-entry enumeration, and Section 9. No statement surface changes.",
+      "mathematical_check": "True. Proposition prop:pr-H2 proves B<8 for N(a)=1 or B<4 for N(a)=2 by the interval chain. The subsequent fixed-pair proposition excludes S≥15 with the same chain. The field reduction and exact norm bounds make the remaining pairs and third entries finite. Fresh enumeration reproduced the 40 non-rational-pair representatives plus the separately handled (1,3), then 57 third entries in the forty-pair branch.",
+      "status": "OPTIONAL_UNAPPLIED",
+      "line_start": 2889,
+      "origin": "proposals/completion.json",
+      "line_end": 2891,
+      "independent_review": "agents/cross_approx_on_completion.txt",
+      "title": "Before the common interval tables and five-region calculation, the current opening identifies the remaining case but leaves the role of the long calculation to the section title",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70"
+    }
+  ],
+  "cross_review_corrections": [
+    "SM-01 restricts graph vertices to modulus at least three.",
+    "SM-03 avoids implying every subcase needs the height upper bound.",
+    "COMP-01 restricts interval coverage to the ranges being excluded.",
+    "COMP-03 identifies R_bs as a residual constant in its normalization."
+  ],
+  "architecture_decisions": [
+    {
+      "id": "ARCH-01",
+      "decision": "OPTIONAL_PLACEMENT",
+      "reason": "Architecture reviewer prefers moving the complete four-root lemma near its only consumer; Section 7 reviewer prefers retaining the final case flow. Leave outside the minimal pass, or trial a location before the small-anchor-alternative lemma. No deletion. Verify references and layout if implemented."
+    },
+    {
+      "id": "ARCH-02",
+      "decision": "RETAIN_CURRENT_PROOF",
+      "reason": "The approximation reviewer identified functional local explanation of signs, the sharper constant and zero-root safety. Keep this self-contained transfer proof rather than force backward reading for a small line saving."
+    },
+    {
+      "id": "ARCH-03",
+      "decision": "DEFER",
+      "reason": "The repeated half-coordinate square test is short and makes the finite computation locally reproducible. A cross-reference is permissible but not a priority. Keep the later omega-coordinate formulation."
+    },
+    {
+      "id": "ARCH-04",
+      "decision": "OPTIONAL_MINOR_REDUCTION",
+      "reason": "Lines 2201–2206 repeat the already invoked four-anchor contradiction. They may be removed while retaining the hypotheses and coherent-root convention. Gain is small; no mathematical simplification follows."
+    },
+    {
+      "id": "ARCH-05",
+      "decision": "RECOMMEND_SECONDARY",
+      "reason": "Add stable labels to the discriminant lemma and S<15 proposition, then cite them at the finite-list introductions. Keep their statements and proofs unchanged."
+    },
+    {
+      "id": "ARCH-REORDER",
+      "decision": "DO_NOT_REORDER",
+      "reason": "No demonstrated gain justifies moving entire case sections. Current order is coherent."
+    }
+  ],
+  "cold_reader_decisions": [
+    {
+      "id": "COLD-01",
+      "decision": "MERGED_IN_APP-03"
+    },
+    {
+      "id": "COLD-02",
+      "decision": "OPTIONAL_ALTERNATIVE",
+      "reason": "Do not add this introduction mechanism paragraph on top of equivalent selected section openings by default."
+    },
+    {
+      "id": "COLD-03",
+      "decision": "MERGED_IN_EARLY02"
+    },
+    {
+      "id": "COLD-04",
+      "decision": "MERGED_IN_COMP-02"
+    },
+    {
+      "id": "COLD-05",
+      "decision": "RECOMMENDED_UNAPPLIED"
+    },
+    {
+      "id": "COLD-06",
+      "decision": "OPTIONAL_LAYOUT_PASS",
+      "reason": "After prose edits, try keeping Table 3 with its classification instead of inside the next proof, and keep Lemma 7.7 together. Recheck neighboring pages; no global preamble change."
+    }
+  ]
+}

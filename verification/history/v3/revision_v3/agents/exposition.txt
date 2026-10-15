@@ -1,0 +1,179 @@
+Independent exposition review of D1_bound5-v3
+
+Role and scope
+Read-only reviewer: v3_exposition. The canonical source was not edited.
+Baseline: revision_v3/input/D1_bound5-v2.tex
+Baseline SHA-256: 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70
+Reviewed source: output/D1_bound5-v3.tex
+Final accepted SHA-256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+Prior layout candidate SHA-256: ab102478bf254121c07c07a3ea78d4f289ba17deec2fb77e60426d1cd72cabfd
+Previous reviewed SHA-256: 1bcd4d3b730c383dece12d03286ef2ca8cb6c7270b6231e0186d8e368cc35760
+Initial reviewed SHA-256: ae536c58ec739a4f09b91fd4405b0ddeb52d1485c37fdd8c408b61bcaed99464
+
+Applied guidance: the frozen latex-math-writing SKILL.md, writing-rules.md,
+artisan-writing.md, and math-paper-campaign route-polish.md and
+shared-controls.md. The author's narrower local-edit scope and existing
+notation/presentation take priority over optional whole-paper changes.
+
+Reading coverage
+I read the full introduction and conventions, all 10 section and 20 subsection
+openings in their source order, their immediate statements or constructions,
+and every changed passage continuously with its neighboring paragraphs. I also
+read the complete all-large interval assembly, the relevant small-entry cutoff
+argument, the first-pair and third-entry enumeration entrances, the fourth-entry
+cutoff/complement transitions, and the final proof assembly. The corresponding
+baseline contexts were read before the integrated version. I inspected the
+actual referenced statements, not only the change register's descriptions.
+This is the independent source exposition gate; rendered-page acceptance and a
+full mathematical re-audit are separate reviews.
+
+Overall disposition
+The 23 registered edits, including the authorised author/declaration and Dujella
+additions and two local layout changes, improve the local explanation and
+navigation. The
+architecture remains coherent: growth estimates prepare the approximation
+constructions; finite families bridge to the estimates available at every order;
+zero, one and at least two small entries are exhausted by the closing proof.
+The one small new grammatical ambiguity found in the initial revision has been
+repaired, as recorded below. Source exposition is ACCEPTED at the final hash above (EXPO-AUDITED).
+There are no open exposition findings. Rendered-page certification remains
+assigned to the separate PDF reviewers.
+
+Finding EXPO-V3-01 (minor; CLOSED)
+Location: initial line 524; revised line 530, Section 3 opening (EARLY01).
+Text: "Bounds for these combinations give gaps between the last two entries
+when they are nonzero."
+The pronoun "they" can refer grammatically to the nearest plural noun "entries",
+although all tuple entries are already nonzero. The intended mathematical
+qualification applies to the integral combinations.
+Smallest clear repair: "When these combinations are nonzero, bounds for them
+give gaps between the last two entries."
+The editor applied this repair. I reread the revised paragraph with its
+neighboring definition and accept it. No equation, hypothesis, claim, or
+notation changed.
+
+Review of the integrated repairs
+EARLY01: The cancellation/remainder mechanism is now explained before the
+anchor notation. The nonzero and zero alternatives are both retained. With
+EXPO-V3-01 resolved, the new paragraph is useful and does not duplicate the
+introduction.
+EARLY02: The anchors and terminal pair of L4 are identified. The contradiction
+between its vanishing upper bound and the already proved lower bound for D is
+now explicit before the displayed ratio. Lemma lem:direct-four supplies exactly
+that vanishing alternative.
+APP-02: The finite families now have a stated role between the structural lower
+bound and the estimates available at every order. The polynomial divisibility
+qualification is retained.
+APP-03: The reader can identify P, Q, M, N_{3,bs}, and O_j before the interval
+table. eq:ff-prows names precisely the four quadratic rows; eq:ff-qdet is the
+determinant of the five linear rows; eq:ordinary-three-M is the stated
+three-anchor estimate; eq:ordinary-integer-k is the every-order two-anchor
+estimate. eq:ff-window is the correct closed-interval conversion. None of these
+references points to a different construction or normalisation.
+APP-04: The first comparison and subsequent overlaps are now distinguished.
+The direction of the endpoint comparison is explicit, including the 1-minus/
+1-plus epsilon factors, and the paragraph leads naturally to the tabulated
+sufficient inequalities and the ensuing infinite chain.
+SM-02: P is now the modulus of a selected interpolation entry among s,t,c,
+while a,b remain the small anchors and d remains the last entry. This removes
+the need to infer which substitutions are used later.
+SM-04: x now denotes log10(S), leaving s available exclusively as the tuple
+entry in this argument. The convexity comparison and its threshold are unchanged.
+COLD-05: The size-condition statement now makes its dependence on application
+of lem:retained-gap explicit. It does not claim that its hypotheses hold merely
+from being in the one-small-entry branch.
+COMP-02: The section now tells the reader that the intervals give an upper
+bound for N(t), and that irregular-triple growth excludes the finite complement,
+with a separate square calculation for the two remaining cases. This matches
+the subsequent argument; it does not suggest enumeration of every fourth entry.
+COMP-03: The new sentence reconnects phi_1 with the previously defined Phi and
+identifies the displayed R_{bs} as the residual constant for N_{3,bs}. The
+coefficient enclosure q_1 and residual enclosure phi_1 have distinct clear roles.
+NAV-01 through NAV-05: lem:pr-field is attached to the discriminant-reduction
+lemma and cited at the finite field list. prop:pr-S15 is attached to the common
+S<15 proposition and cited at both the exact integral norm cutoff and the
+completion entrance. Every new reference names the required result with the
+correct theorem kind and scope; neither label changes the surrounding statement.
+
+Reader reconstruction
+The new opening of Section 3 explains why interpolated integral forms can
+produce gaps and why their vanishing must be treated separately. At the all-large
+table, the letters now lead to their precise earlier constructions; the next
+paragraph explains which endpoints must overlap. In the small-anchor cutoff,
+the interpolation modulus is now attached to an actual tuple entry. At the
+finite completion, the reader can distinguish the upper fourth-entry cutoff
+from the growth contradiction below that cutoff. No added global notation or
+extra case split is needed to reconstruct these transitions.
+
+No additional new ambiguity or incorrect new reference was found. I do not
+recommend applying optional extra openings, moving a lemma, or extending this
+local pass into a global rewrite.
+
+Author, declaration and literature additions
+The revised introduction was reread continuously from the title and abstract
+through all conventions. The general-background book citation is placed after
+the tuple definition and makes no unverified theorem attribution. The separate
+Problem 1.11 paragraph accurately distinguishes the upper bound of five from
+existence of a quintuple. I independently viewed the saved source page
+revision_v3/sources/Dujella_open-problems_p4.png: the problem number and its
+imaginary-quadratic full-ring scope agree with the manuscript. The bibliography
+entries agree with the dedicated source audit in agents/dujella.txt; no
+additional research-paper claim was inserted. These additions preserve the
+introduction's stated result and do not imply that the open existence question
+has been solved.
+
+The names and their order, the Department of Mathematics / Faculty of Science /
+University of Zagreb affiliation, the Bijenička cesta address, and the two
+emails were compared with author_excerpt in input/author_metadata_source.json.
+They match. Standard article-class author markup replaces source-class-specific
+commands without changing the printed names. The final shared address names both authors, ends with Croatia and gives both
+emails in the original author order; the wording is unambiguous.
+
+The Funding and Use of artificial intelligence blocks were compared directly
+against the original tail_text in that metadata JSON, including their labels,
+punctuation, grant identifiers and model names. The extracted complete block
+is textually identical after trimming its surrounding blank lines. This is a
+fidelity check of the author-supplied declarations, not an independent factual
+certification of the declarations. No new author/declaration wording issue was
+found.
+
+Layout-delta check and acceptance of the preceding candidate
+The preceding source candidate was verified as
+ab102478bf254121c07c07a3ea78d4f289ba17deec2fb77e60426d1cd72cabfd.
+I read the two local layout contexts and reversed exactly LAYOUT-01 and
+LAYOUT-02 in memory; the result reproduced the previous accepted source hash
+1bcd4d3b730c383dece12d03286ef2ca8cb6c7270b6231e0186d8e368cc35760.
+Thus no other source change occurred after the last continuous exposition
+review. LAYOUT-01 wraps the complete sm:bs7-unit-axes statement in samepage.
+LAYOUT-02 places the unchanged small-triples table, caption and label in a
+local nonfloating block before the next lemma. Neither changes the wording,
+mathematical content, source reading order, or reference identity. The table's
+new placement supports the preceding classification rather than interrupting
+the following proof. Visual realization is for the assigned PDF reviewers.
+
+DISPOSITION AT THAT CANDIDATE: ACCEPTED for the independent source exposition
+gate. EXPO-V3-01 is closed. No additional ambiguity or incorrect new reference
+was found.
+
+Final shared-address delta and release acceptance
+Final source SHA-256:
+a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+
+The only subsequent change combines the two authors' identical affiliation
+blocks. Both names appear together in their source order, followed by the
+unchanged shared institution and postal address; fran@math.hr and
+pejkovic@math.hr remain after Croatia in that same order. I checked each name,
+the common address and both emails against author_excerpt in
+input/author_metadata_source.json. No author, affiliation or contact datum was
+removed or altered. The combined wording clearly applies to both named authors.
+
+I replaced only the final shared author block in memory by the two previously
+accepted blocks and reproduced SHA-256
+ab102478bf254121c07c07a3ea78d4f289ba17deec2fb77e60426d1cd72cabfd.
+This establishes that the address presentation is the sole source delta; all
+earlier continuous exposition and reference checks remain applicable.
+
+FINAL DISPOSITION: ACCEPTED (EXPO-AUDITED) at
+a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5.
+EXPO-V3-01 remains closed. There are no open source exposition findings.
+Rendered-page acceptance remains the responsibility of the PDF reviewers.

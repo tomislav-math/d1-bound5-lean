@@ -1,0 +1,224 @@
+D1_bound5-v3: assessment of the new external review
+==================================================
+
+Status and scope
+----------------
+This is a review of proposed revisions, not a revised article. The frozen
+D1_bound5-v3.tex was not edited. Its SHA256 is
+a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5.
+
+The assessment compared the comments with the actual v3 source, checked
+the affected arguments, reran focused exact computations, and checked
+Bennett's original paper. Four parallel reviews were consolidated, with
+additional cross-review of the two new elementary improvements below.
+The supplied external review is evidence of another reader's conclusions;
+its claims are not reported here as computations performed in this round.
+The named D1_bound5_finite_checks.zip was not supplied or found, so its
+scripts have not been inspected. Existing author-side verification records
+remain available and are distinguished from freshly rerun checks.
+
+Conclusion
+----------
+The review identifies two real omissions in the written justification:
+the f3 coefficient bounds and the large-AT justification in the cutoff
+proof. Both admit short proofs under the existing hypotheses, with no
+change to the main theorem or downstream constants. Several further
+clarifications and selected simplifications are worthwhile. Wholesale
+generalization of the approximation machinery is not recommended for this
+revision. No counterexample or failure of the main theorem was found in
+this focused assessment; this is not a new full audit of every argument
+and every large finite enumeration.
+
+Decisions on all numbered comments
+----------------------------------
+
+1. ACCEPT, WITH A SIMPLER PROOF. For w=y/x and rho=|w|<=1/4,
+   16 P^3 |f3| = |1-w| |1-w^2|.
+   The triangle and reverse triangle inequalities give
+   (1-rho)(1-rho^2) <= 16 P^3 |f3| <= (1+rho)(1+rho^2).
+   Substitution rho=1/4 gives exactly 45/64 and 85/64, hence the stated
+   45/1024 and 85/1024. This avoids differentiation entirely. Add this
+   proof where the bounds first occur; later parameter rows can cite it.
+   The subscript 1000 in l_1000,u_1000 concerns AP, not a replacement of
+   the hypothesis rho<=1/4 by rho<=1/1000.
+
+2. ACCEPT. In actual Lemma 7.4 (label sm:bs7-cutoff), use
+   AT>=T>=10^72>11. The bound from the proof of lem:general-three gives
+   |F3| <= 1331/(4000 T^3) < 1/(3 T^3).
+   AT>=9 alone would give 729/2048>1/3 and is insufficient. No subsequent
+   cutoff changes are necessary.
+
+3. ACCEPT. Use the discriminant cutoff 60 consistently, and explicitly
+   say that 90/118/16 are totals over all listed fields. Cutoffs 60 and 64
+   give the same 21 fields. Fresh exact enumeration gave 90/118/16 and
+   zero final passes.
+
+4. ACCEPT AS ALGEBRAIC CLARITY. The direct substitution gives
+   (18/17) A^4 B^2. The printed A^3 B^2 is a valid weakening because
+   A>=1, but an unexplained weakening is unnecessary.
+
+5. ACCEPT. In actual Lemma 7.9 (sm:bs7-unit-pair), write
+   u/v+sqrt(d)>2sqrt(d)>4, since d>=7. This supplies the explicit
+   denominator estimate for the Legendre application.
+
+6. ACCEPT. Move the allowance u=0 next to x-1=d u^2. Delete the final
+   sentence that appears to attach the zero-square issue to a later
+   modulo-4 argument. The current proof already covers the case.
+
+7. OPTIONAL CONSISTENCY, NOT A MATHEMATICAL CORRECTION. In this branch
+   the entries are explicitly positive rational integers, so t=T.
+   If capitalization is changed, change both t<32 and t>48 to T.
+
+8. ACCEPT THE AIM, CORRECT THE REFERENCE. Bennett's determinant identity
+   is unnumbered, immediately after (2.4), in section 2, page 1721. It is
+   not a numbered Bennett lemma. The nearby Lemma 3.4 is attributed to
+   Rickert. Cite the actual location and explicitly give
+   f_ij=P_ij(1/N) under nu=1/2 and Bennett's a_j=alpha_j.
+   The equality follows termwise from
+   (1+alpha_j/N)^(k-h_j) N^(-h_j)
+      =N^(-k)(N+alpha_j)^(k-h_j).
+   The extra pole factor already appears in Bennett's integral (2.1).
+   Retain the existing denominator-clearing argument for complex points.
+   Source: M. A. Bennett, Simultaneous rational approximation to binomial
+   functions, Trans. Amer. Math. Soc. 348 (1996), 1717-1738,
+   https://personal.math.ubc.ca/~bennett/B-Binom.pdf .
+
+9. ACCEPT, WITH PRECISE SCOPE. Replace the three larger uniform constants
+   in section 6: 735 -> 243, 166000 -> 165763, 26859063 -> 3113013.
+   The other two are already 4143 and 2265. These are the least integers
+   above the displayed rational bounds, not a claim of globally optimal
+   approximation constants. Do not replace the smaller pair-specific or
+   region-specific constants used in sections 8-9 by these uniform values.
+   All five coefficient-sum families were freshly rebuilt, and all fifteen
+   affected section 6 overlap comparisons pass. None decreases.
+
+10. ACCEPT THE REPRODUCIBILITY POINT. Small exact margins are not errors.
+   Margins below one for M are expected when taking ceilings of rational
+   bounds. Keep exact arithmetic, source hashes, assertions and saved
+   outputs. No arbitrary inflation of constants is needed.
+
+11. RECOMMEND A BETTER ELEMENTARY ALTERNATIVE. Expansion of the order-four
+   Vandermonde determinant into its 24 monomials gives
+   |Delta_4|<=24 B S^2 T^3: sorting exponents 0,1,2,3 maximizes each
+   monomial at the ordered moduli A<=B<=S<=T.
+   This removes the maximum-modulus/Hadamard passage and gives direct-four
+   constants 13 and 49/50; the zero-case constants 10 and 17 stay valid.
+   With the already available C>A^2 T^5/S^2 and T>2ABS, the retained-gap
+   proof still gives its ORIGINAL D>A^2 C^7/(S^2 T^4). The other use in
+   the small-pair cutoff also retains its original final bound.
+   Thus all N0 values, search bounds and interval tables may remain as
+   they are. This proposal requires synchronized edits at three places:
+   lem:direct-four, the end of lem:retained-gap, and the later direct-four
+   application in sm:bs7-cutoff. Detailed derivations and exact checks are
+   in the accompanying f3 assessment. Two reviewers checked the proposal.
+
+12. OPTIONAL LOCAL STRENGTHENING, STRONGER THAN SUGGESTED. The existing
+   weighted row sums give ||E||<11/96. Lemma 2.2 already gives D>6C and
+   D>18 in this case. Put s=59/96,h=155/96. The same proof then gives
+   |det N| < h s^2 (13/12+s/324) D^2
+           = (18212679025/27518828544) D^2 < (2/3)D^2,
+   and hence D>(3/2)ABC. This is a clean local improvement of 3/8.
+   It is not needed to prove the main theorem. If adopted, keep existing
+   downstream weaker bounds rather than launch a global optimization.
+
+13. ACCEPT A SMALL DEDUPLICATION. State the sign-selection and factorization
+   argument once and refer to it in the finite-form section. Make all
+   nonzero denominator hypotheses explicit. Both existing proofs are
+   correct; there is no need for a large new lemma hierarchy.
+
+14. DEFER THE FULL GENERALIZATION. A common residue identity can be
+   explained briefly, but a general pole-order theorem would add parameters
+   and require separate integrality, clearing-factor and determinant
+   statements. The finite and infinite constructions have different jobs.
+   Keep their specialized verified statements; remove only genuine local
+   duplication. A generalized result is not needed for this revision.
+
+15. ACCEPT SELECTIVE CONSOLIDATION. Use one common endpoint template for
+   the approximation rows, with local parameter substitutions. The existing
+   section 8.1 overlap table is already largely reusable and even its
+   weaker first two entries suffice for section 6. Retain the distinct
+   fixed-triple cutoff comparisons in section 9: their purpose and
+   substitutions differ. Avoid replacing concrete certificates by a long
+   abstract lemma that hides the numerical checks.
+
+16. KEEP THE SHORT SELF-CONTAINED PROOF. A citation is permissible but not
+   necessary. The current Legendre proof is short and elementary and fits
+   the author's preferences. The proposed Hardy-Wright theorem number was
+   not needed and has not been independently verified in this round.
+
+17. ACCEPT TARGETED NOTATION CLEANUP. Use omega,tau_K,nu_K,Delta_K for the
+   integral basis and discriminant throughout. Plain tau would collide
+   with existing numerical parameters, including 59/20. Give the five
+   determinant-table constants another name, e.g. c_det. Preserve locally
+   clear Vandermonde notation and avoid renaming every local h,H,F,Q,k.
+   A short conventions table for recurring global symbols is useful.
+   Recheck every norm, multiplication, conjugation and square-test formula
+   after the basis notation changes.
+
+18. ACCEPT. Assemble a versioned computational supplement with one runner,
+   exact dependencies, source hash, script-to-output map and recorded
+   expected results. Distinguish author code from any independent reviewer
+   code. Replace 'complete output tables' by the more accurate 'tables of
+   counts and cutoff constants' unless the complete data are also supplied.
+   Add a permanent public URL only once the files are actually deposited.
+   No journal-specific mandatory-code policy has been established here.
+
+19. ACCEPT A COMPACT ROADMAP. Replace redundant introductory prose with
+   three rows: zero small entries -> section 6/Proposition 6.1; one ->
+   sections 8-9/Proposition 9.1; at least two -> section 7/Proposition 7.1.
+   In sections 8-9 distinguish the 57 triples from the 40 tabulated pairs
+   (one is excluded, leaving 56) from the additional (1,3,8) branch. Do not
+   merge these counts inadvertently. A short paragraph is enough there.
+
+20(a). ACCEPT the exact algebraic simplification of R2 to
+   27 B (AC-1)^2/(16 A delta^2).
+20(b). OPTIONAL. Checking |v|=0,...,4 gives only (u,v)=(0,+/-4) for
+   u^2+2v^2 in {30,31,32}. The present short modulo-16 proof is also
+   correct and elementary; changing it is a style choice.
+20(c). DO NOT ADOPT. Retain verified DOI links, in accordance with the
+   author's stated preference. No contrary journal requirement is known.
+
+Additional findings from the follow-up review
+---------------------------------------------
+* Add the useful bounded-graph explanation: x and -x are adjacent because
+  1-x^2=(1-x)(1+x) is a square. The computed equality E=V/2 then shows
+  that these are all edges of the computed graphs. This explains the zero
+  triangle count; it does not replace the edge calculation or prove an
+  unbounded graph classification. The preserved 1016 per-field records
+  were inspected; the huge computations were not rerun in this round.
+* The follow-up's statement that alpha and beta sum to 9999/10000 is not
+  literally correct. The article correctly uses the weighted upper bounds
+  (141/500)(59/20)+21/125=9999/10000. This is an imprecision in the review,
+  not a correction needed in the article.
+* Several section 7 lemma numbers in the review are shifted. Apply edits
+  by LaTeX labels, not by the review's numbers.
+
+Evidence produced in this round
+--------------------------------
+Fresh exact checks: f3 coefficient and tail constants; elementary
+Vandermonde-24 downstream bounds; retained-gap exponent; the improved
+product coefficient; all five finite-family coefficient sums and rational
+M thresholds; all fifteen section 6 overlaps with the proposed constants;
+the root-transfer identity and R2 simplification; the 21-field list and
+90/118/16/0 enumeration; the final tiny quadratic-form enumeration.
+
+Preserved-record checks: the 1016 Pell graph rows and their matching
+counts; selected v2/v3 text preservation and existing N0 data. These are
+explicitly not fresh executions of the 10^550 graph searches.
+
+Manual checks: hypotheses and dependency chains for all accepted changes;
+the exact normalization and location in Bennett's original paper;
+notation collisions; case-count routing; the scope of proposed code and
+editorial claims. This review does not claim formal proof-assistant
+verification or a fresh full compilation, since no article was changed.
+
+Recommended next-version scope
+-------------------------------
+First insert the missing short justifications and precise citation. Then
+apply targeted notation and navigation changes, reduced uniform M values,
+the elementary Vandermonde-24 replacement, and selective deduplication.
+The stronger 3/2 product bound is a useful optional local addition.
+Preserve the main theorem, finite search bounds, special-pair constants,
+author information, funding identifiers, declarations, document layout and
+DOI links. Validate the final source against this register, rerun affected
+certificates, compile, and inspect changed pages before delivering v4.

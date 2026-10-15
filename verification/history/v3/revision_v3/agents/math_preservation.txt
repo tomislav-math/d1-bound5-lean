@@ -1,0 +1,167 @@
+Independent mathematical-preservation review — D1_bound5-v3
+Status: PASS (scoped review; no findings)
+Source: output/D1_bound5-v3.tex
+Source SHA256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+Baseline SHA256: 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70
+
+The 10 accepted exposition recommendations, 5 navigation edits, 6 subsequently authorized author/declaration/literature edits, and registered local layout wrappers; checks of new explanatory sentences against actual proof or primary-source contexts and exact baseline preservation. This does not reopen a global mathematical audit, recompute finite graphs, or certify rendered layout.
+
+Authority: the frozen v2 source, the accepted ten-item register, and the actual integrated v3 diff; the later user-authorized metadata source and Dujella primary sources. Read-only manuscript review under the latex-math-writing and math-paper-campaign preservation controls; the existing 12pt Latin Modern style, margins and empty date remain, with the authorized author names added.
+
+Preservation checks:
+- Exact replay of the 23 registered changes reproduces v3 byte-for-byte.
+- All 37 theorem-like statements are identical modulo the two new stable labels.
+- All 358 displayed-mathematics blocks and all 15 tabular/longtable bodies are identical.
+- The preamble is unchanged except for the authorized author names. Existing bibliography entries, existing citation calls and all old labels are preserved; exactly the two authorized Dujella entries and citation calls are added.
+- The only new labels are lem:pr-field and prop:pr-S15; their three new citations identify the actual preserved results.
+- The logarithmic variable replacement changes only the local dummy name; exact endpoint difference is 1/375.
+
+- Both donor address entries are identical. The shared affiliation is copied exactly, with both names and both emails in their source order. Both declarations match the matrices10 evidence and the verbatim input byte-for-byte. The empty date is preserved.
+- Reverting only the final shared-author formatting reproduces the previous reviewed source SHA256 ab102478bf254121c07c07a3ea78d4f289ba17deec2fb77e60426d1cd72cabfd exactly; this independently verifies the sole final delta.
+- Local samepage/table-wrapper edits preserve the complete lemma, table body, caption and label; rendered page quality is reviewed separately.
+
+Sentence-by-sentence review (all 32 newly introduced explanatory sentences are true):
+
+MP-EARLY01-01 — TRUE — v3 lines 528–532
+We construct integral combinations of square roots by interpolation.
+Evidence: The definition of L_m is an integral combination of z and the products R_i. The Vandermonde divisibility argument establishes its coefficients in Z[a_1,...,a_m].
+
+MP-EARLY01-02 — TRUE — v3 lines 528–532
+The interpolation weights cancel the low-order terms involving the fixed entries, leaving an explicit remainder.
+Evidence: The partial-fraction identity makes the anchor-weighted coefficients vanish for 1<=n<m. Equation eq:coherent-exact retains 1-f(xy), and equations eq:coherent-exact/eq:coherent-tail explicitly identify and bound the remainder. The sentence does not assert that 1-f(xy) vanishes.
+
+MP-EARLY01-03 — TRUE — v3 lines 528–532
+When these combinations are nonzero, bounds for them give gaps between the last two entries.
+Evidence: For a nonzero L_m, integrality gives |L_m|>=1; the estimates in lem:interpolation-parameters, lem:strong-two-anchor and lem:direct-four compare this with expressions in P,Q and yield gap inequalities, used explicitly by lem:retained-gap.
+
+MP-EARLY01-04 — TRUE — v3 lines 528–532
+We also bound the ranges in which these combinations can vanish.
+Evidence: The L_2 zero case in lem:strong-two-anchor gives Q<5XYP; lem:interpolation-parameters/lem:separated-three give the two-sided L_3 zero range; lem:direct-four gives 10ABSTP^3<Q<17ABSTP^3 for L_4=0.
+
+MP-EARLY02-01 — TRUE — v3 lines 865–871
+The form $L_4$ on $(a,b,s,t)$, evaluated at $(c,d)$, satisfies the hypotheses of Lemma~\ref{lem:direct-four}.
+Evidence: The anchors are the first four distinct sextuple entries and the terminal pair is c,d. The preceding proof establishes C>1000 and D>1000C, precisely the two size hypotheses in lem:direct-four; ordering and distinctness are inherited.
+
+MP-EARLY02-02 — TRUE — v3 lines 865–871
+If it vanished, that lemma would give $D<17ABSTC^3$.
+Evidence: Substitution P=C,Q=D into the vanishing conclusion of lem:direct-four gives the stated strict upper bound 17ABSTC^3.
+
+MP-EARLY02-03 — TRUE — v3 lines 865–871
+Together with $D>A^2C^5/S^2$, this would imply $C^2<17BS^3T/A$, contrary to
+\[
+ \frac{C^2}{17BS^3T/A}>
+ \frac9{17}A^3\frac{BT}{S}>
+ \frac{18}{17}A^3B^2>1.
+\]
+Evidence: Combining A^2C^5/S^2<D<17ABSTC^3 and cancelling positive A,C^3,S^2 gives C^2<17BS^3T/A. The unchanged displayed lower ratio is >1 because C>3ABST, T>2ABS, A>=1, B>=3.
+
+MP-APP-02-01 — TRUE — v3 lines 1340–1340
+The interval arguments below begin with a structural lower bound and end with the two-entry estimates at every order.
+Evidence: In the all-large proof, eq:integrated-6 supplies the initial lower bound and O_j supplies the infinite tail; the common interval calculation in Section 8 and the fixed-triple calculation in Section 9 have the same structure.
+
+MP-APP-02-02 — TRUE — v3 lines 1340–1340
+The finite constructions in this section supply the intervening forbidden intervals.
+Evidence: The actual chains pass through Q,N_2,P and the finite A_3,M,N_3,N_{3,bs},A_4,A_5 rows before the ordinary infinite tail, with the stated branches. No assertion says that a single finite family covers the full tail.
+
+MP-APP-02-03 — TRUE — v3 lines 1340–1340
+We give finite formulas for every row used here and prove the required divisibility in the polynomial ring over $\mathbb Z$ before evaluating the tuple entries.
+Evidence: Section 5 displays the finite polynomial rows and determinants, proves anchor divisibility before substitution, and then converts the integral forms using eq:ff-master/eq:ff-window.
+
+MP-APP-03-01 — TRUE — v3 lines 1916–1916
+For the finite constructions, these constants bound the coefficients and residuals in their stated integral normalizations.
+Evidence: The constants immediately preceding this sentence are the coefficient and residual constants of the finite two-anchor rows and the order-two three-anchor M estimate in their displayed normalizations.
+
+MP-APP-03-02 — TRUE — v3 lines 1916–1916
+In the table, $P$ denotes the four quadratic rows in~\eqref{eq:ff-prows}, $Q$ the five linear rows with determinant~\eqref{eq:ff-qdet}, and $M$ the estimate~\eqref{eq:ordinary-three-M}.
+Evidence: Equation eq:ff-prows lists exactly four quadratic rows, eq:ff-qdet is exactly the determinant of the five linear rows on a,b,s,t, and eq:ordinary-three-M is the cited M estimate.
+
+MP-APP-03-03 — TRUE — v3 lines 1916–1916
+For $P$, use $\mathcal R(1)<3$ and put $H_P=\max(BS^3,B^3S^2)$.
+Evidence: The proof following eq:ff-P explicitly evaluates R(1)=35/16+tau*5268<3. H_P is the same maximum as H_* in that proof, and its two terms are unchanged.
+
+MP-APP-03-04 — TRUE — v3 lines 1916–1916
+The row $N_{3,bs}$ uses $N_3$ with fixed entries $b,s$, and $O_j$ uses~\eqref{eq:ordinary-integer-k} at $k=j$.
+Evidence: The N_{3,bs} endpoints are obtained by replacing A,B by B,S in N_3. Equation eq:ordinary-integer-k at k=j has U=3CH_2^j/B and V=1/(2R_2^j), producing the displayed O_j endpoints.
+
+MP-APP-03-05 — TRUE — v3 lines 1916–1916
+Each pair $(l,u)$ denotes the forbidden closed interval $[l/(1-\epsilon),u/(1+\epsilon)]$ for $D$, by~\eqref{eq:ff-window}.
+Evidence: Equation eq:ff-window gives exactly [l/(1-epsilon),u/(1+epsilon)] with l=4U^2/C and u=1/(4V^2C), including both closed endpoints. This preserves the conversion removed from the local paragraph.
+
+MP-APP-04-01 — TRUE — v3 lines 1935–1935
+The first comparison puts $\mathcal G$ above the lower endpoint of $Q$, so~\eqref{eq:integrated-6} places $D$ above that endpoint.
+Evidence: The first comparison is G>l_Q/(1-epsilon); eq:integrated-6 gives D>G. Indeed G/l_Q=(A^2C^4)/(12100S^2T^10), and the stated substitutions yield the first lower quantity.
+
+MP-APP-04-02 — TRUE — v3 lines 1935–1935
+Each later comparison requires the preceding upper endpoint to exceed the next lower endpoint, with the factors $1\mp\epsilon$ included.
+Evidence: Every later junction X->Y requires u_X/(1+epsilon)>l_Y/(1-epsilon), equivalently u_X/l_Y>h, where h=4001/3999. These are the comparisons in the unchanged table.
+
+MP-APP-04-03 — TRUE — v3 lines 1935–1935
+The table gives sufficient strict comparisons, so the lower quantity must exceed the required constant.
+Evidence: The second and third table columns are explicitly headed lower quantity and required constant. Requiring the former to exceed the latter is the sufficient strict comparison used in the argument.
+
+MP-APP-04-04 — TRUE — v3 lines 1935–1935
+The first two use $C>A^2T^5/S^2$ and $T>2ABS$, and the remaining comparisons use~\eqref{eq:large-gap}.
+Evidence: The first two lower quantities follow from C>A^2T^5/S^2 and T>2ABS; e.g. Q->N_2 yields A^4C^2/(36*735^2*T^2*B^8)>256A^16S^4/(36*735^2). Later rows use C>KA^7B^5S^3 from eq:large-gap with the separately printed branch conditions.
+
+MP-SM-02-01 — TRUE — v3 lines 2238–2238
+Taking $a,b$ as anchors and any of $s,t,c$ with modulus $P\ge10^8$ as the interpolation entry, Corollary~\ref{cor:ordinary-height-envelope} gives
+Evidence: Each of s,t,c is distinct from anchors a,b and terminal d, and its modulus P is <=D. For P>=10^8 and 1<=A<=B<3, P>4B and AP>1000. The h,r,u bounds printed next and x>=8>4 satisfy the height-envelope conditions. All later uses choose P=S,T,T,C respectively.
+
+MP-SM-04-01 — TRUE — v3 lines 2262–2262
+If $x=\log_{10}S\ge49$, then $400<10^3$ gives $\log_{10}D>8x-3$.
+Evidence: The preceding unchanged inequality is D>S^8/400. Since 400<10^3, x=log10(S)>=49 gives log10(D)>8x-3. Only the dummy real variable has changed from s to x.
+
+MP-SM-04-02 — TRUE — v3 lines 2262–2262
+This contradicts~\eqref{sm:five-uniform-continuous}, since $(8x-3)-g(x)=x-227/5-(4047/25)/(x-4)$ is increasing and equals $1/375$ at $49$.
+Evidence: Subtracting the printed g(x) gives x-227/5-(4047/25)/(x-4). Its derivative is 1+(4047/25)/(x-4)^2>0 for x>=49, and exact rational evaluation at 49 is 1/375. The height bound applies at P=S, contradicting the strict lower bound.
+
+MP-COLD-05-01 — TRUE — v3 lines 2921–2921
+Whenever Lemma~\ref{lem:retained-gap} applies, it supplies all the size hypotheses used in this table.
+Evidence: lem:retained-gap supplies C>1000,C>200S,C>4T,AC>1000,D>1000C, satisfying each row construction and eq:ff-window. Its own B,T,AT hypotheses remain explicit and are checked in the later applications; this sentence is expressly conditional.
+
+MP-COMP-02-01 — TRUE — v3 lines 3549–3551
+For each of these fifty-six triples and for $(1,3,8)$, the forbidden intervals
+give a bound $N(t)<N_0$.
+Evidence: The common cutoff proof assumes N(t)>=N0, obtains all finite overlaps and the ordinary infinite tail, and concludes a contradiction. It therefore proves N(t)<N0 for all 56 listed triples and for (1,3,8).
+
+MP-COMP-02-02 — TRUE — v3 lines 3549–3551
+We then contradict this bound using the growth of an
+irregular triple, with a separate square calculation for the last two cases.
+Evidence: For (1,3,8), irregular growth gives T>48 versus T<32. In the 56-row branch, 38 rows use T>2BS, 16 use the irregular-triple quadratic and convexity, and the last two combine that quadratic with t+1=(u+v*sqrt(-2))^2. The statement describes these actual proof cases without claiming fourth-entry enumeration.
+
+MP-COMP-03-01 — TRUE — v3 lines 3587–3591
+The other enclosure satisfies $\Phi\le\phi_1$, so the
+displayed $R_{bs}$ is a valid residual constant for $N_{3,bs}$.
+Evidence: With d_bs=|b-s|^2, s_0=S^2, b_0=B^2 and d0=|b-s|/S, sqrt(d_bs^6/s_0^6)=d0^6 and sqrt(b_0*d_bs^5/s_0^6)=(B/S)*d0^5. Thus phi1 is an upward enclosure of Phi. Section 8 defines the valid residual as kappa*Phi, and the displayed kappa*phi1 is at least this value.
+
+MP-NAV-03-01 — TRUE — v3 lines 3198–3199
+We enumerate the remaining pairs in the fields allowed by
+Lemma~\ref{lem:pr-field}.
+Evidence: lem:pr-field concludes Delta<=24 for all pairs other than (1,3) up to the allowed negation. The following d list is exactly the positive squarefree imaginary-quadratic parameters with absolute fundamental discriminant <=24; (1,3) is treated separately.
+
+MP-NAV-04-01 — TRUE — v3 lines 3520–3521
+The norm cutoff is exact because Proposition~\ref{prop:pr-S15}
+gives \(S<15\) and the norm is integral.
+Evidence: prop:pr-S15 excludes S>=15 for every pair in the enumeration. Since N(s)=S^2 is integral, S<15 is exactly N(s)<=224. The label points to the unchanged statement and proof.
+
+MP-NAV-05-01 — TRUE — v3 lines 3544–3544
+Proposition~\ref{prop:pr-S15} gives $S<15$.
+Evidence: The section concerns exactly the forty listed first pairs plus (1,3), which are the alternatives in prop:pr-S15. Its conclusion supplies S<15 in this context.
+
+MP-LIT-01-01 — TRUE — v3 lines 39–42
+For a general account of Diophantine tuples and their connections with
+elliptic curves, see Dujella~\cite{Dujella24}.
+Evidence: Independently opened the Springer publisher page and Dujella author page for DOI 10.1007/978-3-031-56724-7. Both describe the monograph as covering Diophantine m-tuples and their elliptic-curve connections; the bibliography metadata match title, author, volume 79, publisher, year 2024 and DOI. The new sentence makes only a general-background recommendation, not a theorem attribution. Primary URLs: https://link.springer.com/book/10.1007/978-3-031-56724-7 and https://web.math.pmf.unizg.hr/~duje/diophantine-mtuples-book.html (retrieved 15 October 2026; web refs turn66view0 and turn66view1).
+
+MP-LIT-02-01 — TRUE — v3 lines 75–79
+Dujella~\cite[Problem~1.11]{DujellaOpen} asks whether a $D(1)$-quintuple
+exists in the ring of integers of an imaginary quadratic field.
+Evidence: Independently extracted printed page 4 of revision_v3/sources/Dujella_open-problems_accessed_2026-10-15.pdf, SHA256 571b5a71d67d4a438ebc560e976c512a57849c93b00164969ac36139c17eaacd. Problem 1.11 asks exactly for existence of a D(1)-quintuple in the integer ring of an imaginary quadratic field. The new sentence preserves its question form and full-ring scope.
+
+MP-LIT-02-02 — TRUE — v3 lines 75–79
+Our bound does not settle this question.
+Evidence: The unchanged theorem proves cardinality at most five. It excludes sextuples and larger tuples without constructing or excluding a quintuple, so it does not settle the cited existence question. This preserves the content of the former unattained-bound disclaimer.
+
+No changed hypothesis, conclusion, constant, exponent, sign, endpoint, exceptional case, tuple symmetry, or claimed uniformity was found. The finite computations and underlying proofs were preserved. No repair is requested.
+
+Limits: this is the requested preservation review of actual v3 edits, not a fresh proof audit of the full paper or an independent rendering assessment.

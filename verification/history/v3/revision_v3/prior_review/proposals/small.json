@@ -1,0 +1,85 @@
+{
+  "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "scope": "Section 7, lines 2011\u20132881",
+  "status": "diagnostic proposals only; not integrated or exposition-audited",
+  "patches": [
+    {
+      "id": "SM-01",
+      "severity": "useful exposition",
+      "priority": 2,
+      "location": "Section 7 opening, lines 2019\u20132021",
+      "old": "The finite calculations below use exact integer algorithms, finite\nsearch domains and complete tables. Their completeness follows from a\nreversible descent. The search radius is proved below.",
+      "replacement": "The finite calculations below use exact integer algorithms, finite search domains and complete tables. For exactly two small entries whose product is not $-1$, we bound the third large entry and construct the graph on all common extensions inside that disk. Reversible descent proves completeness, and the absence of triangles excludes a sextuple. The pairs with product $-1$ are treated separately. For three small entries, a finite classification leaves at most one further entry below a fixed radius, and approximation estimates exclude three further entries.",
+      "why": "The current opening promises finite calculations but leaves their link to the six-entry obstruction implicit. This names the third-large-entry cutoff, explains why triangle-freeness suffices, and distinguishes the three-small route before the two long auxiliary proofs.",
+      "contract": "Orientation only. No theorem, proof, bound, algorithm, table, exception or label is changed. The graph claim is explicitly restricted to pairs with ab+1 nonzero. Small means modulus below 3 as already defined.",
+      "dependencies": [
+        "sm:bs7-cutoff",
+        "sm:bs7-descent",
+        "sm:bs7-finite-pairs",
+        "sm:bs7-unit-pair",
+        "sm:bs7-eisenstein",
+        "sm:six-small-triple-classification",
+        "sm:five-three-small"
+      ],
+      "check": "Sentence by sentence against Section 7. A two-small sextuple has S,T,C below the cutoff, so they would give a triangle. Nondegenerate pairs have complete descent graphs. The two product-minus-one classes are treated separately. The triple table has at most one further entry within 10^40, and the final proposition rules out three further entries.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true
+    },
+    {
+      "id": "SM-02",
+      "severity": "useful local clarification",
+      "priority": 1,
+      "location": "Proof of sm:bs7-cutoff, lines 2243\u20132244",
+      "old": "For two small anchors and an interpolation modulus $P\\ge10^8$,\nCorollary~\\ref{cor:ordinary-height-envelope} gives",
+      "replacement": "Taking $a,b$ as anchors and any of $s,t,c$ with modulus $P\\ge10^8$ as the interpolation entry, Corollary~\\ref{cor:ordinary-height-envelope} gives",
+      "why": "P is introduced as an interpolation modulus without specifying which of the sextuple entries it represents. The proof subsequently switches from P=S to P=T and finally P=C. Naming those choices makes the repeated upper bound intelligible and rules out an accidental reading in which P is a free real parameter.",
+      "contract": "No stronger envelope is asserted. The two anchors remain a,b, the final entry remains d, and all three allowable interpolation entries precede d and are distinct from the anchors. The hypotheses C>4B, AC>1000, D>=C in the cited corollary hold for P>=10^8 and B<3.",
+      "dependencies": [
+        "cor:ordinary-height-envelope",
+        "sm:bs7-cutoff",
+        "sm:five-uniform-continuous"
+      ],
+      "check": "Inspected all uses of sm:five-uniform-continuous in lines 2270, 2286, 2303 and 2335. They use P=S, P=T, P=T and P=C respectively. The rational parameters h=31/10,r=-9/10,u=17/5 and function g are untouched.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true
+    },
+    {
+      "id": "SM-03",
+      "severity": "useful proof orientation",
+      "priority": 2,
+      "location": "Proof of sm:five-three-small, lines 2784\u20132785",
+      "old": "We record the approximation bounds needed below. For a further\npair of ordered moduli $R\\le V\\le E$, the two small anchors give",
+      "replacement": "If three further entries existed, either all three would have modulus greater than $R$, or the unique entry in the disk would provide a fourth anchor. The first case will be excluded by comparing the growth alternatives in Lemma~\\ref{sm:five-small-anchor-alternative} with the height upper bound. The second uses two overlapping forbidden intervals. We first record the approximation bounds for a further pair of ordered moduli $R\\le V\\le E$. The two small anchors give",
+      "why": "The proof presents three estimates before revealing why two different intervals and the bounded fourth anchor are needed. The proposed bridge exposes the exhaustive case split and the distinct use of each estimate before the numerical preparations.",
+      "contract": "Orientation only. The at-most-one bounded extension assertion remains conditional. The disk is the same closed radius-10^40 disk. The all-large case still uses the ordinary height upper bound together with the coherent-form alternatives; the bounded-extension case still uses the four-anchor and three-anchor windows. No assumption of existence of the bounded extension is added.",
+      "dependencies": [
+        "sm:six-small-triple-classification",
+        "sm:five-small-anchor-alternative",
+        "sm:five-small-upper",
+        "sm:five-three-small-window",
+        "sm:five-four-fixed-window",
+        "sm:five-three-small"
+      ],
+      "check": "Checked the case split against lines 2826\u20132871. At most one additional entry has modulus <=R. In the first branch the growth alternatives plus the upper bound give a contradiction. In the other branch the fourth anchor has modulus <85 and the two forbidden intervals overlap.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true
+    },
+    {
+      "id": "SM-04",
+      "severity": "minor notation defect",
+      "priority": 1,
+      "location": "Proof of sm:bs7-cutoff, lines 2268\u20132272",
+      "old": "If $s=\\log_{10}S\\ge49$, then $400<10^3$ gives\n$\\log_{10}D>8s-3$. This contradicts\n\\eqref{sm:five-uniform-continuous}, since\n$(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing\nand equals $1/375$ at $49$.",
+      "replacement": "If $x=\\log_{10}S\\ge49$, then $400<10^3$ gives $\\log_{10}D>8x-3$. This contradicts~\\eqref{sm:five-uniform-continuous}, since $(8x-3)-g(x)=x-227/5-(4047/25)/(x-4)$ is increasing and equals $1/375$ at $49$.",
+      "why": "The letter s already denotes the third tuple entry, and that meaning is needed again for the anchors (a,b,s) in the next case. Giving s the value log10(S) creates a genuine local notation collision. Use the dummy real variable x already used in the definition of g.",
+      "contract": "Only the dummy logarithmic variable changes. The same condition, lower bound, increasing difference and exact endpoint value remain. Tuple entry s retains its original meaning.",
+      "dependencies": [
+        "sm:five-uniform-continuous",
+        "sm:bs7-cutoff"
+      ],
+      "check": "The next case uses anchors (a,b,s) at line 2277, so the conflict is not merely a symbol reused in disjoint proofs. Substitution x=log10(S) leaves all mathematics unchanged; at x=49 the difference is 1/375.",
+      "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+      "old_unique": true
+    }
+  ]
+}

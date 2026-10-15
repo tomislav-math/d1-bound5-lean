@@ -1,0 +1,44 @@
+{
+  "source": "armstrong_v2/input/D1_bound5-v2.tex",
+  "sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "scope": "Sections 8–10 and bibliography, current source lines 2882–3904",
+  "finding_summary": "No mathematical error or mandatory repair found. Three local, nonblocking exposition proposals.",
+  "proposals": [
+    {
+      "id": "COMP-01",
+      "severity": "useful exposition, nonblocking",
+      "location": "Section 8 opening, lines 2884–2891",
+      "old": "The preceding small-entry and all-large arguments reduce the proof to this\ncase. All norms below are the field norms, so \\(N(z)=|z|^2\\) is a\nnonnegative rational integer.",
+      "replacement": "The preceding small-entry and all-large arguments reduce the proof to this\ncase. We bound $B$ and $S$ by showing that the forbidden intervals cover every\nvalue of $D$ allowed by the growth estimates. The possible first pairs and\nthird entries can then be enumerated. All norms below are the field norms,\nso $N(z)=|z|^2$ is a nonnegative rational integer.",
+      "reason": "Before the common interval tables and five-region calculation, the current opening identifies the remaining case but leaves the role of the long calculation to the section title. These two sentences connect the forbidden intervals to the finite first-pair and third-entry reductions.",
+      "preserved_hypotheses_and_consumers": "Preserves 1≤A<3≤B≤S≤T≤C≤D, the field-norm convention, all constants and tables. Consumers are Proposition prop:pr-H2, the fixed-pair S<15 proposition, the third-entry enumeration, and Section 9. No statement surface changes.",
+      "mathematical_check": "True. Proposition prop:pr-H2 proves B<8 for N(a)=1 or B<4 for N(a)=2 by the interval chain. The subsequent fixed-pair proposition excludes S≥15 with the same chain. The field reduction and exact norm bounds make the remaining pairs and third entries finite. Fresh enumeration reproduced the 40 non-rational-pair representatives plus the separately handled (1,3), then 57 third entries in the forty-pair branch.",
+      "status": "proposed only; source unmodified",
+      "line_start": 2889
+    },
+    {
+      "id": "COMP-02",
+      "severity": "useful exposition, nonblocking",
+      "location": "Section 9 opening, line 3554",
+      "old": "We apply the same argument to these fifty-six triples and to $(1,3,8)$.",
+      "replacement": "For each of these fifty-six triples and for $(1,3,8)$, the forbidden intervals\ngive a bound $N(t)<N_0$. We then contradict this bound using the growth of an\nirregular triple, with a separate square calculation for the last two cases.",
+      "reason": "Explains why the lengthy N0 calculation completes the proof. The existing sentence says that the same argument applies but does not identify the upper bound or how the unenumerated fourth entry is excluded.",
+      "preserved_hypotheses_and_consumers": "Preserves the fifty-six listed triples and separate positive rational triple (1,3,8), the strict N(t)<N0 conclusion, and all cutoff and complement arguments. Consumers are the common-cutoff subsection, finite-complement subsection, and prop:one-small.",
+      "mathematical_check": "True. For each fixed triple the chain excludes N(t)≥N0. The rational triple is contradicted by T>48 and T<32. Of the 56 listed triples, 38 use T>2BS directly, 16 use the irregular-triple quadratic, and two additionally use the square equation t+1=(u+v√−2)^2. Fresh checks reproduced the exact partition 38/16/2 and the mod-16 exclusions. The overview does not assert a fourth-entry enumeration or use He–Togbe–Ziegler.",
+      "status": "proposed only; source unmodified",
+      "line_start": 3554
+    },
+    {
+      "id": "COMP-03",
+      "severity": "small exposition improvement, nonblocking",
+      "location": "Section 9.1, immediately after the justification of eq:fixed56-gap, lines 3589–3594",
+      "old": "Indeed, $\\mathcal Q\\le q_1$ and $\\mu/(a_0b_0)\\le\\mu/b_0$,\nso the coefficient of $T^5/S^2$ in Lemma~\\ref{lem:retained-gap}\nis at least $K$.\nThe same lemma gives $C>\\max(1000,200S,4T)$ and $D>1000C$,",
+      "replacement": "Indeed, $\\mathcal Q\\le q_1$ and $\\mu/(a_0b_0)\\le\\mu/b_0$,\nso the coefficient of $T^5/S^2$ in Lemma~\\ref{lem:retained-gap}\nis at least $K$. The other enclosure satisfies $\\Phi\\le\\phi_1$, so the\ndisplayed $R_{bs}$ bounds the relabeled residual from above.\nThe same lemma gives $C>\\max(1000,200S,4T)$ and $D>1000C$,",
+      "reason": "The q1 enclosure is interpreted in the current prose, whereas the adjacent phi1 enclosure is used without explicitly reconnecting its norm formula to the earlier modulus quantity Phi. One sentence keeps the retained distances recognizable through the change to squared-norm arithmetic.",
+      "preserved_hypotheses_and_consumers": "Preserves all enclosure definitions, positivity tests, K, Rbs, norm-two guard and size hypotheses. Consumers are N3,bs in Table tab:fixed56-windows and the N3,bs--A4 overlap. No new restriction is introduced.",
+      "mathematical_check": "True. Since d_bs=|b−s|² and s0=S², sqrt(d_bs^6/s0^6)=d0^6. Since b0=B², sqrt(b0*d_bs^5/s0^6)=(B/S)d0^5. The square root of their maximum is exactly Phi, and the upward rational enclosure gives phi1≥Phi. Section 8 gives the actual relabeled residual bound κPhi; the displayed κphi1 is therefore an upper bound.",
+      "status": "proposed only; source unmodified",
+      "line_start": 3590
+    }
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "proposal_id": "P02",
+  "status": "UNAPPLIED_REVIEW_PROPOSAL",
+  "classification": "proved simplification; original proof correct",
+  "source": "/workspace/scratch/cae51110c84a/upload/D1_bound5-v1(1).tex",
+  "source_sha256": "74582db5fd0ad43195a3ea235cfd324813f04e3d0cb82387a9930b7c4f26c228",
+  "description": "Expand existing Lemma2.5 to give T>3ABS when A>=3, then use K=400 and the uniform relabeled N3 residual in Section6. No new corollary.",
+  "upstream_subedits": 6,
+  "section6_subedits": 9,
+  "total_subedits": 15,
+  "changed_source_lines": 63,
+  "added_or_replacement_lines": 39,
+  "net_line_change": -24,
+  "diff_blocks": [
+    {
+      "kind": "replace",
+      "old_start": 387,
+      "old_end": 387,
+      "new_start": 387,
+      "new_end": 387
+    },
+    {
+      "kind": "replace",
+      "old_start": 390,
+      "old_end": 393,
+      "new_start": 390,
+      "new_end": 394
+    },
+    {
+      "kind": "replace",
+      "old_start": 450,
+      "old_end": 450,
+      "new_start": 451,
+      "new_end": 451
+    },
+    {
+      "kind": "replace",
+      "old_start": 472,
+      "old_end": 474,
+      "new_start": 473,
+      "new_end": 474
+    },
+    {
+      "kind": "replace",
+      "old_start": 486,
+      "old_end": 488,
+      "new_start": 486,
+      "new_end": 488
+    },
+    {
+      "kind": "insert",
+      "old_start": 499,
+      "old_end": 498,
+      "new_start": 499,
+      "new_end": 505
+    },
+    {
+      "kind": "replace",
+      "old_start": 1910,
+      "old_end": 1910,
+      "new_start": 1917,
+      "new_end": 1917
+    },
+    {
+      "kind": "replace",
+      "old_start": 1912,
+      "old_end": 1913,
+      "new_start": 1919,
+      "new_end": 1919
+    },
+    {
+      "kind": "replace",
+      "old_start": 1923,
+      "old_end": 1923,
+      "new_start": 1929,
+      "new_end": 1929
+    },
+    {
+      "kind": "replace",
+      "old_start": 1925,
+      "old_end": 1925,
+      "new_start": 1931,
+      "new_end": 1931
+    },
+    {
+      "kind": "replace",
+      "old_start": 1930,
+      "old_end": 1931,
+      "new_start": 1936,
+      "new_end": 1937
+    },
+    {
+      "kind": "replace",
+      "old_start": 1933,
+      "old_end": 1933,
+      "new_start": 1939,
+      "new_end": 1939
+    },
+    {
+      "kind": "replace",
+      "old_start": 1935,
+      "old_end": 1936,
+      "new_start": 1941,
+      "new_end": 1941
+    },
+    {
+      "kind": "delete",
+      "old_start": 1938,
+      "old_end": 1961,
+      "new_start": 1943,
+      "new_end": 1942
+    },
+    {
+      "kind": "replace",
+      "old_start": 1979,
+      "old_end": 1979,
+      "new_start": 1960,
+      "new_end": 1960
+    },
+    {
+      "kind": "replace",
+      "old_start": 1983,
+      "old_end": 1985,
+      "new_start": 1964,
+      "new_end": 1965
+    },
+    {
+      "kind": "replace",
+      "old_start": 2015,
+      "old_end": 2016,
+      "new_start": 1995,
+      "new_end": 1995
+    },
+    {
+      "kind": "replace",
+      "old_start": 2033,
+      "old_end": 2033,
+      "new_start": 2012,
+      "new_end": 2012
+    },
+    {
+      "kind": "replace",
+      "old_start": 2041,
+      "old_end": 2041,
+      "new_start": 2020,
+      "new_end": 2020
+    },
+    {
+      "kind": "replace",
+      "old_start": 2045,
+      "old_end": 2046,
+      "new_start": 2024,
+      "new_end": 2025
+    },
+    {
+      "kind": "replace",
+      "old_start": 2061,
+      "old_end": 2062,
+      "new_start": 2040,
+      "new_end": 2040
+    },
+    {
+      "kind": "replace",
+      "old_start": 2064,
+      "old_end": 2064,
+      "new_start": 2042,
+      "new_end": 2042
+    },
+    {
+      "kind": "replace",
+      "old_start": 2066,
+      "old_end": 2068,
+      "new_start": 2044,
+      "new_end": 2044
+    },
+    {
+      "kind": "replace",
+      "old_start": 2083,
+      "old_end": 2083,
+      "new_start": 2059,
+      "new_end": 2059
+    }
+  ],
+  "edits": [
+    {
+      "old_start_line": 387,
+      "old_end_line": 387,
+      "old": "\\subsection{Fourth-entry gaps with a small first entry}",
+      "replacement": "\\subsection{Fourth-entry gaps}",
+      "reason": "The expanded existing lemma also treats A>=3.",
+      "origin": "structural.md proposal 1"
+    },
+    {
+      "old_start_line": 390,
+      "old_end_line": 393,
+      "old": "Let an ordered quadruple have \\(1\\le A<3\\le B\\le S\\le T\\).\nIn each row of the following table, the first two columns imply\n\\(T>tABS\\). The number \\(\\alpha\\) is a rational lower bound for \\(A\\),\nused in the proof.",
+      "replacement": "Let an ordered quadruple have \\(1\\le A\\le B\\le S\\le T\\), with\n\\(B\\ge3\\). If \\(A\\ge3\\), then \\(T>3ABS\\).\nIf \\(A<3\\), the first two columns of each row in the following\ntable imply \\(T>tABS\\). The number \\(\\alpha\\) is a rational lower\nbound for \\(A\\), used in the proof.",
+      "reason": "Extend the existing lemma statement; retain its five-row table.",
+      "origin": "structural.md proposal 1"
+    },
+    {
+      "old_start_line": 450,
+      "old_end_line": 450,
+      "old": "In every row \\(AB>5\\). Set",
+      "replacement": "In every case considered here, \\(AB>5\\). Set",
+      "reason": "Include the new all-large case in the analytic hypotheses.",
+      "origin": "structural.md proposal 1"
+    },
+    {
+      "old_start_line": 472,
+      "old_end_line": 474,
+      "old": "By Lemma~\\ref{lem:tail-irregular},\n\\(\\tau=T/(ABS)>2/A>2/3\\).\nFor fixed \\(\\tau>0\\), substituting \\(T=\\tau ABS\\) and \\(S\\ge B\\) gives",
+      "replacement": "Put \\(\\tau=T/(ABS)\\). For fixed \\(\\tau>0\\), substituting\n\\(T=\\tau ABS\\) and \\(S\\ge B\\) gives",
+      "reason": "Defer the small-A lower bound to its branch; the majorant itself holds for every positive tau.",
+      "origin": "structural.md proposal 1"
+    },
+    {
+      "old_start_line": 486,
+      "old_end_line": 488,
+      "old": "In these positive expressions, replace \\(A,B\\) by the rational lower\nbounds \\(\\alpha,B_0\\) from the table. From now on, evaluate \\(k_1,k_2\\),\nand hence \\(K_1,L_1,Q_1\\), at \\(A=\\alpha,B=B_0\\). Let",
+      "replacement": "In these positive expressions, replace \\(A,B\\) by rational lower\nbounds \\(\\alpha,B_0\\). Evaluate \\(k_1,k_2\\), and hence\n\\(K_1,L_1,Q_1\\), at \\(A=\\alpha,B=B_0\\). Let",
+      "reason": "Allow the new choice alpha=B0=3 as well as the existing table choices.",
+      "origin": "structural.md proposal 1"
+    },
+    {
+      "old_start_line": 497,
+      "old_end_line": 499,
+      "old": " F(\\tau)=2K_1\\tau+L_1P_0+\\frac{J_0}{\\tau}.\n\\]\nFor all five explicitly listed triples",
+      "replacement": " F(\\tau)=2K_1\\tau+L_1P_0+\\frac{J_0}{\\tau}.\n\\]\nIf \\(A\\ge3\\), take \\(\\alpha=B_0=3\\).\nLemma~\\ref{lem:product-four} gives \\(\\tau>2\\), while direct rational\nsubstitution gives \\(F(2)<7/10\\) and \\(F(3)<19/20\\).\nConvexity excludes \\(2<\\tau\\le3\\).\n\nIf \\(A<3\\), use the lower bounds in the table.\nLemma~\\ref{lem:tail-irregular} gives \\(\\tau>2/A>2/3\\).\nFor all five explicitly listed triples",
+      "reason": "Prove the all-large strengthening and then continue with the unchanged five-row small-A proof.",
+      "origin": "structural.md proposal 1"
+    },
+    {
+      "old_start_line": 1910,
+      "old_end_line": 1963,
+      "old": "Lemma~\\ref{lem:product-four} gives \\(T>2ABS\\) and hence \\(AT>162\\).\nWe may therefore apply the row \\(H=48,\\lambda=19/200\\) of\nLemma~\\ref{lem:retained-gap}. In addition to all the approximation guards,\nit gives\n\\begin{equation}\\label{eq:integrated-6}\nC>\\frac{A^2T^5}{S^2},\\qquad\n D>\\mathcal G:=\\frac{A^2C^7}{S^2T^4}.\n\\end{equation}\nPut\n\\[\n \\mathcal Q=\\frac{|(a-b)(a-s)(b-s)|}{BS^2},\\qquad\n c_*=\\frac{9999}{10000}\\left(\\frac{200}{19}\\right)^2.\n\\]\nThe retained inequality and \\(T>2ABS\\) yield\n\\[\n C>32c_*\\left(\\frac1{\\mathcal Q}-\\frac{\\mu}{A^2B^2}\\right)^2\n                         A^7B^5S^3.\n\\]\nSince \\(A^2B^2\\ge81\\) and \\(0<\\mathcal Q\\le8\\),\n\\[\n 32c_*\\left(1-\\frac{8\\mu}{81}\\right)^2\n =\\frac{5468347165039}{1582031250}>3456.\n\\]\nConsequently, with \\(K=54\\) and \\(\\beta=3456\\),\n\\begin{equation}\\label{eq:large-gap}\n C>K A^7B^5S^3,\\qquad\n C>\\frac{\\beta}{\\mathcal Q^2}A^7B^5S^3.\n\\end{equation}\nThe second estimate will be retained at one junction.\n\n\\paragraph{A bound for $\\mathcal Q^2\\Phi$.}\nWrite \\(u=A/B,\\ v=B/S,\\ w=|b-s|/S\\), and\n\\(\\Phi=\\max(w^6,vw^5)\\). The identities\n\\[\n (a-b)(a-s)=a^2-a(b+s)+bs,\\qquad\n |b+s|^2=2B^2+2S^2-|b-s|^2\n\\]\ngive\n\\[\n \\mathcal Q\\le w[1+u^2v+u\\sqrt{2+2v^2-w^2}]\n \\le w[2+\\sqrt{4-w^2}].\n\\]\nIf \\(w\\ge v\\), substitute \\(x=\\sqrt{4-w^2}\\) to obtain\n\\[\n \\mathcal Q^2\\Phi\\le(2-x)^4(2+x)^6\n \\le F:=\\left(\\frac85\\right)^4\\left(\\frac{12}{5}\\right)^6.\n\\]\nIndeed the logarithmic derivative on \\((0,2)\\) has the sign of\n\\(4-10x\\), so the maximum occurs at \\(x=2/5\\).\nIf \\(w<v\\le1\\), then \\(\\mathcal Q\\le4w\\) and\n\\(\\mathcal Q^2\\Phi\\le16vw^7\\le16<F\\).\nThus the same bound holds in every case.\n\n",
+      "replacement": "Lemma~\\ref{lem:five-frontier-gaps} gives \\(T>3ABS\\) and hence \\(AT>243\\).\nWe may therefore apply the row \\(H=48,\\lambda=19/200\\) of\nLemma~\\ref{lem:retained-gap}. It gives all the required size conditions and\n\\begin{equation}\\label{eq:integrated-6}\nC>\\frac{A^2T^5}{S^2},\\qquad\n D>\\mathcal G:=\\frac{A^2C^7}{S^2T^4}.\n\\end{equation}\nPut\n\\[\n \\mathcal Q=\\frac{|(a-b)(a-s)(b-s)|}{BS^2},\\qquad\n c_*=\\frac{9999}{10000}\\left(\\frac{200}{19}\\right)^2.\n\\]\nThe retained inequality and \\(T>3ABS\\) give\n\\[\n C>3^5c_*\\left(\\frac1{\\mathcal Q}-\\frac{\\mu}{A^2B^2}\\right)^2\n                         A^7B^5S^3.\n\\]\nSince \\(A^2B^2\\ge81\\) and \\(0<\\mathcal Q\\le8\\),\n\\[\n 3^5c_*\\left(\\frac18-\\frac{\\mu}{81}\\right)^2\n =\\frac{16405041495117}{40000000000}>400.\n\\]\nConsequently, with \\(K=400\\),\n\\begin{equation}\\label{eq:large-gap}\n C>KA^7B^5S^3.\n\\end{equation}\n\n",
+      "reason": "The stronger fourth-entry bound supplies a uniform gap coefficient exceeding400; the separate phase maximization is no longer needed."
+    },
+    {
+      "old_start_line": 1979,
+      "old_end_line": 1979,
+      "old": " \\kappa=\\frac{3535}{409600},\\quad R_{bs}=\\kappa\\Phi.",
+      "replacement": " R_{bs}=\\frac{35}{32}.",
+      "reason": "Use the existing uniform N3 residual for the relabeled pair b,s."
+    },
+    {
+      "old_start_line": 1983,
+      "old_end_line": 1985,
+      "old": "The \\(b,s\\) residual retains its actual anchor distance. The adaptive\nrow \\(P\\) is used for \\(S\\ge2B\\), while the universal row \\(P_0\\)\nis used for \\(S<2B\\).",
+      "replacement": "The adaptive row \\(P\\) is used for \\(S\\ge2B\\), while the universal\nrow \\(P_0\\) is used for \\(S<2B\\).",
+      "reason": "Remove the now false description of a distance-sensitive residual in this section."
+    },
+    {
+      "old_start_line": 2015,
+      "old_end_line": 2016,
+      "old": "The remaining comparisons use $C>KA^7B^5S^3$, except for\n$N_{3,bs}\\to A_4$.",
+      "replacement": "The remaining comparisons use $C>KA^7B^5S^3$.",
+      "reason": "Every junction now follows from the same coarse gap."
+    },
+    {
+      "old_start_line": 2033,
+      "old_end_line": 2033,
+      "old": "\\(N_{3,bs}\\to A_4\\)&\\(\\beta^2A^{14}\\)&\\(16\\kappa^2F^2M_4^2h\\)\\\\",
+      "replacement": "\\(N_{3,bs}\\to A_4\\)&\\(K^2A^{14}\\)&\\(16R_{bs}^2M_4^2h\\)\\\\",
+      "reason": "Direct endpoint division with uniform residual and the coarse gap gives this sufficient comparison."
+    },
+    {
+      "old_start_line": 2041,
+      "old_end_line": 2041,
+      "old": "comparisons follow by substituting \\(A=B=S=3\\), \\(K=54,\\beta=3456\\)",
+      "replacement": "comparisons follow by substituting \\(A=B=S=3\\), \\(K=400\\)",
+      "reason": "Use the new constant without any phase coefficient."
+    },
+    {
+      "old_start_line": 2045,
+      "old_end_line": 2046,
+      "old": " \\frac{\\beta^2 3^{14}}{16\\kappa^2F^2M_4^2h}\n =\\frac{4003515472412109375}{3611631944665923584}>1.",
+      "replacement": " \\frac{K^2 3^{14}}{16R_{bs}^2M_4^2h}\n =\\frac{1224133953984}{844113475625}>\\frac75.",
+      "reason": "The new tightest quotient is exact and exceeds7/5; all other original strict comparisons still hold."
+    },
+    {
+      "old_start_line": 2061,
+      "old_end_line": 2068,
+      "old": "The exceptional phase junction uses the second bound in\n\\eqref{eq:large-gap}. Direct endpoint division requires\n\\[\n C^2>16M_4^2R_{bs}^2h\\,B^{10}S^6.\n\\]\nIt follows from \\(C>\\beta A^7B^5S^3/\\mathcal Q^2\\),\n\\(R_{bs}=\\kappa\\Phi\\), and \\(\\mathcal Q^2\\Phi\\le F\\), by the\ndisplayed rational comparison.",
+      "replacement": "For \\(N_{3,bs}\\to A_4\\), the endpoint quotient is\n\\[\n \\frac{C^2}{16M_4^2R_{bs}^2h\\,B^{10}S^6}.\n\\]\nSubstituting \\eqref{eq:large-gap} gives the corresponding table entry.",
+      "reason": "Record the direct algebraic reduction replacing the phase-dependent argument."
+    },
+    {
+      "old_start_line": 2083,
+      "old_end_line": 2083,
+      "old": " \\frac{54A^8BS^3}{105}\\ge\\frac{54\\cdot3^{12}}{105}>1.",
+      "replacement": " \\frac{400A^8BS^3}{105}\\ge\\frac{400\\cdot3^{12}}{105}>1.",
+      "reason": "Carry the strengthened gap into the ordinary-family tail condition."
+    }
+  ],
+  "controls": [
+    "All15 original strings unique in authoritative source",
+    "All15 replacements uniquely applicable sequentially in memory",
+    "Source SHAguard passed",
+    "Existing lemma label preserved exactly once",
+    "No extra corollary",
+    "Section8 onward byte-identical",
+    "No stale Section6 phase symbols",
+    "Never wrote a candidate article"
+  ]
+}

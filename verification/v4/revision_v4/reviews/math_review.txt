@@ -1,0 +1,166 @@
+INDEPENDENT MATHEMATICAL REFEREE REPORT — V4 SCOPED PACKET
+
+Verdict: PASS. No blocking mathematical error or omitted affected consumer
+was found in the requested scope. This is approval of the exact packet
+identified below, not a broad certification of the whole article.
+
+Reviewed immutable file:
+  revision_v4/checkpoints/math_packet.tex
+SHA256:
+  8675f3f4b0ed54cb387408844fe757fcd803f9cc01ac3ba294796b923c55881b
+Baseline:
+  output/D1_bound5-v3.tex
+
+Method and scope
+---------------
+I read the packet and its diff against v3 before consulting any proposal or
+earlier review; no proposal or earlier review was used. I reconstructed the
+changed arguments from the displayed identities, stated hypotheses, and
+relevant on-page predecessor lemmas. I reviewed product-four's 3/2 branch,
+the three-anchor f3 estimate in interpolation-parameters, direct-four's
+24-monomial bound and coefficients 13 and 49/50, its two consumers in
+retained-gap and sm:bs7-cutoff, and the corrected retained-gap A exponent.
+The unchanged precursor lemmas were read as needed to establish the
+hypotheses used in these arguments. No article file was modified.
+
+1. product-four, packet lines 282–328: PASS
+------------------------------------------------
+The second branch has A >= 1 and B >= 3. Thus products involving the
+smallest entry are at least 3, and products among the other three are at
+least 9. The analytic branch bounds give |F_1j| < 5/9 and
+|E_1j| < 25/486 < 1/18, while the other errors are less than
+128/8649 < 1/64. For the symmetric nonnegative entrywise majorant, the
+weighted row quotients with weights (3/2,1,1,1) are 1/9 and 11/96.
+Entrywise domination bounds the complex matrix E's spectral norm by the
+majorant's spectral norm; symmetry makes the latter its spectral radius.
+The weighted row bound therefore justifies ||E||_2 < 11/96. Strictness is
+available from the strict entry bounds.
+
+Perturbing the singular values (3/2,1/2,1/2,1/2) gives s=59/96,
+h=155/96, |det F| < h s^3 and ||adj F||_2 < h s^2. The on-page
+tail-irregular lemma applies with B >= 3, giving D > 2BC >= 6C
+and D > 18. Consequently sum A_i^2 < (13/12)D^2 and
+s < (s/324)D^2. The displayed determinant coefficient is exactly
+
+  h s^2 (13/12+s/324)
+    = 18212679025/27518828544
+    = 2/3 - 133206671/27518828544 < 2/3.
+
+The preceding even-dimensional determinant argument makes det M a
+nonzero algebraic integer, so ABCD <= |det N|. Division now yields
+D > (3/2)ABC as stated. This step does not silently require A >= 3.
+
+2. interpolation-parameters, packet lines 596–661: PASS
+-------------------------------------------------------
+With w=y/x, |x|=1/P and rho=|w|<=1/4, the exact displayed f3
+formula gives 16 P^3 |f3| = |1-w| |1-w^2|. The two elementary
+triangle bounds give precisely the revised lower and upper products.
+The lower product decreases and the upper product increases on
+0 <= rho <= 1/4. Their endpoint values divided by 16 are
+45/1024 and 85/1024. This applies to complex w without any
+unjustified assumption that w is real or that its arguments align.
+
+The unchanged tail coefficient is 4|binom(1/2,4)|=5/32. For both
+H=32 and H=48, exact rational arithmetic confirms positivity of l_H,
+the direct coefficient comparisons, and both zero-case Q bounds.
+Thus the new explanation establishes the same bounds subsequently used.
+
+3. direct-four, packet lines 760–789: PASS
+------------------------------------------
+Each Vandermonde determinant monomial has the four exponents 0,1,2,3
+assigned to the four anchor moduli. Swapping an inverted pair of exponents
+does not decrease its modulus because A <= B <= S <= T. Its modulus
+is therefore at most A^0 B^1 S^2 T^3. There are 4!=24 terms, giving
+the claimed 24 BS^2 T^3 bound without requiring strict ordering of moduli.
+Distinctness of the underlying entries, already in the tuple convention,
+supplies the nonzero Vandermonde where the exact identity divides by it.
+
+Here P>=1000 and Q>=1000P imply |y/x|<=1/1000, AP>=1000,
+and PQ>10000. The exact f4 formula gives the displayed lower and upper
+principal-term bounds by triangle inequalities, and
+4|binom(1/2,5)|=7/64 gives the displayed remainder. The resulting l
+is positive. The first direct coefficient is 2424/199<13. The second is
+
+  2400u/99
+    =1010380812000000797599201/1051782331777056000000000
+    <49/50.
+
+Conversion from |eta| to Z uses the on-page 99/100<|f(xy)|<101/100
+bound in the correct direction. The zero-case constants are unchanged:
+100/(201u)>10 and 100/(199l)<17. Hence both the direct estimate and
+the vanishing alternative follow from the coherent exact identity.
+
+4. retained-gap consumer and corrected A exponent, lines 792–884: PASS
+-----------------------------------------------------------------------
+The first-five-entry argument supplies C>A^2 T^5/S^2 and C>1000.
+Its repeat on (a,b,s,c,d) supplies D>A^2 C^5/S^2 and D>1000C,
+so the direct-four hypotheses for terminal pair (c,d) hold. To exclude
+L4=0, its bound D<17ABST C^3 would require C^2<17BS^3T/A.
+But C>3ABST gives the quotient greater than (9/17)A^3 BT/S;
+T>2ABS then gives exactly (18/17)A^4 B^2>1. The revised A^4
+power is the direct algebraic result and is sufficient under A>=1,B>=3.
+
+The stronger first-five-entry bound also gives C>16BST: substituting
+T>2ABS into A^2 T^5/S^2 divided by 16BST yields a lower bound
+A^6 B^3 S>=81. With k=3999/4000, Z^2=|cd+1|>kCD is valid
+since CD>4000. Hence the revised first summand squared is bounded by
+
+  169/(16^6 k A^2 B^4)
+    <=21125/169826844672 <1/10000.
+
+Thus its first summand is below 1/100. Nonzero integrality of L4 and
+the revised second coefficient imply
+
+  (49/50) ST^2 Z/(AC^4)>99/100,
+  Z>(99/98)AC^4/(ST^2).
+
+Finally, the excess after squaring is sufficient to absorb subtraction of
+one: ((99/98)^2-1)A^2 C^8/(S^2T^4) is at least
+(197/9604)C^2>1 because S,T<=C and C>1000. Therefore
+D>A^2 C^7/(S^2T^4), exactly the retained downstream conclusion.
+
+5. sm:bs7-cutoff consumer, lines 2294–2313: PASS
+-------------------------------------------------
+In this branch M=10^8, S,T<M, 1<=A<=B<3, and C>=10^100.
+The preceding nonzero three-anchor estimate gives
+D>C^5/(100M^2)>max(1000C,17ABST C^3), with ample exact margin
+after subtracting one from Z^2. Thus the direct-four hypotheses hold and
+its vanishing alternative is excluded.
+
+The substitutions BS^2T^3<3M^5 and ST^2/A<M^3 give precisely
+the new coefficients 39M^5 and 49M^3/50. Since Z>C/2, the first
+summand is below 78M^5/C<1/2. The second then implies
+Z>25C^4/(49M^3). Consequently
+
+  D> (625/2401) C^7/M^6 - 1/C
+    > C^7/(100M^6)=10^(-50) C^7,
+
+because the coefficient difference is 60099/240100 and
+(60099/240100) C^8/M^6>1 at the stated thresholds. The lower bound
+used by the following forbidden-interval argument is therefore preserved.
+
+6. Consumer closure and change scope: PASS
+-------------------------------------------
+The exact packet has two references to direct-four, both in the two
+reviewed consumers. Searching all L_4 and Delta_4 occurrences found no
+additional consumer carrying the old constants. The old 9,4/5 direct
+formula and its old 27M^5 cutoff substitution are absent. All text changes
+against v3 lie within the five reviewed lemma blocks.
+
+The unchanged product-five use of the weaker spectral bound <1/8 remains
+valid because 11/96<1/8. The other explicit product-four use that needs
+tau>2 invokes its unchanged A>=3 branch. The cutoff's unchanged
+C>(3/8)AST is a valid weakened consequence of the stronger
+C>(3/2)AST now supplied by product-four. Keeping that weaker consequence
+does not omit a necessary downstream repair.
+
+Controls
+--------
+revision_v4/checks/math_review_checks.py is a read-only article check that
+verifies the packet hash, source bindings, diff scope, consumer closure,
+polynomial factorization, and the rational comparisons above. It writes
+revision_v4/checks/math_review_checks.json and must pass against the exact
+reviewed packet. Numerical controls supplement the proof reconstruction;
+they are not offered as a replacement for it.
+
+No blockers. No article edits requested within this scope.

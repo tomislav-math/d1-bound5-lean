@@ -1,0 +1,63 @@
+% Proposal only. This file does not modify the frozen manuscript.
+% Optional elementary-four-anchor revision, independently cross-reviewed.
+% All retained gaps and every downstream cutoff and overlap formula stay unchanged.
+
+% LOCATION 1: replace the whole lemma lem:direct-four (current lines 758--796).
+\begin{lemma}\label{lem:direct-four}
+For four anchors \(A\le B\le S\le T\le P\), if
+\(P\ge1000,\ Q\ge1000P\), then
+\[
+ |L_4|<\frac{13BS^2T^3}{Z}+\frac{49ST^2Z}{50AP^4},\qquad
+ L_4=0\ \Longrightarrow\ 10ABSTP^3<Q<17ABSTP^3.
+\]
+\end{lemma}
+\begin{proof}
+Expanding the Vandermonde determinant gives \(24\) monomials.
+Since \(A\le B\le S\le T\), each has modulus at most
+\(BS^2T^3\), by successively interchanging any inverted pair of
+exponents. Thus \(|\Delta_4|\le24BS^2T^3\).
+
+Put \(k=1/1000\) and
+\[
+ r=\frac7{64}\left[\left(\frac{1000}{999}\right)^4-1\right],\quad
+ l=\frac{(1-k)^2(5-6k-5k^2)}{128}-r,\quad
+ u=\frac{(1+k)^2(5+6k+5k^2)}{128}+r.
+\]
+Formula \eqref{eq:integrated-5} and \eqref{eq:coherent-tail} give
+\(l/P^4\le|F_4|\le u/P^4\), with \(l>0\).
+The exact identity proves the assertions using
+\[
+ \frac{24\cdot101}{199}<13,\quad
+ \frac{2400u}{99}<\frac{49}{50},\quad
+ \frac{100}{201u}>10,\quad \frac{100}{199l}<17.
+\]
+All four are strict rational comparisons.
+\end{proof}
+
+% LOCATION 2: replace the final paragraph of the retained-gap proof,
+% from "For its first summand" through the current subtraction-of-one sentence
+% (current lines 872--879). Retain the following size-inequalities sentence.
+For its first summand, use the bounds \(D>A^2C^5/S^2\) and
+\(C>A^2T^5/S^2>16BST\), the latter following from \(T>2ABS\).
+They give
+\[
+ \left(\frac{13BS^2T^3}{|\sqrt{cd+1}|}\right)^2
+ <\frac{169B^2S^6T^6}{kA^2C^6}
+ <\frac{169}{16^6kA^2B^4}<\frac1{10000}.
+\]
+Thus \(|\sqrt{cd+1}|>(99/98)AC^4/(ST^2)\).
+Squaring and subtracting one proves the last inequality in
+\eqref{eq:retained-start}, since
+\[
+ \left(\left(\frac{99}{98}\right)^2-1\right)
+       \frac{A^2C^8}{S^2T^4}>1
+\]
+follows from \(S,T\le C\) and \(C>1000\).
+
+% LOCATION 3: replace only the displayed direct-four estimate in the final
+% subcase of lemma sm:bs7-cutoff (current lines 2307--2309).
+\[
+ 1<\frac{39M^5}{Z}+\frac{49M^3Z}{50C^4}.
+\]
+% Its following sentences and D>C^7/(100M^6) stay valid unchanged:
+% first term<1/2 implies Z>(25/49)C^4/M^3, with C>=10^100, M=10^8.

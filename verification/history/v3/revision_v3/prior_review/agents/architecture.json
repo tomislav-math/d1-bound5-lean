@@ -1,0 +1,1449 @@
+{
+  "source": "armstrong_v2/input/D1_bound5-v2.tex",
+  "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "source_line_count": 3904,
+  "review_role": "Independent architecture, Phase 1/3 diagnostic",
+  "read_scope": {
+    "manuscript": "Every source line 1–3904 freshly read before diagnosis; includes all proofs, tables and bibliography.",
+    "skills": "Both SKILL.md files and writing-rules, artisan-writing, house-style, route-polish, shared-controls, control-artifacts read.",
+    "prior_audits": "Not read.",
+    "rendered_pages": "Not inspected by this reviewer."
+  },
+  "scope_limits": [
+    "No article edits",
+    "No new numeric computation or external citation verification",
+    "No compilation",
+    "Statement dependencies record actual mathematical use, including important proof equations and unnumbered modules; explicit reference counts alone are not treated as dependency evidence."
+  ],
+  "checks": {
+    "statement_count": 37,
+    "statement_hashes_match": true,
+    "source_hash_matches_brief": true,
+    "all_dependencies_resolve": true,
+    "dependency_graph_acyclic": true,
+    "all_nonprincipal_statements_have_consumers": true
+  },
+  "statements": [
+    {
+      "id": "thm:main",
+      "kind": "theorem",
+      "statement_lines": [
+        44,
+        47
+      ],
+      "proof_lines": [
+        3851,
+        3859
+      ],
+      "statement_sha256": "1c45036b8ad6f3ed5c98f7f2fe5d42d2b1a25d70ca84472f34d927374bab227b",
+      "frozen_contract": "\\begin{theorem}\\label{thm:main}\nFor every imaginary quadratic field $K$, every $D(1)$-tuple in\n$\\mathcal O_K$ has cardinality at most five.\n\\end{theorem}",
+      "role": "Principal conclusion. Excludes a sextuple by an exhaustive split into zero, one, or at least two small entries.",
+      "dependencies": [
+        "prop:no-all-large-six",
+        "prop:one-small",
+        "sm:main"
+      ],
+      "consumers": [],
+      "explicit_ref_lines": [
+        3851
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:irregular-growth",
+      "kind": "lemma",
+      "statement_lines": [
+        116,
+        119
+      ],
+      "proof_lines": [
+        120,
+        143
+      ],
+      "statement_sha256": "fd16cf65287118eae8adcefed4f26ad2d5992b80eb9e6a57758cd2f0c3917649",
+      "frozen_contract": "\\begin{lemma}\\label{lem:irregular-growth}\nAn irregular triple with \\(3\\le A=|a|\\le B=|b|\\le C=|c|\\) satisfies\n\\(C>2AB\\).\n\\end{lemma}",
+      "role": "Turns nonregularity into C>2AB. Its sharper quadratic, not just its final conclusion, is reused in the final finite complement.",
+      "dependencies": [],
+      "consumers": [
+        "lem:tail-irregular",
+        "module:finite-complement"
+      ],
+      "explicit_ref_lines": [
+        245,
+        3741
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:tail-irregular",
+      "kind": "lemma",
+      "statement_lines": [
+        145,
+        148
+      ],
+      "proof_lines": [
+        149,
+        246
+      ],
+      "statement_sha256": "4d4e7b9f5c9dd99c66419f33de6f1f0e04bc564e2e013f99a9994b62d306c14f",
+      "frozen_contract": "\\begin{lemma}\\label{lem:tail-irregular}\nIf an ordered quadruple has \\(1\\le A\\le B\\le C\\le D\\) and \\(B\\ge3\\),\nits last three entries form an irregular triple. In particular \\(D>2BC\\).\n\\end{lemma}",
+      "role": "Makes the final triple of an ordered quadruple irregular and supplies D>2BC, including the exact small B,C computation. This is the reusable entry-growth source.",
+      "dependencies": [
+        "lem:irregular-growth"
+      ],
+      "consumers": [
+        "lem:product-four",
+        "lem:five-frontier-gaps",
+        "unlabelled_36",
+        "module:fourth-entry-cutoff",
+        "module:finite-complement"
+      ],
+      "explicit_ref_lines": [
+        284,
+        509,
+        3366,
+        3581,
+        3714,
+        3721,
+        3732
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:product-four",
+      "kind": "lemma",
+      "statement_lines": [
+        276,
+        282
+      ],
+      "proof_lines": [
+        283,
+        324
+      ],
+      "statement_sha256": "c56e172f8e8444bd696ba9ce36ccc200544266330798cc9bea4f4d9b3c02ba57",
+      "frozen_contract": "\\begin{lemma}\\label{lem:product-four}\nAn ordered quadruple satisfies\n\\[\n D>2ABC\\quad\\hbox{if }A\\ge3,\\qquad\n D>\\frac38ABC\\quad\\hbox{if }A\\ge1,\\ B\\ge3.\n\\]\n\\end{lemma}",
+      "role": "Supplies the four-entry product gaps, with distinct all-large and one-small regimes; its perturbation estimate is also reused inside the five-entry proof.",
+      "dependencies": [
+        "lem:tail-irregular",
+        "module:determinant-setup"
+      ],
+      "consumers": [
+        "lem:product-five",
+        "lem:five-frontier-gaps",
+        "sm:bs7-cutoff"
+      ],
+      "explicit_ref_lines": [
+        504,
+        2233,
+        2239
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:product-five",
+      "kind": "lemma",
+      "statement_lines": [
+        326,
+        329
+      ],
+      "proof_lines": [
+        330,
+        390
+      ],
+      "statement_sha256": "b8f6198c3df53d91601b46f9417f242a4ae826247ca949c195a9160cee6e51dc",
+      "frozen_contract": "\\begin{lemma}\\label{lem:product-five}\nFive ordered entries of moduli \\(1\\le A\\le B\\le S\\le C\\le D\\),\nwith \\(B\\ge3\\), satisfy \\(D>3ABSC\\).\n\\end{lemma}",
+      "role": "Gives the stronger five-entry product lower bound used to launch and close retained-gap interpolation.",
+      "dependencies": [
+        "lem:product-four",
+        "module:determinant-setup"
+      ],
+      "consumers": [
+        "lem:retained-gap"
+      ],
+      "explicit_ref_lines": [
+        812,
+        865
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:five-frontier-gaps",
+      "kind": "lemma",
+      "statement_lines": [
+        394,
+        410
+      ],
+      "proof_lines": [
+        411,
+        520
+      ],
+      "statement_sha256": "9c6e6ed714d3117d55e20e644aba344543fdeffcf29349a7329e1b87c5907f3d",
+      "frozen_contract": "\\begin{lemma}\\label{lem:five-frontier-gaps}\nLet an ordered quadruple have \\(1\\le A\\le B\\le S\\le T\\), with\n\\(B\\ge3\\). If \\(A\\ge3\\), then \\(T>3ABS\\).\nIf \\(A<3\\), the first two columns of each row in the following\ntable imply \\(T>tABS\\). The number \\(\\alpha\\) is a rational lower\nbound for \\(A\\), used in the proof.\n\\[\n\\begin{array}{c|c|c|c}\n\\hbox{condition on }N(a)&B\\ge B_0&\\alpha&t\\\\\\hline\n1&8&1&27/8\\\\\n2&4&140/99&3\\\\\n3&3&12/7&11/4\\\\\n4&3&2&29/10\\\\\n5\\le N(a)\\le8&3&20/9&3\n\\end{array}\n\\]\n\\end{lemma}",
+      "role": "Strengthens the fourth-entry gap for all-large and five one-small regions. Its determinant expansion, not just table conclusions, is reused in the fixed-pair S>=15 proof.",
+      "dependencies": [
+        "lem:product-four",
+        "lem:tail-irregular",
+        "module:determinant-setup"
+      ],
+      "consumers": [
+        "prop:no-all-large-six",
+        "prop:pr-H2",
+        "unlabelled_36"
+      ],
+      "explicit_ref_lines": [
+        1863,
+        3054,
+        3389
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:interpolation-parameters",
+      "kind": "lemma",
+      "statement_lines": [
+        591,
+        613
+      ],
+      "proof_lines": [
+        614,
+        651
+      ],
+      "statement_sha256": "de8c2d013d10e9b5b89a4024de2a9221a13c3cd8a71424f7215b54ce504df28a",
+      "frozen_contract": "\\begin{lemma}\\label{lem:interpolation-parameters}\nLet \\((H,\\lambda,U)\\) be either row of the table\n\\[\n \\begin{array}{c|c|c}\n H&\\lambda&U\\\\\\hline\n 32&1/10&179/10\\\\\n 48&19/200&15\n \\end{array}.\n\\]\nSuppose \\(A_1P\\ge H,\\ Q\\ge4P,\\ PQ>10000\\). For two anchors\nof moduli \\(X\\le Y\\), and \\(Z=|z|\\),\n\\[\n |L_2|<\\frac{21Y}{20Z}+\\frac{Z}{2XP^2}.\n\\]\nFor three anchors of moduli \\(X,Y,V\\),\n\\[\n |L_3|<\n \\frac{51|\\Delta_3|}{100Z}\n +\\lambda\\frac{|\\Delta_3|Z}{XYV P^3},\\qquad\n L_3=0\\ \\Longrightarrow\\\n 5XYVP^2<Q<UXYVP^2.\n\\]\n\\end{lemma}",
+      "role": "Packages the two H regimes needed by retained-gap, and supplies the two-anchor estimate and three-anchor zero/nonzero alternatives.",
+      "dependencies": [
+        "module:interpolation-identities"
+      ],
+      "consumers": [
+        "lem:strong-two-anchor",
+        "lem:separated-three",
+        "lem:retained-gap"
+      ],
+      "explicit_ref_lines": [
+        654,
+        681,
+        715,
+        794,
+        840
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated",
+      "supplementary_clause": "The lower zero-case bound 5XYVP^2<Q has no later load-bearing use located in retained-gap; keep as a natural proved companion estimate."
+    },
+    {
+      "id": "lem:strong-two-anchor",
+      "kind": "lemma",
+      "statement_lines": [
+        653,
+        659
+      ],
+      "proof_lines": [
+        660,
+        685
+      ],
+      "statement_sha256": "8aaaf48a13614d4f76cd520259cab2ea7268d754b6ab0a1a15dc1aa09e8ade2b",
+      "frozen_contract": "\\begin{lemma}\\label{lem:strong-two-anchor}\nIn the two-anchor situation of Lemma~\\ref{lem:interpolation-parameters},\nassume also \\(Y\\ge3,\\ P\\ge5Y\\). If \\(Q\\ge5XYP\\), then\n\\[\n Q>\\frac{X^2P^3}{h_0},\\qquad h_0=\\frac{10001}{10000}.\n\\]\n\\end{lemma}",
+      "role": "Excludes L2=0 under Q>=5XYP and improves the terminal growth cubically. Two applications force nonvanishing in retained-gap.",
+      "dependencies": [
+        "lem:interpolation-parameters"
+      ],
+      "consumers": [
+        "lem:retained-gap"
+      ],
+      "explicit_ref_lines": [
+        817,
+        831
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:general-three",
+      "kind": "lemma",
+      "statement_lines": [
+        687,
+        693
+      ],
+      "proof_lines": [
+        694,
+        705
+      ],
+      "statement_sha256": "a51b10c94f919f9736cf45a88c2f69ee14f60084209a61e5627afa5d94bc77fa",
+      "frozen_contract": "\\begin{lemma}\\label{lem:general-three}\nFor three anchors \\(A\\le B\\le S\\), suppose \\(P\\ge4S,\\ AP\\ge9,\\ Q\\ge P\\).\nThen\n\\[\n |L_3|<\\frac{5BS^2}{Z}+\\frac{3SZ}{AP^3}.\n\\]\n\\end{lemma}",
+      "role": "Controls L3 when Q need only be >=P. This weaker separation regime is needed before Q>=4P has been established in two-small and three-small proofs.",
+      "dependencies": [
+        "module:interpolation-identities"
+      ],
+      "consumers": [
+        "sm:bs7-cutoff",
+        "sm:five-small-anchor-alternative",
+        "sm:five-three-small"
+      ],
+      "explicit_ref_lines": [
+        2277,
+        2308,
+        2752,
+        2855
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:separated-three",
+      "kind": "lemma",
+      "statement_lines": [
+        707,
+        713
+      ],
+      "proof_lines": [
+        714,
+        721
+      ],
+      "statement_sha256": "de67dffad22d9bb855c5063337f0eb6f0bc3dfdc1a10b66825ea1c45d841e208",
+      "frozen_contract": "\\begin{lemma}\\label{lem:separated-three}\nFor three anchors \\(A\\le B\\le S\\le P\\), if \\(P\\ge1000,\\ Q\\ge4P\\), then\n\\[\n |L_3|<\\frac{5BS^2}{Z}+\\frac{3SZ}{4AP^3},\\qquad\n L_3=0\\ \\Longrightarrow\\ 5ABSP^2<Q<15ABSP^2.\n\\]\n\\end{lemma}",
+      "role": "Uses P>=1000 and Q>=4P to improve the L3 residual and give a quadratic interval when L3 vanishes. Distinct from general-three.",
+      "dependencies": [
+        "lem:interpolation-parameters",
+        "module:interpolation-identities"
+      ],
+      "consumers": [
+        "sm:bs7-cutoff",
+        "sm:five-small-anchor-alternative",
+        "module:six-V-interval"
+      ],
+      "explicit_ref_lines": [
+        2207,
+        2290,
+        2297,
+        2758
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:four-anchor-nonvanishing",
+      "kind": "lemma",
+      "statement_lines": [
+        723,
+        727
+      ],
+      "proof_lines": [
+        728,
+        748
+      ],
+      "statement_sha256": "5796f2ff93da91495abaaf7efd9b070ae82a19b5e007b8c95c7f3f4037c54985",
+      "frozen_contract": "\\begin{lemma}\\label{lem:four-anchor-nonvanishing}\nFor ordered anchors \\(1\\le A\\le B\\le S\\le T\\le P\\le Q\\), assume\n\\(AP>1\\) and \\(P^2\\ge32BST/A^3\\). The coherent forms \\(L_3\\) on\n\\((a,b,s)\\) and \\((a,b,t)\\), using the same \\(z,R_a,R_b\\), cannot both vanish.\n\\end{lemma}",
+      "role": "Ensures one of two overlapping three-anchor forms is nonzero. Its simultaneous root choices are essential to the interpolating-polynomial contradiction.",
+      "dependencies": [
+        "module:interpolation-identities"
+      ],
+      "consumers": [
+        "sm:bs7-cutoff",
+        "sm:five-three-small",
+        "module:six-V-interval"
+      ],
+      "explicit_ref_lines": [
+        2201,
+        2850
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:direct-four",
+      "kind": "lemma",
+      "statement_lines": [
+        750,
+        757
+      ],
+      "proof_lines": [
+        758,
+        788
+      ],
+      "statement_sha256": "bc4d444816308b1473ed6e422feb3652a6787096cbfd1b6d921e411c98870d39",
+      "frozen_contract": "\\begin{lemma}\\label{lem:direct-four}\nFor four anchors \\(A\\le B\\le S\\le T\\le P\\), if\n\\(P\\ge1000,\\ Q\\ge1000P\\), then\n\\[\n |L_4|<\\frac{9BS^2T^3}{Z}+\\frac{4ST^2Z}{5AP^4},\\qquad\n L_4=0\\ \\Longrightarrow\\ 10ABSTP^3<Q<17ABSTP^3.\n\\]\n\\end{lemma}",
+      "role": "Supplies the four-anchor estimate and zero-case bounds needed to obtain seventh-power terminal growth.",
+      "dependencies": [
+        "module:interpolation-identities"
+      ],
+      "consumers": [
+        "lem:retained-gap",
+        "sm:bs7-cutoff"
+      ],
+      "explicit_ref_lines": [
+        857,
+        2316
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated",
+      "supplementary_clause": "The lower zero-case bound 10ABSTP^3<Q has no later load-bearing use located; keep it, or relocate verbatim to proof only under a separate approved clause review."
+    },
+    {
+      "id": "lem:retained-gap",
+      "kind": "lemma",
+      "statement_lines": [
+        791,
+        810
+      ],
+      "proof_lines": [
+        811,
+        874
+      ],
+      "statement_sha256": "22f71efd616373bf51d15dec3506c6b81bef8cb0d93ef4347e802b5762dd6645",
+      "frozen_contract": "\\begin{lemma}\\label{lem:retained-gap}\nLet six ordered entries have \\(1\\le A\\le B\\le S\\le T\\le C\\le D\\),\n\\(B\\ge3,\\ T>2ABS\\). Choose either row \\((H,\\lambda,U)\\) of\nLemma~\\ref{lem:interpolation-parameters}, and suppose \\(AT\\ge H\\).\nPut\n\\[\n \\mathcal Q=\\frac{|(a-b)(a-s)(b-s)|}{BS^2},\\quad\n \\mu=\\frac{51051}{400000},\\quad c_\\lambda=\\frac{9999}{10000\\lambda^2}.\n\\]\nThen\n\\begin{align}\n C&>c_\\lambda\\left(\\frac1{\\mathcal Q}-\\frac{\\mu}{A^2B^2}\\right)^2\n                     \\frac{A^2T^5}{S^2}\n   >\\frac{A^2T^5}{S^2},                                      \\label{eq:retained-main}\\\\\n D&>\\frac{A^2C^5}{S^2},\\qquad\n D>\\frac{A^2C^7}{S^2T^4}.                                    \\label{eq:retained-start}\n\\end{align}\nMoreover \\(C>1000,\\ C>200S,\\ C>4T,\\ AC>1000,\\ D>1000C\\).\nThe conclusions for \\(C\\) use only the first five entries.\n\\end{lemma}",
+      "role": "Central reusable gap with a distance-sensitive coefficient, five-entry C conclusion, two D conclusions and all numerical guards for approximation families.",
+      "dependencies": [
+        "lem:product-five",
+        "lem:strong-two-anchor",
+        "lem:interpolation-parameters",
+        "lem:direct-four"
+      ],
+      "consumers": [
+        "prop:no-all-large-six",
+        "prop:pr-H2",
+        "unlabelled_36",
+        "module:common-interval-calculation",
+        "module:fourth-entry-cutoff"
+      ],
+      "explicit_ref_lines": [
+        1865,
+        1892,
+        2928,
+        3059,
+        3430,
+        3584,
+        3591
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:ordinary-residue-construction",
+      "kind": "lemma",
+      "statement_lines": [
+        882,
+        919
+      ],
+      "proof_lines": [
+        921,
+        1036
+      ],
+      "statement_sha256": "cb05569579db7382d97f98795ebbbe1e8f289a7fca3906122b780d259a23e894",
+      "frozen_contract": "\\begin{lemma}\\label{lem:ordinary-residue-construction}\nLet $a_1,\\ldots,a_m,c,d$, where $m\\ge2$, be distinct nonzero members of\na $D(1)$-tuple in $\\mathcal O_K$.  Put\n\\[\n A_j=|a_j|,\\quad A=\\min_j A_j,\\quad S=\\max_j A_j,\n \\quad C=|c|>1,\\quad AC>1,\n\\]\n\\[\n H=\\prod_{j=1}^m a_j,\\qquad\n \\Delta=\\prod_{1\\le i<j\\le m}(a_i-a_j),\\qquad\n \\eta=1-\\frac1{AC},\\qquad\n e(X)=\\sqrt{1+\\frac1{XC}}\\left(1+\\frac XC\\right).\n\\]\nFor every integer $k\\ge1$ there is an explicit matrix\n$Q_k=(Q_{ijk})_{0\\le i,j\\le m}$ of integral polynomials in $a_1,\\ldots,a_m$ and $c$.  Its $j$th column, for $j\\ge1$, is divisible by\n$a_j^{(m-1)k}$, and\n\\begin{equation}\\label{eq:ordinary-residue-det}\n \\det Q_k=\n \\left((-1)^{m(m+1)/2}4^{m+1}H^{m-1}\\Delta^{2m}\\right)^k\n \\prod_{v=-1}^{m-1}\\binom{1/2-vk}{k}\\ne0.\n\\end{equation}\nWith $\\theta_0=1$, $\\theta_j=\\sqrt{1+1/(a_jc)}$ defined by the binomial series,\n\\begin{equation}\\label{eq:ordinary-residue-error}\n \\left|\\sum_{j=0}^mQ_{ijk}\\theta_j\\right|\n \\le V_{m,k}:=\n \\left(\\frac{4|\\Delta|^2}{|H|C^m}\\right)^k\n \\eta^{-mk+1/2}\n \\frac{\\Gamma(k+3/2)\\Gamma(mk-1/2)}\n {\\pi\\Gamma((m+1)k+1)}.\n\\end{equation}\nIf $z\\in\\mathcal O_K$, $z^2=cd+1$, and $Z=|z|$, then\n\\begin{equation}\\label{eq:ordinary-root-transfer}\n 1\\le\\frac{Ce(S)}Z\n       \\max_i\\sum_{j=1}^m\\frac{|Q_{ijk}|}{A_j}\n       +V_{m,k}Z.\n\\end{equation}\nAt $k=1$ the left side can be replaced by $2$.\n\\end{lemma}",
+      "role": "Common matrix construction: polynomial integrality, column divisibility, determinant nonvanishing, beta residual and transfer to integral forms, including parity gain at k=1.",
+      "dependencies": [
+        "external:Bennett96-determinant"
+      ],
+      "consumers": [
+        "lem:ordinary-all-orders",
+        "lem:ordinary-three-normalized",
+        "sm:lem-four-root-k1"
+      ],
+      "explicit_ref_lines": [
+        1060,
+        2088,
+        2110,
+        2167
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:ordinary-all-orders",
+      "kind": "proposition",
+      "statement_lines": [
+        1040,
+        1057
+      ],
+      "proof_lines": [
+        1059,
+        1148
+      ],
+      "statement_sha256": "883dc2f80dc69e19661f01fb2e3aae030e11ecc510d092558e13c84f785da283",
+      "frozen_contract": "\\begin{proposition}\\label{lem:ordinary-all-orders}\nLet $a,b,c,d$ be distinct nonzero members of a $D(1)$-tuple, with\n$1\\le A=|a|\\le B=|b|$, $C=|c|>4B$ and $AC>1000$.\nPut $\\delta=|a-b|$ and\n\\[\n H_2=42B^3C,\\qquad\n R_2=\\frac{27AB(AC-1)^2}{16A^2\\delta^2}\n      >\\frac{2AC^2}{5B}.\n\\]\nFor $z^2=cd+1$, $Z=|z|$, and every integer $k\\ge1$,\n\\begin{equation}\\label{eq:ordinary-integer-k}\n 1<\\frac{3CH_2^k}{BZ}+\\frac{Z}{2R_2^k}.\n\\end{equation}\nIf $R_2>1$ and $\\lambda=1+\\log H_2/\\log R_2<2$, then\n\\begin{equation}\\label{eq:ordinary-continuous}\n Z^{2-\\lambda}<253B^2C^2.\n\\end{equation}\n\\end{proposition}",
+      "role": "Gives every ordinary O_j interval and the continuous height estimate. Both outputs are independently consumed.",
+      "dependencies": [
+        "lem:ordinary-residue-construction"
+      ],
+      "consumers": [
+        "cor:ordinary-height-envelope",
+        "prop:no-all-large-six",
+        "module:common-interval-calculation"
+      ],
+      "explicit_ref_lines": [
+        1895
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "cor:ordinary-height-envelope",
+      "kind": "corollary",
+      "statement_lines": [
+        1150,
+        1163
+      ],
+      "proof_lines": [
+        1165,
+        1175
+      ],
+      "statement_sha256": "4c2bed4dd431acf77fd16d51415adb15369635e0821be34668a638f8f7965870",
+      "frozen_contract": "\\begin{corollary}\\label{cor:ordinary-height-envelope}\nUnder the preceding hypotheses, suppose $D=|d|\\ge C$ and put\n$x=\\log_{10}C$.  Let rational $h,r,u$ satisfy\n\\[\n \\log_{10}H_2<x+h,\\qquad\n \\log_{10}R_2>2x+r,\\qquad\n \\log_{10}(253B^2)<u.\n\\]\nSet $t=h-r$, $\\beta=4u+8h-4r$ and $\\gamma=2ur+\\beta t$.\nIf $x>t$ and $2x+r>0$, then\n\\[\n \\log_{10}D<7x+\\beta+\\frac\\gamma{x-t}+\\frac25.\n\\]\n\\end{corollary}",
+      "role": "Converts the continuous estimate to rationally certifiable logarithmic upper bounds used with small anchors in three separate arguments.",
+      "dependencies": [
+        "lem:ordinary-all-orders"
+      ],
+      "consumers": [
+        "sm:bs7-cutoff",
+        "sm:bs7-unit-pair",
+        "sm:five-three-small"
+      ],
+      "explicit_ref_lines": [
+        2244,
+        2548,
+        2789
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:ordinary-three-normalized",
+      "kind": "lemma",
+      "statement_lines": [
+        1179,
+        1196
+      ],
+      "proof_lines": [
+        1198,
+        1329
+      ],
+      "statement_sha256": "d20bbd679ef89f45534c15fd4696df6a3b4e749672deb3e681a69d6fcca1dd9b",
+      "frozen_contract": "\\begin{lemma}\\label{lem:ordinary-three-normalized}\nLet $a,b,s,c,d$ be distinct nonzero members of a $D(1)$-tuple, with\n\\[\n 1\\le A=|a|\\le B=|b|\\le S=|s|,\\qquad\n C=|c|\\ge4S,\\qquad AC\\ge1000.\n\\]\nFor $z^2=cd+1$ and $Z=|z|$ one has\n\\begin{equation}\\label{eq:ordinary-three-M}\n 1<\\frac89\\,608^2\\frac{B^3S^8C^3}{Z}\n       +\\frac{3920}{81}\\frac{B^2S^5Z}{A^3C^6}.\n\\end{equation}\nIf $D=|d|\\ge C$, the closed interval\n\\begin{equation}\\label{eq:ordinary-three-coarse-window}\n \\frac{512}{81}608^4B^6S^{16}C^5\\le D\\le\n \\frac{A^6C^{11}}{2\\cdot28^4(10/81)^2B^4S^{10}}\n\\end{equation}\nis impossible.\n\\end{lemma}",
+      "role": "Provides the normalized order-two matrix bound M and a coarser directly usable closed interval. Both feed multiple branches.",
+      "dependencies": [
+        "lem:ordinary-residue-construction"
+      ],
+      "consumers": [
+        "prop:no-all-large-six",
+        "sm:bs7-cutoff",
+        "sm:five-three-small",
+        "module:common-interval-calculation"
+      ],
+      "explicit_ref_lines": [
+        2324,
+        2805
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "prop:no-all-large-six",
+      "kind": "proposition",
+      "statement_lines": [
+        1857,
+        1859
+      ],
+      "proof_lines": [
+        1860,
+        2009
+      ],
+      "statement_sha256": "b1db771029797428dc69ddbd9497082ea5fdd1b440cdd60561912f25c24fbd5a",
+      "frozen_contract": "\\begin{proposition}\\label{prop:no-all-large-six}\nA \\(D(1)\\)-tuple contains at most five entries of modulus at least three.\n\\end{proposition}",
+      "role": "Closes the zero-small branch by a growth lower bound, finite forbidden-interval chain and ordinary infinite tail.",
+      "dependencies": [
+        "lem:five-frontier-gaps",
+        "lem:retained-gap",
+        "lem:ordinary-all-orders",
+        "lem:ordinary-three-normalized",
+        "module:finite-forms"
+      ],
+      "consumers": [
+        "thm:main"
+      ],
+      "explicit_ref_lines": [
+        3853
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:main",
+      "kind": "proposition",
+      "statement_lines": [
+        2014,
+        2017
+      ],
+      "proof_lines": [
+        2874,
+        2880
+      ],
+      "statement_sha256": "25209e3a13791b72c43cd4effc52a855c2aaa902df7f48acf43de07859ce6aaa",
+      "frozen_contract": "\\begin{proposition}\\label{sm:main}\nA $D(1)$-tuple in the full ring of integers of an imaginary quadratic\nfield with at least two small entries has at most five elements.\n\\end{proposition}",
+      "role": "Section-level exit result for at least two small entries, assembled from two-small/four-large and three-small cases and the classification excluding four small entries.",
+      "dependencies": [
+        "sm:six-small-triple-classification",
+        "sm:five-two-small-four-large",
+        "sm:five-three-small"
+      ],
+      "consumers": [
+        "thm:main"
+      ],
+      "explicit_ref_lines": [
+        2874,
+        3856
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:crossblock",
+      "kind": "lemma",
+      "statement_lines": [
+        2024,
+        2032
+      ],
+      "proof_lines": [
+        2033,
+        2079
+      ],
+      "statement_sha256": "8769f82b85b2f7f38803d12ec97b0ac3cb65b5728fcbd7bfd908313d652092f1",
+      "frozen_contract": "\\begin{lemma}\\label{sm:crossblock}\nLet $a_1,a_2,a_3,b_1,b_2,b_3$ be six distinct members of a\n$D(1)$-tuple, separately ordered by modulus. Put\n$A_i=|a_i|$, $B_i=|b_i|$, and $W_i=A_iB_i$.\nIf $W_1\\ge9$, then\n\\[\n W_3>\\frac{W_1^3W_2}{7}.\n\\]\n\\end{lemma}",
+      "role": "Gives a mixed three-by-three growth bound when the first cross-product is at least nine. Used in the two-small search-radius proof.",
+      "dependencies": [],
+      "consumers": [
+        "sm:bs7-cutoff"
+      ],
+      "explicit_ref_lines": [
+        2233
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:lem-four-root-k1",
+      "kind": "lemma",
+      "statement_lines": [
+        2080,
+        2107
+      ],
+      "proof_lines": [
+        2109,
+        2188
+      ],
+      "statement_sha256": "e058e15130a1c82ca9f519cd71954a2416a6a6614d8d5bb3b85577f0c79fcc2f",
+      "frozen_contract": "\\begin{lemma}[Four roots at order one]\\label{sm:lem-four-root-k1}\nLet \\(a_1,a_2,a_3,a_4,c,d\\) be distinct nonzero entries of a\n\\(D(1)\\)-tuple, with\n\\[\n 1\\le A=|a_1|\\le B=|a_2|\\le S=|a_3|\\le T=|a_4|,\n \\quad C=|c|>1,\\quad AC>1.\n\\]\nPut \\(Z=|\\sqrt{cd+1}|\\), \\(\\eta=1-1/(AC)\\), and use the function\n\\(e\\) from Lemma~\\ref{lem:ordinary-residue-construction}. Then\n\\begin{equation}\n 2\\le8192e(T)\\left(1+\\frac{11}{8AC}\\right)\n       \\frac{B^2S^4T^6C^2}{Z}\n       +\\frac{192BS^3T^5Z}{AC^4\\eta^{7/2}}.\n \\label{sm:eq-four-root-exact}\n\\end{equation}\nIf \\(C\\ge4T\\) and \\(AC\\ge1000\\), then\n\\begin{equation}\n 2<10300\\frac{B^2S^4T^6C^2}{Z}\n       +193\\frac{BS^3T^5Z}{AC^4}.\n \\label{sm:eq-four-root-safe}\n\\end{equation}\nIf in addition \\(D=|d|\\ge C\\), the closed interval\n\\begin{equation}\\label{sm:eq-four-root-window}\n 2\\cdot10300^2B^4S^8T^{12}C^3\\le D\n \\le\\frac{A^2C^7}{2\\cdot193^2B^2S^6T^{10}}\n\\end{equation}\nis impossible.\n\\end{lemma}",
+      "role": "Order-one four-anchor approximation interval used only when a small triple has one bounded additional extension. Its exact and safe inequalities establish the window.",
+      "dependencies": [
+        "lem:ordinary-residue-construction"
+      ],
+      "consumers": [
+        "sm:five-three-small"
+      ],
+      "explicit_ref_lines": [
+        2815
+      ],
+      "disposition": "MOVE",
+      "proposed_destination": "Immediately before sm:five-three-small, after sm:five-small-anchor-alternative",
+      "proposal_ids": [
+        "ARCH-01"
+      ],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated",
+      "clause_consumers": "Exact and safe inequalities feed the window inside this proof; only the window is separately consumed by sm:five-three-small."
+    },
+    {
+      "id": "sm:bs7-cutoff",
+      "kind": "lemma",
+      "statement_lines": [
+        2225,
+        2231
+      ],
+      "proof_lines": [
+        2232,
+        2336
+      ],
+      "statement_sha256": "889e4e98453c2ce60518d3190f17610ef3fedbbd593e22b4ec30d50af4357b0f",
+      "frozen_contract": "\\begin{lemma}\\label{sm:bs7-cutoff}\nSuppose a $D(1)$-tuple has six entries with ordered moduli\n\\[\n 1\\le A\\le B<3\\le S\\le T\\le C\\le D.\n\\]\nThen $C<10^{550}$.\n\\end{lemma}",
+      "role": "Bounds the third large modulus C by 10^550 for a sextuple with exactly two small entries. Makes finite graph searches sufficient.",
+      "dependencies": [
+        "lem:product-four",
+        "sm:crossblock",
+        "cor:ordinary-height-envelope",
+        "lem:general-three",
+        "lem:separated-three",
+        "lem:four-anchor-nonvanishing",
+        "lem:direct-four",
+        "lem:ordinary-three-normalized",
+        "module:six-V-interval"
+      ],
+      "consumers": [
+        "sm:bs7-unit-pair",
+        "sm:five-two-small-four-large"
+      ],
+      "explicit_ref_lines": [
+        2618,
+        2654
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:bs7-descent",
+      "kind": "lemma",
+      "statement_lines": [
+        2338,
+        2344
+      ],
+      "proof_lines": [
+        2345,
+        2377
+      ],
+      "statement_sha256": "34f599fa02f523bef644a7e58fb632eeff40b374fba9513d7d57421e9458b5bf",
+      "frozen_contract": "\\begin{lemma}\\label{sm:bs7-descent}\nLet $a,b\\in\\OK$ be distinct nonzero elements with $|a|,|b|<3$, and suppose $r_0\\in\\OK$ satisfies $r_0^2=ab+1\\ne0$. Every integral common extension~$z$ of~$a,b$ with $|z|\\ge33$ has an integral common extension~$w$ satisfying\n\\begin{equation*}\n |w|<|z|/5+26<|z|\\,.\n\\end{equation*}\nHere a common extension may be zero or equal to an anchor. The transformations used to obtain~$w$ are reversible within this enlarged set.\n\\end{lemma}",
+      "role": "Reversible strict descent for nondegenerate small pairs, allowing zero and anchor coincidences during generation. Supplies completeness for both pair and triple computations.",
+      "dependencies": [],
+      "consumers": [
+        "sm:bs7-finite-pairs",
+        "sm:six-small-triple-classification",
+        "sm:five-three-small"
+      ],
+      "explicit_ref_lines": [
+        2193,
+        2379,
+        2672,
+        2782
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:bs7-finite-pairs",
+      "kind": "lemma",
+      "statement_lines": [
+        2381,
+        2383
+      ],
+      "proof_lines": [
+        2384,
+        2403
+      ],
+      "statement_sha256": "6708d6e3f3a60e2728250413814c2c9f45ffc8fb1894699e4238c308c5d2cde5",
+      "frozen_contract": "\\begin{lemma}\\label{sm:bs7-finite-pairs}\nFor every squarefree $d<36$ and every compatible small pair $a,b\\in\\mathcal O_{\\mathbb Q(\\sqrt{-d})}$ with $ab+1\\ne0$, at most two members of a $D(1)$-tuple containing~$a,b$ have moduli in $[3,10^{550}]$.\n\\end{lemma}",
+      "role": "For all nondegenerate small pairs in fields d<36, excludes a compatible triple of large extensions in the closed search disk via exhaustive graph generation.",
+      "dependencies": [
+        "sm:bs7-descent"
+      ],
+      "consumers": [
+        "sm:five-two-small-four-large"
+      ],
+      "explicit_ref_lines": [
+        2654
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:bs7-unit-axes",
+      "kind": "lemma",
+      "statement_lines": [
+        2472,
+        2479
+      ],
+      "proof_lines": [
+        2480,
+        2495
+      ],
+      "statement_sha256": "9e99f06f951889b94748af7a4bb06012c323e9492c0c90de6af3e6392d31cc70",
+      "frozen_contract": "\\begin{lemma}\\label{sm:bs7-unit-axes}\nLet $d$ be positive and squarefree, and put $t=\\sqrt{-d}$. Every nonzero common extension of $\\{-1,1\\}$ has one of the forms\n\\begin{align*}\n z&=\\pm(dv^2+1),& u^2-dv^2&=2,\\\\\n z&=\\pm2uvt,& u^2-dv^2&=1,\n\\end{align*}\nwhere $u,v\\in\\mathbb Z$ and $v\\ne0$. In particular $|z|\\ge d+1$.\n\\end{lemma}",
+      "role": "Classifies all common extensions of {-1,1} on real or imaginary axes and supplies |z|>=d+1; this identifies the Pell search and field cutoff.",
+      "dependencies": [],
+      "consumers": [
+        "sm:bs7-unit-pair"
+      ],
+      "explicit_ref_lines": [
+        2544,
+        2559,
+        2561
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:five-unit-cubic",
+      "kind": "lemma",
+      "statement_lines": [
+        2497,
+        2500
+      ],
+      "proof_lines": [
+        2501,
+        2521
+      ],
+      "statement_sha256": "cae94256d892c5b651a5ec7b985577771ea804115eb6cdb9ee71a67337163af8",
+      "frozen_contract": "\\begin{lemma}\\label{sm:five-unit-cubic}\nSuppose $\\{-1,1,c,d\\}$ is a $D(1)$-quadruple, with\n$9\\le C=|c|\\le D=|d|$ and $d\\ne-c$. Then $D>C^3/2$.\n\\end{lemma}",
+      "role": "Cubic gap for two nonsymmetric large extensions of {-1,1}; iterated three times to bound the smallest real extension and hence the field parameter.",
+      "dependencies": [],
+      "consumers": [
+        "sm:bs7-unit-pair"
+      ],
+      "explicit_ref_lines": [
+        2548
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:bs7-unit-pair",
+      "kind": "lemma",
+      "statement_lines": [
+        2523,
+        2525
+      ],
+      "proof_lines": [
+        2526,
+        2619
+      ],
+      "statement_sha256": "41e147dc052c37f94348d845d373ae553ad71ee3857011e8c911181136594416",
+      "frozen_contract": "\\begin{lemma}\\label{sm:bs7-unit-pair}\nNo $D(1)$-tuple in an imaginary quadratic integer ring contains $\\{-1,1\\}$ and four further entries.\n\\end{lemma}",
+      "role": "Closes the product-minus-one pair {-1,1}: axis/parity exclusions, bounded fields and continued-fraction graph enumeration contradict the two-small C cutoff.",
+      "dependencies": [
+        "sm:bs7-unit-axes",
+        "sm:five-unit-cubic",
+        "cor:ordinary-height-envelope",
+        "sm:bs7-cutoff"
+      ],
+      "consumers": [
+        "sm:five-two-small-four-large"
+      ],
+      "explicit_ref_lines": [
+        2652,
+        2654
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:bs7-eisenstein",
+      "kind": "lemma",
+      "statement_lines": [
+        2620,
+        2622
+      ],
+      "proof_lines": [
+        2623,
+        2646
+      ],
+      "statement_sha256": "504c20a37a837fea3724471214aefb15f43445dcbb9892b76cf66a4e5d080e3e",
+      "frozen_contract": "\\begin{lemma}\\label{sm:bs7-eisenstein}\nA $D(1)$-tuple containing the pair in~\\eqref{sm:bs7-exceptional-pair} has at most four entries.\n\\end{lemma}",
+      "role": "Closes the other degenerate small pair by showing every common extension is purely imaginary and at most one lies on each half-axis.",
+      "dependencies": [],
+      "consumers": [
+        "sm:five-two-small-four-large"
+      ],
+      "explicit_ref_lines": [
+        2654
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:five-two-small-four-large",
+      "kind": "proposition",
+      "statement_lines": [
+        2648,
+        2650
+      ],
+      "proof_lines": [
+        2651,
+        2655
+      ],
+      "statement_sha256": "b6149d8b60137729575fccc2beb41f7daa60279fbd40544457d63421b01e0390",
+      "frozen_contract": "\\begin{proposition}\\label{sm:five-two-small-four-large}\nA $D(1)$-tuple in any imaginary quadratic integer ring cannot contain two entries of modulus below three and four further entries of modulus at least three.\n\\end{proposition}",
+      "role": "Assembles the exactly-two-small case, splitting large fields and the 72 finite pair classes, including both degenerate cases.",
+      "dependencies": [
+        "sm:bs7-unit-pair",
+        "sm:bs7-eisenstein",
+        "sm:bs7-finite-pairs",
+        "sm:bs7-cutoff"
+      ],
+      "consumers": [
+        "sm:main"
+      ],
+      "explicit_ref_lines": [
+        2877
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:six-small-triple-classification",
+      "kind": "lemma",
+      "statement_lines": [
+        2662,
+        2664
+      ],
+      "proof_lines": [
+        2665,
+        2699
+      ],
+      "statement_sha256": "396942574af152cd0495157560fd94ef0531841e4886d6e7be0ea1b418f3db48",
+      "frozen_contract": "\\begin{lemma}\\label{sm:six-small-triple-classification}\nA $D(1)$-tuple in an imaginary quadratic integer ring has at most three entries of modulus less than $3$. Up to simultaneous negation and conjugation, its small triples are precisely those in Table~\\ref{sm:six-small-triples-table}. The table lists all further nonzero common extensions of each triple with modulus at most $R=10^{40}$.\n\\end{lemma}",
+      "role": "Proves at most three small entries, classifies the ten small-triple orbits and gives their complete extension lists through 10^40. Each conclusion has a consumer.",
+      "dependencies": [
+        "sm:bs7-descent",
+        "module:half-coordinate-square-test"
+      ],
+      "consumers": [
+        "sm:main",
+        "sm:five-three-small"
+      ],
+      "explicit_ref_lines": [
+        2778,
+        2876
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:five-small-anchor-alternative",
+      "kind": "lemma",
+      "statement_lines": [
+        2726,
+        2737
+      ],
+      "proof_lines": [
+        2738,
+        2769
+      ],
+      "statement_sha256": "820acb62eea97dbfbee0dc19cafdbb00e8373a82ba25b412a71431671abca31c",
+      "frozen_contract": "\\begin{lemma}\\label{sm:five-small-anchor-alternative}\nFix three entries $a,b,s$ of a $D(1)$-tuple with\n$1\\le A\\le B\\le S<3$. Let $v,e$ be two further entries with\n$1000\\le V=|v|\\le E=|e|$. Their coherent form satisfies\n\\[\n \\begin{cases}\n  5V^2<E<405V^2,&L_3(v,e)=0,\\\\\n  E>V^5/100,&L_3(v,e)\\ne0.\n \\end{cases}\n\\]\nIn particular, $E>5V^2$ in either case.\n\\end{lemma}",
+      "role": "Separates vanishing and nonvanishing L3 cases for three small anchors and proves a common quadratic lower bound. Iterated on pairs of three large extensions.",
+      "dependencies": [
+        "module:interpolation-identities",
+        "lem:general-three",
+        "lem:separated-three"
+      ],
+      "consumers": [
+        "sm:five-three-small"
+      ],
+      "explicit_ref_lines": [
+        2828
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "sm:five-three-small",
+      "kind": "proposition",
+      "statement_lines": [
+        2771,
+        2774
+      ],
+      "proof_lines": [
+        2775,
+        2871
+      ],
+      "statement_sha256": "8179601663acb8dddfafd807a34c801f7ed69e271560a55e13026c61a0fea467",
+      "frozen_contract": "\\begin{proposition}\\label{sm:five-three-small}\nA $D(1)$-tuple in an imaginary quadratic integer ring containing\nthree entries of modulus less than $3$ has at most five entries.\n\\end{proposition}",
+      "role": "Closes three-small case by separating zero or one bounded extra extension, using the L3 alternatives or overlapping three/four-anchor windows.",
+      "dependencies": [
+        "sm:six-small-triple-classification",
+        "sm:bs7-descent",
+        "cor:ordinary-height-envelope",
+        "lem:ordinary-three-normalized",
+        "sm:lem-four-root-k1",
+        "sm:five-small-anchor-alternative",
+        "lem:four-anchor-nonvanishing",
+        "lem:general-three"
+      ],
+      "consumers": [
+        "sm:main"
+      ],
+      "explicit_ref_lines": [
+        2879
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "prop:pr-H2",
+      "kind": "proposition",
+      "statement_lines": [
+        3044,
+        3049
+      ],
+      "proof_lines": [
+        3050,
+        3144
+      ],
+      "statement_sha256": "631a10ffbc3a5cd4c640a76e41820f9fa0e4aa8f1eab5fe1f2d40a83f6284f44",
+      "frozen_contract": "\\begin{proposition}\\label{prop:pr-H2}\nIn the one-small-entry branch, every hypothetical sextuple satisfies\n\\[\n N(a)=1,\\ B<8,\\qquad\\hbox{or}\\qquad N(a)=2,\\ B<4.\n\\]\n\\end{proposition}",
+      "role": "Reduces the one-small case to norm one with B<8 or norm two with B<4, by excluding five regions with distance-sensitive gap/residual estimates.",
+      "dependencies": [
+        "lem:five-frontier-gaps",
+        "lem:retained-gap",
+        "module:common-interval-calculation",
+        "module:finite-forms"
+      ],
+      "consumers": [
+        "unlabelled_35",
+        "prop:one-small",
+        "module:forty-pair-enumeration"
+      ],
+      "explicit_ref_lines": [
+        3186
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "lem:pr-one-three",
+      "kind": "lemma",
+      "statement_lines": [
+        3148,
+        3152
+      ],
+      "proof_lines": [
+        3153,
+        3183
+      ],
+      "statement_sha256": "e9f2ae43704687e1503e5b586f38d8368e36729e07a687b1db5dc90fce1b5fb5",
+      "frozen_contract": "\\begin{lemma}\\label{lem:pr-one-three}\nEvery common extension of $\\{1,3\\}$ in the full integer ring of an\nimaginary quadratic field is rational. A $D(1)$-tuple containing\n$1,3$ and a negative entry has at most four elements.\n\\end{lemma}",
+      "role": "Handles {1,3} in every full ring: all extensions are rational and any negative extension limits the tuple to four. This removes one enumerated triple and reduces the rational sextuple to positive integers.",
+      "dependencies": [],
+      "consumers": [
+        "prop:one-small",
+        "module:fifty-six-triples"
+      ],
+      "explicit_ref_lines": [
+        3541,
+        3551
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "unlabelled_35",
+      "kind": "lemma",
+      "statement_lines": [
+        3185,
+        3189
+      ],
+      "proof_lines": [
+        3190,
+        3203
+      ],
+      "statement_sha256": "5ec49220de0be7ed89c0748c45d60b38dbd472037d45faff03f77c582d178aae",
+      "frozen_contract": "\\begin{lemma}\nUnder Proposition~\\ref{prop:pr-H2}, either the first pair is\n$(1,3)$ up to simultaneous negation, or the field has absolute\ndiscriminant $\\Delta\\le24$.\n\\end{lemma}",
+      "role": "Bounds the field discriminant by 24 unless the first pair is ±(1,3). This makes the forty-pair enumeration exhaustive.",
+      "dependencies": [
+        "prop:pr-H2"
+      ],
+      "consumers": [
+        "prop:one-small",
+        "module:forty-pair-enumeration"
+      ],
+      "explicit_ref_lines": [],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [
+        "ARCH-05"
+      ],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "unlabelled_36",
+      "kind": "proposition",
+      "statement_lines": [
+        3361,
+        3364
+      ],
+      "proof_lines": [
+        3365,
+        3517
+      ],
+      "statement_sha256": "abc2a5bcc4fe8c4ec9cbe3cbdbcd67b1ab54c5fbc342085b5fa5c0eb77119603",
+      "frozen_contract": "\\begin{proposition}\nNo ordered sextuple whose first pair is $(1,3)$ or one of the pairs in\nTable~\\ref{tab:pr-forty-pairs} has $S\\ge15$.\n\\end{proposition}",
+      "role": "Shows S<15 for all forty fixed pairs and (1,3), producing the exact norm cutoff N(s)<=224 for the final triple list.",
+      "dependencies": [
+        "lem:tail-irregular",
+        "lem:five-frontier-gaps",
+        "lem:retained-gap",
+        "module:common-interval-calculation",
+        "module:finite-forms",
+        "module:forty-pair-enumeration"
+      ],
+      "consumers": [
+        "prop:one-small",
+        "module:fifty-six-triples"
+      ],
+      "explicit_ref_lines": [],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [
+        "ARCH-05"
+      ],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    },
+    {
+      "id": "prop:one-small",
+      "kind": "proposition",
+      "statement_lines": [
+        3837,
+        3840
+      ],
+      "proof_lines": [
+        3841,
+        3847
+      ],
+      "statement_sha256": "a29330db46038ffe583d505358e9445a4b5e28afbcaed8db087da508690f192d",
+      "frozen_contract": "\\begin{proposition}\\label{prop:one-small}\nA $D(1)$-tuple with exactly one entry of modulus less than three has\nat most five elements.\n\\end{proposition}",
+      "role": "Assembles one-small completion: first-pair and third-entry reductions, exclusion of (1,3,8), analytic N(t)<N0, and exclusion of the finite complement without enumerating fourth entries.",
+      "dependencies": [
+        "prop:pr-H2",
+        "unlabelled_35",
+        "lem:pr-one-three",
+        "unlabelled_36",
+        "module:forty-pair-enumeration",
+        "module:fifty-six-triples",
+        "module:fourth-entry-cutoff",
+        "module:finite-complement"
+      ],
+      "consumers": [
+        "thm:main"
+      ],
+      "explicit_ref_lines": [
+        3855
+      ],
+      "disposition": "RETAIN",
+      "proposed_destination": "Current mathematical home",
+      "proposal_ids": [],
+      "claim_preservation": "Retain all hypotheses, conclusions, exact constants, labelled intermediate estimates and proof steps. No source edit has been made.",
+      "mathematics_status": "FROZEN_CURRENT_SOURCE; prior audited status is not independently reassigned by this architecture review",
+      "manuscript_status": "DIAGNOSTIC_ONLY; no reduction, architecture or exposition proposal integrated"
+    }
+  ],
+  "nonstatement_dependencies": [
+    {
+      "id": "module:determinant-setup",
+      "lines": [
+        248,
+        274
+      ],
+      "dependencies": [],
+      "role": "Even-dimensional nonsingularity and the F perturbation identities.",
+      "consumers": [
+        "lem:product-four",
+        "lem:product-five",
+        "lem:five-frontier-gaps"
+      ]
+    },
+    {
+      "id": "module:interpolation-identities",
+      "lines": [
+        524,
+        589
+      ],
+      "dependencies": [],
+      "role": "Coherent integral forms and their exact Taylor/remainder identities.",
+      "consumers": [
+        "lem:interpolation-parameters",
+        "lem:general-three",
+        "lem:separated-three",
+        "lem:four-anchor-nonvanishing",
+        "lem:direct-four",
+        "sm:five-small-anchor-alternative"
+      ]
+    },
+    {
+      "id": "external:Bennett96-determinant",
+      "lines": [
+        979,
+        995
+      ],
+      "dependencies": [],
+      "role": "External identity cited at p.1721, transported by clearing denominators. Citation not independently verified in this architecture audit.",
+      "consumers": [
+        "lem:ordinary-residue-construction"
+      ]
+    },
+    {
+      "id": "module:finite-forms",
+      "lines": [
+        1333,
+        1852
+      ],
+      "dependencies": [],
+      "role": "Polynomial-row transfer, five two-anchor families, adaptive quadratic rows P and four-anchor linear rows Q. Proofs are explicit here; analytical transfer repeats 1011–1035.",
+      "consumers": [
+        "prop:no-all-large-six",
+        "prop:pr-H2",
+        "unlabelled_36",
+        "module:common-interval-calculation",
+        "module:forty-pair-enumeration",
+        "module:fourth-entry-cutoff"
+      ]
+    },
+    {
+      "id": "module:six-V-interval",
+      "lines": [
+        2195,
+        2223
+      ],
+      "dependencies": [
+        "lem:four-anchor-nonvanishing",
+        "lem:separated-three"
+      ],
+      "role": "Two overlapping L3 forms yield the interval used in the two-small cutoff.",
+      "consumers": [
+        "sm:bs7-cutoff"
+      ]
+    },
+    {
+      "id": "module:half-coordinate-square-test",
+      "lines": [
+        2385,
+        2392
+      ],
+      "dependencies": [],
+      "role": "Necessary/sufficient square test in (u+v sqrt(-d))/2 coordinates, including zero and parity.",
+      "consumers": [
+        "sm:six-small-triple-classification"
+      ]
+    },
+    {
+      "id": "module:common-interval-calculation",
+      "lines": [
+        2893,
+        3014
+      ],
+      "dependencies": [
+        "lem:retained-gap",
+        "lem:ordinary-all-orders",
+        "lem:ordinary-three-normalized",
+        "module:finite-forms"
+      ],
+      "role": "Parameterized endpoints, overlap quotients and infinite-tail implication.",
+      "consumers": [
+        "prop:pr-H2",
+        "unlabelled_36",
+        "module:fourth-entry-cutoff"
+      ]
+    },
+    {
+      "id": "module:forty-pair-enumeration",
+      "lines": [
+        3205,
+        3356
+      ],
+      "dependencies": [
+        "prop:pr-H2",
+        "unlabelled_35",
+        "module:finite-forms"
+      ],
+      "role": "Complete first-pair list, coefficients for forty pairs and (1,3).",
+      "consumers": [
+        "unlabelled_36",
+        "prop:one-small",
+        "module:fifty-six-triples",
+        "module:fourth-entry-cutoff"
+      ]
+    },
+    {
+      "id": "module:fifty-six-triples",
+      "lines": [
+        3519,
+        3545
+      ],
+      "dependencies": [
+        "unlabelled_36",
+        "module:forty-pair-enumeration",
+        "lem:pr-one-three"
+      ],
+      "role": "Enumerates N(s)<=224, keeps 56 after removing (1,-3,3).",
+      "consumers": [
+        "prop:one-small",
+        "module:finite-complement"
+      ]
+    },
+    {
+      "id": "module:fourth-entry-cutoff",
+      "lines": [
+        3556,
+        3715
+      ],
+      "dependencies": [
+        "lem:tail-irregular",
+        "lem:retained-gap",
+        "module:forty-pair-enumeration",
+        "module:common-interval-calculation",
+        "module:finite-forms"
+      ],
+      "role": "For each fixed triple gives N(t)<N0; (1,3,8) has N0=1024 and t>48.",
+      "consumers": [
+        "prop:one-small",
+        "module:finite-complement"
+      ]
+    },
+    {
+      "id": "module:finite-complement",
+      "lines": [
+        3717,
+        3772
+      ],
+      "dependencies": [
+        "lem:tail-irregular",
+        "lem:irregular-growth",
+        "module:fourth-entry-cutoff",
+        "module:fifty-six-triples"
+      ],
+      "role": "Excludes low N(t): 38 rows by 4BS squared, 16 by exact quadratic endpoint tests, final 2 by congruence.",
+      "consumers": [
+        "prop:one-small"
+      ]
+    }
+  ]
+}

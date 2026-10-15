@@ -1,0 +1,39 @@
+Read-only visual and linear-reader audit: pages 41-58
+
+Audited PDF: revision_v4/final_build/D1_bound5-v4.pdf
+Verified PDF SHA-256: e31656ca74ed839a09ede3a9d4e6a26a5ba2d2f13b5b6c959e13259fe3e87644
+Verified source SHA-256: 776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3
+Source: revision_v4/D1_bound5-v4.tex
+
+Method and coverage
+- Individually viewed every full rendered page image, using view_image, at readable resolution: page-41.png, page-42.png, page-43.png, page-44.png, page-45.png, page-46.png, page-47.png, page-48.png, page-49.png, page-50.png, page-51.png, page-52.png, page-53.png, page-54.png, page-55.png, page-56.png, page-57.png, page-58.png.
+- Re-viewed pages 47 and 54 with detail="original" to check the field notation and dense overlap table.
+- Read the visible text in order across page boundaries. Supplemented the visual reading with pdftotext -layout for pages 47-48 and 57-58.
+- Checked the final-build log for undefined references/citations, missing characters, and overfull/underfull boxes; no matching diagnostics appeared.
+- No source edits, compilation, or PDF changes were performed.
+
+Result
+PASS for the assigned visual/linear-reader scope. No clipped or overlapping formulas, unreadable glyphs, disrupted table continuity, visible unresolved references, or materially bad flow/page breaks were found. No local fix is needed.
+
+Page-by-page record
+41: Viewed. Proposition 7.11, subsection 7.3, and Lemma 7.12 are readable. The final displayed enumeration bound fits above the footer and continues naturally on page 42.
+42: Viewed. Lemma 7.12 ends cleanly. Table 5 is intact, with readable entries and caption. Lemma 7.13 starts with adequate body text; its final displayed identity is complete above the footer.
+43: Viewed. Continuation of Lemma 7.13 and Proposition 7.14 are clear. Equations (7.9) and (7.10), their numbers, and the final numerical comparison fit within the text area.
+44: Viewed. Equation (7.11), the remainder of Proposition 7.14, and the proof of Proposition 7.1 are complete and separated. Section 8 begins with its introductory sentence and ordered-moduli display, so its heading is not stranded.
+45: Viewed. Section 8 constants, subsection 8.1, equations (8.1)-(8.2), and Proposition 8.1 fit cleanly. The concluding displayed bound connects coherently to Table 6 and its verification on page 46.
+46: Viewed. Tables 6 and 7 are intact and readable. Equation (8.3), table captions, column headings, and final proof paragraph have no overlap or clipping.
+47: Viewed, then re-viewed at original detail. Lemmas 8.2 and 8.3 and the new field notation are legible. Delta_K, tau_K, nu_K, omega, the conjugation bar, and equation (8.4) render distinctly and remain inside the margins. The paragraph wrapping in the proof does not obscure the root formulas.
+48: Viewed. Equation (8.5) and the representative rule are readable. The orbit-count table is clear. Table 8 begins with a full caption and column headings, ending at index 15 without splitting a row.
+49: Viewed. Table 8 resumes with repeated headings and index 16, continuing through 39. Table 9 begins below with a caption and headings, ending at index 21 without splitting a row.
+50: Viewed. Table 9 resumes with repeated headings and index 22, continuing through 39. The rational-pair constants and subsection 8.3 follow with clear spacing. Equation (8.6) and subsequent formulas fit.
+51: Viewed. The determinant estimate, enclosure definitions, and coefficient formulas are clear. The final displayed coefficient sum is complete; the sentence continues intelligibly on page 52.
+52: Viewed. The opening continuation, two-case coefficient formula, long residual polynomial bound, and concluding proof are readable. Subsection 8.4 includes the square-test conditions with the new field notation and has adequate text beneath its heading.
+53: Viewed. Section 9 and subsection 9.1 are clear. Rational enclosures, constants, equation (9.1), and the two-case replacement formula fit without crowding or missing symbols.
+54: Viewed, then re-viewed at original detail. All 13 junction rows of the overlap table are readable. The dense subscripts/exponents remain distinguishable and do not collide between rows. The N_0 definition, two-case eta value, and final interval list are complete.
+55: Viewed. The special triple, subsection 9.2, long quadratic bound, two exceptional triples, and final contradiction are all readable. The long displayed inequality uses a clean two-line break.
+56: Viewed. Table 10 has a readable multiline caption and complete column headings. Rows remain intact through the final pair-31 row; no clipping occurs at the footer.
+57: Viewed. Table 10 resumes with repeated headings and pair 32, finishing at pair 39. Proposition 9.1, the final proof of Theorem 1.1, Funding, and Use of artificial intelligence are complete and readable. The final proof has resolved references to Propositions 6.1, 9.1, and 7.1. References begins with a complete first entry, not a stranded heading.
+58: Viewed. Bibliography entries [2]-[10] and the author/affiliation block are readable. DOI and URL text wrap inside the margins. No broken glyphs, clipped addresses, unresolved placeholders, or overlapping lines were seen.
+
+Scope note
+This is a display, page-flow, and reader-continuity audit, not an independent mathematical verification or external bibliographic fact check. The examined PDF and source match the hashes supplied in the assignment.

@@ -1,0 +1,32 @@
+[
+  {
+    "script": "checks/verify_package.py",
+    "exit_code": 0,
+    "stdout": "PASS: 106 packaged files match their recorded SHA-256.\n",
+    "stderr": ""
+  },
+  {
+    "script": "checks/approximation_check.py",
+    "exit_code": 0,
+    "stdout": "15 overlap comparisons, gap, and tail checks passed.\n/workspace/scratch/cae51110c84a/armstrong_package_check/armstrong_v2/checks/approximation_check_results.json\n",
+    "stderr": ""
+  },
+  {
+    "script": "agents/completion_check.py",
+    "exit_code": 0,
+    "stdout": "PASS: 40 pairs, 57 third entries, 56 listed triples, 38/16/2 complement, and all five regional phase/gap/residual/overlap/tail checks.\n",
+    "stderr": ""
+  },
+  {
+    "script": "agents/build_architecture.py",
+    "exit_code": 0,
+    "stdout": "{\"statement_count\": 37, \"statement_hashes_match\": true, \"source_hash_matches_brief\": true, \"all_dependencies_resolve\": true, \"dependency_graph_acyclic\": true, \"all_nonprincipal_statements_have_consumers\": true}\n",
+    "stderr": ""
+  },
+  {
+    "script": "checks/build_review.py",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"source_sha256\": \"5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70\",\n  \"source_unmodified\": true,\n  \"formal_statements\": 37,\n  \"proposals_with_unique_old_blocks\": 15,\n  \"recommended_proposals\": 10,\n  \"recommended_in_memory_application_has_no_conflicts\": true,\n  \"formal_statements_unchanged_under_recommended_proposals\": true,\n  \"proposed_references_resolve\": true,\n  \"baseline_pages\": 58,\n  \"baseline_tex_warnings\": [],\n  \"recorded_visual_review_covers_pages_1_through_58\": true,\n  \"three_baseline_PDFs_equal_in_extracted_text_and_96dpi_RGB_on_all_pages\": true,\n  \"limits\": \"These controls protect source identity, proposal mechanics, ledger bookkeeping and baseline build. Human reviews and bounded arithmetic checks are separate evidence; this is not a proof of the main theorem or typesetting acceptance of unapplied text.\"\n}\n",
+    "stderr": ""
+  }
+]

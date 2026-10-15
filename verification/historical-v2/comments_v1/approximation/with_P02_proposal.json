@@ -1,0 +1,136 @@
+{
+  "status": "UNAPPLIED_REVIEW_PROPOSAL",
+  "source_sha256": "74582db5fd0ad43195a3ea235cfd324813f04e3d0cb82387a9930b7c4f26c228",
+  "base": "P02 applied in memory only",
+  "edits": [
+    {
+      "proposal_id": "CA-1",
+      "old": "There are two choices of matrices. The universal matrix consists of\nthe six rows\n\\begin{equation}\\label{eq:ff-p0rows}\n R_{ab},R_{bs},R_{as},T_{ab},T_{bs},T_{sa}.\n\\end{equation}\nIn columns $(Q_0,Q_a,Q_b,Q_s)$, the determinant of its first three\nrows and $T_{ab}$ is\n\\begin{equation}\\label{eq:ff-p0det}\n 15750a^2b^2s^2(a-b)^4(a-s)(b-s)F_s,\n \\quad F_s=7(2s-a-b)+6c[3s^2-(a+b)s-ab].\n\\end{equation}\nThe alternative four-row matrix is\n\\begin{equation}\\label{eq:ff-prows}\n R_{ab},\\quad H=R_{ab}+R_{bs}-R_{as},\\quad\n T_{ab},\\quad V=T_{as}-T_{bs};\n\\end{equation}\nits determinant is\n\\begin{equation}\\label{eq:ff-pdet}\n -78750a^2b^2s^2(a-b)^5(a-s)(b-s)F_s.\n\\end{equation}\nBoth identities are checked from the printed rows by expanding only\nthe constant and linear coefficients in $c$. Replacement of the column indexed by $0$ by its $O(c^{-5})$ residual makes their determinant degree at\nmost $2+2+2-5=1$. Thus this finite expansion verifies the complete\nidentities, with no unspecified higher coefficients.\n\nThe universal matrix always has rank four. Its cyclic minors have\nthe nonzero products displayed in \\eqref{eq:ff-p0det}\ntimes $F_a,F_b,F_s$, up to signs. With\n$\\sigma_1=a+b+s$, $\\sigma_2=ab+as+bs$, these factors are\n\\[\n F_x=7(3x-\\sigma_1)+6c(3x^2-\\sigma_2).\n\\]\nIf all three vanished, subtracting the equations for $s,b$ and $s,a$\nwould give $7+6c(s+b)=7+6c(s+a)=0$, contrary to $c\\ne0$ and $a\\ne b$.\nFor the four-row matrix it suffices to prove $F_s\\ne0$.\nIf $S\\ge2B$, then\n\\[\n |3s^2-(a+b)s-ab|\\ge\\tfrac74S^2,\\qquad |2s-a-b|\\le3S,\n\\]\nso the $c$ term dominates under \\eqref{eq:ff-pguards}.\nAlternatively, if\n\\begin{equation}\\label{eq:ff-allSrank}\n B\\ge qA,\\qquad q\\ge18/17,\\qquad S\\ge3,\n\\end{equation}\nthen for every $S\\ge B$,\n\\[\n |3s^2-(a+b)s-ab|\\ge(2-2/q)S^2,\n \\qquad |2s-a-b|\\le(3+1/q)S.\n\\]\nIndeed $6C(2-2/q)S^2\\ge1200(2-2/q)S^3$\nis strictly larger than $7(3+1/q)S$ already at $q=18/17$, $S=3$.\nThus the matrix has rank four under these hypotheses.",
+      "replacement": "Use the four rows\n\\begin{equation}\\label{eq:ff-prows}\n R_{ab},\\quad H=R_{ab}+R_{bs}-R_{as},\\quad\n T_{ab},\\quad V=T_{as}-T_{bs}.\n\\end{equation}\nIn columns $(Q_0,Q_a,Q_b,Q_s)$, their determinant is\n\\begin{equation}\\label{eq:ff-pdet}\n -78750a^2b^2s^2(a-b)^5(a-s)(b-s)F_s,\n\\end{equation}\nwhere\n\\[\n F_s=7(2s-a-b)+6c[3s^2-(a+b)s-ab].\n\\]\nReplacing column zero by its $O(c^{-5})$ residual shows that the\npolynomial determinant has degree at most $2+2+2-5=1$ in $c$.\nExpanding its constant and linear coefficients from the displayed rows\ngives the identity.\n\nSuppose that $F_s=0$. If $3s^2-(a+b)s-ab\\ne0$, this algebraic integer\nhas modulus at least one, and\n\\[\n 6C\\le7|2s-a-b|\\le28S,\n\\]\ncontrary to $C\\ge200S$. Otherwise $a+b=2s$ and $ab=s^2$, so\n$a=b=s$, again a contradiction. Thus the matrix has rank four.",
+      "reason": "Prove unconditional rank by integrality and remove the unnecessary six-row alternative.",
+      "line_at_application": 1683
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "Under either rank condition above, and $B\\ge qA$, we conclude that",
+      "replacement": "For every $q\\ge1$ with $B\\ge qA$, we conclude that",
+      "reason": "The four-row estimate now needs no additional rank hypothesis.",
+      "line_at_application": 1771
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "In particular,\n\\[\n \\mathcal R(1)=\\frac{35}{16}+\\tau\\,5268\n              =\\frac{65233}{28416}<\\frac{23}{10}.\n\\]\nThus $23/10$ is a valid residual constant without a ratio restriction\nwhenever $S\\ge2B$.\n\nFor the complementary range $S<2B$, use the universal matrix\n\\eqref{eq:ff-p0rows} and put\n$H_0=\\max(S^4,B^5)$, $J_0=\\max(S,B^2)$.\nThe degree sums of its $R$ rows are $(84,408,384)$ and those of its\n$T$ rows are $(252,1224,1200)$. Their anchor monomials are at most\n$S^4\\le H_0$ and $S^5<32B^5\\le32H_0$, respectively. Hence their\napproximation coefficient is less than\n\\[\n \\frac{101}{100}\\max\\left(384+\\frac{408}{1000}+\\frac{84}{10^6},\n 32\\left(1200+\\frac{1224}{1000}+\\frac{252}{10^6}\\right)\\right)\n <39000.\n\\]\nThe first residual monomials in an $R$ row are bounded by $S/A^3$,\nand in a $T$ row by $S^2/A^3$. From \\eqref{eq:ff-leading}, their\nleading absolute coefficient sums are $15/128$ and $25/16$; their\noriginal integer coefficient sums are $876$ and $2676$.\nUsing $S\\le J_0$ and $S^2<4J_0$ gives the residual coefficient\n\\[\n \\max\\left(\\frac{15}{128}+\\tau\\,876,\n       4\\left(\\frac{25}{16}+\\tau\\,2676\\right)\\right)\n =\\frac{45961}{7104}<\\frac{13}{2}.\n\\]\nThus, throughout $S<2B$,\n\\begin{equation}\\label{eq:ff-P0}\n 1<\\frac{39000H_0C^3}{Z}+\\frac{13J_0Z}{2A^3C^5}.\n\\end{equation}\nWhen $B\\ge3$, $S<2B\\le B^2$ implies $J_0=B^2$.\nEquations \\eqref{eq:ff-P} and \\eqref{eq:ff-P0}, together with\n\\eqref{eq:ff-window}, specify their closed forbidden intervals.",
+      "replacement": "In particular,\n\\[\n \\mathcal R(1)=\\frac{35}{16}+\\tau\\,5268<3.\n\\]\nEquation~\\eqref{eq:ff-P}, together with \\eqref{eq:ff-window}, gives\nits closed forbidden interval.",
+      "reason": "Use the clean sufficient constant 3 and delete the now unnecessary P0 construction.",
+      "line_at_application": 1781
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "The adaptive row \\(P\\) is used for \\(S\\ge2B\\), while the universal\nrow \\(P_0\\) is used for \\(S<2B\\). Put\n\\(H_P=\\max(BS^3,B^3S^2)\\), \\(H_0=\\max(S^4,B^5)\\).",
+      "replacement": "Use the row \\(P\\) with residual constant \\(3\\), and put\n\\(H_P=\\max(BS^3,B^3S^2)\\).",
+      "reason": "Use P throughout the all-large proof.",
+      "line_at_application": 1906
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "\\(P\\)&\\(4\\cdot2400^2H_P^2C^5\\)&\\(A^6C^9/(4\\cdot145^2S^4)\\)\\\\",
+      "replacement": "\\(P\\)&\\(4\\cdot2400^2H_P^2C^5\\)&\\(A^6C^9/(4\\cdot3^2S^4)\\)\\\\",
+      "reason": "P has the same normalization and permits residual constant 3.",
+      "line_at_application": 1919
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "\\(P_0\\)&\\(4\\cdot39000^2H_0^2C^5\\)&\\(A^6C^9/(4\\cdot300^2B^4)\\)\\\\\n",
+      "replacement": "",
+      "reason": "Remove unused P0 interval.",
+      "line_at_application": 1920
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "\\(N_2\\to P_0,\\ H_0=S^4\\)&\\(K^2A^{20}B^4/4\\)&\\(25\\cdot39000^2h\\)\\\\\n",
+      "replacement": "",
+      "reason": "Remove unused P0 overlap.",
+      "line_at_application": 1943
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "\\(N_2\\to P_0,\\ H_0=B^5\\)&\\(K^2A^{20}B^2\\)&\\(25\\cdot39000^2h\\)\\\\\n",
+      "replacement": "",
+      "reason": "Remove unused P0 overlap.",
+      "line_at_application": 1943
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "\\(P_0\\to A_3\\)&\\(K^2A^{20}\\)&\\(16\\cdot300^2M_3^2h\\)\\\\\n",
+      "replacement": "",
+      "reason": "Remove unused P0 overlap.",
+      "line_at_application": 1945
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "16\\cdot145^2M_n^2h",
+      "replacement": "16\\cdot3^2M_n^2h",
+      "reason": "Update the P outgoing overlap to the same residual constant 3.",
+      "line_at_application": 1943
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "16\\cdot145^2M_3^2h",
+      "replacement": "16\\cdot3^2M_3^2h",
+      "reason": "Update the P outgoing overlap to the same residual constant 3.",
+      "line_at_application": 1944
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "For \\(P_0\\), \\(S<2B\\) bounds \\(B^6/S^2>B^4/4\\), and \\(S\\ge B\\)\nbounds \\(S^6/B^4\\ge B^2\\). ",
+      "replacement": "",
+      "reason": "Remove the unused P0 exponent reductions.",
+      "line_at_application": 1968
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "Start with \\(\\mathcal G,Q,N_2\\), then use \\(P\\) if \\(S\\ge2B\\) and\n\\(P_0\\) otherwise. If \\(S\\ge B^2\\), continue through \\(N_3\\);\notherwise continue through \\(A_3,M,N_3\\). The first choice is compatible\nbecause \\(B\\ge3\\) implies \\(B^2\\ge2B\\).",
+      "replacement": "Start with \\(\\mathcal G,Q,N_2,P\\). If \\(S\\ge B^2\\), continue through\n\\(N_3\\); otherwise continue through \\(A_3,M,N_3\\).",
+      "reason": "Delete the P/P0 branch while retaining the necessary next branch.",
+      "line_at_application": 1983
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": " Its rank condition holds for \\(q\\ge18/17\\) under the size\nassumptions already established.",
+      "replacement": "",
+      "reason": "The old sufficient ratio condition is no longer needed in the five regions.",
+      "line_at_application": 3100
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "Its rank condition is satisfied, and its largest residual bound is",
+      "replacement": "Its largest residual bound is",
+      "reason": "Remove the redundant rank-condition sentence in the fixed-pair calculation.",
+      "line_at_application": 3486
+    },
+    {
+      "proposal_id": "CA-1",
+      "old": "Here $B/A\\ge\\sqrt5>18/17$ and $S\\ge3$, so the all-$S$ rank\ncondition \\eqref{eq:ff-allSrank} applies.\n",
+      "replacement": "",
+      "reason": "Remove the obsolete rank reference in the fifty-six-triple calculation.",
+      "line_at_application": 3615
+    },
+    {
+      "proposal_id": "CA-2",
+      "old": "Sum the original absolute integer coefficients, before Taylor\ncancellation, with weight $x^{2-j-k}$. This gives $W_i(x)$.",
+      "replacement": "Use the divided root-column polynomials of \\eqref{eq:ff-prows}, with\nthe combinations defining $H$ and $V$ already performed. Sum the absolute\nvalues of their integer coefficients with weight $x^{2-j-k}$, before\nmultiplication by the binomial coefficients. This gives $W_i(x)$.",
+      "reason": "Clarify which coefficient cancellations precede the W_i absolute-value bounds.",
+      "line_at_application": 1764
+    }
+  ],
+  "edit_count": 17,
+  "line_change": -67,
+  "source_unchanged": true,
+  "candidate_written": false,
+  "controls": [
+    "all exact old strings match once",
+    "no removed rank/construction labels remain",
+    "no P0/H0/145/300 remains in Section6",
+    "unrelated structural P0 retained"
+  ]
+}

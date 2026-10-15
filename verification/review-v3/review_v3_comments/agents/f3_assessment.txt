@@ -1,0 +1,132 @@
+Assessment of reviewer comments 1, 4 and 11
+==========================================
+
+Frozen source: output/D1_bound5-v3.tex
+SHA256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+This assessment makes no manuscript edits. No large finite enumeration was rerun.
+
+1. The f_3 estimate: accept the need for an explicit proof, but use a substantially simpler proof
+----------------------------------------------------------------------------------------------
+
+The existing estimate 45/1024 <= P^3 |f_3| <= 85/1024 is correct. Its omission is a presentation gap, with important downstream consequences, rather than a false mathematical statement. There is an elementary two-line proof giving precisely the printed constants.
+
+Set w=y/x, rho=|w|<=1/4. Since |x|=1/P,
+
+  16 P^3 |f_3| = |1-w| |1-w^2|.
+
+The ordinary and reverse triangle inequalities therefore give
+
+  (1-rho)(1-rho^2) <= 16 P^3 |f_3|
+                         <= (1+rho)(1+rho^2).
+
+The left side decreases and the right side increases on 0<=rho<=1/4. At rho=1/4 they are 45/64 and 85/64. This proves exactly the existing bounds, without differentiation, extrema analysis, square roots, or any numerical approximation.
+
+Suggested replacement for the current unsupported sentence:
+
+  For three anchors, put $w=y/x$. Since $|w|\le1/4$ and
+  $16P^3|f_3|=|1-w||1-w^2|$, the triangle inequalities give
+  \[
+   \frac{45}{64}=(1-1/4)(1-1/16)
+   \le16P^3|f_3|
+   \le(1+1/4)(1+1/16)=\frac{85}{64}.
+  \]
+  Put ...
+
+An inline version of the same calculation is also sufficient.
+
+The reviewer's g(c) argument is valid, including its endpoint minimum and interior upper bound. It is simply unnecessary. Its g'(c) is correct. The critical point -s/6 is a maximum when it belongs to [-rho,rho]; otherwise the maximum occurs at an endpoint. The universal upper bound 32s^3/27 remains valid in both situations. The factorization above is shorter and gives the paper's particular constants directly.
+
+The same estimate applies in Lemma 3.4 without any further proof. Important notational distinction: the index 1000 in r_1000, l_1000, u_1000 there comes from AP>=1000, because A>=1 and P>=1000. Its ratio |y/x| is still only bounded by 1/4. It is not assumed <=1/1000. The factorized estimate is valid for any rho<1 and would also give bounds for rho<=1/1000, but those sharper bounds must not be silently used in Lemma 3.4.
+
+The companion script checks every rational comparison for H=32,48,1000. It also checks Uh_0<18 for H=32,48. Thus adding this proof closes the omitted justification while preserving every downstream constant, including the tight nonvanishing step in Lemma 3.7.
+
+4. The exponent A^3 versus A^4: accept a one-character strengthening
+----------------------------------------------------------------------------
+
+The displayed calculation in Lemma 3.7 uses C>3ABST and T>2ABS. Consequently
+
+  C^2/(17BS^3T/A) > (9/17) A^3 BT/S
+                    > (18/17) A^4 B^2 > 1.
+
+The printed A^3 in the last expression is also true, since A>=1, but it discards a factor without explanation. Replace that A^3 by A^4. This is a local clarification and has no downstream impact.
+
+11. Removing maximum modulus and Hadamard: the proposed weakening is valid, but there is a better local alternative
+-----------------------------------------------------------------------------------------------------------------
+
+The existing maximum-modulus/Hadamard proof of the factor 16 is mathematically sound. Keeping it is a defensible choice: it is short and does not invoke a deep theorem. However, if the aim is an elementary proof suitable for later formalization, the following alternative is preferable to the reviewer's factor 64.
+
+Expand the 4x4 Vandermonde determinant. It contains 24 monomials. For A<=B<=S<=T, each monomial has modulus at most B S^2 T^3, by the elementary rearrangement inequality (or by interchanging two inverted exponents). Therefore
+
+  |Delta_4| <= 24 B S^2 T^3.
+
+No complex maximum principle or Hadamard inequality is used. The script checks all 24 exponent comparisons independently after writing A=u, B=uv, S=uvw, T=uvwz with v,w,z>=1.
+
+With exactly the existing r,l,u in Lemma 3.6, exact arithmetic gives
+
+  24*101/199 < 13,
+  2400*u/99 = 0.9606367985... < 49/50.
+
+Thus the direct part of Lemma 3.6 may be replaced by
+
+  |L_4| < 13 B S^2 T^3/Z + (49/50) S T^2 Z/(A P^4).
+
+The assertion for L_4=0, namely 10ABSTP^3<Q<17ABSTP^3, stays exactly the same, because it does not depend on the Vandermonde factor.
+
+Crucially, this local weakening need not weaken the retained gap. Before the final L_4 argument, Lemma 3.7 already proves C>A^2 T^5/S^2 and T>2ABS. They imply
+
+  C/(BST) > A^2 T^4/(BS^3) > 16 A^6 B^3 S >= 16,
+
+so C>16BST. With k=3999/4000, Z=|sqrt(cd+1)| and the already established D>A^2 C^5/S^2,
+
+  (13BS^2T^3/Z)^2
+  < 169 B^2 S^6 T^6/(k A^2 C^6)
+  < 169/(16^6 k A^2 B^4)
+  <= 169/(16^6 k) < 1/10000.
+
+The first summand is therefore less than 1/100. Nonvanishing gives
+
+  Z > (99/98) A C^4/(ST^2).
+
+Putting X=A^2C^8/(S^2T^4), one has X>=C^2>10^6. Hence
+
+  Z^2-1 > X,
+
+because ((99/98)^2-1)*10^6>1. This proves the ORIGINAL bound
+
+  D>A^2 C^7/(S^2T^4).
+
+It is important to adjust one other direct use of Lemma 3.6: the final subcase of the two-small-entry cutoff lemma, source label sm:bs7-cutoff, at current lines 2306-2312. Its display becomes
+
+  1 < 39 M^5/Z + 49 M^3 Z/(50 C^4).
+
+The first term is again below 1/2, because M=10^8, C>=10^100 and Z>C/2. It follows that Z>(25/49)C^4/M^3, which still gives the existing D>C^7/(100M^6). Thus the final modulus cutoff 10^550 is unchanged.
+
+This alternative requires changes only to the direct inequality and proof of Lemma 3.6, the final paragraph of the proof of Lemma 3.7, and the single indicated display in sm:bs7-cutoff. Every statement of a retained gap, every forbidden-interval formula, all overlap margins, and all N_0 values remain unchanged. It is an optional substantive simplification, not a needed correction. The structure-review agent independently checked this argument and both downstream uses; its separate record is agents/vandermonde24_cross.txt.
+
+For completeness, the reviewer's proposed factor 64 also works. It gives coefficients 33 and 13/5. The old first-term estimate yields a first summand below 1/7, hence Z>(30/91)AC^4/(ST^2), and therefore D>A^2C^7/(10S^2T^4). The start-Q comparison in Sections 6 and 8 then loses a factor ten but still has a quotient greater than one even at A=1, B=3. The final subcase in sm:bs7-cutoff remains valid after changing its display to 99M^5/Z+13M^3 Z/(5C^4).
+
+I additionally recomputed the affected start threshold for all 56 fixed triples from the frozen source, using rational square-root enclosures and exact integer threshold searches. Under the factor-ten loss, the largest new start threshold is only 40. All printed N_0 are at least 1024, and every N_0 remains unchanged. For (1,3,8), its start threshold changes from 3 to 4 and N_0 remains 1024. Thus even the reviewer's approach does not actually change the final cutoff table. Nevertheless it requires altering the start formulas and explanations in several sections, so the factor-24 alternative above has a smaller documentary and verification cost.
+
+Recommendations
+---------------
+
+Definitely insert the short factorized proof for comment 1.
+Definitely change the final A^3 to A^4 for comment 4.
+Comment 11 is optional. If elementary simplification is desired, prefer the factor-24 alternative, independently verify it, and preserve all downstream constants. Keeping the original proof is also correct. Do not apply the factor-64 change merely because the reviewer suggested it.
+
+Exact evidence: review_v3_comments/checks/f3_exact.py and f3_exact_results.json.
+The script's scope is stated explicitly. It is not a new check of all other mathematics or of the large finite computations.
+
+Independent cross-review of the strengthened second product bound (comment 12)
+-----------------------------------------------------------------------------
+
+I read the structure agent's structure_exact.py and independently checked the hypotheses and proof, not just the displayed rational number. The strengthening D>(3/2)ABC under A>=1, B>=3 is valid.
+
+Lemma 2.2 applies to exactly these hypotheses and precedes the determinant lemma. It gives D>2BC>=6C and D>18. Its proof uses the earlier irregular-triple growth lemma, with no appeal to Lemma 2.3. There is therefore no circularity in using these facts for the second assertion of Lemma 2.3.
+
+The existing entrywise majorant has weighted row sums 1/9 and 11/96, for weights (3/2,1,1,1). Its spectral radius is at most 11/96. Entrywise domination by this symmetric nonnegative majorant bounds the complex matrix E in Euclidean operator norm, so ||E||_2<11/96 is justified. The singular-value perturbation bound then gives s=59/96 and h=155/96 exactly as proposed. The rank-one determinant formula and C<D/6 give
+
+  |det N| < h s^2 [s + (1+3/36)D^2]
+          < [18212679025/27518828544] D^2 < (2/3)D^2.
+
+Here D>18 justifies replacing s/D^2 by s/324. Combining with |det M|>=1 proves D>(3/2)ABC. The coefficient and its strict margin are independently reproduced in f3_exact.py. This is stronger and cleaner than the reviewer's approximate 1.36 suggestion. It can replace the weaker statement and its second proof paragraph, while every subsequent use of the old 3/8 bound remains valid without recalibration.

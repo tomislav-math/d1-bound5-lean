@@ -1,0 +1,71 @@
+{
+  "source": "input/D1_bound5-v2.tex",
+  "sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "scope": "Sections 4–6, lines 876–2010, with upstream and downstream interval dependencies",
+  "proposals": [
+    {
+      "id": "APP-01",
+      "severity": "useful exposition repair",
+      "source_lines": "878",
+      "old": "We construct simultaneous approximations using two or three fixed tuple entries.  All polynomial divisions below are performed over $\\mathbb Z$ before specializing the fixed entries. No unique factorization assumption on $\\mathcal O_K$ is needed.",
+      "replacement": "We construct simultaneous approximations using fixed tuple entries. Nonsingular coefficient matrices and column divisibility give a nonzero algebraic integer after the tuple roots are substituted. Comparing its modulus, which is at least one, with the approximation errors will exclude intervals for the last modulus. All polynomial divisions below are performed over $\\mathbb Z$ before specializing the fixed entries. No unique factorization assumption on $\\mathcal O_K$ is needed.",
+      "reason": "The section opening names a construction but postpones its arithmetic purpose until the end of the first long proof. State the actual integrality mechanism before the residue formulas.",
+      "mathematical_preservation": "All three new explanatory sentences are true by lines 1026–1035. The matrix acts on a nonzero common evaluation vector, the column factors clear anchor denominators, and a nonzero algebraic integer has modulus at least one. The later inequalities exclude intervals, without claiming that the unrefined bound alone covers every modulus. No statement, parameter, threshold, or polynomial division changes. The opening omits the anchor count rather than assigning one count to all later constructions. Section 4 itself treats two and three fixed entries, while Section 5 also uses four.",
+      "dependencies": [
+        "lem:ordinary-residue-construction",
+        "eq:ordinary-root-transfer",
+        "eq:ordinary-residue-det",
+        "lines 1026–1035"
+      ]
+    },
+    {
+      "id": "APP-02",
+      "severity": "useful exposition repair",
+      "source_lines": "1333",
+      "old": "We give finite formulas for every row used in this section. As before, we prove the required divisibility in the polynomial ring over $\\mathbb Z$ before evaluating the tuple entries.",
+      "replacement": "The interval arguments below begin with a structural lower bound and end with the two-entry estimates at every order. The finite constructions in this section supply the intervening forbidden intervals. We give finite formulas for every row used here and prove the required divisibility in the polynomial ring over $\\mathbb Z$ before evaluating the tuple entries.",
+      "reason": "The existing opening repeats the polynomial-divisibility convention but gives no reason to introduce several finite families after an all-order construction. The replacement states the distinct role of these finite forms.",
+      "mathematical_preservation": "The finite bridge and all-order tail are explicitly realized at lines 1987–2008 and 3000–3014. This is an explanation of the applications, not a claim that a finite family alone covers an unbounded range or that any one family dominates another. All coefficient formulas, integrality checks, and guards remain.",
+      "dependencies": [
+        "eq:ff-window",
+        "eq:ordinary-integer-k",
+        "lines 1987–2008",
+        "lines 3000–3014"
+      ]
+    },
+    {
+      "id": "APP-03",
+      "severity": "useful definition/order repair",
+      "source_lines": "1909–1918",
+      "old": "For the finite two-anchor and three-anchor constructions, these are\ncoefficient and residual bounds in the indicated integral normalizations.\nUse the row \\(P\\) with residual constant \\(3\\), and put\n\\(H_P=\\max(BS^3,B^3S^2)\\).\n\nIn the following table, \\((l,u)\\) denotes the forbidden closed interval\n\\([l/(1-\\epsilon),u/(1+\\epsilon)]\\) for \\(D\\). This conversion follows\nby making both summands of the corresponding strict integral-form\nbound at most \\(1/2\\), and using\n\\((1-\\epsilon)CD<|\\sqrt{cd+1}|^2<(1+\\epsilon)CD\\).",
+      "replacement": "For the finite constructions, these constants bound the coefficients and residuals in their stated integral normalizations. In the table, $P$ denotes the four quadratic rows in~\\eqref{eq:ff-prows}, $Q$ the five linear rows with determinant~\\eqref{eq:ff-qdet}, and $M$ the estimate~\\eqref{eq:ordinary-three-M}. For $P$, use $\\mathcal R(1)<3$ and put $H_P=\\max(BS^3,B^3S^2)$. The row $N_{3,bs}$ uses $N_3$ with fixed entries $b,s$, and $O_j$ uses~\\eqref{eq:ordinary-integer-k} at $k=j$. Each pair $(l,u)$ denotes the forbidden closed interval $[l/(1-\\epsilon),u/(1+\\epsilon)]$ for $D$, by~\\eqref{eq:ff-window}.",
+      "reason": "The first interval table uses P, Q, and M without explicitly identifying them as table labels for earlier constructions. N_{3,bs} and O_j also require a reader to infer the relabeling and order. Mapping the existing labels costs little and replaces a repeated proof of the already established interval conversion.",
+      "mathematical_preservation": "P is exactly the four-row matrix of eq:ff-prows with inequality eq:ff-P; Q is exactly the five-row matrix with determinant eq:ff-qdet and bound at lines 1848–1852; M is eq:ordinary-three-M. The N3 row on b,s has the printed substitutions A→B and B→S. The O_j endpoint follows from U=3CH_2^j/B and V=1/(2(2AC^2/(5B))^j). The closed endpoints and epsilon factors are unchanged. The removed conversion explanation is proved at lines 1386–1398 and is now cited.",
+      "dependencies": [
+        "eq:ff-prows",
+        "eq:ff-P",
+        "eq:ff-qdet",
+        "eq:ordinary-three-M",
+        "eq:ordinary-integer-k",
+        "eq:ff-window",
+        "tab:ff-parameters"
+      ]
+    },
+    {
+      "id": "APP-04",
+      "severity": "useful explanation of table",
+      "source_lines": "1937–1940",
+      "old": "The initial bound \\eqref{eq:integrated-6} and the interval endpoints yield the following\nsufficient strict comparisons. The left column of quantities must exceed\nthe right column. The first two use \\(C>A^2T^5/S^2,\\ T>2ABS\\).\nThe remaining comparisons use $C>KA^7B^5S^3$.",
+      "replacement": "The first comparison puts $\\mathcal G$ above the lower endpoint of $Q$, so~\\eqref{eq:integrated-6} places $D$ above that endpoint. Each later comparison requires the preceding upper endpoint to exceed the next lower endpoint, with the factors $1\\mp\\epsilon$ included. The table gives sufficient strict comparisons, so the lower quantity must exceed the required constant. The first two use $C>A^2T^5/S^2$ and $T>2ABS$, and the remaining comparisons use~\\eqref{eq:large-gap}.",
+      "reason": "A reader has to reconstruct the meaning of a junction and the factor h from the endpoint table. State exactly which endpoints are compared before the list of algebraic sufficient conditions.",
+      "mathematical_preservation": "For a junction X→Y the actual requirement is u_X/(1+epsilon)>l_Y/(1-epsilon), equivalent to u_X/l_Y>h. The first line instead compares G to l_Q/(1-epsilon). The first two lower estimates were independently rederived, and all fifteen displayed sufficient numerical comparisons were checked with exact fractions at A=B=S=3, K=400. No sufficient condition is weakened and the separate branch conditions stay in the table.",
+      "dependencies": [
+        "eq:integrated-6",
+        "eq:large-gap",
+        "lines 1914–1934",
+        "lines 1943–1958",
+        "lines 1987–2008"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+Independent cross-review of the elementary Vandermonde bound
+============================================================
+
+Source: frozen v3, SHA256
+a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5.
+Proposal communicated by root from the f3 reviewer: replace 16 by24 in
+the Vandermonde bound, use13 and49/50 in Lemma3.6, preserve its zero-case
+constants10,17 and preserve all subsequent cutoff statements.
+
+Verdict: the proposed mathematics is valid. The two downstream invocation
+sites were checked independently. The second one must also be edited.
+No manuscript has been edited in this review.
+
+1. Elementary determinant bound
+------------------------------
+Expand det(a_i^(j-1)) as its24 signed monomials. If the ordered anchor
+moduli are A<=B<=S<=T, each monomial is at most BS^2T^3 by the elementary
+rearrangement of nonnegative exponents0,1,2,3. Equivalently, after division
+by BS^2T^3 its modulus is a product of nonnegative integer powers of
+A/B,B/S,S/T, each at most1. Hence |Delta_4|<=24BS^2T^3.
+This uses neither maximum modulus nor Hadamard. The rational-check script
+enumerates all24 exponent permutations and verifies nonnegative powers.
+
+2. Direct-four lemma
+-------------------
+Retain the existing l and u. Exact comparisons give
+  24*101/199 = 2424/199 <13,
+  2400u/99 =0.9606367985... <49/50,
+  100/(201u)=12.555117... >10,
+  100/(199l)=13.052614... <17.
+Thus its new bound is
+  |L_4| <13BS^2T^3/Z +(49/50)ST^2Z/(AP^4),
+and L_4=0 still implies10ABSTP^3<Q<17ABSTP^3.
+
+3. Retained-gap proof, lines865--878
+----------------------------------
+Nonvanishing is unchanged because the zero-case interval is unchanged.
+Before this invocation, C>A^2T^5/S^2 and T>2ABS are already established,
+so there is no circularity in using them. They imply
+  C/(BST)>A^2T^4/(BS^3)>16A^6B^3S>=1296.
+With k0=3999/4000 and the existing D>A^2C^5/S^2,
+  Z^2>k0 CD>k0 A^2C^6/S^2,
+and consequently
+  (13BS^2T^3/Z)^2
+    <169/(k0 A^2B^4*1296^6)
+    <=169/(81k0*1296^6)<1/10000.
+The first summand is therefore less than1/100. Since |L_4|>=1,
+  Z>(99/98)AC^4/(ST^2).
+As Z^2<=CD+1, the original gap D>A^2C^7/(S^2T^4) follows if
+  (197/9604)A^2C^8/(S^2T^4)>1.
+Already C>3ABST and A,B,S,T>=1 give the left side greater than
+(197/9604)*3^8>1. Thus the original retained-gap statement survives with
+no new constants in any interval table or N_0 computation.
+
+4. Small-entry cutoff invocation, lines2306--2312
+------------------------------------------------
+Here B<3, S,T<M=10^8, A>=1, C>=10^100 and Z>C/2. The displayed inequality
+must become
+  1<39M^5/Z +(49/50)M^3Z/C^4.
+Its first term is less than78M^5/C<1/2. Therefore
+  Z>25C^4/(49M^3),
+  D>625C^7/(2401M^6)-1/C>C^7/(100M^6)=10^(-50)C^7.
+The last strict comparison is immediate under the stated bounds, and was
+checked exactly. The zero-case upper bound used just before this remains
+17ABSTC^3. Thus the following ordinary-approximation contradiction is
+unchanged.
+
+5. Recommendation
+-----------------
+This is materially preferable to the reviewer's suggestion using64,
+which weakens the retained gap and would require reworking N_0. Using24
+gives an elementary replacement while retaining the downstream theorem,
+interval tables and numerical computations. It is a genuine candidate
+for the next version, subject to checking the actual replacement text
+against these three local edits. Exact checks are in
+review_v3_comments/checks/vandermonde24_cross.py and .json.
+
+Literal patch review completed
+------------------------------
+I subsequently read the actual proposed replacement in
+review_v3_comments/agents/f3_optional_patch.tex. All three locations are
+covered correctly. Its simplification from C>1296BST to C>16BST is valid
+and sufficient, since169/(16^6*(3999/4000))<1/10000. Its subtraction-of-one
+argument is also correct: S,T<=C and A>=1 give
+A^2C^8/(S^2T^4)>=C^2>10^6. No additional condition is being silently
+assumed, and no circular use of the retained C^7 gap occurs. The actual
+proposed LaTeX patch is approved mathematically.

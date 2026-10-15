@@ -1,0 +1,146 @@
+D1_bound5-v2 — revision and verification report
+15 October 2026
+
+Outcome
+
+The accepted mathematical and editorial changes have been incorporated into
+D1_bound5-v2.tex. The main theorem is unchanged: every D(1)-tuple in the full
+ring of integers of an imaginary quadratic field has at most five elements.
+No remaining error was found in the six scoped reviews. This reports the
+checks actually performed; it is not a claim of proof-assistant certification.
+
+Final source SHA-256:
+5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70
+Final PDF SHA-256:
+c8c5ee6fa08603deef6e9f0f19961319b0e004fb0199338203a1dae107abd808
+
+The authoritative v1 is preserved unchanged. The source has 3,904 lines and
+37 formal statements. The PDF has 58 pages. The 12pt Latin Modern setup,
+margins, packages and empty date are preserved. No custom .sty file is needed.
+The only preamble deletion is an unused macro.
+
+Principal changes
+
+1. The fourth-entry determinant estimate now proves T > 3ABS when A >= 3.
+   This gives the simple constant K = 400 in Section 6 and removes its former
+   phase maximization argument. The two new determinant endpoints and the
+   precise rational coefficient exceeding 400 have been checked exactly.
+
+2. Algebraic integrality proves full rank of the four-row P construction
+   throughout its existing domain. The former six-row P0 alternative and its
+   extra branches disappear. Section 6 now needs 15 endpoint comparisons.
+   The combined H and V coefficients are defined before absolute values are
+   taken. Their residual polynomials give the explicit sufficient bound 3.
+   Thus the old unexplained constants 145 and 300 do not survive here.
+
+3. An explicit quadratic inequality for irregular triples replaces the final
+   fourth-entry search. Of the 56 nonrational rows, 38 are excluded directly by
+   the tail bound, 16 by exact outward-enclosure endpoint inequalities, and
+   the last two by the quadratic and a short modulo-16 norm argument. The
+   largest of those 16 upper bounds is exactly
+   -526504132441877163783/5000000000000000000 < -100.
+   All 56 M_bs and N0 entries are retained. Only the obsolete search-output
+   column is deleted. The rational triple (1,3,8) is still excluded internally
+   by N0 = 1024 and the incompatible bounds t < 32 and t > 48.
+
+4. The relevant earlier recommendations are accounted for in the change
+   register and the literature/editorial ledger. They include the branch-cut
+   wording, explicit logarithmic weakening, naming all six entries, parity
+   cases for the full integer ring, local notation fixes, shorter headings,
+   unused equation numbers, punctuation, obsolete assembly comments and
+   precise citation locators. Optional global basis harmonization N04 was not
+   recommended and was not applied. Superseded recommendations were resolved
+   against the new proof rather than reintroducing deleted text.
+
+5. The historical subring results are distinguished from the present full-ring
+   argument. Franušić–Kreso is cited under its published author order, title,
+   journal volume and year; the preprint DOI is clearly identified separately.
+   Conflicting page ranges were not guessed. He–Togbé–Ziegler is not needed.
+
+What was checked
+
+The six reports in revision_v2/agents give the actual read scopes, individual
+claims, dependencies, candidate objections and their resolutions. Together
+they cover the complete manuscript. The root reviewed the registered changes
+and their integration, the new arguments, and the rendered PDF.
+
+Structural review, Sections 1–3:
+  128 fresh exact assertions passed. Independently regenerated the 90 pairs,
+  118 retained tails and 16 candidates, none surviving the last test. Checked
+  determinant expansions, interpolation identities and constants, boundary
+  cases, the stronger gap and K = 400.
+
+Approximation review, Sections 4–5:
+  612 exact assertions passed. Regenerated the five finite polynomial families,
+  all displayed determinants, coefficient sums and constants, the P and Q
+  constructions, cancellation and integrality, and all residual polynomials.
+  Full polynomial determinants were recomputed, not merely sampled.
+
+Two/three-small review, Section 7:
+  All 48 small-pair graphs through modulus 10^550 were freshly recomputed:
+  36,931 vertices, 36,854 edges and zero triangles, with every row matched.
+  The {-1,1} calculation gave 1,016 fields, 409 nonempty graphs, 19,612 vertices,
+  9,806 edges and zero triangles. The ten small-triple extension closures and
+  all 74 exact constant/algebra checks passed. The Section 7 implementations
+  reuse the previously independently written algorithms; they are not claimed
+  to be new independent algorithms in this pass.
+
+One-small review, Sections 8–9:
+  23,921 exact assertions passed. Recomputed the five regions, 40 pair classes
+  (146 before symmetry reduction), 57 third entries, all 200 nonrational
+  fixed-pair coefficient cells, rational safe bounds, all 615 overlaps for
+  41 pairs, all M_bs/N0 calculations, and the new 38/16/2 completion.
+
+Independent completion review, Sections 6 and 9–10:
+  103 exact overlap/dependency checks and 3,275 cutoff/completion checks passed.
+  This separately derives the 15 all-large and 13 fixed-triple endpoint
+  reductions and regenerates all 57 M_bs/cutoff calculations by another
+  representation. The two implementations agree on all 57 row keys and
+  456 compared fields. Those field comparisons are additional cross-checks,
+  not a third derivation of the same quantities.
+
+Editorial/dependency review:
+  Replayed all 122 registered replacements to obtain the exact final source.
+  The first six columns of all 56 final rows are preserved. All 10 citation
+  occurrences resolve to the eight used references. The 116 labels and
+  221 reference commands have no undefined or unused labels, and no unused
+  numbered display remains. Detailed source-access limits appear in the
+  literature ledger.
+
+Final production checks:
+  Clean LaTeX compilation, 58 pages, no undefined references or overfull or
+  underfull boxes. All 58 rendered pages were visually inspected in contact
+  sheets, with additional full-page inspection of pages 24, 56 and 58. The
+  final build log and pdf_qa.json bind this review to the delivered source/PDF.
+
+Source binding and reproducibility
+
+Each mathematical result records a source hash. The expensive Section 7 runs
+were completed on the initial v2 hash 66f5a580...587c63, before four final
+editorial corrections elsewhere. The exact four replacements are reversed in
+memory to recover that full source hash, and the entire Section 7 is verified
+byte-identical to the final source. The final cheap checks were rerun. The
+original run hashes and runtimes are retained honestly; they are not relabelled
+as executions on a later file. The supplied graph program now accepts the final
+source, so a reader can rerun everything directly.
+
+The verification scripts use Python's standard library and integer/Fraction
+arithmetic for mathematical decisions. Their logs and row-level JSON results
+are included. The README gives integrity, quick, full and regeneration commands.
+The aggregate integrity check verifies these artifacts and source relationships;
+it does not itself constitute a fresh execution of the mathematical algorithms.
+
+Limits
+
+The all-order Bennett determinant identity remains an explicit published input.
+Its original cited passage and the manuscript's specialization/extension were
+reviewed; no new elementary proof for arbitrary order is claimed. The proof
+still uses the other finite enumerations and interval certificates described in
+the manuscript. Removing the final fourth-entry search does not make the entire
+paper computation-free. Independent implementations can share conceptual
+assumptions, so their agreement is evidence, not a formal guarantee.
+
+For Franušić–Kreso, the available author records disagree on pagination. The
+manuscript omits the uncertain pages. The literature report distinguishes full
+passages actually inspected from abstract/metadata-only access. No exhaustive
+priority or novelty certification is asserted.

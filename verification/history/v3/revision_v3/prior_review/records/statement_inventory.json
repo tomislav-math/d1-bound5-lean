@@ -1,0 +1,338 @@
+{
+  "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "statements": [
+    {
+      "id": "thm:main",
+      "kind": "theorem",
+      "start": 44,
+      "end": 47,
+      "statement_sha256": "1c45036b8ad6f3ed5c98f7f2fe5d42d2b1a25d70ca84472f34d927374bab227b",
+      "statement": "\\begin{theorem}\\label{thm:main}\nFor every imaginary quadratic field $K$, every $D(1)$-tuple in\n$\\mathcal O_K$ has cardinality at most five.\n\\end{theorem}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:irregular-growth",
+      "kind": "lemma",
+      "start": 116,
+      "end": 119,
+      "statement_sha256": "fd16cf65287118eae8adcefed4f26ad2d5992b80eb9e6a57758cd2f0c3917649",
+      "statement": "\\begin{lemma}\\label{lem:irregular-growth}\nAn irregular triple with \\(3\\le A=|a|\\le B=|b|\\le C=|c|\\) satisfies\n\\(C>2AB\\).\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:tail-irregular",
+      "kind": "lemma",
+      "start": 145,
+      "end": 148,
+      "statement_sha256": "4d4e7b9f5c9dd99c66419f33de6f1f0e04bc564e2e013f99a9994b62d306c14f",
+      "statement": "\\begin{lemma}\\label{lem:tail-irregular}\nIf an ordered quadruple has \\(1\\le A\\le B\\le C\\le D\\) and \\(B\\ge3\\),\nits last three entries form an irregular triple. In particular \\(D>2BC\\).\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:product-four",
+      "kind": "lemma",
+      "start": 276,
+      "end": 282,
+      "statement_sha256": "c56e172f8e8444bd696ba9ce36ccc200544266330798cc9bea4f4d9b3c02ba57",
+      "statement": "\\begin{lemma}\\label{lem:product-four}\nAn ordered quadruple satisfies\n\\[\n D>2ABC\\quad\\hbox{if }A\\ge3,\\qquad\n D>\\frac38ABC\\quad\\hbox{if }A\\ge1,\\ B\\ge3.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:product-five",
+      "kind": "lemma",
+      "start": 326,
+      "end": 329,
+      "statement_sha256": "b8f6198c3df53d91601b46f9417f242a4ae826247ca949c195a9160cee6e51dc",
+      "statement": "\\begin{lemma}\\label{lem:product-five}\nFive ordered entries of moduli \\(1\\le A\\le B\\le S\\le C\\le D\\),\nwith \\(B\\ge3\\), satisfy \\(D>3ABSC\\).\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:five-frontier-gaps",
+      "kind": "lemma",
+      "start": 394,
+      "end": 410,
+      "statement_sha256": "9c6e6ed714d3117d55e20e644aba344543fdeffcf29349a7329e1b87c5907f3d",
+      "statement": "\\begin{lemma}\\label{lem:five-frontier-gaps}\nLet an ordered quadruple have \\(1\\le A\\le B\\le S\\le T\\), with\n\\(B\\ge3\\). If \\(A\\ge3\\), then \\(T>3ABS\\).\nIf \\(A<3\\), the first two columns of each row in the following\ntable imply \\(T>tABS\\). The number \\(\\alpha\\) is a rational lower\nbound for \\(A\\), used in the proof.\n\\[\n\\begin{array}{c|c|c|c}\n\\hbox{condition on }N(a)&B\\ge B_0&\\alpha&t\\\\\\hline\n1&8&1&27/8\\\\\n2&4&140/99&3\\\\\n3&3&12/7&11/4\\\\\n4&3&2&29/10\\\\\n5\\le N(a)\\le8&3&20/9&3\n\\end{array}\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:interpolation-parameters",
+      "kind": "lemma",
+      "start": 591,
+      "end": 613,
+      "statement_sha256": "de8c2d013d10e9b5b89a4024de2a9221a13c3cd8a71424f7215b54ce504df28a",
+      "statement": "\\begin{lemma}\\label{lem:interpolation-parameters}\nLet \\((H,\\lambda,U)\\) be either row of the table\n\\[\n \\begin{array}{c|c|c}\n H&\\lambda&U\\\\\\hline\n 32&1/10&179/10\\\\\n 48&19/200&15\n \\end{array}.\n\\]\nSuppose \\(A_1P\\ge H,\\ Q\\ge4P,\\ PQ>10000\\). For two anchors\nof moduli \\(X\\le Y\\), and \\(Z=|z|\\),\n\\[\n |L_2|<\\frac{21Y}{20Z}+\\frac{Z}{2XP^2}.\n\\]\nFor three anchors of moduli \\(X,Y,V\\),\n\\[\n |L_3|<\n \\frac{51|\\Delta_3|}{100Z}\n +\\lambda\\frac{|\\Delta_3|Z}{XYV P^3},\\qquad\n L_3=0\\ \\Longrightarrow\\\n 5XYVP^2<Q<UXYVP^2.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:strong-two-anchor",
+      "kind": "lemma",
+      "start": 653,
+      "end": 659,
+      "statement_sha256": "8aaaf48a13614d4f76cd520259cab2ea7268d754b6ab0a1a15dc1aa09e8ade2b",
+      "statement": "\\begin{lemma}\\label{lem:strong-two-anchor}\nIn the two-anchor situation of Lemma~\\ref{lem:interpolation-parameters},\nassume also \\(Y\\ge3,\\ P\\ge5Y\\). If \\(Q\\ge5XYP\\), then\n\\[\n Q>\\frac{X^2P^3}{h_0},\\qquad h_0=\\frac{10001}{10000}.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:general-three",
+      "kind": "lemma",
+      "start": 687,
+      "end": 693,
+      "statement_sha256": "a51b10c94f919f9736cf45a88c2f69ee14f60084209a61e5627afa5d94bc77fa",
+      "statement": "\\begin{lemma}\\label{lem:general-three}\nFor three anchors \\(A\\le B\\le S\\), suppose \\(P\\ge4S,\\ AP\\ge9,\\ Q\\ge P\\).\nThen\n\\[\n |L_3|<\\frac{5BS^2}{Z}+\\frac{3SZ}{AP^3}.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:separated-three",
+      "kind": "lemma",
+      "start": 707,
+      "end": 713,
+      "statement_sha256": "de67dffad22d9bb855c5063337f0eb6f0bc3dfdc1a10b66825ea1c45d841e208",
+      "statement": "\\begin{lemma}\\label{lem:separated-three}\nFor three anchors \\(A\\le B\\le S\\le P\\), if \\(P\\ge1000,\\ Q\\ge4P\\), then\n\\[\n |L_3|<\\frac{5BS^2}{Z}+\\frac{3SZ}{4AP^3},\\qquad\n L_3=0\\ \\Longrightarrow\\ 5ABSP^2<Q<15ABSP^2.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:four-anchor-nonvanishing",
+      "kind": "lemma",
+      "start": 723,
+      "end": 727,
+      "statement_sha256": "5796f2ff93da91495abaaf7efd9b070ae82a19b5e007b8c95c7f3f4037c54985",
+      "statement": "\\begin{lemma}\\label{lem:four-anchor-nonvanishing}\nFor ordered anchors \\(1\\le A\\le B\\le S\\le T\\le P\\le Q\\), assume\n\\(AP>1\\) and \\(P^2\\ge32BST/A^3\\). The coherent forms \\(L_3\\) on\n\\((a,b,s)\\) and \\((a,b,t)\\), using the same \\(z,R_a,R_b\\), cannot both vanish.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:direct-four",
+      "kind": "lemma",
+      "start": 750,
+      "end": 757,
+      "statement_sha256": "bc4d444816308b1473ed6e422feb3652a6787096cbfd1b6d921e411c98870d39",
+      "statement": "\\begin{lemma}\\label{lem:direct-four}\nFor four anchors \\(A\\le B\\le S\\le T\\le P\\), if\n\\(P\\ge1000,\\ Q\\ge1000P\\), then\n\\[\n |L_4|<\\frac{9BS^2T^3}{Z}+\\frac{4ST^2Z}{5AP^4},\\qquad\n L_4=0\\ \\Longrightarrow\\ 10ABSTP^3<Q<17ABSTP^3.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:retained-gap",
+      "kind": "lemma",
+      "start": 791,
+      "end": 810,
+      "statement_sha256": "22f71efd616373bf51d15dec3506c6b81bef8cb0d93ef4347e802b5762dd6645",
+      "statement": "\\begin{lemma}\\label{lem:retained-gap}\nLet six ordered entries have \\(1\\le A\\le B\\le S\\le T\\le C\\le D\\),\n\\(B\\ge3,\\ T>2ABS\\). Choose either row \\((H,\\lambda,U)\\) of\nLemma~\\ref{lem:interpolation-parameters}, and suppose \\(AT\\ge H\\).\nPut\n\\[\n \\mathcal Q=\\frac{|(a-b)(a-s)(b-s)|}{BS^2},\\quad\n \\mu=\\frac{51051}{400000},\\quad c_\\lambda=\\frac{9999}{10000\\lambda^2}.\n\\]\nThen\n\\begin{align}\n C&>c_\\lambda\\left(\\frac1{\\mathcal Q}-\\frac{\\mu}{A^2B^2}\\right)^2\n                     \\frac{A^2T^5}{S^2}\n   >\\frac{A^2T^5}{S^2},                                      \\label{eq:retained-main}\\\\\n D&>\\frac{A^2C^5}{S^2},\\qquad\n D>\\frac{A^2C^7}{S^2T^4}.                                    \\label{eq:retained-start}\n\\end{align}\nMoreover \\(C>1000,\\ C>200S,\\ C>4T,\\ AC>1000,\\ D>1000C\\).\nThe conclusions for \\(C\\) use only the first five entries.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:ordinary-residue-construction",
+      "kind": "lemma",
+      "start": 882,
+      "end": 919,
+      "statement_sha256": "cb05569579db7382d97f98795ebbbe1e8f289a7fca3906122b780d259a23e894",
+      "statement": "\\begin{lemma}\\label{lem:ordinary-residue-construction}\nLet $a_1,\\ldots,a_m,c,d$, where $m\\ge2$, be distinct nonzero members of\na $D(1)$-tuple in $\\mathcal O_K$.  Put\n\\[\n A_j=|a_j|,\\quad A=\\min_j A_j,\\quad S=\\max_j A_j,\n \\quad C=|c|>1,\\quad AC>1,\n\\]\n\\[\n H=\\prod_{j=1}^m a_j,\\qquad\n \\Delta=\\prod_{1\\le i<j\\le m}(a_i-a_j),\\qquad\n \\eta=1-\\frac1{AC},\\qquad\n e(X)=\\sqrt{1+\\frac1{XC}}\\left(1+\\frac XC\\right).\n\\]\nFor every integer $k\\ge1$ there is an explicit matrix\n$Q_k=(Q_{ijk})_{0\\le i,j\\le m}$ of integral polynomials in $a_1,\\ldots,a_m$ and $c$.  Its $j$th column, for $j\\ge1$, is divisible by\n$a_j^{(m-1)k}$, and\n\\begin{equation}\\label{eq:ordinary-residue-det}\n \\det Q_k=\n \\left((-1)^{m(m+1)/2}4^{m+1}H^{m-1}\\Delta^{2m}\\right)^k\n \\prod_{v=-1}^{m-1}\\binom{1/2-vk}{k}\\ne0.\n\\end{equation}\nWith $\\theta_0=1$, $\\theta_j=\\sqrt{1+1/(a_jc)}$ defined by the binomial series,\n\\begin{equation}\\label{eq:ordinary-residue-error}\n \\left|\\sum_{j=0}^mQ_{ijk}\\theta_j\\right|\n \\le V_{m,k}:=\n \\left(\\frac{4|\\Delta|^2}{|H|C^m}\\right)^k\n \\eta^{-mk+1/2}\n \\frac{\\Gamma(k+3/2)\\Gamma(mk-1/2)}\n {\\pi\\Gamma((m+1)k+1)}.\n\\end{equation}\nIf $z\\in\\mathcal O_K$, $z^2=cd+1$, and $Z=|z|$, then\n\\begin{equation}\\label{eq:ordinary-root-transfer}\n 1\\le\\frac{Ce(S)}Z\n       \\max_i\\sum_{j=1}^m\\frac{|Q_{ijk}|}{A_j}\n       +V_{m,k}Z.\n\\end{equation}\nAt $k=1$ the left side can be replaced by $2$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:ordinary-all-orders",
+      "kind": "proposition",
+      "start": 1040,
+      "end": 1057,
+      "statement_sha256": "883dc2f80dc69e19661f01fb2e3aae030e11ecc510d092558e13c84f785da283",
+      "statement": "\\begin{proposition}\\label{lem:ordinary-all-orders}\nLet $a,b,c,d$ be distinct nonzero members of a $D(1)$-tuple, with\n$1\\le A=|a|\\le B=|b|$, $C=|c|>4B$ and $AC>1000$.\nPut $\\delta=|a-b|$ and\n\\[\n H_2=42B^3C,\\qquad\n R_2=\\frac{27AB(AC-1)^2}{16A^2\\delta^2}\n      >\\frac{2AC^2}{5B}.\n\\]\nFor $z^2=cd+1$, $Z=|z|$, and every integer $k\\ge1$,\n\\begin{equation}\\label{eq:ordinary-integer-k}\n 1<\\frac{3CH_2^k}{BZ}+\\frac{Z}{2R_2^k}.\n\\end{equation}\nIf $R_2>1$ and $\\lambda=1+\\log H_2/\\log R_2<2$, then\n\\begin{equation}\\label{eq:ordinary-continuous}\n Z^{2-\\lambda}<253B^2C^2.\n\\end{equation}\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "cor:ordinary-height-envelope",
+      "kind": "corollary",
+      "start": 1150,
+      "end": 1163,
+      "statement_sha256": "4c2bed4dd431acf77fd16d51415adb15369635e0821be34668a638f8f7965870",
+      "statement": "\\begin{corollary}\\label{cor:ordinary-height-envelope}\nUnder the preceding hypotheses, suppose $D=|d|\\ge C$ and put\n$x=\\log_{10}C$.  Let rational $h,r,u$ satisfy\n\\[\n \\log_{10}H_2<x+h,\\qquad\n \\log_{10}R_2>2x+r,\\qquad\n \\log_{10}(253B^2)<u.\n\\]\nSet $t=h-r$, $\\beta=4u+8h-4r$ and $\\gamma=2ur+\\beta t$.\nIf $x>t$ and $2x+r>0$, then\n\\[\n \\log_{10}D<7x+\\beta+\\frac\\gamma{x-t}+\\frac25.\n\\]\n\\end{corollary}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:ordinary-three-normalized",
+      "kind": "lemma",
+      "start": 1179,
+      "end": 1196,
+      "statement_sha256": "d20bbd679ef89f45534c15fd4696df6a3b4e749672deb3e681a69d6fcca1dd9b",
+      "statement": "\\begin{lemma}\\label{lem:ordinary-three-normalized}\nLet $a,b,s,c,d$ be distinct nonzero members of a $D(1)$-tuple, with\n\\[\n 1\\le A=|a|\\le B=|b|\\le S=|s|,\\qquad\n C=|c|\\ge4S,\\qquad AC\\ge1000.\n\\]\nFor $z^2=cd+1$ and $Z=|z|$ one has\n\\begin{equation}\\label{eq:ordinary-three-M}\n 1<\\frac89\\,608^2\\frac{B^3S^8C^3}{Z}\n       +\\frac{3920}{81}\\frac{B^2S^5Z}{A^3C^6}.\n\\end{equation}\nIf $D=|d|\\ge C$, the closed interval\n\\begin{equation}\\label{eq:ordinary-three-coarse-window}\n \\frac{512}{81}608^4B^6S^{16}C^5\\le D\\le\n \\frac{A^6C^{11}}{2\\cdot28^4(10/81)^2B^4S^{10}}\n\\end{equation}\nis impossible.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "prop:no-all-large-six",
+      "kind": "proposition",
+      "start": 1857,
+      "end": 1859,
+      "statement_sha256": "b1db771029797428dc69ddbd9497082ea5fdd1b440cdd60561912f25c24fbd5a",
+      "statement": "\\begin{proposition}\\label{prop:no-all-large-six}\nA \\(D(1)\\)-tuple contains at most five entries of modulus at least three.\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:main",
+      "kind": "proposition",
+      "start": 2014,
+      "end": 2017,
+      "statement_sha256": "25209e3a13791b72c43cd4effc52a855c2aaa902df7f48acf43de07859ce6aaa",
+      "statement": "\\begin{proposition}\\label{sm:main}\nA $D(1)$-tuple in the full ring of integers of an imaginary quadratic\nfield with at least two small entries has at most five elements.\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:crossblock",
+      "kind": "lemma",
+      "start": 2024,
+      "end": 2032,
+      "statement_sha256": "8769f82b85b2f7f38803d12ec97b0ac3cb65b5728fcbd7bfd908313d652092f1",
+      "statement": "\\begin{lemma}\\label{sm:crossblock}\nLet $a_1,a_2,a_3,b_1,b_2,b_3$ be six distinct members of a\n$D(1)$-tuple, separately ordered by modulus. Put\n$A_i=|a_i|$, $B_i=|b_i|$, and $W_i=A_iB_i$.\nIf $W_1\\ge9$, then\n\\[\n W_3>\\frac{W_1^3W_2}{7}.\n\\]\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:lem-four-root-k1",
+      "kind": "lemma",
+      "start": 2080,
+      "end": 2107,
+      "statement_sha256": "e058e15130a1c82ca9f519cd71954a2416a6a6614d8d5bb3b85577f0c79fcc2f",
+      "statement": "\\begin{lemma}[Four roots at order one]\\label{sm:lem-four-root-k1}\nLet \\(a_1,a_2,a_3,a_4,c,d\\) be distinct nonzero entries of a\n\\(D(1)\\)-tuple, with\n\\[\n 1\\le A=|a_1|\\le B=|a_2|\\le S=|a_3|\\le T=|a_4|,\n \\quad C=|c|>1,\\quad AC>1.\n\\]\nPut \\(Z=|\\sqrt{cd+1}|\\), \\(\\eta=1-1/(AC)\\), and use the function\n\\(e\\) from Lemma~\\ref{lem:ordinary-residue-construction}. Then\n\\begin{equation}\n 2\\le8192e(T)\\left(1+\\frac{11}{8AC}\\right)\n       \\frac{B^2S^4T^6C^2}{Z}\n       +\\frac{192BS^3T^5Z}{AC^4\\eta^{7/2}}.\n \\label{sm:eq-four-root-exact}\n\\end{equation}\nIf \\(C\\ge4T\\) and \\(AC\\ge1000\\), then\n\\begin{equation}\n 2<10300\\frac{B^2S^4T^6C^2}{Z}\n       +193\\frac{BS^3T^5Z}{AC^4}.\n \\label{sm:eq-four-root-safe}\n\\end{equation}\nIf in addition \\(D=|d|\\ge C\\), the closed interval\n\\begin{equation}\\label{sm:eq-four-root-window}\n 2\\cdot10300^2B^4S^8T^{12}C^3\\le D\n \\le\\frac{A^2C^7}{2\\cdot193^2B^2S^6T^{10}}\n\\end{equation}\nis impossible.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:bs7-cutoff",
+      "kind": "lemma",
+      "start": 2225,
+      "end": 2231,
+      "statement_sha256": "889e4e98453c2ce60518d3190f17610ef3fedbbd593e22b4ec30d50af4357b0f",
+      "statement": "\\begin{lemma}\\label{sm:bs7-cutoff}\nSuppose a $D(1)$-tuple has six entries with ordered moduli\n\\[\n 1\\le A\\le B<3\\le S\\le T\\le C\\le D.\n\\]\nThen $C<10^{550}$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:bs7-descent",
+      "kind": "lemma",
+      "start": 2338,
+      "end": 2344,
+      "statement_sha256": "34f599fa02f523bef644a7e58fb632eeff40b374fba9513d7d57421e9458b5bf",
+      "statement": "\\begin{lemma}\\label{sm:bs7-descent}\nLet $a,b\\in\\OK$ be distinct nonzero elements with $|a|,|b|<3$, and suppose $r_0\\in\\OK$ satisfies $r_0^2=ab+1\\ne0$. Every integral common extension~$z$ of~$a,b$ with $|z|\\ge33$ has an integral common extension~$w$ satisfying\n\\begin{equation*}\n |w|<|z|/5+26<|z|\\,.\n\\end{equation*}\nHere a common extension may be zero or equal to an anchor. The transformations used to obtain~$w$ are reversible within this enlarged set.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:bs7-finite-pairs",
+      "kind": "lemma",
+      "start": 2381,
+      "end": 2383,
+      "statement_sha256": "6708d6e3f3a60e2728250413814c2c9f45ffc8fb1894699e4238c308c5d2cde5",
+      "statement": "\\begin{lemma}\\label{sm:bs7-finite-pairs}\nFor every squarefree $d<36$ and every compatible small pair $a,b\\in\\mathcal O_{\\mathbb Q(\\sqrt{-d})}$ with $ab+1\\ne0$, at most two members of a $D(1)$-tuple containing~$a,b$ have moduli in $[3,10^{550}]$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:bs7-unit-axes",
+      "kind": "lemma",
+      "start": 2472,
+      "end": 2479,
+      "statement_sha256": "9e99f06f951889b94748af7a4bb06012c323e9492c0c90de6af3e6392d31cc70",
+      "statement": "\\begin{lemma}\\label{sm:bs7-unit-axes}\nLet $d$ be positive and squarefree, and put $t=\\sqrt{-d}$. Every nonzero common extension of $\\{-1,1\\}$ has one of the forms\n\\begin{align*}\n z&=\\pm(dv^2+1),& u^2-dv^2&=2,\\\\\n z&=\\pm2uvt,& u^2-dv^2&=1,\n\\end{align*}\nwhere $u,v\\in\\mathbb Z$ and $v\\ne0$. In particular $|z|\\ge d+1$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:five-unit-cubic",
+      "kind": "lemma",
+      "start": 2497,
+      "end": 2500,
+      "statement_sha256": "cae94256d892c5b651a5ec7b985577771ea804115eb6cdb9ee71a67337163af8",
+      "statement": "\\begin{lemma}\\label{sm:five-unit-cubic}\nSuppose $\\{-1,1,c,d\\}$ is a $D(1)$-quadruple, with\n$9\\le C=|c|\\le D=|d|$ and $d\\ne-c$. Then $D>C^3/2$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:bs7-unit-pair",
+      "kind": "lemma",
+      "start": 2523,
+      "end": 2525,
+      "statement_sha256": "41e147dc052c37f94348d845d373ae553ad71ee3857011e8c911181136594416",
+      "statement": "\\begin{lemma}\\label{sm:bs7-unit-pair}\nNo $D(1)$-tuple in an imaginary quadratic integer ring contains $\\{-1,1\\}$ and four further entries.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:bs7-eisenstein",
+      "kind": "lemma",
+      "start": 2620,
+      "end": 2622,
+      "statement_sha256": "504c20a37a837fea3724471214aefb15f43445dcbb9892b76cf66a4e5d080e3e",
+      "statement": "\\begin{lemma}\\label{sm:bs7-eisenstein}\nA $D(1)$-tuple containing the pair in~\\eqref{sm:bs7-exceptional-pair} has at most four entries.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:five-two-small-four-large",
+      "kind": "proposition",
+      "start": 2648,
+      "end": 2650,
+      "statement_sha256": "b6149d8b60137729575fccc2beb41f7daa60279fbd40544457d63421b01e0390",
+      "statement": "\\begin{proposition}\\label{sm:five-two-small-four-large}\nA $D(1)$-tuple in any imaginary quadratic integer ring cannot contain two entries of modulus below three and four further entries of modulus at least three.\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:six-small-triple-classification",
+      "kind": "lemma",
+      "start": 2662,
+      "end": 2664,
+      "statement_sha256": "396942574af152cd0495157560fd94ef0531841e4886d6e7be0ea1b418f3db48",
+      "statement": "\\begin{lemma}\\label{sm:six-small-triple-classification}\nA $D(1)$-tuple in an imaginary quadratic integer ring has at most three entries of modulus less than $3$. Up to simultaneous negation and conjugation, its small triples are precisely those in Table~\\ref{sm:six-small-triples-table}. The table lists all further nonzero common extensions of each triple with modulus at most $R=10^{40}$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:five-small-anchor-alternative",
+      "kind": "lemma",
+      "start": 2726,
+      "end": 2737,
+      "statement_sha256": "820acb62eea97dbfbee0dc19cafdbb00e8373a82ba25b412a71431671abca31c",
+      "statement": "\\begin{lemma}\\label{sm:five-small-anchor-alternative}\nFix three entries $a,b,s$ of a $D(1)$-tuple with\n$1\\le A\\le B\\le S<3$. Let $v,e$ be two further entries with\n$1000\\le V=|v|\\le E=|e|$. Their coherent form satisfies\n\\[\n \\begin{cases}\n  5V^2<E<405V^2,&L_3(v,e)=0,\\\\\n  E>V^5/100,&L_3(v,e)\\ne0.\n \\end{cases}\n\\]\nIn particular, $E>5V^2$ in either case.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "sm:five-three-small",
+      "kind": "proposition",
+      "start": 2771,
+      "end": 2774,
+      "statement_sha256": "8179601663acb8dddfafd807a34c801f7ed69e271560a55e13026c61a0fea467",
+      "statement": "\\begin{proposition}\\label{sm:five-three-small}\nA $D(1)$-tuple in an imaginary quadratic integer ring containing\nthree entries of modulus less than $3$ has at most five entries.\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "prop:pr-H2",
+      "kind": "proposition",
+      "start": 3044,
+      "end": 3049,
+      "statement_sha256": "631a10ffbc3a5cd4c640a76e41820f9fa0e4aa8f1eab5fe1f2d40a83f6284f44",
+      "statement": "\\begin{proposition}\\label{prop:pr-H2}\nIn the one-small-entry branch, every hypothetical sextuple satisfies\n\\[\n N(a)=1,\\ B<8,\\qquad\\hbox{or}\\qquad N(a)=2,\\ B<4.\n\\]\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "lem:pr-one-three",
+      "kind": "lemma",
+      "start": 3148,
+      "end": 3152,
+      "statement_sha256": "e9f2ae43704687e1503e5b586f38d8368e36729e07a687b1db5dc90fce1b5fb5",
+      "statement": "\\begin{lemma}\\label{lem:pr-one-three}\nEvery common extension of $\\{1,3\\}$ in the full integer ring of an\nimaginary quadratic field is rational. A $D(1)$-tuple containing\n$1,3$ and a negative entry has at most four elements.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "unlabelled_35",
+      "kind": "lemma",
+      "start": 3185,
+      "end": 3189,
+      "statement_sha256": "5ec49220de0be7ed89c0748c45d60b38dbd472037d45faff03f77c582d178aae",
+      "statement": "\\begin{lemma}\nUnder Proposition~\\ref{prop:pr-H2}, either the first pair is\n$(1,3)$ up to simultaneous negation, or the field has absolute\ndiscriminant $\\Delta\\le24$.\n\\end{lemma}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "unlabelled_36",
+      "kind": "proposition",
+      "start": 3361,
+      "end": 3364,
+      "statement_sha256": "abc2a5bcc4fe8c4ec9cbe3cbdbcd67b1ab54c5fbc342085b5fa5c0eb77119603",
+      "statement": "\\begin{proposition}\nNo ordered sextuple whose first pair is $(1,3)$ or one of the pairs in\nTable~\\ref{tab:pr-forty-pairs} has $S\\ge15$.\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    },
+    {
+      "id": "prop:one-small",
+      "kind": "proposition",
+      "start": 3837,
+      "end": 3840,
+      "statement_sha256": "a29330db46038ffe583d505358e9445a4b5e28afbcaed8db087da508690f192d",
+      "statement": "\\begin{proposition}\\label{prop:one-small}\nA $D(1)$-tuple with exactly one entry of modulus less than three has\nat most five elements.\n\\end{proposition}",
+      "status": "FROZEN; current source unchanged; editorial disposition pending"
+    }
+  ]
+}

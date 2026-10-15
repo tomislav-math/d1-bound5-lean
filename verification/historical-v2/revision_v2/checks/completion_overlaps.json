@@ -1,0 +1,187 @@
+{
+  "source": "output/D1_bound5-v2.tex",
+  "sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "checks": 103,
+  "large_15_junctions": [
+    {
+      "junction": "start Q",
+      "quotient_at_3": "6586869097972010808/378125",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {}
+      },
+      "condition": "all"
+    },
+    {
+      "junction": "Q N2",
+      "quotient_at_3": "11017205585856/240160025",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {}
+      },
+      "condition": "all"
+    },
+    {
+      "junction": "N2 P1",
+      "quotient_at_3": "125492857376391/400100",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {}
+      },
+      "condition": "all"
+    },
+    {
+      "junction": "N2 P2",
+      "quotient_at_3": "13943650819599/400100",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {}
+      },
+      "condition": "all"
+    },
+    {
+      "junction": "P1 N3",
+      "quotient_at_3": "1721438372790000/7630551161",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 2,
+          "B": -4
+        }
+      },
+      "condition": "S>=B^2"
+    },
+    {
+      "junction": "P1 A3",
+      "quotient_at_3": "68857534911600/91226801",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 2,
+          "B": -2
+        }
+      },
+      "condition": "S>=B"
+    },
+    {
+      "junction": "A3 M",
+      "quotient_at_3": "759664127668260285549984375/1635155310656",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "B": 8,
+          "S": -4
+        }
+      },
+      "condition": "S<=B^2"
+    },
+    {
+      "junction": "M N3",
+      "quotient_at_3": "984524709458065330072779750000/18320953337561",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {}
+      },
+      "condition": "all"
+    },
+    {
+      "junction": "N3 A4",
+      "quotient_at_3": "650554972639210944/844113475625",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 6,
+          "B": -18
+        }
+      },
+      "condition": "S>=B^3"
+    },
+    {
+      "junction": "N3 N3bs",
+      "quotient_at_3": "28676360604019453098510974976000000/373897006889",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "B": 6,
+          "S": -2
+        }
+      },
+      "condition": "S<=B^3"
+    },
+    {
+      "junction": "N3bs A4",
+      "quotient_at_3": "1224133953984/844113475625",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {}
+      },
+      "condition": "all"
+    },
+    {
+      "junction": "A4 O4",
+      "quotient_at_3": "4065968578995068400000000/1130183471249",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 12,
+          "B": -12
+        }
+      },
+      "condition": "S>=B"
+    },
+    {
+      "junction": "O4 A5",
+      "quotient_at_3": "279726730476641517802881024/320706496690790441",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 12,
+          "B": -12
+        }
+      },
+      "condition": "S>=B"
+    },
+    {
+      "junction": "A5 O5",
+      "quotient_at_3": "13065666800206363318009062973440000000000/136752200021129",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 18,
+          "B": -18
+        }
+      },
+      "condition": "S>=B"
+    },
+    {
+      "junction": "O5 O6",
+      "quotient_at_3": "11470544241607781239404389990400/55378990091201",
+      "discarded_factor": {
+        "coefficient": "1",
+        "powers": {
+          "S": 18,
+          "B": -18
+        }
+      },
+      "condition": "S>=B"
+    }
+  ],
+  "fixed_13_junctions": [
+    "start Q",
+    "Q N2",
+    "N2 P1",
+    "N2 P2",
+    "P A3",
+    "A3 M",
+    "M N3",
+    "N3 N3bs",
+    "N3bs A4",
+    "A4 O4",
+    "O4 A5",
+    "A5 O5",
+    "O5 O6"
+  ],
+  "retained_gap_coefficient": "16405041495117/40000000000",
+  "P_residual_at_1": "65233/28416",
+  "critical_all_large_quotient": "1224133953984/844113475625"
+}

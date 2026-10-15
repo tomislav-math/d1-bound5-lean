@@ -1,0 +1,739 @@
+D1_bound5-v1 — FRESH MATHEMATICAL AND EDITORIAL REVIEW
+15 October 2026
+REVIEW ONLY. NONE OF THE PROPOSALS BELOW HAS BEEN APPLIED.
+
+Authoritative manuscript: upload/D1_bound5-v1(1).tex, 3,969 source lines.
+SHA-256: 74582db5fd0ad43195a3ea235cfd324813f04e3d0cb82387a9930b7c4f26c228
+Governing prompt: upload/Pasted text(6).txt.
+Prompt SHA-256: c74d2f769255ae2153c21c6767ed5d46d335d3a7b3df50d12d3bf45ad318f65b
+
+OUTCOME AND SCOPE
+
+The complete current manuscript was read afresh by the lead reviewer and by
+six additional reviewers before their findings were finalized. Detailed scopes
+were rotated relative to the previous audit. The main proof was reconstructed
+through its determinant, interpolation, approximation, small-entry, reduction
+and final-completion dependencies. New independent programs reproduced the
+finite searches and the printed numerical data. Earlier logs were not used as
+substitutes for these checks.
+
+No unresolved substantive mathematical objection remains in this review.
+There is one definite local wording error about a complex boundary-value jump
+(P01). Its subsequent estimate is correct. A proved strengthening of Lemma 2.5
+allows a substantial simplification of Section 6 (P02). The other proposals
+are clarifications or editorial choices. This is an internal adversarial audit,
+not a formal proof-assistant certificate or an external referee's endorsement.
+The executed finite checks substantiate specific calculations. The general
+analytic arguments were reviewed separately and are recorded in the claim
+ledgers included with the verification package.
+
+The unchanged source was freshly compiled to a 59-page PDF. There were no
+LaTeX warnings, undefined references, or overfull/underfull boxes in that build.
+All 59 rendered pages were visually inspected. One short heading continuation
+is worth fixing (P12). The preamble uses standard packages and no custom .sty
+file. There is no proposed change of document class, font, margins or packages.
+
+There are fourteen individually selectable proposals below. P02 is one
+connected mathematical change: its upstream proof and every downstream change
+must be accepted together. All quoted replacement manuscript text is English.
+Line numbers and printed statement numbers refer to the unchanged v1 input.
+
+P01. Correct the description of the branch-cut jump
+
+Location: Section 5.2, lines 1525–1527, immediately after the finite-family
+determinant formula (5.10), before the beta-integral estimate.
+Status: Definite local mathematical wording error. No change to the estimate.
+Issue: The two boundary values of the numerator have the same modulus. Their
+difference, rather than the difference of their moduli, has modulus 2t^{k+1/2}.
+Reason: These are different mathematical assertions. The following integral
+already uses the correct jump, so no later bound or theorem changes.
+Proposed action: Replace the sentence containing “differ in modulus” by
+
+  The large-circle contribution vanishes, since $P>k+1/2$, and the
+  difference of the two boundary values of the numerator has modulus
+  $2t^{k+1/2}$.
+
+P02. Strengthen the fourth-entry estimate and simplify Section 6
+
+Location: Lemma 2.5 and its proof, lines 387–509; Proposition 6.1 proof,
+lines 1910–2083.
+Status: Recommended, proved mathematical improvement. The present proof is valid.
+Issue: Section 6 uses T>2ABS and retains an additional estimate involving
+\mathcal Q^2\Phi to pass one interval comparison. The same determinant
+calculation already gives T>3ABS when A>=3. The resulting stronger common
+gap makes that extra estimate unnecessary.
+Reason: This removes a maximization argument and several local constants
+without introducing a new construction, search, or named result. Improving the
+auxiliary constant is useful here because it shortens the proof of the main
+theorem. It does not improve the bound of five itself.
+
+Proof of the strengthening:
+The determinant estimate in Lemma 2.5 requires AB>5, not A<3. The latter
+condition is used only to choose the lower endpoint 2/3 in its last step.
+For A>=3, Lemma 2.3 already gives tau=T/(ABS)>2. In the same positive
+majorant take alpha=B_0=3, so k_1=k_2=65/126. Exact substitution gives
+
+  F(2) = 27298839409/40831674912 < 7/10,
+  F(3) = 57530072833/61247512368 < 19/20.
+
+The coefficient of 1/tau is positive. Convexity excludes 2<tau<=3 because
+then F(tau)<1, contrary to the nonzero integral determinant. Thus T>3ABS.
+The existing weaker Lemma 2.3 remains the bootstrap, so the argument is not
+circular. The existing five small-first-entry cases of Lemma 2.5 are retained.
+
+With c_*=(9999/10000)(200/19)^2 and mu=51051/400000, the retained gap gives
+
+  C > 3^5 c_* (1/8-mu/81)^2 A^7 B^5 S^3
+    = (16405041495117/40000000000) A^7 B^5 S^3
+    > 400 A^7 B^5 S^3.
+
+Use K=400 and the uniform residual R_bs=35/32. At the previously exceptional
+N_{3,bs} to A_4 comparison the sufficient quotient becomes
+
+  K^2 3^14 / (16 R_bs^2 M_4^2 h)
+    = 1224133953984/844113475625 > 7/5,
+
+where M_4=166000 and h=4001/3999. All eighteen Section 6 comparisons
+were checked exactly with the new constant. This is their smallest value.
+The ordinary infinite-tail comparison also passes.
+
+Proposed action:
+(a) Extend the existing Lemma 2.5, with the heading “Fourth-entry gaps”, to
+    include A>=3 and T>3ABS. Insert the short convexity argument above into
+    its existing proof. Do not create a separate corollary.
+(b) Replace the opening Section 6 gap calculation by the uniform K=400 bound.
+(c) Delete the Section 6 paragraph “A bound for \mathcal Q^2\Phi” and its
+    phase-dependent secondary gap. Use R_bs=35/32 in that section.
+(d) Update the one exceptional table row, its exact comparison, and the
+    ordinary-tail coefficient. The other branching choices are retained.
+(e) Retain the separate distance estimates in Sections 8–9. They are still
+    used there. No abstract, main theorem or bibliography change follows.
+
+Appendix A and agents/P02_combined.diff in the verification package give the
+complete exact, source-guarded replacement text. The patch is UNAPPLIED.
+Independent evidence: structural_v1_exact.py, structural_v1_algebra.py,
+completion_v1_all_large.py, and root_stronger_gap.py.
+
+P03. Explain the weakened logarithmic comparison
+
+Location: Proof of Lemma 7.4, lines 2348–2350.
+Status: Recommended clarification. The existing inequality is correct.
+Issue: The phrase “The difference” uses the weaker lower bound 8s-3 without
+stating that the preceding constant 400 has been replaced by 1000.
+Reason: An explicit short step lets the reader recover the exact displayed
+difference and the margin 1/375 without guessing which bound was subtracted.
+Proposed action: Replace that three-line passage by
+
+  If $s=\log_{10}S\ge49$, then $400<10^3$ gives
+  $\log_{10}D>8s-3$. This contradicts
+  \eqref{sm:five-uniform-continuous}, since
+  $(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing
+  and equals $1/375$ at $49$.
+
+P04. Name the six entries in the common interval calculation
+
+Location: Section 7.2, line 2276, before the hypotheses displayed as (7.4).
+Status: Recommended clarification of notation.
+Issue: The current setup names only moduli, while pq appears immediately
+afterward. “Interpolation modulus” is an unnecessary local description.
+Reason: Naming the entries makes the use of the earlier interpolation lemmas
+and the ordering completely explicit.
+Proposed action: Replace the introductory sentence by
+
+  Let $a,b,s,t,p,q$ be six distinct tuple entries, with moduli
+  $A\le B\le S\le T\le P\le Q$. Assume
+
+P05. Spell out the full-ring parity step
+
+Location: Proof of Lemma 8.2, lines 3239–3240, “Full-ring parity makes k an integer.”
+Status: Optional clarification. No missing hypothesis or gap was found.
+Issue: The parity argument is compressed at the precise point where the proof
+must cover both odd and even fundamental discriminants.
+Reason: Two elementary cases make that full-ring coverage easy to inspect.
+Proposed action: Replace that sentence by
+
+  If $\Delta$ is odd, then $e\equiv f$ and $g\equiv h\pmod2$.
+  If $\Delta$ is even, then $e$ and $g$ are even.
+  In either case $k$ is an integer.
+
+Indeed k=(eh-fg)/2, so both cases give the needed even numerator.
+
+P06. Clarify the local approximation terminology
+
+Location: Lines 406–408, 524–526, 1967–1985, 2011, 2070 and 2085–2087.
+Status: Recommended local exposition improvement, independently selectable
+from P02 except where P02 already removes the old passage.
+Issue: Several local labels describe the draft rather than identify a matrix,
+an estimate, or an endpoint comparison. “Anchor” is repeatedly used before
+being explicitly identified with the fixed entries.
+Reason: The replacements identify the actual objects while retaining the
+necessary common root choices and the useful family labels in the tables.
+Proposed action: Use these exact local replacements, with no global renaming.
+
+(i) Replace “The coherent integral root matrix of order four is nonsingular
+by the even-dimensional congruence above. We estimate its determinant more
+closely.” by
+
+  The $4\times4$ integral matrix constructed above is nonsingular by
+  the same congruence argument. We now sharpen the determinant estimate.
+
+(ii) After the assertion R_i belongs to O_K, replace “These choices, made
+coherently for all anchors, define” by
+
+  We call the fixed entries $a_1,\ldots,a_m$ the anchors.
+  With the common branch choices above, define
+
+(iii) Replace “In particular the ordinary all-order construction has its
+strict C>4B, AC>1000 hypotheses.” by
+
+  In particular, the two-entry construction in
+  Proposition~\ref{lem:ordinary-all-orders} applies because
+  $C>4B$ and $AC>1000$.
+
+(iv) Replace the sentence assigning the adaptive and universal rows by
+
+  We use \eqref{eq:ff-P} when $S\ge2B$ and
+  \eqref{eq:ff-P0} when $S<2B$.
+
+(v) Replace \paragraph{All junctions.} by
+    \paragraph{Overlap of consecutive intervals.}
+    Replace \paragraph{Coverage and the infinite tail.} by
+    \paragraph{Exclusion of all remaining values of $D$.}
+
+(vi) Replace the sentence about the ordinary consecutive-overlap quotient by
+
+  The ratio of the upper endpoint of $O_j$ to the lower endpoint of
+  $O_{j+1}$ is multiplied by $(R_2/H_2)^2$ when $j$ increases by one.
+
+If P02 is declined, also replace “In addition to all the approximation guards,
+it gives” by “Besides the size assumptions needed for the approximation
+estimates, it gives”. Replace “The b,s residual retains its actual anchor
+distance” by “For the pair $b,s$, we retain the factor involving $|b-s|$ in the
+residual bound”, and “The exceptional phase junction uses the second bound”
+by “The overlap from $N_{3,bs}$ to $A_4$ uses the second bound”. P02 already
+replaces or deletes these passages, so they must not be reintroduced afterward.
+
+P07. Remove revision-history notation from residual constants
+
+Location: Section 8 parameter table, lines 2982–2989, and formulas at
+3167–3169 and 3572–3574.
+Status: Recommended notation improvement.
+Issue: R^{old} and R_k^{old} describe drafting history. The corresponding
+constants are already denoted R_* in the finite-family parameter table.
+Reason: The same constants should have the same mathematical name. In
+particular, k alone does not distinguish the two different families of order 3.
+Proposed action: Use R_* for the table header and replace R_k^{old} by R_*
+in those two formulas. Immediately after the parameter table add
+
+  Here $R_*$ is the residual constant for the corresponding family
+  in Table~\ref{tab:ff-parameters}.
+
+All five numerical values remain exactly as printed.
+
+P08. Use one notation for the relabelled N_3 family
+
+Location: Section 8, Tables 4–5 and the adjoining interval chain.
+Status: Recommended notation consistency improvement.
+Issue: N_3^{bs} and N_{3,bs} name the same family in different sections.
+Reason: A reader should not have to decide whether a superscript introduces
+a second construction.
+Proposed action: Replace every N_3^{bs} in Section 8 by N_{3,bs}. Retain all
+definitions, coefficient values and interval endpoints.
+
+P09. Remove unused equation numbers and source declarations
+
+Location: The complete inventory below.
+Status: Recommended economy change for the displayed equations, following
+the requested numbering policy. Removal of invisible source labels is optional.
+Issue: Twenty-four displayed equations have labels with no reference-command
+use anywhere in the unchanged source. Seven section labels, three statement
+labels and the macro \NN are also unused.
+Reason: Unused equation numbers distract from the formulas that actually need
+cross-references. The displayed mathematical content itself should be retained.
+Proposed action: For each listed single equation environment, use equation*
+and delete its unused label, preserving all contents and punctuation. If an
+accepted edit introduces an actual reference to one, retain that number instead.
+Do not remove statement numbering merely because a statement label is unused.
+
+  line  527: eq:coherent-form
+  line 1380: eq:ff-zcomparison
+  line 1518: eq:ff-two-det
+  line 1535: eq:ff-beta
+  line 1592: eq:ff-two-inequality
+  line 1608: eq:ff-two-endpoints
+  line 1652: eq:ff-pzero
+  line 1662: eq:ff-pcancel
+  line 1693: eq:ff-pdet
+  line 1731: eq:ff-pdegrees
+  line 1843: eq:ff-qguards
+  line 1895: eq:ff-Q
+  line 2277: sm:six-V-hypotheses
+  line 2300: sm:six-V-constants
+  line 2343: sm:five-two-small-lower
+  line 2399: sm:five-bounded-four-lower
+  line 2982: eq:pr-family-parameters
+  line 3167: eq:pr-ratio-residual
+  line 3477: eq:pr-pair-defect
+  line 3552: eq:pr-fixed-M
+  line 3572: eq:pr-fixed-R
+  line 3578: eq:pr-fixed-Rp
+  line 3698: eq:fixed56-residual
+  line 3767: eq:fixed56-cutoff
+
+
+The optional source-only deletions are \newcommand{\NN}{\mathrm N} at line 15,
+the unused section labels sec:structural-growth, sec:coherent-interpolation,
+sec:finiteforms, sec:all-large, sec:small-entries, sec:pair-reduction and
+sec:fixed56, and statement labels lem:ordinary-all-orders, lem:pr-field24,
+prop:pr-S15. Keep lem:ordinary-all-orders if P06 is accepted, because P06
+adds a useful reference to it. Retain every theorem/proposition number.
+
+P10. Remove the remaining prose semicolons
+
+Location: The sixteen exact cases below, including captions.
+Status: Requested style preference. No mathematical error.
+Issue: The current source still contains sixteen prose semicolons.
+Reason: The user's governing prompt explicitly asks to avoid them. Each
+replacement preserves the mathematical assertion.
+Proposed action: Make the following local changes. Mathematical punctuation
+inside the displays at lines 1643 and 1690 is outside this proposal.
+
+| Location | Old local text | Exact replacement |
+|---|---|---|
+| 1823–1824 | “leading absolute coefficient sums are $15/128$ and $25/16$; their original integer coefficient sums are $876$ and $2676$.” | “leading absolute coefficient sums are $15/128$ and $25/16$. Their original integer coefficient sums are $876$ and $2676$.” |
+| 2072–2073 | “If $S\ge B^2$, continue through $N_3$; otherwise continue through $A_3,M,N_3$.” | “If $S\ge B^2$, continue through $N_3$. Otherwise continue through $A_3,M,N_3$.” |
+| 2075 | “If $S\ge B^3$, continue to $A_4$; otherwise use $N_{3,bs},A_4$.” | “If $S\ge B^3$, continue to $A_4$. Otherwise use $N_{3,bs},A_4$.” |
+| 2605 | “is rational only when one coordinate vanishes; integrality of a purely imaginary root forces” | “is rational only when one coordinate vanishes. Integrality of a purely imaginary root forces” |
+| 3040 | “Sufficient overlap quotients; each must exceed one.” | “Sufficient overlap quotients, each required to exceed one.” |
+| 3063 | “and $T>2BS$; the others use” | “and $T>2BS$. The others use” |
+| 3071–3072 | “$C^2/(16R_{bs}^2M_4^2B^{10}S^6h)$; substitution gives” | “$C^2/(16R_{bs}^2M_4^2B^{10}S^6h)$. Substitution gives” |
+| 3073 | “The remaining entries follow by the same divisions; all substitutions” | “The remaining entries follow by the same divisions. All substitutions” |
+| 3078 | “to $N_3$; otherwise use $A_3,M,N_3$.” | “to $N_3$. Otherwise use $A_3,M,N_3$.” |
+| 3079 | “to $A_4$; otherwise use $N_3^{bs},A_4$.” | “to $A_4$. Otherwise use $N_{3,bs},A_4$.” |
+| 3189 | “polynomials at $x=1/q$; their maximum is strictly below” | “polynomials at $x=1/q$. Their maximum is strictly below” |
+| 3240 | “give $3ef=gh$ and $X+\Delta V=8$; multiplication gives” | “give $3ef=gh$ and $X+\Delta V=8$. Multiplication gives” |
+| 3279 | “$(\pm1\pm\sqrt{-31})/2$; they give” | “$(\pm1\pm\sqrt{-31})/2$. They give” |
+| 3334 | “condition; no arbitrary unit multiplication is used.” | “condition. No arbitrary unit multiplication is used.” |
+| 3339 caption | “The forty first-pair representatives; coordinates mean $x+y\omega_d$.” | “The forty first-pair representatives. Coordinates mean $x+y\omega_d$.” |
+| 3842 caption | “Pair indices refer to Table~\ref{tab:pr-forty-pairs}; coordinates mean $u+v\omega$.” | “Pair indices refer to Table~\ref{tab:pr-forty-pairs}. Coordinates mean $u+v\omega$.” |
+
+
+The line 3079 replacement in the table uses N_{3,bs} only if P08 is also
+accepted. Otherwise preserve N_3^{bs} there and change only the punctuation.
+
+P11. Simplify four prose colons
+
+Location: Lines 206–207, 3242–3243, 3257–3258 and 3315–3316.
+Status: Minor style improvement consistent with the requested sparse punctuation.
+Issue: Four explanatory clauses can be stated directly.
+Reason: This improves sentence flow without changing any numerical cutoff,
+hypothesis or formula.
+Proposed action: Use the exact replacements below. The valid cutoff Delta<=64
+is deliberately preserved.
+
+| Location | Old | Exact replacement |
+|---|---|---|
+| 206–207 | “It suffices to enumerate the squarefree $q$ with $\Delta\le64$:” | “It suffices to enumerate the following squarefree values of $q$ with $\Delta\le64$.” |
+| 3241–3243 | “Moreover $V=3f^2X/g^2$, so $X,V>0$, and $k\ne0$: otherwise $g^2=3e^2$, impossible for nonzero integers.” | “Moreover $V=3f^2X/g^2$, so $X,V>0$. Also $k\ne0$, since $k=0$ would give $g^2=3e^2$, which is impossible for nonzero integers.” |
+| 3257–3258 | “Such a positive entry cannot coexist with $-x$: the equation $px-1=2w^2$ has an odd left side.” | “Such a positive entry cannot coexist with $-x$, because the equation $px-1=2w^2$ has an odd left side.” |
+| 3315–3316 | “This root range is exhaustive: $N(r)=|ab+1|\le AB+1<9$ in the first case, and $AB+1\le\sqrt{30}+1<7$ in the second.” | “The root range is exhaustive because $N(r)=|ab+1|\le AB+1<9$ in the first case and $AB+1\le\sqrt{30}+1<7$ in the second.” |
+
+The first row preserves the valid cutoff 64 and the existing list. No numerical tightening is part of the punctuation proposal.
+
+
+P12. Shorten the Section 6 heading
+
+Location: Section 6 heading, source line 1901, printed page 27.
+Status: Recommended minor visual correction.
+Issue: “Exclusion when every entry has modulus at least three” breaks with
+the single word “three” on the second line in the unchanged compiled PDF.
+Reason: A shorter accurate heading removes this conspicuous short continuation
+without manipulating the font, margins or otherwise satisfactory prose.
+Proposed action: Use
+
+  \section{Entries of modulus at least three}
+
+Preserve its label if used. Recheck the line break after any accepted revision.
+No other mandatory page-layout change was found. The sparse last continuation
+of Table 8 is acceptable in a longtable and does not justify compressing its type.
+
+P13. Add exact locators to four introductory citations
+
+Location: Introduction, lines 63–69.
+Status: Optional attribution/readability improvement. Current citations are valid.
+Issue: The references identify works but not the short passages being credited.
+Reason: Precise locators make the attribution easier to verify, especially for
+the preprint and the lecture slides.
+Proposed action:
+
+  \cite{W}       -> \cite[Lemma~3.1]{W}
+  \cite{Cipu25}  -> \cite[pp.~27--30]{Cipu25}
+  \cite{F10}     -> \cite[Theorem~1 and Proposition~2]{F10}
+  \cite{FK11}    -> \cite[Corollary~1.2]{FK11}
+
+The slide locator is the PDF page number. Do not invent a theorem number for
+Cipu–Fujita 2024: its original proof was not accessible during this pass.
+
+P14. State the historical {1,3} result more precisely
+
+Location: Introduction, lines 67–71, the passage beginning “Extensions of
+{1,3} ... were studied”.
+Status: Optional literature-exposition improvement. The current wording is correct.
+Issue: “Were studied” leaves the cited papers' actual conclusion unstated.
+Reason: Stating their conclusion makes the distinction between the subring
+and the full ring explicit. It must not be used to replace the present full-ring
+proof by an unsupported invocation.
+Proposed action: Replace that passage by
+
+  Franu\v{s}i\'c~\cite{F10} proved that $\{1,3\}$ cannot be extended
+  to a Diophantine quintuple in $\mathbb Z[\sqrt{-d}]$ for positive
+  $d\ne2$. Kreso and Franu\v{s}i\'c~\cite{FK11} treated $d=2$.
+  We handle this pair in the full ring of integers using the same
+  approximation estimates as for the other pairs. We do not determine
+  whether the bound of five is attained.
+
+If P13 is accepted, use its locators in these two citations. Preserve the
+preceding sentence about Cipu's slides. No new bibliography entry is needed.
+
+WHAT SHOULD REMAIN
+
+The title and current abstract accurately identify the main theorem. An
+expanded abstract spelling out D(1) is possible, but the present concise
+abstract is satisfactory and no replacement is recommended. Delta is already
+defined globally, so a second definition in Lemma 8.2 is unnecessary. The valid
+Delta<=64 enumeration cutoff in the proof of Lemma 2.2 should also be retained. No global
+replacement of “anchor”, “regular triple” or useful table-family symbols is
+recommended. A large table is not redundant merely because its entries can
+also be regenerated from code. The finite search outputs remain in the article.
+
+Keep the integral r_0 hypothesis in Lemma 7.5. Every application satisfies it.
+Keep the allowances for zero square values, equal moduli and half-integral
+full-ring coordinates. Keep the distinction between integral tuple roots and
+auxiliary analytic square roots. The proof does not assume unique factorization.
+No p-adic continued-fraction algorithm is used, so the prompt's cautions about
+Schneider/Ruban/Browkin algorithms do not generate an issue in this manuscript.
+
+LITERATURE, PRIORITY AND ACCESS LIMITS
+
+All ten citation occurrences and eight bibliography entries were reviewed in
+their exact current contexts. Original relevant passages were inspected in
+seven cited works, including author copies and the exact pinned preprint.
+The published Cipu–Fujita 2024 PDF was inaccessible. Its primary publisher
+abstract explicitly supports the cited full-ring bound 24, including the
+definition that permits zero square values. Its proof was not independently
+reread. Adzaga's author preprint supplies the mathematical bound 42; publication
+metadata independently supplies the volume/year. These access distinctions are
+recorded rather than silently treating an abstract as a full proof.
+
+The Bennett determinant and Jadrijevic–Ziegler contour construction have the
+claimed source passages. The article proves the specializations and integral
+clearing factors that it needs. The cited slides and GitHub text are identified
+as slides and a preprint. They should not be presented as refereed publications.
+
+A targeted fresh search found no primary source already establishing the same
+uniform full-ring bound of five. This is not an exhaustive priority certificate.
+The directly comparable published bound located is24. The main contribution
+is the full-ring bound of five. The determinant identities, approximation
+construction, root-matrix argument and symmetric-pair factorization are
+supporting material with their existing attribution. The paper correctly makes
+no assertion that five is attained. No unrelated new reference is recommended.
+
+One bibliographic discrepancy belongs to the source records: arXiv:1312.5241
+lists authors in one order on its landing page and in the opposite order on
+the v1 PDF. The current manuscript explicitly cites that v1 and follows its
+title page. This is not a reason to mechanically reverse the current entry.
+
+Primary source URLs and relevant locators:
+  Adzaga: https://arxiv.org/pdf/1807.01896v1, Theorem 5.1;
+    https://doi.org/10.1142/S1664360719500206.
+  Bennett: https://personal.math.ubc.ca/~bennett/B-Binom.pdf,
+    printed p.1721; https://doi.org/10.1090/S0002-9947-96-01480-8.
+  Cipu–Fujita: https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/blms.12929.
+  Cipu slides: https://web.math.pmf.unizg.hr/~congress/Dubrovnik25/Slides-NT-25/Cipu.pdf,
+    PDF pp.27–30.
+  Franusic: https://cs.uwaterloo.ca/journals/JIS/VOL13/Franusic/franusic4.pdf,
+    Theorem 1 and Proposition 2.
+  Kreso–Franusic: https://arxiv.org/pdf/1312.5241v1, Corollary 1.2.
+  Jadrijevic–Ziegler: https://mapmf.pmfst.unist.hr/~borka/files/PellEqIJNTV3_kopija.pdf,
+    Section 7; https://doi.org/10.1142/S1793042106000735.
+  Wildner Fraga: https://raw.githubusercontent.com/natanaelwf/Solving-Open-Problems/768dda32edc7166f9dd094b419df250b1e008531/dujella-problems-1.12-1.13/README.md,
+    Section 3, Lemma 3.1.
+
+The exact citation ledger, bibliography checks, extra search results and
+source access limits are in agents/literature_style.md and its source index.
+Full copyrighted external source texts are not distributed in this package.
+
+CONTROLS AND COVERAGE
+
+The following are substantive outputs, not a count of repeated checks:
+
+* Structural estimates: finite exceptional search independently reproduced
+  90 compatible pairs, 118 regular completions, 16 penultimate candidates,
+  six symmetry classes, zero survivors. Determinant and interpolation
+  identities were independently reconstructed.
+* Approximation: all five finite-family determinants and cancellations,
+  both quadratic determinants, adaptive leading/tail polynomials and the
+  linear four-entry determinant were checked exactly. General-order
+  determinant probes are explicitly distinguished from its general proof.
+* Small entries: all 48 nondegenerate graphs reproduced, with 36,931 vertices,
+  36,854 edges and no triangles. All 24 small triples, ten orbits and ten
+  descent closures reproduced. The separate Pell computation covers 1,016
+  fields, 409 nonempty graphs, 19,612 vertices, 9,806 edges and no triangles.
+* Reduction: all 40 representatives from 146 pairs, all 57 candidate thirds
+  and 56 retained triples reproduced. A separate enumeration cross-checked
+  42,800 square decisions. The uniform 59/20 determinant bound passed.
+* Coefficients and intervals: the 200 fixed-pair coefficients, 56 specialized
+  coefficients and 25 regional coefficients were regenerated. All 75 regional
+  and615 fixed-pair overlap quotients passed exact rational checks. The
+  existing Section6 comparisons and the proposed 18 new comparisons passed.
+* Completion: every displayed triple cutoff, the bounded fourth-entry search,
+  and the exceptional rational pair were independently reproduced. All
+  final-case dependencies and the exhaustion of zero/one/two-or-more small
+  entries were checked.
+
+The six detailed reports are structural.md, approximation.md, completion.md,
+small.md, reduction.md and literature_style.md. Their per-claim ledgers record
+the proof reasoning, exceptional cases, cleared objections and scope limits.
+The lead reviewer also read the whole source and independently checked the
+new gap coefficient and critical interval comparison.
+
+The mathematical check outputs carry the input SHA-256. The package manifest identifies
+the delivered scripts, results and reports by content hash. The included
+verify_review.py checks integrity and can rerun the new calculations. Its
+default evidence check does not pretend to rerun those calculations. The
+full mode does. See README.txt for the exact commands and dependency.
+
+The original article remains byte-for-byte unchanged. Proposed edits are
+review material only. If accepted edits are applied in a later iteration,
+the resulting source will require a fresh compilation, reference/notation
+scan, PDF inspection and independent check of the actual revised proof.
+
+
+APPENDIX A — EXACT UNAPPLIED P02 EDITS
+
+
+P02 edit 1: unchanged source lines 387–387
+OLD:
+\subsection{Fourth-entry gaps with a small first entry}
+REPLACEMENT:
+\subsection{Fourth-entry gaps}
+
+
+P02 edit 2: unchanged source lines 390–393
+OLD:
+Let an ordered quadruple have \(1\le A<3\le B\le S\le T\).
+In each row of the following table, the first two columns imply
+\(T>tABS\). The number \(\alpha\) is a rational lower bound for \(A\),
+used in the proof.
+REPLACEMENT:
+Let an ordered quadruple have \(1\le A\le B\le S\le T\), with
+\(B\ge3\). If \(A\ge3\), then \(T>3ABS\).
+If \(A<3\), the first two columns of each row in the following
+table imply \(T>tABS\). The number \(\alpha\) is a rational lower
+bound for \(A\), used in the proof.
+
+
+P02 edit 3: unchanged source lines 450–450
+OLD:
+In every row \(AB>5\). Set
+REPLACEMENT:
+In every case considered here, \(AB>5\). Set
+
+
+P02 edit 4: unchanged source lines 472–474
+OLD:
+By Lemma~\ref{lem:tail-irregular},
+\(\tau=T/(ABS)>2/A>2/3\).
+For fixed \(\tau>0\), substituting \(T=\tau ABS\) and \(S\ge B\) gives
+REPLACEMENT:
+Put \(\tau=T/(ABS)\). For fixed \(\tau>0\), substituting
+\(T=\tau ABS\) and \(S\ge B\) gives
+
+
+P02 edit 5: unchanged source lines 486–488
+OLD:
+In these positive expressions, replace \(A,B\) by the rational lower
+bounds \(\alpha,B_0\) from the table. From now on, evaluate \(k_1,k_2\),
+and hence \(K_1,L_1,Q_1\), at \(A=\alpha,B=B_0\). Let
+REPLACEMENT:
+In these positive expressions, replace \(A,B\) by rational lower
+bounds \(\alpha,B_0\). Evaluate \(k_1,k_2\), and hence
+\(K_1,L_1,Q_1\), at \(A=\alpha,B=B_0\). Let
+
+
+P02 edit 6: unchanged source lines 497–499
+OLD:
+ F(\tau)=2K_1\tau+L_1P_0+\frac{J_0}{\tau}.
+\]
+For all five explicitly listed triples
+REPLACEMENT:
+ F(\tau)=2K_1\tau+L_1P_0+\frac{J_0}{\tau}.
+\]
+If \(A\ge3\), take \(\alpha=B_0=3\).
+Lemma~\ref{lem:product-four} gives \(\tau>2\), while direct rational
+substitution gives \(F(2)<7/10\) and \(F(3)<19/20\).
+Convexity excludes \(2<\tau\le3\).
+
+If \(A<3\), use the lower bounds in the table.
+Lemma~\ref{lem:tail-irregular} gives \(\tau>2/A>2/3\).
+For all five explicitly listed triples
+
+
+P02 edit 7: unchanged source lines 1910–1963
+OLD:
+Lemma~\ref{lem:product-four} gives \(T>2ABS\) and hence \(AT>162\).
+We may therefore apply the row \(H=48,\lambda=19/200\) of
+Lemma~\ref{lem:retained-gap}. In addition to all the approximation guards,
+it gives
+\begin{equation}\label{eq:integrated-6}
+C>\frac{A^2T^5}{S^2},\qquad
+ D>\mathcal G:=\frac{A^2C^7}{S^2T^4}.
+\end{equation}
+Put
+\[
+ \mathcal Q=\frac{|(a-b)(a-s)(b-s)|}{BS^2},\qquad
+ c_*=\frac{9999}{10000}\left(\frac{200}{19}\right)^2.
+\]
+The retained inequality and \(T>2ABS\) yield
+\[
+ C>32c_*\left(\frac1{\mathcal Q}-\frac{\mu}{A^2B^2}\right)^2
+                         A^7B^5S^3.
+\]
+Since \(A^2B^2\ge81\) and \(0<\mathcal Q\le8\),
+\[
+ 32c_*\left(1-\frac{8\mu}{81}\right)^2
+ =\frac{5468347165039}{1582031250}>3456.
+\]
+Consequently, with \(K=54\) and \(\beta=3456\),
+\begin{equation}\label{eq:large-gap}
+ C>K A^7B^5S^3,\qquad
+ C>\frac{\beta}{\mathcal Q^2}A^7B^5S^3.
+\end{equation}
+The second estimate will be retained at one junction.
+
+\paragraph{A bound for $\mathcal Q^2\Phi$.}
+Write \(u=A/B,\ v=B/S,\ w=|b-s|/S\), and
+\(\Phi=\max(w^6,vw^5)\). The identities
+\[
+ (a-b)(a-s)=a^2-a(b+s)+bs,\qquad
+ |b+s|^2=2B^2+2S^2-|b-s|^2
+\]
+give
+\[
+ \mathcal Q\le w[1+u^2v+u\sqrt{2+2v^2-w^2}]
+ \le w[2+\sqrt{4-w^2}].
+\]
+If \(w\ge v\), substitute \(x=\sqrt{4-w^2}\) to obtain
+\[
+ \mathcal Q^2\Phi\le(2-x)^4(2+x)^6
+ \le F:=\left(\frac85\right)^4\left(\frac{12}{5}\right)^6.
+\]
+Indeed the logarithmic derivative on \((0,2)\) has the sign of
+\(4-10x\), so the maximum occurs at \(x=2/5\).
+If \(w<v\le1\), then \(\mathcal Q\le4w\) and
+\(\mathcal Q^2\Phi\le16vw^7\le16<F\).
+Thus the same bound holds in every case.
+
+
+REPLACEMENT:
+Lemma~\ref{lem:five-frontier-gaps} gives \(T>3ABS\) and hence \(AT>243\).
+We may therefore apply the row \(H=48,\lambda=19/200\) of
+Lemma~\ref{lem:retained-gap}. It gives all the required size conditions and
+\begin{equation}\label{eq:integrated-6}
+C>\frac{A^2T^5}{S^2},\qquad
+ D>\mathcal G:=\frac{A^2C^7}{S^2T^4}.
+\end{equation}
+Put
+\[
+ \mathcal Q=\frac{|(a-b)(a-s)(b-s)|}{BS^2},\qquad
+ c_*=\frac{9999}{10000}\left(\frac{200}{19}\right)^2.
+\]
+The retained inequality and \(T>3ABS\) give
+\[
+ C>3^5c_*\left(\frac1{\mathcal Q}-\frac{\mu}{A^2B^2}\right)^2
+                         A^7B^5S^3.
+\]
+Since \(A^2B^2\ge81\) and \(0<\mathcal Q\le8\),
+\[
+ 3^5c_*\left(\frac18-\frac{\mu}{81}\right)^2
+ =\frac{16405041495117}{40000000000}>400.
+\]
+Consequently, with \(K=400\),
+\begin{equation}\label{eq:large-gap}
+ C>KA^7B^5S^3.
+\end{equation}
+
+
+
+
+P02 edit 8: unchanged source lines 1979–1979
+OLD:
+ \kappa=\frac{3535}{409600},\quad R_{bs}=\kappa\Phi.
+REPLACEMENT:
+ R_{bs}=\frac{35}{32}.
+
+
+P02 edit 9: unchanged source lines 1983–1985
+OLD:
+The \(b,s\) residual retains its actual anchor distance. The adaptive
+row \(P\) is used for \(S\ge2B\), while the universal row \(P_0\)
+is used for \(S<2B\).
+REPLACEMENT:
+The adaptive row \(P\) is used for \(S\ge2B\), while the universal
+row \(P_0\) is used for \(S<2B\).
+
+
+P02 edit 10: unchanged source lines 2015–2016
+OLD:
+The remaining comparisons use $C>KA^7B^5S^3$, except for
+$N_{3,bs}\to A_4$.
+REPLACEMENT:
+The remaining comparisons use $C>KA^7B^5S^3$.
+
+
+P02 edit 11: unchanged source lines 2033–2033
+OLD:
+\(N_{3,bs}\to A_4\)&\(\beta^2A^{14}\)&\(16\kappa^2F^2M_4^2h\)\\
+REPLACEMENT:
+\(N_{3,bs}\to A_4\)&\(K^2A^{14}\)&\(16R_{bs}^2M_4^2h\)\\
+
+
+P02 edit 12: unchanged source lines 2041–2041
+OLD:
+comparisons follow by substituting \(A=B=S=3\), \(K=54,\beta=3456\)
+REPLACEMENT:
+comparisons follow by substituting \(A=B=S=3\), \(K=400\)
+
+
+P02 edit 13: unchanged source lines 2045–2046
+OLD:
+ \frac{\beta^2 3^{14}}{16\kappa^2F^2M_4^2h}
+ =\frac{4003515472412109375}{3611631944665923584}>1.
+REPLACEMENT:
+ \frac{K^2 3^{14}}{16R_{bs}^2M_4^2h}
+ =\frac{1224133953984}{844113475625}>\frac75.
+
+
+P02 edit 14: unchanged source lines 2061–2068
+OLD:
+The exceptional phase junction uses the second bound in
+\eqref{eq:large-gap}. Direct endpoint division requires
+\[
+ C^2>16M_4^2R_{bs}^2h\,B^{10}S^6.
+\]
+It follows from \(C>\beta A^7B^5S^3/\mathcal Q^2\),
+\(R_{bs}=\kappa\Phi\), and \(\mathcal Q^2\Phi\le F\), by the
+displayed rational comparison.
+REPLACEMENT:
+For \(N_{3,bs}\to A_4\), the endpoint quotient is
+\[
+ \frac{C^2}{16M_4^2R_{bs}^2h\,B^{10}S^6}.
+\]
+Substituting \eqref{eq:large-gap} gives the corresponding table entry.
+
+
+P02 edit 15: unchanged source lines 2083–2083
+OLD:
+ \frac{54A^8BS^3}{105}\ge\frac{54\cdot3^{12}}{105}>1.
+REPLACEMENT:
+ \frac{400A^8BS^3}{105}\ge\frac{400\cdot3^{12}}{105}>1.
