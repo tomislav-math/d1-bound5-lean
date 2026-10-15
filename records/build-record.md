@@ -112,3 +112,36 @@ source has yet been run; the earlier clean-checkout receipts are retained
 with their original 40-theorem scope. The current source fingerprint list
 is updated in `proof-source-sha256.txt`. This checked milestone is committed
 with the message "Accept kernel-audited full-ring bridge and irregular growth".
+
+## Direct recovery, 2026-10-15 beginning 19:48 UTC
+
+The existing hourly task was enabled but had reported a generic failure.
+Its prompt was updated, without adding a second task or claiming the unknown
+platform failure was repaired. Actual Mac access was verified. The main
+worktree's preserved finite developments were resumed, and the four analytic
+modules were imported byte for byte from source commit 3a8f9ff.
+
+New targeted commands, each with LEAN_NUM_THREADS=1 and the pinned
+/Users/tp/.elan/bin/lake in /Users/tp/Lean/D1Bound5:
+
+- build D1Bound5.SmallTailData0_1: EXIT 0; generic soundness plus Gaussian
+  explicit-list completeness and full finite checker.
+- build D1Bound5.SmallTailAllData: EXIT 0; all thirty normalized models,
+  including the earlier (0,15) certificate. No certificate hypothesis remains.
+- build D1Bound5.TailIrregular: EXIT 0; complete full-field tail lemma and
+  D>2BC, no auxiliary C>=4 restriction.
+- build D1Bound5.EvenDeterminant: EXIT 0 after explicit matrix-application
+  and mapMatrix coercion repairs. Two harmless style/linter warnings remain.
+
+The initial generic explicit-list proof had a Boolean-coercion elaboration
+error; it was repaired and rebuilt successfully. The first determinant
+attempt also failed elaboration and was superseded by the exit-zero retry.
+No failed attempt is counted as an accepted proof. Raw local logs are in
+local-logs/recovery-20261015T1949/. Current integrated audit/replay results
+will be appended only after their actual completion.
+
+Source and root-import coverage: PASS, 37 modules and 209 explicit theorem
+statements. Most new statements are finite certificate helpers. The exact
+source/configuration hashes are recorded in recovery-source-sha256.txt.
+The original manuscript hash remained unchanged. No independent referee,
+new clean checkout, paid service or Prove2Me mission has been used.

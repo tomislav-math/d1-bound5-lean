@@ -103,3 +103,38 @@ existence of the full integral coordinate models, not an assumed bridge.
 
 The 70-theorem continuation closes the full-ring bridge and the first
 structural growth lemma. The main bound-five theorem remains unproved.
+
+## Recovery continuation: complete tail lemma and even determinant
+
+The earlier milestones above are historical. The full-ring bridge remains
+closed. All thirty finite models and the complete lem:tail-irregular now
+have compiled proofs without an extra unproved certificate assumption.
+Consult recovery validation receipts for the current acceptance gates.
+
+| Declaration / module | Source and exact purpose |
+|---|---|
+| `QuadInt.square_coordinates`, `rootCandidate_complete`, `squareRoot_sound`, `squareRoot_complete`, `hasSquareRoot_iff` | Exact necessary-and-sufficient square test, including zero, at arbitrary input size |
+| `QuadInt.mem_disk_iff` | Exact exhaustive closed norm disk, including zero and boundary |
+| `coordinate_mul_eq_zero`, `regular_completion_cases` | Positive-discriminant domain and BOTH regular completion signs |
+| `smallTailCheck_sound`, `small_tail_discriminant_bound` | Finite-check soundness, complete edge coverage and Delta<=60 |
+| `small_tail_parameter_range` | Normalized parameter rectangle tau=0/1, 1<=nu<=15 |
+| `smallTailCheck_of_explicit_list` | Explicit list coverage plus the Boolean checker implies full `SmallTailCheck` |
+| `tailDisk_t_n_eq`, `tailDisk_t_n_checked`, `smallTailExplicit_t_n` | Kernel-checked disk identities and finite exclusions, for 29 models |
+| `small_tail_015` | Earlier kernel-checked remaining model (0,15) |
+| `smallTailCheck_rectangular` | Unconditional combination of all THIRTY models |
+| `IsD1Tuple.tail_irregular_of_lt_four` | Finite C<4 case transferred to every full imaginary quadratic integer ring |
+| `IsD1Tuple.tail_irregular_and_growth` | Complete lem:tail-irregular: B>=3 => irregular (b,c,d) and D>2BC |
+| `det_identity_plus_two_rank_one` | det(I+J+vv^t)=(1+n)(1+sum v_i^2)-(sum v_i)^2 over any commutative ring |
+| `even_root_matrix_det_sq_char_two` | Even-size root determinant squares to one in characteristic two |
+| `quadraticReductionTwo` | Explicit nontrivial coefficient reduction modulo two |
+| `even_root_matrix_det_ne_zero` | Arithmetic nonsingularity before lem:product-four, every quadratic number field |
+| `even_root_matrix_one_le_norm` | |det(M)|>=1 for imaginary quadratic full integer rings |
+| `rational_integer_square_cases`, `negative_integer_square_trace_zero`, `negative_integer_square_trace_one`, `positive_integer_square_is_integer` | Rational square conditions, with both integral bases |
+| `full_ring_positive_integer_square`, `full_ring_negative_integer_square` | Coordinate rational-square conditions transported to the full rings |
+
+The analytic C>=4 proof modules are byte-identical to their previously
+accepted private-branch source at 3a8f9ff. The explicit-data generator is
+untrusted; Lean separately proves its output's coverage and consequences.
+Most added theorem declarations are finite certificate components, not
+independent large mathematical results. Bennett's all-orders identity,
+analytic determinant size estimates and the main theorem remain OPEN.

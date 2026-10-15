@@ -14,8 +14,10 @@ norms. No bridge assumption is inserted into the final target. See
 ## Analytic and structural arguments
 
 `lem:irregular-growth` and its exact quadratic inequality are now proved
-in every imaginary quadratic full integer ring. Complete `lem:tail-irregular`,
-determinant gap bounds,
+in every imaginary quadratic full integer ring. `lem:tail-irregular` is now compiled in full, including its finite C<4
+case and D>2BC for B>=3. The arithmetic nonsingularity assertion for
+even-dimensional root matrices is also compiled, with its integral-modulus
+lower bound. Complete the analytic determinant size and gap bounds,
 interpolation identities and analytic remainder estimates. The extension-product identity is connected to the norm bound and the
 full real endpoint proof; it is no longer the only completed part of
 `lem:irregular-growth`.
@@ -30,9 +32,12 @@ this dependency or the domain-specific interval estimates.
 
 ## Finite computations and completeness
 
-Prove the exhaustive disk enumeration and full-ring square-test criteria.
-Prove the small-tail classification leading to the six accepted modular
-obstructions; those six obstructions alone do not establish classification.
+The exhaustive disk enumeration and full-ring square-test criteria are now
+proved. The complete small-tail exclusion is proved directly over all
+thirty normalized models, avoiding a symmetry-classification dependency.
+Its list coverage and full Boolean checks have kernel proofs. The six old
+modular obstructions alone were insufficient; the new certificate closes
+that gap. See tail-complete-proof.md and the current validation receipts.
 
 Complete the analytic contraction in `sm:bs7-descent`, its well-founded
 termination, and reverse-chain coverage of the bounded extension sets.

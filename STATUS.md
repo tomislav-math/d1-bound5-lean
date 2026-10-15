@@ -1,59 +1,50 @@
 # Status
 
-2026-10-15. **IN PROGRESS. MAIN THEOREM UNPROVED.**
+2026-10-15. IN PROGRESS. MAIN THEOREM UNPROVED.
 
-## Current accepted local work
+## Latest completed proof compilation
 
-There are 70 explicit proved theorems in nineteen Lean modules, counting
-the root import module. The current integrated build, source-policy check,
-root import-coverage check, transitive axiom audit and kernel replay PASS.
-The axiom audit covers 117 project declarations and permits only
-`propext`, `Classical.choice`, and `Quot.sound`.
+The finite small-tail certificates for ALL thirty normalized coordinate
+models are now unconditional Lean proofs. Explicit lists are proved equal
+to the exhaustive norm-15 disks, and their whole finite check is proved by
+kernel reduction. Python is only an untrusted list generator.
 
-The latest continuation closes the FULL integer-ring coordinate bridge
-for EVERY imaginary quadratic field, including positive squarefree d,
-the exact half-integral branch, and equality of coordinate, algebraic and
-complex squared norms. It transfers the rationality of common extensions
-of {1,3} to all these full rings. The complete `lem:irregular-growth`,
-C>2AB, and the more precise `eq:irregular-quadratic` are now proved.
-See `records/full-ring-bridge.md`, `records/irregular-growth-proof.md`,
-and `records/continuation-checks-015.log`.
+`D1Bound5.IsD1Tuple.tail_irregular_and_growth` now proves the COMPLETE
+lem:tail-irregular for every imaginary quadratic full integer ring:
+ordered D(1) quadruple, B>=3 => the last three entries are irregular and
+D>2BC. The auxiliary C>=4 restriction is removed. The C<4 transfer uses
+the full-ring and norm bridges, all thirty certificates and the proved
+parameter cutoff. Targeted `lake build D1Bound5.TailIrregular` exited 0.
+Receipts are in local-logs/recovery-20261015T1949/.
 
-## Completion gates
+The earlier 70-theorem baseline and the isolated analytic branch have their
+recorded audits. The integrated NEW milestone's whole-root axiom audit and
+targeted replay are still pending during this direct recovery invocation.
+Do not mistake a source count or successful compilation for final release.
 
-- Current local build, source audit and root import coverage: PASS.
-- Current transitive axiom audit: PASS, 117 declarations.
-- Kernel replay: PASS for all nineteen modules, exit 0.
-- The previous 40-theorem source commit 49dda62363d663bce06709c9a4b99185901cc158
-  passed a clean GitHub-checkout build and all audits. A new clean checkout
-  of this 70-theorem continuation has not yet been run.
-- Independent external statement review: not performed.
-- Main theorem, tail-irregularity, determinant/interpolation/approximation
-  bounds, Bennett all-orders identity and complete finite exclusions: OPEN.
-- Prove2Me mission/server acceptance: not started.
+## Active continuation
 
-## Current exploration and next action
+Owner: direct in-chat recovery, records/runs/20261015T1949-recovery-START.md.
+EvenDeterminant.lean has now compiled with exit 0. It proves the general
+rank-two identity, characteristic-two determinant assertion, nonsingularity
+over every quadratic integer ring, and the imaginary-case modulus bound.
+The integrated build and axiom audit are currently running; targeted replay
+is the remaining local validation step for the new milestone.
+Do not duplicate active compilers or rewrite their source. All work is in
+/Users/tp/Lean/D1Bound5; the previous analytic source has been copied exactly
+from its privately pushed 3a8f9ff commit, without reverting main's finite work.
 
-`exploration/SquareTest.lean` and `exploration/DiskEnumeration.lean` contain
-new executable arithmetic procedures and attempted completeness proofs.
-They are currently being compiled separately, not counted as accepted.
-`exploration/FiniteTail.lean` prepares the finite small-tail soundness and
-discriminant reduction; it is not compiled or accepted yet.
-First finish and audit the square-test and disk procedures, then prototype
-the exact small-tail certificate from the proved enumeration. Do not redo
-the full-ring bridge or irregular growth.
+## Remaining obligations
 
-## Environment, preservation and recovery
+Structural determinant size and gap bounds, interpolation and approximation
+identities/remainders, Bennett's arbitrary-order determinant identity,
+large graph/Pell exclusions with complete coverage/descent proofs, and the
+three main sextuple exclusions remain open. Final clean-checkout validation
+and independent statement review remain release gates. Prove2Me is deferred.
 
-Lean 4.33.1 and mathlib 0df444a360eaa60ab8c11dca51a86af692955474 are pinned.
-Python 3.12.15 is user-local; all six frozen v4 Python checks already passed.
-Those checks are supporting evidence, not Lean proofs. The historical
-radius-10^550 graphs were not rerun. No manuscript, handoff, previous
-Freiman project, public release, paid service or Prove2Me mission was altered.
-The GitHub repository tomislav-math/d1-bound5-lean remains PRIVATE.
+## Environment and preservation
 
-Read `records/build-record.md`, `records/paper-to-lean.md` and
-`records/open-obligations.md`, then the current sources. Run the project's
-checks using the pinned local lake. Preserve all newer work and avoid
-concurrent heavy compilers on this 8 GiB Mac. The main target remains only
-a proposition specification in `Specification.lean`, not a proved theorem.
+Lean 4.33.1, mathlib 0df444a360eaa60ab8c11dca51a86af692955474, user-local
+Python 3.12.15. PRIVATE repository tomislav-math/d1-bound5-lean. No paid
+agent, public release, manuscript edit, Freiman change or credential access.
+Read the latest records/runs notes and build record before continuing.

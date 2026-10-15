@@ -58,3 +58,27 @@ run_cmd do
 
 #print axioms D1Bound5.irregular_growth
 #check @D1Bound5.irregular_growth
+
+#print axioms D1Bound5.QuadInt.hasSquareRoot_iff
+#check @D1Bound5.QuadInt.hasSquareRoot_iff
+
+#print axioms D1Bound5.QuadInt.mem_disk_iff
+#check @D1Bound5.QuadInt.mem_disk_iff
+
+#print axioms D1Bound5.smallTailCheck_of_explicit_list
+#check @D1Bound5.smallTailCheck_of_explicit_list
+
+#print axioms D1Bound5.smallTailCheck_rectangular
+#check @D1Bound5.smallTailCheck_rectangular
+
+#print axioms D1Bound5.IsD1Tuple.tail_irregular_and_growth
+#check @D1Bound5.IsD1Tuple.tail_irregular_and_growth
+
+#print axioms D1Bound5.even_root_matrix_det_sq_char_two
+#check @D1Bound5.even_root_matrix_det_sq_char_two
+
+#print axioms D1Bound5.even_root_matrix_det_ne_zero
+#check @D1Bound5.even_root_matrix_det_ne_zero
+
+#print axioms D1Bound5.even_root_matrix_one_le_norm
+#check @D1Bound5.even_root_matrix_one_le_norm
