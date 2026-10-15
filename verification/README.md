@@ -5,7 +5,7 @@ arithmetic and polynomial calculations in *A uniform bound of five for
 Diophantine tuples in imaginary quadratic integer rings*, by Zrinka Franušić
 and Tomislav Pejković.
 
-The [dated manuscript](../paper/D1_bound5-v4-dated.pdf) differs from the verified
+The [dated manuscript](../paper/Diophantine_tuples_bound_five_2026-10-15.pdf) differs from the verified
 v4 source only by `\date{15 October 2026}`. The unchanged, undated inputs are
 retained because the existing programs verify their SHA-256 digests. Run
 `python3 verification/verify_date.py` from the repository root to check this

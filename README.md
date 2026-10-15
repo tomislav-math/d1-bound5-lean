@@ -10,8 +10,8 @@ estimates with bounded exact computations.
 
 | Material | Link |
 |---|---|
-| Paper, 58 pages | [PDF](paper/D1_bound5-v4-dated.pdf) |
-| Standalone manuscript source | [LaTeX](paper/D1_bound5-v4-dated.tex) |
+| Paper, 58 pages | [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) |
+| Standalone manuscript source | [LaTeX](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
 | Numerical programs, recorded outputs and reproduction instructions | [Verification guide](verification/README.md) |
 | Lean proof progress and outstanding work | [Status](STATUS.md) |
 

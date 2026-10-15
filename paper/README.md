@@ -6,15 +6,16 @@ Zrinka Franušić and Tomislav Pejković
 
 15 October 2026
 
-- [Read the paper (PDF)](D1_bound5-v4-dated.pdf)
-- [LaTeX source](D1_bound5-v4-dated.tex)
+- [Read the paper (PDF)](Diophantine_tuples_bound_five_2026-10-15.pdf)
+- [LaTeX source](Diophantine_tuples_bound_five_2026-10-15.tex)
 - [Numerical verification programs and instructions](../verification/README.md)
 
 This is v4 with an explicit date below the authors. The only source change
 from the frozen verified v4 is `\date{} -> \date{15 October 2026}`.
 The mathematics, funding, AI declaration, affiliations and bibliography are
-unchanged. Keeping the `v4-dated` name distinguishes this reading copy while
-preserving v4 as the target of the ongoing Lean formalization.
+unchanged. The filename identifies the subject and release date. Future
+revisions can use the same title with their own release date. The frozen v4
+remains the target of the ongoing Lean formalization.
 
 The article is a standalone TeX file using standard packages, with no custom
 `.sty` files. A TeX Live installation with Latin Modern and `latexmk` can build
@@ -23,7 +24,7 @@ it from the repository root:
 ```sh
 mkdir -p /tmp/d1-bound5-pdf
 latexmk -pdf -interaction=nonstopmode -halt-on-error \
-  -outdir=/tmp/d1-bound5-pdf paper/D1_bound5-v4-dated.tex
+  -outdir=/tmp/d1-bound5-pdf paper/Diophantine_tuples_bound_five_2026-10-15.tex
 ```
 
 The supplied PDF has 58 pages. `date_only_checks.json` records the scoped

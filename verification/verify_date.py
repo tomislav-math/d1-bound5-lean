@@ -5,7 +5,7 @@ import hashlib
 
 root = Path(__file__).resolve().parents[1]
 old = (root / 'verification/v4/output/D1_bound5-v4.tex').read_bytes()
-new = (root / 'paper/D1_bound5-v4-dated.tex').read_bytes()
+new = (root / 'paper/Diophantine_tuples_bound_five_2026-10-15.tex').read_bytes()
 expected = '776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3'
 if hashlib.sha256(old).hexdigest() != expected:
     raise SystemExit('FAIL: frozen v4 source digest')
