@@ -60,6 +60,29 @@ for path in files:
     for hit in forbidden.finditer(code):
         line = code[:hit.start()].count('\n') + 1
         errors.append('{}:{}: {}'.format(path.relative_to(ROOT), line, hit.group()))
+# Every project module must be reachable from the compiled root module.
+# An unimported file cannot silently count as an accepted project theorem.
+module_sources = {
+    'D1Bound5': ROOT / 'D1Bound5.lean',
+    **{'D1Bound5.' + p.stem: p for p in (ROOT / 'D1Bound5').glob('*.lean')},
+}
+reachable = set()
+pending = ['D1Bound5']
+while pending:
+    name = pending.pop()
+    if name in reachable:
+        continue
+    reachable.add(name)
+    path = module_sources.get(name)
+    if path is None:
+        errors.append('Unresolved project import: ' + name)
+        continue
+    code = remove_comments(path.read_text(encoding='utf-8'))
+    for line in re.findall(r'^\s*(?:public\s+)?import\s+([^\n]+)', code, re.MULTILINE):
+        pending.extend(m for m in line.split() if m.startswith('D1Bound5.'))
+for name in sorted(set(module_sources) - reachable):
+    errors.append('Not imported by project root: ' + name)
+
 if errors:
     print('\n'.join(errors), file=sys.stderr)
     sys.exit(1)

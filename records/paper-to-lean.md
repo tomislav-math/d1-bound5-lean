@@ -61,3 +61,45 @@ evaluation. Their preceding enumeration is still an open obligation.
 The coordinate-to-full-ring bridge, analytic estimates, arbitrary-order
 Bennett determinant identity, complete graph and Pell calculations, and
 three major exclusions remain open; see `open-obligations.md`.
+
+## Continuation: full-ring bridge and irregular growth
+
+The new full-ring modules are individually and integrally compiled; their
+full continuation audit is recorded separately. The construction proves
+existence of the full integral coordinate models, not an assumed bridge.
+
+| Declaration | Source / purpose |
+|---|---|
+| `integral_basis_one_gcd` | Section 1: coordinates of one form a primitive pair in every full integral basis |
+| `exists_integral_generator` | Section 1: bijective integer coordinates n+m*omega for the full ring |
+| `exists_quadratic_ring_equiv` | Full-ring equivalence before trace normalization |
+| `exists_normalized_quadratic_ring_equiv` | Full-ring coordinates with tau=0 or 1 |
+| `QuadInt.shift`, `QuadInt.discriminant_shift` | Integral generator translation and unchanged discriminant |
+| `QuadInt.complex_image` | Formula for every complex image of a coordinate element |
+| `QuadInt.complex_generator_parameters` | Real part, norm and positive-discriminant relation for the generator |
+| `QuadInt.discriminant_pos_of_complex_embedding` | Positivity derived from a nonreal embedding |
+| `QuadInt.norm_sq_complex_image` | Coordinate norm equals squared complex modulus |
+| `QuadInt.complex_im_zero_iff` | Reality exactly means vanishing second coordinate |
+| `full_ring_generator_nonreal` | A full-ring generator has nonreal image in a totally complex field |
+| `exists_imaginary_quadratic_ring_equiv` | All imaginary quadratic fields have positive-discriminant full-ring coordinates |
+| `norm_sq_full_ring_equiv` | Complex norm transported along the full-ring equivalence |
+| `one_le_norm_integer` | Section 1: every nonzero algebraic integer has modulus at least one |
+| `integral_of_quadratic_relation` | Integrality from an integer monic quadratic |
+| `square_division_in_full_ring` | Maximality without unique factorization |
+| `squarefree_trace_zero_parameter` | Squarefree d in the tau=0 full-ring case |
+| `squarefree_trace_one_discriminant` | Squarefree d=Delta in the tau=1 full-ring case |
+| `trace_zero_parameter_not_three_mod_four` | Half-integral cases cannot be omitted by using a proper suborder |
+| `exists_full_integer_coordinates` | Full classification covering EVERY imaginary quadratic field |
+| `QuadInt.algebra_norm_eq` | Polynomial coordinate norm equals determinant-defined algebraic norm |
+| `algebra_norm_ring_equiv` | Integral norm invariant under the full-ring equivalence |
+| `norm_sq_eq_absolute_norm` | Absolute field norm equals squared modulus at every complex embedding |
+| `full_ring_one_three_common_extension_is_integer` | Rationality part of lem:pr-one-three, now in every full integer ring |
+| `extension_norm_quadratic` | Complex-norm estimate underlying eq:irregular-quadratic |
+| `extension_coarse_quadratic` | Coarse quadratic q(C)>=0 in lem:irregular-growth |
+| `monic_quadratic_neg_between` | Closed-interval quadratic convexity, including endpoints |
+| `growth_quadratic_negative` | Exact endpoint inequalities for 3<=A<=B<=C<=2AB |
+| `irregular_quadratic` | Original eq:irregular-quadratic in every imaginary quadratic full ring |
+| `irregular_growth` | Complete lem:irregular-growth, C>2AB, with modulus ties allowed |
+
+The 70-theorem continuation closes the full-ring bridge and the first
+structural growth lemma. The main bound-five theorem remains unproved.

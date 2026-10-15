@@ -3,19 +3,22 @@
 The main theorem is UNPROVED in Lean. None of the items below is assumed
 as a custom axiom or silently supplied as a hypothesis of a claimed proof.
 
-## Full-ring bridge
+## Full-ring bridge: now proved
 
-For every imaginary quadratic number field, construct the full integral
-basis with tau=0 or 1, establish its admissible discriminant conditions,
-and prove a ring equivalence with the coordinate model used for the finite
-calculations. Relate its algebraic norm to squared complex absolute value.
-Square-root integrality is already proved, but this bridge is not.
+The continuation constructs the full ring equivalence for every imaginary
+quadratic field, including squarefree d, tau=0/1 and the exact half-integral
+branch. It identifies coordinate, integral algebraic and complex squared
+norms. No bridge assumption is inserted into the final target. See
+`full-ring-bridge.md` and the latest build/axiom/replay record.
 
 ## Analytic and structural arguments
 
-Complete `lem:irregular-growth`, `lem:tail-irregular`, determinant gap bounds,
-interpolation identities and analytic remainder estimates. The accepted
-extension-product identity is only the algebraic start of the growth lemma.
+`lem:irregular-growth` and its exact quadratic inequality are now proved
+in every imaginary quadratic full integer ring. Complete `lem:tail-irregular`,
+determinant gap bounds,
+interpolation identities and analytic remainder estimates. The extension-product identity is connected to the norm bound and the
+full real endpoint proof; it is no longer the only completed part of
+`lem:irregular-growth`.
 Prove the explicit ordinary and finite approximation families and their
 coefficient, divisibility, determinant and remainder bounds.
 
@@ -44,10 +47,10 @@ fraction enumeration, small triple orbits, forty first-pair representatives,
 fifty-six triples, and rational pair (1,3) require full coverage arguments.
 No large historical graph was regenerated during the initial local session.
 
-The rationality part of `lem:pr-one-three` is now proved in the coordinate
-model for every positive discriminant, including nonmaximal orders. Its
-transfer to arbitrary full integer rings and the separate signed-cardinality
-argument remain open. See `one-three-proof.md`.
+The rationality part of `lem:pr-one-three` is now proved both in every
+positive-discriminant coordinate model and in the full integer ring of
+EVERY imaginary quadratic field. The separate signed-cardinality argument
+remains open. See `one-three-proof.md` and `full-ring-bridge.md`.
 
 ## Final assembly and release gates
 

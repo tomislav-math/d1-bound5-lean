@@ -86,3 +86,29 @@ interrupted; no project pins changed. An outside-project checker probe also
 used the wrong global environment. Every accepted command used the recorded
 project-local 4.33.1 environment. Original manuscript and Freiman sources
 were not edited; only public dependency caches were reused separately.
+
+
+## Continuation: full-ring bridge and irregular growth
+
+Actual start 2026-10-15 17:17:21 UTC. Starting HEAD was 8abb662.
+The full-ring bridge compiled separately and integrally, then was pushed
+in commit 7275216ffe00ab35a32e26e8dbd29221edfef870 (64 theorems).
+The complete irregular-growth module subsequently compiled with exit 0.
+
+Command from /Users/tp/Lean/D1Bound5:
+
+    LEAN_NUM_THREADS=1 PYTHON=/Users/tp/.local/bin/python3.12 bash scripts/check.sh --replay
+
+Actual result: exit 0. Source scan: 19 modules, 70 explicit theorems.
+Integrated build: 2967 jobs completed successfully. Transitive axiom audit:
+117 project declarations, only propext, Classical.choice and Quot.sound.
+Kernel replay: all nineteen project modules passed. Full receipt:
+`records/continuation-checks-015.log`. Root import-coverage checking was
+added to the source audit and separately rerun successfully on this source.
+
+The kernel replay uses the bundled Lean checker, not an independent
+external kernel implementation. No clean checkout of the new 70-theorem
+source has yet been run; the earlier clean-checkout receipts are retained
+with their original 40-theorem scope. The current source fingerprint list
+is updated in `proof-source-sha256.txt`. This checked milestone is committed
+with the message "Accept kernel-audited full-ring bridge and irregular growth".

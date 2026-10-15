@@ -66,3 +66,30 @@ integral even in the half-integral basis because
 The negative-extension cardinality part of lem:pr-one-three is not claimed
 by this module. Independent external review and the global ring bridge
 remain open release gates.
+
+
+## Continuation: full-ring and growth statements
+
+The elaborated `exists_full_integer_coordinates` quantifies over every
+field K with NumberField K, IsTotallyComplex K and finrank Q K=2. Its
+conclusion supplies a positive squarefree integer d and a ring equivalence
+from QuadInt 1 ((d+1)/4) when d=3 modulo 4, or QuadInt 0 d otherwise,
+to the FULL RingOfIntegers K. It does not assert uniqueness of d or choose
+one complex embedding as a hidden extra condition.
+
+`norm_sq_eq_absolute_norm` quantifies over every complex embedding and
+every algebraic integer, including zero. Its right side is the cast of
+mathlib's determinant-defined integral norm. `irregular_growth` quantifies
+over full-ring elements a,b,c and their three integral square roots,
+requires precisely irregularity and 3<=|a|<=|b|<=|c|, and concludes
+2|a||b|<|c|. Weak inequalities preserve modulus ties. There is no graph,
+Bennett, approximation, or unproved norm assumption in these types.
+
+`full_ring_one_three_common_extension_is_integer` proves that any common
+extension z of 1 and 3 in the full integer ring is the cast of an integer.
+It does not prove the separate signed-cardinality argument, and it imposes
+no size restriction or nonzero-square-root condition on z.
+
+This is a same-assistant back-translation of actually elaborated Lean
+types. No independent external statement audit is claimed. MainStatement
+is still a definition of the bound-five proposition, not its proof.

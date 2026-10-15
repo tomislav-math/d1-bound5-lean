@@ -52,3 +52,9 @@ run_cmd do
 
 #print axioms D1Bound5.full_ring_one_three_common_extension_is_integer
 #check @D1Bound5.full_ring_one_three_common_extension_is_integer
+
+#print axioms D1Bound5.irregular_quadratic
+#check @D1Bound5.irregular_quadratic
+
+#print axioms D1Bound5.irregular_growth
+#check @D1Bound5.irregular_growth
