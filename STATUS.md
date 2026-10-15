@@ -22,8 +22,8 @@ specification, not an asserted theorem. See `records/statement-review.md`.
 - Local build and source audit: PASS.
 - Current transitive axiom audit: PASS, 66 declarations.
 - Bundled kernel replay: PASS for all eleven project modules, exit 0.
-- Clean-checkout rebuild: PASS for commit 96af5c0 (36 theorems); the
-  40-theorem source revision has passed local checks and awaits the new clean run.
+- Clean-checkout rebuild: PASS for the current 40-theorem source commit
+  49dda62363d663bce06709c9a4b99185901cc158, including all audits and kernel replay.
 - Independent external statement review: not performed.
 - Full ring-coordinate equivalence, analytic dependencies, complete finite
   classifications, Bennett all-orders identity and main theorem: OPEN.

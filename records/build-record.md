@@ -43,7 +43,14 @@ First mathematical checkpoint: `96af5c0e4296423f99f40f128e0f1d1b30c16c1d`,
 in a fresh private GitHub clone, with no project proof objects inherited.
 Only pinned public dependency caches were copied. The public-cache fetch,
 source hashes, fresh compilation, axiom audit and kernel replay all passed.
-The updated 40-theorem source revision requires its own clean-run record.
+Current source checkpoint: `49dda62363d663bce06709c9a4b99185901cc158`.
+`clean-checkout-014.log` records **exit 0** for all 40 theorems in another
+fresh private GitHub clone, `/Users/tp/Lean/D1Bound5Clean-49dda62`.
+There were no project proof objects before compilation. Only pinned public
+dependency caches were reused. All source/configuration hashes passed.
+The public-cache fetch, fresh build, 66-declaration axiom audit, and kernel
+replay of all eleven modules passed. Code, scripts and build configuration
+remain unchanged from this tested commit; subsequent commits update records only.
 
 ## Source preservation and supporting Python checks
 

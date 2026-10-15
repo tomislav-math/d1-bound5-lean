@@ -47,3 +47,22 @@ The half-integral regression test alone does not establish that bridge.
 The generic interval-chain theorem has explicit exclusion and overlap
 hypotheses. The six modular certificates exclude the six stated elements,
 but do not prove that the preceding enumeration has no other cases.
+
+## OneThree module
+
+The coordinate theorem has no bound on the size of the common extension.
+It quantifies over all integral tau,nu with 4nu-tau^2 positive, and concludes
+that a coordinate element whose translates z+1 and 3z+1 are squares is an
+integer cast. This includes tau=1 and nonmaximal orders. It does not assert
+that an arbitrary number field has already been identified with that model.
+
+In the contradiction argument, nonzero imaginary coordinate forces f and g
+nonzero. The relation g^2*V=3*f^2*X and X+Delta*V=8 imply X,V positive,
+including exclusion of the zero-factor cases. Only then does X*V=12*k^2
+force the integral square k^2 to be at least one. The determinant k is
+integral even in the half-integral basis because
+`e*h-f*g = 2*(r.re*s.im-r.im*s.re)`. No parity convention is omitted.
+
+The negative-extension cardinality part of lem:pr-one-three is not claimed
+by this module. Independent external review and the global ring bridge
+remain open release gates.
