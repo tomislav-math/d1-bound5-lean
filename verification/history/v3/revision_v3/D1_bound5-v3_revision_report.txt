@@ -1,0 +1,79 @@
+D1_bound5-v3 — revision and verification record
+15 October 2026
+
+Delivered article: 59 pages. Standard article class, 12pt Latin Modern,
+A4 with 24 mm margins, existing macros/packages and empty date preserved.
+No custom .sty file is needed.
+
+Source SHA256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+PDF SHA256: 8e8e3a95601ec5aa93549878a382cbd55a8ca22bdcb3b6664de89712ad52d0c6
+Baseline v2 SHA256: 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70
+
+Changes
+The 23 reversible registered edits implement the ten accepted local Armstrong
+review recommendations, five navigation edits, six author/declaration/literature
+edits, and two local layout repairs. The exposition review additionally clarified
+one pronoun in the new interpolation introduction before acceptance. There is no
+global rearrangement and no change of mathematical theorem, bound or table data.
+
+Zrinka Franusic and Tomislav Pejkovic are named, with their diacritics, in the
+article. Their shared University of Zagreb affiliation and both email addresses
+were copied from matrices10 .tex (6 October 2026). Funding and Use of artificial
+intelligence were copied verbatim. Every declaration word and digit was also
+checked in the rendered PDF. In particular, the identifiers IP-2022-10-5008,
+TEBAG, PK.1.1.10.0004 and IK IA 1.1.3. Impact4Math match the donor source.
+
+Exactly two Dujella references were added: the 2024 monograph and the open-problems
+list dated 15 October 2026. The publisher and author pages verify the monograph's
+metadata and DOI. The list's Problem 1.11 asks whether an imaginary-quadratic
+integer ring contains a D(1)-quintuple. The introduction explicitly says that
+the present bound does not settle that existence question. No extra research
+paper was added. See agents/dujella.txt for primary source URLs and snapshot hash.
+
+Verification actually performed for v3
+- Independent mathematical-preservation and exposition reviews of the integrated
+  edits, tied to the final source SHA256. All 32 new explanatory sentences were
+  checked against their actual proof or source context; no findings remain.
+- Exact replay and reversal of the 23 edits. All 37 theorem-like statements,
+  358 displayed-mathematics blocks and 15 tabular/longtable bodies are unchanged
+  from v2 (statement comparison ignores only the two added navigation labels).
+- Exact bounded rechecks: 15 all-large overlap comparisons, gap and tail bounds;
+  enumeration of 40 pairs and 57 third entries; agreement with all 56 listed
+  triples; the 38/16/2 complement split; the two exceptional congruence checks;
+  and all five regional phase/gap/residual/overlap/tail comparisons.
+- Clean latexmk/pdflatex compilation: no warnings, overfull or underfull boxes,
+  undefined references/citations or duplicate labels. All 118 labels resolve.
+- Every final PDF page inspected visually by independent reviewers (1–30 and
+  31–59). Root also inspected title, dense/changed pages and final declarations,
+  references and affiliation. The split Lemma 7.7 statement, Table 3 interrupting
+  the next proof, and isolated final author address were repaired and rechecked.
+
+Limits
+This revision is a controlled improvement of v2. The expensive graphs through
+10^550 and the full polynomial-family calculations were NOT rerun in this v3
+pass. Their source formulas, bounds and tables are unchanged. The previous
+D1_bound5-v2_verification.zip is included as inherited evidence, not relabelled
+as a fresh v3 computation. The small numerical checks use certain printed M and
+N0 values as inputs; each script/report states its scope. No mechanical check
+alone is a proof of the complete article.
+
+Package layout and reproduction
+The archive preserves output/ and revision_v3/ so paths work after extraction.
+Python 3 is needed; final_controls.py also needs PyMuPDF (import fitz).
+From the extracted root run:
+  python revision_v3/agents/math_preservation_check.py
+  python revision_v3/checks/approximation_check.py
+  python revision_v3/checks/completion_check.py
+  python revision_v3/checks/final_controls.py
+The checks are deliberately locked to this reviewed source hash.
+
+The article compiles with ordinary LaTeX packages:
+  latexmk -pdf -interaction=nonstopmode -halt-on-error output/D1_bound5-v3.tex
+Compilation can update PDF metadata and its byte hash; the delivered PDF and
+archived build log are the ones covered by the recorded visual review.
+
+revision_v3/build_v3.py reproduces the source from the frozen baseline and the
+accepted review register. change_register.json and D1_bound5-v2_to_v3.diff show
+every edit. agents/ contains independent reports; checks/ contains scripts and
+actual outputs; records/ contains provenance; render/final/ contains the 59
+reviewed page images. package_manifest.json records SHA256 for every other file.

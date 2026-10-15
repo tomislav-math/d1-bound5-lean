@@ -1,0 +1,94 @@
+--- v1 Section7
++++ v2 Section7
+@@ -1,4 +1,4 @@
+-\section{Tuples with at least two small entries}\label{sec:small-entries}
++\section{Tuples with at least two small entries}
+ Call an entry small when its modulus is less than $3$.
+ The purpose of this section is to prove the following result.
+ \begin{proposition}\label{sm:main}
+@@ -98,7 +98,12 @@
+ 
+ \begin{proof}
+ Use the order-one matrix in Lemma~\ref{lem:ordinary-residue-construction}
+-with \(m=4\). For \(j\ge1\), write
++with \(m=4\), and put
++\[
++ H=\prod_{i=1}^4a_i,\qquad
++ \Delta=\prod_{1\le i<j\le4}(a_i-a_j).
++\]
++For \(j\ge1\), write
+ \[
+  E_j=\frac{\Delta^2}{\prod_{\ell\ne j}(a_\ell-a_j)},\qquad
+  E_{ji}=\frac{E_j}{a_i-a_j}\quad(i\ne j).
+@@ -177,11 +182,12 @@
+ 
+ We first bound the third large entry. The descent in Lemma~\ref{sm:bs7-descent} generates all common extensions within the resulting disk from a finite initial set.
+ 
+-For six ordered entries with anchor moduli $A\le B\le S\le T$, interpolation modulus $P$ and final modulus $Q$, assume
+-\begin{equation}\label{sm:six-V-hypotheses}
++Let $a,b,s,t,p,q$ be six distinct tuple entries, with moduli
++$A\le B\le S\le T\le P\le Q$. Assume
++\begin{equation*}
+  P\ge\max\{4T,1000\},\qquad Q\ge4P,
+  \qquad P^2\ge\frac{32BST}{A^3}.
+-\end{equation}
++\end{equation*}
+ Lemma~\ref{lem:four-anchor-nonvanishing} gives a nonzero three-anchor form among the two triples sharing the first two anchors. Indeed, simultaneous vanishing would give
+ \begin{equation*}
+  |pq+1|\le\frac{121BST}{4A^3}
+@@ -201,10 +207,10 @@
+  \le\frac{4A^2P^5}{9(1+\varepsilon)T^2}
+ \end{equation}
+ is impossible. We shall use the exact comparisons
+-\begin{equation}\label{sm:six-V-constants}
++\begin{equation*}
+  \frac{100}{1-\varepsilon}<101,
+  \qquad \frac4{9(1+\varepsilon)}>\frac25.
+-\end{equation}
++\end{equation*}
+ 
+ \begin{lemma}\label{sm:bs7-cutoff}
+ Suppose a $D(1)$-tuple has six entries with ordered moduli
+@@ -244,14 +250,16 @@
+ \]
+ since $9A^5ST>45248B$. Thus $D$ lies above the lower endpoint of
+ \eqref{sm:six-V-interval}, and it must exceed the upper endpoint. Hence
+-\begin{equation}\label{sm:five-two-small-lower}
++\begin{equation*}
+  D>\frac25\frac{A^2C^5}{T^2}
+   >\frac{243}{81920}A^7S^5T^3
+   >\frac{S^5T^3}{400}\ge\frac{S^8}{400}.
+-\end{equation}
+-If $s=\log_{10}S\ge49$, this contradicts
+-\eqref{sm:five-uniform-continuous}. The difference
+-$s-227/5-(4047/25)/(s-4)$ is increasing and equals $1/375$ at $49$.
++\end{equation*}
++If $s=\log_{10}S\ge49$, then $400<10^3$ gives
++$\log_{10}D>8s-3$. This contradicts
++\eqref{sm:five-uniform-continuous}, since
++$(8s-3)-g(s)=s-227/5-(4047/25)/(s-4)$ is increasing
++and equals $1/375$ at $49$.
+ Therefore $S<10^{49}$. In the whole case $S\ge10^8$, convexity gives
+ $\log_{10}D<389$, since $g(8)<139$ and $g(49)=389-1/375$.
+ 
+@@ -300,9 +308,9 @@
+  1<\frac{27M^5}{Z}+\frac{4M^3Z}{5C^4}.
+ \]
+ Again the first term is less than $1/2$. Hence
+-\begin{equation}\label{sm:five-bounded-four-lower}
++\begin{equation*}
+  D>\frac{C^7}{100M^6}=10^{-50}C^7.
+-\end{equation}
++\end{equation*}
+ Lemma~\ref{lem:ordinary-three-normalized} at order two, with anchors
+ $(a,b,s)$, forbids
+ \[
+@@ -506,7 +514,7 @@
+ No $D(1)$-tuple in an imaginary quadratic integer ring contains $\{-1,1\}$ and four further entries.
+ \end{lemma}
+ \begin{proof}
+-We first restrict the axes and field parameters. A negative rational integer which is an integral square in $\mathbb Q(\sqrt{-d})$ is $-dm^2$ for an integer~$m$. Indeed, the square of a rational linear combination of $1,t$ is rational only when one coordinate vanishes; integrality of a purely imaginary root forces its coefficient of~$t$ to be an integer, also in the half-integral basis. A positive rational integer that is a square in $\OK$ is therefore an ordinary integer square.
++We first restrict the axes and field parameters. A negative rational integer which is an integral square in $\mathbb Q(\sqrt{-d})$ is $-dm^2$ for an integer~$m$. Indeed, the square of a rational linear combination of $1,t$ is rational only when one coordinate vanishes. Integrality of a purely imaginary root forces its coefficient of~$t$ to be an integer, also in the half-integral basis. A positive rational integer that is a square in $\OK$ is therefore an ordinary integer square.
+ 
+ There are no nonzero common extensions when $d=1$, since neither $u^2-v^2=2$ nor $u^2-v^2=1$ has a solution with $v\ne0$. For $d>1$, at most one extension can lie on each imaginary half-axis. Two with coefficients of the same sign would have product plus one equal to $1-dkl<0$, which is one modulo~$d$ and cannot be $-dm^2$.
+ 

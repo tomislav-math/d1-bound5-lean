@@ -1,0 +1,188 @@
+INDEPENDENT INTERVAL-CONSOLIDATION REFEREE REPORT
+Verdict: PASS. No blocking repair is required in the reviewed scope.
+
+Reviewed immutable source:
+  revision_v4/checkpoints/integrated.tex
+  SHA256 776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3
+Baseline:
+  output/D1_bound5-v3.tex
+  SHA256 a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+Both hashes were checked before and after the review. Neither manuscript
+was edited. The review was reconstructed from the actual on-page formulas,
+not from the revision author's report. The supplied equivalence helper was
+read and run only after completing the independent derivations and checks.
+
+Scope: new Section 5.5; its Section 6 application; Section 8 local parameters
+and both applications; Section 9 endpoint specialization and ordinary tail;
+deleted v3 claims in these passages; introductory case map and Dujella move.
+This is not a fresh review of every preceding analytic lemma, the separate
+small-entry enumerations, or the paper's complete historical literature.
+
+1. SIX-ENTRY GUARDS AND NORMALIZATIONS: PASS
+
+The common section explicitly requires six distinct nonzero tuple entries,
+1 <= A <= B <= S <= T <= C <= D, and C > max(1000,200S,4T).
+These imply AC > 1000, BC > 1000, C^2 > 4000, C > 200B,
+C > 4S, and C > 4B. Thus they supply every hypothesis used by the
+five finite two-anchor families on a,b, the relabeled finite N3 on b,s,
+the quadratic P rows on a,b,s, the Q rows on a,b,s,t, normalized M,
+and the ordinary two-anchor family. D >= C makes the same epsilon
+conversion valid throughout. Distinct entries, rather than distinct
+moduli, are what the determinant arguments require; equal moduli cause
+no missing case.
+
+I reconstructed all ten rows from their strict inequalities. With
+1 < U/Z+VZ, their raw endpoints are 4U^2/C and 1/(4V^2 C), followed by
+division by 1-epsilon and 1+epsilon. In particular, the M row comes from
+the normalized inequality (ordinary-three-M), not from its separately
+stated coarser window. For O_j, U=3C(42B^3C)^j/B and
+V=1/(2(2AC^2/(5B))^j), giving exactly the displayed endpoints.
+The relabeled N3 row retains B^8 in its upper endpoint, as required.
+The finite parameters P=m+2k and g match the normalizations of M_2,
+M_n, M_3, M_4, M_5 and their residuals.
+
+R_p is explicitly tied to mathcal R(q), with q >= 1 and B >= qA.
+Section 6 uses q=1 and mathcal R(1)<3. The five-region application
+uses q=m/U, valid because B>=m and A<=U. The fixed-pair S>=15
+application uses B_0/A_1, a lower bound for B/A. Section 9 uses the
+defined square-root lower enclosure [b_0/a_0]_-, also a lower bound
+for B/A. None of these substitutions reverses the needed inequality.
+
+2. OVERLAP ALGEBRA, BRANCHES AND ENDPOINTS: PASS
+
+Direct division of the endpoint table reproduces every common overlap.
+The first two use C>A^2 T^5/S^2 and T>2BS, giving respectively
+1024 A^10 B^10(1-epsilon)/12100 and 256 A^8 S^4/(36 M_2^2 h).
+The potentially delicate remaining modulus factors after the gap
+substitution are:
+  P--N3: S^2/B^4, requiring S>=B^2;
+  P--A3: S^2/B^2, requiring only S>=B;
+  A3--M: B^8/S^4, requiring S<=B^2;
+  N3--A4: S^6/B^14 >= B^4 when S>=B^3;
+  N3--N3,bs: B^14/S^2 >= B^8 when S<=B^3.
+At N3,bs--A4 the raw quotient is
+C^2/(16 R_bs^2 M_4^2 B^10 S^6 h); the pointwise G_* bound gives
+rho^2 A^14/(16 M_4^2 h). This properly keeps the pointwise ratio
+bound separate from the uniform G bound.
+For the last four junctions the factors reduce using S>=B, exactly
+as stated. Both terms in the maximum defining P have their own incoming
+comparison. At S=B^2 and S=B^3 the chosen >= branch is verified; the
+alternative weak inequalities also remain valid at equality.
+
+The elementary closed-interval argument is correct even for l=u and
+l>u. For a nonempty forbidden interval, D above its lower endpoint
+and avoidance imply D above its upper endpoint. If it is empty,
+D>lower>upper already gives the same implication. An upper endpoint
+at least the next lower endpoint therefore propagates the strict bound.
+The endpoint closures are justified by the strict original form bound.
+
+For the ordinary family the consecutive upper/lower quotient is
+multiplied by (R_0/H_0)^2 when j increases. H_0=42B^3C>1, so the
+lower endpoints diverge. A checked O5--O6 overlap and R_0/H_0>1
+therefore exclude every remaining finite D. Replacing A by one in
+the upper endpoints changes only R_0 to 2C^2/(5B), as explicitly stated.
+
+3. INDEPENDENT EXACT NUMERICAL RECONSTRUCTION: PASS
+
+I wrote an independent standard-library Python calculation from the
+printed finite generator, using rational binomial coefficients and
+polynomial coefficient dictionaries. It reconstructed every printed
+coefficient-sum row. The uniform coefficient expressions are exactly:
+  N2: 485204101/2000000 < 243;
+  N3: 207140601865271/50000000000 < 4143;
+  A3: 113244485748261/50000000000 < 2265;
+  A4: 2072028863364346433/12500000000000 < 165763;
+  A5: 155650636771039341017669/50000000000000000 < 3113013.
+Each displayed integer is floor(expression)+1. Thus the new values
+243, 165763 and 3113013 are valid strict coefficient bounds, independently
+of the deleted looser values.
+
+For Section 6 all fifteen quotients exceed one. The minimum is exactly
+7834457305497600/5386911336360281 = 1.4543505204...,
+at N3,bs--A4, so the stated >7/5 and the other >13/10 margins hold.
+The ordinary-tail base ratio bound is also greater than one.
+
+For all five Section 8 regions I recomputed the rational q-dependent
+coefficient bounds from the generator, the adaptive residual, both gap
+bounds, the 30-step rational enclosure of the phase maximum, every
+overlap, and the tail condition. The minima are approximately
+1.2606619065, 2.3296816110, 1.1660489527, 5.4591888479,
+1.3218181741. Each is strictly above the printed truncated margin.
+
+For the fixed-pair S>=15 application I evaluated the polynomials in
+the printed quadratic field basis before taking coefficient norms.
+The prescribed rational square-root enclosures reproduce all 40 rows
+of the coefficient table and the separate (1,3) row. For all 41 pairs,
+1/Q_0>mu/n_b and K>7/4. The improved first two numerators 9604 and
+784 equal 1024(7/4)^4 and 256(7/4)^2. All fifteen specialized
+quotients exceed 59/50. The overall minimum is 1.1871579586...,
+at pair 0, O5--O6; the tail condition holds for every pair.
+
+The A=1 specialization in that application is sound for the two
+norm-two pairs: its actual gap C>GB^5S^3, start bound with A discarded,
+and T>2BS are exactly the hypotheses needed for the weakened endpoint
+calculation. It does not assume that their actual A equals one.
+
+For Section 9 I independently reconstructed all thirteen c_e x^{p_e}
+expressions by substituting C>K T^5/S^2 into the specialized raw
+ratios. All powers of b_0,s_0,x and all h factors agree. The same
+polynomial evaluation and rational square-root enclosures reproduce
+all 56 printed M_bs and N_0 values. For (1,3,8) they give M_bs=34,
+N_0=1024, the printed thirteen n_e values, n_infinity=14, the exact
+printed q_1, and K>744. Threshold checks include both
+c_e n_e^{p_e}>1 and c_e(n_e-1)^{p_e}<=1.
+The extra norm-two threshold 4a_0b_0s_0+1 supplies strict T>2ABS;
+N(t)>=1024 supplies AT>=32. The final tail comparison is the square
+of C/(105B^4), and its displayed sufficient condition is correct.
+
+4. DELETED V3 CLAIMS AND ROUTING: PASS
+
+The old Section 8 endpoint and overlap tables were moved unchanged
+to Section 5.5. The deleted Section 6 endpoint table is their uniform
+specialization, with the three coefficient improvements checked above.
+The old stronger first-two A exponents in Section 6 are weakened to
+the common T>2BS estimates; the independently verified margins show
+that this loses no exclusion. Its deleted branch explanations and
+tail/empty-interval reasoning are represented by the common table,
+chain selection, and explicit elementary argument.
+
+The deleted Section 9 table is exactly the common table with A=1 only
+in upper endpoints. No lower endpoint changes, and B^8 in the
+relabeled upper endpoint remains. Consequently these smaller closed
+intervals are still forbidden for A>=1. The specialized cutoff table,
+threshold prescription and their numerical data remain intact.
+
+The Section 8 local mu, kappa, v, d_0, Phi and R_bs definitions are
+still present before both applications; M_bs=4143 is retained there.
+The Section 9 specialized M_bs and R_bs definitions precede use and
+correctly override the uniform bound. All labels in the source are
+unique, every ref/eqref resolves, tab:pr-windows and tab:pr-overlaps
+each occur once before their applications, and no stale
+tab:fixed56-windows reference remains.
+
+The introduction's case map routes zero small entries to Section 6,
+one to Sections 8--9, and at least two to Section 7, with the correct
+closing proposition labels. Moving the general Dujella reference
+next to the open-question paragraph preserves both attribution and
+the explicit statement that the cardinality bound does not settle
+existence of a quintuple. No continuity repair is needed.
+
+5. SECONDARY HELPER CHECK AND REPRODUCIBILITY
+
+Only after the preceding review, ran:
+  python revision_v4/checks/interval_equivalence.py \
+    revision_v4/checkpoints/integrated.tex
+Result: PASS, 26 formal endpoint comparisons and 15 source-parsed
+quotients, with the same exact Section 6 minimum. Its output is
+revision_v4/checks/interval_equivalence.json. This helper is corroboration,
+not the basis for accepting the guards, branches or computations.
+
+Independent reconstruction:
+  revision_v4/reviews/interval_referee_independent.py
+  revision_v4/reviews/interval_referee_independent.log
+Smallest necessary repair: none in this scope.
+
+Packaging note: after acceptance of this review, only portable source-path
+resolution and an assertion of the reviewed checkpoint SHA256 were added
+to the independent reconstruction script. Its calculations were unchanged.
+The script was rerun successfully to the same log. No manuscript was edited.

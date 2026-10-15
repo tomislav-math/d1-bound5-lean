@@ -1,0 +1,305 @@
+CONSTRUCTION AND INTERVAL REVIEW OF COMMENTS 9, 13, 14, 15, AND 20(a)
+
+Source read: output/D1_bound5-v3.tex
+SHA256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+Assessment date: 15 October 2026
+Scope: read-only assessment of the proposed revision. No manuscript edits.
+
+SUMMARY OF RECOMMENDATIONS
+
+9. Adopt the three smaller uniform coefficient bounds where the larger
+   uniform bounds are used. Retain all separately specialized bounds in
+   Sections 8 and 9. Do not call the integers globally optimal constants.
+13. Adopt a single proof of the root-transfer estimate, located at its first
+   use in Lemma 4.1, and cite that proof in Section 5.1. The proof using a
+   root with nonnegative real part works under the earlier, weaker guards.
+14. Do not replace both constructions by an unrestricted general-pole-order
+   arithmetic lemma. A common contour/residual calculation is available,
+   but integrality, row division, determinant normalization and rank must
+   still be handled separately. A smaller analytic consolidation is possible.
+15. A useful consolidation is available: one common raw endpoint table,
+   one short interval-chain principle, and reuse of the existing Section 8.1
+   overlap calculation in Section 6. Keep Section 9's specialized cutoff
+   quotient table. This is more concrete and safer than one large opaque
+   lemma parametrized by every coefficient in the paper.
+20(a). Adopt the cancellation of one factor A in the displayed R_2 formula.
+
+EXACT CHECKS PERFORMED
+
+The rerunnable script is review_v3_comments/checks/constructions_check.py,
+with output in constructions_check.json. Run from the workspace with
+
+  python review_v3_comments/checks/constructions_check.py
+
+The script checks the source hash. It imports no previous result. It reuses
+the polynomial-constructor function definitions from the disclosed earlier
+checker revision_v2/checks/approximation_exact.py, rebuilds all five finite
+families, and compares all three rows of coefficient sums with the printed
+v3 table. It recomputes the exact thresholds and all 15 Section 6 overlap
+comparisons before and after the proposed reduction. It also checks the
+root-transfer factorization, the two numerical e bounds, the R_2 cancellation,
+and an obstruction to unrestricted pole-order polynomial integrality.
+
+This is a focused check of the proposed changes, not a new run of the large
+finite graph enumerations. The initial attempt to use a symbolic dependency
+failed because SymPy is unavailable; the final script uses only the Python
+standard library and the disclosed exact polynomial constructor. The final
+run completed successfully.
+
+COMMENT 9: SMALLER UNIFORM M CONSTANTS
+
+The exact values supplied by (ff-uniformM), reconstructed from the finite
+generator rather than merely copied from a previous output, are
+
+ N_2: 485204101/2000000 = 242.6020505
+ N_3: 207140601865271/50000000000 = 4142.81203730542
+ A_3: 113244485748261/50000000000 = 2264.88971496522
+ A_4: 2072028863364346433/12500000000000 = 165762.3090691477...
+ A_5: 155650636771039341017669/50000000000000000
+      = 3113012.73542078682035338.
+
+Thus 243, 4143, 2265, 165763, 3113013 are exactly the least integers strictly
+above these particular sufficient coefficient bounds. They are not proved
+to be optimal bounds for the actual row polynomials throughout the allowed
+domain. The triangle inequalities and discarded modulus information in the
+coefficient estimate need not be sharp.
+
+There are THREE changes, not five or four:
+
+   N_2: 735 -> 243
+   A_4: 166000 -> 165763
+   A_5: 26859063 -> 3113013.
+
+N_3=4143 and A_3=2265 remain the same.
+
+Current locations:
+
+* Section 5.2 displays the smaller five constants, then says that the larger
+  five choices are also valid. This second sentence can be removed.
+* Section 6 declares M_4=166000 and M_5=26859063; its N_2 lower endpoint and
+  Q -> N_2 comparison use 735 explicitly. These uses should be replaced.
+* Section 6's printed exact critical quotient depends on M_4 and must be
+  updated if the preceding definition changes. It is not permissible to
+  change M_4 while leaving its old displayed equality in place.
+* Section 8 uses region-dependent q-sensitive coefficients and then
+  pair-dependent coefficients. These are not the larger global constants.
+* Section 9 uses the specialized first-pair coefficients and an independently
+  specialized M_bs. These should also be retained unchanged.
+* The literal integer 735 in a finite graph edge-count row is unrelated to
+  M_2. It must not be changed by a global text substitution.
+
+Why all affected interval checks improve:
+
+For each finite family, the lower endpoint is proportional to M^2, while
+the upper endpoint is independent of M. Reducing a valid M enlarges the
+forbidden interval to the left. Every affected incoming overlap quotient is
+therefore multiplied by (M_old/M_new)^2; outgoing overlaps do not change.
+No tail-base estimate depends on these M constants. This is a monotonicity
+proof valid over the full allowed domain, not just a numerical spot check.
+
+The exact multipliers are
+
+ N_2: 60025/6561
+ A_4: 27556000000/27477372169
+ A_5: 80156585026441/1076761104241.
+
+The affected Section 6 junctions are Q -> N_2, N_3 -> A_4,
+N_{3,bs} -> A_4, and O_4 -> A_5. All 15 displayed sufficient comparisons
+were reevaluated at A=B=S=3, K=400, and each remains greater than one.
+The minimum is still N_{3,bs} -> A_4. Its exact value changes from
+
+ 1224133953984/844113475625
+
+to
+
+ 7834457305497600/5386911336360281.
+
+The existing lower statement >7/5 remains valid. The other comparisons
+retain their >13/10 claims. The specialized five-region and 41-pair tables,
+the finite triple table and N_0 are unaffected by this local replacement.
+
+Recommendation: use the smaller displayed uniform choices. Merely explaining
+the conservative choices would also be correct, but the source supplies no
+mathematical reason to retain the three larger values. Do not speculate in
+the manuscript about how they arose historically.
+
+COMMENT 13: ONE ROOT-TRANSFER PROOF
+
+The two existing arguments are equivalent. In Lemma 4.1, let
+
+ theta^2 = 1+1/(xc),
+ u = +/- r_x v_x/(xz),
+ z^2 = cd+1.
+
+The assumptions ensure theta != 0 and z != 0. The algebraic identity is
+
+ u^2/theta^2 = 1+(c-x)/(xz^2).
+
+Choose a square root w of the right side with Re(w)>=0, and choose the sign
+of u so that u=theta*w. Since |w+1|>=1,
+
+ |u-theta| = |theta| |w-1|
+            <= |theta| |(c-x)/(xz^2)|
+            <= C/(|x| Z^2) sqrt(1+1/(|x| C)) (1+|x|/C).
+
+This argument requires neither D>=C nor XC>=1000 nor C>=4Y. It applies in
+Lemma 4.1 under its original C>1 and AC>1 assumptions. It also remains valid
+when r_x or v_x vanishes: then w=0, and no division by those roots occurs.
+The signs are chosen once for each fixed entry and hence are consistent
+across all approximation rows.
+
+The statement |theta+u|>=|theta| used in the current earlier proof follows
+from the same choice, because |theta+u|=|theta| |1+w|. Conversely, the
+earlier sign choice can also be justified immediately by the parallelogram
+identity. Neither argument is mathematically stronger than the other.
+
+Concrete revision:
+
+* Put the w proof above at the first occurrence in Lemma 4.1. Keep the final
+  monotonicity argument e(A_j)<=e(S), since that is needed there.
+* At the beginning of Section 5.1, retain the displayed pointwise error
+  estimate and say that it follows from the sign choice in Lemma 4.1.
+* Retain the local deductions e=3/2 and e=101/100 and the explanation that
+  roots are not divided out. The exact inequalities used are
+  (1001/1000)(5/4)^2 < (3/2)^2 and
+  (1001/1000)(201/200)^2 < (101/100)^2.
+
+This removes actual duplicate reasoning without adding a separate lemma or
+new global notation. It does not require weakening any assumption.
+
+COMMENT 14: GENERAL POLE ORDERS
+
+The common analytic calculation can indeed be written once. For distinct
+nodes alpha_0,...,alpha_r, positive integral orders p_0,...,p_r, and P=sum p_j,
+consider
+
+ I_i = (1/(2*pi*i)) integral_Gamma
+       (1+w/N)^(k+1/2) / ((w-alpha_i) product_j(w-alpha_j)^p_j) dw.
+
+Assume |alpha_j/N| <= 1-eta with eta>0 and P>k+1/2. The same branch-cut
+deformation gives
+
+ |I_i| <= |N|^(-P) eta^(-(P-k-1/2))
+          Gamma(k+3/2) Gamma(P-k-1/2)/(pi Gamma(P+1)).
+
+Leibniz's rule also gives a common residue-coefficient formula with summation
+condition sum h_l=p_j+delta_ij-1 and factors
+
+ binom(k+1/2,h_j) N^(-k)(N+alpha_j)^(k-h_j)
+ product_{l != j} binom(-p_l-delta_il,h_l)
+                    (alpha_j-alpha_l)^(-p_l-delta_il-h_l).
+
+For Lemma 4.1, P=(m+1)k. For Section 5.2, P=m+2k. These substitutions recover
+the two residual bounds exactly before their different clearing and row
+normalizations. Thus the proposed unification is correct at the contour and
+residue-calculus level.
+
+It is not automatically an arithmetic unification. In particular:
+
+* General p_j can exceed k, producing negative powers of N+alpha_j. The
+  existing polynomial integrality proof explicitly relies on h_j<=k.
+* A concrete example is k=1, nodes (0,1,2), orders (1,2,1), i=j=1. The above
+  residue coefficient satisfies
+
+     N f_11 = -(N+1)-3/(8(N+1)).
+
+  There is an uncancelled pole at N=-1. Clearing only powers of N and node
+  differences, as in the present construction, does not make it polynomial.
+  An unrestricted general-order integrality assertion would therefore be
+  false in the present normalization.
+* The finite construction has row divisions by x-y, x and y, followed by
+  division by g. Its column divisibility and exact integer constants depend
+  on these divisions.
+* Lemma 4.1 uses the all-orders Bennett determinant identity. Section 5.2
+  proves five specific determinant identities through a two-by-two block,
+  and permits a c^(k-m) factor. A generic contour bound supplies no generic
+  determinant formula or rank result for these arithmetic normalizations.
+* The coefficient table, the g divisibility, and the specialized M bounds
+  still need their current finite computations after analytic unification.
+
+Recommendation: do not introduce a broad new arithmetic theorem during this
+revision merely to reduce repetition. If desired, state the common contour
+bound and residue differentiation once, then specialize it with explicit
+normalizations in each construction. Keep the determinant and integrality
+arguments separate and transparent. The expected saving is modest, rather
+than the removal of most of Section 5.2. A larger refactor should have its
+own exact equivalence review and must state the p_j restrictions explicitly.
+
+COMMENT 15: INTERVAL CHAINS
+
+The paper already has two levels of shared machinery:
+
+* (ff-window) converts an arithmetic row inequality to a forbidden interval.
+  It is not an interval-chain lemma.
+* Section 8.1, entitled 'A common interval calculation', supplies one raw
+  endpoint table, a sufficient overlap table, and the ordinary-tail argument.
+  It is used both for the five unbounded regions and for the S<15 reduction.
+
+There is nevertheless genuine duplication. The raw interval tables in
+Sections 6, 8.1 and 9.1 have the same monomial pattern. Section 6 specializes
+the constants. Section 9 discards positive powers of A from upper endpoints,
+which is equivalent to substituting A=1 in those endpoints and in the
+ordinary upper base. Lower endpoints have no A factors and do not change.
+Its M_bs is separately specialized, but that is already a parameter in the
+Section 8.1 table.
+
+A concrete useful consolidation is as follows.
+
+1. Place the common raw endpoint table after the approximation constructions,
+   before Section 6, with the size assumptions under which every row is
+   available. For example the relevant simultaneous guards are A>=1,
+   C>=max(1000/A,200S,4T), D>=C, together with the distinct-entry hypotheses
+   and the specified valid M and R constants. Actual applications have
+   strict stronger versions supplied by the retained-gap lemma.
+2. Section 6 supplies its uniform constants and cites that table, rather than
+   reproducing all ten endpoint rows.
+3. Section 8 supplies the region or pair constants and continues to use the
+   table as now.
+4. Section 9 says explicitly that it uses the same table after replacing A
+   by 1 only in upper endpoints, and supplies its fixed-pair M values and
+   specialized M_bs. Its duplicate ten-row raw endpoint table can disappear.
+5. Keep Section 9's table of c_e x^(p_e). Its gap is C>K T^5/S^2 and the
+   variable to be bounded is x=N(t). Its selected chain always uses
+   P,A_3,M,N_3,N_{3,bs},A_4. These are materially different substitutions
+   from the G/rho calculation and should remain visible.
+
+There is a further verified saving in Section 6. The existing Section 8.1
+overlap table works there with G=400 and rho=400/(35/32), and the appropriate
+uniform M values. The first two entries of that table use T>2BS rather than
+the stronger T>2ABS used in Section 6, giving A^10 rather than A^20 in the
+first comparison, and A^8 rather than A^16 in the second. Even these weaker
+entries are strictly greater than one at A=B=S=3. All later entries agree
+after rho=400/R_bs is substituted. The exact checker verified all fifteen
+common-table comparisons for this use. Consequently the full overlap table
+can also be shared between Sections 6 and 8 if moved before its first use.
+Section 6 can retain one displayed critical quotient and state that the
+others exceed their chosen exact lower bounds.
+
+The chain principle itself is very short. If D avoids every closed interval
+[L_j,U_j], D>L_0, U_j>=L_(j+1), and L_j tends to infinity, then induction gives
+D>U_j and D>L_(j+1) for all j, which is impossible. This remains valid when
+an intermediate interval is empty: D>L_j>U_j already gives the induction.
+For the ordinary tail, L_j=a H^(2j), U_j=b R^(2j), with R>H>1. The ratio
+U_j/L_(j+1) increases by (R/H)^2, so one checked overlap starts the entire
+tail. This elementary statement can be proved once in a short paragraph or
+lemma, without an array of extra G,rho,M,R parameters in its statement.
+
+Thus I support the goal of comment 15, in this precise scope. Merely adding
+an abstract chain lemma while retaining all duplicate tables would save
+little. Replacing all branch-specific inequalities by one heavily
+parametrized lemma would hide rather than clarify the genuinely different
+growth estimates. The common endpoint table plus the existing shared
+overlap calculation achieves the main saving with no new mathematical input.
+
+COMMENT 20(a): R_2
+
+In Proposition 4.2, A is a positive modulus, so
+
+ 27 A B (A C-1)^2/(16 A^2 delta^2)
+   = 27 B (A C-1)^2/(16 A delta^2).
+
+The proposed simplification is exact, preserves all hypotheses and later
+uses, and should be adopted. It is an algebraic cancellation, not a change
+to a bound or a normalization.
+
+END OF ASSESSMENT

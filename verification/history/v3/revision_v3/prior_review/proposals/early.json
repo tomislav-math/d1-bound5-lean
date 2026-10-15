@@ -1,0 +1,57 @@
+{
+  "source": "input/D1_bound5-v2.tex",
+  "sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "status": "diagnostic proposals only, not applied",
+  "proposals": [
+    {
+      "id": "EARLY01",
+      "severity": "useful exposition repair",
+      "rank": 1,
+      "source_lines": "522\u2013545",
+      "old": "\\section{Interpolation of square roots}\n\n",
+      "replacement": "\\section{Interpolation of square roots}\n\nWe construct integral combinations of square roots by interpolation. The interpolation weights cancel the low-order terms involving the fixed entries, leaving an explicit remainder. Bounds for these combinations give gaps between the last two entries when they are nonzero. We also bound the ranges in which these combinations can vanish.\n\n",
+      "reason": "The section currently begins with six definitions before saying what the weighted combination accomplishes. A cold reader can reconstruct the cancellation only at lines 550\u2013564 and must wait until the later lemmas to see why vanishing is a separate obstruction. This opening states the mechanism and its limitation without adding notation.",
+      "mathematical_contract": "No change to any statement or definition. The cancelled terms are the nonconstant degrees 1 through m\u22121 in the weighted anchor sum, as shown in the partial-fraction identity. The term 1\u2212f(xy) remains, so the wording deliberately does not claim cancellation of every low-degree term of L_m. Bounds and zero cases are those already proved for m=2,3,4. All distinctness, full-ring, equal-modulus, branch and size assumptions remain in place.",
+      "dependencies": [
+        "eq:coherent-exact",
+        "eq:coherent-tail",
+        "lem:interpolation-parameters",
+        "lem:strong-two-anchor",
+        "lem:direct-four",
+        "lem:retained-gap"
+      ],
+      "independent_check": "Reconstructed the barycentric weighted sum and its constant term before reading revision_v2/agents/structural.md. Checked the new sentences against the exact identity and the later nonzero/zero alternatives. No numerical rerun is needed for this explanatory insertion."
+    },
+    {
+      "id": "EARLY02",
+      "severity": "useful local proof clarification",
+      "rank": 2,
+      "source_lines": "857\u2013863",
+      "old": "The form \\(L_4\\) satisfies the hypotheses of Lemma~\\ref{lem:direct-four}.\nIt is nonzero because\n\\[\n \\frac{C^2}{17BS^3T/A}>\n \\frac9{17}A^3\\frac{BT}{S}>\n \\frac{18}{17}A^3B^2>1.\n\\]\n",
+      "replacement": "The form $L_4$ on $(a,b,s,t)$, evaluated at $(c,d)$, satisfies the hypotheses of Lemma~\\ref{lem:direct-four}. If it vanished, that lemma would give $D<17ABSTC^3$. Together with $D>A^2C^5/S^2$, this would imply $C^2<17BS^3T/A$, contrary to\n\\[\n \\frac{C^2}{17BS^3T/A}>\n \\frac9{17}A^3\\frac{BT}{S}>\n \\frac{18}{17}A^3B^2>1.\n\\]\n",
+      "reason": "The current nonvanishing sentence jumps straight to a dimensionless ratio. The reader must go back to the vanishing conclusion of the four-anchor lemma, identify P=C and Q=D, and independently combine it with the just-proved fifth-power gap to discover why this particular ratio appears. The replacement makes precisely that inference visible.",
+      "mathematical_contract": "No change to the existing display, hypotheses, constants, or conclusions. The contradiction is D>A^2 C^5/S^2 and D<17ABST C^3, which would imply C^2<17BS^3T/A. The previously established C>1000 and D>1000C give the exact lemma hypotheses. Distinctness of all anchors and terminal entries is inherited from the sextuple.",
+      "dependencies": [
+        "lem:direct-four",
+        "eq:retained-start",
+        "lem:product-five"
+      ],
+      "independent_check": "Expanded both sides and cancelled the strictly positive factors A, C^3 and S^2. The printed ratio is >1 using C>3ABST, T>2ABS, A>=1 and B>=3. No additional lower bound, strict ordering of equal moduli, or zero-root exclusion is introduced."
+    },
+    {
+      "id": "EARLY03",
+      "severity": "useful proof orientation",
+      "rank": 3,
+      "source_lines": "149\u2013153",
+      "old": "Suppose instead \\(d=b+c+2r\\), \\(r^2=bc+1\\). First let \\(C\\ge4\\).\nChoose \\(\\beta^2=b,\\gamma^2=c\\) so that\n",
+      "replacement": "Suppose instead \\(d=b+c+2r\\), \\(r^2=bc+1\\). First let \\(C\\ge4\\). We choose the roots of $ab+1$, $ac+1$, and $ad+1$ so that the sum of the first two differs from the third by less than one. Integrality will force equality, and squaring will yield a contradiction.\nChoose \\(\\beta^2=b,\\gamma^2=c\\) so that\n",
+      "reason": "The proof launches directly into several nested analytic square-root approximations and constants. Its target, the small integral difference u+v\u2212w, is only revealed thirty-five lines later. Naming that target before the estimates explains why the branch choices and error budget are being made.",
+      "mathematical_contract": "The added prose applies only to the explicitly opened C>=4 case. It describes exactly the chosen roots u, v, w and the inequality |u+v\u2212w|<1 proved below. The contradiction uses 2(ar\u2212uv)=1 in the full integer ring. The finite 3<=B<=C<4 case is untouched. The sign choice for r already covers both regular completions.",
+      "dependencies": [
+        "lem:tail-irregular",
+        "lem:irregular-growth"
+      ],
+      "independent_check": "Reconstructed the analytic proof through p=beta+gamma, the relative perturbation delta/(ap^2), the convex endpoint estimate, and 2(ar\u2212uv)=1. All three roots are integral and the proof does not require strict inequalities between A, B or C."
+    }
+  ]
+}

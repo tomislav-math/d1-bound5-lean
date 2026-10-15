@@ -1,0 +1,90 @@
+Revision v4: visual and linear-reader audit, pages 7-23
+
+Audited PDF: revision_v4/final_build/D1_bound5-v4.pdf
+Verified SHA-256: e31656ca74ed839a09ede3a9d4e6a26a5ba2d2f13b5b6c959e13259fe3e87644
+Verified source SHA-256: 776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3
+
+Method: Every full-page PNG for pages 7 through 23 was opened with
+view_image at original resolution (910 x 1287 pixels). The page images
+were read for layout and mathematical prose, with PDF text extraction
+and limited source inspection used to clarify notation. This was a
+read-only PDF/source review; no compilation or source/PDF edits occurred.
+
+Pages actually viewed: 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+20, 21, 22, 23.
+
+Finding: The initially supplied page-13.png was truncated (114688 bytes).
+Both view_image attempts rejected it and PIL verification reported
+"Truncated File Read". As instructed by the parent reviewer, only that
+PNG was regenerated from the verified final_build PDF using system
+/usr/bin/pdftoppm at 110 dpi. Its replacement is 176850 bytes, passes PIL
+verification, and was then successfully viewed in full. This was a render
+artifact defect, not a defect found in the PDF or source.
+
+Page-specific review:
+
+7: Determinant estimates, multilevel fractions, and long display (2.10)
+   remain within the text block. No overlap or clipping. The discussion
+   leading to the endpoint estimates reads continuously.
+8: End of the preceding proof, Section 3 heading, definitions, and (3.1)
+   are well separated. The generating-series display continues naturally
+   onto page 9. No orphan heading or unresolved reference visible.
+9: The small parameter table and (3.2)-(3.4) are legible. The expanded
+   factorization argument for f_3 reads clearly. The proof continues
+   naturally with its exact fractions on page 10.
+10: Exact-fraction table, Lemmas 3.2-3.4, and their displayed estimates
+    are readable. Lemma 3.4's statement stays together before its proof
+    begins on page 11; this is an acceptable page transition.
+11: The revised 24-monomial Vandermonde argument and Lemma 3.6 constants
+    read clearly. Section 3.1 has a substantial opening statement and
+    parameter definitions before the page break. No heading is orphaned.
+12: The retained-gap proof and revised exponent A^4 fit without collision.
+    The updated first-summand estimate at the bottom is complete and its
+    consequence continues on page 13. No clipping or bad equation break.
+13: After the PNG repair, the final gap-proof paragraph, Section 4,
+    subsection 4.1, and Lemma 4.1 are all legible. Displays (4.1)-(4.4)
+    and the bottom definition of Q_ijk fit the page. The determinant and
+    divisibility terminology is introduced before use.
+14: The residue integral, polynomial-integrality explanation, determinant
+    identity attribution/transfer, and contour-deformation prose read
+    coherently. Dense product expressions and the final integral fit
+    without collision or margin overflow.
+15: The root-transfer argument ends cleanly before subsection 4.2. The
+    proposition and the start of its proof remain readable. The F_2 and
+    p_2 definitions at the bottom continue naturally onto page 16.
+16: Coefficient bounds, residual comparison, and Corollary 4.3 fit cleanly.
+    The corollary statement is complete; its proof starts on page 17.
+    No text or formula overlaps the footer.
+17: Corollary proof, subsection 4.3, Lemma 4.4, and its row-divisibility
+    explanation are clearly separated. Long interval (4.11), the row
+    factors, and contour quantities are readable.
+18: Weighted row-sum derivation, (4.12)-(4.14), and the residual constants
+    fit the text block. The bottom formula is complete and has adequate
+    separation from the page number.
+19: Lemma 4.4 concludes cleanly. Section 5 and subsection 5.1 contain
+    sufficient following text. Fixed-entry sign consistency and the
+    arithmetic-form argument are stated clearly. The sentence continuing
+    onto page 20 is a normal prose break, with no isolated heading.
+20: The closed-interval conversion is explicit. Table 1 is readable, with
+    all five families and their constants aligned. The finite formulas
+    (5.6) and their explanation remain within the margins.
+21: The binomial-values table is readable. The residue/determinant-degree
+    argument and coefficient-block formulas show no overlap. The
+    coefficient definitions at the bottom continue coherently on page 22.
+22: The coefficient identity, determinant formula, beta integral, and
+    residual bounds (5.9)-(5.11) are readable. The sentence introducing the
+    coefficient table continues naturally onto page 23.
+23: The large coefficient table is dense but readable, including its last
+    A_5 row. Formulas (5.12)-(5.13), the norm explanation, and subsection
+    5.3 opening conditions fit cleanly. The subsection has enough opening
+    content to avoid an orphan heading.
+
+Result: No blocking PDF layout defect or obvious ambiguity in the new
+mathematical prose was found on pages 7-23. No clipped/overlapping formula,
+unreadable table, visibly unbalanced spacing, orphan heading, bad equation
+break, or unresolved-reference marker was found. The scope text contains
+no ??, undefined, TODO, or FIXME marker. No source adjustment is requested;
+retain the existing preamble, font, and margins.
+
+This review checks rendered presentation and obvious prose ambiguity;
+it does not independently re-prove every mathematical identity.

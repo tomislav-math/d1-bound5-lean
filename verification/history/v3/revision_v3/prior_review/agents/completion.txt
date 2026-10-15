@@ -1,0 +1,61 @@
+ARMSTRONG / LOHER DIAGNOSTIC REVIEW — COMPLETION
+
+Authority and scope
+Source: armstrong_v2/input/D1_bound5-v2.tex
+SHA-256: 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70
+Fresh detailed reading: Sections 8–10, lines 2882–3860, and the entire bibliography, lines 3862–3904. Read the relevant global coordinate conventions and the prerequisite statements/proofs for irregular growth, tail irregularity, retained gap, finite coefficient normalization, adaptive residuals, and interval conversion. Read the two requested skills and writing-rules, artisan-writing, house-style, route-polish, shared-controls. Author overrides govern. No article edit, new canonical version, layout alteration, or publication action occurred.
+
+Outcome
+No mathematical defect, missing boundary case, incorrect finite count, or mandatory wording repair found in this scope. Three nonblocking, exact local exposition proposals are in proposals/completion.json. Each old string occurs exactly once in the frozen source. The strongest two explain the role of the long finite reductions at the Section 8 and Section 9 entrances. The third connects the norm enclosure phi_1 to the earlier modulus quantity Phi. These are new optional improvements, not a claim that an earlier accepted repair was omitted.
+
+Cold reconstruction, before consulting earlier audits
+The object remains a sextuple of distinct nonzero algebraic integers, ordered by modulus. A,B,S,T,C,D are moduli, not norms. The one-small branch has 1≤A<3≤B≤S≤T≤C≤D.
+
+The integral approximation forms exclude closed intervals for D. A strong structural lower bound starts the exclusion above the first lower endpoint. Each checked quotient puts one upper endpoint above the next lower endpoint. The ordinary two-entry family at every order supplies an infinite tail whose lower endpoints diverge. This is why finitely many special families can exclude every possible finite D, rather than merely a bounded region.
+
+The five regions cover all integral N(a) in 1,…,8 except N(a)=1,B<8 or N(a)=2,B<4. The coupled phase estimate bounds Q²Phi, enabling the critical N3,bs-to-A4 junction. The constant G controls the coarse gap, while rho controls its pointwise coefficient divided by the relabeled residual. Estimating them separately is deliberate and mathematically valid. The two branch decisions S versus B² and S versus B³ alter only the connecting families, and equality is included.
+
+The field argument leaves the separate pair (1,3), up to simultaneous negation, or discriminant at most 24. Full-ring pair enumeration produces forty representatives, not forty-one field-dependent representatives. The additional field-independent pair (1,3) makes forty-one possibilities in the later fixed-pair bounds. The same interval strategy shows S<15 for all forty-one.
+
+The forty-pair branch gives 57 third entries. One is (1,-3,3), eliminated by the local {1,3} lemma, leaving the 56 printed triples. Separately, the {1,3} lemma makes a hypothetical sextuple containing (1,3) positive rational. Its third entry must be 8. Thus the common-cutoff procedure is applied to 56+1 triples. These two occurrences of 57 have different immediate origins, but the current text distinguishes them correctly.
+
+For each fixed triple the retained gap C>K T^5/S² turns each endpoint quotient into a positive rational monomial c_e x^p_e in x=N(t). Choosing N0 to exceed the least strict thresholds, the tail threshold, 1024, and the norm-two guard ensures all interval and size hypotheses. Consequently N(t)≥N0 is impossible. The rational triple has N0=1024, hence t<32, contrary to t>48. Among the other 56 rows, 38 contradict T>2BS directly, 16 are excluded by the irregular quadratic throughout the interval between 2BS and sqrt(N0), and the last two reduce to t+1=(u+v sqrt(-2))² with 29<u²+2v²<33. The mod-16 argument excludes the remaining norms. No fourth-entry enumeration or He–Togbe–Ziegler theorem is needed.
+
+The final proof uses zero, exactly one, or at least two small entries, with modulus exactly three on the large side. Any larger tuple contains a sextuple, and ties are allowed. Nothing establishes or claims that five is attained.
+
+Where the reader supplies work
+1. Lines 2884–2891 identify the remaining case but do not yet explain that the long interval tables are being used to make B and S bounded. I reconstructed this from the later propositions. COMP-01 supplies that mechanism without changing the route.
+2. At line 3554 the phrase “the same argument” does not yet identify N(t)<N0 as its output or explain how the finite complement is handled without enumerating t. COMP-02 previews precisely that two-stage conclusion.
+3. At the phi_1 definition, the square-root enclosure uses sixth powers of squared norms. Translating it back gives Phi, but only the neighboring q_1 enclosure is explicitly interpreted in the current prose. COMP-03 states the missing connection. The new sentence is true and not a changed definition.
+
+I had no difficulty reconstructing the 40/41 or 56/57 distinctions after the current set-aside sentences, the two coordinate conventions, the rational case, equality at N0, or the final assembly. No proposal is needed on those points.
+
+Fresh exact checks
+Command: python armstrong_v2/agents/completion_check.py
+Result: PASS. Exact results: armstrong_v2/agents/completion_check.json.
+The new checker reads the frozen source, checks its hash before and after execution, and does not import any old checker or old result file. All acceptance comparisons use integer arithmetic or Fraction.
+
+• It regenerated the forty first-pair representatives with the printed lexicographic symmetry rule and all 146 raw pairs. Counts (d, orbits, raw) were (1,9,30), (2,3,10), (3,15,58), (5,2,6), (6,2,6), (7,2,8), (11,2,8), (15,2,8), (19,2,8), (23,1,4).
+• It regenerated third entries by a root-first square set in each full ring, independently of the displayed p,q square-test equations. Every square root needed has norm <121 because |bs+1|≤sqrt(63·224)+1<121. It obtained 57 entries, removed exactly pair 7 with s=3, and matched every one of the 56 printed rows including ties.
+• It verified every printed third-entry norm, the exact 38/16/2 split, the positive coefficient needed for the negative-linear-term rounding direction in all 16 quadratic cases, and their certified upper bounds. The largest bound was -526504132441877163783/5000000000000000000, strictly below -100.
+• It recomputed norms 33,457,153 in both exceptional rows. The stated rational radical bounds give a strict bound f(30)<-5. The mod-16 residue set is {0,1,2,3,4,6,8,9,11,12}; residue zero forces 4|u,v, and norm 32 leaves (u,v)=(0,±4).
+• It checked the unique rational third entry s=8 in 3<s<15.
+• It independently executed all five phase-maximizer bisections with 30 rational steps, the G and rho inequalities, four adaptive residual polynomials per row, all 75 regional overlap inequalities, and all five ordinary-tail tests. Minimum quotients occur at junction 11 and are approximately 1.2606619065, 2.3296816110, 1.1660489527, 5.4591888479, 1.3218181741, respectively. Each strictly exceeds the printed rational margin.
+
+Limits of the fresh numerical work
+The fresh checker treats the printed M coefficients and N0 cutoffs as inputs. It does not regenerate the five large polynomial families, repeat all fixed-pair coefficient computations, or recompute every cutoff threshold. I read those formulas and their normalization connections, then consulted the previous exact results only after the cold reconstruction. The prior one_small_v2_results.json (23,921 checks), completion_exact.json (3,275 checks), completion_overlaps.json (103 checks), and their comparison bind to exactly the present SHA-256. Their complete coefficient/cutoff coverage therefore remains relevant evidence. No new mathematical risk justified repeating those polynomial runs or any large extension graph.
+
+Bibliography and source status
+Read all eight bibliography entries and checked that every key is cited. Sections 8–10 use proved internal inputs rather than an external theorem for the final rational case. The bibliography's full-ring versus suborder distinction agrees with the opening convention and the local proof. No bibliographic deletion or attribution change is proposed. This scope did not independently fetch primary sources or certify their metadata. That belongs to the source review, not to this bounded completion reconstruction.
+
+Rejected changes
+• Do not add another explanation of the 40/41 and 56/57 bookkeeping. Existing sentences already explain the separate rational pair, the excluded (1,-3,3), and the added (1,3,8).
+• Do not restore a fourth-entry search, add an external rational no-quintuple theorem, or replace the 38/16/2 proof by its old computational predecessor. The current elementary argument covers the entire complement.
+• Do not rename every local t,u,h,q, all basis symbols, or the coordinate columns. The section explicitly defines the basis and the later variables are locally reintroduced. A broad notation conversion would cost more than it clarifies.
+• Do not split the five regions, alter their constants, replace exact decimals by approximate values, or adjust the cutoff maximum. All boundary and strictness conventions are correct.
+• Do not remove Q/P/M/N3,bs bridge intervals or claim that the ordinary family alone suffices. The finite bridges close specific overlaps.
+• Do not add a standalone proof-map figure or extra concluding summary to Section 10. Its existing short assembly proof is effective.
+• Do not add a new global preamble, smaller fonts, margins, packages, or displaystyle settings.
+
+Campaign status
+This is Phase 0 binding and diagnostic work across Phases 1–6 at a bounded scope. It is not an integrated revision, not an exposition-audited changed packet, and not a typeset audit of proposed changes. No edited article was compiled or rendered because there is no edited article. The unchanged source hash was rechecked.

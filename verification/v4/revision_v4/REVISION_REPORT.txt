@@ -1,0 +1,134 @@
+D1_bound5-v4: revision and verification record
+Date: 2026-10-15
+
+Release source SHA256:
+776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3
+Release PDF SHA256:
+e31656ca74ed839a09ede3a9d4e6a26a5ba2d2f13b5b6c959e13259fe3e87644
+Baseline v3 source SHA256:
+a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+
+Outcome
+
+The approved revision is complete. The source has 48 uniquely matched,
+recorded replacements. Replaying their exact old/new strings against the
+frozen v3 source reproduces the released v4 byte for byte. The final PDF
+has 58 pages. Its final compilation log contains no overfull/underfull
+boxes, LaTeX warnings, hyperref warnings or undefined references. Every
+rendered page was visually reviewed; no required layout repair remained.
+
+The Dujella book sentence now immediately follows the statement of
+Dujella's open question and the sentence "Our bound does not settle this
+question." The two citations retain their existing bibliography entries.
+
+Mathematical changes
+
+1. The f_3 estimate now has an explicit short proof using
+   (1-w)^2(1+w)=(1-w)(1-w^2). This gives the actual constants
+   45/1024 and 85/1024 without a trigonometric optimization.
+2. The product-four estimate is strengthened from (3/8)ABC to (3/2)ABC.
+   Its proof uses the already available D>6C and gives the exact upper
+   coefficient 18212679025/27518828544<2/3. Later estimates do not rely
+   on exploiting the improvement.
+3. The four-point Vandermonde bound is proved by its 24 monomials, removing
+   the maximum-modulus/Hadamard step. The changed local constants are 13
+   and 49/50. Both downstream consumers were recalculated; their final
+   gap and cutoff conclusions, and all printed N_0 values, remain valid.
+4. The retained-gap exponent is A^4 as obtained by the derivation. The
+   small-cutoff estimate explicitly uses AT>=T>=10^72>11. The Legendre
+   application explicitly includes u/v+sqrt(d)>4.
+5. Bennett's identity is identified precisely as the unnumbered identity
+   after (2.4), Section 2, page 1721, with the normalization and extra pole
+   explained. The extension keeps the hypothesis alpha_0=0. The all-orders
+   identity remains a cited result; finite tests are not presented as its
+   proof.
+6. The elementary root-transfer proof appears once and is reused. Its
+   nonzero denominators and possible zero root values are treated explicitly.
+   The expression for R_2 is simplified by cancelling A.
+
+Structure, constants and notation
+
+The common interval calculation is now Section 5.5, before its first use.
+It gives the endpoint table, overlap table, all guards, branch/equality
+conventions, treatment of empty intervals and the infinite ordinary tail.
+Sections 6, 8 and 9 use this common calculation with their own parameters.
+The specialized cutoff table in Section 9 is retained. The duplication of
+endpoint tables is removed without deleting a required case or hypothesis.
+
+The uniform bounds 243, 165763 and 3113013 replace the three unnecessary
+larger choices. The smallest all-large overlap quotient is now stated as
+7834457305497600/5386911336360281>7/5. All five region-specific and all
+41 fixed-pair comparisons remain valid. The existing sharp P-row residual
+bounds are retained; no new unexplained conservative constants are added.
+
+The field basis consistently uses omega, tau_K, nu_K and Delta_K. Numeric
+finite-family determinant constants use c_det; Vandermonde products retain
+their existing notation. Norm, conjugation, multiplication, disk enumeration,
+orbit ordering and the square criterion use the same field convention.
+The finite field cutoff is consistently Delta_K<=60, with unchanged fields.
+The 90/118/16 counts are explicitly totals over those fields. The zero-square
+sentence is placed next to its equations, and the rational-triple contradiction
+uses T consistently. The bounded Pell-graph counts are explained as matchings.
+
+The introduction contains a compact map of the three cases. Statements about
+included computational output are made precise. No claim of an already public
+repository is introduced. The existing elementary Legendre and modulo-16
+arguments are retained. A general arbitrary-pole-order construction was not
+introduced. These choices avoid an unnecessary new theorem or recalibration.
+
+Preservation controls
+
+The full preamble is byte-for-byte identical to v3, including fonts, margins,
+and emergencystretch. No custom style file or external TeX input is needed.
+The main theorem statement is unchanged. All author information, funding
+text and project identifiers, AI declaration, bibliography/DOIs and affiliations
+are byte-for-byte preserved. No old file was overwritten by the v4 release.
+All labels are unique and all references and citations resolve.
+
+Verification actually performed for v4
+
+- Independent proof reconstruction of the revised product, f_3, Vandermonde,
+  retained-gap and small-cutoff arguments, supported by 80 exact/source
+  controls. These controls target an immutable mathematical checkpoint;
+  final_controls.py proves that the accepted blocks and downstream consumer
+  are carried unchanged into the final release.
+- Focused exact root-transfer, normalization and constant checks, including
+  11 finite Bennett determinant samples and source bindings.
+- A completion checker freshly executed 33574 assertions against v4. It
+  regenerated the five coefficient systems, all 40 first-pair representatives
+  (146 before symmetries), all 57 third entries, all 41 coefficient tuples,
+  all 41x15 fixed-pair overlaps, five regional computations and all 56
+  M_bs/N_0 entries. It reproduced the (1,3,8) thresholds and the final
+  38+16+2 split. This checker discloses its reuse of earlier constructors.
+- Nine generic polynomial identities for the field convention and 9176
+  square tests in 40 fields provide additional controls of the notation edit.
+- A separate interval referee reconstructed the endpoint and overlap
+  arguments directly from the new text before using the supplied helper.
+  Its independent code rebuilt the coefficient bounds, five regions,
+  41 fixed pairs and all 56+1 cutoff calculations. No repair was requested.
+- The interval equivalence helper checked 26 formal endpoint comparisons,
+  the 15 source-parsed overlaps, and preservation of specialized cutoff data.
+- Exact change replay, metadata preservation, source/PDF fingerprints,
+  clean compilation and full-page visual reviews completed the release checks.
+
+Scope and limitations
+
+This is a mathematical/computational review, not a proof-assistant
+formalization. The all-orders Bennett identity is supported by its cited
+published source, not by finite sampling. The large extension graphs through
+modulus 10^550 and the Pell extension graphs were NOT regenerated in this
+v4 run. Their complete printed counts, relevant algorithms and table data
+were compared with frozen v3; the inherited verification archive is included
+unchanged. The 1016 admissible fields themselves were freshly counted.
+The historical archive and the prior review-assessment package distinguish
+earlier computation from the new v4 work. No previous LLM's reported run is
+silently relabeled as an independently executed v4 computation.
+
+Reproduction and evidence
+
+See the top-level README and revision_v4/run_checks.py. Checks use the Python
+standard library. The runner executes six checks in an isolated temporary
+copy and saves fresh logs/results separately, preserving shipped evidence.
+The change register is the authoritative record of applied replacements.
+Scoped planning reports in reports/ and agents/ describe the preparation
+stage; they are not additional instructions or unapplied changes.

@@ -1,0 +1,65 @@
+ARCHITECTURE REVIEW — D1_bound5-v2
+
+Scope and authority
+
+I freshly read the entire manuscript, source lines 1–3904, including every proof, table and bibliography entry, before diagnosing its architecture. The source is armstrong_v2/input/D1_bound5-v2.tex at SHA-256 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70. I also read brief.txt and both skill main files plus writing-rules, artisan-writing, house-style, route-polish, shared-controls and control-artifacts. I did not read prior audits. No manuscript files were changed. This is a Phase 1/3 diagnostic, not an integrated reduction or a renewed mathematical certification.
+
+Verdict
+
+Retain all 37 named statements. Each has a real mathematical job and a downstream consumer, apart from the principal theorem itself. The present dependency order is already sound. There is no demonstrated mathematical reason for a global rewrite, a reduction of the elementary proofs to citations, or a wholesale reduction in the number of lemmas. The main gains are local placement, removing two genuinely repeated arguments, and identifying the two currently unlabelled reduction results. The attached JSON gives every frozen statement, proof location, role, direct dependencies and consumers, including unnumbered calculations that cannot be recovered by counting references alone.
+
+The genuine proof structure
+
+1. Zero small entries. The fourth-entry gap and retained interpolation gap give C>400 A^7 B^5 S^3 and D>A^2 C^7/(S^2 T^4). Each finite family excludes a closed interval because a nonzero integral form has modulus at least one. The interval chain then reaches the ordinary all-order family, whose later overlaps increase geometrically and whose lower endpoints tend to infinity. This is an infinite-cover contradiction, not a final height enumeration. See 1860–2009.
+2. At least two small entries. For exactly two, the analytic argument bounds the third large modulus C by 10^550. Reversible descent makes the bounded nondegenerate-pair graphs complete, while the two degenerate pair types receive separate proofs. The classification permits at most three small entries. For three small entries, at most one bounded further extension exists, and the analytic alternatives or overlapping windows exclude three further entries. See 2024–2880.
+3. Exactly one small entry. The five excluded regions bound the first pair, the discriminant argument produces finitely many fields, and S<15 produces 56 triples in addition to (1,3,8). For each fixed triple the interval calculation gives N(t)<N0. This finite complement is eliminated by the irregular-triple inequality and, for the last two rows, a congruence. No fourth-entry enumeration and no He–Togbe–Ziegler theorem is used. See 3044–3847.
+
+Ranked proposals
+
+ARCH-01 — Move the four-root order-one lemma to its actual consumer. Recommended, local architecture.
+Current location 2080–2188, between sm:crossblock and the two-small cutoff material. Its sole later use is 2815 in the proof of sm:five-three-small. Move the complete statement and proof, with all four existing labels and exact constants, to immediately before sm:five-three-small, after sm:five-small-anchor-alternative (currently after 2769). The common residue construction already precedes either location, and nothing in the intervening two-small argument consumes this lemma. This restores the uninterrupted route crossblock -> six-V interval -> cutoff and places the 109-line auxiliary proof near the only case needing it. No proof, statement clause or estimate should be suppressed. A final editor would need to check references, numbering and rendered transitions after the move.
+
+ARCH-02 — Reuse the already proved square-root transfer estimate. Recommended, small reduction.
+Compare 1011–1035 with 1345–1366. The latter gives a second proof of the same estimate between theta_x and the signed product r_x v_x/(xz). Preserve the full displayed inequality (ff-error), the two useful numerical constants, the consistent sign choice across rows, and the explanation that no root is divided out. Replace only the repeated factorization/branch argument at 1357–1361 by an exact reference to the argument at 1011–1025, adding a label there if useful.
+Suggested connective text: “Choose the signs for each fixed entry as in the proof of Lemma [ordinary-residue-construction], and use the same choices in every row. The estimate proved there gives [ff-error].” The e=3/2 and e=101/100 comparisons must remain explicit. This imports the already visible elementary argument, not an external theorem. The finite-form rank and integrality argument at 1368–1384 has its own job and must remain.
+
+ARCH-03 — Reuse the identical half-coordinate square test in the triple computation. Recommended, small reduction.
+The necessary-and-sufficient test at 2385–2392 already treats (u+v sqrt(-d))/2, parity, sign and zero. The test is restated at 2688–2692 in exactly the same coordinate system. Keep the triple computation's initial search bounds, descent, output counts and third-anchor test. Replace only this repeated square-test derivation by a reference to the earlier test, with a local reminder that zero and the full-ring parity rule are included.
+Suggested text: “Every step uses the square test in the proof of Lemma [sm:bs7-finite-pairs], including its parity condition and the case zero.” Do not merge this with the later omega-coordinate test at 3527–3538 without an explicit coordinate conversion. Keeping that later local formulation avoids forcing a reader to reconstruct the conversion.
+
+ARCH-04 — Remove the repeated proof of four-anchor nonvanishing at the next use. Recommended but minor.
+At 2195–2206 the hypotheses are stated, Lemma four-anchor-nonvanishing is invoked, and its decisive contradiction is then rederived. The exact inequality is already proved at 739–747. Keep the hypotheses at 2195–2200 and the sentence that the two triples share the first two anchors and use coherent roots. Delete only the redundant “Indeed ...” calculation at 2201–2206. Continue with the separated-three estimate. Nothing else uses this repeated display. The useful derivation of the new six-V interval at 2207–2223 stays.
+
+ARCH-05 — Give the two reduction results stable labels and cite them at their consumers. Recommended, navigation.
+The discriminant lemma at 3185–3203 and the S<15 proposition at 3361–3517 are unlabelled. Their statements are mathematical thresholds that make the enumeration finite, rather than expendable one-use calculations. Add labels, retaining their existing environments and exact wording. Cite the first when introducing the field list at 3205–3208; cite the second at 3521–3526 and/or 3549. This makes the finite-reduction dependencies inspectable without adding another statement or replacing the proof. The new labels require ordinary uniqueness/reference checks after implementation.
+
+Deferred option — Do not reorder entire case sections in this pass.
+The current one-small Sections 8–9 could topologically precede Section 7, since they have no mathematical dependency on it. That would keep the two long interval-chain arguments closer together. But both orders are coherent and no measured reader benefit yet warrants moving 870 lines and rechecking all transitions. Retain the present section order. ARCH-01 resolves the one clear local placement problem without a global rearrangement.
+
+Tempting changes to reject
+
+- Do not merge general-three (687–705) with separated-three (707–721). The former allows Q>=P, whereas the latter needs Q>=4P and has both the sharper 3/4 residual and the vanishing-form interval. The two-small cutoff and small-anchor alternative explicitly need the weaker separation regime before they can establish the stronger one.
+- Do not merge or delete product-four, product-five and five-frontier-gaps. Their arities and constants differ; the preliminary product gaps also supply hypotheses used by their sharper successors. In particular the frontier proof consumes product-four, so simply replacing the weaker lemma by the stronger one creates a circular justification.
+- Do not demote the logarithmic height corollary as a trivial consequence. It is used in three distinct small-anchor arguments and avoids three repetitions of its logarithmic division.
+- Do not merge the descent with a particular finite graph lemma. It separately proves completeness for both the radius-10^550 pair graphs and the radius-10^40 triple lists. Keeping zero and anchor coincidences during generation is load-bearing.
+- Do not remove the exact finite computation bounds or move all the tables to an appendix merely to reduce pages. The field/pair/triple lists and search radii prove exhaustiveness. The repetition of specialized interval tables at 1919–1933, 2931–2948 and 3633–3649 also performs useful local work: constants, the pointwise relabelled residual and the treatment of powers of A differ. A generic replacement would add parameter bookkeeping and requires a separate exact clause/endpoint map.
+- Do not merge the two-small and three-small propositions into sm:main's proof. They are substantial separate case results; sm:main's short assembly tells the reader exactly how they exhaust the branch.
+- Do not replace the elementary continued-fraction criterion, exceptional-pair arguments or full-ring {1,3} argument by an outside theorem merely for brevity. Their local hypotheses and full-ring conclusions are part of the self-contained route.
+- Do not change font size, font family, margins, packages or macro conventions to match the skill's default house preamble. The author's explicit style governs.
+
+Statement-surface notes
+
+No complete named result lacks a consumer. There are some finer outputs whose main-proof role is only internal or supplementary. In direct-four, the lower zero-case bound 10ABSTP^3<Q (755) has no later load-bearing use located; the upper bound with 17 is used in retained-gap and the two-small cutoff. Similarly, the lower zero-case bound 5XYVP^2<Q in interpolation-parameters is not needed by retained-gap, which uses its upper bound. These are already proved natural companion estimates, so removing them is not a worthwhile priority. If the author later wants shorter statements, one can leave them verbatim as proof conclusions while keeping the consumed bounds in the public statement, with a separate clause-preservation review. This report does not propose deletion of either claim.
+
+The exact and safe inequalities of sm:lem-four-root-k1 have no outside consumers separate from its forbidden interval, but they document the parity gain and establish that interval. Moving the complete lemma is simpler and safer than weakening or splitting its statement. The exact determinant and divisibility clauses of ordinary-residue-construction are heavily used by specializations and must remain. The three conclusions of small-triple-classification are all consumed: at most three small entries by sm:main; the orbit list and closed-disk extension list by sm:five-three-small.
+
+Checks actually executed
+
+- Verified source SHA-256 and source line count.
+- Read every source line and required skill file as stated above.
+- Compared the 37 inventory statements with their current source slices by SHA-256.
+- Extracted explicit reference locations and then added semantic consumers of proof equations and unnumbered constructions by manual reading.
+- Validated that all ledger dependency identifiers resolve, that the graph is acyclic, and that every nonprincipal named statement has at least one consumer.
+- Did not compile, inspect rendered pages, verify bibliography sources externally, rerun graph enumerations or rerun the exact numerical inequalities. Those activities cannot be inferred from this architecture report.
+
+The graph checker protects this review's bookkeeping only. It does not prove the manuscript's mathematics, and the current source remains unchanged. None of ARCH-01–05 is marked REDUCED, ARCHITECTED or EXPO-AUDITED.

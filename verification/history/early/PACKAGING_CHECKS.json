@@ -1,0 +1,1010 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_LEGACY_LIMIT",
+  "syntax_checked_scripts": 38,
+  "scripts": [
+    {
+      "script": "initial_audit/audit/checks/approximation_exact.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sympy",
+          "resolution": "external requirement: SymPy 1.14.0"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/approximation_residue.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sympy",
+          "resolution": "external requirement: SymPy 1.14.0"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/approximation_v_dominance.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sympy",
+          "resolution": "external requirement: SymPy 1.14.0"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/completion_common_tau.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "completion_verify",
+          "resolution": "included local module"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/completion_final_source.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/completion_htz_free.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "completion_verify",
+          "resolution": "included local module"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/completion_intervals.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/completion_verify.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/one_small.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pickle",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/one_small_htz.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "one_small",
+          "resolution": "included local module"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/one_small_uniform.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "one_small",
+          "resolution": "included local module"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/small_constants.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/small_final_source_check.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "collections",
+          "resolution": "standard library"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/small_seed_crosscheck.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "small_verify",
+          "resolution": "included local module"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/small_verify.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "collections",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sys",
+          "resolution": "standard library"
+        },
+        {
+          "module": "time",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/structural_checks.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "collections",
+          "resolution": "standard library"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "initial_audit/audit/checks/structural_uniform_s15.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "collections",
+          "resolution": "standard library"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/approximation/check_comments.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "ast",
+          "resolution": "standard library"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/determinants/structural_independent.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/determinants/terminal_identity.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sympy",
+          "resolution": "external requirement: SymPy 1.14.0"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/finite_reduction/certify.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/finite_reduction/explore.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "cmath",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/independent/completion_integer_certificate.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/independent/irregular_gap.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/comments_v1/literature/rank_cross_check.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_comments/review_v1/checks/approximation_v1_exact.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "time",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/approximation_v1_applications.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "approximation_v1_exact",
+          "resolution": "included local module"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/approximation_v1_exact.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "time",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/approximation_v1_transfers.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/completion_v1_all_large.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/completion_v1_exact.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "collections",
+          "resolution": "standard library"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/reduction_v1_checks.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "collections",
+          "resolution": "standard library"
+        },
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/reduction_v1_overlap_algebra.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/root_stronger_gap.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/small_v1_constants.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/small_v1_exact.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "re",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sys",
+          "resolution": "standard library"
+        },
+        {
+          "module": "time",
+          "resolution": "standard library"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/structural_v1_algebra.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "sympy",
+          "resolution": "external requirement: SymPy 1.14.0"
+        }
+      ]
+    },
+    {
+      "script": "v1_review/review_v1/checks/structural_v1_exact.py",
+      "syntax": "PASS",
+      "imports": [
+        {
+          "module": "fractions",
+          "resolution": "standard library"
+        },
+        {
+          "module": "hashlib",
+          "resolution": "standard library"
+        },
+        {
+          "module": "itertools",
+          "resolution": "standard library"
+        },
+        {
+          "module": "json",
+          "resolution": "standard library"
+        },
+        {
+          "module": "math",
+          "resolution": "standard library"
+        },
+        {
+          "module": "pathlib",
+          "resolution": "standard library"
+        }
+      ]
+    }
+  ],
+  "named_input_paths_checked": [
+    "initial_audit/upload/D1_bound5_complete.tex",
+    "initial_audit/output/D1_bound5_complete.tex",
+    "initial_audit/audit/checks/completion_results.json",
+    "initial_audit/audit/checks/completion_htz_free_results.json",
+    "initial_audit/audit/checks/completion_common_tau_results.json",
+    "initial_audit/audit/checks/small_pairs_results.json",
+    "initial_audit/audit/checks/small_triples_results.json",
+    "initial_audit/audit/checks/small_pell_results.json",
+    "initial_audit/audit/checks/small_constants_results.json",
+    "initial_audit/audit/checks/small_seed_crosscheck_results.json",
+    "v1_review/upload/D1_bound5-v1(1).tex",
+    "v1_comments/upload/D1_bound5-v1(1).tex",
+    "v1_comments/review_v1/checks/approximation_v1_exact.py",
+    "v1_comments/review_v1/checks/completion_v1_all_large_results.json",
+    "v1_comments/comments_v1/approximation/results.json"
+  ],
+  "deliberately_missing_legacy_proposal_inputs": [
+    "v1_comments/comments_v1/approximation/current_proposal.json",
+    "v1_comments/comments_v1/approximation/with_P02_proposal.json",
+    "v1_comments/review_v1/agents/P02_combined.json"
+  ],
+  "old_mathematical_computations_rerun": false,
+  "static_check_limit": "Syntax/import resolution and inspected named-path presence do not establish successful numerical execution. No historical module was imported because imports can execute costly computations."
+}

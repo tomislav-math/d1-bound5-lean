@@ -1,0 +1,86 @@
+{
+  "source_sha256": "5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70",
+  "baseline_sha256": "74582db5fd0ad43195a3ea235cfd324813f04e3d0cb82387a9930b7c4f26c228",
+  "expensive_run_source_sha256": "66f5a580e2b08bdd369c1b38a557de20a586cf3cf9a06bb7d0b82d4304587c63",
+  "run_source_recovered_by_exact_QA_reversal": true,
+  "section_sha256": "cb1bd3f3678a24c33f65940344b15fa9afc664039c26d2f92b13d1bece2548cf",
+  "section_unchanged_since_expensive_runs": true,
+  "section_lines": [
+    2011,
+    2881
+  ],
+  "guarded_edit_blocks": 7,
+  "edits": [
+    "Remove an unused section label; no mathematical content.",
+    "Locally define the four-anchor H and Delta used by the existing formulas.",
+    "P04: explicitly name all six distinct ordered entries; size guards unchanged.",
+    "Remove an unused equation number; both exact comparisons unchanged.",
+    "P03: explicitly take the weaker logarithmic lower bound; original power bound unchanged.",
+    "Remove an unused equation number; power bound unchanged.",
+    "Split the rational-square explanation into two sentences."
+  ],
+  "only_registered_local_changes": true,
+  "tables": [
+    {
+      "table": "48 small-pair graphs",
+      "unchanged_bytewise_utf8": true,
+      "bytes": 2498,
+      "sha256": "b055b8a09b020290f9ce2e4794a0cd7dfdab112ec8d6b1b0c09aeb925f56b103"
+    },
+    {
+      "table": "10 small-triple rows",
+      "unchanged_bytewise_utf8": true,
+      "bytes": 664,
+      "sha256": "e832e15c46c3c6ce3b9434fca2e3f3845f17d57e2417e1da51fcd41a28e6723c"
+    },
+    {
+      "table": "Pell graph totals",
+      "unchanged_bytewise_utf8": true,
+      "bytes": 152,
+      "sha256": "30757ac60a99b523ee47700a33d1d8537b115db3b251d976092c4c88599bf45e"
+    }
+  ],
+  "fresh_computation_runtimes": {
+    "pairs": {
+      "mode": "pairs",
+      "passed": true,
+      "seconds": 149.6719311899942,
+      "source_sha256": "66f5a580e2b08bdd369c1b38a557de20a586cf3cf9a06bb7d0b82d4304587c63",
+      "algorithm_origin": "Rebound independent v1 checker, same computational core"
+    },
+    "triples": {
+      "mode": "triples",
+      "passed": true,
+      "seconds": 0.12325838899414521,
+      "source_sha256": "66f5a580e2b08bdd369c1b38a557de20a586cf3cf9a06bb7d0b82d4304587c63",
+      "algorithm_origin": "Rebound independent v1 checker, same computational core"
+    },
+    "pell": {
+      "mode": "pell",
+      "passed": true,
+      "seconds": 4.158515545990667,
+      "source_sha256": "66f5a580e2b08bdd369c1b38a557de20a586cf3cf9a06bb7d0b82d4304587c63",
+      "algorithm_origin": "Rebound independent v1 checker, same computational core"
+    }
+  },
+  "exact_constant_checks": 74,
+  "P03_identity_and_endpoint": "passed; derivative manifestly positive",
+  "P04_nonvanishing_and_interval_constants": "passed",
+  "degenerate_pair_classes": {
+    "unit_pairs": 23,
+    "other": [
+      [
+        3,
+        [
+          -1,
+          -1
+        ],
+        [
+          1,
+          -1
+        ]
+      ]
+    ]
+  },
+  "seconds": 0.003594683003029786
+}

@@ -1,4 +1,27 @@
-# D1Bound5
+# A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings
+
+**Zrinka Franušić and Tomislav Pejković**
+
+15 October 2026
+
+Every D(1)-tuple in the full ring of integers of an imaginary quadratic field
+has at most five elements. The paper combines structural and approximation
+estimates with bounded exact computations.
+
+| Material | Link |
+|---|---|
+| Paper, 58 pages | [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) |
+| Standalone manuscript source | [LaTeX](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
+| Numerical programs, recorded outputs and reproduction instructions | [Verification guide](verification/README.md) |
+| Lean proof progress and outstanding work | [Status](STATUS.md) |
+
+The dated reading copy differs from the verified v4 manuscript only by its
+displayed date. The numerical supplement includes the available current and
+historical implementations, with their original evidence and clearly stated
+reproduction requirements. The Lean formalization below remains incomplete.
+The repository is private; no public release or licence has been selected.
+
+## Lean 4 formalization
 
 Private, in-progress Lean 4/mathlib formalization of the main theorem of
 *A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*, v4.
@@ -43,7 +66,8 @@ allowance. No paid service or spending setting is enabled by this project.
 - `records/open-obligations.md`: mathematical dependencies not yet formalized.
 - `records/build-record.md`: actual commands, results and source commits.
 
-The frozen manuscript remains outside the repository. Its SHA256 is
+The frozen undated manuscript is included at
+`verification/v4/output/D1_bound5-v4.tex`. Its SHA256 is
 `776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3`.
 External Python checks are evidence only, never Lean proof terms. Historical
 large extension graphs have not been regenerated in this session.

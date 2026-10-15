@@ -1,0 +1,25 @@
+CROSS-REVIEW OF COLD-05
+
+Source: armstrong_v2/input/D1_bound5-v2.tex
+SHA-256: 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70
+Disposition: ACCEPT as a small precision improvement. No manuscript edit made.
+
+Proposed replacement at Section 8.1, lines 2927–2928:
+“Whenever Lemma~\ref{lem:retained-gap} applies, it supplies all the size hypotheses used in this table.”
+
+The conditional is appropriate. At the Section 8 opening, 1≤A<3≤B≤S≤T≤C≤D alone does not explicitly provide the retained-gap lemma's stronger guards T>2ABS and AT≥H. The two actual applications establish those guards separately before using the common interval calculation.
+
+Section 8.2: each of the five rows gives T>tABS with t≥11/4>2. Its displayed calculation AT>tnm²≥54 supplies AT≥48 for the H=48, lambda=19/200 row. Ordered distinct nonzero entries and B≥3 are the standing assumptions. Thus the retained-gap lemma applies in every excluded region.
+
+Section 8.4: the tail lemma initially gives only T>2BS, so one must not silently insert A. The determinant calculation independently proves T>(59/20)ABS>2ABS. Moreover S≥15 and B≥3 give T>90 and hence AT>90≥32. Only after proving the stronger fourth-entry estimate does the text invoke the H=32, lambda=1/10 row. This order is correct and is preserved by COLD-05.
+
+In either application, the retained-gap conclusions C>1000, C>200S, C>4T, AC>1000 and D>1000C imply every approximation size guard in Table tab:pr-windows:
+• Q needs C≥4T and AC≥1000.
+• P needs C≥200S, AC≥1000 and C≥1000.
+• M needs C≥4S and AC≥1000.
+• N2,N3,A3,A4,A5 at a,b need C≥200B, AC≥1000 and D≥C.
+• N3,bs at b,s needs C≥200S, BC≥1000 and D≥C; BC≥AC because B≥A.
+• O_j needs C>4B and AC>1000, for every positive j.
+The common interval conversion also has D≥C and C²≥4000. Distinctness, integrality, fixed coefficient choices and the displayed residual estimates remain separate established inputs; the proposed sentence claims only the size hypotheses.
+
+Thus the replacement makes the dependence on an applicable retained-gap lemma explicit without changing its scope, importing a new assumption, weakening an interval assertion, or altering either downstream proof. It requires no numerical rerun. The source hash was rechecked and remains unchanged.

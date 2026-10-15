@@ -1,0 +1,13 @@
+Final v3 visual review: pages 1–30
+
+PDF: /workspace/scratch/cae51110c84a/revision_v3/build/D1_bound5-v3.pdf
+PDF SHA256: 8e8e3a95601ec5aa93549878a382cbd55a8ca22bdcb3b6664de89712ad52d0c6
+Source SHA256: a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5
+
+I inspected every assigned page (1–30) separately from its 804 x 1137 pixel rendering, including the dense equation and table pages. Title and author names, accented characters, paragraph text, headings, mathematical displays, equation numbers, table bodies, and captions are readable. I found no clipping, overlap, missing glyphs, material orphan-heading problem, or intrusive float in these pages.
+
+Long lemma statements sometimes continue across pages, including Lemmas 4.1 and 4.4. These are normal, readable mathematical page breaks and do not warrant introducing additional blank space or pagination constraints.
+
+Result: PASS on all assigned pages. No material findings and no edits requested. This review concerns visual layout, not a new verification of the mathematical arguments. The corresponding JSON records the exact page-image hashes.
+
+Final artifact binding: the final PDF has 59 pages. The author-address-only last revision changed the source/PDF hashes. Independently rendering the original reviewed PDF (SHA256 064a056a82335300b4ee939ce820fdf924bec26942b40a8cc40988f05bbf09ff) and final PDF at scale 1.35 shows all thirty assigned pages are pixel-identical. Their RGB pixel buffers also match the individually viewed PNGs exactly. Thus this review applies to the final PDF hash stated above.

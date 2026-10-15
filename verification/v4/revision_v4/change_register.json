@@ -1,0 +1,386 @@
+[
+  {
+    "id": "R12-product-statement",
+    "old": "D>\\frac38ABC\\quad\\hbox{if }A\\ge1,\\ B\\ge3.",
+    "new": "D>\\frac32ABC\\quad\\hbox{if }A\\ge1,\\ B\\ge3.",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "a1119af75cf623411c678ea0e9b6e7dc9a3f59a931ee67384fc98be8d8373bd5",
+    "after_sha256": "db61b30ac42c0041786474620ec16c21fade88bae92c706ca0622ebad56b5bbc"
+  },
+  {
+    "id": "R12-product-proof",
+    "old": "Its spectral radius bounds \\(\\|E\\|_2\\), so \\(\\|E\\|_2<1/8\\).\nThus\n\\[\n |\\det F|<1625/4096,\\qquad\n \\|\\operatorname{adj}F\\|_2<325/512.\n\\]\nAs \\(D\\ge3\\),\n\\[\n |\\det N|<\n \\frac{325}{512}\\left(\\frac58+\\sum A_i^2\\right)\n \\le\\frac{95225}{36864}D^2<\\frac83D^2,\n\\]\nwhich proves the second assertion by the same integral determinant bound.",
+    "new": "Its spectral radius bounds $\\|E\\|_2$, so $\\|E\\|_2<11/96$.\nPut $s=59/96$ and $h=155/96$. As above,\n$|\\det F|<hs^3$ and $\\|\\operatorname{adj}F\\|_2<hs^2$.\nLemma~\\ref{lem:tail-irregular} also gives $D>6C$ and $D>18$ in this case.\nConsequently\n\\[\n |\\det N|<hs^2\\left(\\frac{13}{12}+\\frac{s}{324}\\right)D^2\n =\\frac{18212679025}{27518828544}D^2<\\frac23D^2.\n\\]\nThe integral determinant bound $ABCD\\le|\\det N|$ proves the second assertion.",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "db61b30ac42c0041786474620ec16c21fade88bae92c706ca0622ebad56b5bbc",
+    "after_sha256": "fdf4a970c0966aaeda0e449d55a210bb6e4865b92c745184e0c381dab483afc7"
+  },
+  {
+    "id": "R01-f3-proof",
+    "old": "For three anchors, \\(|y/x|\\le1/4\\) gives\n\\(45/1024\\le P^3|f_3|\\le85/1024\\). Put",
+    "new": "For three anchors, put $w=y/x$ and $\\rho=|w|\\le1/4$.\nThe factorization $(1-w)^2(1+w)=(1-w)(1-w^2)$ gives\n\\[\n (1-\\rho)(1-\\rho^2)\\le16P^3|f_3|\n \\le(1+\\rho)(1+\\rho^2).\n\\]\nThus $45/1024\\le P^3|f_3|\\le85/1024$. Put",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "fdf4a970c0966aaeda0e449d55a210bb6e4865b92c745184e0c381dab483afc7",
+    "after_sha256": "14b8f03d8a6c93dc979248e9638d26d8b2c13576da13f5f97025a0b9d0e24572"
+  },
+  {
+    "id": "R04-retained-exponent",
+    "old": "\\frac{18}{17}A^3B^2>1.",
+    "new": "\\frac{18}{17}A^4B^2>1.",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "14b8f03d8a6c93dc979248e9638d26d8b2c13576da13f5f97025a0b9d0e24572",
+    "after_sha256": "4e1127d0cf1657ef48525f9a74c2df58eca51238b353367d6158ed8cc4d7c97d"
+  },
+  {
+    "id": "R11-direct-four",
+    "old": "\\begin{lemma}\\label{lem:direct-four}\nFor four anchors \\(A\\le B\\le S\\le T\\le P\\), if\n\\(P\\ge1000,\\ Q\\ge1000P\\), then\n\\[\n |L_4|<\\frac{9BS^2T^3}{Z}+\\frac{4ST^2Z}{5AP^4},\\qquad\n L_4=0\\ \\Longrightarrow\\ 10ABSTP^3<Q<17ABSTP^3.\n\\]\n\\end{lemma}\n\\begin{proof}\nFor nonzero complex numbers \\(u_1,\\ldots,u_m\\), ordered by modulus,\n\\[\n \\left|\\prod_{i<j}(u_i-u_j)\\right|\n \\le m^{m/2}\\prod_j|u_j|^{j-1}.\n\\]\nIndeed, after division by \\(\\prod_j u_j^{j-1}\\), the expression is,\nup to sign, the polynomial\n\\(\\prod_{i<j}(1-z_i\\cdots z_{j-1})\\), \\(z_i=u_i/u_{i+1}\\).\nApplying the maximum-modulus principle to each variable reduces the\nproblem to \\(|z_i|=1\\). The numbers \\(u_j\\) can then be scaled to\nhave modulus one. Hadamard's inequality for their Vandermonde matrix\nproves the bound.\nThus \\(|\\Delta_4|\\le16BS^2T^3\\).\n\nPut \\(k=1/1000\\) and\n\\[\n r=\\frac7{64}\\left[\\left(\\frac{1000}{999}\\right)^4-1\\right],\\quad\n l=\\frac{(1-k)^2(5-6k-5k^2)}{128}-r,\\quad\n u=\\frac{(1+k)^2(5+6k+5k^2)}{128}+r.\n\\]\nFormula \\eqref{eq:integrated-5} and \\eqref{eq:coherent-tail} give\n\\(l/P^4\\le|F_4|\\le u/P^4\\), with \\(l>0\\).\nThe exact identity proves the assertions using\n\\[\n \\frac{16\\cdot101}{199}<9,\\quad\n \\frac{1600u}{99}<\\frac45,\\quad\n \\frac{100}{201u}>10,\\quad \\frac{100}{199l}<17.\n\\]\nAll four are strict rational comparisons.\n\\end{proof}",
+    "new": "\\begin{lemma}\\label{lem:direct-four}\nFor four anchors \\(A\\le B\\le S\\le T\\le P\\), if\n\\(P\\ge1000,\\ Q\\ge1000P\\), then\n\\[\n |L_4|<\\frac{13BS^2T^3}{Z}+\\frac{49ST^2Z}{50AP^4},\\qquad\n L_4=0\\ \\Longrightarrow\\ 10ABSTP^3<Q<17ABSTP^3.\n\\]\n\\end{lemma}\n\\begin{proof}\nExpanding the Vandermonde determinant gives \\(24\\) monomials.\nSince \\(A\\le B\\le S\\le T\\), each has modulus at most\n\\(BS^2T^3\\), by successively interchanging any inverted pair of\nexponents. Thus \\(|\\Delta_4|\\le24BS^2T^3\\).\n\nPut \\(k=1/1000\\) and\n\\[\n r=\\frac7{64}\\left[\\left(\\frac{1000}{999}\\right)^4-1\\right],\\quad\n l=\\frac{(1-k)^2(5-6k-5k^2)}{128}-r,\\quad\n u=\\frac{(1+k)^2(5+6k+5k^2)}{128}+r.\n\\]\nFormula \\eqref{eq:integrated-5} and \\eqref{eq:coherent-tail} give\n\\(l/P^4\\le|F_4|\\le u/P^4\\), with \\(l>0\\).\nThe exact identity proves the assertions using\n\\[\n \\frac{24\\cdot101}{199}<13,\\quad\n \\frac{2400u}{99}<\\frac{49}{50},\\quad\n \\frac{100}{201u}>10,\\quad \\frac{100}{199l}<17.\n\\]\nAll four are strict rational comparisons.\n\\end{proof}",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "4e1127d0cf1657ef48525f9a74c2df58eca51238b353367d6158ed8cc4d7c97d",
+    "after_sha256": "9f05003a79c6e906a810863ed6899810e05f21118ab55232f7dfbd23179b1981"
+  },
+  {
+    "id": "R11-retained-use",
+    "old": "For its first summand, the preceding lower bound for \\(D\\) and\nLemma~\\ref{lem:product-five} give\n\\[\n \\left(\\frac{9BS^2T^3}{|\\sqrt{cd+1}|}\\right)^2\n <\\frac1{9kA^8B^4}<\\frac1{100}.\n\\]\nThus \\(|\\sqrt{cd+1}|>(9/8)AC^4/(ST^2)\\). Squaring and subtracting\none proves the last inequality in \\eqref{eq:retained-start}, because\n\\((17/64)A^2C^8/(S^2T^4)>1\\) follows already from \\(C>3ABST\\).\n",
+    "new": "For its first summand, use the bounds \\(D>A^2C^5/S^2\\) and\n\\(C>A^2T^5/S^2>16BST\\), the latter following from \\(T>2ABS\\).\nThey give\n\\[\n \\left(\\frac{13BS^2T^3}{|\\sqrt{cd+1}|}\\right)^2\n <\\frac{169B^2S^6T^6}{kA^2C^6}\n <\\frac{169}{16^6kA^2B^4}<\\frac1{10000}.\n\\]\nThus \\(|\\sqrt{cd+1}|>(99/98)AC^4/(ST^2)\\).\nSquaring and subtracting one proves the last inequality in\n\\eqref{eq:retained-start}, since\n\\[\n \\left(\\left(\\frac{99}{98}\\right)^2-1\\right)\n       \\frac{A^2C^8}{S^2T^4}>1\n\\]\nfollows from \\(S,T\\le C\\) and \\(C>1000\\).\n",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "9f05003a79c6e906a810863ed6899810e05f21118ab55232f7dfbd23179b1981",
+    "after_sha256": "25c5920317b8e6bf0f5e15f22a912f57731b0bccf388e22ae428845d8ab9f297"
+  },
+  {
+    "id": "R11-small-cutoff-use",
+    "old": "1<\\frac{27M^5}{Z}+\\frac{4M^3Z}{5C^4}.",
+    "new": "1<\\frac{39M^5}{Z}+\\frac{49M^3Z}{50C^4}.",
+    "proposal": "root_math_replacements.json",
+    "before_sha256": "25c5920317b8e6bf0f5e15f22a912f57731b0bccf388e22ae428845d8ab9f297",
+    "after_sha256": "8675f3f4b0ed54cb387408844fe757fcd803f9cc01ac3ba294796b923c55881b"
+  },
+  {
+    "id": "USER-Dujella-remove",
+    "old": "For a general account of Diophantine tuples and their connections with\nelliptic curves, see Dujella~\\cite{Dujella24}.\n\n",
+    "new": "",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "8675f3f4b0ed54cb387408844fe757fcd803f9cc01ac3ba294796b923c55881b",
+    "after_sha256": "7042fe75eb6e129242d11ae4393a8c10dedfb68c92ad126f1559d814b9892fad"
+  },
+  {
+    "id": "USER-Dujella-placement",
+    "old": "Our bound does not settle this question.\n",
+    "new": "Our bound does not settle this question.\nFor a general account of Diophantine tuples and their connections with\nelliptic curves, see Dujella~\\cite{Dujella24}.\n",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "7042fe75eb6e129242d11ae4393a8c10dedfb68c92ad126f1559d814b9892fad",
+    "after_sha256": "9106d927cbade3b5ebc0e8cccb23239e67d665c5b348a858b0a69d327c287ca3"
+  },
+  {
+    "id": "R18-abstract",
+    "old": "computations, for which complete search bounds and output tables are\nincluded.",
+    "new": "computations. We give explicit search bounds and enumeration procedures,\ntogether with tables of the resulting counts and cutoff constants.",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "9106d927cbade3b5ebc0e8cccb23239e67d665c5b348a858b0a69d327c287ca3",
+    "after_sha256": "6bb6191d2e4a7576b6df219066216eabfc9683a6d953a32a10a22ded0298332b"
+  },
+  {
+    "id": "R18-output-description",
+    "old": "certified by squaring. The finite-sum formulas, bounded algorithms and complete output tables\nare included in the article.",
+    "new": "certified by squaring. The finite-sum formulas, bounded enumeration\nprocedures, and tables of counts and cutoff constants are included in the article.",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "6bb6191d2e4a7576b6df219066216eabfc9683a6d953a32a10a22ded0298332b",
+    "after_sha256": "7b71f842abe2b74b4f715f42762d91310894f36a1745097a6d464f9e90da00de"
+  },
+  {
+    "id": "R18-small-output-description",
+    "old": "The finite calculations below use exact integer algorithms, finite\nsearch domains and complete tables. Their completeness follows from a\nreversible descent. The search radius is proved below.",
+    "new": "The finite calculations below use exact integer algorithms and explicit\nsearch domains. We tabulate their counts and the required extensions.\nCompleteness follows from a reversible descent and the search bounds proved below.",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "7b71f842abe2b74b4f715f42762d91310894f36a1745097a6d464f9e90da00de",
+    "after_sha256": "7ecdbbc32f0ce81dc74b125a52f3f1d4addc77b1a5ef4299d00354dd3c7efa6c"
+  },
+  {
+    "id": "R19-case-map",
+    "old": "We order a hypothetical sextuple by modulus and distinguish the cases\nof zero, one, or at least two entries of modulus less than three.",
+    "new": "Call an entry small if its modulus is less than three. We order a\nhypothetical sextuple by modulus and exclude the following three cases.\n\\begin{center}\n\\begin{tabular}{ccl}\nNumber of small entries&Sections&Closing result\\\\\\hline\n$0$&\\ref{sec:all-large}&Proposition~\\ref{prop:no-all-large-six}\\\\\n$1$&\\ref{sec:pair-reduction}--\\ref{sec:one-small-completion}&Proposition~\\ref{prop:one-small}\\\\\nat least $2$&\\ref{sec:two-small}&Proposition~\\ref{sm:main}\n\\end{tabular}\n\\end{center}",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "7ecdbbc32f0ce81dc74b125a52f3f1d4addc77b1a5ef4299d00354dd3c7efa6c",
+    "after_sha256": "61cffcdc6de009b0c5c093434a8b9556495affa8099799e463547fab788b1364"
+  },
+  {
+    "id": "R19-label-sec:all-large",
+    "old": "\\section{Entries of modulus at least three}",
+    "new": "\\section{Entries of modulus at least three}\n\\label{sec:all-large}",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "61cffcdc6de009b0c5c093434a8b9556495affa8099799e463547fab788b1364",
+    "after_sha256": "36eac715fff1e216ee23abc1447b66b8eea61e7e906503aa4f17156a72924a63"
+  },
+  {
+    "id": "R19-label-sec:two-small",
+    "old": "\\section{Tuples with at least two small entries}",
+    "new": "\\section{Tuples with at least two small entries}\n\\label{sec:two-small}",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "36eac715fff1e216ee23abc1447b66b8eea61e7e906503aa4f17156a72924a63",
+    "after_sha256": "8013a73622db85bd71a3bb6fa50065360baf414dac999f0617f906da08e424d0"
+  },
+  {
+    "id": "R19-label-sec:one-small-completion",
+    "old": "\\section{Completion for one small entry}",
+    "new": "\\section{Completion for one small entry}\n\\label{sec:one-small-completion}",
+    "proposal": "root_editorial_replacements.json",
+    "before_sha256": "8013a73622db85bd71a3bb6fa50065360baf414dac999f0617f906da08e424d0",
+    "after_sha256": "fd59ebaacbc39da6308e4a05c0101ca801dd6be3b980c4677908937c82258acc"
+  },
+  {
+    "id": "Bennett_identity_and_normalization",
+    "old": "This is the explicit identity in \\cite[p.~1721]{Bennett96}, with\n$\\nu=1/2$ and $x=1/N$.  Although stated there for distinct integer interpolation points and real $x$, the identity extends to complex points.",
+    "new": "This is the unnumbered determinant identity following (2.4) in\n\\cite[\\S2, p.~1721]{Bennett96}. With his interpolation points replaced by\n$\\alpha_j$ and $\\nu=1/2$, his coefficients satisfy $P_{ij}(1/N)=f_{ij}$,\nsince $(1+\\alpha_j/N)^{k-h_j}N^{-h_j}=N^{-k}(N+\\alpha_j)^{k-h_j}$.\nHis integral (2.1) already includes the extra pole factor\n$(w-\\alpha_i)^{-1}$ in \\eqref{eq:ordinary-contour}.\nAlthough stated there for distinct integer interpolation points and real $x$, the identity extends to complex points.",
+    "proposal": "approximation_replacements.json",
+    "before_sha256": "fd59ebaacbc39da6308e4a05c0101ca801dd6be3b980c4677908937c82258acc",
+    "after_sha256": "d2a3ccbc83d87e2324788fa0a4b735173e8e6caa672cb4e8f0a12610a13633bf"
+  },
+  {
+    "id": "Root_transfer_first_proof",
+    "old": "Choose integral roots $r_j^2=a_jc+1$, $v_j^2=a_jd+1$ and put\n$u_j=\\pm r_jv_j/(a_jz)$.  Here $z\\ne0$, since otherwise\n$|d|=1/C<1$.  Choose each sign so that\n$|\\theta_j+u_j|\\ge|\\theta_j|$.  Factoring\n\\[\n \\theta_j^2-u_j^2\n =\\frac{(a_jc+1)(a_j-c)}{a_j^2cz^2}\n\\]\ngives\n\\[\n |\\theta_j-u_j|\\le\\frac{Ce(A_j)}{A_jZ^2}\n                 \\le\\frac{Ce(S)}{A_jZ^2}.\n\\]",
+    "new": "Choose integral roots $r_j^2=a_jc+1$, $v_j^2=a_jd+1$ and put\n$u_j=\\pm r_jv_j/(a_jz)$. Here $z\\ne0$, since otherwise\n$|d|=1/C<1$, and $\\theta_j\\ne0$, since $A_jC>1$. We have\n\\[\n u_j^2=\\theta_j^2\\left(1+\\frac{c-a_j}{a_jz^2}\\right).\n\\]\nWrite $u_j=\\theta_jw_j$ and choose the sign so that\n$\\operatorname{Re}w_j\\ge0$. Then $|w_j+1|\\ge1$, and hence\n\\[\n |\\theta_j-u_j|\n =|\\theta_j|\\,|w_j-1|\n \\le\\frac{|\\theta_j|\\,|c-a_j|}{A_jZ^2}\n \\le\\frac{Ce(A_j)}{A_jZ^2}\n \\le\\frac{Ce(S)}{A_jZ^2}.\n\\]",
+    "proposal": "approximation_replacements.json",
+    "before_sha256": "d2a3ccbc83d87e2324788fa0a4b735173e8e6caa672cb4e8f0a12610a13633bf",
+    "after_sha256": "9ffe9c86e080f91177aa0480e798a57e70492fa043d25bcb8fe3628c8b055610"
+  },
+  {
+    "id": "R2_cancellation",
+    "old": " R_2=\\frac{27AB(AC-1)^2}{16A^2\\delta^2}",
+    "new": " R_2=\\frac{27B(AC-1)^2}{16A\\delta^2}",
+    "proposal": "approximation_replacements.json",
+    "before_sha256": "9ffe9c86e080f91177aa0480e798a57e70492fa043d25bcb8fe3628c8b055610",
+    "after_sha256": "de980837db9e932d33f22612daaf2f42159aea44949e1bff73a23efaea1c9784"
+  },
+  {
+    "id": "Root_transfer_reuse_in_finite_forms",
+    "old": "Here $e=3/2$ is valid under \\eqref{eq:ff-basicguards}, and $e=101/100$\nis valid if $C\\ge200Y$. Indeed, the square of the quotient in\n\\eqref{eq:ff-error} is\n$\\theta_x^2(1+(c-x)/(xz^2))$.\nChoose a square root $w$ of the last factor with $\\operatorname{Re}w\\ge0$.\nThen $|w+1|\\ge1$ and an allowed sign gives the quotient $\\theta_xw$.\nThe assertion follows from $|w-1|\\le|(c-x)/(xz^2)|$. For the sharper constant use\n\\[\n \\frac{1001}{1000}\\left(\\frac{201}{200}\\right)^2\n <\\left(\\frac{101}{100}\\right)^2.\n\\]\nNeither $r_x$ nor $v_x$ is divided out.",
+    "new": "The first inequality is the root estimate in the proof of\nLemma~\\ref{lem:ordinary-residue-construction}. Here $e=3/2$ is valid under\n\\eqref{eq:ff-basicguards}, and $e=101/100$ is valid if $C\\ge200Y$, since\n\\[\n \\frac{1001}{1000}\\left(\\frac54\\right)^2<\\left(\\frac32\\right)^2,\n \\qquad\n \\frac{1001}{1000}\\left(\\frac{201}{200}\\right)^2\n <\\left(\\frac{101}{100}\\right)^2.\n\\]\nNeither $r_x$ nor $v_x$ is divided out.",
+    "proposal": "approximation_replacements.json",
+    "before_sha256": "de980837db9e932d33f22612daaf2f42159aea44949e1bff73a23efaea1c9784",
+    "after_sha256": "98693c6fb29e689493d036da482d7a6ff4933f1fd1fe780f04bbb4d330714c42"
+  },
+  {
+    "id": "N01_field_conventions",
+    "old": "$\\omega^2-\\tau\\omega+\\nu=0$, where\n$(\\tau,\\nu)=(1,(d+1)/4)$ or $(0,d)$, respectively.\nThe absolute field discriminant is $\\Delta=4\\nu-\\tau^2$.",
+    "new": "$\\omega^2-\\tau_K\\omega+\\nu_K=0$, where\n$(\\tau_K,\\nu_K)=(1,(d+1)/4)$ or $(0,d)$, respectively.\nThe absolute field discriminant is $\\Delta_K=4\\nu_K-\\tau_K^2$.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "98693c6fb29e689493d036da482d7a6ff4933f1fd1fe780f04bbb4d330714c42",
+    "after_sha256": "53346123afdbed4a0bdb5aa95752f70d9c7be09c5b2ec78ba66ed4b828ef9817"
+  },
+  {
+    "id": "N02_tail_field_cutoff",
+    "old": "\\(\\omega^2=t\\omega-h\\) for the usual integral basis of\n\\(\\mathbb Q(\\sqrt{-q})\\), and \\(\\Delta=4h-t^2\\). Then\n\\begin{equation}\\label{eq:integrated-disk}\nN(x+y\\omega)=x^2+txy+hy^2,\\qquad\n 4N(x+y\\omega)=(2x+ty)^2+\\Delta y^2.\n\\end{equation}\nIf either \\(b,c\\) is nonreal, \\(\\Delta\\le60\\). If both are rational,\nthey must be \\(-3,3\\), and the square condition restricts the field to\n\\(\\mathbb Q(\\sqrt{-2})\\). It suffices to enumerate the following squarefree values of $q$ with $\\Delta\\le64$.",
+    "new": "\\(\\omega^2=\\tau_K\\omega-\\nu_K\\) for the usual integral basis of\n\\(K=\\mathbb Q(\\sqrt{-q})\\), with \\(\\Delta_K=4\\nu_K-\\tau_K^2\\). Then\n\\begin{equation}\\label{eq:integrated-disk}\n\\begin{aligned}\n N(x+y\\omega)&=x^2+\\tau_Kxy+\\nu_Ky^2,\\\\\n 4N(x+y\\omega)&=(2x+\\tau_Ky)^2+\\Delta_Ky^2.\n\\end{aligned}\n\\end{equation}\nIf either \\(b,c\\) is nonreal, \\(\\Delta_K\\le60\\). If both are rational,\nthey must be \\(-3,3\\), and the square condition restricts the field to\n\\(\\mathbb Q(\\sqrt{-2})\\). It suffices to enumerate the following squarefree values of $q$ with $\\Delta_K\\le60$.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "53346123afdbed4a0bdb5aa95752f70d9c7be09c5b2ec78ba66ed4b828ef9817",
+    "after_sha256": "2d6692a89f6005c8ee3bc1bd875eed329794d7e5f9bbcfc8381dc4805ded5c4b"
+  },
+  {
+    "id": "N03_tail_totals",
+    "old": "There are 90 admissible unordered pairs \\(b,c\\), 118 retained triples, and 16\ncandidates before the final square test.",
+    "new": "Summing over these fields gives 90 admissible unordered pairs \\(b,c\\),\n118 retained triples, and 16 candidates before the final square test.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "2d6692a89f6005c8ee3bc1bd875eed329794d7e5f9bbcfc8381dc4805ded5c4b",
+    "after_sha256": "3bbdf5a342b6682c45486936b44a5fb6cbb0a52e779d9b6223e227d7635f651e"
+  },
+  {
+    "id": "N04_det_constant_definition",
+    "old": "Here $P=m+2k$. In this subsection, $\\Delta$ and $J$ denote constants in the determinant formulas.",
+    "new": "Here $P=m+2k$. In this subsection, $c_{\\mathrm{det}}$ and $J$ denote constants in the determinant formulas.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "3bbdf5a342b6682c45486936b44a5fb6cbb0a52e779d9b6223e227d7635f651e",
+    "after_sha256": "b71b6921fa6b17702bc23ae0d125e9db00bbfbcf006a51d06a6fbfefe0d5c927"
+  },
+  {
+    "id": "N05_det_constant_table",
+    "old": " family&$k$&$m$&$g$&$\\Delta$&$J$&$\\beta$&$R_*$\\\\ \\hline",
+    "new": " family&$k$&$m$&$g$&$c_{\\mathrm{det}}$&$J$&$\\beta$&$R_*$\\\\ \\hline",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "b71b6921fa6b17702bc23ae0d125e9db00bbfbcf006a51d06a6fbfefe0d5c927",
+    "after_sha256": "98f85f81d3c704635369b77d6ea2cae59cb5b482c013b92eb01e72adca7f901b"
+  },
+  {
+    "id": "N06_det_constant_formula",
+    "old": " \\det \\widetilde Q=\\Delta(xy)^{m-1}c^{k-m}(x-y)^{4k-1},\\qquad\n \\Delta=4^k\\binom{k+1/2}{m}16^kJ.",
+    "new": " \\det \\widetilde Q=c_{\\mathrm{det}}(xy)^{m-1}c^{k-m}(x-y)^{4k-1},\\qquad\n c_{\\mathrm{det}}=4^k\\binom{k+1/2}{m}16^kJ.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "98f85f81d3c704635369b77d6ea2cae59cb5b482c013b92eb01e72adca7f901b",
+    "after_sha256": "11e38cb31d48b067e7a7eca3f6958dfae98ecc18c2997eb384d54e5bcb022a86"
+  },
+  {
+    "id": "N07_coefficient_norm",
+    "old": "In the field basis $\\omega^2-\\tau\\omega+\\nu=0$, the required norm\nis $N(r+s\\omega)=r^2+\\tau rs+\\nu s^2$.",
+    "new": "In the field basis $\\omega^2-\\tau_K\\omega+\\nu_K=0$, the required norm\nis $N(r+s\\omega)=r^2+\\tau_Krs+\\nu_Ks^2$.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "11e38cb31d48b067e7a7eca3f6958dfae98ecc18c2997eb384d54e5bcb022a86",
+    "after_sha256": "cd789d467c89a46f2b79ad15660f69b26899a2bda06f2d9134112b1159da2b67"
+  },
+  {
+    "id": "N08_F3_large_T",
+    "old": "If $L_3=0$, we first prove $C>4T$ in order to apply\nLemma~\\ref{lem:separated-three}.\nThe two terms in~\\eqref{eq:coherent-exact} satisfy",
+    "new": "If $L_3=0$, we first prove $C>4T$ in order to apply\nLemma~\\ref{lem:separated-three}. Since $AT\\ge T\\ge10^{72}>11$,\nthe bound on $F_3$ in the proof of Lemma~\\ref{lem:general-three}\ngives $|F_3|\\le1331/(4000T^3)<1/(3T^3)$.\nThe two terms in~\\eqref{eq:coherent-exact} satisfy",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "cd789d467c89a46f2b79ad15660f69b26899a2bda06f2d9134112b1159da2b67",
+    "after_sha256": "dda0a7295a879fe79bf5e8a815b8c551ed32ffe63a81becc2b60ac98cd834d79"
+  },
+  {
+    "id": "N09_Legendre_denominator",
+    "old": "Every such pair $u,v$ is coprime, and\n\\begin{equation*}\n \\left|\\frac uv-\\sqrt d\\right|",
+    "new": "Every such pair $u,v$ is coprime, and\n$u/v+\\sqrt d>2\\sqrt d>4$, since $d\\ge7$. Hence\n\\begin{equation*}\n \\left|\\frac uv-\\sqrt d\\right|",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "dda0a7295a879fe79bf5e8a815b8c551ed32ffe63a81becc2b60ac98cd834d79",
+    "after_sha256": "f0ff73b7ba9e5044b3f53cddc433948457190715882133b75cc69f0a8b81cf0f"
+  },
+  {
+    "id": "N10_Pell_matching",
+    "old": "1016 &409 &19612 &9806 &0\\\\\n\\bottomrule\n\\end{tabular}\n\\end{center}\nThus four compatible extensions",
+    "new": "1016 &409 &19612 &9806 &0\\\\\n\\bottomrule\n\\end{tabular}\n\\end{center}\nEach vertex $x$ is adjacent to $-x$, since\n$1-x^2=(1-x)(1+x)$ is a square. The total number of edges is half\nthe total number of vertices, so these pairs are all the edges of\nthe computed graphs.\nThus four compatible extensions",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "f0ff73b7ba9e5044b3f53cddc433948457190715882133b75cc69f0a8b81cf0f",
+    "after_sha256": "40cfaf1e56f1be388cc4286d9d2bd06296036840ed3a490a5c62542dc656750d"
+  },
+  {
+    "id": "N11_one_three_discriminant",
+    "old": "First every common extension is rational. Otherwise choose roots\n\\(r=(e+f\\sqrt{-\\Delta})/2\\) and\n\\(u=(g+h\\sqrt{-\\Delta})/2\\) of \\(c+1\\) and \\(3c+1\\), respectively.\nNonreality makes \\(e,f,g,h\\) nonzero. From \\(3r^2-u^2=2\\), put\n\\[\n X=3e^2-g^2,\\quad V=h^2-3f^2,\\quad k=(eh-fg)/2.\n\\]\nIf $\\Delta$ is odd, then $e\\equiv f$ and $g\\equiv h\\pmod2$.\nIf $\\Delta$ is even, then $e$ and $g$ are even.\nIn either case $k$ is an integer. The imaginary and real parts\ngive $3ef=gh$ and $X+\\Delta V=8$. Multiplication gives\n\\(XV=12k^2\\). Moreover $V=3f^2X/g^2$, so $X,V>0$. Also $k\\ne0$, since $k=0$ would give $g^2=3e^2$, which is impossible for nonzero integers. Hence\n\\[\n 64=(X+\\Delta V)^2\\ge4\\Delta XV=48\\Delta k^2\\ge144,\n\\]\na contradiction.",
+    "new": "First every common extension is rational. Otherwise choose roots\n\\(r=(e+f\\sqrt{-\\Delta_K})/2\\) and\n\\(u=(g+h\\sqrt{-\\Delta_K})/2\\) of \\(c+1\\) and \\(3c+1\\), respectively.\nNonreality makes \\(e,f,g,h\\) nonzero. From \\(3r^2-u^2=2\\), put\n\\[\n X=3e^2-g^2,\\quad V=h^2-3f^2,\\quad k=(eh-fg)/2.\n\\]\nIf $\\Delta_K$ is odd, then $e\\equiv f$ and $g\\equiv h\\pmod2$.\nIf $\\Delta_K$ is even, then $e$ and $g$ are even.\nIn either case $k$ is an integer. The imaginary and real parts\ngive $3ef=gh$ and $X+\\Delta_K V=8$. Multiplication gives\n\\(XV=12k^2\\). Moreover $V=3f^2X/g^2$, so $X,V>0$. Also $k\\ne0$, since $k=0$ would give $g^2=3e^2$, which is impossible for nonzero integers. Hence\n\\[\n 64=(X+\\Delta_K V)^2\\ge4\\Delta_K XV=48\\Delta_K k^2\\ge144,\n\\]\na contradiction.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "40cfaf1e56f1be388cc4286d9d2bd06296036840ed3a490a5c62542dc656750d",
+    "after_sha256": "f9f48d9ac401de55a368b1631104e19f6f51043ef76dd785ce1895f8738b61cd"
+  },
+  {
+    "id": "N12_zero_square_at_equations",
+    "old": "\\(x-1=du^2\\), \\(3x-1=dv^2\\), and \\(d\\mid2\\).",
+    "new": "\\(x-1=du^2\\) and \\(3x-1=dv^2\\), where \\(u=0\\) is allowed,\nand \\(d\\mid2\\).",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "f9f48d9ac401de55a368b1631104e19f6f51043ef76dd785ce1895f8738b61cd",
+    "after_sha256": "ce5845bfc39faa44da2c358d2c10dc014a7fddc5609c3344b300b9602f93484b"
+  },
+  {
+    "id": "N13_remove_displaced_zero_sentence",
+    "old": "product plus one is congruent to two. This includes the possible zero square value when an entry is $-1$.",
+    "new": "product plus one is congruent to two.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "ce5845bfc39faa44da2c358d2c10dc014a7fddc5609c3344b300b9602f93484b",
+    "after_sha256": "0b3627ecdbd5034428e29d2705dc7b09f15902660a7c7aeca56cda6dbac32c67"
+  },
+  {
+    "id": "N14_field_reduction_discriminant",
+    "old": "\\begin{lemma}\\label{lem:pr-field}\nUnder Proposition~\\ref{prop:pr-H2}, either the first pair is\n$(1,3)$ up to simultaneous negation, or the field has absolute\ndiscriminant $\\Delta\\le24$.\n\\end{lemma}\n\\begin{proof}\nFor a nonreal algebraic integer, \\(N(z)\\ge\\Delta/4\\).\nIf \\(\\Delta\\ge25\\), the condition \\(N(a)\\le2\\) therefore makes\n\\(a\\) rational. Simultaneous negation allows \\(a=1\\), and then\n\\(B<8\\). For \\(r^2=b+1\\),\n\\(N(r)=|b+1|<9\\). If \\(\\Delta\\ge36\\), this forces \\(r\\) rational.\nThe only absolute negative fundamental discriminants between 25 and 35\nare 31 and 35. At 35 a nonreal integer has integral norm at least nine.\nAt 31 the only nonreal roots of norm below nine are\n$(\\pm1\\pm\\sqrt{-31})/2$. They give \\(N(r^2-1)=80\\), contrary to\n\\(N(b)<64\\). Thus \\(r\\) is rational in every case. Now\n$b=r^2-1$, $r\\in\\mathbb Z$, and $3\\le|b|<8$ force $b=3$,\nwhich is the stated alternative.\n\\end{proof}",
+    "new": "\\begin{lemma}\\label{lem:pr-field}\nUnder Proposition~\\ref{prop:pr-H2}, either the first pair is\n$(1,3)$ up to simultaneous negation, or the field has absolute\ndiscriminant $\\Delta_K\\le24$.\n\\end{lemma}\n\\begin{proof}\nFor a nonreal algebraic integer, \\(N(z)\\ge\\Delta_K/4\\).\nIf \\(\\Delta_K\\ge25\\), the condition \\(N(a)\\le2\\) therefore makes\n\\(a\\) rational. Simultaneous negation allows \\(a=1\\), and then\n\\(B<8\\). For \\(r^2=b+1\\),\n\\(N(r)=|b+1|<9\\). If \\(\\Delta_K\\ge36\\), this forces \\(r\\) rational.\nThe only absolute negative fundamental discriminants between 25 and 35\nare 31 and 35. At 35 a nonreal integer has integral norm at least nine.\nAt 31 the only nonreal roots of norm below nine are\n$(\\pm1\\pm\\sqrt{-31})/2$. They give \\(N(r^2-1)=80\\), contrary to\n\\(N(b)<64\\). Thus \\(r\\) is rational in every case. Now\n$b=r^2-1$, $r\\in\\mathbb Z$, and $3\\le|b|<8$ force $b=3$,\nwhich is the stated alternative.\n\\end{proof}",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "0b3627ecdbd5034428e29d2705dc7b09f15902660a7c7aeca56cda6dbac32c67",
+    "after_sha256": "dffda59335de2034efe73bc64c881b2f8441fc4535d434ba26cd0414ca80cedd"
+  },
+  {
+    "id": "N15_ring_arithmetic",
+    "old": "\\(\\omega^2=t\\omega-u\\), \\(\\Delta=4u-t^2\\). The exact arithmetic is\n\\begin{equation}\\label{eq:pr-ring-arithmetic}\n (x,y)(v,w)=(xv-uyw,xw+yv+tyw),\\qquad\n N(x,y)=x^2+txy+uy^2.\n\\end{equation}",
+    "new": "\\(\\omega^2=\\tau_K\\omega-\\nu_K\\), \\(\\Delta_K=4\\nu_K-\\tau_K^2\\).\nThe exact arithmetic is\n\\begin{equation}\\label{eq:pr-ring-arithmetic}\n\\begin{aligned}\n (x,y)(v,w)&=(xv-\\nu_Kyw,xw+yv+\\tau_Kyw),\\\\\n N(x,y)&=x^2+\\tau_Kxy+\\nu_Ky^2,\\qquad\n \\overline{(x,y)}=(x+\\tau_Ky,-y).\n\\end{aligned}\n\\end{equation}",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "dffda59335de2034efe73bc64c881b2f8441fc4535d434ba26cd0414ca80cedd",
+    "after_sha256": "28eac91c85a9c3e103af46660af7e9b760b4bf79394fe27654d125df279b8066"
+  },
+  {
+    "id": "N16_disk_enumeration",
+    "old": "\\begin{equation}\\label{eq:pr-disk}\n |y|\\le\\left\\lfloor\\sqrt{4L/\\Delta}\\right\\rfloor,\\quad\n |e|\\le\\left\\lfloor\\sqrt{4L-\\Delta y^2}\\right\\rfloor,\\quad\n e\\equiv ty\\pmod2,\\quad x=(e-ty)/2.\n\\end{equation}\nThis follows from \\(4N(x,y)=(2x+ty)^2+\\Delta y^2\\), and is both",
+    "new": "\\begin{equation}\\label{eq:pr-disk}\n\\begin{aligned}\n |y|&\\le\\left\\lfloor\\sqrt{4L/\\Delta_K}\\right\\rfloor,&\n |e|&\\le\\left\\lfloor\\sqrt{4L-\\Delta_Ky^2}\\right\\rfloor,\\\\\n e&\\equiv\\tau_Ky\\pmod2,&x&=(e-\\tau_Ky)/2.\n\\end{aligned}\n\\end{equation}\nThis follows from \\(4N(x,y)=(2x+\\tau_Ky)^2+\\Delta_Ky^2\\), and is both",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "28eac91c85a9c3e103af46660af7e9b760b4bf79394fe27654d125df279b8066",
+    "after_sha256": "40fd275e33f0e3360085d5afdb0e530664cb4db3b6ef54eaa5ad11182f8e7753"
+  },
+  {
+    "id": "N17_orbit_order",
+    "old": " \\bigl(2a_x+ta_y<0,\\ a_y<0,\\ 2b_x+tb_y<0,\\ b_y<0,\\ a_x,a_y,b_x,b_y\\bigr)",
+    "new": " \\bigl(2a_x+\\tau_Ka_y<0,\\ a_y<0,\\ 2b_x+\\tau_Kb_y<0,\\ b_y<0,\\ a_x,a_y,b_x,b_y\\bigr)",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "40fd275e33f0e3360085d5afdb0e530664cb4db3b6ef54eaa5ad11182f8e7753",
+    "after_sha256": "7cb37ce728e133494f5c37cd13e435b479ef29acc5a3de583bf5760718505ca1"
+  },
+  {
+    "id": "N18_basis_caption",
+    "old": "\\caption{The forty first-pair representatives. Coordinates mean $x+y\\omega_d$.}",
+    "new": "\\caption{The forty first-pair representatives. Coordinates mean $x+y\\omega$.}",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "7cb37ce728e133494f5c37cd13e435b479ef29acc5a3de583bf5760718505ca1",
+    "after_sha256": "c0074bb1998feb0836855f3ac03cf0ee24e70e059920d4a55ee8d2daa66e607f"
+  },
+  {
+    "id": "N19_full_ring_square_test",
+    "old": "For \\(z=(z_x,z_y)\\), put \\(p=2z_x+tz_y\\), \\(q=z_y\\).\nRequire \\(N(z)=n^2\\) with \\(n\\ge0\\) integral, then require integers\n\\(e\\ge0,f\\) satisfying\n\\[\n e^2=2n+p,\\quad \\Delta f^2=2n-p,\\quad ef=q,\n \\quad e\\equiv tf\\pmod2.\n\\]\nIf they exist, \\(((e-tf)/2,f)\\) is an integral root, and conversely",
+    "new": "For \\(z=(z_x,z_y)\\), put \\(p=2z_x+\\tau_Kz_y\\), \\(q=z_y\\).\nRequire \\(N(z)=n^2\\) with \\(n\\ge0\\) integral, then require integers\n\\(e\\ge0,f\\) satisfying\n\\[\n e^2=2n+p,\\quad \\Delta_Kf^2=2n-p,\\quad ef=q,\n \\quad e\\equiv\\tau_Kf\\pmod2.\n\\]\nIf they exist, \\(((e-\\tau_Kf)/2,f)\\) is an integral root, and conversely",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "c0074bb1998feb0836855f3ac03cf0ee24e70e059920d4a55ee8d2daa66e607f",
+    "after_sha256": "d9411e7b1ed36abf23ffb466b7368795bb6f4a89ffc5a880546ebb68cc6c26e7"
+  },
+  {
+    "id": "N20_positive_pair_T",
+    "old": "and $n_\\infty=14$. Thus $t<32$, whereas\nLemma~\\ref{lem:tail-irregular} gives $t>2\\cdot3\\cdot8=48$.",
+    "new": "and $n_\\infty=14$. Thus $T<32$, whereas\nLemma~\\ref{lem:tail-irregular} gives $T>2\\cdot3\\cdot8=48$.",
+    "proposal": "notation_small_replacements.json",
+    "before_sha256": "d9411e7b1ed36abf23ffb466b7368795bb6f4a89ffc5a880546ebb68cc6c26e7",
+    "after_sha256": "52edd654536ce55c907cb0764006d10e639a1ddaf819fd5f2ecaa4fbacb32e6a"
+  },
+  {
+    "id": "Bennett_complex_extension_zero_node",
+    "old": "Although stated there for distinct integer interpolation points and real $x$, the identity extends to complex points.",
+    "new": "Although stated there for distinct integer interpolation points and real $x$,\nthe identity extends to complex interpolation points with $\\alpha_0=0$.",
+    "proposal": "approximation_alpha0_followup.json",
+    "before_sha256": "52edd654536ce55c907cb0764006d10e639a1ddaf819fd5f2ecaa4fbacb32e6a",
+    "after_sha256": "b0936d1836272e7d248676ff838188ca5f07ededba0111cab556f678257e7f24"
+  },
+  {
+    "id": "uniform-M-remove-conservative-choices",
+    "old": "The choices $735,4143,2265,166000,26859063$, respectively,\nare therefore also valid. The endpoints supplied by",
+    "new": "The endpoints supplied by",
+    "proposal": "interval_replacements.json",
+    "before_sha256": "b0936d1836272e7d248676ff838188ca5f07ededba0111cab556f678257e7f24",
+    "after_sha256": "03d967b10e8fc944a95e5fd8bd6e11bd39dd2e2c2b55732b1a85f4afd1583ce9"
+  },
+  {
+    "id": "interval-common-machinery-before-section6",
+    "old": "\\section{Entries of modulus at least three}",
+    "new": "\\subsection{The interval calculation}\n\\label{sec:common-intervals}\n\nLet $a,b,s,t,c,d$ be six distinct nonzero tuple entries, ordered by\n$1\\le A\\le B\\le S\\le T\\le C\\le D$. Assume\n\\[\n C>\\max(1000,200S,4T).\n\\]\nThese conditions imply $AC>1000$ and $C^2>4000$, and supply the\nhypotheses of all the approximation constructions used below.\nAs in \\eqref{eq:ff-window}, put\n\\[\n \\varepsilon=\\frac1{4000},\\qquad h=\\frac{4001}{3999},\\qquad\n M_m=\\frac89\\,608^2,\\qquad R_m=\\frac{3920}{81}.\n\\]\nWrite $M_2,M_n,M_3,M_4,M_5$ for valid coefficient bounds for\n$N_2,N_3,A_3,A_4,A_5$ on $a,b$, and write\n$R_2,R_n,R_3,R_4,R_5$ for the corresponding residual bounds.\nFor $N_3$ on $b,s$, use valid bounds $M_{bs},R_{bs}$.\nThe uniform choice $M_{bs}=4143$ is sufficient.\nWrite $R_p$ for an upper bound for $\\mathcal R(q)$, where\n$q\\ge1$ and $B\\ge qA$.\nThe rows denoted by $P$ and $Q$ are those of\n\\eqref{eq:ff-prows} and \\eqref{eq:ff-qdet}, respectively,\nand $M$ denotes \\eqref{eq:ordinary-three-M}.\n\nEquation~\\eqref{eq:ff-window} shows that $D$ avoids every closed\ninterval $[l/(1-\\varepsilon),u/(1+\\varepsilon)]$ in\nTable~\\ref{tab:pr-windows}. Both terms in the maximum for $P$ must\nbe checked. The ordinary family $O_j$ is available for every positive\ninteger $j$ by \\eqref{eq:ordinary-integer-k}.\n\\begin{table}[htbp]\n\\centering\\small\n\\caption{Forbidden-interval endpoints.}\\label{tab:pr-windows}\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{c|c|c}\nFamily&\\(l\\)&\\(u\\)\\\\\\hline\n\\(Q\\)&\\(4\\cdot55^2T^6C^3\\)&\\(A^4C^7/(9T^2)\\)\\\\\n\\(N_2\\)&\\(4M_2^2B^8C^5\\)&\\(A^6C^7/(4R_2^2B^4)\\)\\\\\n\\(P\\)&\\(4\\cdot2400^2\\max(BS^3,B^3S^2)^2C^5\\)&\\(A^6C^9/(4R_p^2S^4)\\)\\\\\n\\(A_3\\)&\\(4M_3^2B^{12}C^7\\)&\\(A^8C^9/(4R_3^2B^6)\\)\\\\\n\\(M\\)&\\(4M_m^2B^6S^{16}C^5\\)&\\(A^6C^{11}/(4R_m^2B^4S^{10})\\)\\\\\n\\(N_3\\)&\\(4M_n^2B^{14}C^7\\)&\\(A^8C^{11}/(4R_n^2B^6)\\)\\\\\n\\(N_{3,bs}\\)&\\(4M_{bs}^2S^{14}C^7\\)&\\(B^8C^{11}/(4R_{bs}^2S^6)\\)\\\\\n\\(A_4\\)&\\(4M_4^2B^{18}C^9\\)&\\(A^{10}C^{13}/(4R_4^2B^8)\\)\\\\\n\\(A_5\\)&\\(4M_5^2B^{24}C^{11}\\)&\\(A^{12}C^{17}/(4R_5^2B^{10})\\)\\\\\n\\(O_j\\)&\\(36(42B^3C)^{2j}C/B^2\\)&\\((2AC^2/(5B))^{2j}/C\\)\n\\end{tabular}\n\\end{table}\n\nWe use the following elementary observation. Suppose that $D$ is\nabove the lower endpoint of the first forbidden interval, and that\neach upper endpoint is at least the next lower endpoint. Avoidance\nof the first interval puts $D$ above its upper endpoint, hence above\nthe next lower endpoint. Induction applies even when an interval is\nempty. A chain whose lower endpoints tend to infinity is therefore\nimpossible.\nFor the ordinary intervals, put\n\\[\n H_0=42B^3C,\\qquad R_0=2AC^2/(5B).\n\\]\nThe quotient of the upper endpoint of $O_j$ by the lower endpoint\nof $O_{j+1}$ is multiplied by $(R_0/H_0)^2$ when $j$ increases by one.\nThus, if $R_0/H_0>1$, one checked overlap starts the entire ordinary\ntail. Since $H_0>1$, its lower endpoints tend to infinity.\nThe same argument applies after replacing $A$ by one in the upper\nendpoints, using $R_0=2C^2/(5B)$.\n\nFor the first two applications, suppose in addition that\n\\[\n T>2BS,\\qquad C>\\frac{A^2T^5}{S^2},\\qquad\n D>\\frac{A^2C^7}{S^2T^4},\n\\]\nand that\n\\begin{equation}\\label{eq:pr-coarse-gap}\n C>GA^7B^5S^3,\n \\qquad G_* /R_{bs}\\ge\\rho,\n\\end{equation}\nwhere $G,G_*,\\rho>0$, both $G$ and $G_*$ are valid in the first inequality,\nand $G_*$ may depend on the actual triple $a,b,s$.\nThe constants $G$ and $\\rho$ may be estimated separately.\nIn Table~\\ref{tab:pr-overlaps}, each displayed quotient is a sufficient\nlower bound for the preceding upper endpoint divided by the next\nlower endpoint, including the factor $h$. The first line instead\ncompares the starting lower bound for $D$ with the lower endpoint of $Q$.\n\\begin{table}[htbp]\n\\centering\\small\n\\caption{Sufficient overlap quotients, each required to exceed one.}\n\\label{tab:pr-overlaps}\n\\begin{tabular}{c|c|c}\nJunction&Quotient&Additional substitution\\\\\\hline\nSTART--\\(Q\\)&\\(1024A^{10}B^{10}(1-\\varepsilon)/12100\\)&none\\\\\n\\(Q\\)--\\(N_2\\)&\\(256A^8S^4/(36M_2^2h)\\)&none\\\\\n\\(N_2\\)--\\(P\\), \\(BS^3\\)&\\(G^2A^{20}B^4/(16R_2^2\\,2400^2h)\\)&none\\\\\n\\(N_2\\)--\\(P\\), \\(B^3S^2\\)&\\(G^2A^{20}S^2/(16R_2^2\\,2400^2h)\\)&none\\\\\n\\(P\\)--\\(N_3\\)&\\(G^2A^{20}/(16R_p^2M_n^2h)\\)&\\(S\\ge B^2\\)\\\\\n\\(P\\)--\\(A_3\\)&\\(G^2A^{20}/(16R_p^2M_3^2h)\\)&\\(S\\ge B\\)\\\\\n\\(A_3\\)--\\(M\\)&\\(G^4A^{36}/(16R_3^2M_m^2h)\\)&\\(S\\le B^2\\)\\\\\n\\(M\\)--\\(N_3\\)&\\(G^4A^{34}B^2S^2/(16R_m^2M_n^2h)\\)&none\\\\\n\\(N_3\\)--\\(A_4\\)&\\(G^2A^{22}B^4/(16R_n^2M_4^2h)\\)&\\(S\\ge B^3\\)\\\\\n\\(N_3\\)--\\(N_{3,bs}\\)&\\(G^4A^{36}B^8/(16R_n^2M_{bs}^2h)\\)&\\(S\\le B^3\\)\\\\\n\\(N_{3,bs}\\)--\\(A_4\\)&\\(\\rho^2A^{14}/(16M_4^2h)\\)&pointwise bound\\\\\n\\(A_4\\)--\\(O_4\\)&\\(G^4A^{38}B^2/(144R_4^2\\,42^8h)\\)&\\(S\\ge B\\)\\\\\n\\(O_4\\)--\\(A_5\\)&\\(G^4A^{36}/(4M_5^2(5/2)^8h)\\)&\\(S\\ge B\\)\\\\\n\\(A_5\\)--\\(O_5\\)&\\(G^6A^{54}B^{10}/(144R_5^2\\,42^{10}h)\\)&\\(S\\ge B\\)\\\\\n\\(O_5\\)--\\(O_6\\)&\\(G^6A^{52}B^4/(36\\cdot42^{12}(5/2)^{10}h)\\)&\\(S\\ge B\\)\n\\end{tabular}\n\\end{table}\n\nThe first two comparisons use $C>A^2T^5/S^2$ and $T>2BS$.\nThe others use \\eqref{eq:pr-coarse-gap}.\nFor example, before substitution, the $N_3$--$A_4$ quotient is\n\\[\n \\frac{A^8C^2}{16R_n^2M_4^2B^{24}h}.\n\\]\nSubstituting the gap and then $S\\ge B^3$ gives its table entry.\nAt the relabeled junction the raw quotient is\n$C^2/(16R_{bs}^2M_4^2B^{10}S^6h)$.\nUse the coefficient $G_*$ here to obtain the displayed\n$\\rho^2A^{14}$ bound.\nThe remaining entries follow by the same divisions. All substitutions\nuse a positive exponent for a lower bound or a negative exponent for an\nupper bound.\n\nThe chain begins START, $Q,N_2,P$. If $S\\ge B^2$, continue directly\nto $N_3$. Otherwise use $A_3,M,N_3$. If $S\\ge B^3$, continue\nto $A_4$. Otherwise use $N_{3,bs},A_4$. Then use\n\\[\n A_4,O_4,A_5,O_5,O_6,O_7,\\ldots .\n\\]\nBoth equality cases belong to a checked branch. Moreover,\n\\[\n R_0/H_0=AC/(105B^4)>(G/105)A^8BS^3.\n\\]\nConsequently, if all the quotients in Table~\\ref{tab:pr-overlaps}\nand the last quantity exceed one, the ordinary-tail argument gives\na contradiction.\n\n\\section{Entries of modulus at least three}",
+    "proposal": "interval_replacements.json",
+    "before_sha256": "03d967b10e8fc944a95e5fd8bd6e11bd39dd2e2c2b55732b1a85f4afd1583ce9",
+    "after_sha256": "64f60ed553a0c89387c98a2bac075867543183d780c9cc55b86cf6db76790c09"
+  },
+  {
+    "id": "interval-section8-local-parameters",
+    "old": "\\subsection{A common interval calculation}\n\nPut\n\\[\n \\varepsilon=\\frac1{4000},\\qquad h=\\frac{4001}{3999},\\qquad\n \\mu=\\frac{51051}{400000},\\qquad \\kappa=\\frac{3535}{409600},\n\\]\\[\n M_m=\\frac89\\,608^2,\\quad R_m=\\frac{3920}{81}.\n\\]\nWe record the interval calculation used twice below. The five finite\nfamilies have parameters\n\\begin{equation*}\n\\begin{array}{c|rrrrr}\n &N_2&N_3&A_3&A_4&A_5\\\\ \\hline\n k&2&3&3&4&5\\\\\n P&6&9&8&11&14\\\\\n g&2&4&4&2&4\\\\\n R_*&5/4&35/32&35/16&63/8&495/64 .\n\\end{array}\n\\end{equation*}\nHere $R_*$ is the residual constant for the corresponding family\nin Table~\\ref{tab:ff-parameters}.\nWrite their coefficient bounds as \\(M_2,M_n,M_3,M_4,M_5\\), and their\nresidual bounds as \\(R_2,R_n,R_3,R_4,R_5\\). Write \\(R_p\\) for the\nadaptive residual. For the relabeled ordinary family on \\(b,s\\), put\n\\[\n v=B/S,\\qquad d_0=|b-s|/S,\\qquad\n \\Phi=\\max(d_0^6,vd_0^5),\\qquad R_{bs}=\\kappa\\Phi.\n\\]\nThe coefficient \\(M_{bs}=4143\\) is sufficient when no specialization\nat \\(b,s\\) is made.\n\nThe approximation inequalities proved above imply that \\(D\\) avoids\nevery closed interval \\([l/(1-\\varepsilon),u/(1+\\varepsilon)]\\) in\nTable~\\ref{tab:pr-windows}. Whenever Lemma~\\ref{lem:retained-gap} applies, it supplies all the size hypotheses used in this table. Both expressions in the maximum defining\nthe lower endpoint of \\(P\\) must be checked. The ordinary family\n\\(O_j\\) in this table is available for every positive integer \\(j\\).\n\\begin{table}[htbp]\n\\centering\\small\n\\caption{Forbidden-interval endpoints.}\\label{tab:pr-windows}\n\\setlength{\\tabcolsep}{4pt}\n\\begin{tabular}{c|c|c}\nFamily&\\(l\\)&\\(u\\)\\\\\\hline\n\\(Q\\)&\\(4\\cdot55^2T^6C^3\\)&\\(A^4C^7/(9T^2)\\)\\\\\n\\(N_2\\)&\\(4M_2^2B^8C^5\\)&\\(A^6C^7/(4R_2^2B^4)\\)\\\\\n\\(P\\)&\\(4\\cdot2400^2\\max(BS^3,B^3S^2)^2C^5\\)&\\(A^6C^9/(4R_p^2S^4)\\)\\\\\n\\(A_3\\)&\\(4M_3^2B^{12}C^7\\)&\\(A^8C^9/(4R_3^2B^6)\\)\\\\\n\\(M\\)&\\(4M_m^2B^6S^{16}C^5\\)&\\(A^6C^{11}/(4R_m^2B^4S^{10})\\)\\\\\n\\(N_3\\)&\\(4M_n^2B^{14}C^7\\)&\\(A^8C^{11}/(4R_n^2B^6)\\)\\\\\n\\(N_{3,bs}\\)&\\(4M_{bs}^2S^{14}C^7\\)&\\(B^8C^{11}/(4R_{bs}^2S^6)\\)\\\\\n\\(A_4\\)&\\(4M_4^2B^{18}C^9\\)&\\(A^{10}C^{13}/(4R_4^2B^8)\\)\\\\\n\\(A_5\\)&\\(4M_5^2B^{24}C^{11}\\)&\\(A^{12}C^{17}/(4R_5^2B^{10})\\)\\\\\n\\(O_j\\)&\\(36(42B^3C)^{2j}C/B^2\\)&\\((2AC^2/(5B))^{2j}/C\\)\n\\end{tabular}\n\\end{table}\n\nSuppose that\n\\begin{equation}\\label{eq:pr-coarse-gap}\n C>GA^7B^5S^3,\n \\qquad G_* /R_{bs}\\ge\\rho,\n\\end{equation}\nwhere \\(G_*\\) is a pointwise coefficient valid in the first inequality\nat the actual triple \\(a,b,s\\). The constant \\(G\\) and the lower bound\n\\(\\rho\\) may be estimated separately. In Table~\\ref{tab:pr-overlaps},\neach displayed quotient is a sufficient lower bound for the preceding\nupper endpoint divided by the next lower endpoint, including the factor\n\\(h\\). The first line instead compares the initial lower bound\n\\(D>A^2C^7/(S^2T^4)\\) with the lower endpoint of \\(Q\\).\n\\begin{table}[htbp]\n\\centering\\small\n\\caption{Sufficient overlap quotients, each required to exceed one.}\n\\label{tab:pr-overlaps}\n\\begin{tabular}{c|c|c}\nJunction&Quotient&Additional substitution\\\\\\hline\nSTART--\\(Q\\)&\\(1024A^{10}B^{10}(1-\\varepsilon)/12100\\)&none\\\\\n\\(Q\\)--\\(N_2\\)&\\(256A^8S^4/(36M_2^2h)\\)&none\\\\\n\\(N_2\\)--\\(P\\), \\(BS^3\\)&\\(G^2A^{20}B^4/(16R_2^2\\,2400^2h)\\)&none\\\\\n\\(N_2\\)--\\(P\\), \\(B^3S^2\\)&\\(G^2A^{20}S^2/(16R_2^2\\,2400^2h)\\)&none\\\\\n\\(P\\)--\\(N_3\\)&\\(G^2A^{20}/(16R_p^2M_n^2h)\\)&\\(S\\ge B^2\\)\\\\\n\\(P\\)--\\(A_3\\)&\\(G^2A^{20}/(16R_p^2M_3^2h)\\)&\\(S\\ge B\\)\\\\\n\\(A_3\\)--\\(M\\)&\\(G^4A^{36}/(16R_3^2M_m^2h)\\)&\\(S\\le B^2\\)\\\\\n\\(M\\)--\\(N_3\\)&\\(G^4A^{34}B^2S^2/(16R_m^2M_n^2h)\\)&none\\\\\n\\(N_3\\)--\\(A_4\\)&\\(G^2A^{22}B^4/(16R_n^2M_4^2h)\\)&\\(S\\ge B^3\\)\\\\\n\\(N_3\\)--\\(N_{3,bs}\\)&\\(G^4A^{36}B^8/(16R_n^2M_{bs}^2h)\\)&\\(S\\le B^3\\)\\\\\n\\(N_{3,bs}\\)--\\(A_4\\)&\\(\\rho^2A^{14}/(16M_4^2h)\\)&pointwise bound\\\\\n\\(A_4\\)--\\(O_4\\)&\\(G^4A^{38}B^2/(144R_4^2\\,42^8h)\\)&\\(S\\ge B\\)\\\\\n\\(O_4\\)--\\(A_5\\)&\\(G^4A^{36}/(4M_5^2(5/2)^8h)\\)&\\(S\\ge B\\)\\\\\n\\(A_5\\)--\\(O_5\\)&\\(G^6A^{54}B^{10}/(144R_5^2\\,42^{10}h)\\)&\\(S\\ge B\\)\\\\\n\\(O_5\\)--\\(O_6\\)&\\(G^6A^{52}B^4/(36\\cdot42^{12}(5/2)^{10}h)\\)&\\(S\\ge B\\)\n\\end{tabular}\n\\end{table}\n\nHere the first two comparisons use\n\\(C>A^2T^5/S^2\\) and $T>2BS$. The others use\n\\eqref{eq:pr-coarse-gap}. For example, before substitution, the\n\\(N_3\\)--\\(A_4\\) quotient is\n\\[\n \\frac{A^8C^2}{16R_n^2M_4^2B^{24}h}.\n\\]\nSubstituting the gap and then \\(S\\ge B^3\\) gives its table entry.\nAt the critical relabeled junction the raw quotient is\n$C^2/(16R_{bs}^2M_4^2B^{10}S^6h)$. Substitution gives the displayed \\(\\rho^2A^{14}\\) bound.\nThe remaining entries follow by the same divisions. All substitutions\nuse a positive exponent for a lower bound or a negative exponent for an\nupper bound.\n\nThe chain begins START,\\(Q,N_2,P\\). If \\(S\\ge B^2\\), continue directly\nto $N_3$. Otherwise use $A_3,M,N_3$. If \\(S\\ge B^3\\), continue\nto $A_4$. Otherwise use $N_{3,bs},A_4$. Then use\n\\[\n A_4,O_4,A_5,O_5,O_6,O_7,\\ldots .\n\\]\nBoth equality cases belong to a checked branch. With\n\\(H_0=42B^3C\\) and \\(R_0=2AC^2/(5B)\\),\n\\[\n R_0/H_0=AC/(105B^4)>(G/105)A^8BS^3.\n\\]\nWhen the last quantity exceeds one, the \\(O_5\\)--\\(O_6\\) comparison\nimplies every later ordinary overlap. Since \\(H_0>1\\), the lower\nendpoints tend to infinity. The initial lower bound and avoidance of\nall these overlapping closed intervals give a contradiction.\n\n",
+    "new": "We use the interval calculation of Section~\\ref{sec:common-intervals}.\nFor the gap and the residual of $N_3$ on $b,s$, put\n\\[\n \\mu=\\frac{51051}{400000},\\qquad \\kappa=\\frac{3535}{409600},\\qquad\n v=B/S,\\qquad d_0=|b-s|/S,\n\\]\n\\[\n \\Phi=\\max(d_0^6,vd_0^5),\\qquad R_{bs}=\\kappa\\Phi.\n\\]\nThe coefficient $M_{bs}=4143$ is sufficient in both applications below.\n\n",
+    "proposal": "interval_replacements.json",
+    "before_sha256": "64f60ed553a0c89387c98a2bac075867543183d780c9cc55b86cf6db76790c09",
+    "after_sha256": "9e457aae737c0a6de5efea7b3e88a4a0bff79cf16d4529dc0943d8eb266fe065"
+  },
+  {
+    "id": "interval-section6-specialization",
+    "old": "\\paragraph{The approximation intervals.}\nUse the integral approximation constructions with the constants displayed\nbelow. Lemma~\\ref{lem:retained-gap} gives\n$C>1000$, $C>200S$, $C>4T$, $AC>1000$ and $D>1000C$.\nIn particular, the two-entry construction in\nProposition~\\ref{lem:ordinary-all-orders} applies because\n$C>4B$ and $AC>1000$. Put\n\\[\n \\epsilon=\\frac1{4000},\\quad h=\\frac{4001}{3999}.\n\\]\\[\n M_n=4143,\\ R_n=\\frac{35}{32},\\\n M_3=2265,\\ R_3=\\frac{35}{16},\\\n M_4=166000,\\ R_4=\\frac{63}{8},\n\\]\n\\[\n M_5=26859063,\\ R_5=\\frac{495}{64},\\qquad\n M_m=\\frac89\\,608^2,\\quad R_m=\\frac{3920}{81},\\quad\n R_{bs}=\\frac{35}{32}.\n\\]\nFor the finite constructions, these constants bound the coefficients and residuals in their stated integral normalizations. In the table, $P$ denotes the four quadratic rows in~\\eqref{eq:ff-prows}, $Q$ the five linear rows with determinant~\\eqref{eq:ff-qdet}, and $M$ the estimate~\\eqref{eq:ordinary-three-M}. For $P$, use $\\mathcal R(1)<3$ and put $H_P=\\max(BS^3,B^3S^2)$. The row $N_{3,bs}$ uses $N_3$ with fixed entries $b,s$, and $O_j$ uses~\\eqref{eq:ordinary-integer-k} at $k=j$. Each pair $(l,u)$ denotes the forbidden closed interval $[l/(1-\\epsilon),u/(1+\\epsilon)]$ for $D$, by~\\eqref{eq:ff-window}.\n\\begin{center}\\small\n\\begin{tabular}{c|c|c}\nrow&\\(l\\)&\\(u\\)\\\\\\hline\n\\(Q\\)&\\(4\\cdot55^2T^6C^3\\)&\\(A^4C^7/(9T^2)\\)\\\\\n\\(N_2\\)&\\(4\\cdot735^2B^8C^5\\)&\\(4A^6C^7/(25B^4)\\)\\\\\n\\(P\\)&\\(4\\cdot2400^2H_P^2C^5\\)&\\(A^6C^9/(4\\cdot3^2S^4)\\)\\\\\n\\(A_3\\)&\\(4M_3^2B^{12}C^7\\)&\\(A^8C^9/(4R_3^2B^6)\\)\\\\\n\\(M\\)&\\(4M_m^2B^6S^{16}C^5\\)&\\(A^6C^{11}/(4R_m^2B^4S^{10})\\)\\\\\n\\(N_3\\)&\\(4M_n^2B^{14}C^7\\)&\\(A^8C^{11}/(4R_n^2B^6)\\)\\\\\n\\(N_{3,bs}\\)&\\(4M_n^2S^{14}C^7\\)&\\(B^8C^{11}/(4R_{bs}^2S^6)\\)\\\\\n\\(A_4\\)&\\(4M_4^2B^{18}C^9\\)&\\(A^{10}C^{13}/(4R_4^2B^8)\\)\\\\\n\\(A_5\\)&\\(4M_5^2B^{24}C^{11}\\)&\\(A^{12}C^{17}/(4R_5^2B^{10})\\)\\\\\n\\(O_j\\)&\\(36(42B^3C)^{2j}C/B^2\\)&\\((2AC^2/(5B))^{2j}/C\\)\n\\end{tabular}\n\\end{center}\nThe last row is available for every positive integer \\(j\\).\n\n\\paragraph{Overlap of consecutive intervals.}\nThe first comparison puts $\\mathcal G$ above the lower endpoint of $Q$, so~\\eqref{eq:integrated-6} places $D$ above that endpoint. Each later comparison requires the preceding upper endpoint to exceed the next lower endpoint, with the factors $1\\mp\\epsilon$ included. The table gives sufficient strict comparisons, so the lower quantity must exceed the required constant. The first two use $C>A^2T^5/S^2$ and $T>2ABS$, and the remaining comparisons use~\\eqref{eq:large-gap}.\n\\begin{center}\\small\n\\begin{tabular}{c|c|c}\njunction and additional condition&lower quantity&required constant\\\\\\hline\n\\(\\mathcal G\\to Q\\)&\\(1024A^{20}B^{10}\\)&\\(12100/(1-\\epsilon)\\)\\\\\n\\(Q\\to N_2\\)&\\(256A^{16}S^4\\)&\\(36\\cdot735^2h\\)\\\\\n\\(N_2\\to P,\\ H_P=BS^3\\)&\\(K^2A^{20}B^4\\)&\\(25\\cdot2400^2h\\)\\\\\n\\(N_2\\to P,\\ H_P=B^3S^2\\)&\\(K^2A^{20}S^2\\)&\\(25\\cdot2400^2h\\)\\\\\n\\(P\\to N_3,\\ S\\ge B^2\\)&\\(K^2A^{20}\\)&\\(16\\cdot3^2M_n^2h\\)\\\\\n\\(P\\to A_3,\\ S\\le B^2\\)&\\(K^2A^{20}\\)&\\(16\\cdot3^2M_3^2h\\)\\\\\n\\(A_3\\to M,\\ S\\le B^2\\)&\\(K^4A^{36}\\)&\\(16R_3^2M_m^2h\\)\\\\\n\\(M\\to N_3\\)&\\(K^4A^{34}B^2S^2\\)&\\(16R_m^2M_n^2h\\)\\\\\n\\(N_3\\to A_4,\\ S\\ge B^3\\)&\\(K^2A^{22}B^4\\)&\\(16R_n^2M_4^2h\\)\\\\\n\\(N_3\\to N_{3,bs},\\ S\\le B^3\\)&\\(K^4A^{36}B^8\\)&\\(16R_n^2M_n^2h\\)\\\\\n\\(N_{3,bs}\\to A_4\\)&\\(K^2A^{14}\\)&\\(16R_{bs}^2M_4^2h\\)\\\\\n\\(A_4\\to O_4\\)&\\(K^4A^{38}B^2\\)&\\(144R_4^2\\,42^8h\\)\\\\\n\\(O_4\\to A_5\\)&\\(K^4A^{36}\\)&\\(4M_5^2(5/2)^8h\\)\\\\\n\\(A_5\\to O_5\\)&\\(K^6A^{54}B^{10}\\)&\\(144R_5^2\\,42^{10}h\\)\\\\\n\\(O_5\\to O_6\\)&\\(K^6A^{52}B^4\\)&\\(36\\cdot42^{12}(5/2)^{10}h\\)\n\\end{tabular}\n\\end{center}\nEvery remaining modulus power is nonnegative. Thus the displayed\ncomparisons follow by substituting \\(A=B=S=3\\), \\(K=400\\)\nand clearing positive denominators. To make the tight comparison\nexplicit, its exact quotient is\n\\[\n \\frac{K^2 3^{14}}{16R_{bs}^2M_4^2h}\n =\\frac{1224133953984}{844113475625}>\\frac75.\n\\]\nAll other quotients exceed \\(13/10\\).\n\nHere are the algebraic reductions behind the branch conditions.\nThe two \\(P\\) incoming comparisons handle both terms of its maximum.\nThe $P\\to N_3$ comparison uses $S\\ge B^2$.\nThe alternative $P\\to A_3$ comparison only needs $S\\ge B$.\nFor \\(A_3\\to M\\), the residual modulus factor is \\(B^8/S^4\\ge1\\)\nwhen \\(S\\le B^2\\). For \\(N_3\\to A_4\\), it is \\(S^6/B^{14}\\ge B^4\\)\nwhen \\(S\\ge B^3\\). For \\(N_3\\to N_{3,bs}\\), it is\n\\(B^{14}/S^2\\ge B^8\\) when \\(S\\le B^3\\).\nThe last four reductions use only $S\\ge B$.\n\nFor \\(N_{3,bs}\\to A_4\\), the endpoint quotient is\n\\[\n \\frac{C^2}{16M_4^2R_{bs}^2h\\,B^{10}S^6}.\n\\]\nSubstituting \\eqref{eq:large-gap} gives the corresponding table entry.\n\n\\paragraph{Exclusion of all remaining values of $D$.}\nStart with \\(\\mathcal G,Q,N_2,P\\). If $S\\ge B^2$, continue through $N_3$. Otherwise continue through $A_3,M,N_3$.\nIf $S\\ge B^3$, continue to $A_4$. Otherwise use $N_{3,bs},A_4$.\nEquality belongs to either applicable branch. Finish with\n\\[\n A_4,O_4,A_5,O_5,O_6,\\ldots .\n\\]\nPut \\(H_2=42B^3C,\\ R_2=2AC^2/(5B)\\). Then\n\\[\n \\frac{R_2}{H_2}=\\frac{AC}{105B^4}>\n \\frac{400A^8BS^3}{105}\\ge\\frac{400\\cdot3^{12}}{105}>1.\n\\]\nThe ratio of the upper endpoint of $O_j$ to the lower endpoint of\n$O_{j+1}$ is multiplied by $(R_2/H_2)^2$ when $j$ increases by one. The checked \\(O_5\\to O_6\\)\njunction therefore proves every later one. Since \\(H_2>1\\), the lower\nendpoints tend to infinity.\n\nThe starting inequality puts \\(D\\) above the lower endpoint of \\(Q\\).\nSince $D$ avoids the closed interval, it lies above its upper endpoint.\nThe overlap then places $D$ above the lower endpoint of the next interval.\nThis implication is also valid when an intermediate interval is empty.\nIt would force \\(D\\) beyond arbitrarily large endpoints, a contradiction.\n",
+    "new": "Apply the interval calculation of Section~\\ref{sec:common-intervals}.\nLemma~\\ref{lem:retained-gap} gives $C>\\max(1000,200S,4T)$\nand $D>1000C$, so all the approximation hypotheses hold.\nUse the uniform coefficient and residual bounds\n\\[\n M_2=243,\\quad M_n=M_{bs}=4143,\\quad M_3=2265,\\quad\n M_4=165763,\\quad M_5=3113013,\n\\]\n\\[\n R_2=\\frac54,\\quad R_n=R_{bs}=\\frac{35}{32},\\quad\n R_3=\\frac{35}{16},\\quad R_4=\\frac{63}{8},\\quad\n R_5=\\frac{495}{64},\\quad R_p=3.\n\\]\nThe choice of $R_p$ follows from $\\mathcal R(1)<3$.\nTake $G=G_*=K=400$ and $\\rho=400/R_{bs}$ in\n\\eqref{eq:pr-coarse-gap}, using \\eqref{eq:large-gap}.\nEvery remaining modulus power in Table~\\ref{tab:pr-overlaps}\nis nonnegative, so all its comparisons follow by substituting\n$A=B=S=3$ and clearing positive denominators.\nThe smallest resulting quotient occurs at $N_{3,bs}$--$A_4$ and equals\n\\[\n \\frac{400^2 3^{14}}{16R_{bs}^2M_4^2h}\n =\\frac{7834457305497600}{5386911336360281}>\\frac75.\n\\]\nAll other quotients exceed $13/10$. Finally,\n\\[\n (G/105)A^8BS^3\\ge\\frac{400\\cdot3^{12}}{105}>1.\n\\]\nThe common interval calculation therefore gives a contradiction.\n",
+    "proposal": "interval_replacements.json",
+    "before_sha256": "9e457aae737c0a6de5efea7b3e88a4a0bff79cf16d4529dc0943d8eb266fe065",
+    "after_sha256": "36c33c49f66b1605ba7638149103304011f8a374ab6f671ba207aa164387f6dc"
+  },
+  {
+    "id": "interval-section9-shared-endpoints",
+    "old": "For completeness, all raw interval endpoints used here are displayed\nin Table~\\ref{tab:fixed56-windows}. A row $(l,u)$ excludes\n$[l/(1-\\varepsilon),u/(1+\\varepsilon)]$, with\n$\\varepsilon=1/4000$. Positive powers of $A\\ge1$ have been discarded\nonly from upper endpoints, so the same table applies to both possible\nvalues of $a_0$.\n\\begin{table}[ht]\\centering\\small\n\\begin{tabular}{c|c|c}\nrow&$l$&$u$\\\\\\hline\n$Q$&$4\\cdot55^2T^6C^3$&$C^7/(9T^2)$\\\\\n$N_2$&$4M_2^2B^8C^5$&$C^7/(4R_2^2B^4)$\\\\\n$P$&$4\\cdot2400^2\\max(BS^3,B^3S^2)^2C^5$&$C^9/(4R_p^2S^4)$\\\\\n$A_3$&$4M_3^2B^{12}C^7$&$C^9/(4R_3^2B^6)$\\\\\n$M$&$4M_m^2B^6S^{16}C^5$&$C^{11}/(4R_m^2B^4S^{10})$\\\\\n$N_3$&$4M_n^2B^{14}C^7$&$C^{11}/(4R_n^2B^6)$\\\\\n$N_{3,bs}$&$4M_{bs}^2S^{14}C^7$&$B^8C^{11}/(4R_{bs}^2S^6)$\\\\\n$A_4$&$4M_4^2B^{18}C^9$&$C^{13}/(4R_4^2B^8)$\\\\\n$A_5$&$4M_5^2B^{24}C^{11}$&$C^{17}/(4R_5^2B^{10})$\\\\\n$O_j$&$36(42B^3C)^{2j}C/B^2$&$(2C^2/(5B))^{2j}/C$\n\\end{tabular}\n\\caption{Intervals for the fifty-six listed triples and $(1,3,8)$.}\n\\label{tab:fixed56-windows}\n\\end{table}\n\n",
+    "new": "Use the endpoints in Table~\\ref{tab:pr-windows}, replacing $A$ by\none only in the upper endpoints. This discards positive powers of\n$A\\ge1$, so each resulting closed interval remains forbidden for\nboth possible values of $a_0$. The constants $M_{bs}$ and $R_{bs}$\nare the specialized ones just defined.\n\n",
+    "proposal": "interval_replacements.json",
+    "before_sha256": "36c33c49f66b1605ba7638149103304011f8a374ab6f671ba207aa164387f6dc",
+    "after_sha256": "2f6ebdd850fc07d7dd419c6717de513a421e549e15764e1a220e642bbc53db5b"
+  },
+  {
+    "id": "interval-section9-ordinary-tail-reference",
+    "old": "The squared ratio of the ordinary bases is greater than\n$K^2x^5/(105^2b_0^4s_0^2)>1$. Hence the checked overlap\n$O_5$--$O_6$ implies every later consecutive overlap. The lower\nendpoints tend to infinity. This contradicts the fixed value of $D$,\nand proves $N(t)<N_0$ for each of these triples.",
+    "new": "With $A$ replaced by one, the squared ratio of the ordinary bases\nis greater than $K^2x^5/(105^2b_0^4s_0^2)>1$.\nThe ordinary-tail argument of Section~\\ref{sec:common-intervals}\ntherefore gives a contradiction and proves $N(t)<N_0$.",
+    "proposal": "interval_replacements.json",
+    "before_sha256": "2f6ebdd850fc07d7dd419c6717de513a421e549e15764e1a220e642bbc53db5b",
+    "after_sha256": "71b7b30cd9ca46e2b90a710703e8934c650eb34c02bcaa9b8b30c6db99e1bc5a"
+  },
+  {
+    "id": "R15-application-scope-wording",
+    "old": "For the first two applications, suppose in addition that",
+    "new": "For the applications in Sections~\\ref{sec:all-large} and~\\ref{sec:pair-reduction}, suppose in addition that",
+    "proposal": "interval_wording_followup.json",
+    "before_sha256": "71b7b30cd9ca46e2b90a710703e8934c650eb34c02bcaa9b8b30c6db99e1bc5a",
+    "after_sha256": "776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3"
+  }
+]

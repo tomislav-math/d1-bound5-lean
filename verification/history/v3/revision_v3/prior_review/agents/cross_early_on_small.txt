@@ -1,0 +1,35 @@
+Independent cross-review of proposals/small.json
+
+Source: input/D1_bound5-v2.tex, SHA-256 5edcf8777371c4ad8979f122022d3119a8ae2de75d9674b336df994bba860b70.
+Read the four proposed replacements against their actual source context. Re-read the ordinary-height proposition and corollary, the cutoff proof, the exact graph-construction paragraph, the small-triple classification and the complete proof using three small anchors. Checked every old anchor: each occurs exactly once. No source or another agent's proposal file was edited.
+
+SM-02 — ACCEPT
+This is a useful clarification and preserves the contract. For each choice p in {s,t,c} with P=|p|>=10^8, the four entries a,b,p,d are distinct nonzero tuple entries. The two anchors still satisfy 1<=A<=B<3. Thus P>4B and AP>1000, while the original ordering gives D>=P. These are precisely the hypotheses of the preceding ordinary-height result. The logarithm is at least 8, so x>t=4 and 2x+r>0 also hold.
+
+The three uses are genuinely discrete substitutions P=S, P=T and P=C. The proposed wording correctly prevents a reader from treating P as a free real modulus. The bounds H2<1134P, R2>(2/15)P^2, 253B^2<2277 hold uniformly for those choices. Independently substituting h=31/10, r=-9/10, u=17/5 into the corollary gives t=4, beta+2/5=212/5, gamma=4047/25, exactly the unchanged g. No zero-root or equal-modulus case is lost.
+
+SM-04 — ACCEPT
+This resolves a genuine local reuse of s, which still denotes a tuple entry in the next case. Changing only the dummy real variable to x leaves the statement intact. The function whose positivity is used is
+x−227/5−(4047/25)/(x−4).
+Its derivative is 1+(4047/25)/(x−4)^2>0 for x>=49. Exact rational evaluation at 49 gives 1/375. The condition, strict inequalities and numerical endpoint are unchanged. This is the strongest small notation edit in the set.
+
+SM-01 — ACCEPT ONLY WITH ONE QUALIFICATION
+The case architecture is correct. With exactly two small entries, the cutoff bounds the third of the four large moduli, so the first three large entries would be a triangle in the finite graph. Product-minus-one pairs are handled separately. Three-small tuples have at most one further entry within the closed radius-10^40 disk, and the following argument excludes three further entries in total.
+
+However, the proposed phrase “construct the graph on all common extensions inside that disk” does not describe the actual graph. The descent intentionally generates an enlarged set containing zero and possible anchor coincidences. At line 2402 the construction explicitly discards zero, both anchors, and every entry of modulus below three before forming the graph and asserting absence of triangles. The exact-two-small context suggests the intended restriction, but the added prose should not rely on it when it says “all”.
+
+Smallest repair in the proposed replacement:
+old phrase: construct the graph on all common extensions inside that disk
+new phrase: construct the graph on their common extensions of modulus at least three inside that disk
+
+Since both anchors have modulus below three, this excludes zero and anchor coincidences as well. It accurately describes the graph whose triangle tests were performed and keeps the finite reduction's boundaries visible. No additional computation is needed. The rest of SM-01 is preserved.
+
+SM-03 — ACCEPT, WITH AN OPTIONAL PRECISION TIGHTENING
+The case split is exhaustive under the stated hypothetical existence of three further entries. Because at most one further entry has modulus at most R, either all three are above R or exactly one of the three gives a fourth anchor of modulus below 85. The word “unique” remains within that conditional split and does not assert existence globally. The second case does use the two displayed intervals, plus the nonzero interpolation estimate that places W above their lower endpoint.
+
+The first case uses the growth alternatives and the height upper bound. The height bound is needed when at least one of the consecutive three-anchor forms is nonzero. If both consecutive forms vanish, the quadratic bounds and the nonzero alternative for the nonconsecutive pair already contradict one another. Thus “comparing the growth alternatives ... with the height upper bound” is acceptable as an overview of that case but slightly overstates the single mechanism. If desired, replace that sentence by:
+“The first case uses the growth alternatives in Lemma~\ref{sm:five-small-anchor-alternative} and the height upper bound.”
+This is a precision refinement, not a blocker. No constants, hypotheses, branches, labels or endpoint conventions change.
+
+Conclusion
+SM-02 and SM-04 are independently cleared as written. SM-01 should include the modulus-at-least-three restriction before acceptance. SM-03 is mathematically preserved as written, with the shorter mechanism sentence above available if selected. These are proposal reviews only. Nothing has been integrated or rendered.
