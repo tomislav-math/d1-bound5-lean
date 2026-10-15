@@ -43,3 +43,12 @@ run_cmd do
 #print D1Bound5.MainStatement
 #print D1Bound5.IsD1
 #print D1Bound5.IsD1Tuple
+
+#print axioms D1Bound5.exists_full_integer_coordinates
+#check @D1Bound5.exists_full_integer_coordinates
+
+#print axioms D1Bound5.norm_sq_eq_absolute_norm
+#check @D1Bound5.norm_sq_eq_absolute_norm
+
+#print axioms D1Bound5.full_ring_one_three_common_extension_is_integer
+#check @D1Bound5.full_ring_one_three_common_extension_is_integer

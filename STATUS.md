@@ -2,7 +2,20 @@
 
 2026-10-15. **IN PROGRESS. MAIN THEOREM UNPROVED.**
 
-## Accepted local mathematical work
+## Active continuation, 2026-10-15
+
+The new full-ring bridge has compiled both separately and in the integrated
+project: 18 modules, 64 explicit theorems, source-policy audit PASS.
+The new mathematical results construct a basis containing one, normalize
+trace, prove the full squarefree/half-integral coordinate classification,
+identify the algebraic and complex norms, and transfer the rationality
+result for common extensions of {1,3} to every imaginary quadratic field.
+See `records/full-ring-bridge.md`. The full axiom and kernel audits for this
+new milestone are PENDING; the older accepted audit below is not relabeled.
+The current continuation is proving `lem:irregular-growth` separately in
+`exploration/IrregularGrowth.lean`; it is not yet an accepted dependency.
+
+## Previous accepted local mathematical work
 
 The project currently has 40 explicit proved theorems in eleven Lean modules
 (counting the root import module). They cover faithful definitions, integral

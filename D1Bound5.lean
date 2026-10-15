@@ -8,3 +8,10 @@ import D1Bound5.DescentAlgebra
 import D1Bound5.Regression
 import D1Bound5.IntervalChain
 import D1Bound5.OneThree
+import D1Bound5.CoordinateChange
+import D1Bound5.FullRingBasis
+import D1Bound5.ComplexCoordinates
+import D1Bound5.FullRingBridge
+import D1Bound5.MaximalCoordinates
+import D1Bound5.FullRingClassification
+import D1Bound5.NormCompatibility
