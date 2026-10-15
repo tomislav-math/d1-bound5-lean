@@ -4,24 +4,26 @@
 
 ## Accepted local mathematical work
 
-The project currently has 36 explicit proved theorems in ten Lean modules
+The project currently has 40 explicit proved theorems in eleven Lean modules
 (counting the root import module). They cover faithful definitions, integral
 square roots, sextuple selection with ties, coordinate norm formulas,
 regularity algebra, reversible mutation algebra, six modular square
-obstructions, interval-chain logic and boundary regressions.
+obstructions, interval-chain logic, the coordinate rationality theorem for the pair {1,3},
+and boundary regressions.
 
 The complete project builds with Lean 4.33.1 and the pinned mathlib revision.
 The current source-policy scan passes. Transitive axiom collection for all
-56 exported project declarations passes with only `propext`,
+66 exported project declarations passes with only `propext`,
 `Classical.choice`, and `Quot.sound`. The target itself is a proposition
 specification, not an asserted theorem. See `records/statement-review.md`.
 
 ## Completion gates
 
 - Local build and source audit: PASS.
-- Current transitive axiom audit: PASS, 56 declarations.
-- Bundled kernel replay: PASS for all ten project modules, exit 0.
-- Clean-checkout rebuild: not yet run for this milestone.
+- Current transitive axiom audit: PASS, 66 declarations.
+- Bundled kernel replay: PASS for all eleven project modules, exit 0.
+- Clean-checkout rebuild: PASS for commit 96af5c0 (36 theorems); the
+  40-theorem source revision has passed local checks and awaits the new clean run.
 - Independent external statement review: not performed.
 - Full ring-coordinate equivalence, analytic dependencies, complete finite
   classifications, Bennett all-orders identity and main theorem: OPEN.

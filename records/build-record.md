@@ -1,73 +1,81 @@
 # Build and provenance record
 
-## Pinned environment
+## Environment
 
 Lean `leanprover/lean4:v4.33.1`, executable commit
 `819816b2e0a3bf405af45ae5c7af2491d8f5bee6`.
 Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`.
-Mac arm64. Commands below ran in the new D1Bound5 project, unless stated otherwise.
-The initial compiling skeleton is commit `034702f`.
+Mac arm64. `lake-manifest.json` pins all dependencies.
 
-## Accepted first mathematical milestone
+## Current 40-theorem milestone
 
-`records/proof-source-sha256.txt` fixes every proof module and pinned build
-configuration used in this milestone. `records/paper-to-lean.md` gives all
-36 explicit theorem names and their mathematical scope.
-
-Actual command:
+`proof-source-sha256.txt` fixes all eleven modules and the build configuration.
+The exact theorem inventory is in `paper-to-lean.md`.
+Actual command, in the main D1Bound5 working copy:
 
 ```sh
-PYTHON=/Users/tp/.local/bin/python3.12 bash scripts/check.sh --replay
+PYTHON=/Users/tp/.local/bin/python3.12 LEAN_NUM_THREADS=1 bash scripts/check.sh --replay
 ```
 
-Result: **exit 0**, complete output in `records/checks-010.log`.
-Source-policy check: 10 modules, 36 explicit theorems, PASS.
-`lake build`: PASS, 2957 jobs (includes imported dependencies, not theorem count).
-`lake env lean scripts/Audit.lean`: PASS, 56 project declarations, every
-transitive axiom list a subset of propext/Classical.choice/Quot.sound.
-`LEAN_NUM_THREADS=1 lake env leanchecker --verbose D1Bound5`: PASS, replayed
-all ten project modules. This reuses Lean's kernel and trusts imported
-module environments; it is not a fresh replay of all mathlib or an external verifier.
+**Exit 0**, full output in `checks-012.log`.
+Source-policy check: 11 modules, 40 explicit theorems, PASS.
+`lake build`: PASS, 2958 jobs (including dependency jobs, not theorem count).
+Transitive axiom audit: PASS, all 66 project declarations, with only
+`propext`, `Classical.choice`, and `Quot.sound`.
+Bundled `leanchecker`: PASS, all eleven project modules replayed.
+This reuses Lean's kernel and trusts imported environments; it is neither
+a fresh replay of all mathlib nor an independent external verifier.
 
-The elaborated target and its definitions were printed and self-reviewed.
-The target is UNPROVED. The successful checks validate only the existing
-partial formalization and its explicit hypotheses.
+The new OneThree module proves the rationality assertion in the coordinate
+model for every positive discriminant. Its separate standalone compilation
+also returned exit 0. The source manuscript was not edited.
 
-## External supporting checks
+**The main theorem is unproved in Lean.** The elaborated target has been
+self-reviewed. The successful checks validate only the partial formalization
+and the explicit hypotheses of its existing lemmas.
 
-The handoff manifest passed `shasum -a 256 -c SHA256SUMS`, exit 0.
-User-local uv 0.13.1 was downloaded from the official astral-sh/uv release;
-archive SHA256 `cfe454573412ff7380d15fc7dae5997ab53ffce72fce0a78e91ddbc84001acd2`
-was checked against release metadata before installation. Python 3.12.15
-was then installed user-locally. The system Python and shell configuration
-were not replaced.
+## Earlier verified checkpoints
 
-The unchanged `verification/revision_v4/run_checks.py` ran with Python 3.12.15,
-exit 0. All six jobs passed; their compact result is in
-`python-verification-summary.json`. Full logs remain in the handoff's
-separate local check directory. Large historical graphs were NOT regenerated.
+Initial skeleton: commit `034702f`.
+First mathematical checkpoint: `96af5c0e4296423f99f40f128e0f1d1b30c16c1d`,
+36 theorems. `checks-010.log` records the exit-0 local build/audit/replay.
+`clean-checkout-011.log` records an exit-0 run of the same complete procedure
+in a fresh private GitHub clone, with no project proof objects inherited.
+Only pinned public dependency caches were copied. The public-cache fetch,
+source hashes, fresh compilation, axiom audit and kernel replay all passed.
+The updated 40-theorem source revision requires its own clean-run record.
 
-The public prove2me/prove2me_workspace `references/lean-setup.md` confirmed
-the chosen Lean/mathlib pair. An unauthenticated environments request returned
-HTTP 401. No credential was read or mission opened.
+## Source preservation and supporting Python checks
 
-## Reproducibility / CI gates
+The handoff SHA256 manifest passed before and after this session, exit 0,
+including all 259 listed files. User-local uv 0.13.1 was downloaded from the
+official astral-sh/uv release, with archive SHA256
+`cfe454573412ff7380d15fc7dae5997ab53ffce72fce0a78e91ddbc84001acd2`
+verified against release metadata. Python 3.12.15 was installed user-locally;
+the system Python and shell configuration were not replaced.
 
-A clean-checkout test will be recorded separately with its actual source
-commit and result. A manual-only CI workflow has been prepared and its YAML
-and shell syntax checked. It has NOT been dispatched or claimed to pass.
-The workflow requires an explicitly confirmed existing free allowance.
-No spending setting was changed.
+The unchanged `verification/revision_v4/run_checks.py` returned exit 0 using
+Python 3.12.15. All six jobs passed. See `python-verification-summary.json`.
+Full logs remain in the separate handoff check directory. Large historical
+graphs were NOT regenerated. Python results are not Lean proofs.
 
-## Preserved failed setup/proof attempts
+The public Prove2Me setup document confirmed the Lean/mathlib pin. An
+unauthenticated environments query returned HTTP 401. No credential was
+read, no mission opened, and no paid API agent used.
 
-Raw early logs and public setup documents are retained under the ignored
-`local-logs/initial-session` directory. Fixed issues include using dotted
-Mathlib module names for cache retrieval; embedding coercions in the ring-
-equivalence lemma; explicit cast homomorphisms in modular soundness; unfolding
-the finite predicate before `decide`; and a doc-comment syntax error before
-`run_cmd`. The failed first audit was superseded by an exit-0 audit.
-An initial unqualified Lean command selected the global 4.35 default and was
-interrupted; no project pins were changed. An outside-project checker probe
-also used the wrong global environment. All accepted commands above used
-project-local `lake env` and the recorded 4.33.1 pin.
+## CI and preserved setup issues
+
+The private repository contains a manual-only, commit-pinned workflow.
+Its YAML and shell syntax were checked. No workflow run was initiated;
+GitHub's run list was empty. Existing free allowance must be verified before
+manual execution. No spending setting or public release was enabled.
+
+Early raw logs are retained under `local-logs/initial-session`. Fixed issues
+included dotted-module cache arguments, embedding coercions, explicit
+modular casts, unfolding the decidable predicate, and doc-comment syntax
+before `run_cmd`. The failed first audit was superseded by exit-0 audits.
+An initial unqualified Lean lookup selected the global 4.35 default and was
+interrupted; no project pins changed. An outside-project checker probe also
+used the wrong global environment. Every accepted command used the recorded
+project-local 4.33.1 environment. Original manuscript and Freiman sources
+were not edited; only public dependency caches were reused separately.

@@ -46,10 +46,14 @@ in `build-record.md`. No row below claims the main theorem is proved.
 | `scaled_power_unbounded` | Geometric lower endpoints exceed any fixed candidate |
 | `geometric_forbidden_interval_chain` | All-orders geometric chain assembly |
 | `transfer_forbidden_interval` | `eq:pr-transfer`, exact closed-interval transfer |
+| `QuadInt.three_le_discriminant` | Positive integral quadratic discriminants are at least three |
+| `one_three_integer_obstruction` | Integral conic contradiction in `lem:pr-one-three` |
+| `one_three_im_zero` | Common extensions of 1 and 3 have zero imaginary coordinate |
+| `one_three_common_extension_is_integer` | Rationality part of `lem:pr-one-three` in every positive-discriminant coordinate model |
 | `zero_square_pair` | Regression: {-1,1}, zero root and equal absolute values |
 | `half_integral_basis_square` | Regression: omega^2=omega-1 in tau=nu=1 |
 
-There are 36 explicit proved theorems in this milestone, in addition to the
+There are 40 explicit proved theorems in this milestone, in addition to the
 definitions and generated helper declarations. The six modular results use
 kernel `decide` after a proved checker-soundness lemma, not Python or native
 evaluation. Their preceding enumeration is still an open obligation.

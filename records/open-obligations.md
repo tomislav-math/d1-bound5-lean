@@ -44,6 +44,11 @@ fraction enumeration, small triple orbits, forty first-pair representatives,
 fifty-six triples, and rational pair (1,3) require full coverage arguments.
 No large historical graph was regenerated during the initial local session.
 
+The rationality part of `lem:pr-one-three` is now proved in the coordinate
+model for every positive discriminant, including nonmaximal orders. Its
+transfer to arbitrary full integer rings and the separate signed-cardinality
+argument remain open. See `one-three-proof.md`.
+
 ## Final assembly and release gates
 
 Prove the three main exclusions: no small entry, exactly one small entry,

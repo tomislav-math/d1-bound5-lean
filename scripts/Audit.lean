@@ -33,6 +33,9 @@ run_cmd do
 #print axioms D1Bound5.small_tail_q11
 #print axioms D1Bound5.small_tail_q35
 #print axioms D1Bound5.geometric_forbidden_interval_chain
+#print axioms D1Bound5.QuadInt.three_le_discriminant
+#print axioms D1Bound5.one_three_integer_obstruction
+#print axioms D1Bound5.one_three_common_extension_is_integer
 #print axioms D1Bound5.zero_square_pair
 #print axioms D1Bound5.half_integral_basis_square
 
