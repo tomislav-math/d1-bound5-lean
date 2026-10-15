@@ -103,3 +103,24 @@ existence of the full integral coordinate models, not an assumed bridge.
 
 The 70-theorem continuation closes the full-ring bridge and the first
 structural growth lemma. The main bound-five theorem remains unproved.
+
+## Separate analytic-tail continuation, 2026-10-15
+
+This worktree adds nine explicit theorems to the accepted 70-theorem base.
+The old sections above are historical milestones, not current totals.
+
+| Declaration | Source / purpose |
+|---|---|
+| `normalized_root_perturbation` | Elementary sign-selected square-root estimate replacing analytic branches in lem:tail-irregular |
+| `exists_sign_root_perturbation` | Perturbation about an arbitrary nonzero complex target |
+| `tail_error_sum_lt_one` | Rational bounds for the three root errors, two ranges for sqrt(A) |
+| `tail_sum_root_bounds` | Nonzero beta+gamma and valid perturbation radius for ad+1 |
+| `exists_ring_sign_root_perturbation` | Sign selection preserves integral square roots |
+| `exists_aligned_square_roots` | Auxiliary beta,gamma aligned with the given root of bc+1 |
+| `no_regular_large_tail_core` | Analytic contradiction with the arithmetic norm input explicit |
+| `tail_irregular_of_four_le` | C>=4 branch in EVERY imaginary quadratic full integer ring, norm input discharged |
+| `IsD1Tuple.tail_irregular_and_growth_of_four_le` | Same branch plus D>2BC for actual ordered D(1)-quadruples, ties allowed |
+
+All new theorem sources compiled successfully. The separate C<4 finite
+branch, remaining determinant/approximation estimates and main bound-five
+theorem are not asserted by this milestone.

@@ -64,3 +64,15 @@ No independent reviewer or paid agent was used in this session.
 Prove2Me is deferred until local completion; no mission has been opened.
 The v4 proof does not use He-Togbe-Ziegler, and that dependency has not been
 introduced into the Lean project.
+
+
+## Analytic-tail continuation update
+
+In this worktree the C>=4 branch of lem:tail-irregular, with its D>2BC
+consequence, is now compiled in TailAnalyticMain. The generic norm input
+of its core is fully discharged in its all-fields full-ring wrapper.
+The preceding reference to completing tail-irregular now means completing
+and joining the separate finite 3<=B<=C<4 branch. No finite-table or
+all-orders approximation assumption has been inserted into the theorem.
+The latest local validation scope is recorded in STATUS.md and
+tail-analytic-checks.md. The main theorem remains unproved.

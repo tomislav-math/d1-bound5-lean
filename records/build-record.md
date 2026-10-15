@@ -112,3 +112,18 @@ source has yet been run; the earlier clean-checkout receipts are retained
 with their original 40-theorem scope. The current source fingerprint list
 is updated in `proof-source-sha256.txt`. This checked milestone is committed
 with the message "Accept kernel-audited full-ring bridge and irregular growth".
+
+
+## Analytic-tail continuation, 2026-10-15
+
+Proof commit 3a8f9ff711bdaf3dec07b3fe3dbbc9be6af336f9 adds nine theorems,
+for branch total 79 in 23 modules. Targeted and integrated builds passed.
+Source/import coverage passed. The transitive axiom audit passed for 133
+declarations, allowing only propext, Classical.choice, Quot.sound.
+All four new modules have successful module-level kernel replay returns.
+The larger original and sequential repeat commands were controlled-stopped
+with exit 143; do not relabel either as a full-project exit-0 kernel run.
+Exact commands, terminal types, logs and scope are in tail-analytic-checks.md
+and tail-analytic-replay-receipt.json. The frozen manuscript and main target
+are unchanged. The C<4 tail branch and main cardinality theorem remain open
+in this worktree. No new clean checkout or independent external review.

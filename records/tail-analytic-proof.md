@@ -74,14 +74,16 @@ in 23 modules, including the root import module.
 Actual terminal build: lake build D1Bound5.TailAnalyticMain, exit 0.
 The original successful attempt built the final module in 403s and finished
 in 415.36s. A repeated up-to-date build also returned exit 0 in 37.16s.
-The slow attempt's sampling showed Lean.importModules during concurrent
-memory contention, not a tactic loop. An attempted interruption found the
+At the sampled instants the slow attempt was loading imports during
+concurrent compilation; this is not a diagnosis of every later phase. An attempted interruption found the
 process already finished and did not stop it; an inaccurate automated log
 annotation was corrected explicitly. No mathematical error was suppressed.
 The preceding failed build had one triangle-inequality API mismatch, now
 replaced by explicit norm inequalities and linarith.
 
 Source-policy and root-import-coverage check: PASS, 79 explicit theorems,
-23 modules. The full integrated axiom audit and kernel replay are currently
-running and are NOT yet counted as passed in this checkpoint. No independent
+23 modules. The integrated build and 133-declaration transitive axiom audit passed.
+All four new modules returned successfully from the pinned kernel replay
+function. A later repeat of unchanged base modules was stopped; no complete
+23-module exit-0 replay is claimed. See tail-analytic-checks.md. No independent
 external referee was used. The main theorem remains unproved.

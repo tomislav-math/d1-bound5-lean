@@ -1,59 +1,57 @@
 # Status
 
-2026-10-15. **IN PROGRESS. MAIN THEOREM UNPROVED.**
+2026-10-15. MAIN BOUND-FIVE THEOREM UNPROVED.
 
-## Current accepted local work
+## Analytic-tail continuation
 
-There are 70 explicit proved theorems in nineteen Lean modules, counting
-the root import module. The current integrated build, source-policy check,
-root import-coverage check, transitive axiom audit and kernel replay PASS.
-The axiom audit covers 117 project declarations and permits only
-`propext`, `Classical.choice`, and `Quot.sound`.
+Worktree: /Users/tp/Lean/D1Bound5-TailAnalytic-20261015.
+Private branch: tail-analytic-20261015, based on accepted 18af1df.
+Proof-source commit: 3a8f9ff711bdaf3dec07b3fe3dbbc9be6af336f9.
+This branch contains 79 explicit theorems in 23 modules (root included).
+Nine new theorems prove the C>=4 branch of lem:tail-irregular and its
+D>2BC consequence for ordered D(1)-quadruples in EVERY imaginary quadratic
+full integer ring. No unproved norm hypothesis remains in the wrapper.
 
-The latest continuation closes the FULL integer-ring coordinate bridge
-for EVERY imaginary quadratic field, including positive squarefree d,
-the exact half-integral branch, and equality of coordinate, algebraic and
-complex squared norms. It transfers the rationality of common extensions
-of {1,3} to all these full rings. The complete `lem:irregular-growth`,
-C>2AB, and the more precise `eq:irregular-quadratic` are now proved.
-See `records/full-ring-bridge.md`, `records/irregular-growth-proof.md`,
-and `records/continuation-checks-015.log`.
+## Checks actually completed
 
-## Completion gates
+- All new modules compiled, actual targeted build exit 0.
+- Integrated build passed, 2971 dependency jobs, not a theorem count.
+- Source-policy and root-import coverage passed: 79 theorems / 23 modules.
+- Whole-branch transitive axiom audit passed: 133 project declarations,
+  only propext, Classical.choice and Quot.sound.
+- All FOUR NEW MODULES returned successfully from kernel replay, using
+  the byte-identical replayFromImports function from installed Lean 4.33.1.
+  The sequential run also replayed five unchanged base modules.
 
-- Current local build, source audit and root import coverage: PASS.
-- Current transitive axiom audit: PASS, 117 declarations.
-- Kernel replay: PASS for all nineteen modules, exit 0.
-- The previous 40-theorem source commit 49dda62363d663bce06709c9a4b99185901cc158
-  passed a clean GitHub-checkout build and all audits. A new clean checkout
-  of this 70-theorem continuation has not yet been run.
-- Independent external statement review: not performed.
-- Main theorem, tail-irregularity, determinant/interpolation/approximation
-  bounds, Bennett all-orders identity and complete finite exclusions: OPEN.
-- Prove2Me mission/server acceptance: not started.
+The original all-at-once checker was stopped by this owner, exit 143.
+The sequential run was then stopped during an optional repeat of the
+unchanged FullRingBasis, after all new modules had passed. Its overall exit
+was also 143. No complete 23-module exit-0 replay is claimed for this turn.
+The base had already passed its own replay at 18af1df; its mathematical
+sources and pinned dependencies are unchanged. See exact scope and logs in
+records/tail-analytic-checks.md and tail-analytic-replay-receipt.json.
+No verification process from this continuation is intentionally left running.
 
-## Current exploration and next action
+## Continuation
 
-`exploration/SquareTest.lean` and `exploration/DiskEnumeration.lean` contain
-new executable arithmetic procedures and attempted completeness proofs.
-They are currently being compiled separately, not counted as accepted.
-`exploration/FiniteTail.lean` prepares the finite small-tail soundness and
-discriminant reduction; it is not compiled or accepted yet.
-First finish and audit the square-test and disk procedures, then prototype
-the exact small-tail certificate from the proved enumeration. Do not redo
-the full-ring bridge or irregular growth.
+The finite 3<=B<=C<4 branch is being developed separately in the main
+worktree /Users/tp/Lean/D1Bound5. Its live source and root imports were not
+changed here. A new handoff is saved there under
+records/tail-analytic-handoff-20261015T1829.md. Reconcile the four new analytic
+modules without reverting newer main work, then join the two tail branches.
+The highest-level new declaration is
+D1Bound5.IsD1Tuple.tail_irregular_and_growth_of_four_le.
+The mathematical proof and exact statement self-review are in records.
+The next-even-determinant note is a proposal, NOT a proved Lean result.
 
-## Environment, preservation and recovery
+The main cardinality theorem remains only a proposition specification.
+Further determinant, interpolation, simultaneous approximation, all-orders
+Bennett identity and complete finite graph/Pell exclusions remain open.
+No independent external statement review or new clean checkout of the
+79-theorem branch was performed. Earlier clean-checkout receipts retain
+only their historical scope.
 
-Lean 4.33.1 and mathlib 0df444a360eaa60ab8c11dca51a86af692955474 are pinned.
-Python 3.12.15 is user-local; all six frozen v4 Python checks already passed.
-Those checks are supporting evidence, not Lean proofs. The historical
-radius-10^550 graphs were not rerun. No manuscript, handoff, previous
-Freiman project, public release, paid service or Prove2Me mission was altered.
-The GitHub repository tomislav-math/d1-bound5-lean remains PRIVATE.
-
-Read `records/build-record.md`, `records/paper-to-lean.md` and
-`records/open-obligations.md`, then the current sources. Run the project's
-checks using the pinned local lake. Preserve all newer work and avoid
-concurrent heavy compilers on this 8 GiB Mac. The main target remains only
-a proposition specification in `Specification.lean`, not a proved theorem.
+Lean 4.33.1 and mathlib 0df444a360eaa60ab8c11dca51a86af692955474 remain pinned.
+Previously passed v4 Python checks were not rerun. The frozen manuscript
+hash is unchanged. No handoff, Freiman project, public release or paid
+service was modified. No Prove2Me mission was opened. Repository is private.
