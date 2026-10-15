@@ -93,3 +93,34 @@ no size restriction or nonzero-square-root condition on z.
 This is a same-assistant back-translation of actually elaborated Lean
 types. No independent external statement audit is claimed. MainStatement
 is still a definition of the bound-five proposition, not its proof.
+
+
+## Direct recovery statement audit, 2026-10-15
+
+The elaborated `IsD1Tuple.tail_irregular_and_growth` has exactly these
+mathematical hypotheses: a quadratic totally complex number field, a
+complex embedding, an actual D(1) quadruple in its full integer ring,
+weakly ordered complex moduli, and second modulus at least three.
+Its conclusion is irregularity of the last triple and D>2BC. No C>=4,
+finite-check correctness, enumeration coverage, or extra ring-model
+hypothesis remains. Zero roots and modulus ties are not excluded.
+
+`even_root_matrix_det_ne_zero` quantifies over all quadratic number fields
+and even finite index types. Its hypotheses are the diagonal entries and
+off-diagonal square equations themselves. No domain assertion about the
+characteristic-two reduction is assumed. Only its modulus corollary needs
+the totally complex hypothesis. This is NOT Bennett's determinant formula.
+
+An inherited auxiliary packaging limitation was also noticed:
+`full_ring_negative_integer_square` concludes existence of a positive
+squarefree d and m=-d*n^2, but its TYPE does not retain the equivalence that
+identifies this d with the field parameter, despite the proof choosing it
+that way. Do not use this declaration alone as a fixed-field or uniform-d
+classification. The coordinate trace-zero/trace-one lemmas plus the proved
+full-ring classification supply the proper data; a future uniform wrapper
+should return those data explicitly. Neither of this continuation's two
+main results depends on that weaker packaged negative-square statement.
+This limitation is not a mathematical contradiction or an unproved axiom.
+
+This was an in-chat self-audit of actual sources and elaborated types,
+not an independent agent/referee review or an independent kernel check.

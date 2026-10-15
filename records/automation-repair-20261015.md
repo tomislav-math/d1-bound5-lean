@@ -17,3 +17,12 @@ Successful prompt update is not evidence that the underlying platform
 failure is repaired or that a future run has executed. This direct in-chat
 recovery invocation separately confirmed actual Mac access and performed
 new compiled Lean proof development. See the dated run and build records.
+
+
+Subsequent corroboration during the direct recovery: a distinct scheduled
+continuation wrote records/runs/20261015T221745+0200-hourly2-START.md and
+its PROGRESS record, created DeterminantNormalization.lean, and launched a
+real Lean verification command. Its new source and live compiler were
+observed. This confirms a new substantive invocation, not merely an enabled
+flag. It does not identify the original platform failure cause or guarantee
+all future executions. Its own completion status belongs to its receipts.

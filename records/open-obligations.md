@@ -69,3 +69,13 @@ No independent reviewer or paid agent was used in this session.
 Prove2Me is deferred until local completion; no mission has been opened.
 The v4 proof does not use He-Togbe-Ziegler, and that dependency has not been
 introduced into the Lean project.
+
+
+### Auxiliary statement packaging
+
+Before using `full_ring_negative_integer_square` as a fixed-field
+classification, strengthen its conclusion to retain the ring equivalence
+and a single field parameter d uniformly over the negative integers.
+The existing conclusion forgets that identification. Its coordinate
+lemmas are available; the complete tail and even determinant do not use
+the weaker wrapper. See the latest statement-review entry.

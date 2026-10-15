@@ -7,7 +7,7 @@ Lean `leanprover/lean4:v4.33.1`, executable commit
 Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`.
 Mac arm64. `lake-manifest.json` pins all dependencies.
 
-## Current 40-theorem milestone
+## Historical 40-theorem milestone
 
 `proof-source-sha256.txt` fixes all eleven modules and the build configuration.
 The exact theorem inventory is in `paper-to-lean.md`.
@@ -145,3 +145,51 @@ statements. Most new statements are finite certificate helpers. The exact
 source/configuration hashes are recorded in recovery-source-sha256.txt.
 The original manuscript hash remained unchanged. No independent referee,
 new clean checkout, paid service or Prove2Me mission has been used.
+
+
+### Completed integrated validation of source 62292f0
+
+Command (from the main working copy):
+
+    PATH=/Users/tp/.elan/bin:$PATH LEAN_NUM_THREADS=1 PYTHON=/Users/tp/.local/bin/python3.12 bash scripts/check.sh
+
+EXIT 0. Integrated build: 2985 jobs including dependency jobs. Source/import
+coverage: 37 modules, 209 explicit theorems. Transitive axiom audit: 420
+project declarations, only propext, Classical.choice, Quot.sound.
+Exact successful output: recovery-build-axioms-20261015.log.
+Two harmless style/linter warnings in EvenDeterminant remain; no compile
+or audit errors remain in this accepted run.
+
+The subsequent command `lake env lean --run scripts/SequentialReplay.lean`
+with the TEN explicit modules in recovery-kernel-20261015.json completed
+with EXIT 0 and ten REPLAY_PASS receipts. See recovery-kernel-20261015.log.
+The replay function is byte-identical to replayFromImports in the installed
+Lean 4.33.1 LeanChecker.lean. Only its scheduling/selection driver differs.
+This uses the same Lean kernel and trusts imports. No independent kernel,
+whole-project fresh replay, or new clean checkout is claimed.
+
+The first private push of source 62292f0 was rejected because main had
+received commits 26b4cd0 and 80bbb69 independently. Inspection showed those
+commits touched only paper/, verification/, and README.md. They were merged
+unaltered into a91af24, which was pushed successfully. All Lean source and
+configuration hashes still match 62292f0. No force push was used.
+
+The frozen original manuscript SHA256 remains
+776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3.
+Source and verifier fingerprints are in proof-source-sha256.txt and
+verification-tools-sha256.txt. Python's generator reproduces the explicit
+source lists, but neither its successful execution nor any file hash is
+used as mathematical proof.
+
+
+### Later concurrent hourly continuation
+
+After all ten targeted replays finished successfully, the final working-tree
+hash check detected one mismatch: D1Bound5.lean had gained an import of the
+new DeterminantNormalization module from the independent hourly invocation.
+No checked individual proof module or build configuration had changed.
+Every manifest entry was verified against the actual 62292f0 Git source;
+each current individual checked module was also verified unchanged. The
+new module/import was preserved and was NOT counted in the 209-theorem,
+420-declaration or ten-module replay results. Its own records govern its
+acceptance. This is a later continuation, not a failure of the saved proofs.
