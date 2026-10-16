@@ -529,3 +529,54 @@ No final root theorem, clean-checkout verification, independent reviewer or full
 - `python3.12 scripts/source_audit.py`: EXIT 0, 66 imported modules, 328 explicit theorem declarations; `local-logs/mixed-growth-hourly17-source-audit.log`.
 - Both `shasum -a 256 -c` checks EXIT 0 after refreshing enumerations (69 source/toolchain, 28 verification tools), logs `local-logs/mixed-growth-hourly17-source-hashes.log`, `-tool-hashes.log`.
 - Same-kernel targeted replay is not independent review; no clean checkout or whole-project replay. No mathematical axiom, sorry, admit, native evaluation or manuscript modifications.
+
+## 2026-10-16 19:15–19:40 CEST — product-five rank-two Schur determinant
+
+- Single Mac worktree `main`, starting local HEAD `feb2b68`; original staged 30-file set and unrelated unstaged run notes were preserved. No project Lean compiler was active at start.
+- Isolated `lake env lean exploration/RankTwoDetTrial.lean`: final EXIT 0, `local-logs/rank-two-det-run18-07.log`; earlier trial 03 EXIT 1 due missing `noncomputable` on division-bearing definition, repaired; all other later trials EXIT 0.
+- Source byte-identical to `D1Bound5/ProductFiveRankTwo.lean`; SHA256 `0cec92c96e51a0a3fbd94ad6a62d3e917e83332e75de37d2fd74599e197b4902`.
+- `/Users/tp/.elan/bin/lake build D1Bound5.ProductFiveRankTwo D1Bound5`: EXIT 0, 3030 jobs, `local-logs/product-five-rank-two-hourly18-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/ProductFiveRankTwoAudit.lean`: EXIT 0, nine exact elaborated theorem types and transitive axioms only `propext`, `Classical.choice`, `Quot.sound`; `local-logs/product-five-rank-two-hourly18-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ProductFiveRankTwo`: EXIT 0, targeted installed same-kernel replay, `local-logs/product-five-rank-two-hourly18-replay.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, 67 root-imported modules and 337 explicit proved theorems, `local-logs/product-five-rank-two-hourly18-source-audit.log`.
+- `shasum -a 256 -c records/proof-source-sha256.txt`: EXIT 0, 70 paths; corresponding verification-tools check: EXIT 0, 29 paths. Logs `local-logs/product-five-rank-two-hourly18-source-hashes.log`, `-tool-hashes.log`.
+- All proofs have explicit nonzero/invertibility hypotheses. No `sorry`, custom mathematical axioms, native reflection, paid CI, independent external reviewer, clean checkout or whole-project kernel replay. The main bound-five theorem remains UNPROVED.
+
+2026-10-16 20:12–20:30 CEST, target-only `ProductFiveMatrixBridge`: isolated elaboration EXIT 0 (`local-logs/product-five-matrix-hourly19-trial05.log`); `lake build D1Bound5.ProductFiveMatrixBridge` EXIT 0, 2910 jobs (`-build.log`); axiom/type audit EXIT 0 (3 declarations, only propext/Classical.choice/Quot.sound, `-axioms.log`); installed same-kernel `leanchecker --verbose` EXIT 0 (`-replay.log`). Source/import audit EXIT 1 precisely on unimported ProductFiveBlockDet and ProductFiveMatrixBridge (`-source-audit.log`). No root build/full replay/clean checkout. SHA256 new module 8ea3704fb4c1308113f0fd79cdba0ca29b02390fb0ce0be51946ee093a9ecedc.
+
+## Product-five arithmetic closure — 2026-10-16, hourly21
+
+New source: `D1Bound5/ProductFiveArithmeticClosure.lean`, four proved theorem declarations and one definitional Schur matrix. Source was developed in `exploration/ProductFiveArithmeticTrial.lean`. Pinned Lean 4.33.1 and pinned mathlib were not changed. Isolated trial01 EXIT 1 (rewriting the determinant map and an ordered multiplication lemma); corrected trial02 EXIT 0; extended four-theorem trial03 EXIT 0.
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ProductFiveArithmeticClosure D1Bound5`: EXIT 0, 3034 jobs. Log `local-logs/product-five-arithmetic-hourly21-build.log`.
+- `lake env lean scripts/ProductFiveArithmeticClosureAudit.lean`: EXIT 0. Four exact elaborated theorem types printed. Transitive axioms limited to `propext`, `Classical.choice`, `Quot.sound`. Log `local-logs/product-five-arithmetic-hourly21-axioms.log`.
+- `lake env leanchecker --verbose D1Bound5.ProductFiveArithmeticClosure`: EXIT 0; targeted installed same-kernel replay. Log `local-logs/product-five-arithmetic-hourly21-replay.log`.
+- `python3.12 scripts/source_audit.py`: EXIT 0; 71 root-imported modules, 349 explicit proved theorems. Log `local-logs/product-five-arithmetic-hourly21-source-audit.log`.
+- Regenerated enumerated source and verification-tool SHA-256 manifests, 74 and 33 paths. `shasum -a 256 -c` on both: EXIT 0, logs `local-logs/product-five-arithmetic-hourly21-source-hashes.log`, `-tool-hashes.log`.
+
+This proves the full-ring arithmetic endpoint from Schur bounds and determinant nonvanishing from reference proximity, not the unconditional `lem:product-five`. There is no fresh clean checkout, independent proof referee or whole-project kernel replay. See `records/product-five-arithmetic-20261016.md` and run START/PROGRESS/FINISH records. Git receipt is separate and must refer to an actually verified commit/push.
+
+## 2026-10-16 21:56–22:09 CEST — product-five numeric rank-two margin
+
+- Isolated trial01 EXIT 1: redundant `ring` after `field_simp`, unavailable `norm_ofNat`; both repaired. Trial02 EXIT 0, log `local-logs/product-five-numeric-hourly22-trial02.log`.
+- Byte-identical source `D1Bound5/ProductFiveDetNumeric.lean` SHA256 8332341e11d4117d48af2f4f0ac1c61b87c0fa8ae2cf858eab23c5eb17b658fa.
+- `LEAN_NUM_THREADS=1 lake build D1Bound5.ProductFiveDetNumeric D1Bound5`: EXIT 0, 3035 jobs, `local-logs/product-five-numeric-hourly22-build.log`.
+- `lake env lean scripts/ProductFiveDetNumericAudit.lean`: EXIT 0, two exact types/axioms only propext, Classical.choice, Quot.sound; log `local-logs/product-five-numeric-hourly22-axioms.log`.
+- `lake env leanchecker --verbose D1Bound5.ProductFiveDetNumeric`: EXIT 0, targeted installed same-kernel replay, log `local-logs/product-five-numeric-hourly22-replay.log`.
+- `python3.12 scripts/source_audit.py`: EXIT 0, 72 root-imported modules, 351 explicit proved declarations; log `local-logs/product-five-numeric-hourly22-source-audit.log`.
+- Both `shasum -a 256 -c` checks EXIT 0 on refreshed 75-source and 34-audit manifests, `local-logs/product-five-numeric-hourly22-{source,tool}-hashes.log`.
+- No independent review, fresh clean checkout or whole-root kernel replay. No trust shortcuts, pins or manuscript changes.
+
+Additional closure check at 22:13 CEST: `LEAN_NUM_THREADS=1 lake env leanchecker --verbose D1Bound5.ProductFiveExactIdentity` EXIT 0, targeted same-kernel replay of the previously root-built three-theorem identity; log `local-logs/product-five-exact-hourly22-replay.log`. This is not independent review.
+
+## 2026-10-16 22:17–22:34 CEST — sharp prefix determinant for product-five
+
+- Main worktree `main`, initial HEAD `d7e8e68`, no project-owned compiler initially. One compiler/checker at a time; original staged/untracked changes preserved.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/ProductFivePrefixDetTrial.lean`: trial01 EXIT 1 (omitted fourth matrix row; repaired); trial02 EXIT 0, two unused-simp linter warnings only. `local-logs/product-five-prefix-hourly23-trial{01,02}.log`.
+- Byte-identical integrated source SHA256 `f9937f549ad5792258cef7e7ac08638bae75b2a7351c4bdd51aa581d8bdd481f` in `D1Bound5/ProductFivePrefixDet.lean`; one root import added.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ProductFivePrefixDet D1Bound5`: EXIT 0, 3036 jobs, log `local-logs/product-five-prefix-hourly23-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/ProductFivePrefixDetAudit.lean`: EXIT 0, all four elaborated declarations with transitive axioms restricted to `propext`, `Classical.choice`, `Quot.sound`; `local-logs/product-five-prefix-hourly23-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ProductFivePrefixDet`: EXIT 0, installed SAME-kernel targeted replay; `local-logs/product-five-prefix-hourly23-replay.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, 73 root modules and 355 explicit proved theorems; `local-logs/product-five-prefix-hourly23-source-audit.log`.
+- `shasum -a 256 -c` on refreshed `records/proof-source-sha256.txt` and `records/verification-tools-sha256.txt`: BOTH EXIT 0 (76 and 35 paths); `local-logs/product-five-prefix-hourly23-{source,tool}-hashes.log`.
+- No native-evaluation trust, `sorry`, `admit`, custom axioms, pin change, independent external reviewer or clean-checkout/whole-project replay. The product-five lemma and bound-five main theorem are not yet closed.

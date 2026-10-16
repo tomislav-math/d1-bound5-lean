@@ -3,6 +3,30 @@
 The main theorem is UNPROVED in Lean. None of the items below is assumed
 as a custom axiom or silently supplied as a hypothesis of a claimed proof.
 
+## Product-five arithmetic closure (16 October 2026, evening)
+
+The root-imported `ProductFiveArithmeticClosure.lean` proves, for every
+imaginary quadratic FULL ring of integers and any symmetric five-entry
+integral root matrix, that the following TWO quantitative hypotheses on
+the actual complex normalized Schur complement G suffice for product-five:
+
+* `‖G - halfOffDiagonal‖₂ < 1/2`;
+* `‖G.det‖ < 1/3`.
+
+The first proves `G.det ≠ 0`; the exact determinant identity gives
+`M.det ≠ 0`, and the full-ring integer norm bound gives
+`3 * ∏_{i<4} |t_i| < |t_4|`. This is proved, root-built and axiom-audited
+without assuming nonvanishing of `M.det`. Both quantitative estimates
+are STILL OPEN for the original arbitrary ordered quintuple; the
+corresponding signed-root construction and tuple-interface wrapper also
+remain to be completed. No part of this conditional result is counted
+as the entire `lem:product-five`.
+
+The exact normalized five-entry determinant bridge is root-integrated.
+The arbitrary-order Bennett identity, analytic interpolation/remainder
+estimates, finite checker soundness/coverage/descent, and final sextuple
+exclusions remain open. Older comments below may predate these modules.
+
 ## Current analytic status (16 October 2026, 17:30 CEST)
 
 The mixed first-row/lower-block symmetric zero-diagonal matrix now has both
@@ -184,3 +208,23 @@ OPEN: Prove `‖F.adjugate‖ < (155/96)*(59/96)^2` for that SAME mixed normaliz
 CLOSED (formal theorem, kernel replayed): `IsD1Tuple.productFour_mixed_growth`, the full-ring A>=1, B>=3 bound D>(3/2)ABC. This closes the remaining mixed case, alongside the already proved A>=3 branch. It is unconditional on any auxiliary signed matrix or tail-growth witness beyond `IsD1Tuple` and the stated norm lower bounds. See `records/mixed-product-four-growth-20261016.md`.
 
 OPEN: product-five, full arbitrary-order Bennett determinant identity, checker soundness/exhaustive coverage and descent termination for the large finite computations, the three sextuple exclusions and final complete `MainStatement` proof. Final clean checkout, independent statement review, global axiom audit and whole-root kernel replay are not yet done.
+
+## Product-five rank-two determinant bridge — 2026-10-16
+
+CLOSED: The exact complex rank-two determinant polynomial of (integrated-3), including the Schur-complement entry identification, and the reduction from two distinct bilinear cross terms to one under `F.transpose = F`. The new root-imported `productFiveSchur_det` assumes only `F.det != 0`, `d != 0` and symmetry. All nine new theorems passed the pinned build, transitive axiom audit and targeted same-kernel replay. This is a genuine matrix-algebra step, NOT the full product-five lemma.
+
+NEXT: Prove `det N = d^2 det G` from the actual five-entry scaled root matrix and its block decomposition. Then formalize the quantitative bounds `|det F|<33/128`, `||F^{-1} f||<11/12`, `|h|<11C/6`, `|p|<1`, `|q|<32C^2/3`, `|det G|<1/3` and `||G-F0||<1/2` with their exact ordering assumptions. Use the even integral determinant lower bound to prove `D>3ABSC`. The full Bennett arbitrary-order identity, large finite certificates and final sextuple exclusions remain OPEN. No clean checkout or independent statement audit for the final theorem yet.
+
+### Product-five exact five-entry matrix bridge (2026-10-16 20:30 CEST)
+
+The canonical Fin5-to-(Fin4⊕Fin1) determinant normalization is proved in a targeted compiled and kernel-replayed module (`ProductFiveMatrixBridge.lean`). It is not root imported (blocked write); reconnect the original-ring D(1) tuple, derive analytic numerical bounds and the inequality `D>3ABSC`. Do not count this isolated module in root-import coverage until fixed.
+
+## 2026-10-16 — product-five scalar determinant margin CLOSED
+
+The two root-integrated, audited and same-kernel-replayed theorems in `ProductFiveDetNumeric.lean` convert exactly five quantitative bounds on `det F`, `h/d`, `p`, `q/d²`, `p/d²` to `|det G|<1/3`. Exact rational margin is 5849/497664. Remaining OPEN: derive these bounds for the actual chosen symmetric original-ring root matrix, including `|det F|<33/128` (existing mixed estimate `<3/10` is insufficient), prefix inverse and last-column estimates; prove `||G-H||<1/2`; apply the already proved full-ring arithmetic growth endpoint to the ordered tuple. Bennett arbitrary-order, finite-completeness/descent, and global bound five remain OPEN.
+
+## 2026-10-16 — product-five sharp prefix determinant CLOSED
+
+`mixed_zero_four_det_norm_lt_33_128` in `D1Bound5/ProductFivePrefixDet.lean` proves `|det F|<33/128` for every symmetric zero-diagonal 4x4 complex matrix with mixed first-row (`<1/18`) and other off-diagonal (`<1/64`) entry perturbations about `1/2`. The exact determinant polynomial is controlled by `3/16 + 3*(7/192)/2 + 9*(7/192)^2 = 1041/4096`, with margin `15/4096`. Root build, transitive axiom audit, targeted same-kernel replay and source/import audit all passed. The result requires no invertibility.
+
+NEXT: Construct compatible signs for the full five-entry original-ring root matrix (not merely its four-entry prefix), transfer the prefix determinant estimate, and establish the normalized last-column errors, `F^{-1}f` estimate and Schur norm control. Close the five scalar bounds of `ProductFiveDetNumeric` and `||G-halfOffDiagonal||<1/2` to obtain the tuple-level product-five inequality. Arbitrary-order Bennett identity, finite-checker correctness/coverage/descent and global sextuple exclusions are separate OPEN obligations.

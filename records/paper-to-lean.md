@@ -404,3 +404,36 @@ normalization must be integrated with the precise hypotheses.
 ## Mixed product-four complete growth (2026-10-16)
 
 `D1Bound5/MixedProductFourGrowth.lean` closes the paper's second product-four branch using six new theorems: `mixed_four_det_ne_zero_of_entry_bounds`, `productFour_mixed_numeric`, `productFour_mixed_rankOne_numeric`, `productFour_mixed_growth_from_bounds`, `full_ring_productFour_mixed_growth`, `IsD1Tuple.productFour_mixed_growth`. The final declaration assumes only `IsD1Tuple`, ordered moduli, A>=1 and B>=3, and proves D>(3/2)ABC over every imaginary quadratic full ring. Zero radicands and tied moduli included. All six exact elaborated types and axioms audited (standard axioms only), integrated build 3029 jobs EXIT 0, targeted kernel replay EXIT 0, source audit 66 modules/328 theorems EXIT 0. See the dedicated proof record. The bound-five main theorem is still an unproved proposition.
+
+## 16 October 2026 — product-five determinant polynomial
+
+| Declaration | Source / purpose |
+|---|---|
+| `rankTwo_det_factor`, `rankTwo_det_entries` | Weinstein-Aronszajn reduction from a four-by-four rank-two update to an explicit two-by-two determinant |
+| `productFive_update_entry`, `productFive_compressed_entry` | Complete entries of the low-rank Schur update and its compressed two-by-two correction |
+| `productFive_rankTwo_det_general` | Exact nonsymmetric complex bilinear rank-two determinant polynomial, retaining both mixed products |
+| `symmetric_inverse_bilinear_swap` | Algebraic inverse-transpose symmetry, with no complex conjugation |
+| `productFive_rankTwo_det_symmetric` | Manuscript symmetric rank-two determinant expression |
+| `productFiveSchur_eq`, `productFiveSchur_det` | Pointwise Schur complement and exact determinant identity in (integrated-3) |
+
+Nine new proved theorems in `D1Bound5/ProductFiveRankTwo.lean`, root-integrated: 67 modules and 337 explicit theorems after a passing source audit. Target+root build, nine-theorem transitive axiom audit and targeted same-kernel replay all EXIT 0. This proves the rank-two determinant formula but NOT the product-five growth inequality. Next establish `det N=d^2 det G` in the original arithmetic matrix and its analytic/numerical bounds; Bennett's all-order identity remains separate.
+
+2026-10-16 product-five equation (integrated-3): `ProductFiveBlockDet.lean` gives scalar block det, `ProductFiveMatrixBridge.lean` now proves the actual Fin 5 index conversion and complex normalized-root determinant `(∏ t_i) det M=d² det G`. Three theorems compiled and kernel-replayed, but these two modules are not imported by root due blocked edits. Full-ring transfer and product-five growth remain open.
+
+2026-10-16 subsequent integration: `ProductFiveBlockDet`, `ProductFiveMatrixBridge`, and `ProductFiveExactIdentity` are now imported by the root along with `ProductFiveArithmeticClosure`. This supersedes the older unimported-status note above. The integrated pinned root build passed with 3034 jobs.
+
+| `fiveNormalizedSchur` | Actual Fin 5 normalized-root four-by-four Schur matrix, with no new mathematical hypothesis |
+| `five_root_det_ne_zero_of_schur` | `lem:product-five`, det G nonzero implies det M nonzero via the exact Fin 5 determinant identity |
+| `five_schur_det_ne_zero_of_near` | `lem:product-five`, operator-norm proximity <1/2 to the reference H forces det G nonzero |
+| `full_ring_productFive_arithmetic_growth` | Full imaginary-quadratic integer-ring determinant comparison from det G nonzero and norm det G<1/3 |
+| `full_ring_productFive_growth_of_schur_estimates` | Full arithmetic growth `3ABSC<D` conditional ONLY on the two explicit Schur estimates and original-ring matrix/root inputs; analytic hypotheses still open |
+
+New arithmetic module: four proved theorems, integrated build PASS, exact-type/axiom audit PASS, targeted same-kernel replay PASS. Project-wide source/import audit PASS, 71 modules and 349 explicit proved theorems. The complete product-five lemma and MainStatement are still UNPROVED.
+
+## Product-five quantitative Schur determinant (2026-10-16)
+
+`D1Bound5/ProductFiveDetNumeric.lean` realizes the exact numeric last step of v4 Lemma `lem:product-five`, equation `integrated-3`, with the original non-Hermitian rank-two formula: `productFive_scalar_det_upper` and `productFive_schur_det_upper_of_bilinear_bounds`. Root-integrated and targeted-replayed. Its quantitative hypotheses are explicit and NOT yet discharged for actual five-tuples. Next derive prefix bound 33/128, inverse/f-vector estimates and dimensionless bilinear bounds, then non-singularity via Schur proximity.
+
+## `lem:product-five` — sharp prefix determinant, 2026-10-16
+
+`D1Bound5/ProductFivePrefixDet.lean` contains four root-imported proofs and the dedicated audit `scripts/ProductFivePrefixDetAudit.lean`. From the paper's exact four-by-four symmetric determinant formula and three complementary pair products within `7/192` of `1/4`, it proves the stronger `|det F|<33/128`. The previously proved `<3/10` bound was insufficient for `ProductFiveDetNumeric`. This is a verified analytic sublemma conditional on the six signed-entry bounds, not a formal proof of the full `lem:product-five`. Target/root build, axiom audit, targeted Lean-kernel replay and source/import audit PASS; remaining five-tuple sign compatibility, inverse/last-column controls, Schur closeness and tuple assembly OPEN.

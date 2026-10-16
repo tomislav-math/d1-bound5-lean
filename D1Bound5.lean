@@ -67,3 +67,10 @@ import D1Bound5.MixedAdjugateEnvelope
 import D1Bound5.MixedFourAdjugateBound
 import D1Bound5.MixedSignedRootAdjugate
 import D1Bound5.MixedProductFourGrowth
+import D1Bound5.ProductFiveRankTwo
+import D1Bound5.ProductFiveBlockDet
+import D1Bound5.ProductFiveMatrixBridge
+import D1Bound5.ProductFiveExactIdentity
+import D1Bound5.ProductFiveArithmeticClosure
+import D1Bound5.ProductFiveDetNumeric
+import D1Bound5.ProductFivePrefixDet

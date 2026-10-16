@@ -2,6 +2,30 @@
 
 2026-10-16. IN PROGRESS. MAIN THEOREM UNPROVED.
 
+## Latest checked unit — sharpened product-five prefix determinant (22:34 CEST)
+
+`D1Bound5/ProductFivePrefixDet.lean` is root-imported and proves four theorems: the sharp coefficient-nine three-pair quadratic remainder, the `<33/128` three-pair determinant bound, its explicit symmetric 4x4 realization, and its universally indexed symmetric zero-diagonal 4x4 version with mixed first-row `<1/18`, lower-block `<1/64` hypotheses. This discharges precisely the prefix determinant estimate needed by `ProductFiveDetNumeric`, at the conditional signed-matrix level. The previous `<3/10` estimate alone was insufficient.
+
+Pinned target/root Lake build EXIT 0 (3036 jobs); exact-type/transitive axiom audit EXIT 0 (four theorems; only propext, Classical.choice, Quot.sound); installed same-kernel targeted `leanchecker` replay EXIT 0; source/import scan EXIT 0 (73 modules, 355 proved declarations); both source and audit manifest checks EXIT 0 (76/35 paths). Logs `local-logs/product-five-prefix-hourly23-*`; mathematical details `records/product-five-prefix-determinant-20261016.md`. No clean-checkout/whole-project replay or independent review.
+
+**Still OPEN:** derive the mixed-entry conditions for a simultaneously signed original-ring five-tuple root matrix, plus the normalized last-column/inverse bounds, `||G-H||₂<1/2` and all assumptions of the `|det G|<1/3` certificate. The complete tuple-level `product-five` growth theorem, arbitrary-order Bennett identity, exhaustive finite verification/descent and final bound-five exclusion remain UNPROVED. The subsequent historical status sections are not all current.
+
+## Latest checked unit — product-five arithmetic endpoint (evening, 16 October)
+
+`D1Bound5/ProductFiveArithmeticClosure.lean` is root-imported and proves four new theorems: the normalized five-by-five block identity and det G != 0 force det M != 0; the four-by-four reference proximity ||G-H||_2 < 1/2 forces det G != 0; and the full-ring integer determinant lower bound combined with ||det G|| < 1/3 gives D > 3ABSC. The final theorem assumes ONLY the two explicit analytic Schur estimates together with a symmetric original-ring matrix, complex coordinate square roots, and d != 0. It does not assume the integral determinant is nonzero. The complex normalization permits zero off-diagonal roots and equal tuple moduli.
+
+Pinned integrated Lake build EXIT 0 (3034 jobs), exact-type/transitive axiom audit EXIT 0 (four declarations; only propext, Classical.choice, Quot.sound), targeted same-kernel leanchecker replay EXIT 0, source/import scan EXIT 0 (71 modules and 349 explicit theorems), source/tool SHA256 manifests EXIT 0 (74/33 paths). See `records/product-five-arithmetic-20261016.md` and `records/runs/20261016T192701Z-hourly21-*`. No independent review or clean-checkout replay.
+
+**Still OPEN:** prove the two analytic estimates ||G-H||_2 < 1/2 and ||det G|| < 1/3 for a suitable signed matrix attached to EVERY actual ordered D(1) quintuple. Then discharge the existing nonzero-last-entry and complex-root construction in the tuple interface. Thus the full product-five lemma is NOT yet proved. Bennett's arbitrary-order determinant identity, finite checker coverage/descent and final sextuple exclusions remain OPEN.
+
+## Latest checked unit — product-five rank-two determinant identity (19:40 CEST)
+
+`D1Bound5/ProductFiveRankTwo.lean` is root-imported and proves the exact four-by-four Schur-complement rank-two determinant polynomial used in manuscript equation `(integrated-3)`. Nine proved theorems establish the arbitrary nonsymmetric bilinear formula, inverse-transpose symmetry and the original symmetric specialization. The hypotheses of the final identity are exactly `det F != 0`, `d != 0` and `F.transpose = F`. No conjugate-transpose assumption is used.
+
+Integrated pinned Lake build EXIT 0 (3030 jobs), transitive axiom audit EXIT 0 (nine declarations, only propext, Classical.choice, Quot.sound), targeted installed same-kernel replay EXIT 0, source/import scan EXIT 0 (67 modules, 337 proved theorems), and hash manifests EXIT 0 (70 source/config paths and 29 tools). No clean-checkout or independent external review. See `records/product-five-rank-two-20261016.md` and `records/runs/20261016T171541Z-hourly18-*`.
+
+**Remaining:** The full product-five inequality `D>3ABSC` remains OPEN: connect `det N = d^2 det G` and prove the analytic size/invertibility bounds and arithmetic lower comparison. The arbitrary-order Bennett identity, full finite-check coverage/descent, final sextuple exclusions and `MainStatement` remain OPEN.
+
 ## Latest checked unit — mixed adjugate and same-sign determinant (17:30 CEST)
 
 Four root-imported modules `MixedAdjugateScalarBound`, `MixedAdjugateEnvelope`, `MixedFourAdjugateBound` and `MixedSignedRootAdjugate` contain 14 new proved theorems. An arbitrary symmetric complex zero-diagonal 4x4 matrix with first-row entry deviations <1/18 and lower-block deviations <1/64 from 1/2 has `‖adj F‖ < (155/96)*(59/96)^2`. The proof discharges all sixteen cofactor cases from two independent-radius scalar identities and a symmetric Schur envelope. The bound requires no invertibility. The same ring-valued signed root matrix and complex roots now simultaneously satisfy `‖det F‖<3/10` and the stated adjugate bound, provided `MixedSignedEntryGood` holds (the existing sign-choice theorem supplies this predicate under the proper pair-product thresholds). Zero squares and modulus ties remain permitted.
@@ -296,3 +320,13 @@ The mixed second branch is now root-integrated as `IsD1Tuple.productFour_mixed_g
 Six new declarations: integrated Lake EXIT 0 (3029 jobs), axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound), targeted same-kernel replay EXIT 0, source/import audit EXIT 0 (66 modules, 328 proved declarations), source/tool hashes 69/28 PASS. Previous A>=3 branch was already proved. No independent external review or fresh clean-checkout replay. Details: `records/mixed-product-four-growth-20261016.md` and hourly17 START/PROGRESS/FINISH records.
 
 `MainStatement` remains UNPROVED. Next: product-five, genuine arbitrary-order Bennett determinant identity, completeness proofs for large finite checks and three sextuple exclusions. Preserve the frozen manuscript and pinned mathlib.
+
+## 2026-10-16 20:30 CEST — isolated product-five Fin 5 normalization
+
+Three new Lean theorems in `D1Bound5/ProductFiveMatrixBridge.lean` prove the exact 5×5 block reindex, `det N=d² det G`, and `(∏ t_i) det M=d² det G` for a symmetric complex root matrix with u_i²=t_i and t_4=d≠0. Target build EXIT 0 (2910 jobs); transitive axiom audit EXIT 0; targeted same-kernel checker replay EXIT 0. Root import was blocked before execution (one recovery also blocked), so source/import coverage presently EXIT 1 for the two unimported product-five modules. This is NOT accepted as root-integrated. Full `product-five`, Bennett, finite exclusions and bound five are UNPROVED. See `records/product-five-matrix-20261016.md`.
+
+## 2026-10-16 22:09 CEST — quantitative product-five Schur determinant
+
+Root-integrated `D1Bound5/ProductFiveDetNumeric.lean` proves the explicit scalar bound and its rank-two Schur specialization: if `|det F|<=33/128`, `|h/d|<=11/108`, `|p|<=1`, `|q/d²|<=8/243`, `|p/d²|<=1/2916`, then `|det G|<1/3`. No Hermitian assumptions or unstated tuple hypotheses. Pinned root+target build EXIT 0 (3035 jobs); transitive-axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound); targeted same-kernel leanchecker EXIT 0; source/import audit EXIT 0 (72 modules, 351 proved declarations); source/tool hashes 75/34 PASS. See `records/product-five-det-numeric-20261016.md`.
+
+The manuscript's stronger prefix `|det F|<33/128`, actual bilinear norm bounds, and `||G-H||<1/2` from an ordered five-tuple still need formal proofs. Thus `lem:product-five`, Bennett all-orders identity, certified finite graph/descent and `MainStatement` remain UNPROVED. No clean checkout or independent review in this run.
