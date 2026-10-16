@@ -33,3 +33,12 @@ import D1Bound5.SmallTailExplicit
 import D1Bound5.SmallTailAllData
 import D1Bound5.TailIrregular
 import D1Bound5.EvenDeterminant
+import D1Bound5.DeterminantNormalization
+
+import D1Bound5.RootErrorMagnitude
+import D1Bound5.RootMatrixSigns
+import D1Bound5.MatrixOperatorNorm
+import D1Bound5.RootMatrixOperatorBound
+import D1Bound5.ReferenceMatrixSpectral
+import D1Bound5.ReferenceInverseNorm
+import D1Bound5.ReferencePerturbation

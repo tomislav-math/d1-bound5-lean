@@ -17,7 +17,12 @@ norms. No bridge assumption is inserted into the final target. See
 in every imaginary quadratic full integer ring. `lem:tail-irregular` is now compiled in full, including its finite C<4
 case and D>2BC for B>=3. The arithmetic nonsingularity assertion for
 even-dimensional root matrices is also compiled, with its integral-modulus
-lower bound. Complete the analytic determinant size and gap bounds,
+lower bound. The four-by-four simultaneous symmetric integral sign
+selection is now proved for all pair products of modulus at least 9,
+including independent complex square-root choices. The A>=3 four-by-four L2 spectral perturbation estimate now follows
+from three kernel-proved permutation-matrix matchings and the uniform
+entrywise error bounds. The mixed-row A>=1,B>=3 sign choice and its
+weighted operator-norm estimate remain open. The reference matrix H=(J_4-I_4)/2 now has a proved explicit inverse, det H=-3/16 and exact adjugate entries. The sharp spectral norm `‖halfOffDiagonalInverse‖=2` and the contraction bound `‖halfOffDiagonalInverse*(F-halfOffDiagonal)‖<1` under the previously proved uniform error hypothesis are now proved. The *perturbative* adjugate/determinant upper bounds and the weighted A>=1,B>=3 branch of lem:product-four remain open. Complete the analytic determinant size and gap bounds,
 interpolation identities and analytic remainder estimates. The extension-product identity is connected to the norm bound and the
 full real endpoint proof; it is no longer the only completed part of
 `lem:irregular-growth`.
@@ -79,3 +84,7 @@ and a single field parameter d uniformly over the negative integers.
 The existing conclusion forgets that identification. Its coordinate
 lemmas are available; the complete tail and even determinant do not use
 the weaker wrapper. See the latest statement-review entry.
+
+## Quantitative matrix perturbation update (16 October 2026)
+
+The four-by-four normalized matrix's nonsingularity and the inverse bound `‖F⁻¹‖<8/3` for `‖F-(J-I)/2‖<1/8` are now proved without extra mathematical axioms. The simultaneous signed-root construction has a formally proved corollary with the same inverse bound when all pair products have modulus at least nine. For `lem:product-four`, the still essential next proof unit is the **upper** bound `|det F|<hs³` and `‖adj F‖<hs²` from the singular-value perturbation estimates, followed by the rank-one determinant estimate and the separately required weighted `A≥1,B≥3` branch. The current inverse estimates alone do not prove either product-four inequality.

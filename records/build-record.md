@@ -193,3 +193,156 @@ each current individual checked module was also verified unchanged. The
 new module/import was preserved and was NOT counted in the 209-theorem,
 420-declaration or ten-module replay results. Its own records govern its
 acceptance. This is a later continuation, not a failure of the saved proofs.
+
+### Determinant normalization (22:17–22:40 Europe/Zagreb, 15 October 2026)
+
+Pinned environment unchanged: Lean 4.33.1, mathlib
+0df444a360eaa60ab8c11dca51a86af692955474.
+
+Observed command results from /Users/tp/Lean/D1Bound5:
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean D1Bound5/DeterminantNormalization.lean`: EXIT 0 after repairing initial elaboration errors.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.DeterminantNormalization`: EXIT 0, 1432 jobs.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: PASS for 38 modules and 216 explicit theorems, root imports covered.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5`: EXIT 0, 2986 jobs.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/DeterminantNormalizationAudit.lean`: EXIT 0, all 11 new declarations audited. Only propext, Classical.choice and Quot.sound.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.DeterminantNormalization`: EXIT 0, exact installed Lean kernel replay of the new module.
+
+Raw outputs are in local-logs/det-normalization-20261015T2217-01.log,
+-02.log, -03-build.log, -source-audit.log, -integrated.log,
+-axioms-02.log and -replay.log. The first module build exited 1
+because of redundant tactics, a product-power rewrite orientation and
+an incorrect linear-combination sign; the patched module compiled.
+The first targeted audit exited 1 due to an invalid doc-comment
+before run_cmd; the corrected audit was rerun with exit 0.
+Neither failed attempt is counted as successful validation.
+
+This newly integrated root was not subjected to a full fresh
+clean-checkout verification or an independent external statement audit.
+The earlier 420-declaration whole-project axiom check and ten-module
+kernel replay apply to the previous 209-theorem baseline. The current
+new module was audited and replayed separately, with all its transitive
+dependencies checked by the installed kernel.
+
+## Root-error magnitude continuation — 15 October 2026
+
+Pinned Lean 4.33.1, mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+
+- `lake env lean exploration/RootErrorMagnitude.lean`: trial 01 failed on a strict-monotone typeclass; repaired trials 02 and 03 exited 0.
+- `python3.12 scripts/source_audit.py`: `SOURCE_AUDIT_PASS`, 39 modules, 221 explicit theorems.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5`: exit 0 (2987 jobs).
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/RootErrorMagnitudeAudit.lean`: exit 0, all five theorem dependencies limited to propext, Classical.choice, Quot.sound.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.RootErrorMagnitude`: exit 0, installed Lean kernel replay of this module.
+
+Raw local logs: `local-logs/root-error-magnitude-trial-01.log` through `-trial-03.log`, `-integrated-01.log`, `-axioms-01.log`, `-replay-01.log`. Earlier determinant normalization has its own separately successful targeted audit and kernel replay. Entire-root replay and clean-checkout verification remain pending.
+
+## Simultaneous symmetric root-matrix signs (15 October 2026)
+
+Proof source: `D1Bound5/RootMatrixSigns.lean`.
+Run START: `records/runs/20261015T211600Z-hourly3-START.md`.
+All commands ran from /Users/tp/Lean/D1Bound5 under pinned Lean 4.33.1
+and mathlib 0df444a360eaa60ab8c11dca51a86af692955474.
+
+The first direct `lake env lean D1Bound5/RootMatrixSigns.lean`
+compiled the signed-pair and matrix-choice lemmas, exit 0. A subsequent
+matrix variant failed because a disequality was incorrectly invoked as
+`h.symm`; repaired with `Ne.symm h`. Direct source compilation then
+exited 0. The final source, including the corollary choosing four complex
+square roots, compiled again with exit 0. Trial logs:
+`local-logs/root-matrix-signs-001.log` through
+`local-logs/root-matrix-signs-004.log`.
+
+Final integrated checks were run sequentially:
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0,
+  40 project modules and 225 explicit theorem declarations.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5`: exit 0,
+  2988 Lake jobs, source root including new module.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/RootMatrixSignsAudit.lean`:
+  exit 0; transitive axioms checked for one definition and four theorems.
+  Exactly propext, Classical.choice, Quot.sound.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.RootMatrixSigns`:
+  exit 0. This is replay by Lean's installed kernel, not an external checker.
+
+Receipts: `local-logs/root-matrix-signs-source-005.log`,
+`root-matrix-signs-build-005.log`, `root-matrix-signs-axiom-005.log`,
+`root-matrix-signs-replay-005.log` in the same directory.
+`records/proof-source-sha256.txt` and
+`records/verification-tools-sha256.txt` were regenerated and
+verified with `shasum -a 256 -c`, exit 0.
+
+No complete fresh whole-root kernel replay, whole-project axiom audit
+or new clean GitHub checkout was performed. Prior accepted milestones
+remain distinct. MainStatement is still a proposition, not a theorem.
+
+## Four-by-four operator norm (16 October 2026)
+
+Pinned Lean 4.33.1; mathlib 0df444a360eaa60ab8c11dca51a86af692955474. Working project: `/Users/tp/Lean/D1Bound5`. No competing project-owned compiler was observed before starting. Existing staged files from prior runs were preserved.
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.MatrixOperatorNorm D1Bound5.RootMatrixOperatorBound`: exit 0, 2903 jobs.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0, 42 modules and 228 explicit theorems, with root-import coverage.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5`: exit 0, 3005 jobs.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/MatrixOperatorBoundAudit.lean`: exit 0, three final exported theorem types inspected; transitive axioms were exactly the permitted set `propext`, `Classical.choice`, `Quot.sound`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.MatrixOperatorNorm`: exit 0.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.RootMatrixOperatorBound`: exit 0.
+
+Raw logs are retained under `local-logs/matrix-operator-{targeted,source,integrated,axioms,replay-norm,replay-root}-20261015T2239.log`. Source code of the two modules was already saved by the preceding interrupted proof unit; this invocation completed their compilation, integration, audit and kernel replay. Whole-root axiom scan, fresh clean checkout and external statement review were not performed. The main theorem is still unproved.
+
+## Exact reference determinant/inverse/adjugate (16 October 2026)
+
+Pinned Lean 4.33.1 and mathlib `0df444a360eaa60ab8c11dca51a86af692955474`. All commands ran in `/Users/tp/Lean/D1Bound5`, with existing staged/unstaged work preserved.
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean D1Bound5/ReferenceMatrixSpectral.lean`: final exit 0, after repairs to finite-conditional simplification and `dotProduct` name.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ReferenceMatrixSpectral D1Bound5`: exit 0 (3006 jobs).
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0, 43 modules and 234 explicit theorem declarations; root import coverage passed.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/ReferenceMatrixSpectralAudit.lean`: final exit 0 after replacing an invalid doc-comment before `run_cmd`; seven declarations audited and inspected, only `propext`, `Classical.choice`, `Quot.sound`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ReferenceMatrixSpectral`: exit 0, exact installed Lean kernel replay of the new module.
+
+The first direct source trials and the first audit failed and were corrected before these passes. No fresh all-module kernel replay, clean GitHub checkout, independent external review or proof of the global main theorem is claimed. The exact mathematics and limits are in `records/reference-matrix-spectral-20261016.md`.
+
+## Exact reference inverse norm (16 October 2026)
+
+Pinned Lean 4.33.1, mathlib `0df444a360eaa60ab8c11dca51a86af692955474`.
+Workspace `/Users/tp/Lean/D1Bound5`. Before modification no project-owned
+Lean compiler or checker was active. Existing staged/unstaged work and the
+separate tail-analytic worktree were preserved.
+
+- `LEAN_NUM_THREADS=1 lake env lean exploration/ReferenceInverseNormTrial.lean`:
+  the upper bound compiled at trial 01, exit 0; an initial lower-bound
+  trial exited 1 due to unreduced matrix-one entries and a misapplied
+  ordered-multiplication lemma; corrected trial 03 exited 0.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ReferenceInverseNorm D1Bound5`:
+  exit 0, 3007 jobs; source includes the root import.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`:
+  exit 0, SOURCE_AUDIT_PASS, 44 modules and 243 explicit theorems.
+- `/Users/tp/.elan/bin/lake env lean scripts/ReferenceInverseNormAudit.lean`:
+  exit 0; transitive axiom dependencies checked on all ten new project
+  declarations and exact principal theorem types inspected; only
+  propext, Classical.choice and Quot.sound were found.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ReferenceInverseNorm`:
+  exit 0, actual replay of the new module by installed Lean kernel.
+
+A first audit command was rejected by the command-access guard with an
+indeterminate safety-status response. A permitted simpler invocation
+succeeded without changing settings or permissions. No unsupported
+replay or source scan is counted as a pass.
+
+The source fingerprint list now includes the new module and updated root;
+it was checked against actual SHA-256 hashes. The audit-tool fingerprint
+list includes the new targeted checker. Mathematical detail:
+`records/reference-inverse-norm-20261016.md`.
+
+No new full-project axiom audit, whole-project kernel replay, clean
+checkout or independent external statement review occurred. The
+main theorem and lem:product-four remain unproved.
+
+## Quantitative nonsingular perturbation and inverse bound — 16 October 2026
+
+Working directory: `/Users/tp/Lean/D1Bound5`. Lean 4.33.1 and mathlib `0df444a360eaa60ab8c11dca51a86af692955474`; no pin changes. The prior Git staging area and older local source changes were preserved; no competing D1 project-owned Lean process was observed before compilation.
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/ReferencePerturbationTrial.lean`: both final trial elaborations exit 0. The initial one contained the determinant proofs; the second also compiled the strict inverse norm and ring-valued sign-selection corollary.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0, `SOURCE_AUDIT_PASS: 45 modules, 247 explicit theorems`, including root import coverage.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ReferencePerturbation D1Bound5`: exit 0, build completed successfully (3008 jobs).
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/ReferencePerturbationAudit.lean`: exit 0, the elaborated types and all four new transitive axiom dependencies checked; only `propext`, `Classical.choice`, `Quot.sound`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ReferencePerturbation`: exit 0, targeted replay using Lean's installed kernel (not an independent checker).
+
+Audit and replay raw logs: `local-logs/reference-perturbation-axioms-20261016.log` and `local-logs/reference-perturbation-replay-20261016.log`. The direct build and source-audit receipts were observed in the remote command output, not falsely described as stored raw files. No full root kernel replay, fresh clean checkout or independent external statement audit was performed. The original manuscript is unchanged, the main theorem remains unproved, and no Prove2Me mission was opened.

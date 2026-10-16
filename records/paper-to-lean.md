@@ -138,3 +138,114 @@ untrusted; Lean separately proves its output's coverage and consequences.
 Most added theorem declarations are finite certificate components, not
 independent large mathematical results. Bennett's all-orders identity,
 analytic determinant size estimates and the main theorem remain OPEN.
+
+## Determinant normalization continuation (15 October 2026)
+
+All declarations below are in `D1Bound5/DeterminantNormalization.lean`
+and are compiled, with targeted axiom audit and kernel replay passing.
+
+| Declaration | Manuscript role |
+|---|---|
+| `scaledRootMatrix`, `normalizedRootError` | Polynomial definitions of N and F in (integrated-1) |
+| `scaledRootMatrix_det` | Determinant of diag(u) M diag(u) in arbitrary finite dimension |
+| `root_error_quadratic`, `normalizedRootError_relation` | Denominator-free form of (integrated-2), all commutative rings |
+| `normalizedRootError_diag` | F has zero diagonal even if entries vanish |
+| `scaledRootMatrix_eq_rankOne_add_error` | N = aa^T + F |
+| `normalizedRootError_det` | det N = (prod a_i) det M |
+| `root_error_sub_half` | Complex identity F_ij-1/2=-F_ij^2/(2a_i a_j) for nonzero pair product |
+
+Seven explicit theorems, two named definitions. The transitive audit
+covered all eleven generated/name-prefixed declarations in the module.
+The analytic inequalities needed to derive lem:product-four are still open.
+
+## Root-error magnitude continuation (15 October 2026)
+
+Five compiled, axiom-audited and kernel-replayed theorems in `D1Bound5/RootErrorMagnitude.lean`.
+
+| Declaration | Role |
+|---|---|
+| `exists_root_error_control` | General branch/sign selection and near-half correction for complex roots |
+| `exists_small_root_error` | Bounds 16/31 and 128/8649 for pair-product modulus at least 9 |
+| `exists_small_normalized_root_error` | Transport to scaled integral-root products |
+| `exists_root_error_three` | First-row constants 5/9, 25/486 at modulus at least 3 |
+| `exists_root_error_twelve` | Later-row bounds 7/13, 1/64 at modulus at least 12 |
+
+Pointwise sign choices are proved here. Their simultaneous symmetric matrix assembly is proved in the subsequent RootMatrixSigns module. Spectral and determinant upper bounds remain open.
+
+## Simultaneous symmetric four-by-four signs (15 October 2026)
+
+Four new compiled theorems and one definition in `D1Bound5/RootMatrixSigns.lean`,
+covered by targeted axiom audit and module-specific Lean kernel replay.
+
+| Declaration | Manuscript role |
+|---|---|
+| `SignedEntryGood` | Precise pair of complex error inequalities for a signed off-diagonal ring root |
+| `signed_entry_good_or_neg` | At least one of the two integral signs satisfies both inequalities |
+| `signed_entry_good_swap` | Interchanging endpoints does not change normalized errors |
+| `exists_good_symmetric_root_matrix` | Simultaneous symmetric choices of six integral off-diagonal signs given four complex diagonal roots |
+| `exists_good_symmetric_root_matrix_with_roots` | Chooses the four complex roots as well; retains symmetric ring-valued entries and the two uniform constants |
+
+This covers the `A>=3` sign-normalization step in `lem:product-four`
+when every pair product has complex modulus at least 9. The mixed-row
+`A>=1, B>=3` normalization and spectral/adjugate determinant estimates
+are still open. The final bound-five theorem is not proved.
+
+## Exact reference determinant and cofactors (16 October 2026)
+
+The new module `D1Bound5/ReferenceMatrixSpectral.lean` has six proved theorems and one definition. They are compiled, target-audited and kernel-replayed successfully.
+
+| Declaration | Manuscript role |
+|---|---|
+| `halfOffDiagonalInverse` | Explicit inverse of H=(J_4-I_4)/2 |
+| `halfOffDiagonal_mul_inverse`, `inverse_mul_halfOffDiagonal` | Both inverse identities, including all sixteen matrix entries |
+| `halfOffDiagonal_det_ne_zero` | Exact nonsingularity of reference matrix |
+| `halfOffDiagonal_det` | det H=-3/16 via rank-one determinant lemma |
+| `halfOffDiagonal_adjugate` | adj H=(-3/16)H^{-1} |
+| `halfOffDiagonal_adjugate_apply` | Exact reference cofactors, diagonal 1/4 and off diagonal -1/8 |
+
+The singular-value and upper-perturbation inequalities remain open. Exact proof log: `records/reference-matrix-spectral-20261016.md`.
+
+## Four-by-four operator-norm estimate (16 October 2026)
+
+`D1Bound5/MatrixOperatorNorm.lean` contains `four_zero_diagonal_operator_norm_lt`. It proves `‖E‖ < 3*δ` for every 4×4 complex zero-diagonal matrix with all off-diagonal moduli `<δ`, without assuming symmetry. Its three explicit fixed-point-free permutation matchings provide an exact finite entry decomposition.
+
+`D1Bound5/RootMatrixOperatorBound.lean` defines `halfOffDiagonal` and proves `signed_root_matrix_operator_bound` and `exists_signed_root_matrix_operator_bound`. They transport the prior `SignedEntryGood` estimates and simultaneous symmetric integral sign choices to the spectral bound `‖normalizedRootError - halfOffDiagonal‖ < 3*(128/8649)`. The original ring-valued square relations are preserved.
+
+Both modules are compiled, three exposed theorem types and transitive axioms are audited, and both modules have exit-zero installed-Lean-kernel replays. These results supply the A>=3 spectral-perturbation step of `lem:product-four`; they do not yet prove singular-value/adjugate determinant bounds or the mixed A>=1 branch.
+
+## Sharp inverse norm and contraction (16 October 2026)
+
+`D1Bound5/ReferenceInverseNorm.lean` contains eight new theorems and one
+matrix definition, with an additional perturbation corollary (nine
+theorems total). They were integrated, source-audited, transitive-axiom-audited
+and replayed by the installed Lean kernel.
+
+| Declaration | Manuscript role |
+|---|---|
+| `referenceReflection` | Explicit symmetric Householder-type involution R with diagonal 1/2 and off diagonal -1/2 |
+| `referenceReflection_sq`, `referenceReflection_conjTranspose` | R²=I and Rᴴ=R |
+| `referenceReflection_norm` | Exact L2 operator norm ‖R‖=1 |
+| `halfOffDiagonalInverse_decompose` | K=-(2/3)I-(4/3)R |
+| `halfOffDiagonalInverse_norm_le` | Upper spectral bound ‖K‖≤2 |
+| `halfOffDiagonalInverse_mul_reflection_plus_one` | Nonzero eigenspace witness K(I+R)=-2(I+R) |
+| `halfOffDiagonalInverse_norm_ge`, `halfOffDiagonalInverse_norm` | Sharp norm ‖K‖=2 |
+| `reference_inverse_error_norm_lt_one` | From ‖F-H‖<3*128/8649 derive ‖K(F-H)‖<1 |
+
+This provides the exact reference inverse norm and Neumann-resolvent
+smallness input for the A>=3 branch of `lem:product-four`. Neither
+inverse bounds for general F nor the required determinant and adjugate
+upper estimates are yet formalized. The mixed-row A>=1,B>=3 branch
+and main bound-five theorem remain OPEN.
+
+## Matrix perturbation: nonsingularity and inverse norm (16 October 2026)
+
+`D1Bound5/ReferencePerturbation.lean` contains four newly accepted theorems:
+
+| Declaration | Mathematical role |
+|---|---|
+| `reference_perturbed_det_ne_zero` | `‖K(F-H)‖<1` implies `det F≠0`, using a proved Banach-algebra unit theorem |
+| `reference_perturbed_det_ne_zero_of_near` | The previous uniform `3*(128/8649)` error bound implies `det F≠0` |
+| `reference_perturbed_inverse_norm_lt` | `‖F-H‖<1/8` implies the strict bound `‖F⁻¹‖<8/3` |
+| `exists_signed_root_matrix_with_bounded_inverse` | Applies these conclusions to an actual simultaneous symmetric ring-valued sign choice, retaining pair-square identities |
+
+The new module and integrated project compiled with exit 0, the 45-module source/import audit passed, all four explicit theorem types and transitive axioms passed, and the new module passed the installed Lean kernel replay. The A>=1 mixed-row upper operator bound, determinant and adjugate upper estimates, and full lemma `lem:product-four` remain open. See `records/reference-perturbation-20261016.md`.

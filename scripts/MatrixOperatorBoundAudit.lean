@@ -1,0 +1,10 @@
+import D1Bound5.RootMatrixOperatorBound
+import Lean.Util.CollectAxioms
+
+#print axioms D1Bound5.four_zero_diagonal_operator_norm_lt
+#print axioms D1Bound5.signed_root_matrix_operator_bound
+#print axioms D1Bound5.exists_signed_root_matrix_operator_bound
+
+#check @D1Bound5.four_zero_diagonal_operator_norm_lt
+#check @D1Bound5.signed_root_matrix_operator_bound
+#check @D1Bound5.exists_signed_root_matrix_operator_bound
