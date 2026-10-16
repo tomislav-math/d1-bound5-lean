@@ -46,3 +46,13 @@ import D1Bound5.ReferencePerturbation
 import D1Bound5.RankOneDeterminantBound
 import D1Bound5.ScaledRootRankOneBound
 import D1Bound5.ProductFourNumericalClosure
+import D1Bound5.AdjugateFourBounds
+import D1Bound5.AdjugateOffDiagonal
+import D1Bound5.AdjugateCoverage
+import D1Bound5.SignedRootAdjugateBound
+import D1Bound5.SymmetricFourDetBound
+import D1Bound5.SignedRootMatrixBounds
+import D1Bound5.RootDeterminantLower
+import D1Bound5.ProductFourLargeBranch
+import D1Bound5.TupleRootMatrixBridge
+import D1Bound5.TupleRootMatrixBridge

@@ -268,3 +268,84 @@ The following nine theorems are compiled, transitive-axiom audited, and individu
 | `productFour_growth_from_bounds` | Derives D>2ABC also assuming the integral determinant lower bound |
 
 The last two statements remain conditional. They do not prove `lem:product-four`; its upper perturbative determinant/adjugate hypotheses and the mixed-row branch remain open. The source audit counts 48 modules and 256 explicit proved theorems. Root build, targeted axiom audit, and three individual Lean kernel replays each exited 0.
+
+## Direct determinant upper-bound trial (2026-10-16; compiled, NOT root-integrated)
+
+Seven source declarations are preserved under `exploration/SymmetricFourDetTrial.lean`: `symmetricZeroFour_det` (the symmetric zero-diagonal four-by-four determinant polynomial), `nearHalf_product_nearQuarter` (pair-product error), `threePairDetPolynomial_bound` (uniform complex polynomial bound), `symmetricZeroFour_det_norm_lt` (explicit six-entry bound), `symmetric_zero_four_det_upper` (general matrix bound), `signed_root_matrix_det_upper` (transport to normalized integral matrix), and `exists_signed_root_matrix_det_upper` (complete simultaneous sign choice with the determinant upper bound). All seven compile without extra axioms; the transitive audit PASS is in `local-logs/sym-zero-trial-final-20261016.log`. These seven are **not included in the integrated root theorem count** because the safety guard blocked moving the source into an accepted module; no integrated source audit or leanchecker replay is claimed. The adjugate norm bound and full `lem:product-four` remain open.
+
+## Adjugate entry reduction (isolated, 16 October 2026)
+
+| Trial declaration | Precise role |
+|---|---|
+| `four_operator_norm_lt_of_entry_bounds` | General L2 matrix norm `< a+3b` from diagonal `<a` and off-diagonal `<b` bounds |
+| `symmetricZeroFour_adjugate_00` | Exact cofactor `2uvw` for the (0,0) entry of the symmetric zero-diagonal 4x4 matrix |
+| `symmetricZeroFour_adjugate_01` | Exact off-diagonal cofactor `w²x-wzu-wyv` |
+| `four_adjugate_numeric_margin` | `3/8+23/1000+3*(197/10000) < h*s²` |
+| `four_adjugate_bound_of_entry_bounds` | Conditional operator adjugate upper bound; explicit scalar entry hypotheses remain |
+| `nearHalf_triple_cofactor_bound` | Diagonal scalar cofactor error `<23/1000` from three entry deviations `<128/8649` |
+
+All six theorems compiled and passed embedded transitive axiom audit; they remain under ignored `exploration/AdjugateFourTrial.lean`, not part of the root or theorem inventory count. Off-diagonal scalar error `<197/10000`, full index coverage and accepted integration remain OPEN. See `records/adjugate-entry-reduction-20261016.md`.
+
+## Exploratory proof update, 2026-10-16 06:28 CEST
+
+- Paper: first A>=3 branch of `lem:product-four`, off-diagonal cofactor perturbation.
+- Lean declaration: `D1Bound5.nearHalf_offDiagonal_cofactor_bound`, source `exploration/AdjugateOffdiagTrial.lean`.
+- Complete quantified scalar statement: six complex numbers within 128/8649 of 1/2 imply the precise error `<197/10000` for `w^2*x - w*z*u - w*y*v + 1/8`.
+- Targeted proof compilation and transitive axiom audit: PASS, see `records/offdiagonal-cofactor-20261016.md`.
+- Status: ISOLATED PROVED, not integrated root dependency and not a proof of `lem:product-four` or `MainStatement`. Next dependency: all 12 off-diagonal index instances, then combined 4x4 adjugate operator bound.
+
+## Full adjugate entry coverage, 16 October 2026 (isolated)
+
+The three compiled and axiom-audited declarations in `exploration/AdjugateCoverageTrial.lean` are `symmetricFour_adjugate_formula` (all 16 explicit cofactors), `symmetricFour_adjugate_norm_lt` (six near-half complex entries give the needed strict adjugate operator bound), and `symmetric_zero_four_adjugate_norm_lt` (same bound for an arbitrary symmetric zero-diagonal 4x4 complex matrix). Installed Lean kernel replay exited 0. None is yet included in the root import graph or the current 256-theorem integrated inventory. See the FINISH record at `records/runs/20261016T052800Z-adjugate-integration-FINISH.md`.
+
+## Root-integrated adjugate proof (2026-10-16)
+
+The 4x4 adjugate bound is now fully root-imported, not merely exploratory. Four modules, D1Bound5/AdjugateFourBounds.lean, D1Bound5/AdjugateOffDiagonal.lean, D1Bound5/AdjugateCoverage.lean and D1Bound5/SignedRootAdjugateBound.lean, contribute 12 proved theorems, including the complete 16-entry coverage and simultaneous sign-choice transfer over arbitrary commutative rings.
+
+| New theorem | Precise function |
+|---|---|
+| four_operator_norm_lt_of_entry_bounds | Four-by-four operator norm from diagonal and off-diagonal entry bounds |
+| symmetricZeroFour_adjugate_00 | Exact representative diagonal cofactor |
+| symmetricZeroFour_adjugate_01 | Exact representative off-diagonal cofactor |
+| four_adjugate_numeric_margin | Strict rational inequality for the final coefficient |
+| four_adjugate_bound_of_entry_bounds | Operator norm under explicit cofactor bounds |
+| nearHalf_triple_cofactor_bound | Uniform cubic diagonal error |
+| nearHalf_offDiagonal_cofactor_bound | Uniform cubic off-diagonal error |
+| symmetricFour_adjugate_formula | All sixteen exact cofactor formulas |
+| symmetricFour_adjugate_norm_lt | Full bound for six independently chosen complex entries |
+| symmetric_zero_four_adjugate_norm_lt | General symmetric zero-diagonal matrix version |
+| signed_root_matrix_adjugate_upper | Transfer to fixed simultaneous ring-valued signs |
+| exists_signed_root_matrix_adjugate_upper | Existence of suitable signs and the final adjugate estimate from the six root-square equations |
+
+The statement inventory is 52 imported modules and 268 explicit proved theorems. Root compilation exited zero (3015 jobs), transitive axiom audit of these 12 declarations passed with exactly the three standard allowed axioms. This is an adjugate bound, not completion of the product-four lemma. Its determinant inequality is still an isolated exploratory proof. See records/adjugate-root-integration-20261016.md and the run logs.
+
+## Direct determinant and joint adjugate transfer (16 October 2026)
+
+`D1Bound5/SymmetricFourDetBound.lean` contributes seven proved declarations: `symmetricZeroFour_det` (exact six-entry 4x4 formula), `nearHalf_product_nearQuarter` (pair-error control), `threePairDetPolynomial_bound` (strict uniform polynomial bound), `symmetricZeroFour_det_norm_lt` (explicit 4x4 complex determinant upper bound), `symmetric_zero_four_det_upper` (general symmetric zero-diagonal matrix bound), `signed_root_matrix_det_upper` (fixed ring-valued choice), and `exists_signed_root_matrix_det_upper` (simultaneous ring-valued sign choice). `D1Bound5/SignedRootMatrixBounds.lean` adds `exists_signed_root_matrix_det_and_adjugate_upper`, which combines determinant and adjugate inequalities for ONE sign choice while retaining signs and squares. The same-witness property is necessary for the later rank-one argument. All eight are root-imported, with permitted transitive axioms only. Integrated inventory: 54 modules and 276 explicit proved theorems. `lem:product-four` is still not complete because its arithmetic lower bound and mixed branch have not been connected.
+
+## Arithmetic determinant lower bound (16 October 2026)
+
+| Declaration | Manuscript role |
+|---|---|
+| `scaledRootMatrix_det_norm_identity` | Exact complex norm of the scaling determinant as product of entry moduli times original determinant modulus, arbitrary finite dimension and commutative coefficient ring |
+| `scaledRootMatrix_det_norm_lower` | Norm lower bound conditional only on the unscaled determinant modulus at least one |
+| `full_ring_scaledRootMatrix_det_norm_lower` | Arithmetic lower bound from `even_root_matrix_one_le_norm` in every even dimension for every imaginary quadratic full integer ring |
+
+All three are root-imported, compiled, transitive-axiom audited and targeted kernel-replayed, with source/import coverage of 55 modules and 279 explicit theorems. The next step is the exact ordered-coordinate identification and shared signed-root witness in `lem:product-four`; this is not the complete product-four lemma or the main bound-five theorem.
+
+## Product-four first branch — 16 October 2026
+
+The three integrated theorems `productFour_ordered_square_sum`, `productFour_tail_large`, and `full_ring_productFour_large_growth` in `D1Bound5/ProductFourLargeBranch.lean` establish the proof of the A>=3 large-entry determinant inequality `D>2ABC` under the separately proven tail assumption `2BC<D`. The ring theorem quantifies over every totally complex quadratic number field, its FULL `RingOfIntegers`, any complex field homomorphism, any symmetric integral root matrix and ordered moduli (ties allowed); the proof uses the same signs for all matrix estimates and arithmetic lower bound. It has no excluded zero-square cases. This is the first assertion of manuscript `lem:product-four`, at the ordered integral-root-matrix interface, not the entire lemma or main theorem. Missing structural packaging is from a D(1)-tuple to the matrix plus pre-proved tail lemma; second case is still OPEN.
+
+## Product-four tuple interface (16 October 2026; isolated)
+
+The statement `IsD1Tuple.exists_symmetric_root_matrix` (generic finite index size and arbitrary commutative ring) builds a symmetric matrix with the tuple on its diagonal, using square roots selected for canonical unordered pairs. Its diagonal entries are the original tuple and every off-diagonal entry squares to `t i * t j + 1`. The statement `IsD1Tuple.productFour_large_growth` specializes to any imaginary quadratic full ring, an ordered D(1) quadruple with first modulus at least three, and concludes `2*A*B*C<D` by invoking the already accepted `IsD1Tuple.tail_irregular_and_growth` and `full_ring_productFour_large_growth`. Proof source: `exploration/TupleRootMatrixBridgeTrial.lean`, targeted elaboration and olean compile and kernel replay EXIT 0, but transitive axiom audit and root integration are not completed. Do not mark the product-four lemma complete: the mixed A>=1,B>=3 branch is still missing.
+
+## Accepted D(1)-tuple bridge for the large product-four branch (2026-10-16)
+
+Two new root-imported theorems are in `D1Bound5/TupleRootMatrixBridge.lean`.
+
+- `IsD1Tuple.exists_symmetric_root_matrix`: any indexed D(1)-tuple in any commutative ring admits a symmetric original-ring root matrix with the correct diagonal and pairwise square identities, including zero-square cases.
+- `IsD1Tuple.productFour_large_growth`: an ordered D(1)-quadruple in the full ring of integers of any imaginary quadratic field satisfies `D>2ABC` when `A>=3`. The already established complete tail growth is derived internally; no separate matrix hypothesis is exposed.
+
+Integrated source scan: 57 modules, 284 explicit proved theorems. Target/root build, dedicated two-theorem transitive axiom audit and targeted installed same-kernel replay all EXIT 0. Weighted A>=1,B>=3 remains OPEN. See `records/tuple-root-matrix-bridge-20261016.md`.

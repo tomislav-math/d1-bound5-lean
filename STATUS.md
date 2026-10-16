@@ -2,6 +2,32 @@
 
 2026-10-16. IN PROGRESS. MAIN THEOREM UNPROVED.
 
+## Latest accepted root proof unit: full adjugate bound and signed-ring transfer
+
+Four newly imported modules contain twelve theorem declarations. The actual symmetric zero-diagonal 4x4 matrix with six off-diagonal entries within 128/8649 of 1/2 has the unconditional bound `||adj F||_2 < (8905/5766)*(3139/5766)^2`. A further theorem constructs simultaneous integral signs in an arbitrary commutative coefficient ring and derives this same bound for `normalizedRootError`, assuming only the pairwise root-square equations and pair-product moduli at least nine. Zero square roots and tied moduli are not excluded.
+
+After removal of embedded exploratory audit commands, the final integrated build PASSED with exit 0 and 3015 jobs. Source/import policy PASSED (52 modules, 268 explicit proved theorems). All 12 new declarations passed an external transitive axiom audit with only `propext`, `Classical.choice`, `Quot.sound`. The four new modules each PASSED targeted installed Lean-kernel replay, exit 0. The SHA256 source and verification-tool manifests passed. These are same-kernel replays, not an independent external reviewer or a new clean-checkout build. See `records/adjugate-root-integration-20261016.md` and the latest START/PROGRESS/FINISH record.
+
+The direct determinant size bound remains only in the isolated exploratory source. The integral determinant-lower-bound interface and mixed A>=1,B>=3 branch have not been assembled. Bennett, large graph completeness and all three main sextuple exclusions remain open. The older historical sections below predate this successful integration.
+
+## New isolated off-diagonal cofactor inequality (06:28 CEST)
+
+`exploration/AdjugateOffdiagTrial.lean` now proves the exact missing scalar inequality `nearHalf_offDiagonal_cofactor_bound`: if each of the six complex entries is within epsilon=128/8649 of 1/2, then `‖w^2*x-w*z*u-w*y*v+1/8‖ < 197/10000`. The expansion and its rational margin are proved in Lean, with no sorry and transitive axioms limited to propext, Classical.choice and Quot.sound. The pinned targeted `lake env lean` command exited 0. See `records/offdiagonal-cofactor-20261016.md` and `local-logs/adjugate-offdiag-run11-03.log`. This is **isolated exploration**, not yet root-imported, leanchecker-replayed or pushed.
+
+The remaining gap for the full adjugate bound is the formal transfer to all twelve off-diagonal index orientations, and then combination with the already proved diagonal scalar bound and conditional norm closure in `exploration/AdjugateFourTrial.lean`. The separate mixed A>=1,B>=3 branch and global main theorem remain unproved. Previously integrated theorem counts have not changed.
+
+## New isolated adjugate entry reduction (05:56 CEST)
+
+Six additional theorems in `exploration/AdjugateFourTrial.lean` now compile with exit 0 and pass transitive axiom audit (only propext, Classical.choice, Quot.sound). They give a general 4x4 operator-norm estimate from separate diagonal/off-diagonal entry bounds, two exact symmetric cofactors, the needed numerical margin, an exact conditional adjugate norm closure, and the complete diagonal cubic error estimate. The remaining off-diagonal cubic error estimate and transfer to all 16 entries are NOT proved. See `records/adjugate-entry-reduction-20261016.md` and `local-logs/adjugate-four-trial-final-20261016.log`.
+
+The new file is isolated, not integrated into `D1Bound5.lean`, not checked by installed leanchecker and not pushed. The previous direct determinant trial remains isolated for the same integration reason. Both are saved on the Mac. The root proof count and previously verified source/axiom receipts are unchanged. No competing project-owned compiler was active at start.
+
+## New isolated Lean proof: direct symmetric determinant upper bound
+
+Seven new declarations in `exploration/SymmetricFourDetTrial.lean` compile and pass a transitive axiom audit (only propext, Classical.choice, Quot.sound). They prove directly, without singular-value theory, the needed large-entry bound `‖det F‖ < productFourH * productFourS^3` for a symmetric zero-diagonal four-by-four normalized root matrix, including the actual simultaneous ring-valued sign choice. A stronger intermediate bound is `‖det F‖ < 6/25`. Exact records are in `records/direct-symmetric-four-det-20261016.md` and `local-logs/sym-zero-trial-final-20261016.log`.
+
+**NOT INTEGRATED/NOT YET ACCEPTED AS A ROOT DEPENDENCY:** the remote file-move operation was blocked by the tool safety check. Consequently no new root build, source/import audit, installed leanchecker replay or GitHub push is claimed for these seven declarations. Preserve the saved exploration code. The adjugate operator-norm upper bound and mixed A>=1,B>=3 case remain open. Next: permitted integration and audits, then the adjugate bound.
+
 ## Latest verified proof unit: rank-one determinant and numerical closure
 
 The new `RankOneDeterminantBound.lean` and `ScaledRootRankOneBound.lean` prove the complex bilinear L2 norm estimate and the exact rank-one determinant/adjugate inequality for invertible four-by-four matrices, including its precise transfer to the normalized root matrix. The transpose is algebraic, not conjugate; symmetry and Hermitian hypotheses are not introduced.
@@ -205,3 +231,37 @@ No manuscript edit, Freiman change, paid agent, public release or Prove2Me
 mission was made. The original frozen manuscript hash is unchanged.
 The hourly task was updated and retained enabled; its earlier platform
 failure cause is unknown. See records/automation-repair-20261015.md.
+
+## 16 October 2026 — complete adjugate index coverage (isolated)
+
+The new `exploration/AdjugateCoverageTrial.lean` proves all 16 adjugate cofactor formulas and the required operator-norm upper bound for every symmetric zero-diagonal complex 4x4 matrix with off-diagonal entries within 128/8649 of 1/2. Three new theorems passed compilation, standard transitive axiom audit and installed Lean kernel replay (all exit 0). This is NOT root-integrated; the previous 48-module/256-theorem integrated inventory is unchanged. Transfer to the signed-root normalized matrix, the mixed A>=1,B>=3 branch, Bennett's identity and the final bound-five theorem remain OPEN. See `records/runs/20261016T052800Z-adjugate-integration-FINISH.md`.
+
+## 16 October 2026 — determinant and adjugate with ONE signed root choice
+
+The direct four-by-four symmetric zero-diagonal determinant bound is now root-integrated and fully proved by an explicit polynomial estimate, without singular-value theory. For six entries within 128/8649 of 1/2, it gives `||det F||<h*s^3` with h=8905/5766 and s=3139/5766. More importantly, `exists_signed_root_matrix_det_and_adjugate_upper` simultaneously proves both `||det F||<h*s^3` and `||adj F||<h*s^2` for the SAME symmetric sign choice over the original commutative ring. Eight new theorems, 54 root-imported modules and 276 explicit proved theorems. Integrated build, separate transitive axiom audit, both targeted kernel replays, source/import audit and source/tool SHA256 checks all exited zero. No clean-checkout or independent review was run.
+
+The arithmetic determinant lower-bound and squared-size vector estimate must still be assembled into the large-entry branch of `lem:product-four`. The separately weighted A>=1,B>=3 branch, Bennett identity, finite descent/coverage and sextuple exclusions remain OPEN. `MainStatement` is not yet a theorem.
+
+## 16 October 2026 — uniform arithmetic determinant lower bound
+
+The new root-imported module `D1Bound5/RootDeterminantLower.lean` proves three theorems, including an exact determinant-norm factorization for any finite matrix over any commutative ring mapped to ℂ, and its unconditional full-integer-ring specialization in every **even** dimension for imaginary quadratic fields. From only the diagonal and pairwise square-root conditions it proves
+`∏ i, ‖phi (a i : K)‖ ≤ ‖det (scaledRootMatrix u (M.map (phi.comp (algebraMap (𝓞 K) K))))‖`.
+All zero-root and tied-modulus cases remain allowed; no additional arithmetic hypotheses were inserted. The integrated pinned build exited 0 (3018 jobs); source/import audit PASS (55 modules, 279 theorems); transitive axiom audit PASS for all three new theorems with only propext, Classical.choice, Quot.sound; targeted installed Lean-kernel replay exited 0. Both SHA256 manifest checks exited 0. See `records/root-determinant-lower-20261016.md` and the run records. No clean-checkout or independent reviewer was used.
+
+Still needed: identify the ordered `A B C D` product and square-size vector bound for the SAME chosen signed-root matrix, use existing perturbative upper estimates to close the A>=3 growth branch, then prove mixed A>=1,B>=3, Bennett and finite-graph exclusions. MainStatement remains UNPROVED.
+
+## 16 October 2026 — product-four A>=3 branch closed at root-matrix level
+
+`D1Bound5/ProductFourLargeBranch.lean` has three root-integrated, kernel-replayed and transitive-axiom-audited theorems. The main new result `full_ring_productFour_large_growth` proves D>2ABC in EVERY imaginary quadratic full ring for an ordered symmetric integral root matrix with A>=3 and the already-proved weaker tail growth 2BC<D. The SAME integral sign choice satisfies determinant and adjugate upper estimates, and full-ring scaled determinant lower bound. The squared-size estimate and D>18 are formally discharged. Integrated build PASS (3019 jobs), audit PASS (56 modules, 282 explicit theorems), 3/3 axiom PASS with only standard allowed axioms, targeted same-kernel replay PASS, source/tools manifest checks PASS. No clean checkout or independent reviewer.
+
+The symmetric-root-matrix construction from an arbitrary `IsD1Tuple` should be packaged explicitly; the remaining weighted A>=1,B>=3 case, Bennett arbitrary-order determinant, finite completeness and final sextuple exclusion are OPEN. `MainStatement` remains a proposition.
+
+## 16 October 2026 — isolated tuple-to-symmetric-root-matrix bridge
+
+Saved `exploration/TupleRootMatrixBridgeTrial.lean` (SHA256 `18bf68c70f7461d132ff1bb7a87d58364bb611e213e0471f018bd1b883568dd6`). A generic theorem constructs a symmetric original-ring root matrix from any indexed `IsD1Tuple` (all finite sizes), and a second theorem combines the proven complete tail lemma with the A>=3 matrix-level product-four theorem, proving `D>2ABC` for an ordered D(1) quadruple with smallest modulus >=3, without matrix/tail assumptions. Trial elaboration EXIT 0, .olean compilation EXIT 0, installed same-kernel replay EXIT 0. The original first trial EXIT 1 was repaired. Axiom print/audit is not complete: a stdin call failed because `lean -` is unsupported, and the corrected invocation was blocked by an external safety check before execution. Attempts to integrate/move the trial into the root source were likewise blocked before execution. Consequently this is NOT a root-accepted theorem; root inventory remains 56 modules, 282 explicit theorems. No root rebuild, source/import audit or independent verification in this invocation. Next: root-integrate and audit this bridge when tool access permits; then address the weighted A>=1,B>=3 case. MainStatement remains UNPROVED.
+
+## 16 October 2026 — accepted tuple-to-matrix bridge (hourly continuation)
+
+`D1Bound5/TupleRootMatrixBridge.lean` is now ROOT-INTEGRATED, replacing the previously isolated proof with byte-identical content. Two proved theorems construct a symmetric original-ring root matrix from any indexed `IsD1Tuple` and prove the A>=3 branch `D>2ABC` for actual ordered D(1) quadruples in every imaginary quadratic full integer ring, without separate matrix/tail hypotheses. Integrated build EXIT 0 (3020 jobs); dedicated exact-type and transitive axiom audit EXIT 0; installed same-kernel replay EXIT 0; source/import audit EXIT 0 (57 modules, 284 explicit proved theorems); both SHA256 manifests checked EXIT 0. No full clean-checkout replay or independent review. See `records/tuple-root-matrix-bridge-20261016.md` and `records/runs/20261016T091135Z-hourly11-FINISH.md`.
+
+Remaining: weighted A>=1,B>=3 branch of product-four, product-five, genuine Bennett arbitrary-order determinant, certified finite graph/descent coverage and final sextuple exclusions. `MainStatement` remains a proposition, UNPROVED.

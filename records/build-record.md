@@ -364,3 +364,114 @@ Commands and observed results:
 - SHA-256 source and verification-tool manifests regenerated and file checks returned OK.
 
 The numerical closure retains explicit unproved det/adjugate upper-bound assumptions. No new fresh clone or whole-root replay was performed. Frozen manuscript unchanged; main theorem still open.
+
+## Direct symmetric determinant proof (isolated exploration, 16 October 2026)
+
+Observed in `/Users/tp/Lean/D1Bound5` under Lean 4.33.1, mathlib `0df444a360eaa60ab8c11dca51a86af692955474`. No project-owned compiler was active before development. The following final command returned Lean exit 0:
+
+    LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/SymmetricFourDetTrial.lean
+
+Raw receipt: `local-logs/sym-zero-trial-final-20261016.log`. Embedded `Lean.collectAxioms` loop audited all seven new declarations; it printed `SYM_FOUR_TRIAL_AXIOM_PASS: 7 theorems` and found only `propext`, `Classical.choice`, `Quot.sound`. The final source uses ordinary Lean proof tactics and contains no sorry/admit/native-evaluation shortcut. Earlier failures and fixes are in `local-logs/sym-zero-trial-02.log` through `-07.log`.
+
+A direct Remote Desktop Commander `move_file` request to integrate the proven source into `D1Bound5/SymmetricFourDetBound.lean` was BLOCKED by a safety check before execution; it was not bypassed. Accordingly the root import graph, integrated build, source policy/root import coverage, targeted installed-leanchecker replay, and GitHub commit/push have **not** been newly verified for this proof unit. Previously successful integrated receipts remain valid for their unchanged snapshot. The source and mathematical record remain locally saved under `exploration/` and `records/`.
+
+## Isolated adjugate reduction (16 October 2026, 05:56 CEST)
+
+Observed actual command, from `/Users/tp/Lean/D1Bound5`:
+
+`LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/AdjugateFourTrial.lean`
+
+Final exit code 0. Raw log: `local-logs/adjugate-four-trial-final-20261016.log`. Embedded `Lean.collectAxioms` reports `ADJUGATE_TRIAL_AXIOM_PASS: 6 theorems`. Each transitive axiom set is exactly `[propext, Classical.choice, Quot.sound]`. There were three unused-simp warnings, no proof errors. Earlier attempted versions 01/02/03/05 exited nonzero and were corrected. Versions 04/06 compiled before embedding audit. This is an isolated source compilation, NOT a new integrated project build, root import audit or installed leanchecker replay. The main theorem is still unproved. Private GitHub source state is unchanged in this unit.
+
+## 2026-10-16 06:28 CEST — scalar off-diagonal cofactor proof
+
+- Command from project root: `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/AdjugateOffdiagTrial.lean`.
+- Final process exit: 0 (third iteration). Raw log `local-logs/adjugate-offdiag-run11-03.log`, SHA256 `9a51202eef2bb356b26ad6cab26663b91b9c6fce0b062ec2a69a75b8e9300ac1`.
+- Source SHA256 `204e5a3d85e744a5ce1309a44f4ae39db417a6765338b5043019345bb3ebc2a0`.
+- `Lean.collectAxioms` for `D1Bound5.nearHalf_offDiagonal_cofactor_bound`: PASS, exactly `[propext, Classical.choice, Quot.sound]`. Three nonfatal unused-simp warnings, no errors in final compilation.
+- Earlier attempts `local-logs/adjugate-offdiag-run11-01.log` and `-02.log` exited 1 and were repaired.
+- Root import build/source scan, installed leanchecker, clean checkout and independent audit NOT performed for this exploratory module. Prior integrated source count unchanged. No Git commit/push for this new source. The staged and unstaged pre-existing files were preserved.
+
+## 2026-10-16 07:28 CEST — all adjugate entries (isolated)
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/AdjugateCoverageTrial.lean`: exit 0 (trial 04), log `local-logs/adjugate-coverage-trial-04.log`.
+- Same Lean command with `-o .lake/build/lib/lean/exploration/AdjugateCoverageTrial.olean`: exit 0, log `local-logs/adjugate-coverage-olean-20261016.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose exploration.AdjugateCoverageTrial`: exit 0, log `local-logs/adjugate-coverage-replay-20261016.log`.
+- Transitive `Lean.collectAxioms`: PASS for all three new theorems, exactly `propext`, `Classical.choice`, `Quot.sound`.
+- Source SHA256: bed4cd01361620e85570772a0dbb47a2cd74ebb01ee0d521a8c0568f573cfbd2. Final elaboration log SHA256: 8d11eb77bb35569256df76b22632dfd56d0ec59c93682cf5977373f6b45cc943. Replay log SHA256: edc977f360d5eaa6d104dfd08ca0b919ad2450ed10a6b9b0b3e6b3a06b837d8e.
+- Targeted same-kernel replay, not an independent review. No integrated root build, root source/import audit, clean-checkout or whole-project replay was performed for this isolated module. No Git commit/push. No code in accepted root source changed.
+
+## Root-integrated adjugate estimate and signed-root transfer (2026-10-16)
+
+Pinned Lean 4.33.1 and mathlib 0df444a360eaa60ab8c11dca51a86af692955474; selected main worktree /Users/tp/Lean/D1Bound5. The earlier isolated proof files in exploration/ were left unchanged. Original proofs were copied to new project modules, imports updated, and inline exploratory run_cmd audits removed. A dedicated audit script retains the tests.
+
+Observed commands and results:
+- LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.AdjugateCoverage: exit 0, 2912 jobs (provisional copied-source milestone).
+- LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.SignedRootAdjugateBound D1Bound5: exit 0, 3015 jobs, after inline-audit removal; log local-logs/adjugate-run12-final-build.log.
+- /Users/tp/.local/bin/python3.12 scripts/source_audit.py: exit 0, SOURCE_AUDIT_PASS 52 modules, 268 explicit theorems; all project modules root-imported.
+- LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/AdjugateIntegrationAudit.lean: exit 0, ADJUGATE_ROOT_AXIOMS_PASS 12 theorems. Axiom dependencies restricted to propext, Classical.choice, Quot.sound. Elaborated theorem types printed for the two ring-valued transfer results. Raw log local-logs/adjugate-run12-axiom-audit.log.
+- LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.AdjugateFourBounds: exit 0, local-logs/adjugate-run12-replay-four.log.
+- Same command for D1Bound5.AdjugateOffDiagonal: exit 0, local-logs/adjugate-run12-replay-offdiag.log.
+- Same command for D1Bound5.AdjugateCoverage: exit 0, local-logs/adjugate-run12-replay-coverage.log.
+- Same command for D1Bound5.SignedRootAdjugateBound: exit 0, local-logs/adjugate-run12-replay-transfer.log.
+- SHA256 source and verification-tool manifest checks both returned exit 0. The source file scan forbids sorry, admit, sorryAx, mathematical axiom declarations and native-evaluation trust shortcuts.
+
+There were nonfatal style/linter warnings in earlier proofs. No clean-checkout build, full-root kernel replay or independent checker was performed in this run. The original frozen manuscript and unrelated worktrees remain unchanged. The direct determinant bound remains exploratory and is not counted as integrated. See records/adjugate-root-integration-20261016.md.
+
+## 16 October 2026 — determinant and same-witness sign integration
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.SignedRootMatrixBounds`: exit 0, 2915 jobs; `local-logs/determinant-run13-target-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5`: exit 0, 3017 jobs; `local-logs/determinant-run13-integrated-build.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0, 54 root-imported modules and 276 explicit proved theorems; `local-logs/determinant-run13-source-audit.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/DeterminantIntegrationAudit.lean`: exit 0, all eight declared theorems checked, axioms only propext, Classical.choice, Quot.sound; `local-logs/determinant-run13-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.SymmetricFourDetBound`: exit 0, `local-logs/determinant-run13-replay-det.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.SignedRootMatrixBounds`: exit 0, `local-logs/determinant-run13-replay-combined.log`.
+- Both source and verification-tool SHA256 manifests regenerated and checked successfully, logs `local-logs/determinant-run13-source-hashes.log`, `local-logs/determinant-run13-tools-hashes.log`.
+- These are same-kernel targeted replays. No new whole-project clean-checkout replay or external independent review.
+
+## 2026-10-16 — scaled root determinant lower bound, full integer rings
+
+Working tree: `/Users/tp/Lean/D1Bound5`, branch main; pinned Lean 4.33.1 / mathlib 0df444a360eaa60ab8c11dca51a86af692955474. No pre-existing project-owned compiler was active at start.
+
+- Exploratory source `exploration/RootDeterminantLowerTrial.lean`: initial compile exited 1 (fixed incorrect matrix-map rewrite, nonnegative-product lemma and missing `Module` namespace), corrected compile exited 0, log `local-logs/root-det-lower-run10-02.log`.
+- Final accepted source `D1Bound5/RootDeterminantLower.lean` is byte-identical to the corrected trial, imported in `D1Bound5.lean`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.RootDeterminantLower D1Bound5`: exit 0, 3018 jobs, `local-logs/root-det-lower-run10-build.log`. Nonfatal earlier-file style linter warnings only.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0; SOURCE_AUDIT_PASS 55 modules, 279 explicit theorems; `local-logs/root-det-lower-run10-source-audit.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/RootDeterminantLowerAudit.lean`: exit 0; all three elaborated types printed; transitive axiom sets exactly `[propext, Classical.choice, Quot.sound]`; `local-logs/root-det-lower-run10-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.RootDeterminantLower`: exit 0; `local-logs/root-det-lower-run10-replay.log` (SAME Lean kernel, not an independent checker).
+- Both `shasum -a 256 -c` source and verification-tool manifests: exit 0. The manifests include the new source and new axiom script. See `local-logs/root-det-lower-run10-*-hashes.log`.
+- No fresh clean checkout, whole-project kernel replay or independent statement audit. The frozen manuscript and unrelated repositories were not edited.
+
+Source, mathematical rationale and exact remaining assumptions: `records/root-determinant-lower-20261016.md`. Final commit/push receipts recorded separately only after actual execution.
+
+## 2026-10-16 — ProductFourLargeBranch
+
+- `lake env lean exploration/ProductFourSizeBridgeTrial.lean` (two size lemmas): EXIT 0, `local-logs/product-four-size-trial01.log`.
+- Initial full trial: EXIT 1 from missing `open Module`; fixed, then complete full trial: EXIT 0 after 221.81 s, with only an unused simp warning. Warning removed before integration.
+- Integrated `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ProductFourLargeBranch D1Bound5`: EXIT 0, 3019 jobs, `local-logs/product-four-large-run-build.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, 56 imported modules and 282 explicit theorems, `local-logs/product-four-large-run-source-audit.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/ProductFourLargeBranchAudit.lean`: EXIT 0, three exact elaborated statements, axioms only propext, Classical.choice, Quot.sound, `local-logs/product-four-large-run-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ProductFourLargeBranch`: EXIT 0, targeted same-kernel replay, `local-logs/product-four-large-run-replay.log`.
+- Both refreshed SHA256 source and verification-tool manifests checked: EXIT 0, `local-logs/product-four-large-run-source-hashes.log`, `local-logs/product-four-large-run-tool-hashes.log`.
+- No clean-checkout, whole-project kernel replay or external independent proof review in this invocation; other imported modules compiled/replayed as part of Lake's 3019-job build only.
+
+## 2026-10-16 10:43–10:55 CEST — isolated tuple root-matrix bridge
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/TupleRootMatrixBridgeTrial.lean`: first attempt EXIT 1, log `local-logs/tuple-root-bridge-trial01.log` (fixed `pow_two` normalization and `Ne.symm` projection); second attempt EXIT 0, log `local-logs/tuple-root-bridge-trial02.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean -o .lake/build/lib/lean/exploration/TupleRootMatrixBridgeTrial.olean exploration/TupleRootMatrixBridgeTrial.lean`: EXIT 0, log `local-logs/tuple-root-bridge-olean.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose exploration.TupleRootMatrixBridgeTrial`: EXIT 0, log `local-logs/tuple-root-bridge-replay.log`. Same installed Lean kernel, NOT independent proof checking.
+- `lean -` piped statement audit EXIT 1 (`no such file or directory: -`); proposed retry with `lean --stdin` blocked by OpenAI safety checks before execution. The intended dedicated isolated axiom script write was also blocked. No successful transitive axiom audit can be claimed in this invocation.
+- Copy/move attempt for root integration blocked by higher-level safety guard. Imported root source unchanged, no new integrated build, source scan or manifest refresh. Root inventory remains previously verified 56 modules/282 theorems.
+- Exploratory source SHA256: `18bf68c70f7461d132ff1bb7a87d58364bb611e213e0471f018bd1b883568dd6`. Literal source scan found no `sorry`, `admit`, `sorryAx`, mathematical `axiom`, or `native_decide` tokens. No owned worker remained at 10:54:58 +0200.
+- No clean checkout or external independent audit. Existing pre-staged code and original frozen manuscript preserved.
+
+## 2026-10-16 11:11–11:18 CEST — tuple bridge root integration
+
+- Baseline: main `2928fd8`, pre-existing staged changes preserved. Frozen v4 manuscript untouched; Lean 4.33.1 and mathlib `0df444a360eaa60ab8c11dca51a86af692955474` pinned.
+- `D1Bound5/TupleRootMatrixBridge.lean`: byte-identical to the prior successful isolated trial, SHA256 `18bf68c70f7461d132ff1bb7a87d58364bb611e213e0471f018bd1b883568dd6`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.TupleRootMatrixBridge D1Bound5`: EXIT 0, 3020 jobs, log `local-logs/tuple-root-hourly11-build.log` (nonfatal older linter warnings).
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/TupleRootMatrixBridgeAudit.lean`: EXIT 0, both elaborated theorem types printed, each transitive axiom set `[propext, Classical.choice, Quot.sound]`, log `local-logs/tuple-root-hourly11-axiom.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.TupleRootMatrixBridge`: EXIT 0, SAME installed Lean kernel, log `local-logs/tuple-root-hourly11-replay.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, `SOURCE_AUDIT_PASS: 57 modules, 284 explicit theorems`; log `local-logs/tuple-root-hourly11-source-audit.log`.
+- Updated `records/proof-source-sha256.txt` (60 lines) and `records/verification-tools-sha256.txt` (22 lines); both `shasum -a 256 -c` commands EXIT 0. Logs `local-logs/tuple-root-hourly11-source-hashes.log` and `local-logs/tuple-root-hourly11-tool-hashes.log`.
+- NO fresh clean-checkout build, whole-root kernel replay or independent external reviewer. Commit/push receipts are recorded only after actual execution.
