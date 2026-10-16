@@ -1,0 +1,9 @@
+# Mixed-row root-matrix sign normalization (16 October 2026)
+
+The A>=1, B>=3 branch of the frozen manuscript requires one simultaneous symmetric choice of six integral signs so the normalized root correction F has first-row errors <25/486 (<1/18) and lower-right 3x3 errors <1/64. The existing root-error lemmas only selected signs for one pair at a time.
+
+New source: `D1Bound5/MixedRootMatrixSigns.lean`. The declarations `SignedEntryBounds` and `MixedSignedEntryGood` encode both size and half-offset bounds, differentiated by whether a pair meets index 0. The four scalar sign-choice declarations cover thresholds 3, 12 and, crucially, 9. The latter is derived from the already checked stronger bounds |F_ij|<16/31 and |F_ij-1/2|<128/8649, by exact rational comparisons 16/31<7/13 and 128/8649<1/64. The condition B*C>=12 appearing in the manuscript's supporting estimates is therefore NOT required for this normalization step: B*C>=9 follows already from B>=3 and weak ordering, even when 3<=C<4.
+
+`exists_mixed_symmetric_root_matrix` constructs ONE symmetric original-ring matrix S by choosing the good sign on each unordered pair; it preserves the diagonal a_i, every square relation (S_ij)^2=a_i*a_j+1, and S_ij=+/-M_ij. The final `exists_mixed_symmetric_root_matrix_with_roots` also chooses the four complex square roots, without excluding zero-square cases or modulus ties. Both the two first-row bounds and the lower-right 3x3 bounds hold simultaneously. Exact thresholds are explicit hypotheses 3 for pairs meeting index 0 and 9 otherwise, not hidden global claims.
+
+This solves the mixed-root-sign selection subproblem, subject to completing the recorded kernel/axiom verification gate. It does NOT establish the weighted operator estimate ||F-H||<11/96, determinant/adjugate upper bounds, or product-four growth for A>=1, B>=3. The main bound-five theorem remains unproved. The manuscript and existing projects are unchanged.

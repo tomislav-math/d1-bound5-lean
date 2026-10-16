@@ -475,3 +475,20 @@ Source, mathematical rationale and exact remaining assumptions: `records/root-de
 - `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, `SOURCE_AUDIT_PASS: 57 modules, 284 explicit theorems`; log `local-logs/tuple-root-hourly11-source-audit.log`.
 - Updated `records/proof-source-sha256.txt` (60 lines) and `records/verification-tools-sha256.txt` (22 lines); both `shasum -a 256 -c` commands EXIT 0. Logs `local-logs/tuple-root-hourly11-source-hashes.log` and `local-logs/tuple-root-hourly11-tool-hashes.log`.
 - NO fresh clean-checkout build, whole-root kernel replay or independent external reviewer. Commit/push receipts are recorded only after actual execution.
+
+## 2026-10-16 12:46–13:07 CEST — mixed weighted-row certificate
+
+Project: /Users/tp/Lean/D1Bound5, branch main, starting commit 806874a. Pinned Lean 4.33.1 / mathlib 0df444a360eaa60ab8c11dca51a86af692955474. Initial check found no project-owned running compiler; pre-existing concurrent mixed sign files and run records were preserved.
+
+- Isolated `exploration/WeightedRowCertificateTrial.lean`: first elaboration exit 1 (real noncomputable definitions, simplification and finite-index issues); second exit 1 (recursive Fin.ext_iff simplification); corrected third elaboration exit 0; fourth expanded seven-theorem elaboration exit 0. Remaining minor linter punctuation warnings do not affect elaboration.
+- Source copied byte-identically into `D1Bound5/WeightedRowCertificate.lean`; SHA256 24e91527c5f644ec2b6289935e81e061377a21fe404f3e2ef431b87e3d5e91b5 at the copied-source milestone.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.WeightedRowCertificate`: exit 0, 2903 jobs, `local-logs/weighted-row-run9-target-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/WeightedRowCertificateAudit.lean`: exit 0, exact theorem types checked; all 7 transitive axiom sets confined to propext, Classical.choice, Quot.sound; `local-logs/weighted-row-run9-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5`: exit 0, 3022 jobs (includes other worktree's already present MixedRootMatrixSigns module), `local-logs/weighted-row-run9-root-build.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: exit 0; SOURCE_AUDIT_PASS 59 root-imported modules and 299 explicit theorems; `local-logs/weighted-row-run9-source-audit.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.WeightedRowCertificate`: exit 0, `local-logs/weighted-row-run9-replay.log`.
+- Pre-existing `scripts/MixedRootMatrixSignsAudit.lean`: exit 0, eight exact declarations and only the same three permitted transitive axioms; `local-logs/weighted-row-run9-mixed-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.MixedRootMatrixSigns`: exit 0, `local-logs/weighted-row-run9-mixed-replay.log`.
+- Source and verification-tool SHA256 manifests regenerated and checked with `shasum -a 256 -c`: both exit 0, 62 and 24 entries; `local-logs/weighted-row-run9-source-hashes.log` and `local-logs/weighted-row-run9-tool-hashes.log`.
+
+A targeted same-kernel replay is not independent formal review. No fresh clean checkout, whole-project replay, paid CI, or manuscript edit. Spectral weighted Schur test, second branch determinant/adjugate bounds and main theorem remain UNPROVED.

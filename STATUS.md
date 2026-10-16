@@ -2,6 +2,13 @@
 
 2026-10-16. IN PROGRESS. MAIN THEOREM UNPROVED.
 
+## Latest checked unit — mixed weighted-row certificate (13:07 CEST)
+
+`D1Bound5/WeightedRowCertificate.lean` proves seven declarations, including the exact symmetric nonnegative 4-by-4 envelope with weights (3/2,1,1,1) and weighted row bound 11/96, and transfers this to arbitrary complex zero-diagonal matrices satisfying first-row <1/18 and lower-block <1/64 entrywise bounds. This is a weighted ROW certificate, NOT yet a proof that the L2 operator norm is <=11/96. The essential weighted Schur/spectral comparison remains OPEN.
+
+The separate previously unfinished `MixedRootMatrixSigns.lean` (eight theorem declarations) is currently imported and has now passed its dedicated transitive axiom audit and targeted same-kernel replay. Both new modules and root compiled successfully (3022 jobs); source/import scan passed (59 modules and 299 explicit theorems); weighted-row axiom audit and replay passed; source/tool SHA256 manifests were regenerated and checked (62/24 paths). All transitive axioms in the two targeted audits are limited to propext, Classical.choice and Quot.sound. Records: `records/weighted-row-certificate-20261016.md`, `records/runs/20261016T104612Z-bound5-run9-FINISH.md` and `records/build-record.md`. The previous historical status sections below are superseded where they say these modules are open.
+
+
 ## Latest accepted root proof unit: full adjugate bound and signed-ring transfer
 
 Four newly imported modules contain twelve theorem declarations. The actual symmetric zero-diagonal 4x4 matrix with six off-diagonal entries within 128/8649 of 1/2 has the unconditional bound `||adj F||_2 < (8905/5766)*(3139/5766)^2`. A further theorem constructs simultaneous integral signs in an arbitrary commutative coefficient ring and derives this same bound for `normalizedRootError`, assuming only the pairwise root-square equations and pair-product moduli at least nine. Zero square roots and tied moduli are not excluded.

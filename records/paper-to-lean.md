@@ -349,3 +349,17 @@ Two new root-imported theorems are in `D1Bound5/TupleRootMatrixBridge.lean`.
 - `IsD1Tuple.productFour_large_growth`: an ordered D(1)-quadruple in the full ring of integers of any imaginary quadratic field satisfies `D>2ABC` when `A>=3`. The already established complete tail growth is derived internally; no separate matrix hypothesis is exposed.
 
 Integrated source scan: 57 modules, 284 explicit proved theorems. Target/root build, dedicated two-theorem transitive axiom audit and targeted installed same-kernel replay all EXIT 0. Weighted A>=1,B>=3 remains OPEN. See `records/tuple-root-matrix-bridge-20261016.md`.
+
+## Weighted four-by-four row certificate (2026-10-16)
+
+| Declaration | Exact manuscript role |
+|---|---|
+| `weightedFourWeights_pos` | Positive coordinates of (3/2,1,1,1). |
+| `mixedFourEnvelope_nonneg` | Nonnegative real entrywise majorant of mixed errors. |
+| `mixedFourEnvelope_symmetric` | Symmetry of the majorant. |
+| `mixedFourEnvelope_weighted_rows` | Every weighted row sum <= 11/96 times the corresponding weight. |
+| `mixedFourEnvelope_first_row_strict` | Exact strict first-row slack. |
+| `mixedFour_entry_norm_le_envelope` | Complex entrywise error dominated by the majorant; no matrix symmetry needed. |
+| `mixedFour_entrywise_weighted_row_bound` | Conditional weighted row inequality for any complex 4x4 error matrix with stated rowwise <1/18 and <1/64 hypotheses. |
+
+All seven theorem types and transitive axioms audited, source root-imported and kernel replayed. The essential step from row sums to spectral/L2-operator norm has not been formalized. The eight previously developed mixed-sign results were independently axiom-audited and replayed in this invocation. See `records/weighted-row-certificate-20261016.md`.
