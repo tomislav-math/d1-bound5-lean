@@ -492,3 +492,40 @@ Project: /Users/tp/Lean/D1Bound5, branch main, starting commit 806874a. Pinned L
 - Source and verification-tool SHA256 manifests regenerated and checked with `shasum -a 256 -c`: both exit 0, 62 and 24 entries; `local-logs/weighted-row-run9-source-hashes.log` and `local-logs/weighted-row-run9-tool-hashes.log`.
 
 A targeted same-kernel replay is not independent formal review. No fresh clean checkout, whole-project replay, paid CI, or manuscript edit. Spectral weighted Schur test, second branch determinant/adjugate bounds and main theorem remain UNPROVED.
+
+## 2026-10-16 — mixed determinant unit, main worktree
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean exploration/MixedDeterminantTrial.lean`: EXIT 0, both three-theorem and five-theorem trials, logs `local-logs/mixed-det-hourly14-trial01.log`, `local-logs/mixed-det-hourly14-trial02.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.MixedFourDetBound D1Bound5`: EXIT 0, 3024 jobs, log `local-logs/mixed-det-hourly14-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/MixedFourDetBoundAudit.lean`: EXIT 0, five exact types and all allowed transitive axiom sets, log `local-logs/mixed-det-hourly14-axioms.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.MixedFourDetBound`: EXIT 0, same installed kernel, log `local-logs/mixed-det-hourly14-replay.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.WeightedSchur`: EXIT 0, targeted replay of previous unfinished report, log `local-logs/weighted-schur-hourly14-replay.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0; 61 modules / 308 explicit theorems, log `local-logs/mixed-det-hourly14-source-audit.log`.
+- `shasum -a 256 -c` on both regenerated manifests: both EXIT 0, 64 source/toolchain and 26 verification-tool entries; logs `local-logs/mixed-det-hourly14-source-hashes.log`, `local-logs/mixed-det-hourly14-tool-hashes.log`.
+
+No final root theorem, clean-checkout verification, independent reviewer or full-project kernel replay is claimed.
+
+## 2026-10-16 17:11–17:30 CEST — mixed adjugate scalar, matrix and same-sign transfer
+
+- Device `788d1b22-4569-4161-bfbe-d886d48c6a75`, main worktree starting `feb2b68`; no pre-existing project-owned compiler/checker.
+- `lake env lean exploration/MixedAdjugateScalarTrial.lean`: two corrected-sized trials, EXIT 0 for both; second proves six theorems and is byte-identical to `D1Bound5/MixedAdjugateScalarBound.lean`. Logs `local-logs/mixed-adjugate-scalar-hourly16-01.log`, `-02.log`.
+- `lake build D1Bound5.MixedAdjugateEnvelope D1Bound5.MixedAdjugateScalarBound`: EXIT 0, 2916 jobs, log `local-logs/mixed-adjugate-hourly16-target.log`.
+- `lake build D1Bound5.MixedFourAdjugateBound`: EXIT 0, 2920 jobs, log `local-logs/mixed-adjugate-hourly16-bridge01.log`.
+- `lake build D1Bound5.MixedSignedRootAdjugate`: EXIT 0, 2921 jobs, log `local-logs/mixed-adjugate-hourly16-signed01.log`.
+- `LEAN_NUM_THREADS=1 lake build D1Bound5`: EXIT 0, 3028 jobs, log `local-logs/mixed-adjugate-hourly16-root-build.log`.
+- `LEAN_NUM_THREADS=1 lake env lean scripts/MixedAdjugateIntegrationAudit.lean`: EXIT 0, all 14 exact theorem declarations and transitive axiom checks PASS; only `propext`, `Classical.choice`, `Quot.sound`; `local-logs/mixed-adjugate-hourly16-axioms.log`.
+- Each of the four new modules received separate sequential `LEAN_NUM_THREADS=1 lake env leanchecker --verbose D1Bound5.<module>` with EXIT 0. Logs `local-logs/mixed-adjugate-hourly16-replay-*.log`. These are SAME installed Lean kernel, not an independent implementation.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, SOURCE_AUDIT_PASS 65 modules, 322 explicit proved theorems; `local-logs/mixed-adjugate-hourly16-source-audit.log`.
+- The two source/tool SHA256 manifests were regenerated from the prior enumerated paths plus the four new proof modules and the new audit script, checked by `shasum -a 256 -c`: both EXIT 0 (68/27 entries), logs `local-logs/mixed-adjugate-hourly16-source-hashes.log` and `-tool-hashes.log`.
+- Nonfatal linter notices remain; no sorry, admit, custom axioms, native_decide trust, changed Lean/mathlib pins, paid CI, manuscript edits or unrelated project edits. No fresh checkout, independent reviewer or full-project kernel replay. This is one bounded analytic proof unit, NOT a proof of global bound five.
+
+## 2026-10-16 18:15–18:29 CEST — mixed product-four growth integration
+
+- Initial imports from the older sandbox draft failed (missing `Mathlib.Tactic.Omega.olean` and `Mathlib.Tactic.olean`); removed unused imports. Corrected initial isolated module (`exploration/MixedFourAssemblyTrial.lean`) EXIT 0, log `local-logs/mixed-assembly-hourly17-trial03.log`.
+- First full trial EXIT 1 from the syntactic `S.map f` vs pointwise function mismatch, then repaired with a proved matrix extensional equality. Second full isolated Lean elaboration EXIT 0, log `local-logs/mixed-assembly-hourly17-full02.log`.
+- Integrated `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.MixedProductFourGrowth D1Bound5`: EXIT 0, 3029 jobs; `local-logs/mixed-growth-hourly17-build.log`.
+- Exact type and transitive axiom audit: `lake env lean scripts/MixedProductFourGrowthAudit.lean`, EXIT 0, six declarations, each only propext, Classical.choice, Quot.sound; `local-logs/mixed-growth-hourly17-axioms.log`.
+- Installed same-kernel `lake env leanchecker --verbose D1Bound5.MixedProductFourGrowth`: EXIT 0, targeted module replay; `local-logs/mixed-growth-hourly17-replay.log`.
+- `python3.12 scripts/source_audit.py`: EXIT 0, 66 imported modules, 328 explicit theorem declarations; `local-logs/mixed-growth-hourly17-source-audit.log`.
+- Both `shasum -a 256 -c` checks EXIT 0 after refreshing enumerations (69 source/toolchain, 28 verification tools), logs `local-logs/mixed-growth-hourly17-source-hashes.log`, `-tool-hashes.log`.
+- Same-kernel targeted replay is not independent review; no clean checkout or whole-project replay. No mathematical axiom, sorry, admit, native evaluation or manuscript modifications.

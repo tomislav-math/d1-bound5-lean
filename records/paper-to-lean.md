@@ -363,3 +363,44 @@ Integrated source scan: 57 modules, 284 explicit proved theorems. Target/root bu
 | `mixedFour_entrywise_weighted_row_bound` | Conditional weighted row inequality for any complex 4x4 error matrix with stated rowwise <1/18 and <1/64 hypotheses. |
 
 All seven theorem types and transitive axioms audited, source root-imported and kernel replayed. The essential step from row sums to spectral/L2-operator norm has not been formalized. The eight previously developed mixed-sign results were independently axiom-audited and replayed in this invocation. See `records/weighted-row-certificate-20261016.md`.
+
+## Mixed determinant interface — 2026-10-16
+
+- `mixedPairProduct_nearQuarter`: pair with errors <1/18 and <1/64 has product within 7/192 of 1/4.
+- `mixedThreePairDet_norm_lt`: the exact symmetric 4x4 determinant polynomial has norm <3/10 when each opposite-edge product lies within 7/192 of 1/4.
+- `mixedSymmetricFour_det_lt`: six-entry symmetric zero-diagonal matrix, first-row error <1/18 and lower-block error <1/64.
+- `mixed_zero_four_det_norm_lt`: index-free matrix version, no invertibility hypotheses.
+- `mixed_signed_root_det_upper`: maps arbitrary commutative-ring normalized symmetric root matrix with `MixedSignedEntryGood` to the strict `<3/10` bound.
+
+All five imported, compiled, transitive-axiom audited and same-kernel replayed. This is the mixed **determinant** portion of `lem:product-four`, not the mixed adjugate or full growth result. See `records/mixed-four-determinant-20261016.md`.
+
+## Complete mixed adjugate analytic bounds — 2026-10-16
+
+The four new root-imported modules below close the mixed adjugate estimate for
+the actual *same* chosen signed matrix that satisfies the prior determinant
+estimate. Every item is a proved Lean theorem with its exact hypotheses.
+
+| Module | Theorem declarations and role |
+|---|---|
+| `MixedAdjugateScalarBound` | Six theorems: generic independent-radius diagonal/off-diagonal cubic estimates and four strict numerical prototypes, covering both diagonal and off-diagonal types. |
+| `MixedAdjugateEnvelope` | Three exact nonnegative/symmetric/row-sum facts for the 4x4 cofactor envelope, plus `mixedFour_adjugate_norm_of_entries`. |
+| `MixedFourAdjugateBound` | `mixedSymmetricFour_adjugate_norm_lt` uses the full sixteen-cofactor formula; `mixed_zero_four_adjugate_norm_lt` removes choice of coordinates. |
+| `MixedSignedRootAdjugate` | `mixed_signed_root_adjugate_upper` transfers to the original ring; `mixed_signed_root_det_and_adjugate_upper` certifies the **same** signed-root matrix satisfies both mixed analytic estimates. |
+
+Mathematical conclusion: every symmetric complex zero-diagonal 4x4 matrix with
+the first row <1/18 and the remaining 3 entries <1/64 from 1/2 has
+`‖adj F‖<(155/96)*(59/96)^2`, with no invertibility assumption.
+
+Root build 3028 jobs EXIT 0, source/import check 65 modules and 322 explicit
+proved theorems EXIT 0, 14 transitive axioms audited (only propext,
+Classical.choice, Quot.sound), four targeted installed-Lean-kernel replays EXIT
+0, source/tool SHA256 manifests 68/27 PASS. No independent external reviewer
+or fresh clean-checkout replay. See `records/mixed-adjugate-completion-20261016.md`.
+
+The full mixed product-four theorem for actual ordered D(1) quadruples is not
+yet deduced from these matrix facts. Its numerical closure and arithmetical
+normalization must be integrated with the precise hypotheses.
+
+## Mixed product-four complete growth (2026-10-16)
+
+`D1Bound5/MixedProductFourGrowth.lean` closes the paper's second product-four branch using six new theorems: `mixed_four_det_ne_zero_of_entry_bounds`, `productFour_mixed_numeric`, `productFour_mixed_rankOne_numeric`, `productFour_mixed_growth_from_bounds`, `full_ring_productFour_mixed_growth`, `IsD1Tuple.productFour_mixed_growth`. The final declaration assumes only `IsD1Tuple`, ordered moduli, A>=1 and B>=3, and proves D>(3/2)ABC over every imaginary quadratic full ring. Zero radicands and tied moduli included. All six exact elaborated types and axioms audited (standard axioms only), integrated build 3029 jobs EXIT 0, targeted kernel replay EXIT 0, source audit 66 modules/328 theorems EXIT 0. See the dedicated proof record. The bound-five main theorem is still an unproved proposition.

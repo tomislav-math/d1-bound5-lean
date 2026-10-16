@@ -3,6 +3,30 @@
 The main theorem is UNPROVED in Lean. None of the items below is assumed
 as a custom axiom or silently supplied as a hypothesis of a claimed proof.
 
+## Current analytic status (16 October 2026, 17:30 CEST)
+
+The mixed first-row/lower-block symmetric zero-diagonal matrix now has both
+unconditional `‖det F‖<3/10` and `‖adj F‖<(155/96)*(59/96)^2` estimates. The
+same signed matrix over the original commutative ring satisfies BOTH through
+`mixed_signed_root_det_and_adjugate_upper`, with its exact `MixedSignedEntryGood`
+hypothesis. The predicate is provided by the separately proved simultaneous
+sign-existence theorem under pair-product lower thresholds >=3 in the first
+row and >=9 in the remaining block. The new scalar, sixteen-entry, Schur
+and signed-ring transfer proof contains 14 audited and kernel-replayed
+theorems. Historical remarks below that call the mixed determinant,
+adjugate or weighted spectral subproblems open have been superseded.
+
+Still OPEN in `lem:product-four`: assemble the mixed A>=1, B>=3 case
+for an ACTUAL D(1) quadruple, including exact rank-one squared-norm
+control, arithmetical determinant lower bound, nonvanishing, D>18 and the
+numerical inequality. The separate isolated numerical closure exists but
+has not been root-integrated. The first A>=3 branch is proved in the actual
+tuple interface. Beyond product-four, product-five, the all-order Bennett
+determinant identity, structural estimates, exhaustive finite graphs,
+termination and the final sextuple exclusions all remain open.
+
+
+
 ## Full-ring bridge: now proved
 
 The continuation constructs the full ring equivalence for every imaginary
@@ -148,3 +172,15 @@ Seven new root-imported declarations in `D1Bound5/WeightedRowCertificate.lean` p
 The previously prepared eight-declaration `D1Bound5/MixedRootMatrixSigns.lean` also passed targeted transitive-axiom audit and same-kernel replay in this run, making the mixed sign-choice machinery available for the next operator-norm bridge. The root build includes both modules; the source/import audit records 59 modules and 299 explicit proved theorems. No fresh clean-checkout verification or independent mathematical review occurred.
 
 **Unfinished dependency:** From the weighted row-sum certificate and symmetric entrywise moduli, prove the weighted Schur/spectral comparison that yields `‖E‖_2 ≤ 11/96` (preferably strict with the given strict entry bounds). Do not use the row inequality as a substitute for operator norm control. Then prove determinant/adjugate estimates for `s = 59/96`, `h = 155/96`, and close the `A >= 1, B >= 3` product-four case. Bennett's identity, complete finite search soundness/coverage, and final bound-five theorem remain open.
+
+## Mixed determinant milestone — 2026-10-16
+
+CLOSED: full ring-agnostic `mixed_signed_root_det_upper`, showing `<3/10` for the normalized signed-root matrix after mixed sign selection. It only uses the stated `MixedSignedEntryGood` conditions. The operator-norm weighted Schur lemma is also kernel-replayed (exit zero).
+
+OPEN: Prove `‖F.adjugate‖ < (155/96)*(59/96)^2` for that SAME mixed normalized matrix. The polynomial determinant `<3/10` alone does not give the required adjugate estimate. Then bind both with integral determinant lower bound, squared-size estimate and the already proved numerical conditional lemma to establish D>(3/2)ABC for actual D(1) quadruples. Product-five, Bennett all-orders identity, certified finite coverage and final sextuple exclusion remain open.
+
+## 2026-10-16 — product-four status update
+
+CLOSED (formal theorem, kernel replayed): `IsD1Tuple.productFour_mixed_growth`, the full-ring A>=1, B>=3 bound D>(3/2)ABC. This closes the remaining mixed case, alongside the already proved A>=3 branch. It is unconditional on any auxiliary signed matrix or tail-growth witness beyond `IsD1Tuple` and the stated norm lower bounds. See `records/mixed-product-four-growth-20261016.md`.
+
+OPEN: product-five, full arbitrary-order Bennett determinant identity, checker soundness/exhaustive coverage and descent termination for the large finite computations, the three sextuple exclusions and final complete `MainStatement` proof. Final clean checkout, independent statement review, global axiom audit and whole-root kernel replay are not yet done.

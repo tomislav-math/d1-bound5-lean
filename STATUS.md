@@ -2,6 +2,16 @@
 
 2026-10-16. IN PROGRESS. MAIN THEOREM UNPROVED.
 
+## Latest checked unit — mixed adjugate and same-sign determinant (17:30 CEST)
+
+Four root-imported modules `MixedAdjugateScalarBound`, `MixedAdjugateEnvelope`, `MixedFourAdjugateBound` and `MixedSignedRootAdjugate` contain 14 new proved theorems. An arbitrary symmetric complex zero-diagonal 4x4 matrix with first-row entry deviations <1/18 and lower-block deviations <1/64 from 1/2 has `‖adj F‖ < (155/96)*(59/96)^2`. The proof discharges all sixteen cofactor cases from two independent-radius scalar identities and a symmetric Schur envelope. The bound requires no invertibility. The same ring-valued signed root matrix and complex roots now simultaneously satisfy `‖det F‖<3/10` and the stated adjugate bound, provided `MixedSignedEntryGood` holds (the existing sign-choice theorem supplies this predicate under the proper pair-product thresholds). Zero squares and modulus ties remain permitted.
+
+Root build PASS EXIT 0 (3028 jobs), transitive axiom audit PASS for all 14 declarations (only propext, Classical.choice, Quot.sound), all four targeted same-kernel leanchecker replays PASS EXIT 0, source/import audit PASS (65 modules, 322 proved theorems), both SHA256 manifests PASS (68 source/config and 27 tools). See `records/mixed-adjugate-completion-20261016.md`, `scripts/MixedAdjugateIntegrationAudit.lean`, `local-logs/mixed-adjugate-hourly16-*`, `records/runs/20261016T151125Z-hourly16-START.md` and its FINISH.
+
+The actual mixed A>=1,B>=3 growth theorem for D(1)-quadruples is STILL OPEN: join the matrix bounds to the arithmetic determinant lower bound, rank-one squared-norm bound, nonvanishing and isolated exact numerical closure, with their original hypotheses. `product-five`, the genuine arbitrary-order Bennett identity, complete finite graph/descent and the main bound-five exclusion also remain open. Targeted replays are same installed Lean kernel, not an independent reviewer or clean-checkout verification.
+
+
+
 ## Latest checked unit — mixed weighted-row certificate (13:07 CEST)
 
 `D1Bound5/WeightedRowCertificate.lean` proves seven declarations, including the exact symmetric nonnegative 4-by-4 envelope with weights (3/2,1,1,1) and weighted row bound 11/96, and transfers this to arbitrary complex zero-diagonal matrices satisfying first-row <1/18 and lower-block <1/64 entrywise bounds. This is a weighted ROW certificate, NOT yet a proof that the L2 operator norm is <=11/96. The essential weighted Schur/spectral comparison remains OPEN.
@@ -272,3 +282,17 @@ Saved `exploration/TupleRootMatrixBridgeTrial.lean` (SHA256 `18bf68c70f7461d132f
 `D1Bound5/TupleRootMatrixBridge.lean` is now ROOT-INTEGRATED, replacing the previously isolated proof with byte-identical content. Two proved theorems construct a symmetric original-ring root matrix from any indexed `IsD1Tuple` and prove the A>=3 branch `D>2ABC` for actual ordered D(1) quadruples in every imaginary quadratic full integer ring, without separate matrix/tail hypotheses. Integrated build EXIT 0 (3020 jobs); dedicated exact-type and transitive axiom audit EXIT 0; installed same-kernel replay EXIT 0; source/import audit EXIT 0 (57 modules, 284 explicit proved theorems); both SHA256 manifests checked EXIT 0. No full clean-checkout replay or independent review. See `records/tuple-root-matrix-bridge-20261016.md` and `records/runs/20261016T091135Z-hourly11-FINISH.md`.
 
 Remaining: weighted A>=1,B>=3 branch of product-four, product-five, genuine Bennett arbitrary-order determinant, certified finite graph/descent coverage and final sextuple exclusions. `MainStatement` remains a proposition, UNPROVED.
+
+## 16 October 2026 — mixed determinant upper bound and weighted Schur replay
+
+`D1Bound5/MixedFourDetBound.lean` is root-integrated. Five new theorems prove mixed pair-product proximity 7/192 and the strict determinant bound `‖F.det‖<3/10` for any symmetric zero-diagonal 4x4 complex matrix with first-row deviations <1/18 and lower-block deviations <1/64, and transport this bound to a ring-valued signed-root matrix satisfying the existing mixed sign predicate. Target/root Lake build EXIT 0 (3024 jobs), exact type/axiom audit for all five EXIT 0 with only the three standard axioms, installed same-kernel replay EXIT 0, source/import audit EXIT 0 (61 modules, 308 explicit proved theorems), both hash manifests EXIT 0. The earlier weighted Schur module was also replayed successfully with kernel exit 0 in this invocation. No independent review or clean-checkout replay.
+
+The determinant bound is stronger than the numerical threshold h*s^3 for h=155/96 and s=59/96. The **mixed adjugate bound** for the SAME chosen signed-root matrix remains OPEN, followed by the ring rank-one/numerical assembly for A>=1,B>=3 and product-five. The full bound-five `MainStatement` is still unproved. See `records/mixed-four-determinant-20261016.md`.
+
+## 2026-10-16 — both product-four growth branches formally proved
+
+The mixed second branch is now root-integrated as `IsD1Tuple.productFour_mixed_growth`: every ordered D(1)-quadruple in the full ring of integers of every imaginary quadratic field with A>=1 and B>=3 satisfies D>(3/2)ABC. It uses a single mixed signed-root matrix, completed mixed determinant and adjugate estimates, weighted Schur invertibility, arithmetic determinant lower bound and exact numerical closure. No nonzero-square or strict-modulus exclusions.
+
+Six new declarations: integrated Lake EXIT 0 (3029 jobs), axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound), targeted same-kernel replay EXIT 0, source/import audit EXIT 0 (66 modules, 328 proved declarations), source/tool hashes 69/28 PASS. Previous A>=3 branch was already proved. No independent external review or fresh clean-checkout replay. Details: `records/mixed-product-four-growth-20261016.md` and hourly17 START/PROGRESS/FINISH records.
+
+`MainStatement` remains UNPROVED. Next: product-five, genuine arbitrary-order Bennett determinant identity, completeness proofs for large finite checks and three sextuple exclusions. Preserve the frozen manuscript and pinned mathlib.

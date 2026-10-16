@@ -58,3 +58,12 @@ import D1Bound5.TupleRootMatrixBridge
 import D1Bound5.TupleRootMatrixBridge
 import D1Bound5.MixedRootMatrixSigns
 import D1Bound5.WeightedRowCertificate
+import D1Bound5.WeightedSchur
+
+import D1Bound5.MixedFourDetBound
+
+import D1Bound5.MixedAdjugateScalarBound
+import D1Bound5.MixedAdjugateEnvelope
+import D1Bound5.MixedFourAdjugateBound
+import D1Bound5.MixedSignedRootAdjugate
+import D1Bound5.MixedProductFourGrowth
