@@ -88,3 +88,10 @@ the weaker wrapper. See the latest statement-review entry.
 ## Quantitative matrix perturbation update (16 October 2026)
 
 The four-by-four normalized matrix's nonsingularity and the inverse bound `‖F⁻¹‖<8/3` for `‖F-(J-I)/2‖<1/8` are now proved without extra mathematical axioms. The simultaneous signed-root construction has a formally proved corollary with the same inverse bound when all pair products have modulus at least nine. For `lem:product-four`, the still essential next proof unit is the **upper** bound `|det F|<hs³` and `‖adj F‖<hs²` from the singular-value perturbation estimates, followed by the rank-one determinant estimate and the separately required weighted `A≥1,B≥3` branch. The current inverse estimates alone do not prove either product-four inequality.
+
+
+## Rank-one determinant step and numerical closure (16 October 2026)
+
+The rank-one determinant/cofactor inequality used in (integrated-1) now has a formal proof, including the non-Hermitian bilinear L2 estimate and transfer to the scaled root matrix. The exact A>=3 rational numerical closing inequality is also proved. The formal implication D>2ABC still explicitly assumes |det F|<h*s^3, ||adj F||_2<h*s^2, a squared-size bound for the input vector, and the lower bound coming from the integral root matrix. These hypotheses must be proved in the original arithmetic setting before claiming the product-four lemma.
+
+Next: construct the sharp determinant and adjugate perturbation bounds from the established operator-norm estimate ||F-(J4-I4)/2||<3*(128/8649). The singular-value/exterior-power estimates are not yet formalized. Then prove the mixed A>=1,B>=3 weighted estimate and assemble both branches. The Bennett all-orders identity, large finite-graph/Pell completeness and three final sextuple exclusions remain separate open obligations.

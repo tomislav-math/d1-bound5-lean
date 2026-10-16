@@ -249,3 +249,22 @@ and main bound-five theorem remain OPEN.
 | `exists_signed_root_matrix_with_bounded_inverse` | Applies these conclusions to an actual simultaneous symmetric ring-valued sign choice, retaining pair-square identities |
 
 The new module and integrated project compiled with exit 0, the 45-module source/import audit passed, all four explicit theorem types and transitive axioms passed, and the new module passed the installed Lean kernel replay. The A>=1 mixed-row upper operator bound, determinant and adjugate upper estimates, and full lemma `lem:product-four` remain open. See `records/reference-perturbation-20261016.md`.
+
+
+## Rank-one determinant and numerical closure (16 October 2026)
+
+The following nine theorems are compiled, transitive-axiom audited, and individually kernel-replayed through their three containing Lean modules.
+
+| Declaration | Manuscript role |
+|---|---|
+| `bilinear_mulVec_norm_le` | Non-Hermitian complex bilinear quadratic-form bound by L2 matrix operator norm |
+| `rankOneDeterminant` | Rank-one determinant lemma, with det F nonzero |
+| `adjugate_eq_det_smul_inverse` | Cofactor/inverse identity |
+| `rankOneDeterminant_norm_le` | Determinant bound through the inverse norm |
+| `rankOneDeterminant_adjugate_norm_le` | Determinant bound in the adjugate form used by (integrated-1) |
+| `scaledRootMatrix_det_adjugate_norm_le` | Exact transport to the normalized/scaled root matrices |
+| `productFour_numeric` | Exact rational terminal inequality for the A>=3 case |
+| `productFour_rankOne_numeric` | Derives |det N|<D^2/2 from explicit det/adjugate upper-bound hypotheses |
+| `productFour_growth_from_bounds` | Derives D>2ABC also assuming the integral determinant lower bound |
+
+The last two statements remain conditional. They do not prove `lem:product-four`; its upper perturbative determinant/adjugate hypotheses and the mixed-row branch remain open. The source audit counts 48 modules and 256 explicit proved theorems. Root build, targeted axiom audit, and three individual Lean kernel replays each exited 0.

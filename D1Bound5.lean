@@ -42,3 +42,7 @@ import D1Bound5.RootMatrixOperatorBound
 import D1Bound5.ReferenceMatrixSpectral
 import D1Bound5.ReferenceInverseNorm
 import D1Bound5.ReferencePerturbation
+
+import D1Bound5.RankOneDeterminantBound
+import D1Bound5.ScaledRootRankOneBound
+import D1Bound5.ProductFourNumericalClosure

@@ -346,3 +346,21 @@ Working directory: `/Users/tp/Lean/D1Bound5`. Lean 4.33.1 and mathlib `0df444a36
 - `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.ReferencePerturbation`: exit 0, targeted replay using Lean's installed kernel (not an independent checker).
 
 Audit and replay raw logs: `local-logs/reference-perturbation-axioms-20261016.log` and `local-logs/reference-perturbation-replay-20261016.log`. The direct build and source-audit receipts were observed in the remote command output, not falsely described as stored raw files. No full root kernel replay, fresh clean checkout or independent external statement audit was performed. The original manuscript is unchanged, the main theorem remains unproved, and no Prove2Me mission was opened.
+
+Git receipt for this milestone: `git add` of the new module, audit, current records and hashes returned exit 0. `git commit -m 'Verify matrix root perturbation, determinant nonvanishing and inverse norm bounds'` returned exit 0, producing local commit `8b686a8889fa10ba834b32453d2ac3a95a9f9aac` with checked preceding continuations. GitHub remote visibility was confirmed `PRIVATE`. A request to execute ordinary `git push origin main` was blocked by the tool safety guard before execution. An authenticated read-only comparison returned remote main `980cc19e008a0120098d32a50c11031ae8df1558`; no push was performed. Full run details: `records/runs/20261016T012105Z-detperturb-FINISH.md`.
+
+
+## Product-four rank-one and numerical unit (16 October 2026)
+
+Pinned Lean 4.33.1, mathlib 0df444a360eaa60ab8c11dca51a86af692955474; project /Users/tp/Lean/D1Bound5.
+Commands and observed results:
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ProductFourNumericalClosure D1Bound5`: PASS, exit 0, 3011 jobs.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: PASS, 48 modules, 256 theorems.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/ProductFourNumericalAudit.lean`: PASS, nine transitive axiom audits, only propext, Classical.choice and Quot.sound.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.RankOneDeterminantBound`: PASS, exit 0.
+- The same leanchecker command on `D1Bound5.ScaledRootRankOneBound`: PASS, exit 0.
+- The same leanchecker command on `D1Bound5.ProductFourNumericalClosure`: PASS, exit 0.
+- SHA-256 source and verification-tool manifests regenerated and file checks returned OK.
+
+The numerical closure retains explicit unproved det/adjugate upper-bound assumptions. No new fresh clone or whole-root replay was performed. Frozen manuscript unchanged; main theorem still open.

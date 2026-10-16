@@ -2,6 +2,18 @@
 
 2026-10-16. IN PROGRESS. MAIN THEOREM UNPROVED.
 
+## Latest verified proof unit: rank-one determinant and numerical closure
+
+The new `RankOneDeterminantBound.lean` and `ScaledRootRankOneBound.lean` prove the complex bilinear L2 norm estimate and the exact rank-one determinant/adjugate inequality for invertible four-by-four matrices, including its precise transfer to the normalized root matrix. The transpose is algebraic, not conjugate; symmetry and Hermitian hypotheses are not introduced.
+
+`ProductFourNumericalClosure.lean` proves the exact rational end-of-proof inequality for the A>=3 branch and the implication |det N|<D^2/2, hence D>2ABC, **conditional** on the still-open bounds |det F|<h*s^3 and ||adj F||_2<h*s^2 and the explicitly stated integral determinant lower bound. Its theorem types retain these hypotheses. The full `lem:product-four` is not yet proved.
+
+Targeted module and integrated root builds: PASS (3011 root jobs, exit 0). Source/import audit: PASS (48 modules, 256 explicit theorems). The nine new theorems passed transitive axiom audit with only propext, Classical.choice and Quot.sound. Each of the three new modules separately passed installed Lean-kernel replay, exit 0. These are three targeted replays, not a fresh whole-project replay or an independent external checker. See `records/product-four-rankone-numerical-20261016.md` and the dated run records.
+
+The next mathematical dependency is the genuine perturbative upper bounds on det F and adj F, followed by the mixed A>=1,B>=3 case. Bennett's all-orders identity, large graph completeness and the final sextuple exclusions remain OPEN.
+
+All 18 selected files were staged successfully, and their staged diff and hashes checked. The new `git commit` command was blocked by the remote-tool safety guard, so this unit remains local and staged. No push was made. Starting local HEAD remains 8b686a8.
+
 ## Latest verified proof unit: reference perturbation and bounded inverse
 
 `D1Bound5/ReferencePerturbation.lean` proves four new theorems. For H=(J₄-I₄)/2 and K=H⁻¹ it proves `det F ≠ 0` whenever `‖K(F-H)‖<1`, by a genuine normed-ring unit argument. Under the stronger numerical condition `‖F-H‖<1/8` it proves the strict bound `‖F⁻¹‖<8/3`. A separate corollary transfers nonsingularity and the inverse bound to the existing simultaneous symmetric sign choice over an arbitrary commutative coefficient ring, retaining all off-diagonal integral square identities.
@@ -9,6 +21,8 @@
 The project source/import scan PASSED for 45 modules and 247 theorems. The integrated build returned exit 0 (3008 jobs). Targeted transitive axiom audit PASSED for all four new theorem declarations, with only propext, Classical.choice and Quot.sound. The installed Lean kernel replay of ReferencePerturbation returned exit 0. No new whole-root replay, fresh clean checkout, or independent reviewer is claimed.
 
 This completes a quantitative inverse estimate required later for the four-by-four prefix in `lem:product-five`. It does NOT prove the upper determinant or adjugate perturbation bounds needed for `lem:product-four`. The weighted A>=1,B>=3 branch, arbitrary-order Bennett identity, finite graph coverage and bound-five theorem remain OPEN. See `records/reference-perturbation-20261016.md`.
+
+Local verified commit `8b686a8` succeeded. GitHub repository visibility was confirmed PRIVATE, but the push was blocked by the remote-tool safety guard. The last verified remote main is `980cc19`. Do not claim these newest changes have been pushed.
 
 ## Latest verified proof unit: sharp reference inverse operator norm
 
