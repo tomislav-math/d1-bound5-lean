@@ -1,5 +1,13 @@
 # Status
 
+## 17 October 2026 — actual full-ring product-five growth proved
+
+`IsD1Tuple.productFive_growth` is now root-imported and proves the complete manuscript lemma `lem:product-five`: for every ordered injective nonzero D(1) quintuple in the FULL integer ring of every imaginary quadratic field, with second modulus at least three, `3 * A * B * S * C < D` (expressed as a product of the first four complex moduli). The first modulus bound `A >= 1` is derived from full-ring integrality, not assumed. Zero pair-square roots, half-integral bases and modulus ties are allowed.
+
+The same compatible signed original-ring matrix supplies the prefix determinant, inverse vector, Schur proximity and bilinear bounds. The two inequalities `||G - H||₂ < 1/2` and `|det G| < 1/3` are proved for the actual tuple and fed to the already checked full-ring arithmetic endpoint, without new auxiliary hypotheses. Seven root-imported theorems in `ProductFivePrefixSizeCross`, `ProductFiveTupleSchur` and `ProductFiveTupleGrowth` complete this block. The pinned integrated build EXIT 0 (3045 jobs) and exact seven-theorem transitive axiom audit EXIT 0 (only `propext`, `Classical.choice`, `Quot.sound`). Targeted kernel replays, source audit and manifests are recorded separately when completed. See `records/product-five-tuple-growth-20261017.md`.
+
+The genuine arbitrary-order Bennett determinant identity, interpolation/approximation, complete finite certificates and descent, final three sextuple exclusions, and `MainStatement` remain UNPROVED. No fresh clean checkout or independent statement review has been performed.
+
 ## 17 October 2026 — checked product-five Schur proximity interface
 
 `D1Bound5/ProductFiveSchurNear.lean` proves five theorems: entrywise 4x4 operator norm < 4δ, Schur distance <1/2 from the exact scalar correction <9/100, and an ordered prefix-coordinate ratio <1/18 from product-four growth. All are conditional only on the hypotheses stated in the formal types; they are not yet specialized to an actual signed D(1) quintuple. The pinned target+root build EXIT 0 (3042 jobs); exact types/axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound); targeted installed same-kernel replay EXIT 0; source/import audit EXIT 0 (79 modules, 380 theorems); both SHA256 manifests EXIT 0 (82/43 paths). See `records/product-five-schur-near-20261017.md`. No fresh clean checkout or independent reviewer.
@@ -354,3 +362,12 @@ Three Lean proof declarations compile in `exploration/ProductFivePrefixSizeConti
 `D1Bound5/ProductFiveNormalizedQuadratic.lean` is ROOT-INTEGRATED. Two verified theorems prove `||(w dot F^-1*w)/d^2||<8/243` from `||F-halfOffDiagonal||<1/8`, `||w||_2<||d||/9`, `d!=0`, and `||p/d^2||<1/2916` from `||p||<1` and `||d||>=54`. Integrated pinned build EXIT 0 (3041 jobs), exact-type/transitive axiom audit EXIT 0 (allowed three axioms only), targeted same-kernel replay EXIT 0, source/import audit EXIT 0 (78 root modules, 375 explicit theorem declarations), both SHA256 manifest checks EXIT 0. No clean-checkout or independent review. Full tuple-level product-five and `MainStatement` UNPROVED.
 
 Next: integrate and connect the isolated prefix-size/cross-form lemma to ordered actual quintuple data, then discharge the determinant and Schur proximity hypotheses for a single signed five-entry witness. Bennett, certified finite coverage/descent, and final sextuple exclusions are still OPEN. See `records/product-five-normalized-quadratic-20261017.md`.
+
+## 17 October 2026 — product-five integrity gate recovered
+
+The complete tuple-level product-five growth proof has now passed a fresh cached
+integrated build (3045 jobs, exit 0) after the single malformed SHA-256 record
+was corrected without changing any Lean source. Strict source/tool fingerprint
+checks pass. This supersedes the prior fingerprint-gate failure, not the
+historical denial record. See records/github-sync-20261017T094740CEST.md.
+The global bound-five theorem and final verification gates remain open.

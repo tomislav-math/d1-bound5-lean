@@ -8,6 +8,12 @@ in `build-record.md`. No row below claims the main theorem is proved.
 |---|---|
 | `IsD1`, `IsD1Tuple` | Section 1, exact finite-set and indexed definitions |
 | `MainStatement` | `thm:main`, proposition only, NOT proved |
+| `IsD1Tuple.productFive_growth` | `lem:product-five`, FULL ordered five-entry growth `D>3ABSC`, root-proved 17 October 2026 |
+| `IsD1Tuple.five_compatible_schur_det_small` | Actual same-sign original-ring Schur determinant `|det G|<1/3` |
+| `IsD1Tuple.five_compatible_schur_near` | Actual same-sign original-ring Schur proximity `‖G-H‖₂<1/2` |
+| `IsD1Tuple.exists_five_signed_schur_witness` | One compatible five-entry original-ring witness for prefix and Schur estimates |
+| `productFive_prefix_l2_lt_last_div_nine` | Prefix norm bound from last-four product growth |
+| `productFive_cross_div_norm_lt_11_108` | Complex bilinear cross bound without Hermitian assumptions |
 | `IsD1.subset` | Passing to a subset in the sextuple reduction |
 | `IsD1.map_equiv` | Ring equivalences preserve D(1) |
 | `IsD1.neg` | Simultaneous negation symmetry |

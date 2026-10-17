@@ -80,3 +80,6 @@ import D1Bound5.ProductFiveInverseVector
 import D1Bound5.ProductFiveSignedPrefixInverse
 import D1Bound5.ProductFiveNormalizedQuadratic
 import D1Bound5.ProductFiveSchurNear
+import D1Bound5.ProductFivePrefixSizeCross
+import D1Bound5.ProductFiveTupleSchur
+import D1Bound5.ProductFiveTupleGrowth

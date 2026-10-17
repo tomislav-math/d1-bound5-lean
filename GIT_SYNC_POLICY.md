@@ -56,3 +56,34 @@ permissions are already Allow all actions, and GitHub permission is ADMIN;
 OpenAI documents that these do not override separate safety protections.
 Escalate recurring pre-execution denials with the exact evidence rather than
 reinstalling Git, broadening access, or claiming a platform cause is known.
+
+## 17 October 2026 — exact-index preparation review
+
+A separate READ-ONLY helper is available as `scripts/git_sync_index_review.py`.
+It verifies source/tool manifest bytes from the Git INDEX against the indexed
+file blobs, checks manifest coverage, selected path scope and credential-like
+content, confirms the fixed PRIVATE destination, and detects index/HEAD changes
+during its inspection. It never stages, commits, pushes, refreshes fingerprints,
+changes permissions or starts a background service.
+
+Use it to distinguish an already reviewed staged snapshot from newer unfinished
+working-tree edits. The original `git_sync_preflight.py` checks working-tree
+fingerprints; retain it for validation of the current working-tree state.
+An INDEX_REVIEW_PASS only describes the exact indexed snapshot. It does NOT
+certify newer source edits, their compilation, theorem types, or kernel replay.
+Matching build receipts and a review of the exact staged diff are still required.
+If the old preflight fails solely on newer unstaged source, do not rewrite the
+old manifest to claim that source was compiled; keep the snapshots distinct.
+Any mismatch inside the INDEX itself is a hard failure for that snapshot.
+
+The isolated 12-test suite is `scripts/test_git_sync_index_review.py`. It uses
+temporary fixture repositories, never the project checkout or GitHub. It tests
+staged-versus-working-tree divergence, mismatched and missing fingerprints,
+symlinks, deletions, a synthetic credential pattern, path traversal, lock
+preservation and absence of changes to the reviewed repository.
+
+The ordinary publication calls remain separate and subject to all existing
+checks. Do not route a previously denied operation through this helper or any
+other wrapper. Respect concurrent proof workers and do not change their index.
+This corrects local preparation semantics, not the cause of external tool
+refusals. No permanent remedy for those refusals is claimed.

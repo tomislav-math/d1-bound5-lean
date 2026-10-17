@@ -628,3 +628,25 @@ Additional closure check at 22:13 CEST: `LEAN_NUM_THREADS=1 lake env leanchecker
 - `LEAN_NUM_THREADS=1 lake env leanchecker --verbose D1Bound5.ProductFiveSchurNear`: EXIT 0, targeted same-installed-kernel replay, `local-logs/product-five-schur-0711-replay.log`.
 - `scripts/source_audit.py`: EXIT 0, 79 root-imported modules and 380 explicit theorems. Both `shasum -a 256 -c` checks EXIT 0, 82 proof-source and 43 audit-tool records.
 - No independent mathematical referee, fresh clean checkout, whole-root kernel replay, or final bound-five theorem claim. Git outcome must be independently evidenced.
+
+## 2026-10-17 09:19–09:35 CEST — actual tuple-level product-five growth
+
+- New root-imported modules: `ProductFivePrefixSizeCross` (3 theorems), `ProductFiveTupleSchur` (2 theorems), `ProductFiveTupleGrowth` (2 theorems).
+- Earlier witness candidate's isolated pinned elaboration EXIT 0; pinned target build of the first two modules EXIT 0, 3023 jobs, `local-logs/product-five-0919-bridge-build.log`.
+- Growth trial01 EXIT 1: wrong existing determinant-neighborhood threshold. Replaced with the already proved radius-1/2 Schur criterion without changing the goal. Trial02 EXIT 0; logs `local-logs/product-five-0919-growth-trial{01,02}.log`.
+- Integrated `LEAN_NUM_THREADS=1 lake build D1Bound5.ProductFiveTupleGrowth D1Bound5`: EXIT 0, 3045 jobs, `local-logs/product-five-0919-integrated-build.log`.
+- Exact theorem type/transitive axiom audit: EXIT 0 for all 7 declarations; axioms only `propext`, `Classical.choice`, `Quot.sound`, log `local-logs/product-five-0919-axioms.log`.
+- Three targeted same-installed-kernel `leanchecker --verbose` replays: EXIT 0, `local-logs/product-five-0919-replay-*.log`. These are NOT independent review or a whole-root replay.
+- `scripts/source_audit.py`: PASS, 82 root-imported modules and 387 explicit proved declarations.
+- Fingerprint gate INCOMPLETE. Tool manifest 44 files checked. Source manifest has one malformed SHA-256 line (line 84), and `shasum -a 256 -c` emitted an improperly formatted line warning despite exit 0. A focused correction was PRE_EXECUTION_DENIED by tool safety. Read-only Git preflight failed precisely on the fingerprint mismatch; no Git commit/push. See `records/runs/20261017T091939CEST-productfive-determinant-PRE_EXECUTION_DENIED.md`.
+- No clean checkout, independent theorem-statement review, full kernel replay or proof of `MainStatement`. The product-five lemma itself is now root-proved and audited; its repository integrity/commit gate remains pending.
+
+## 2026-10-17 — private synchronization validation
+
+Exact one-character correction of the ProductFiveTupleSchur source SHA-256; no
+Lean source edits. Strict manifests pass (85 source/config entries, 46 tools).
+Cached pinned `LEAN_NUM_THREADS=1 lake build D1Bound5` EXIT 0, 3045 jobs,
+`local-logs/github-sync-20261017T094740CEST-build.log`. Source/import audit
+PASS (82 modules, 387 theorems). All 12 Git-index review fixture tests PASS.
+Prior theorem/axiom and targeted same-kernel receipts were inspected, not rerun.
+See `records/github-sync-20261017T094740CEST.md` and subsequent Git receipts.

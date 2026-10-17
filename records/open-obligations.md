@@ -3,6 +3,24 @@
 The main theorem is UNPROVED in Lean. None of the items below is assumed
 as a custom axiom or silently supplied as a hypothesis of a claimed proof.
 
+## 17 October 2026 — product-five growth CLOSED (new authoritative status)
+
+`IsD1Tuple.productFive_growth` proves the full ordered five-entry inequality
+`D > 3ABSC` in every imaginary quadratic full integer ring, with `B >= 3`.
+The root proof constructs one compatible signed original-ring matrix; no
+independent Schur, bilinear, determinant or growth assumption is inserted.
+The first-entry lower bound comes from nonzero integral norm. Root build and
+seven-declaration transitive-axiom audit PASS; further verification receipts
+are in the current run records. This supersedes all older OPEN mentions of
+`lem:product-five` below. A fortiori, it does NOT prove the global bound five.
+
+Still OPEN: interpolation/remainder inequalities, the genuine arbitrary-order
+Bennett determinant identity, all-orders approximation consequences, finite
+certificate checker correctness and exhaustive vertex/edge coverage, reversible
+descent termination and field-range cutoffs, final exclusions for zero, one
+and at least two small entries, and the faithful `MainStatement` proof with
+independent statement audit and a clean-checkout verification.
+
 ## Product-five arithmetic closure (16 October 2026, evening)
 
 The root-imported `ProductFiveArithmeticClosure.lean` proves, for every
