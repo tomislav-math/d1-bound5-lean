@@ -1,0 +1,15 @@
+@D1Bound5.reciprocal_pole_hsymm_finite_tail : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  s.Nonempty →
+    Set.InjOn a ↑s →
+      (∀ i ∈ s, a i ≠ 0) →
+        ∀ (z : F),
+          (∀ i ∈ s, a i ≠ z) →
+            ∀ (n : ℕ),
+              ∑ i ∈ s, (∏ j ∈ s.erase i, (a i - a j))⁻¹ / (a i - z) =
+                ∑ k ∈ range n,
+                    z ^ k *
+                      ((-1) ^ (#s - 1) * (∏ i ∈ s, a i)⁻¹ *
+                        (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm (↥s) F k)) +
+                  z ^ n * ∑ i ∈ s, (∏ j ∈ s.erase i, (a i - a j))⁻¹ / (a i ^ n * (a i - z))
+'D1Bound5.reciprocal_pole_hsymm_finite_tail' depends on axioms: [propext, Classical.choice, Quot.sound]

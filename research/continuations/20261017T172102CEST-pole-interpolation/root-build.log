@@ -1,0 +1,216 @@
+ℹ [1755/1757] Replayed D1Bound5.WeightedPoleFiniteTail
+info: D1Bound5/WeightedPoleFiniteTail.lean:80:0: @D1Bound5.reciprocal_pole_finite_tail : ∀ {F : Type u_1} [inst : Field F] (a z : F),
+  a ≠ 0 → a ≠ z → ∀ (n : ℕ), (a - z)⁻¹ = ∑ k ∈ range n, z ^ k / a ^ (k + 1) + z ^ n / (a ^ n * (a - z))
+info: D1Bound5/WeightedPoleFiniteTail.lean:81:0: @D1Bound5.weighted_poles_finite_tail : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι] (s : Finset ι)
+  (a w : ι → F) (z : F),
+  (∀ i ∈ s, a i ≠ 0) →
+    (∀ i ∈ s, a i ≠ z) →
+      ∀ (n : ℕ),
+        ∑ i ∈ s, w i / (a i - z) =
+          ∑ k ∈ range n, z ^ k * ∑ i ∈ s, w i / a i ^ (k + 1) + z ^ n * ∑ i ∈ s, w i / (a i ^ n * (a i - z))
+info: D1Bound5/WeightedPoleFiniteTail.lean:82:0: 'D1Bound5.reciprocal_pole_finite_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/WeightedPoleFiniteTail.lean:83:0: 'D1Bound5.weighted_poles_finite_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [1756/1771] Built D1Bound5.PoleHomogeneousTail (23s)
+info: D1Bound5/PoleHomogeneousTail.lean:54:0: @D1Bound5.reciprocal_pole_hsymm_finite_tail : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  s.Nonempty →
+    Set.InjOn a ↑s →
+      (∀ i ∈ s, a i ≠ 0) →
+        ∀ (z : F),
+          (∀ i ∈ s, a i ≠ z) →
+            ∀ (n : ℕ),
+              ∑ i ∈ s, (∏ j ∈ s.erase i, (a i - a j))⁻¹ / (a i - z) =
+                ∑ k ∈ range n,
+                    z ^ k *
+                      ((-1) ^ (#s - 1) * (∏ i ∈ s, a i)⁻¹ *
+                        (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm (↥s) F k)) +
+                  z ^ n * ∑ i ∈ s, (∏ j ∈ s.erase i, (a i - a j))⁻¹ / (a i ^ n * (a i - z))
+info: D1Bound5/PoleHomogeneousTail.lean:55:0: 'D1Bound5.reciprocal_pole_hsymm_finite_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2991/3053] Replayed D1Bound5.EvenDeterminant
+warning: D1Bound5/EvenDeterminant.lean:45:29: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, h00, h01, h10, h11, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [2993/3053] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2994/3053] Replayed D1Bound5.RootMatrixSigns
+warning: D1Bound5/RootMatrixSigns.lean:55:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3018/3053] Replayed D1Bound5.AdjugateFourBounds
+warning: D1Bound5/AdjugateFourBounds.lean:49:46: This simp argument is unused:
+  Fin.sum_univ_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.updateRow_apply, Pi.single_apply, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateFourBounds.lean:165:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateFourBounds.lean:174:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3019/3053] Replayed D1Bound5.AdjugateOffDiagonal
+info: D1Bound5/AdjugateOffDiagonal.lean:73:28: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: D1Bound5/AdjugateOffDiagonal.lean:54:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateOffDiagonal.lean:111:41: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateOffDiagonal.lean:112:41: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3022/3053] Replayed D1Bound5.MixedRootMatrixSigns
+warning: D1Bound5/MixedRootMatrixSigns.lean:136:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3023/3053] Replayed D1Bound5.WeightedRowCertificate
+warning: D1Bound5/WeightedRowCertificate.lean:40:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:41:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:47:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:48:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3027/3053] Replayed D1Bound5.ProductFiveBlockDet
+warning: D1Bound5/ProductFiveBlockDet.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3031/3053] Replayed D1Bound5.AdjugateCoverage
+warning: D1Bound5/AdjugateCoverage.lean:27:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AdjugateCoverage.lean:94:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AdjugateCoverage.lean:94:34: Unused tactic linter: `exact (hsym _ _).symm` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3036/3053] Replayed D1Bound5.MixedAdjugateScalarBound
+warning: D1Bound5/MixedAdjugateScalarBound.lean:10:31: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/MixedAdjugateScalarBound.lean:45:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/MixedAdjugateScalarBound.lean:53:51: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/MixedAdjugateScalarBound.lean:91:5: Variable name `hru` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hru
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/MixedAdjugateScalarBound.lean:91:20: Variable name `hrv` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hrv
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3037/3053] Replayed D1Bound5.MixedAdjugateEnvelope
+warning: D1Bound5/MixedAdjugateEnvelope.lean:38:52: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/MixedAdjugateEnvelope.lean:39:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3040/3053] Replayed D1Bound5.MixedProductFourGrowth
+warning: D1Bound5/MixedProductFourGrowth.lean:21:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3043/3053] Replayed D1Bound5.ProductFivePrefixDet
+warning: D1Bound5/ProductFivePrefixDet.lean:29:24: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/ProductFivePrefixDet.lean:36:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3046/3053] Replayed D1Bound5.ProductFiveSignedPrefixInverse
+warning: D1Bound5/ProductFiveSignedPrefixInverse.lean:54:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [3052/3053] Built D1Bound5 (58s)
+Build completed successfully (3053 jobs).

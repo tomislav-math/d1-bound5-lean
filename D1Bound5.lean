@@ -88,3 +88,13 @@ import D1Bound5.LagrangeAdjunction
 import D1Bound5.LagrangeHomogeneous
 import D1Bound5.ReciprocalAnchors
 import D1Bound5.InterpolationWeights
+import D1Bound5.WeightedPoleFiniteTail
+import D1Bound5.PoleHomogeneousTail
+import D1Bound5.ComplexHsymmNorm
+
+import D1Bound5.HsymmSummability
+import D1Bound5.WeightedPoleLimit
+import D1Bound5.PoleHsymmHasSum
+import D1Bound5.CoherentMajorant
+import D1Bound5.CoherentWeightedRemainder
+import D1Bound5.HalfBinomialCoefficients

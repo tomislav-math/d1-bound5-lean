@@ -486,3 +486,26 @@ The prefix size <D/9 follows formally from the ordered last-four product-four gr
 `HomogeneousSymmetric`: the multiset-sum definition and six prior checked hsymm Option-variable theorems, root-promoted without trailing exploratory audit commands. `LagrangeAdjunction`: three new denominator/cancellation/power-recurrence proofs. `LagrangeHomogeneous`: three finite-type/finite-set infrastructure lemmas plus the two all-degree moment identities, including exact evaluation of mathlib hsymm. `ReciprocalAnchors`: six prior checked reciprocal-weight transfer statements, root-promoted. `InterpolationWeights.reciprocal_anchor_sum_eq_hsymm` (namespace D1Bound5): the new all-k signed reciprocal identity, exactly the n>=m branch of the displayed formula before eq:coherent-exact (frozen v4 lines 561-571, n=m+k).
 
 Nine new and twelve reused theorem declarations, all type/axiom audited; complete fresh same-kernel replay of InterpolationWeights and its imports passed. No analytic infinite-sum interchange or remainder bound is included. MainStatement remains UNPROVED. Evidence: records/interpolation-all-orders-20261017.md and research/continuations/20261017T164243CEST-interpolation-recovery/.
+
+## Frozen v4 analytic interpolation coefficient envelope — 17 October 2026
+
+`ComplexHsymmNorm.hsymm_aeval_complex_norm_le_choose` closes the exact complete-homogeneous symmetric coefficient norm bound at EVERY k, with binomial multiplicity `choose(m+k-1,k)`. This directly follows the already accepted `HomogeneousSymmetric.homogeneousMultisetSum_eq_hsymm` and mathlib's `Sym.card_sym_eq_choose`. The theorem is unconditional on distinct or nonzero variable values. The finite source alphabet may be empty. It is the coefficient-level step needed before `eq:coherent-tail`.
+
+The analytic summability and genuine square-root remainder bound, arbitrary-order Bennett determinant, exhaustive certificate coverage/descent and final sextuple exclusions are still missing. Complete root build, type/axiom audit, same-kernel replay and source/import audit have passed; fingerprint/Git publication has not. See `records/complex-hsymm-norm-20261017.md`.
+
+## 17 October 2026 — complex homogeneous-series convergence
+
+`D1Bound5.HsymmSummability.hsymm_aeval_complex_summable` is a root-imported proof of summability of the series `z^k * h_k(a)` for nonempty finite complex alphabets satisfying `norm(a_i) <= rho`, `rho >= 0`, `rho * norm(z) < 1`. It uses the exact coefficient estimate `hsymm_aeval_complex_norm_le_choose`, `Nat.choose_symm_add`, and mathlib's negative-binomial series theorem. This resolves convergence of the homogeneous generating function in the radius disk, but not the v4 square-root coefficient convolution and explicit `eq:coherent-tail` inequality.
+
+## 17 October 2026 — convergence of exact weighted-pole remainder
+
+- Declaration: D1Bound5.weighted_poles_tail_tendsto_zero in D1Bound5/WeightedPoleLimit.lean.
+- Manuscript role: analytic convergence of the finite rational remainder attached to the exact weighted-pole Taylor formula, preceding the stronger square-root tail estimate.
+- For arbitrary finite s, complex a,w,z with |z|<|a_i| on s, the remainder z^n * sum_(i in s) w_i/(a_i^n*(a_i-z)) tends to zero. Repeated nodes, an empty set and zero weights are allowed.
+- Pinned target/root build, type/axiom audit, same-kernel fresh replay and source/import audit all PASS. This statement does NOT itself prove the infinite HasSum identity, a parameter-uniform bound, the binomial square-root estimate or MainStatement. See records/weighted-pole-limit-20261017.md.
+
+## 17 October 2026 — v4 `eq:coherent-tail` weighted summation factor
+
+`D1Bound5/CoherentMajorant.lean`: `negative_binomial_positive_tail_tsum` proves exactly the positive-degree negative-binomial generating-function value, and `hsymm_aeval_complex_positive_tail_norm_le` gives the complete-homogeneous sum-of-norms factor `(1-rho*t)^(-card)-1`. Two theorems previously elaborated separately, now root-imported, built and covered by the subsequent imported kernel replay.
+
+`D1Bound5/CoherentWeightedRemainder.lean`: `coherent_weighted_remainder_summable_and_norm_le` proves that an explicit coefficient bound `|f_(m+j+1)|<=C*t^(m+j+1)` implies summability and the bound `C*t^m*((1-rho*t)^(-card)-1)` for the complex interpolation tail. New root-imported theorem, built, exact type/axioms checked, and freshly same-kernel replayed. This is a necessary conditional analytic sublemma, NOT yet the paper's actual `eq:coherent-tail`. The square-root coefficient envelope and identification of the paper's `F_m` with this tail remain open. See `records/coherent-weighted-remainder-20261017.md`.

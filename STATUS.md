@@ -1,5 +1,37 @@
 # Status
 
+## 17 October 2026 — coherent weighted remainder bound ROOT-PROVED
+
+`D1Bound5/CoherentWeightedRemainder.lean` proves absolute summability and the exact negative-binomial norm bound for the full positive-degree weighted homogeneous tail, under an explicit pointwise envelope on the interpolation coefficients. It gives `C*t^m*((1-rho*t)^(-card)-1)`, the precise analytic sum factor in frozen v4 `eq:coherent-tail`. This **does not yet prove** the required square-root-binomial coefficient envelope or the unconditional manuscript tail inequality. The previously separately compiled `CoherentMajorant` two-theorem negative-binomial factor is now root-imported.
+
+Pinned integrated build EXIT 0 (3060 jobs), exact new-theorem axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound), installed same-kernel `leanchecker --fresh` EXIT 0, source/import audit PASS (95 modules, 417 theorems), and both source/tool SHA-256 manifests PASS (98/54). No independent review, clean checkout or MainStatement proof. Git publication requires a separate verified commit/push receipt. See `records/coherent-weighted-remainder-20261017.md` and the 20:16 run.
+
+## 17 October 2026 — weighted-pole complex remainder convergence ROOT-PROVED
+
+D1Bound5/WeightedPoleLimit.lean proves that the exact finite Taylor remainder of arbitrary complex weighted reciprocal poles tends to zero when the evaluation point satisfies |z| < |a_i| for every node. The node set may be empty, node values may coincide, and weights may vanish. The proof expresses the remainder as a finite sum of geometric powers and uses finite-sum continuity. It does not assert parameter-uniform convergence.
+
+Pinned integrated build EXIT 0 (3057 jobs); exact Lean theorem-type/transitive-axiom audit EXIT 0 with only propext, Classical.choice, Quot.sound; installed SAME-kernel fresh leanchecker replay EXIT 0 (409.32 s); source/import audit PASS (92 modules and 413 explicit theorems). See records/weighted-pole-limit-20261017.md and 18:46 run records. This is an analytic tail-limit ingredient, not yet the infinite HasSum partial-fraction identity or the manuscript's stronger square-root remainder inequality. Bennett, complete finite certificates/descent, final sextuple exclusions and MainStatement remain UNPROVED. No clean checkout or independent review.
+
+PRIVATE Git publication is PENDING. This invocation's combined Git preflight/status command was PRE_EXECUTION_DENIED before execution, with the exact sanitized command and message saved in its run record. No staging, commit, push or successful manifest verification is claimed for this proof unit.
+
+## 17 October 2026 — hsymm generating-series summability ROOT-PROVED
+
+`D1Bound5/HsymmSummability.lean` proves that, for any nonempty finite complex alphabet with entry norms at most `rho >= 0`, the series of `z^k * h_k` is summable whenever `rho * norm(z) < 1`. The proof combines the previously proved exact hsymm coefficient bound with mathlib's negative-binomial series and a norm comparison. The integrated pinned build and exact transitive axiom audit passed; see `records/hsymm-summability-20261017.md` for verification scope. The analytic square-root tail estimate, Bennett determinant, finite descent/coverage, sextuple exclusions, and MainStatement remain UNPROVED. Git publication must be separately verified.
+
+## 17 October 2026 — complex complete-homogeneous coefficient bound ROOT-PROVED
+
+`D1Bound5/ComplexHsymmNorm.lean` proves that for every finite type I, b:I→ℂ, degree k and real ρ≥0 with `‖b i‖≤ρ`, the norm of the evaluated complete homogeneous symmetric polynomial is at most `Nat.choose (Fintype.card I + k - 1) k * ρ^k`. The proof includes empty I and k=0 without special assumptions. The exact stars-and-bars factor follows from `Sym.card_sym_eq_choose`; monomial bounds follow by multiset induction.
+
+The pinned integrated target/root build EXIT 0 (3055 jobs), exact elaborated type and transitive axioms PASS (only propext, Classical.choice, Quot.sound), installed same-kernel fresh `leanchecker` replay EXIT 0, and source/import audit PASS (90 modules, 411 theorems). See `records/complex-hsymm-norm-20261017.md` and the 17:50 run records. This is still not the v4 absolute-convergence or square-root remainder inequality. Bennett, finite graph completeness/descent, final sextuple exclusions and MainStatement remain OPEN.
+
+Private release is PENDING. The original 17:21 manifest refresh was PRE_EXECUTION_DENIED, and the unchanged read-only preflight still reports `Unmatched fingerprint: D1Bound5.lean`; a pre-existing staged POST_PUSH receipt belongs to another run. No new Git commit/push is claimed. No independent reviewer or clean-checkout audit.
+
+## 17 October 2026 — exact finite pole and hsymm Taylor tails ROOT-PROVED
+
+`WeightedPoleFiniteTail` and `PoleHomogeneousTail` add three root-imported theorems. The first two prove the exact finite reciprocal-pole Taylor identity and its arbitrary finite weighted form over any field. The third combines this with the already proved all-order reciprocal-anchor/hsymm identity and gives an exact finite generating-function expansion with a rational remainder for nonempty distinct nonzero anchors. It introduces no convergence or additional numerical assumptions. Pinned root build EXIT 0 (3053 jobs), exact three-theorem type/transitive-axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound), installed same-kernel `leanchecker --fresh --verbose D1Bound5.PoleHomogeneousTail` EXIT 0, and source/import audit PASS (89 modules, 410 theorems). See `records/pole-homogeneous-tail-20261017.md` and the 17:21 run records.
+
+The source/tool SHA-256 manifest refresh was PRE_EXECUTION_DENIED before execution, so the repository fingerprint/release gate is PENDING. The new source remains local and has not been committed/pushed in this invocation. Absolute convergence, complex hsymm norm bounds and the frozen v4 square-root remainder estimate are still OPEN, as are Bennett, finite completeness/descent, final exclusions and MainStatement. No independent reviewer or clean-checkout validation.
+
 ## 17 October 2026 — all-order interpolation weights ROOT-PROVED
 
 The five root modules `HomogeneousSymmetric`, `LagrangeAdjunction`, `LagrangeHomogeneous`, `ReciprocalAnchors`, and `InterpolationWeights` now prove the Lagrange moment/hsymm identity for EVERY degree k and the exact reciprocal-anchor identity with sign (-1)^(m-1) and denominator product(a_i). The ordinary identity allows zero nodes; the reciprocal version assumes only nonempty, distinct, nonzero anchors over any field. This closes the algebraic n>=m interpolation-weight branch before frozen v4 eq:coherent-exact.

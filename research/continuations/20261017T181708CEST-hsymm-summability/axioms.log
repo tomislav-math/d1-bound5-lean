@@ -1,0 +1,5 @@
+HSYMM_SUMMABILITY_AXIOMS_PASS D1Bound5.hsymm_aeval_complex_summable: [propext, Classical.choice, Quot.sound]
+@D1Bound5.hsymm_aeval_complex_summable : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] [Nonempty ι]
+  (a : ι → ℂ) (z : ℂ) (ρ : ℝ),
+  0 ≤ ρ →
+    (∀ (i : ι), ‖a i‖ ≤ ρ) → ρ * ‖z‖ < 1 → Summable fun k => z ^ k * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ k)

@@ -1,0 +1,5 @@
+# PROGRESS — 2026-10-17 19:21 CEST
+
+A new all-orders analytic theorem, reciprocal_pole_hsymm_hasSum_of_majorant, now elaborates with the pinned Lean 4.33.1 (exit 0, corrected trial) and prints exactly the axioms propext, Classical.choice, Quot.sound. It uses the root-proved finite rational/homogeneous identity, the exact weighted-pole remainder limit, and the root-proved complete-homogeneous summability majorant. The theorem holds for arbitrary nonempty pairwise distinct nonzero complex anchors, with explicit bounds rho >= norms of their reciprocals and rho*norm(z)<1; the additional pointwise condition norm(z)<norm(a_i) is retained for the already proved remainder-limit theorem. No unsupported claim about the global bound-five theorem is made.
+
+The first trial failed with a symmetry mismatch and an improper convert over elaborated typeclass instances; both were repaired by exact equality and direct function equality, without changing the theorem statement. Accepted integration, exact kernel replay and Git checks are pending.

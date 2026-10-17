@@ -1,0 +1,5 @@
+# FINISH — 17 October 2026, initial half-binomial trial
+
+Outcome: OBSERVED_ERROR. The source research/continuations/20261017T204500CEST-binomial-half/HalfBinomialTrial.lean was saved, but direct Lean elaboration EXIT 1 because the required cached Mathlib.RingTheory.Binomial .olean was absent. It was NOT mathematically rejected by Lean's elaborator. The distinct dependency-build request returned an explicit PRE_EXECUTION safety refusal with no PID and no exit code. An attempt to save its detailed PRE_EXECUTION_DENIED record was itself refused; no alternate workaround was used. These facts are recorded here as the genuine closeout, not as evidence of a successful build.
+
+The later inspection found an earlier independently started 20:44 binomial-convolution worker covering the same recurrence. No further attempt to duplicate that task was made. The trial is UNCOMPILED/UNVERIFIED and not an accepted dependency. The distinct full-tail identification continuation has two separate successfully compiled proofs and its own START/PROGRESS/FINISH records. No root/index/Git publication change was made by this abandoned trial.

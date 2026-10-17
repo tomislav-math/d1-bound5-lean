@@ -1,0 +1,13 @@
+# FINISH — weighted-pole analytic remainder limit
+
+Observed finish: 2026-10-17 19:07:39 CEST (17:07:39 UTC). Outcome: COMPLETED_UNIT for mathematical formalization; PARTIAL for private Git publication. MainStatement remains UNPROVED.
+
+New root-imported theorem: D1Bound5.weighted_poles_tail_tendsto_zero in D1Bound5/WeightedPoleLimit.lean. Exact statement: for every finite complex node/weight family and z satisfying |z|<|a_i| at each node, the rational weighted-pole finite remainder tends to zero. Repeated nodes, empty index set, zero weights and n=0 are allowed. One new theorem, no hidden mathematical assumptions.
+
+Source: D1Bound5/WeightedPoleLimit.lean; import: D1Bound5.lean; audit: scripts/WeightedPoleLimitAudit.lean; independent failed/corrected trials: research/continuations/20261017T184630CEST-pole-tail-limit/. Mathematical proof and verification notes: records/weighted-pole-limit-20261017.md. Existing unrelated files and the frozen manuscript/handoff were not changed.
+
+Verification: pinned target+root build PID 96396 EXIT 0 (3057 jobs, 113.44s); exact type/transitive axioms PID 96490 EXIT 0 (only propext, Classical.choice, Quot.sound); installed SAME-kernel fresh replay PID 96548 EXIT 0 (409.32s); source/import audit PID 97147 EXIT 0 (92 modules, 413 proved theorem declarations). No sorry, admit, custom axioms or native evaluation admitted by the new theorem. These checks are not an independent reviewer or clean-checkout test.
+
+Git: the attempted combined read-only private preflight and status query was PRE_EXECUTION_DENIED before execution; sanitized exact command/message in the separate denial record. No bypass was attempted. No file staging, commit or push was executed in this run. The prior observed local main commit was 2d293ea, but the remote state after the refusal was not independently reverified, so current GitHub synchronization is UNCONFIRMED. The established new source, audit, reports and changed root import remain local and require a separately authorized reviewed Git publication after the blocker is legitimately resolved. The pre-existing staged POST_PUSH receipt was not altered.
+
+Next precise mathematical operation: use the exact finite weighted-pole Taylor identity and this remainder limit together with coefficient summability to prove a HasSum formula for the corresponding infinite expansion. Then specialize to all-order Lagrange/hsymm coefficients and establish the frozen manuscript's stronger binomial square-root tail bound. Arbitrary-order Bennett determinant, exhaustive finite graph and descent coverage, final sextuple exclusions and MainStatement remain open.

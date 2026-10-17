@@ -662,3 +662,45 @@ See `records/github-sync-20261017T094740CEST.md` and subsequent Git receipts.
 - Frozen v4 SHA256 reconfirmed 776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3. Pinned Lean 4.33.1/mathlib commit unchanged. No manuscript, handoff, automation, permission or external project changes.
 - Separate 16:47 research worker respected this owner's root/index and did not start a heavy compiler; its FINISH at 16:52:53 is PARTIAL/uncompiled. Its immutable trial is not an accepted dependency. No process killed and no proof worker intentionally left running by this invocation.
 - Git publication is subject to separate plain reviewed commit/push and a subsequent receipt; mathematical verification alone does not imply upload. MainStatement remains UNPROVED.
+
+## 2026-10-17 17:50–18:06 CEST — complex hsymm norm envelope
+
+- First trial compilation EXIT 1 (wrong fourth side condition of `mul_le_mul`); corrected only the required nonnegativity proof and reran. Final trial EXIT 0, 29.99 s; exact type and `#print axioms`: only `propext`, `Classical.choice`, `Quot.sound`.
+- Previously uncached pinned `Mathlib.Data.Sym.Card` built successfully, 758 jobs, exit 0; no version or pin changed.
+- New root module `D1Bound5/ComplexHsymmNorm.lean`; additive import into current `D1Bound5.lean`. `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.ComplexHsymmNorm D1Bound5`: PID 94338, EXIT 0, 3055 jobs, runtime 97.65 s; module built in 26 s, root in 62 s.
+- Exact type/transitive-axiom audit `lake env lean scripts/ComplexHsymmNormAudit.lean`: PID 94469 EXIT 0, 34.09 s; only standard allowed three axioms.
+- `LEAN_NUM_THREADS=1 lake env leanchecker --fresh --verbose D1Bound5.ComplexHsymmNorm`: PID 94500 EXIT 0, runtime 354.69 s. This is the installed SAME Lean kernel from an empty environment, NOT an external independent review.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: PID 95199 EXIT 0, SOURCE_AUDIT_PASS 90 modules/411 theorems.
+- Git preflight read-only PID 95263 EXIT 1: `PREFLIGHT_FAILED_NO_MUTATION`, exact detail `Unmatched fingerprint: D1Bound5.lean; review the current build receipt`. A previous manifest-refresh operation was explicitly PRE_EXECUTION_DENIED in another run; it was not routed through another mechanism here. Existing staged POST_PUSH record was preserved without adding or committing anything. PRIVATE repository/viewer ADMIN verified; both local and remote HEAD were `2d293ea9000afaa71ff6102f8ec4a8240e0e5cc7`, main. This new proof unit is NOT uploaded and no manifest pass is claimed.
+- No clean checkout, independent formal-specification review, whole-project fresh replay or global bound-five theorem. Frozen manuscript and other projects/automations untouched.
+
+## 2026-10-17 18:17 CEST — complex homogeneous-series summability
+
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean research/continuations/20261017T181708CEST-hsymm-summability/HsymmSummabilityTrial.lean`: EXIT 0; exact theorem type and only `propext`, `Classical.choice`, `Quot.sound`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.HsymmSummability D1Bound5`: EXIT 0, 3056 jobs. Log `research/continuations/20261017T181708CEST-hsymm-summability/root-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/HsymmSummabilityAudit.lean`: EXIT 0, enforced exact theorem type/transitive axiom policy; log `axioms.log` in the same continuation directory.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --fresh --verbose D1Bound5.HsymmSummability`: EXIT 0, duration 330.54 seconds; installed SAME-kernel import-closure replay, not independent review. Log `kernel-fresh.log`.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, 91 root-imported modules and 412 explicit theorem declarations; `source-audit.log`.
+- Direct read-only source/audit SHA-256 fingerprints saved as `proof-fingerprints.log`. No all-root/current source manifest pass: the read-only private Git preflight EXIT 1 because `D1Bound5.lean` has a previously stale SHA-256 fingerprint. New source and audit script are absent from the older manifests. The earlier explicit refresh refusal has not been retried or circumvented. Existing Git index staging is preserved, no commit or push in this unit.
+- No clean-checkout build, independent proof reviewer, whole-root fresh replay or proof of MainStatement. Frozen manuscript, handoff, pins, unrelated projects and automations unchanged.
+
+## 2026-10-17 18:46 CEST — weighted-pole complex remainder convergence
+
+- Trial01 failed elaboration (missing complex-analysis import), preserved separately. Corrected Trial02 under research/continuations/20261017T184630CEST-pole-tail-limit/ EXIT 0 (34.91 seconds), with only permitted transitive axioms; it had one unused simp-argument warning, removed in the root source.
+- Root module D1Bound5/WeightedPoleLimit.lean and one additive import in D1Bound5.lean. Command: LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.WeightedPoleLimit D1Bound5, PID 96396, EXIT 0, 3057 jobs, 113.44 seconds.
+- Dedicated Lean audit: LEAN_NUM_THREADS=1 lake env lean scripts/WeightedPoleLimitAudit.lean, PID 96490 EXIT 0, 42.85 seconds. Exact elaborated theorem type checked; Lean.collectAxioms returned only propext, Classical.choice and Quot.sound.
+- Installed SAME-kernel replay: LEAN_NUM_THREADS=1 lake env leanchecker --fresh --verbose D1Bound5.WeightedPoleLimit, PID 96548 EXIT 0, 409.32 seconds. This is not an independent checker or a whole-root fresh replay.
+- Source/import audit: /Users/tp/.local/bin/python3.12 scripts/source_audit.py, PID 97147 EXIT 0, SOURCE_AUDIT_PASS 92 modules, 413 explicit theorems.
+- Private Git preflight/status tool call PRE_EXECUTION_DENIED before execution, exact command and message in records/runs/20261017T184630CEST-pole-tail-limit-PRE_EXECUTION_DENIED.md. The full current-source SHA-256 manifest was not refreshed, preflight PASS is not claimed, and this proof unit was NOT committed/pushed. No source/permission workarounds attempted.
+- No independent statement reviewer, fresh clean checkout, whole-root replay, final exhaustive finite coverage or MainStatement proof.
+
+## 2026-10-17 20:16–20:40 CEST — coherent weighted interpolation remainder
+
+- Source `D1Bound5/CoherentWeightedRemainder.lean`, SHA256 `2758a368bb264ac87ab368841c49c3a14a5ce140db6a7ea9c1e62cd97457ff48`; this is byte-identical to the repaired successful isolated trial.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.CoherentWeightedRemainder D1Bound5`: EXIT 0, 3060 jobs, `research/continuations/20261017T201654CEST-coherent-remainder/integrated-build.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env lean scripts/CoherentWeightedRemainderAudit.lean`: EXIT 0, exact elaborated theorem type and transitive axioms only propext, Classical.choice, Quot.sound; `axiom-audit.log`.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --fresh --verbose D1Bound5.CoherentWeightedRemainder`: EXIT 0, 467.12 s, targeted installed SAME-kernel fresh import replay, `kernel-fresh.log`. No independent proof reviewer.
+- `/Users/tp/.local/bin/python3.12 scripts/source_audit.py`: EXIT 0, 95 root-imported modules, 417 explicit theorems.
+- Two `shasum -a 256 -c` manifest checks: BOTH EXIT 0, 98 proof-source/config and 54 audit-tool files. Read-only `scripts/git_sync_preflight.py` PASS, repository PRIVATE with ADMIN permission and remote/local heads matched at preflight time. The ordinary Git commit and push need their own verified receipts.
+- The upstream generic negative-binomial two-theorem module `CoherentMajorant` was built with this root and imported by the fresh replay; its separate exact-type/axiom audit is recorded in `majorant-axioms.log` when completed.
+- No clean checkout, independent statement review, full-project fresh replay, or `MainStatement` proof. The exact concrete square-root coefficient envelope is still OPEN.

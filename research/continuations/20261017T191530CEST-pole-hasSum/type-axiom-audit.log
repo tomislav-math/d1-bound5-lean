@@ -1,0 +1,19 @@
+POLE_HSYMM_HAS_SUM_AXIOMS_PASS D1Bound5.reciprocal_pole_hsymm_hasSum_of_majorant: [propext,
+ Classical.choice,
+ Quot.sound]
+@D1Bound5.reciprocal_pole_hsymm_hasSum_of_majorant : ∀ {ι : Type u_1} [inst : DecidableEq ι] (s : Finset ι) (a : ι → ℂ),
+  s.Nonempty →
+    Set.InjOn a ↑s →
+      (∀ i ∈ s, a i ≠ 0) →
+        ∀ (z : ℂ),
+          (∀ i ∈ s, ‖z‖ < ‖a i‖) →
+            ∀ (ρ : ℝ),
+              0 ≤ ρ →
+                (∀ (i : ↥s), ‖(a ↑i)⁻¹‖ ≤ ρ) →
+                  ρ * ‖z‖ < 1 →
+                    HasSum
+                      (fun k =>
+                        z ^ k *
+                          ((-1) ^ (s.card - 1) * (∏ i ∈ s, a i)⁻¹ *
+                            (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm ↥s ℂ k)))
+                      (∑ i ∈ s, (∏ j ∈ s.erase i, (a i - a j))⁻¹ / (a i - z))

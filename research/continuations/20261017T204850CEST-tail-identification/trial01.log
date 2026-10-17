@@ -1,0 +1,26 @@
+research/continuations/20261017T204850CEST-tail-identification/CoherentFullTailTrial.lean:23:42: error: Application type mismatch: The argument
+  hshift
+has type
+  Summable fun j => u (j + 1)
+but is expected to have type
+  Summable u
+in the application
+  (summable_nat_add_iff 1).mpr hshift
+@D1Bound5.coherent_full_tail_split : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι] [Nonempty ι]
+  (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ),
+  (Summable fun j => f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) →
+    (Summable fun j => f (m + j) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ j)) ∧
+      ∑' (j : ℕ), f (m + j) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ j) =
+        f m + ∑' (j : ℕ), f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))
+@D1Bound5.coherent_full_tail_sub_constant_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [Nonempty ι] (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ) (C ρ t : ℝ),
+  0 ≤ C →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * t < 1 →
+            (∀ (j : ℕ), ‖f (m + (j + 1))‖ ≤ C * t ^ (m + (j + 1))) →
+              ‖∑' (j : ℕ), f (m + j) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ j) - f m‖ ≤
+                C * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+'D1Bound5.coherent_full_tail_split' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_full_tail_sub_constant_norm_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

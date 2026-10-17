@@ -1,0 +1,28 @@
+research/continuations/20261017T164712CEST-pole-tail/WeightedPoleFiniteTailTrial.lean:65:12: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a * ∑ i ∈ ?s, ?f i
+in the target expression
+  ∑ x ∈ s, w x * (z ^ k / a x ^ (k + 1)) = ∑ i ∈ s, z ^ k * (w i / a i ^ (k + 1))
+
+F : Type u_1
+ι : Type u_2
+inst✝¹ : Field F
+inst✝ : DecidableEq ι
+s : Finset ι
+a w : ι → F
+z : F
+ha : ∀ i ∈ s, a i ≠ 0
+haz : ∀ i ∈ s, a i ≠ z
+n k : ℕ
+hk : k ∈ range n
+⊢ ∑ x ∈ s, w x * (z ^ k / a x ^ (k + 1)) = ∑ i ∈ s, z ^ k * (w i / a i ^ (k + 1))
+@D1Bound5.reciprocal_pole_finite_tail : ∀ {F : Type u_1} [inst : Field F] (a z : F),
+  a ≠ 0 → a ≠ z → ∀ (n : ℕ), (a - z)⁻¹ = ∑ k ∈ range n, z ^ k / a ^ (k + 1) + z ^ n / (a ^ n * (a - z))
+@D1Bound5.weighted_poles_finite_tail : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι] (s : Finset ι)
+  (a w : ι → F) (z : F),
+  (∀ i ∈ s, a i ≠ 0) →
+    (∀ i ∈ s, a i ≠ z) →
+      ∀ (n : ℕ),
+        ∑ i ∈ s, w i / (a i - z) =
+          ∑ k ∈ range n, z ^ k * ∑ i ∈ s, w i / a i ^ (k + 1) + z ^ n * ∑ i ∈ s, w i / (a i ^ n * (a i - z))
+'D1Bound5.reciprocal_pole_finite_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.weighted_poles_finite_tail' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

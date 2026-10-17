@@ -1,0 +1,14 @@
+COHERENT_MAJORANT_AXIOMS_PASS D1Bound5.negative_binomial_positive_tail_tsum: [propext, Classical.choice, Quot.sound]
+COHERENT_MAJORANT_AXIOMS_PASS D1Bound5.hsymm_aeval_complex_positive_tail_norm_le: [propext,
+ Classical.choice,
+ Quot.sound]
+D1Bound5.negative_binomial_positive_tail_tsum : ∀ (q : ℕ) (r : ℝ),
+  0 ≤ r → r < 1 → ∑' (j : ℕ), ↑((j + 1 + q).choose q) * r ^ (j + 1) = 1 / (1 - r) ^ (q + 1) - 1
+@D1Bound5.hsymm_aeval_complex_positive_tail_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [Nonempty ι] (a : ι → ℂ) (ρ t : ℝ),
+  0 ≤ ρ →
+    0 ≤ t →
+      (∀ (i : ι), ‖a i‖ ≤ ρ) →
+        ρ * t < 1 →
+          ∑' (j : ℕ), ‖(MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ * t ^ (j + 1) ≤
+            1 / (1 - ρ * t) ^ Fintype.card ι - 1

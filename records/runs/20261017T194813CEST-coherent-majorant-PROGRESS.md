@@ -1,0 +1,5 @@
+# PROGRESS — 2026-10-17 19:55 CEST
+
+Two new theorems have now compiled successfully in the pinned project using the isolated trial `research/continuations/20261017T194813CEST-coherent-majorant/CoherentMajorantTrial.lean` (final targeted trial exit 0). `negative_binomial_positive_tail_tsum` is the exact positive-degree generating-function identity for binomial coefficients and any nonnegative real radius r<1. `hsymm_aeval_complex_positive_tail_norm_le` proves the total norm inequality for every nonempty finite complex alphabet, allowing repeated entries and zeros: for 0<=rho, 0<=t and rho*t<1, sum_{j>=1} norm(h_j(a))*t^j <= (1-rho*t)^(-card)-1. This exact factor appears in frozen v4 eq:coherent-tail.
+
+First trial completed the binomial theorem. The second required repairs to real norm rewriting, the direction of summable_nat_add_iff and a redundant rewrite step. No new assumptions were added. Root integration, exact types/axioms, installed kernel replay, source/manifest checks and Git release still require independent verification; this is not a proof of the square-root coefficient convolution or MainStatement.

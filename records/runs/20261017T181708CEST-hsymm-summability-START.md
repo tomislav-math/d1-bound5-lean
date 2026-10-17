@@ -1,0 +1,7 @@
+# START — hsymm analytic summability
+
+Observed project-local time: 2026-10-17 18:17:08 CEST. Branch main, HEAD 2d293ea. Initial project-owned compiler scan found no active Lean/lake process. One POST_PUSH receipt was already staged, and recent verified pole-tail/complex-hsymm root sources were unstaged; preserve those files and the index until reviewed. Current status and obligations identify absolute convergence of the hsymm generating series as the next mathematical gap. The main bound-five theorem is unproved.
+
+Objective: formally derive absolute summability of the complex hsymm generating series from the proved exact combinatorial coefficient bound and mathlib's negative-binomial summability result, without assuming extra field arithmetic properties. Keep work in an isolated continuation until checked. No pins, unrelated projects, frozen manuscript, handoff, paid tools, or automations may be changed.
+
+A separate multi-file read process request after the initial successful status inspection was explicitly blocked before execution with the text `Script error: This tool call was blocked by OpenAI's safety checks. Please double check what you are sending.` No PID or Lean/Git exit code was returned. Its specific cause is unknown. Do not repeat or reroute that denied read operation; source and status content already obtained through the earlier authorized inspection suffice for this proof unit.

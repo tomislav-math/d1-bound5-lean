@@ -1,10 +1,32 @@
 # Open mathematical obligations
 
+## 17 October 2026 — weighted homogeneous analytic tail sum CLOSED under coefficient envelope
+
+Root-imported `coherent_weighted_remainder_summable_and_norm_le` proves the exact sum-of-norms bound `C*t^m*((1-rho*t)^(-m_nodes)-1)` and absolute summability for arbitrary complex weighted complete-homogeneous coefficients, with the necessary coefficient envelope explicitly present in its formal type. All root build, axiom, fresh same-kernel replay, import and fingerprint gates passed. The parent negative-binomial positive-tail identity is root-imported too.
+
+**Still OPEN:** prove for the concrete square-root convolution `f_n(x,y)` the uniform bound `|f_n| <= 4|binom(1/2,m+1)|P^(-n)` when `n>=m+1`, rigorously identify `F_m-f_m` with this weighted tail, and discharge the parameters `rho=1/A_1` and `t=1/P`. Only then does v4 `eq:coherent-tail` become an unconditional theorem. Independently open: Bennett all-orders determinant, finite certified coverage and descent, final sextuple exclusions and `MainStatement`.
+
+## 17 October 2026 — hsymm analytic summability CLOSED
+
+`hsymm_aeval_complex_summable` proves convergence of the hsymm generating series inside `rho * norm(z) < 1` by comparison with a negative-binomial majorant, assuming a nonempty finite complex index type. This uses the already closed exact coefficient bound and has no additional mathematical hypotheses. The proof is root-imported and pinned-built, with exact type and transitive axioms checked. The remaining analytic gap is the frozen square-root-binomial convolution and the explicit tail constant in `eq:coherent-tail`, followed by Bennett's identity, exhaustive finite certification/descent, sextuple exclusions, and MainStatement.
+
+## 17 October 2026 — complex hsymm coefficient bound CLOSED
+
+The root theorem `hsymm_aeval_complex_norm_le_choose` proves the exact estimate `‖h_k(b)‖ ≤ choose(m+k-1,k) * ρ^k` over a finite complex alphabet when `ρ≥0` and all variable norms are ≤ρ. The proof handles k=0 and an empty alphabet. Target/root build, exact type/axiom audit, source/import audit and installed fresh same-kernel replay PASS. No independent reviewer or clean checkout.
+
+STILL OPEN: prove analytic summability from the strict radius hypothesis, combine with the frozen binomial/square-root expansion and derive the v4 inequality `eq:coherent-tail`. The arbitrary-order Bennett determinant, exhaustive finite certificate coverage and descent, final exclusions and MainStatement also remain open. Git/fingerprint release gate remains pending after a previous explicit safety refusal.
+
+## 17 October 2026 — finite rational pole/hsymm tail CLOSED, analytic bounds OPEN
+
+The exact finite geometric expansion of each reciprocal pole and the arbitrary weighted finite sum are root-proved. The formal theorem `reciprocal_pole_hsymm_finite_tail` identifies all polynomial coefficients with the already proved reciprocal-anchor hsymm moments for arbitrary finite order and retains an explicit rational remainder. This is an algebraic identity over any field, not an absolute convergence or infinite-series theorem. A complete root build, exact-type/axiom audit and targeted fresh same-kernel replay passed; manifest refresh and Git synchronization remain blocked before execution.
+
+NEXT: prove for complex b_i with ||b_i||<=rho the uniform bound `||h_k(b)|| <= Nat.choose (m+k-1) k * rho^k` using `Sym.card_sym_eq_choose` and multiset monomial norms; then establish absolute convergence and the full binomial square-root tail estimate of frozen v4 `eq:coherent-tail`. The arbitrary-order Bennett determinant and all global sextuple exclusions remain independent open obligations.
+
 ## 17 October 2026 — all-k moment/hsymm bridge CLOSED
 
 Root-proved and freshly same-kernel replayed: `lagrange_power_moment_eq_hsymm` and `reciprocal_anchor_sum_eq_hsymm`, for arbitrary finite nonempty node sets and every natural k. Do NOT redo or describe this identity as still open. The proof uses actual finite-set and degree induction, not guessed recurrence assumptions. See `records/interpolation-all-orders-20261017.md`.
 
-Next: derive the complex hsymm norm envelope, absolute summability and the square-root interpolation remainder estimate. This algebraic unit does not prove eq:coherent-exact as an infinite-series statement, Bennett's determinant, complete finite descent/coverage, final exclusions or MainStatement. The 16:47 finite-pole trial is separate UNCOMPILED research and is not an accepted dependency.
+Next: derive the complex hsymm norm envelope, absolute summability and the square-root interpolation remainder estimate. This algebraic unit does not prove eq:coherent-exact as an infinite-series statement, Bennett's determinant, complete finite descent/coverage, final exclusions or MainStatement. The original 16:47 finite-pole draft remains preserved as an uncompiled artifact; its corrected successor is root-proved as recorded in the newer section above.
 
 The main theorem is UNPROVED in Lean. None of the items below is assumed
 as a custom axiom or silently supplied as a hypothesis of a claimed proof.
@@ -278,3 +300,9 @@ CLOSED (root-imported, compiled, axiom-audited, targeted kernel-replayed): the t
 ## 17 October 2026 — Schur reference neighborhood, conditional interfaces CLOSED
 
 Root-proved `ProductFiveSchurNear` gives `||productFiveSchur F v w d - halfOffDiagonal|| < 1/2` from `||F-halfOffDiagonal||<=11/96`, `||d||>=54`, all coordinate ratios `||w_i/d||<1/18`, and `||v_i||<3/4`. The ordered scalar `||w_i/d||<1/18` follows from the last-four product-four growth inequality with second modulus >=3. Exact types, axioms, pinned build and targeted kernel replay PASS. These explicit conditions have NOT yet been assembled from one actual ordered full-ring D(1) quintuple. NEXT: use the existing compatible signs and last-column bound to discharge all conditions for one same matrix; combine determinant and arithmetic closure. Bennett arbitrary-order, finite completeness/descent and main bound-five still OPEN.
+
+## 2026-10-17 — analytic weighted-pole remainder limit closed
+
+ROOT-PROVED: the finite complex remainder in weighted_poles_finite_tail converges to zero under |z|<|a_i| for every finite node; proof in WeightedPoleLimit.lean. Integrated build, exact type/transitive axioms, fresh same-kernel replay and source/import checks PASS. No assumption of distinctness is needed for this analytic lemma.
+
+NEXT: prove the corresponding HasSum identity by combining exact finite expansion, summability of the coefficient sequence, and this tail convergence. Then specialize it to reciprocal Lagrange anchors/homogeneous polynomials and prove the manuscript's explicit square-root remainder inequality eq:coherent-tail. Arbitrary-order Bennett determinant, full certified graph/descent and final sextuple exclusions remain open. MainStatement is UNPROVED.

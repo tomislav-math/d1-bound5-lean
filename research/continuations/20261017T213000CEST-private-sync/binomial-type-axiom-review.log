@@ -1,0 +1,21 @@
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_recurrence: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_signed_nonneg: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_abs_next_le: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_abs_antitone: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_abs_le_half: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_signed_pair_nonneg: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS D1Bound5.halfBinomialCoeff_convolution_zero: [propext, Classical.choice, Quot.sound]
+HALF_BINOMIAL_AXIOMS_PASS: 7 theorems
+D1Bound5.halfBinomialCoeff : ℕ → ℝ
+D1Bound5.halfBinomialCoeff_recurrence : ∀ (n : ℕ),
+  (↑n + 1) * D1Bound5.halfBinomialCoeff (n + 1) = (1 / 2 - ↑n) * D1Bound5.halfBinomialCoeff n
+D1Bound5.halfBinomialCoeff_signed_nonneg : ∀ (n : ℕ), 0 ≤ (-1) ^ n * D1Bound5.halfBinomialCoeff (n + 1)
+D1Bound5.halfBinomialCoeff_abs_next_le : ∀ (n : ℕ),
+  1 ≤ n → |D1Bound5.halfBinomialCoeff (n + 1)| ≤ |D1Bound5.halfBinomialCoeff n|
+@D1Bound5.halfBinomialCoeff_abs_antitone : ∀ {j k : ℕ},
+  1 ≤ j → j ≤ k → |D1Bound5.halfBinomialCoeff k| ≤ |D1Bound5.halfBinomialCoeff j|
+D1Bound5.halfBinomialCoeff_abs_le_half : ∀ (n : ℕ), 1 ≤ n → |D1Bound5.halfBinomialCoeff n| ≤ 1 / 2
+D1Bound5.halfBinomialCoeff_signed_pair_nonneg : ∀ (i j : ℕ),
+  0 ≤ (-1) ^ (i + j + 2) * (D1Bound5.halfBinomialCoeff (i + 1) * D1Bound5.halfBinomialCoeff (j + 1))
+D1Bound5.halfBinomialCoeff_convolution_zero : ∀ (n : ℕ),
+  2 ≤ n → ∑ ij ∈ Finset.antidiagonal n, D1Bound5.halfBinomialCoeff ij.1 * D1Bound5.halfBinomialCoeff ij.2 = 0
