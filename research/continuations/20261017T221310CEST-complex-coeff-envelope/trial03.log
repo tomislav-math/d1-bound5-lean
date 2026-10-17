@@ -1,0 +1,14 @@
+D1Bound5.halfBinomialWeightedCoeff_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (n : ℕ), 2 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff n| * t ^ n
+D1Bound5.halfBinomialWeightedCoeff_tail_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (m n : ℕ),
+          1 ≤ m →
+            m + 1 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff (m + 1)| * t ^ n
+'D1Bound5.halfBinomialWeightedCoeff_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.halfBinomialWeightedCoeff_tail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]

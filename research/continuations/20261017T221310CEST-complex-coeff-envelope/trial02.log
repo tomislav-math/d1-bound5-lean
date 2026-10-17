@@ -1,0 +1,32 @@
+research/continuations/20261017T221310CEST-complex-coeff-envelope/ComplexHalfBinomialTrial.lean:39:16: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a * (?b * ?c)
+in the target expression
+  |halfBinomialCoeff ij.1 * halfBinomialCoeff ij.2| * t ^ ij.1 * t ^ ij.2 =
+    |halfBinomialCoeff ij.1 * halfBinomialCoeff ij.2| * t ^ n
+
+x y : ℂ
+t : ℝ
+ht : 0 ≤ t
+hx : ‖x‖ ≤ t
+hy : ‖y‖ ≤ t
+n : ℕ
+hn : 2 ≤ n
+ij : ℕ × ℕ
+hij : ij ∈ antidiagonal n
+hsum : ij.1 + ij.2 = n
+⊢ |halfBinomialCoeff ij.1 * halfBinomialCoeff ij.2| * t ^ ij.1 * t ^ ij.2 =
+    |halfBinomialCoeff ij.1 * halfBinomialCoeff ij.2| * t ^ n
+D1Bound5.halfBinomialWeightedCoeff_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (n : ℕ), 2 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff n| * t ^ n
+D1Bound5.halfBinomialWeightedCoeff_tail_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (m n : ℕ),
+          1 ≤ m →
+            m + 1 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff (m + 1)| * t ^ n
+'D1Bound5.halfBinomialWeightedCoeff_norm_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.halfBinomialWeightedCoeff_tail_norm_le' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

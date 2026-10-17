@@ -714,3 +714,10 @@ See `records/github-sync-20261017T094740CEST.md` and subsequent Git receipts.
 - `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --verbose D1Bound5.HalfBinomialConvolutionAbs`: EXIT 0, targeted SAME installed Lean kernel replay, `kernel-replay.log`. NOT an independent review, fresh clean checkout or all-project replay.
 - `scripts/source_audit.py`: EXIT 0, 97 root-imported modules and 429 theorem declarations. Strict `shasum -a 256 -c` checks of both manifest files: EXIT 0, 100 source/config and 56 verification-tool entries. Logs `source-audit.log`, `source-hashes.log`, `tool-hashes.log`.
 - Git preflight, staged review, commit/push and post-push remote verification are separately required; no publication is implied by the mathematical checks. The formal complex weighted `f_n(x,y)` coefficient bound and v4 coherent-tail identification remain open. No independent reviewer, clean-checkout build or MainStatement proof.
+
+## 17 October 2026 — recovered analytic modules integrated and audited
+
+The three previously isolated units are now integrated as ComplexHalfBinomial, HalfBinomialAnalytic and HalfBinomialLowDegree. The last uses the same public halfBinomialWeightedCoeff definition, removing the private duplicate. All three module builds and the combined root build passed under the pinned environment. All ten exported theorems plus the coefficient definition passed enforced transitive axiom checks with only propext, Classical.choice and Quot.sound. An independent read-only statement/source audit found no weakened product-four/product-five endpoints or analytic formula errors. A fresh replay of this combined recovered snapshot is still pending in the current continuation. MainStatement remains UNPROVED.
+
+The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
+

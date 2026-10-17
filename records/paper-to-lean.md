@@ -513,3 +513,10 @@ The analytic summability and genuine square-root remainder bound, arbitrary-orde
 ## 17 October 2026 — sharp absolute half-binomial convolution
 
 `D1Bound5/HalfBinomialConvolutionAbs.lean` proves five new declarations: `halfBinomialCoeff_interior_convolution`, `halfBinomialCoeff_abs_signed`, `halfBinomialCoeff_pair_abs_signed`, `halfBinomialCoeff_interior_abs_sum`, and `halfBinomialCoeff_abs_convolution`. The final identity says that for n>=2, `sum_(i+j=n) abs(b(i)*b(j)) = 4*abs(b(n))`, where b(n) is the real half-binomial coefficient. This closes the *real unweighted* absolute convolution step leading to the constant four in the frozen v4 square-root interpolation coefficient estimate; the complex weighted coefficient envelope and identification with the actual analytic remainder remain OPEN. Integrated pinned build, exact types/transitive axioms, targeted installed same-kernel replay, source/import scan and source/tool manifest verification passed. MainStatement UNPROVED.
+
+## 17 October 2026 — recovered analytic modules integrated and audited
+
+The three previously isolated units are now integrated as ComplexHalfBinomial, HalfBinomialAnalytic and HalfBinomialLowDegree. The last uses the same public halfBinomialWeightedCoeff definition, removing the private duplicate. All three module builds and the combined root build passed under the pinned environment. All ten exported theorems plus the coefficient definition passed enforced transitive axiom checks with only propext, Classical.choice and Quot.sound. An independent read-only statement/source audit found no weakened product-four/product-five endpoints or analytic formula errors. A fresh replay of this combined recovered snapshot is still pending in the current continuation. MainStatement remains UNPROVED.
+
+The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
+

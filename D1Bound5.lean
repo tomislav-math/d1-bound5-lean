@@ -99,3 +99,6 @@ import D1Bound5.CoherentMajorant
 import D1Bound5.CoherentWeightedRemainder
 import D1Bound5.HalfBinomialCoefficients
 import D1Bound5.HalfBinomialConvolutionAbs
+import D1Bound5.ComplexHalfBinomial
+import D1Bound5.HalfBinomialAnalytic
+import D1Bound5.HalfBinomialLowDegree

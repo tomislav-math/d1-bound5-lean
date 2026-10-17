@@ -1,0 +1,14 @@
+research/continuations/20261017T231300CEST-low-degree-coefficients/LowDegreeConvolutionTrial.lean:21:64: error: unsolved goals
+⊢ Ring.multichoose (-(1 / 2)) 2 = -(1 / 8)
+research/continuations/20261017T231300CEST-low-degree-coefficients/LowDegreeConvolutionTrial.lean:24:66: error: unsolved goals
+⊢ Ring.multichoose (-(3 / 2)) 3 = 1 / 16
+research/continuations/20261017T231300CEST-low-degree-coefficients/LowDegreeConvolutionTrial.lean:27:67: error: unsolved goals
+⊢ Ring.multichoose (-(5 / 2)) 4 = -(5 / 128)
+D1Bound5.lowDegreeHalfCoefficient_two : ∀ (x y : ℂ), D1Bound5.lowDegreeHalfCoefficient x y 2 = -(x - y) ^ 2 / 8
+D1Bound5.lowDegreeHalfCoefficient_three : ∀ (x y : ℂ),
+  D1Bound5.lowDegreeHalfCoefficient x y 3 = (x ^ 2 - y ^ 2) * (x - y) / 16
+D1Bound5.lowDegreeHalfCoefficient_four : ∀ (x y : ℂ),
+  D1Bound5.lowDegreeHalfCoefficient x y 4 = -(x - y) ^ 2 * (5 * x ^ 2 + 6 * x * y + 5 * y ^ 2) / 128
+'D1Bound5.lowDegreeHalfCoefficient_two' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.lowDegreeHalfCoefficient_three' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.lowDegreeHalfCoefficient_four' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

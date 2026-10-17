@@ -1,0 +1,71 @@
+RECOVERY_AXIOMS D1Bound5.halfBinomialWeightedCoeff: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialWeightedCoeff_norm_le: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialWeightedCoeff_tail_norm_le: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.coherent_half_binomial_tail_summable_and_norm_le: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialCoeff_hasSum_cpow: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialCoeff_cauchy_hasSum: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialCoeff_cauchy_rearrange: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialCoeff_weighted_hasSum: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialWeightedCoeff_two: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialWeightedCoeff_three: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS D1Bound5.halfBinomialWeightedCoeff_four: [propext, Classical.choice, Quot.sound]
+RECOVERY_AXIOMS_PASS: 11 declarations
+D1Bound5.halfBinomialWeightedCoeff : ℂ → ℂ → ℕ → ℂ
+D1Bound5.halfBinomialWeightedCoeff_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (n : ℕ), 2 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff n| * t ^ n
+D1Bound5.halfBinomialWeightedCoeff_tail_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (m n : ℕ),
+          1 ≤ m →
+            m + 1 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff (m + 1)| * t ^ n
+@D1Bound5.coherent_half_binomial_tail_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (x y : ℂ) (m : ℕ) (ρ t : ℝ),
+  1 ≤ m →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ‖x‖ ≤ t →
+            ‖y‖ ≤ t →
+              ρ * t < 1 →
+                (Summable fun j =>
+                    D1Bound5.halfBinomialWeightedCoeff x y (m + (j + 1)) *
+                      (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                  ‖∑' (j : ℕ),
+                        D1Bound5.halfBinomialWeightedCoeff x y (m + (j + 1)) *
+                          (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                    4 * |D1Bound5.halfBinomialCoeff (m + 1)| * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+D1Bound5.halfBinomialCoeff_hasSum_cpow : ∀ (z : ℂ),
+  ‖z‖ < 1 → HasSum (fun n => ↑(D1Bound5.halfBinomialCoeff n) * z ^ n) ((1 + z) ^ (1 / 2))
+D1Bound5.halfBinomialCoeff_cauchy_hasSum : ∀ (x y z : ℂ),
+  ‖x * z‖ < 1 →
+    ‖y * z‖ < 1 →
+      HasSum
+        (fun n =>
+          ∑ ij ∈ Finset.antidiagonal n,
+            ↑(D1Bound5.halfBinomialCoeff ij.1) * (x * z) ^ ij.1 * (↑(D1Bound5.halfBinomialCoeff ij.2) * (y * z) ^ ij.2))
+        ((1 + x * z) ^ (1 / 2) * (1 + y * z) ^ (1 / 2))
+D1Bound5.halfBinomialCoeff_cauchy_rearrange : ∀ (x y z : ℂ) (n : ℕ),
+  ∑ ij ∈ Finset.antidiagonal n,
+      ↑(D1Bound5.halfBinomialCoeff ij.1) * (x * z) ^ ij.1 * (↑(D1Bound5.halfBinomialCoeff ij.2) * (y * z) ^ ij.2) =
+    (∑ ij ∈ Finset.antidiagonal n,
+        ↑(D1Bound5.halfBinomialCoeff ij.1 * D1Bound5.halfBinomialCoeff ij.2) * x ^ ij.1 * y ^ ij.2) *
+      z ^ n
+D1Bound5.halfBinomialCoeff_weighted_hasSum : ∀ (x y z : ℂ),
+  ‖x * z‖ < 1 →
+    ‖y * z‖ < 1 →
+      HasSum
+        (fun n =>
+          (∑ ij ∈ Finset.antidiagonal n,
+              ↑(D1Bound5.halfBinomialCoeff ij.1 * D1Bound5.halfBinomialCoeff ij.2) * x ^ ij.1 * y ^ ij.2) *
+            z ^ n)
+        ((1 + x * z) ^ (1 / 2) * (1 + y * z) ^ (1 / 2))
+D1Bound5.halfBinomialWeightedCoeff_two : ∀ (x y : ℂ), D1Bound5.halfBinomialWeightedCoeff x y 2 = -(x - y) ^ 2 / 8
+D1Bound5.halfBinomialWeightedCoeff_three : ∀ (x y : ℂ),
+  D1Bound5.halfBinomialWeightedCoeff x y 3 = (x ^ 2 - y ^ 2) * (x - y) / 16
+D1Bound5.halfBinomialWeightedCoeff_four : ∀ (x y : ℂ),
+  D1Bound5.halfBinomialWeightedCoeff x y 4 = -(x - y) ^ 2 * (5 * x ^ 2 + 6 * x * y + 5 * y ^ 2) / 128

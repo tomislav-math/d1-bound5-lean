@@ -1,0 +1,5 @@
+# PROGRESS — 17 October 2026, 23:15 CEST
+
+A new, isolated Lean source was saved at `research/continuations/20261017T231300CEST-low-degree-coefficients/LowDegreeConvolutionTrial.lean`. It states all three precise polynomial factorizations for degrees 2, 3 and 4 in frozen v4 `eq:integrated-5`, using the actual half-binomial convolution rather than numerical experimentation. No accepted root import, shared Git index change, manuscript edit or automation change was made.
+
+Pinned isolated trial01 finished with EXIT 1: normalization of `Ring.choose` left three `Ring.multichoose` goals unsolved. The resulting printed `sorryAx` dependencies were a consequence of this FAILED elaboration, not accepted. All three numerical coefficient proofs were replaced by direct applications of the already accepted recurrence `halfBinomialCoeff_recurrence` and exact elementary arithmetic. Trial02 is running; no verification success is claimed until its exit status and complete log have been collected. No other project-owned compiler was active at start.

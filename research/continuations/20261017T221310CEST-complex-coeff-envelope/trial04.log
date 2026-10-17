@@ -1,0 +1,31 @@
+D1Bound5.halfBinomialWeightedCoeff_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (n : ℕ), 2 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff n| * t ^ n
+D1Bound5.halfBinomialWeightedCoeff_tail_norm_le : ∀ (x y : ℂ) (t : ℝ),
+  0 ≤ t →
+    ‖x‖ ≤ t →
+      ‖y‖ ≤ t →
+        ∀ (m n : ℕ),
+          1 ≤ m →
+            m + 1 ≤ n → ‖D1Bound5.halfBinomialWeightedCoeff x y n‖ ≤ 4 * |D1Bound5.halfBinomialCoeff (m + 1)| * t ^ n
+'D1Bound5.halfBinomialWeightedCoeff_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.halfBinomialWeightedCoeff_tail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@D1Bound5.coherent_half_binomial_tail_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (x y : ℂ) (m : ℕ) (ρ t : ℝ),
+  1 ≤ m →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ‖x‖ ≤ t →
+            ‖y‖ ≤ t →
+              ρ * t < 1 →
+                (Summable fun j =>
+                    D1Bound5.halfBinomialWeightedCoeff x y (m + (j + 1)) *
+                      (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                  ‖∑' (j : ℕ),
+                        D1Bound5.halfBinomialWeightedCoeff x y (m + (j + 1)) *
+                          (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                    4 * |D1Bound5.halfBinomialCoeff (m + 1)| * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+'D1Bound5.coherent_half_binomial_tail_summable_and_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]

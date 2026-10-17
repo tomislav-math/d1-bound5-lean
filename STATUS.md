@@ -1,5 +1,11 @@
 # Status
 
+## 17 October 2026 — recovered analytic modules integrated and audited
+
+The three previously isolated units are now integrated as ComplexHalfBinomial, HalfBinomialAnalytic and HalfBinomialLowDegree. The last uses the same public halfBinomialWeightedCoeff definition, removing the private duplicate. All three module builds and the combined root build passed under the pinned environment. All ten exported theorems plus the coefficient definition passed enforced transitive axiom checks with only propext, Classical.choice and Quot.sound. An independent read-only statement/source audit found no weakened product-four/product-five endpoints or analytic formula errors. A fresh replay of this combined recovered snapshot is still pending in the current continuation. MainStatement remains UNPROVED.
+
+The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
+
 ## 17 October 2026 — sharp half-binomial absolute convolution ROOT-PROVED
 
 `D1Bound5/HalfBinomialConvolutionAbs.lean` proves for every n>=2 that the full antidiagonal sum of absolute products of half-binomial coefficients is exactly `4*abs(b(n))`. The proof splits both endpoints, uses the earlier Chu--Vandermonde cancellation and the common interior sign, and assumes no additional mathematical lemma. Pinned integrated Lake build EXIT 0 (3065 jobs), all five new elaborated types/transitive axioms PASS (only propext, Classical.choice, Quot.sound), targeted installed SAME-kernel replay EXIT 0, source/import audit PASS (97 modules/429 theorems), source/tool SHA-256 manifests PASS (100/56 entries). No independent review or clean checkout. The complex weighted convolution envelope and v4 coherent-tail application still need formal proofs; Bennett's arbitrary-order identity, complete finite descent/coverage, final sextuple exclusions and MainStatement remain UNPROVED. See `records/sharp-half-binomial-convolution-20261017.md`.

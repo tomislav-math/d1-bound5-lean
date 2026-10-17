@@ -312,3 +312,10 @@ Root-proved `ProductFiveSchurNear` gives `||productFiveSchur F v w d - halfOffDi
 ROOT-PROVED: the finite complex remainder in weighted_poles_finite_tail converges to zero under |z|<|a_i| for every finite node; proof in WeightedPoleLimit.lean. Integrated build, exact type/transitive axioms, fresh same-kernel replay and source/import checks PASS. No assumption of distinctness is needed for this analytic lemma.
 
 NEXT: prove the corresponding HasSum identity by combining exact finite expansion, summability of the coefficient sequence, and this tail convergence. Then specialize it to reciprocal Lagrange anchors/homogeneous polynomials and prove the manuscript's explicit square-root remainder inequality eq:coherent-tail. Arbitrary-order Bennett determinant, full certified graph/descent and final sextuple exclusions remain open. MainStatement is UNPROVED.
+
+## 17 October 2026 — recovered analytic modules integrated and audited
+
+The three previously isolated units are now integrated as ComplexHalfBinomial, HalfBinomialAnalytic and HalfBinomialLowDegree. The last uses the same public halfBinomialWeightedCoeff definition, removing the private duplicate. All three module builds and the combined root build passed under the pinned environment. All ten exported theorems plus the coefficient definition passed enforced transitive axiom checks with only propext, Classical.choice and Quot.sound. An independent read-only statement/source audit found no weakened product-four/product-five endpoints or analytic formula errors. A fresh replay of this combined recovered snapshot is still pending in the current continuation. MainStatement remains UNPROVED.
+
+The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
+
