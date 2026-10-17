@@ -1,0 +1,11 @@
+research/continuations/20261017T151734CEST-hsymm-moments/CompleteHomogeneousMomentsTrial.lean:20:10: error: typeclass instance problem is stuck
+  Nontrivial ?m.70
+
+Note: Lean will not try to resolve this typeclass instance problem because the type argument to `Nontrivial` is a metavariable. This argument must be fully determined before Lean will try to resolve the typeclass.
+
+Hint: Adding type annotations and supplying implicit arguments to functions can give Lean more information for typeclass resolution. For example, if you have a variable `x` that you intend to be a `Nat`, but Lean reports it as having an unresolved type like `?m`, replacing `x` with `(x : Nat)` can get typeclass resolution un-stuck.
+@D1Bound5.lagrange_power_moment_remainder : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    ∀ (n : ℕ), ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = (X ^ n %ₘ Lagrange.nodal s a).coeff (#s - 1)
+'D1Bound5.lagrange_power_moment_remainder' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

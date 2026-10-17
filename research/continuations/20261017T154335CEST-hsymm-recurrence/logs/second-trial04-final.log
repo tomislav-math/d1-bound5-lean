@@ -1,0 +1,18 @@
+@D1Bound5.nodal_coefficient_two_below_top : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι]
+  (s : Finset ι) (a : ι → F), 2 ≤ #s → (Lagrange.nodal s a).coeff (#s - 2) = (Multiset.map a s.val).esymm 2
+@D1Bound5.lagrange_power_moment_second_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    2 ≤ #s →
+      ∑ i ∈ s, a i ^ (#s + 1) / ∏ t ∈ s.erase i, (a i - a t) = (∑ i ∈ s, a i) ^ 2 - (Multiset.map a s.val).esymm 2
+@D1Bound5.reciprocal_anchor_third_power_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F),
+  (∀ i ∈ s, a i ≠ 0) →
+    Set.InjOn a ↑s →
+      2 ≤ #s →
+        ∑ i ∈ s, (a i)⁻¹ ^ 3 / ∏ t ∈ s.erase i, (a i - a t) =
+          (-1) ^ (#s - 1) * (∏ i ∈ s, a i)⁻¹ *
+            ((∑ i ∈ s, (a i)⁻¹) ^ 2 - (Multiset.map (fun i => (a i)⁻¹) s.val).esymm 2)
+'D1Bound5.nodal_coefficient_two_below_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_second_hsymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.reciprocal_anchor_third_power_hsymm' depends on axioms: [propext, Classical.choice, Quot.sound]

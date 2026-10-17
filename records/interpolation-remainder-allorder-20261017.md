@@ -1,0 +1,11 @@
+# Exact all-order Lagrange-remainder bridge — 17 October 2026
+
+Status: four new formally proved isolated declarations in CompleteHomogeneousMomentsTrial.lean (research/continuations/20261017T151734CEST-hsymm-moments). NOT imported into accepted root.
+
+For distinct nodes a_i in any field, the Lagrange moment at all orders n >= 0 equals the coefficient of T^(m-1) in the remainder of T^n on division by Q(T)=product_i(T-a_i). The proof uses the exact nodal polynomial and eval-preserving monic remainder, not finite testing. Initial moments n<m are Kronecker (1 at m-1, zero below) and moment m is sum_i a_i for nonempty nodes. These statements are also proved.
+
+Combined with the six-theorem reciprocal-anchor transfer proved in the preceding unit, this gives the negative-power identity at all orders k >= 0: sum_i a_i^(-k-1)/D_i = (-1)^(m-1) (product_i a_i)^(-1) [T^(m-1)](T^(k+m-1) mod product_i(T-a_i^(-1))), for pairwise distinct nonzero a_i and D_i=product_(j!=i)(a_i-a_j). Only the ordinary signed product and nodal remainder occur on the right. The all-k equality of this coefficient with MvPolynomial.hsymm is NOT yet proved. No analytic estimate is inferred from the polynomial division identity alone.
+
+Verification: final standalone pinned Lean elaboration exit 0 with four exact types, no sorry/admit/custom mathematical axioms; only propext, Classical.choice, Quot.sound in all transitive axiom lists; isolated .olean build exit 0; targeted installed leanchecker replay exit 0. Source SHA256 32b701e0e87d9997731519f84d4415ebe71e6d0482896ce7d11ad699b6db7ebb. Prior failed trials are preserved and explicitly excluded from proof claims. Root source audit and both existing manifests pass; accepted count 82 modules/387 theorems, no new root import. No independent mathematical review, clean checkout or whole-root replay.
+
+Next concrete unit: prove [T^(m-1)](T^(m-1+k) mod Q(T)) = h_k(a_1,...,a_m) in Lean, using mathlib's MvPolynomial.hsymm and a genuine recurrence or generating function. Then prove analytic Lagrange remainder bounds, the all-order Bennett determinant, finite certificate soundness/coverage and descent, and all remaining sextuple exclusions. MainStatement remains UNPROVED.

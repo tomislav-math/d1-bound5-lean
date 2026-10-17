@@ -1,0 +1,9 @@
+@D1Bound5.lagrange_power_moment_nodal_recurrence : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F) (n : ℕ),
+  ∑ j ∈ range (#s + 1), (Lagrange.nodal s a).coeff j * ∑ i ∈ s, a i ^ (n + j) / ∏ t ∈ s.erase i, (a i - a t) = 0
+@D1Bound5.lagrange_power_moment_monic_recurrence : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F) (n : ℕ),
+  ∑ i ∈ s, a i ^ (n + #s) / ∏ t ∈ s.erase i, (a i - a t) =
+    -∑ j ∈ range #s, (Lagrange.nodal s a).coeff j * ∑ i ∈ s, a i ^ (n + j) / ∏ t ∈ s.erase i, (a i - a t)
+'D1Bound5.lagrange_power_moment_nodal_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_monic_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,23 @@
+@D1Bound5.polynomial_weighted_moment_annihilation : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι]
+  (s : Finset ι) (a b : ι → F) (P : F[X]),
+  (∀ i ∈ s, eval (a i) P = 0) → ∀ (n : ℕ), ∑ k ∈ range (P.natDegree + 1), P.coeff k * ∑ i ∈ s, b i * a i ^ (n + k) = 0
+@D1Bound5.nodal_weighted_moment_recurrence : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι]
+  (s : Finset ι) (a b : ι → F) (n : ℕ),
+  ∑ k ∈ range (#s + 1), (Lagrange.nodal s a).coeff k * ∑ i ∈ s, b i * a i ^ (n + k) = 0
+@D1Bound5.nodal_weighted_moment_step : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι] (s : Finset ι)
+  (a b : ι → F) (n : ℕ),
+  ∑ k ∈ range #s, (Lagrange.nodal s a).coeff k * ∑ i ∈ s, b i * a i ^ (n + k) + ∑ i ∈ s, b i * a i ^ (n + #s) = 0
+@D1Bound5.weighted_moments_eq_of_initial : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι]
+  (s : Finset ι) (a b c : ι → F),
+  (∀ n < #s, ∑ i ∈ s, b i * a i ^ n = ∑ i ∈ s, c i * a i ^ n) →
+    ∀ (n : ℕ), ∑ i ∈ s, b i * a i ^ n = ∑ i ∈ s, c i * a i ^ n
+@D1Bound5.lagrange_power_moment_step : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F) (n : ℕ),
+  ∑ k ∈ range #s, (Lagrange.nodal s a).coeff k * ∑ i ∈ s, a i ^ (n + k) / ∏ j ∈ s.erase i, (a i - a j) +
+      ∑ i ∈ s, a i ^ (n + #s) / ∏ j ∈ s.erase i, (a i - a j) =
+    0
+'D1Bound5.polynomial_weighted_moment_annihilation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.nodal_weighted_moment_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.nodal_weighted_moment_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.weighted_moments_eq_of_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_step' depends on axioms: [propext, Classical.choice, Quot.sound]

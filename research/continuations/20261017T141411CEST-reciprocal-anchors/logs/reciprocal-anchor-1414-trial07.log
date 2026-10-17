@@ -1,0 +1,44 @@
+exploration/ReciprocalAnchorTrial.lean:81:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a⁻¹ ^ ?n
+in the target expression
+  ((-1) ^ (#s - 1))⁻¹ = (-1) ^ (#s - 1)
+
+F : Type u_1
+ι : Type u_2
+inst✝¹ : Field F
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → F
+ha : ∀ j ∈ s, a j ≠ 0
+i : ι
+hi : i ∈ s
+k : ℕ
+hcard : 0 < #s
+hexp : k + #s - 1 = k + (#s - 1)
+⊢ ((-1) ^ (#s - 1))⁻¹ = (-1) ^ (#s - 1)
+@D1Bound5.reciprocal_vandermonde_product : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ i ∈ s,
+      ∏ j ∈ s.erase i, (a i - a j) = (a i ^ #(s.erase i) * ∏ j ∈ s.erase i, a j) * ∏ j ∈ s.erase i, ((a j)⁻¹ - (a i)⁻¹)
+@D1Bound5.reciprocal_anchor_weight_term : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ i ∈ s,
+      ∀ (k : ℕ),
+        (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+          (∏ j ∈ s, a j)⁻¹ * (a i)⁻¹ ^ (k + #(s.erase i)) / ∏ j ∈ s.erase i, ((a j)⁻¹ - (a i)⁻¹)
+@D1Bound5.reciprocal_vandermonde_reverse : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  ∀ i ∈ s, ∏ j ∈ s.erase i, ((a j)⁻¹ - (a i)⁻¹) = (-1) ^ (#s - 1) * ∏ j ∈ s.erase i, ((a i)⁻¹ - (a j)⁻¹)
+@D1Bound5.reciprocal_anchor_weight_standard : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ i ∈ s,
+      ∀ (k : ℕ),
+        (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+          (-1) ^ (#s - 1) * (∏ j ∈ s, a j)⁻¹ * (a i)⁻¹ ^ (k + #s - 1) / ∏ j ∈ s.erase i, ((a i)⁻¹ - (a j)⁻¹)
+'D1Bound5.reciprocal_vandermonde_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.reciprocal_anchor_weight_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.reciprocal_vandermonde_reverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.reciprocal_anchor_weight_standard' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

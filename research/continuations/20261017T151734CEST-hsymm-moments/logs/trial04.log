@@ -1,0 +1,14 @@
+research/continuations/20261017T151734CEST-hsymm-moments/CompleteHomogeneousMomentsTrial.lean:50:4: error: Type mismatch: After simplification, term
+  WithBot.coe_lt_coe.mpr hn
+ has type
+  @LT.lt (WithBot ℕ) WithBot.instLT ↑↑n ↑↑(#s)
+but is expected to have type
+  @LT.lt (WithBot ℕ) WithBot.instPreorder.toLT ↑n ↑(#s)
+@D1Bound5.lagrange_power_moment_remainder : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    ∀ (n : ℕ), ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = (X ^ n %ₘ Lagrange.nodal s a).coeff (#s - 1)
+@D1Bound5.lagrange_power_moment_first_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F), Set.InjOn a ↑s → 0 < #s → ∑ i ∈ s, a i ^ #s / ∏ j ∈ s.erase i, (a i - a j) = ∑ i ∈ s, a i
+'D1Bound5.lagrange_power_moment_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_first_hsymm' depends on axioms: [propext, Classical.choice, Quot.sound]

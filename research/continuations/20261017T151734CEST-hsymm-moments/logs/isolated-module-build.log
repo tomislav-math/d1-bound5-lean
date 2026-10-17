@@ -1,0 +1,20 @@
+@D1Bound5.lagrange_power_moment_remainder : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    ∀ (n : ℕ), ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = (X ^ n %ₘ Lagrange.nodal s a).coeff (#s - 1)
+@D1Bound5.lagrange_power_moment_low : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s → ∀ n < #s, ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = if n = #s - 1 then 1 else 0
+@D1Bound5.lagrange_power_moment_first_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F), Set.InjOn a ↑s → 0 < #s → ∑ i ∈ s, a i ^ #s / ∏ j ∈ s.erase i, (a i - a j) = ∑ i ∈ s, a i
+@D1Bound5.reciprocal_anchor_sum_remainder : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    Set.InjOn a ↑s →
+      ∀ (k : ℕ),
+        ∑ i ∈ s, (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+          (-1) ^ (#s - 1) * (∏ j ∈ s, a j)⁻¹ * (X ^ (k + #s - 1) %ₘ Lagrange.nodal s fun i => (a i)⁻¹).coeff (#s - 1)
+'D1Bound5.lagrange_power_moment_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_first_hsymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.reciprocal_anchor_sum_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]

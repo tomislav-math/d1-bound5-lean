@@ -1,0 +1,58 @@
+research/continuations/20261017T154335CEST-hsymm-recurrence/SecondHomogeneousMomentTrial.lean:18:28: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+research/continuations/20261017T154335CEST-hsymm-recurrence/SecondHomogeneousMomentTrial.lean:21:2: error: Type mismatch: After simplification, term
+  hcoeff
+ has type
+  (∏ a_1 ∈ s, ((fun t => X - C t) ∘ a) a_1).coeff (#s - 2) = -1 * -1 * (Multiset.map a s.val).esymm 2
+but is expected to have type
+  (∏ i ∈ s, (X - C (a i))).coeff (#s - 2) = (Multiset.map a s.val).esymm 2
+research/continuations/20261017T154335CEST-hsymm-recurrence/SecondHomogeneousMomentTrial.lean:78:7: error: unknown tactic
+research/continuations/20261017T154335CEST-hsymm-recurrence/SecondHomogeneousMomentTrial.lean:65:15: error: unsolved goals
+F : Type u_1
+ι : Type u_2
+inst✝¹ : Field F
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → F
+hinj : Set.InjOn a ↑s
+hs : 2 ≤ #s
+L : ℕ → F := fun n => ∑ i ∈ s, a i ^ n / ∏ t ∈ s.erase i, (a i - a t)
+Q : F[X] := Lagrange.nodal s a
+hlow : ∀ j ∈ range (#s - 2), L (1 + j) = 0
+htop : L (1 + (#s - 2)) = 1
+hnext : L (1 + (#s - 1)) = ∑ i ∈ s, a i
+hq1 : Q.coeff (#s - 1) = -∑ i ∈ s, a i
+hq2 : Q.coeff (#s - 2) = (Multiset.map a s.val).esymm 2
+hcard : #s - 2 + 1 + 1 = #s
+hz : ∑ j ∈ range (#s - 2), Q.coeff j * L (1 + j) = 0
+⊢ Q.coeff (#s - 2) * L (1 + (#s - 2)) + Q.coeff (#s - 2 + 1) * L (1 + (#s - 2 + 1)) =
+    Q.coeff (#s - 2) * L (1 + (#s - 2)) + Q.coeff (#s - 1) * L (1 + (#s - 1))
+research/continuations/20261017T154335CEST-hsymm-recurrence/SecondHomogeneousMomentTrial.lean:77:67: error: unsolved goals
+F : Type u_1
+ι : Type u_2
+inst✝¹ : Field F
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → F
+hinj : Set.InjOn a ↑s
+hs : 2 ≤ #s
+L : ℕ → F := fun n => ∑ i ∈ s, a i ^ n / ∏ t ∈ s.erase i, (a i - a t)
+Q : F[X] := Lagrange.nodal s a
+hlow : ∀ j ∈ range (#s - 2), L (1 + j) = 0
+htop : L (1 + (#s - 2)) = 1
+hnext : L (1 + (#s - 1)) = ∑ i ∈ s, a i
+hq1 : Q.coeff (#s - 1) = -∑ i ∈ s, a i
+hq2 : Q.coeff (#s - 2) = (Multiset.map a s.val).esymm 2
+hsum : ∑ j ∈ range #s, Q.coeff j * L (1 + j) = Q.coeff (#s - 2) * L (1 + (#s - 2)) + Q.coeff (#s - 1) * L (1 + (#s - 1))
+hr : (Multiset.map a s.val).esymm 2 + (-∑ i ∈ s, a i) * ∑ i ∈ s, a i + L (1 + #s) = 0
+⊢ L (#s + 1) = (∑ i ∈ s, a i) ^ 2 - (Multiset.map a s.val).esymm 2
+@D1Bound5.nodal_coefficient_two_below_top : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι]
+  (s : Finset ι) (a : ι → F), 2 ≤ #s → (Lagrange.nodal s a).coeff (#s - 2) = (Multiset.map a s.val).esymm 2
+@D1Bound5.lagrange_power_moment_second_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    2 ≤ #s →
+      ∑ i ∈ s, a i ^ (#s + 1) / ∏ t ∈ s.erase i, (a i - a t) = (∑ i ∈ s, a i) ^ 2 - (Multiset.map a s.val).esymm 2
+'D1Bound5.nodal_coefficient_two_below_top' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_second_hsymm' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

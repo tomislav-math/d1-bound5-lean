@@ -1,0 +1,12 @@
+research/continuations/20261017T154335CEST-hsymm-recurrence/SecondHomogeneousMomentTrial.lean:18:28: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+@D1Bound5.nodal_coefficient_two_below_top : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [DecidableEq ι]
+  (s : Finset ι) (a : ι → F), 2 ≤ #s → (Lagrange.nodal s a).coeff (#s - 2) = (Multiset.map a s.val).esymm 2
+@D1Bound5.lagrange_power_moment_second_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    2 ≤ #s →
+      ∑ i ∈ s, a i ^ (#s + 1) / ∏ t ∈ s.erase i, (a i - a t) = (∑ i ∈ s, a i) ^ 2 - (Multiset.map a s.val).esymm 2
+'D1Bound5.nodal_coefficient_two_below_top' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.lagrange_power_moment_second_hsymm' depends on axioms: [propext, Classical.choice, Quot.sound]
