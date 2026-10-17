@@ -1,5 +1,15 @@
 # Status
 
+## 17 October 2026 — cross-block, coherent interpolation and first-order Bennett verified
+
+Seven new root-imported modules prove 45 exported theorems (plus 3 private cross-block helpers) and add 8 public definitions. The new results are the full-ring cross-block determinant lower bound; exact convergent coherent interpolation, manuscript tail estimate and coherent-root compatibility; the arbitrary-size k=1 Bennett determinant with explicit entries and nonvanishing; the conditional all-order determinant/degree and simple-residue coefficient principles; and the local inverse-power binomial expansion.
+
+All seven standalone pinned module builds, the integrated root build, the exact 53-declaration type/transitive-axiom audit, the whole-project transitive-axiom audit and the source/import scan passed. Fresh whole-root leanchecker replay also passed in the SAME installed Lean kernel, with source SHA256 equality before and after replay. Only propext, Classical.choice and Quot.sound are permitted by the enforced audits. Independent source/statement review of all seven exact final module bodies passed. No fresh clean-checkout or independent kernel implementation was used.
+
+The new work does NOT close the arbitrary-order Bennett determinant: concrete residue cancellation/decomposition, the node-removal recurrence and the nonzero determinant constant remain open. The integral coherent linear form and nonvanishing, quantitative approximation and cross-block upper bounds, complete finite certificates/descent, the three final sextuple branches and MainStatement remain UNPROVED. The full-ring product-four and product-five tuple growth endpoints were already proved and remain unchanged.
+
+The public manuscript body matches frozen v4; only PDF metadata and date differ. The two requested hourly automations remain paused. Previous unsynchronized work was privately pushed in d7ba2c337d76df8e081ac8e299f48a019e0d2791 and fd0c8b471614a4b8c5a110a830524c973758e4aa. Publication of this new accepted snapshot requires the separate verified push receipt.
+
 ## 17 October 2026 — recovered analytic modules integrated and audited
 
 The three previously isolated units are now integrated as ComplexHalfBinomial, HalfBinomialAnalytic and HalfBinomialLowDegree. The last uses the same public halfBinomialWeightedCoeff definition, removing the private duplicate. All three module builds and the combined root build passed under the pinned environment. All ten exported theorems plus the coefficient definition passed enforced transitive axiom checks with only propext, Classical.choice and Quot.sound. An independent read-only statement/source audit found no weakened product-four/product-five endpoints or analytic formula errors. A fresh replay of this combined recovered snapshot is still pending in the current continuation. MainStatement remains UNPROVED.

@@ -1,0 +1,23 @@
+✖ [1496/1496] Building D1Bound5.BennettPoleSeries (88s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettPoleSeries.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettPoleSeries.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettPoleSeries.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettPoleSeries.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettPoleSeries.setup.json --json
+info: D1Bound5/BennettPoleSeries.lean:46:10: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/BennettPoleSeries.lean:44:56: unsolved goals
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+d : F
+hd : d ≠ 0
+k : ℕ
+hs : (1 + C d⁻¹ * X) ^ k * (rescale d⁻¹) (binomialSeries F (-↑k)) = 1
+hf : C d + X = C d * (1 + C d⁻¹ * X)
+⊢ C d ^ k * C d⁻¹ ^ k * (rescale d⁻¹) (binomialSeries F (-↑k)) * (1 + C d⁻¹ * X) ^ k =
+    C d⁻¹ ^ k * (rescale d⁻¹) (binomialSeries F (-↑k)) * C (d ^ k) * (1 + C d⁻¹ * X) ^ k
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettPoleSeries
+error: build failed

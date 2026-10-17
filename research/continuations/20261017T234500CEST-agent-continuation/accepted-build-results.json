@@ -1,0 +1,125 @@
+[
+  {
+    "label": "build-CrossBlockDeterminant",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.CrossBlockDeterminant"
+    ],
+    "exit_code": 0,
+    "seconds": 12.1,
+    "utc_finished": "2026-10-17T22:25:23.945511+00:00"
+  },
+  {
+    "label": "build-CoherentAnalyticInterpolation",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.CoherentAnalyticInterpolation"
+    ],
+    "exit_code": 0,
+    "seconds": 6.26,
+    "utc_finished": "2026-10-17T22:25:30.215896+00:00"
+  },
+  {
+    "label": "build-BennettResidualDeterminant",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.BennettResidualDeterminant"
+    ],
+    "exit_code": 0,
+    "seconds": 4.25,
+    "utc_finished": "2026-10-17T22:25:34.470817+00:00"
+  },
+  {
+    "label": "build-BennettResidueCoefficient",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.BennettResidueCoefficient"
+    ],
+    "exit_code": 0,
+    "seconds": 3.84,
+    "utc_finished": "2026-10-17T22:25:38.308554+00:00"
+  },
+  {
+    "label": "build-BennettFirstOrder",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.BennettFirstOrder"
+    ],
+    "exit_code": 0,
+    "seconds": 4.35,
+    "utc_finished": "2026-10-17T22:25:42.658202+00:00"
+  },
+  {
+    "label": "build-BennettFirstOrderResidues",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.BennettFirstOrderResidues"
+    ],
+    "exit_code": 0,
+    "seconds": 4.07,
+    "utc_finished": "2026-10-17T22:25:46.731375+00:00"
+  },
+  {
+    "label": "build-BennettPoleSeries",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.BennettPoleSeries"
+    ],
+    "exit_code": 0,
+    "seconds": 32.3,
+    "utc_finished": "2026-10-17T22:26:19.030194+00:00"
+  },
+  {
+    "label": "build-final-root",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build"
+    ],
+    "exit_code": 0,
+    "seconds": 74.36,
+    "utc_finished": "2026-10-17T22:27:33.399920+00:00"
+  },
+  {
+    "label": "continuation-axioms",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "lean",
+      "-DautoImplicit=false",
+      "scripts/AgentContinuationAudit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 117.93,
+    "utc_finished": "2026-10-17T22:29:31.337986+00:00"
+  },
+  {
+    "label": "whole-project-axioms",
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "lean",
+      "-DautoImplicit=false",
+      "scripts/Audit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 199.89,
+    "utc_finished": "2026-10-17T22:32:51.239712+00:00"
+  },
+  {
+    "label": "final-source-audit",
+    "command": [
+      "/Users/tp/.local/bin/python3.12",
+      "scripts/source_audit.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.32,
+    "utc_finished": "2026-10-17T22:32:51.584012+00:00"
+  }
+]

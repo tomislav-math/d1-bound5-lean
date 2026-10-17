@@ -1,0 +1,68 @@
+research/continuations/20261017T234500CEST-agent-continuation/CoherentInterpolationTrial.lean:14:32: warning: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+research/continuations/20261017T234500CEST-agent-continuation/CoherentInterpolationTrial.lean:117:4: error: Tactic `apply` failed: could not unify the conclusion of `@_root_.funext`
+  ?f = ?g
+with the goal
+  Complex.instAddCommMonoid =
+    Complex.instNonUnitalCommRing.toNonUnitalNonAssocCommRing.toNonUnitalNonAssocSemiring.toAddCommMonoid
+
+Note: The full type of `@_root_.funext` is
+  ∀ {α : Sort ?u.246} {β : α → Sort ?u.245} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_3
+ι : Type u_1
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → ℂ
+hs : s.Nonempty
+ha : ∀ i ∈ s, a i ≠ 0
+hinj : Set.InjOn a ↑s
+c : ℕ → ℂ
+g : ι → ℂ
+hc : ∀ i ∈ s, HasSum (fun n => c n * (a i)⁻¹ ^ n) (g i)
+w : ι → ℂ := fun i => a i ^ (#s - 1) / ∏ j ∈ s.erase i, (a i - a j)
+M : ℕ → ℂ := fun n => ∑ i ∈ s, w i * (a i)⁻¹ ^ n
+H : ℕ → ℂ := fun k => (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm ↥s ℂ k)
+A : ℂ := (-1) ^ (#s - 1) * (∏ i ∈ s, a i)⁻¹
+lhs : ℂ := ∑ i ∈ s, w i * g i
+h : HasSum (fun b => ∑ i ∈ s, w i * (c b * (a i)⁻¹ ^ b)) (∑ i ∈ s, w i * g i)
+⊢ Complex.instAddCommMonoid =
+    Complex.instNonUnitalCommRing.toNonUnitalNonAssocCommRing.toNonUnitalNonAssocSemiring.toAddCommMonoid
+research/continuations/20261017T234500CEST-agent-continuation/CoherentInterpolationTrial.lean:138:4: error: Tactic `apply` failed: could not unify the conclusion of `@_root_.funext`
+  ?f = ?g
+with the goal
+  Complex.instAddCommMonoid = Complex.addCommGroup.toAddCommMonoid
+
+Note: The full type of `@_root_.funext` is
+  ∀ {α : Sort ?u.328} {β : α → Sort ?u.327} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_3
+ι : Type u_1
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → ℂ
+hs : s.Nonempty
+ha : ∀ i ∈ s, a i ≠ 0
+hinj : Set.InjOn a ↑s
+c : ℕ → ℂ
+g : ι → ℂ
+hc : ∀ i ∈ s, HasSum (fun n => c n * (a i)⁻¹ ^ n) (g i)
+w : ι → ℂ := fun i => a i ^ (#s - 1) / ∏ j ∈ s.erase i, (a i - a j)
+M : ℕ → ℂ := fun n => ∑ i ∈ s, w i * (a i)⁻¹ ^ n
+H : ℕ → ℂ := fun k => (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm ↥s ℂ k)
+A : ℂ := (-1) ^ (#s - 1) * (∏ i ∈ s, a i)⁻¹
+lhs : ℂ := ∑ i ∈ s, w i * g i
+hfull : HasSum (fun n => c n * M n) lhs
+hprefix : ∑ n ∈ range #s, c n * M n = c 0
+htailRaw : HasSum (fun n => c (n + #s) * M (n + #s)) (lhs - c 0)
+⊢ Complex.instAddCommMonoid = Complex.addCommGroup.toAddCommMonoid
+'D1Bound5.coherent_anchor_power_moment_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_anchor_power_moment_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_interpolation_series_exact' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_half_binomial_exact' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_half_binomial_exact_split' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_half_binomial_full_tail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]

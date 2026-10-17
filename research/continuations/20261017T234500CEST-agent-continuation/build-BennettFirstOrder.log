@@ -1,0 +1,13 @@
+⚠ [1757/1757] Replayed D1Bound5.BennettFirstOrder
+warning: D1Bound5/BennettFirstOrder.lean:28:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/BennettFirstOrder.lean:83:19: This simp argument is unused:
+  hj'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettFirstOrderMonomial, coeff_sub, coeff_C_mul, coeff_X_pow, Ne.symm hj', ite_true, ite_false,
+    mul_one, mul_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (1757 jobs).

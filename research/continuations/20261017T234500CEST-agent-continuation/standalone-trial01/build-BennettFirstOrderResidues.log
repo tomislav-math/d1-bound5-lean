@@ -1,0 +1,21 @@
+⚠ [1757/1758] Replayed D1Bound5.BennettFirstOrder
+warning: D1Bound5/BennettFirstOrder.lean:28:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/BennettFirstOrder.lean:83:19: This simp argument is unused:
+  hj'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettFirstOrderMonomial, coeff_sub, coeff_C_mul, coeff_X_pow, Ne.symm hj', ite_true, ite_false,
+    mul_one, mul_zero, sub_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1758/1758] Built D1Bound5.BennettFirstOrderResidues (109s)
+warning: D1Bound5/BennettFirstOrderResidues.lean:13:31: This simp argument is unused:
+  Polynomial.derivative_C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Lagrange.basisDivisor]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Build completed successfully (1758 jobs).

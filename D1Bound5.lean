@@ -102,3 +102,10 @@ import D1Bound5.HalfBinomialConvolutionAbs
 import D1Bound5.ComplexHalfBinomial
 import D1Bound5.HalfBinomialAnalytic
 import D1Bound5.HalfBinomialLowDegree
+import D1Bound5.CrossBlockDeterminant
+import D1Bound5.CoherentAnalyticInterpolation
+import D1Bound5.BennettResidualDeterminant
+import D1Bound5.BennettResidueCoefficient
+import D1Bound5.BennettFirstOrder
+import D1Bound5.BennettFirstOrderResidues
+import D1Bound5.BennettPoleSeries

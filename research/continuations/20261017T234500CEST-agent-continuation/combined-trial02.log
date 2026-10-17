@@ -1,0 +1,75 @@
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:199:32: warning: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'D1Bound5.coherent_anchor_power_moment_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_anchor_power_moment_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_interpolation_series_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_half_binomial_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_half_binomial_exact_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_half_binomial_full_tail_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.coherent_interpolation_normalization' depends on axioms: [propext, Classical.choice, Quot.sound]
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:500:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:517:2: error: Type mismatch: After simplification, term
+  hbound
+ has type
+  ‖∑' (j : ℕ),
+          halfBinomialWeightedCoeff x y (#s + j) * (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm ↥s ℂ j) -
+        halfBinomialWeightedCoeff x y #s‖ ≤
+    4 * |halfBinomialCoeff (#s + 1)| * (1 * P⁻¹) ^ #s * (1 * ((1 - 1 * (A * P)⁻¹) ^ #s)⁻¹ - 1)
+but is expected to have type
+  ‖∑' (j : ℕ),
+          halfBinomialWeightedCoeff x y (#s + j) * (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm ↥s ℂ j) -
+        halfBinomialWeightedCoeff x y #s‖ ≤
+    4 * |halfBinomialCoeff (#s + 1)| * (P ^ #s)⁻¹ * (1 * ((1 - 1 * (A * P)⁻¹) ^ #s)⁻¹ - 1)
+'D1Bound5.coherent_half_binomial_manuscript_tail_norm_le' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'D1Bound5.coherent_half_binomial_manuscript_anchor_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:554:2: error: Type mismatch: After simplification, term
+  Complex.cpow_nat_inv_pow z (of_decide_eq_true (id (Eq.refl true)))
+ has type
+  @Eq ℂ ((z ^ (↑2)⁻¹) ^ 2) z
+but is expected to have type
+  @Eq ℂ ((z ^ 2⁻¹) ^ 2) z
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:564:26: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:564:26: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:576:30: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:576:30: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'D1Bound5.coherent_cpow_half_sq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_analytic_terminal_root_sq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_analytic_anchor_root_sq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.coherent_analytic_anchor_root_eq_or_eq_neg' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:707:0: warning: automatically included section variable(s) unused in theorem `D1Bound5.clearedPoleNumerator_monic`:
+  [Nontrivial R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+research/continuations/20261017T234500CEST-agent-continuation/CombinedProofTrial02.lean:739:4: error: Type mismatch
+  add_sum_erase univ ?m.88 (mem_univ i)
+has type
+  @HAdd.hAdd ?m.84 ?m.84 ?m.84 instHAdd (?m.88 i) (∑ x ∈ univ.erase i, ?m.88 x) = ∑ x, ?m.88 x
+but is expected to have type
+  @HAdd.hAdd ℕ ℕ ℕ instHAdd (e i + 1) (∑ l ∈ univ.erase i, (e l + 1)) = ∑ l, (e l + 1)
