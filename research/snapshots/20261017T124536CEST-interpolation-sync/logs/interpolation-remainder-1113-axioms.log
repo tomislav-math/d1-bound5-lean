@@ -1,0 +1,22 @@
+@D1Bound5.anchorVanishingPolynomial_monic : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F), (D1Bound5.anchorVanishingPolynomial s a).Monic
+@D1Bound5.anchorVanishingPolynomial_degree : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F), (D1Bound5.anchorVanishingPolynomial s a).degree = ↑(#s)
+@D1Bound5.anchorVanishingPolynomial_eval_zero : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F), ∀ i ∈ s, eval (a i) (D1Bound5.anchorVanishingPolynomial s a) = 0
+@D1Bound5.anchor_weighted_eval_remainder_coeff : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    ∀ (P : F[X]),
+      ∑ i ∈ s, eval (a i) P / ∏ j ∈ s.erase i, (a i - a j) =
+        (P %ₘ D1Bound5.anchorVanishingPolynomial s a).coeff (#s - 1)
+@D1Bound5.anchor_weighted_power_remainder_coeff : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    ∀ (n : ℕ),
+      ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = (X ^ n %ₘ D1Bound5.anchorVanishingPolynomial s a).coeff (#s - 1)
+'D1Bound5.anchorVanishingPolynomial_monic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchorVanishingPolynomial_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchorVanishingPolynomial_eval_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchor_weighted_eval_remainder_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchor_weighted_power_remainder_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]

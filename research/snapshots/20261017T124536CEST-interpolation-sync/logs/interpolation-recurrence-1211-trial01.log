@@ -1,0 +1,8 @@
+exploration/InterpolationRecurrenceTrial.lean:67:2: error: Type mismatch: After simplification, term
+  hrec
+ has type
+  ∑ x ∈ range #s, (∏ i ∈ s, (X - C (a i))).coeff x * ∑ i ∈ s, b i * a i ^ (n + x) +
+      (∏ i ∈ s, (X - C (a i))).coeff #s * ∑ i ∈ s, b i * a i ^ (n + #s) =
+    0
+but is expected to have type
+  ∑ k ∈ range #s, (∏ i ∈ s, (X - C (a i))).coeff k * ∑ i ∈ s, b i * a i ^ (n + k) + ∑ i ∈ s, b i * a i ^ (n + #s) = 0

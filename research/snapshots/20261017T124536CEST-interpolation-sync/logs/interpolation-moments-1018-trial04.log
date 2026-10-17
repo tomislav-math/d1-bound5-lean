@@ -1,0 +1,6 @@
+exploration/InterpolationMomentsTrial.lean:29:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  ∑ x ∈ s, a x ^ n / ∏ j ∈ s.erase x, (a x - a j) = if #s - 1 = n then 1 else 0
+but is expected to have type
+  ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = if n = #s - 1 then 1 else 0

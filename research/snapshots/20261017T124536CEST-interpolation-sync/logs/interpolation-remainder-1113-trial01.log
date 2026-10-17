@@ -1,0 +1,12 @@
+exploration/InterpolationRemainderTrial.lean:24:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (∏ i ∈ ?m.13, ?f i).degree
+in the target expression
+  (∏ i ∈ s, (X - C (a i))).degree = ↑(#s)
+
+F : Type u_1
+ι : Type u_2
+inst✝¹ : Field F
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → F
+⊢ (∏ i ∈ s, (X - C (a i))).degree = ↑(#s)

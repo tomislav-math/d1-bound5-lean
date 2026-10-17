@@ -1,0 +1,36 @@
+exploration/InterpolationMomentsTrial.lean:11:30: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℂ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/InterpolationMomentsTrial.lean:13:47: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub ℂ ℂ ?m.24
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/InterpolationMomentsTrial.lean:15:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Field ℂ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/InterpolationMomentsTrial.lean:21:42: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub ℂ ℂ ?m.21
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/InterpolationMomentsTrial.lean:21:14: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HPow ℂ ℕ ?m.25
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/InterpolationMomentsTrial.lean:23:20: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Semiring ℂ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/InterpolationMomentsTrial.lean:26:12: error(lean.unknownIdentifier): Unknown identifier `anchor_weighted_eval_coeff`
+exploration/InterpolationMomentsTrial.lean:22:41: error: unsolved goals
+ℂ : Type u_2
+ι : Type u_1
+inst✝ : DecidableEq ι
+s : Finset ι
+a : ι → ℂ
+ha : Set.InjOn a ↑s
+n : ℕ
+hn : n < #s
+hdeg : sorry < ↑(#s)
+⊢ ∑ i ∈ s, sorry = if n = #s - 1 then 1 else 0

@@ -1,0 +1,19 @@
+@D1Bound5.anchor_weighted_eval_coeff : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s →
+    ∀ (P : F[X]), P.degree < ↑(#s) → ∑ i ∈ s, eval (a i) P / ∏ j ∈ s.erase i, (a i - a j) = P.coeff (#s - 1)
+@D1Bound5.anchor_weighted_power_moment : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s → ∀ n < #s, ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = if n = #s - 1 then 1 else 0
+@D1Bound5.anchor_weighted_low_moment_zero : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  Set.InjOn a ↑s → ∀ (n : ℕ), n + 1 < #s → ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j) = 0
+@D1Bound5.anchor_weighted_top_moment_one : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F), Set.InjOn a ↑s → s.Nonempty → ∑ i ∈ s, a i ^ (#s - 1) / ∏ j ∈ s.erase i, (a i - a j) = 1
+@D1Bound5.anchor_coherent_initial_moments : ∀ {F : Type u_1} [inst : Field F] (m : ℕ) (a : Fin m → F),
+  Function.Injective a → ∀ n < m, ∑ i, a i ^ (m - 1 - n) / ∏ j ∈ univ.erase i, (a i - a j) = if n = 0 then 1 else 0
+'D1Bound5.anchor_weighted_eval_coeff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchor_weighted_power_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchor_weighted_low_moment_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchor_weighted_top_moment_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.anchor_coherent_initial_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
