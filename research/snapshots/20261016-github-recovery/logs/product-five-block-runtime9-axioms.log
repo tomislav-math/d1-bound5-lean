@@ -1,0 +1,9 @@
+PRODUCT_FIVE_BLOCK_AXIOMS D1Bound5.scalar_last_block_det: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_BLOCK_AXIOMS D1Bound5.productFiveIntegratedBlock_det: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_BLOCK_AXIOMS_PASS: 2 theorems
+D1Bound5.scalar_last_block_det.{u_1} {n : Type u_1} [Fintype n] [DecidableEq n] (A : Matrix n n ℂ) (b c : n → ℂ) (d : ℂ)
+  (hd : d ≠ 0) :
+  (Matrix.fromBlocks A (fun i x => b i) (fun x j => c j) fun x x_1 => d).det =
+    d * (A - Matrix.of fun i j => b i * c j / d).det
+D1Bound5.productFiveIntegratedBlock_det (F : Matrix (Fin 4) (Fin 4) ℂ) (f w : Fin 4 → ℂ) (d : ℂ) (hd : d ≠ 0) :
+  (D1Bound5.productFiveIntegratedBlock F f w d).det = d ^ 2 * (D1Bound5.productFiveSchur F f w d).det

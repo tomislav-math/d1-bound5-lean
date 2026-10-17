@@ -1,0 +1,114 @@
+exploration/AdjugateFourTrial.lean:25:4: error: unsolved goals
+case pos
+E : Matrix (Fin 4) (Fin 4) ℂ
+a b : ℝ
+ha : 0 < a
+hb : 0 < b
+hd : ∀ (i : Fin 4), ‖E i i‖ < a
+hoff : ∀ (i j : Fin 4), i ≠ j → ‖E i j‖ < b
+D : Matrix (Fin 4) (Fin 4) ℂ := diagonal fun i => E i i
+U : Matrix (Fin 4) (Fin 4) ℂ := fun i j => if i = j then 0 else E i j
+i : Fin 4
+⊢ E i i = ((diagonal fun i => E i i) + fun i j => if i = j then 0 else E i j) i i
+exploration/AdjugateFourTrial.lean:27:4: error: unsolved goals
+case neg
+E : Matrix (Fin 4) (Fin 4) ℂ
+a b : ℝ
+ha : 0 < a
+hb : 0 < b
+hd : ∀ (i : Fin 4), ‖E i i‖ < a
+hoff : ∀ (i j : Fin 4), i ≠ j → ‖E i j‖ < b
+D : Matrix (Fin 4) (Fin 4) ℂ := diagonal fun i => E i i
+U : Matrix (Fin 4) (Fin 4) ℂ := fun i j => if i = j then 0 else E i j
+i j : Fin 4
+hij : ¬i = j
+⊢ E i j = ((diagonal fun i => E i i) + fun i j => if i = j then 0 else E i j) i j
+exploration/AdjugateFourTrial.lean:26:18: warning: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, U]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:27:18: warning: This simp argument is unused:
+  hij
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, U, Matrix.diagonal_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:27:23: warning: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, U, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:47:22: error(lean.unknownIdentifier): Unknown constant `Matrix.cofactor`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/AdjugateFourTrial.lean:45:58: error: unsolved goals
+x y z u v w : ℂ
+⊢ !![0, x, y, z; x, 0, u, v; y, u, 0, w; z, v, w, 0]ᵀ.cramer (Pi.single 0 1) 0 = u * v * w * 2
+exploration/AdjugateFourTrial.lean:47:39: warning: This simp argument is unused:
+  Matrix.det_fin_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.adjugate, Matrix.cofactor, Matrix.submatrix_apply,
+    Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:48:5: warning: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.adjugate, Matrix.cofactor, Matrix.det_fin_three, Matrix.of_apply,
+    Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:48:46: warning: This simp argument is unused:
+  Fin.succAbove
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.adjugate, Matrix.cofactor, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:57:22: error(lean.unknownIdentifier): Unknown constant `Matrix.cofactor`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/AdjugateFourTrial.lean:55:29: error: unsolved goals
+x y z u v w : ℂ
+⊢ !![0, x, y, z; x, 0, u, v; y, u, 0, w; z, v, w, 0]ᵀ.cramer (Pi.single 0 1) 1 = -(w * z * u) - w * y * v + w ^ 2 * x
+exploration/AdjugateFourTrial.lean:57:39: warning: This simp argument is unused:
+  Matrix.det_fin_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.adjugate, Matrix.cofactor, Matrix.submatrix_apply,
+    Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:58:5: warning: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.adjugate, Matrix.cofactor, Matrix.det_fin_three, Matrix.of_apply,
+    Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:58:46: warning: This simp argument is unused:
+  Fin.succAbove
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.adjugate, Matrix.cofactor, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

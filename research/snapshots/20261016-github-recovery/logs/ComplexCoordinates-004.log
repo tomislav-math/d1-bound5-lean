@@ -1,0 +1,14 @@
+exploration/ComplexCoordinates.lean:44:4: error: linarith failed to find a contradiction
+case refine_1.h1
+tau nu : ℤ
+f : QuadInt tau nu →+* ℂ
+hi : (f ω).im ≠ 0
+w : ℂ := f ω
+hrel : ω * ω = -↑nu + ↑tau * ω
+he : w * w = -↑nu + ↑tau * w
+hr : w.re * w.re - w.im * w.im = -↑nu + ↑tau * w.re
+him : (2 * w.re - ↑tau) * w.im = 0
+ht : 2 * w.re = ↑tau
+a✝ : (f ω).re ^ 2 + (f ω).im ^ 2 < ↑nu
+⊢ False
+failed

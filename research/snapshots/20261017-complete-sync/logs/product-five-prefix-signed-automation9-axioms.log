@@ -1,0 +1,19 @@
+PRODUCT_FIVE_PREFIX_SIGNED_AXIOMS D1Bound5.mixed_signed_root_det_upper_33_128: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_PREFIX_SIGNED_AXIOMS D1Bound5.five_prefix_det_upper_of_mixed_signed_entries: [propext,
+ Classical.choice,
+ Quot.sound]
+PRODUCT_FIVE_PREFIX_SIGNED_AXIOMS_PASS: 2 theorems
+D1Bound5.mixed_signed_root_det_upper_33_128.{u_1} {R : Type u_1} [CommRing R] (f : R →+* ℂ) (a : Fin 4 → R)
+  (u : Fin 4 → ℂ) (S : Matrix (Fin 4) (Fin 4) R) (hu : ∀ (i : Fin 4), u i ^ 2 = f (a i))
+  (hdiag : ∀ (i : Fin 4), S i i = a i) (hsymm : ∀ (i j : Fin 4), S i j = S j i)
+  (hgood : ∀ (i j : Fin 4), i ≠ j → D1Bound5.MixedSignedEntryGood f a u i j (S i j)) :
+  ‖(D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).det‖ < 33 / 128
+D1Bound5.five_prefix_det_upper_of_mixed_signed_entries.{u_1} {R : Type u_1} [CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R) (hu : ∀ (i : Fin 5), u i ^ 2 = f (a i))
+  (hdiag : ∀ (i : Fin 5), S i i = a i) (hsymm : ∀ (i j : Fin 5), S i j = S j i)
+  (hgood :
+    ∀ (i j : Fin 4),
+      i ≠ j →
+        D1Bound5.MixedSignedEntryGood f (fun k => a (Fin.castAdd 1 k)) (fun k => u (Fin.castAdd 1 k)) i j
+          (S (Fin.castAdd 1 i) (Fin.castAdd 1 j))) :
+  ‖(D1Bound5.fivePrefixError (D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j))).det‖ < 33 / 128

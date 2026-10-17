@@ -1,0 +1,16 @@
+TUPLE_ROOT_MATRIX_BRIDGE_AXIOMS D1Bound5.IsD1Tuple.exists_symmetric_root_matrix: [propext, Classical.choice, Quot.sound]
+TUPLE_ROOT_MATRIX_BRIDGE_AXIOMS D1Bound5.IsD1Tuple.productFour_large_growth: [propext, Classical.choice, Quot.sound]
+TUPLE_ROOT_MATRIX_BRIDGE_AUDIT_PASS: 2 theorems
+@D1Bound5.IsD1Tuple.exists_symmetric_root_matrix : ∀ {R : Type u_1} [inst : CommRing R] {n : ℕ} (t : Fin n → R),
+  D1Bound5.IsD1Tuple t →
+    ∃ M,
+      (∀ (i : Fin n), M i i = t i) ∧
+        (∀ (i j : Fin n), M i j = M j i) ∧ ∀ (i j : Fin n), i ≠ j → M i j ^ 2 = t i * t j + 1
+@D1Bound5.IsD1Tuple.productFour_large_growth : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (t : Fin 4 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple t →
+        (Monotone fun i => ‖phi ↑(t i)‖) →
+          3 ≤ ‖phi ↑(t 0)‖ → 2 * ‖phi ↑(t 0)‖ * ‖phi ↑(t 1)‖ * ‖phi ↑(t 2)‖ < ‖phi ↑(t 3)‖
+'D1Bound5.IsD1Tuple.productFour_large_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

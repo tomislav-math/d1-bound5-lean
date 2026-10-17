@@ -1,0 +1,19 @@
+exploration/RankOneTrial2.lean:17:80: error: unsolved goals
+F : Matrix (Fin 4) (Fin 4) ℂ
+w : Fin 4 → ℂ
+hF : F.det ≠ 0
+hu : IsUnit F.det
+hfactor : F + vecMulVec w w = F * (1 + F⁻¹ * vecMulVec w w)
+⊢ replicateCol (Fin 1) (F⁻¹ *ᵥ w) * replicateRow (Fin 1) w = replicateCol (Fin 1) (F⁻¹ *ᵥ w) * replicateRow (Fin 1) w
+exploration/RankOneTrial2.lean:21:4: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (1 + replicateCol ?m.227 ?u * replicateRow ?m.227 ?v).det
+in the target expression
+  F.det * (1 + replicateCol (Fin 1) (F⁻¹ *ᵥ w) * replicateRow (Fin 1) w).det = F.det * (1 + w ⬝ᵥ F⁻¹ *ᵥ w)
+
+F : Matrix (Fin 4) (Fin 4) ℂ
+w : Fin 4 → ℂ
+hF : F.det ≠ 0
+hu : IsUnit F.det
+hfactor : F + vecMulVec w w = F * (1 + F⁻¹ * vecMulVec w w)
+hrank : F⁻¹ * vecMulVec w w = replicateCol (Fin 1) (F⁻¹ *ᵥ w) * replicateRow (Fin 1) w
+⊢ F.det * (1 + replicateCol (Fin 1) (F⁻¹ *ᵥ w) * replicateRow (Fin 1) w).det = F.det * (1 + w ⬝ᵥ F⁻¹ *ᵥ w)

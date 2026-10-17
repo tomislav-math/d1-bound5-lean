@@ -1,0 +1,41 @@
+PRODUCT_FIVE_ARITHMETIC_AXIOMS D1Bound5.five_root_det_ne_zero_of_schur: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_ARITHMETIC_AXIOMS D1Bound5.five_schur_det_ne_zero_of_near: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_ARITHMETIC_AXIOMS D1Bound5.full_ring_productFive_arithmetic_growth: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_ARITHMETIC_AXIOMS D1Bound5.full_ring_productFive_growth_of_schur_estimates: [propext,
+ Classical.choice,
+ Quot.sound]
+PRODUCT_FIVE_ARITHMETIC_AXIOMS_PASS: 4 theorems
+D1Bound5.five_root_det_ne_zero_of_schur (t u : Fin 5 → ℂ) (M : Matrix (Fin 5) (Fin 5) ℂ)
+  (hu : ∀ (i : Fin 5), u i ^ 2 = t i) (hdiag : ∀ (i : Fin 5), M i i = t i) (hsym : M.transpose = M)
+  (hd : D1Bound5.fiveLastValue t ≠ 0) (hG : (D1Bound5.fiveNormalizedSchur t u M).det ≠ 0) : M.det ≠ 0
+D1Bound5.five_schur_det_ne_zero_of_near (G : Matrix (Fin 4) (Fin 4) ℂ)
+  (hnear : ‖G - D1Bound5.halfOffDiagonal‖ < 1 / 2) : G.det ≠ 0
+D1Bound5.full_ring_productFive_arithmetic_growth.{u_1} {K : Type u_1} [Field K] [NumberField K]
+  [NumberField.IsTotallyComplex K] (hK : Module.finrank ℚ K = 2) (phi : K →+* ℂ)
+  (a : Fin 5 → NumberField.RingOfIntegers K) (M : Matrix (Fin 5) (Fin 5) (NumberField.RingOfIntegers K)) (u : Fin 5 → ℂ)
+  (hu : ∀ (i : Fin 5), u i ^ 2 = phi ↑(a i)) (hdiag : ∀ (i : Fin 5), M i i = a i)
+  (hsym : ∀ (i j : Fin 5), M i j = M j i) (hd : (D1Bound5.fiveLastValue fun i => phi ↑(a i)) ≠ 0)
+  (hGne :
+    (D1Bound5.fiveNormalizedSchur (fun i => phi ↑(a i)) u
+          (M.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K)))).det ≠
+      0)
+  (hGlt :
+    ‖(D1Bound5.fiveNormalizedSchur (fun i => phi ↑(a i)) u
+            (M.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K)))).det‖ <
+      1 / 3) :
+  3 * ∏ i, ‖phi ↑(a (Fin.castAdd 1 i))‖ < ‖phi ↑(a 4)‖
+D1Bound5.full_ring_productFive_growth_of_schur_estimates.{u_1} {K : Type u_1} [Field K] [NumberField K]
+  [NumberField.IsTotallyComplex K] (hK : Module.finrank ℚ K = 2) (phi : K →+* ℂ)
+  (a : Fin 5 → NumberField.RingOfIntegers K) (M : Matrix (Fin 5) (Fin 5) (NumberField.RingOfIntegers K)) (u : Fin 5 → ℂ)
+  (hu : ∀ (i : Fin 5), u i ^ 2 = phi ↑(a i)) (hdiag : ∀ (i : Fin 5), M i i = a i)
+  (hsym : ∀ (i j : Fin 5), M i j = M j i) (hd : (D1Bound5.fiveLastValue fun i => phi ↑(a i)) ≠ 0)
+  (hGnear :
+    ‖D1Bound5.fiveNormalizedSchur (fun i => phi ↑(a i)) u
+            (M.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K))) -
+          D1Bound5.halfOffDiagonal‖ <
+      1 / 2)
+  (hGsmall :
+    ‖(D1Bound5.fiveNormalizedSchur (fun i => phi ↑(a i)) u
+            (M.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K)))).det‖ <
+      1 / 3) :
+  3 * ∏ i, ‖phi ↑(a (Fin.castAdd 1 i))‖ < ‖phi ↑(a 4)‖

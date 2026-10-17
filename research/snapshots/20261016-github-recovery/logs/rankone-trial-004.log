@@ -1,0 +1,22 @@
+exploration/RankOneTrial.lean:10:39: error: unsolved goals
+case e_a
+F : Matrix (Fin 4) (Fin 4) ℂ
+w : Fin 4 → ℂ
+hF : F.det ≠ 0
+hu : IsUnit F.det
+h : replicateRow (Fin 1) w * F⁻¹ * replicateCol (Fin 1) w = fun x x_1 => w ⬝ᵥ F⁻¹ *ᵥ w
+⊢ (1 + fun x x_1 => w ⬝ᵥ F⁻¹ *ᵥ w) 0 0 = 1 + w ⬝ᵥ F⁻¹ *ᵥ w
+exploration/RankOneTrial.lean:26:27: warning: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_unique, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/RankOneTrial.lean:26:41: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_unique, Pi.add_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

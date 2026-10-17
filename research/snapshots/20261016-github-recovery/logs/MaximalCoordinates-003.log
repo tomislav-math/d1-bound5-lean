@@ -1,0 +1,66 @@
+exploration/MaximalCoordinates.lean:13:0: warning: automatically included section variable(s) unused in theorem `D1Bound5.integral_of_quadratic_relation`:
+  [NumberField K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NumberField K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+exploration/MaximalCoordinates.lean:65:50: warning: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+exploration/MaximalCoordinates.lean:65:50: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+exploration/MaximalCoordinates.lean:85:6: error: ring failed, ring expressions not equal
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : NumberField K
+nu : ℤ
+e : QuadInt 1 nu ≃+* 𝓞 K
+hd : 0 < QuadInt.discriminant 1 nu
+a m : ℤ
+hm : QuadInt.discriminant 1 nu = a * a * m
+ha0 : a ≠ 0
+z : QuadInt 1 nu := ⋯
+h : 4 * nu - 1 = a * a * m
+⊢ nu * 4 + nu * QuadraticAlgebra.im 2 * 2 - nu * QuadraticAlgebra.im 2 * QuadraticAlgebra.re 2 * 2 -
+          nu * QuadraticAlgebra.im 2 ^ 2 -
+        nu * QuadraticAlgebra.re 2 ^ 2 +
+      nu ^ 2 * QuadraticAlgebra.im 2 ^ 2 =
+    0
+exploration/MaximalCoordinates.lean:86:4: error: unsolved goals
+case im
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : NumberField K
+nu : ℤ
+e : QuadInt 1 nu ≃+* 𝓞 K
+hd : 0 < QuadInt.discriminant 1 nu
+a m : ℤ
+hm : QuadInt.discriminant 1 nu = a * a * m
+ha0 : a ≠ 0
+z : QuadInt 1 nu := 2 * QuadraticAlgebra.omega - 1
+h : 4 * nu - 1 = a * a * m
+⊢ (-(nu * QuadraticAlgebra.im 2) - 1) * (QuadraticAlgebra.re 2 + QuadraticAlgebra.im 2) +
+        (QuadraticAlgebra.re 2 + QuadraticAlgebra.im 2) * (-(nu * QuadraticAlgebra.im 2) - 1) +
+      (QuadraticAlgebra.re 2 + QuadraticAlgebra.im 2) * (QuadraticAlgebra.re 2 + QuadraticAlgebra.im 2) =
+    0
+exploration/MaximalCoordinates.lean:90:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  @Eq ℤ (a * y.im) (QuadraticAlgebra.re 2 + QuadraticAlgebra.im 2)
+but is expected to have type
+  @Eq ℤ (a * y.im) 2
+exploration/MaximalCoordinates.lean:115:70: error: Application type mismatch: The argument
+  hr
+has type
+  r * r = ↑(-m) + 1 * r
+but is expected to have type
+  r * r = ↑(-m) + ↑1 * r
+in the application
+  integral_of_quadratic_relation (-m) 1 hr
+exploration/MaximalCoordinates.lean:127:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  QuadraticAlgebra.re 2 * y.im + QuadraticAlgebra.im 2 * y.re = 1
+but is expected to have type
+  2 * y.im = 1

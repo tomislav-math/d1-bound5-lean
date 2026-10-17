@@ -1,0 +1,25 @@
+PRODUCT_FIVE_SCHUR_AXIOMS D1Bound5.four_all_entries_operator_norm_lt: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_SCHUR_AXIOMS D1Bound5.productFive_schur_near_of_entrywise: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_SCHUR_AXIOMS D1Bound5.productFive_schur_scalar_correction_lt: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_SCHUR_AXIOMS D1Bound5.productFive_schur_near_of_coordinate_bounds: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_SCHUR_AXIOMS D1Bound5.productFive_prefix_coordinate_div_lt_eighteenth: [propext,
+ Classical.choice,
+ Quot.sound]
+PRODUCT_FIVE_SCHUR_AXIOMS_PASS: 5 theorems
+D1Bound5.four_all_entries_operator_norm_lt : ∀ (E : Matrix (Fin 4) (Fin 4) ℂ) (δ : ℝ),
+  0 < δ → (∀ (i j : Fin 4), ‖E i j‖ < δ) → ‖E‖ < 4 * δ
+D1Bound5.productFive_schur_near_of_entrywise : ∀ (F G : Matrix (Fin 4) (Fin 4) ℂ),
+  ‖F - D1Bound5.halfOffDiagonal‖ ≤ 11 / 96 →
+    (∀ (i j : Fin 4), ‖(G - F) i j‖ < 9 / 100) → ‖G - D1Bound5.halfOffDiagonal‖ < 1 / 2
+D1Bound5.productFive_schur_scalar_correction_lt : ∀ (wi wj vi vj d : ℂ),
+  54 ≤ ‖d‖ →
+    ‖wi / d‖ < 1 / 18 →
+      ‖wj / d‖ < 1 / 18 → ‖vi‖ < 3 / 4 → ‖vj‖ < 3 / 4 → ‖(wi * vj + vi * wj) / d + vi * vj / d ^ 2‖ < 9 / 100
+D1Bound5.productFive_schur_near_of_coordinate_bounds : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ) (v w : Fin 4 → ℂ) (d : ℂ),
+  ‖F - D1Bound5.halfOffDiagonal‖ ≤ 11 / 96 →
+    54 ≤ ‖d‖ →
+      (∀ (i : Fin 4), ‖w i / d‖ < 1 / 18) →
+        (∀ (i : Fin 4), ‖v i‖ < 3 / 4) → ‖D1Bound5.productFiveSchur F v w d - D1Bound5.halfOffDiagonal‖ < 1 / 2
+D1Bound5.productFive_prefix_coordinate_div_lt_eighteenth : ∀ (t : Fin 5 → ℂ),
+  (Monotone fun i => ‖t i‖) →
+    3 ≤ ‖t 1‖ → 2 * ‖t 1‖ * ‖t 2‖ * ‖t 3‖ < ‖t 4‖ → ∀ (i : Fin 4), ‖D1Bound5.fivePrefixValues t i / t 4‖ < 1 / 18

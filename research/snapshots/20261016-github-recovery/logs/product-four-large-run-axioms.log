@@ -1,0 +1,20 @@
+PRODUCT_FOUR_LARGE_BRANCH_AXIOMS D1Bound5.productFour_ordered_square_sum: [propext, Classical.choice, Quot.sound]
+PRODUCT_FOUR_LARGE_BRANCH_AXIOMS D1Bound5.productFour_tail_large: [propext, Classical.choice, Quot.sound]
+PRODUCT_FOUR_LARGE_BRANCH_AXIOMS D1Bound5.full_ring_productFour_large_growth: [propext, Classical.choice, Quot.sound]
+PRODUCT_FOUR_LARGE_BRANCH_AUDIT_PASS 3 theorems
+D1Bound5.productFour_ordered_square_sum : ∀ (A B C D : ℝ),
+  0 ≤ A → A ≤ B → B ≤ C → 3 ≤ B → 2 * B * C < D → A ^ 2 + B ^ 2 + C ^ 2 + D ^ 2 ≤ 13 / 12 * D ^ 2
+D1Bound5.productFour_tail_large : ∀ (B C D : ℝ), B ≤ C → 3 ≤ B → 2 * B * C < D → 18 < D
+@D1Bound5.full_ring_productFour_large_growth : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 4 → NumberField.RingOfIntegers K)
+      (M : Matrix (Fin 4) (Fin 4) (NumberField.RingOfIntegers K)),
+      (∀ (i : Fin 4), M i i = a i) →
+        (∀ (i j : Fin 4), M i j = M j i) →
+          (∀ (i j : Fin 4), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+            (Monotone fun i => ‖phi ↑(a i)‖) →
+              3 ≤ ‖phi ↑(a 0)‖ →
+                2 * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ < ‖phi ↑(a 3)‖ →
+                  2 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ < ‖phi ↑(a 3)‖
+'D1Bound5.full_ring_productFour_large_growth' depends on axioms: [propext, Classical.choice, Quot.sound]

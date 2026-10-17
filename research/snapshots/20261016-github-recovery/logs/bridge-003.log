@@ -1,0 +1,14 @@
+exploration/FullRingBasis.lean:77:6: error: Type mismatch: After simplification, term
+  h
+ has type
+  (B.repr ((↑a * ↑p.1 - ↑v * ↑p.2) * B 0)) 0 + (B.repr ((↑b * ↑p.1 + ↑u * ↑p.2) * B 1)) 0 =
+    (B.repr ((↑a * ↑q.1 - ↑v * ↑q.2) * B 0)) 0 + (B.repr ((↑b * ↑q.1 + ↑u * ↑q.2) * B 1)) 0
+but is expected to have type
+  a * p.1 - v * p.2 = a * q.1 - v * q.2
+exploration/FullRingBasis.lean:80:6: error: Type mismatch: After simplification, term
+  h
+ has type
+  (B.repr ((↑a * ↑p.1 - ↑v * ↑p.2) * B 0)) 1 + (B.repr ((↑b * ↑p.1 + ↑u * ↑p.2) * B 1)) 1 =
+    (B.repr ((↑a * ↑q.1 - ↑v * ↑q.2) * B 0)) 1 + (B.repr ((↑b * ↑q.1 + ↑u * ↑q.2) * B 1)) 1
+but is expected to have type
+  b * p.1 + u * p.2 = b * q.1 + u * q.2

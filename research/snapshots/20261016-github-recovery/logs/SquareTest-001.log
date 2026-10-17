@@ -1,0 +1,21 @@
+exploration/SquareTest.lean:61:2: error: Tactic `split_ifs` failed: no if-then-else conditions to split
+
+tau nu : ℤ
+z r : QuadInt tau nu
+h :
+  (have r := z.rootCandidate;
+    if r * r = z then some r else none) =
+    some r
+⊢ r * r = z
+exploration/SquareTest.lean:137:87: error: Tactic `decide` failed for proposition
+  hasSquareRoot { re := -2, im := 0 } = true
+because its `Decidable` instance
+  instDecidableEqBool (hasSquareRoot { re := -2, im := 0 }) true
+did not reduce to `isTrue` or `isFalse`.
+
+After unfolding the instances `instDecidableEqBool`, `instDecidableEqQuadraticAlgebra`, `Bool.decEq`, `Int.decEq`, `Int.decLt`, `Int.decNonneg`, `Int.instDecidableEq`, `Nat.decLe`, and `instDecidableEqQuadraticAlgebra.decEq`, reduction got stuck at the `Decidable` instance
+  match hasSquareRoot { re := -2, im := 0 }, true with
+  | false, false => isTrue ⋯
+  | false, true => isFalse ⋯
+  | true, false => isFalse ⋯
+  | true, true => isTrue ⋯

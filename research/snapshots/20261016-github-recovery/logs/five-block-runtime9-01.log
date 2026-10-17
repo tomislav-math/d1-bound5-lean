@@ -1,0 +1,20 @@
+exploration/FiveBlockDetRuntime9.lean:16:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub (Matrix n n ℂ) (n → n → ℂ) ?m.43
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:20:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul (Matrix (Fin 1) (Fin 1) ℂ) ((x : ?m.67) → ?m.71 x → ℂ) ?m.76
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:20:2: error: stuck at solving universe constraint
+  ?u.81 + 1 =?= max (max 1 ?u.83) ?u.84
+while trying to unify
+  (x : ?m.67) → ?m.71 x → ℂ : Sort (max (max 1 ?u.83) ?u.84)
+with
+  (x : ?m.67) → ?m.71 x → ℂ : Sort (max (max 1 ?u.83) ?u.84)
+exploration/FiveBlockDetRuntime9.lean:16:47: error: stuck at solving universe constraint
+  ?u.81 + 1 =?= max (max 1 ?u.83) ?u.84
+while trying to unify
+  (x : ?m.67) → ?m.71 x → ℂ : Sort (max (max 1 ?u.83) ?u.84)
+with
+  (x : ?m.67) → ?m.71 x → ℂ : Sort (max (max 1 ?u.83) ?u.84)

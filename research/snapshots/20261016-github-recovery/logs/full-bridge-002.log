@@ -1,0 +1,19 @@
+exploration/FullRingBridge.lean:21:57: error: unsolved goals
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : NumberField K
+inst✝ : NumberField.IsTotallyComplex K
+tau nu : ℤ
+e : QuadInt tau nu ≃+* 𝓞 K
+φ : K →+* ℂ
+f : QuadInt tau nu →+* ℂ := (φ.comp (algebraMap (𝓞 K) K)).comp e.toRingHom
+hi : (((φ.comp (algebraMap (𝓞 K) K)).comp e.toRingHom) QuadraticAlgebra.omega).im = 0
+z : QuadInt tau nu
+⊢ z.im = 0 ∨ (φ ((algebraMap (𝓞 K) K) (e QuadraticAlgebra.omega))).im = 0
+exploration/FullRingBridge.lean:26:10: warning: This simp argument is unused:
+  hi
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [f]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

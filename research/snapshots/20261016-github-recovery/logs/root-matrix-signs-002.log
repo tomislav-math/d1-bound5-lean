@@ -1,0 +1,24 @@
+D1Bound5/RootMatrixSigns.lean:91:20: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  h
+of type `i = j → False`
+D1Bound5/RootMatrixSigns.lean:91:4: error: unsolved goals
+case neg
+R : Type u_1
+inst✝ : CommRing R
+f : R →+* ℂ
+a : Fin 4 → R
+u : Fin 4 → ℂ
+M : Matrix (Fin 4) (Fin 4) R
+hu : ∀ (i : Fin 4), u i ^ 2 = f (a i)
+hdiag : ∀ (i : Fin 4), M i i = a i
+hsymm : ∀ (i j : Fin 4), M i j = M j i
+hroot : ∀ (i j : Fin 4), i ≠ j → M i j ^ 2 = a i * a j + 1
+hlarge : ∀ (i j : Fin 4), i ≠ j → 9 ≤ ‖f (a i) * f (a j)‖
+q : Fin 4 → Fin 4 → R := fun i j => if SignedEntryGood f (a i) (a j) (u i) (u j) (M i j) then M i j else -M i j
+hqsign : ∀ (i j : Fin 4), q i j = M i j ∨ q i j = -M i j
+hqgood : ∀ (i j : Fin 4), i ≠ j → SignedEntryGood f (a i) (a j) (u i) (u j) (q i j)
+S : Matrix (Fin 4) (Fin 4) R := fun i j => if i = j then a i else q (min i j) (max i j)
+hSdiag : ∀ (i : Fin 4), S i i = a i
+i j : Fin 4
+h : ¬i = j
+⊢ j = i → q (min i j) (max i j) = a j

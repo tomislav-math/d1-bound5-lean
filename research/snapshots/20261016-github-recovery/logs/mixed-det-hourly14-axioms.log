@@ -1,0 +1,30 @@
+MIXED_DET_AXIOMS D1Bound5.mixedPairProduct_nearQuarter: [propext, Classical.choice, Quot.sound]
+MIXED_DET_AXIOMS D1Bound5.mixedThreePairDet_norm_lt: [propext, Classical.choice, Quot.sound]
+MIXED_DET_AXIOMS D1Bound5.mixedSymmetricFour_det_lt: [propext, Classical.choice, Quot.sound]
+MIXED_DET_AXIOMS D1Bound5.mixed_zero_four_det_norm_lt: [propext, Classical.choice, Quot.sound]
+MIXED_DET_AXIOMS D1Bound5.mixed_signed_root_det_upper: [propext, Classical.choice, Quot.sound]
+MIXED_DET_AXIOMS_PASS: 5 theorems
+D1Bound5.mixedPairProduct_nearQuarter : ∀ (x y : ℂ),
+  ‖x - 1 / 2‖ < 1 / 18 → ‖y - 1 / 2‖ < 1 / 64 → ‖x * y - 1 / 4‖ < 7 / 192
+D1Bound5.mixedThreePairDet_norm_lt : ∀ (P Q R : ℂ),
+  ‖P - 1 / 4‖ < 7 / 192 →
+    ‖Q - 1 / 4‖ < 7 / 192 → ‖R - 1 / 4‖ < 7 / 192 → ‖P ^ 2 + Q ^ 2 + R ^ 2 - 2 * (P * Q + P * R + Q * R)‖ < 3 / 10
+D1Bound5.mixedSymmetricFour_det_lt : ∀ (x y z u v w : ℂ),
+  ‖x - 1 / 2‖ < 1 / 18 →
+    ‖y - 1 / 2‖ < 1 / 18 →
+      ‖z - 1 / 2‖ < 1 / 18 →
+        ‖u - 1 / 2‖ < 1 / 64 →
+          ‖v - 1 / 2‖ < 1 / 64 →
+            ‖w - 1 / 2‖ < 1 / 64 → ‖!![0, x, y, z; x, 0, u, v; y, u, 0, w; z, v, w, 0].det‖ < 3 / 10
+D1Bound5.mixed_zero_four_det_norm_lt : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ),
+  (∀ (i : Fin 4), F i i = 0) →
+    (∀ (i j : Fin 4), F i j = F j i) →
+      (∀ (i j : Fin 4), i ≠ j → i = 0 ∨ j = 0 → ‖F i j - 1 / 2‖ < 1 / 18) →
+        (∀ (i j : Fin 4), i ≠ j → ¬(i = 0 ∨ j = 0) → ‖F i j - 1 / 2‖ < 1 / 64) → ‖F.det‖ < 3 / 10
+@D1Bound5.mixed_signed_root_det_upper : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 4 → R)
+  (u : Fin 4 → ℂ) (S : Matrix (Fin 4) (Fin 4) R),
+  (∀ (i : Fin 4), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 4), S i i = a i) →
+      (∀ (i j : Fin 4), S i j = S j i) →
+        (∀ (i j : Fin 4), i ≠ j → D1Bound5.MixedSignedEntryGood f a u i j (S i j)) →
+          ‖(D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).det‖ < 3 / 10

@@ -1,0 +1,101 @@
+open scoped NumberField
+open Module
+
+/-- The four large entries give the exact last-entry threshold used in the
+last-column sign estimates. This is a consequence of an actual tuple. -/
+theorem IsD1Tuple.five_last_modulus_gt_fiftyfour
+    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]
+    (hK : finrank ℚ K = 2) (phi : K →+* ℂ)
+    (a : Fin 5 → 𝓞 K) (ha : IsD1Tuple a)
+    (hmon : Monotone (fun i => ‖phi (a i : K)‖))
+    (hB : 3 ≤ ‖phi (a 1 : K)‖) :
+    54 < ‖phi (a 4 : K)‖ := by
+  let b : Fin 4 → 𝓞 K := fun i => a i.succ
+  have hb : IsD1Tuple b := by
+    refine ⟨?_, ?_, ?_⟩
+    · intro i j h
+      apply Fin.ext
+      have h' := congrArg Fin.val (ha.1 h)
+      simpa using h'
+    · intro i
+      exact ha.2.1 i.succ
+    · intro i j hij
+      exact ha.2.2 i.succ j.succ (by
+        intro h
+        apply hij
+        apply Fin.ext
+        have h' := congrArg Fin.val h
+        simpa using h')
+  have hbmon : Monotone (fun i => ‖phi (b i : K)‖) := by
+    intro i j hij
+    apply hmon
+    change i.val+1 ≤ j.val+1
+    change i.val ≤ j.val at hij
+    omega
+  have hg := hb.productFour_large_growth hK phi b hbmon hB
+  change 2 * ‖phi (a 1 : K)‖ * ‖phi (a 2 : K)‖ *
+      ‖phi (a 3 : K)‖ < ‖phi (a 4 : K)‖ at hg
+  have h2 : 3 ≤ ‖phi (a 2 : K)‖ := hB.trans (hmon (by decide))
+  have h3 : 3 ≤ ‖phi (a 3 : K)‖ := hB.trans (hmon (by decide))
+  have hp : 9 ≤ ‖phi (a 1 : K)‖ * ‖phi (a 2 : K)‖ := by
+    nlinarith [mul_nonneg (sub_nonneg.mpr hB) (sub_nonneg.mpr h2)]
+  have hq := mul_nonneg (sub_nonneg.mpr hp) (sub_nonneg.mpr h3)
+  nlinarith only [hg, hp, h3, hq]
+
+/-- The actual ordered full-integer-ring D(1) quintuple supplies every
+threshold: no unproved sign-existence or large-last-entry hypothesis remains. -/
+theorem IsD1Tuple.exists_five_compatible_signed_matrix
+    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]
+    (hK : finrank ℚ K = 2) (phi : K →+* ℂ)
+    (a : Fin 5 → 𝓞 K) (ha : IsD1Tuple a)
+    (hmon : Monotone (fun i => ‖phi (a i : K)‖))
+    (hA : 1 ≤ ‖phi (a 0 : K)‖) (hB : 3 ≤ ‖phi (a 1 : K)‖) :
+    let f : 𝓞 K →+* ℂ := phi.comp (algebraMap (𝓞 K) K)
+    ∃ (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) (𝓞 K)),
+      (∀ i, (u i)^2 = f (a i)) ∧
+      (∀ i, S i i = a i) ∧
+      (∀ i j, S i j = S j i) ∧
+      (∀ i j, i ≠ j → (S i j)^2 = a i*a j+1) ∧
+      (∀ i j, i ≠ j → FiveSignedEntryGood f a u i j (S i j)) ∧
+      ‖(fivePrefixError (normalizedRootError (fun i => f (a i)) u
+        (fun i j => f (S i j)))).det‖ < (33/128 : ℝ) ∧
+      (∀ i : Fin 4,
+        ‖fiveLastError (normalizedRootError (fun k => f (a k)) u
+          (fun k l => f (S k l))) i - (1/2 : ℂ)‖ < (1/400 : ℝ)) := by
+  let f : 𝓞 K →+* ℂ := phi.comp (algebraMap (𝓞 K) K)
+  have hone (i : Fin 5) : 1 ≤ ‖f (a i)‖ := hA.trans (hmon (Fin.zero_le i))
+  have hthree (i : Fin 5) (hi : i ≠ 0) : 3 ≤ ‖f (a i)‖ := by
+    have hle : (1 : Fin 5) ≤ i := by omega
+    exact hB.trans (hmon hle)
+  have h54 : 54 ≤ ‖f (a 4)‖ :=
+    (ha.five_last_modulus_gt_fiftyfour hK phi a hmon hB).le
+  have hfirst (i j : Fin 5) (hij : i ≠ j) : 3 ≤ ‖f (a i)*f (a j)‖ := by
+    rw [norm_mul]
+    by_cases hi : i = 0
+    · subst i
+      have hi' := hone 0
+      have hj' := hthree j hij.symm
+      nlinarith [mul_nonneg (sub_nonneg.mpr hi') (sub_nonneg.mpr hj')]
+    · have hi' := hthree i hi
+      have hj' := hone j
+      nlinarith [mul_nonneg (sub_nonneg.mpr hi') (sub_nonneg.mpr hj')]
+  have hlater (i j : Fin 5) (_hij : i ≠ j) (h : ¬(i = 0 ∨ j = 0)) :
+      9 ≤ ‖f (a i)*f (a j)‖ := by
+    rw [norm_mul]
+    have hi := hthree i (by tauto)
+    have hj := hthree j (by tauto)
+    nlinarith [mul_nonneg (sub_nonneg.mpr hi) (sub_nonneg.mpr hj)]
+  have hlast (i j : Fin 5) (_hij : i ≠ j) (h : i = 4 ∨ j = 4) :
+      54 ≤ ‖f (a i)*f (a j)‖ := by
+    rw [norm_mul]
+    rcases h with h | h
+    · subst i
+      have hj := hone j
+      nlinarith [mul_nonneg (sub_nonneg.mpr h54) (sub_nonneg.mpr hj)]
+    · subst j
+      have hi := hone i
+      nlinarith [mul_nonneg (sub_nonneg.mpr hi) (sub_nonneg.mpr h54)]
+  obtain ⟨M, hd, hs, hsq⟩ := ha.exists_symmetric_root_matrix a
+  obtain ⟨u, S, hu, hd', hs', _hsgn, hsq', hg, hdet, hcol⟩ :=
+    exists_five_signed_root_matrix_with_bounds f a M hd hs hsq hfirst hlater hlast
+  exact ⟨u, S, hu, hd', hs', hsq', hg, hdet, hcol⟩

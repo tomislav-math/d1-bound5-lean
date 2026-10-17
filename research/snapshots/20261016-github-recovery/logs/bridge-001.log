@@ -1,0 +1,26 @@
+exploration/FullRingBasis.lean:26:34: error: unsolved goals
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : NumberField K
+hK : finrank ℚ K = 2
+B : Basis (Fin 2) ℤ (𝓞 K)
+a : ℤ := (B.repr 1) 0
+b : ℤ := (B.repr 1) 1
+d : ℕ := a.gcd b
+p : ℤ
+hp : a = ↑(a.gcd b) * p
+q : ℤ
+hq : b = ↑(a.gcd b) * q
+z : 𝓞 K := p • B 0 + q • B 1
+hrep : a • B 0 + b • B 1 = 1
+⊢ ↑(a.gcd b) * (↑p * B 0) + ↑(a.gcd b) * (↑q * B 1) = ↑(a.gcd (↑(a.gcd b) * q)) * (↑p * B 0) + ↑(a.gcd b) * (↑q * B 1)
+Module.finBasisOfFinrankEq.{u, v} (R : Type u) (M : Type v) [Semiring R] [AddCommMonoid M] [Module R M] [Free R M]
+  [StrongRankCondition R] [Module.Finite R M] {n : ℕ} (hn : finrank R M = n) : Basis (Fin n) R M
+Module.Basis.repr_self.{u_1, u_3, u_6} {ι : Type u_1} {R : Type u_3} {M : Type u_6} [Semiring R] [AddCommMonoid M]
+  [Module R M] (b : Basis ι R M) (i : ι) : b.repr (b i) = Finsupp.single i 1
+AlgEquiv.ofBijective.{uR, uA₁, uA₂} {R : Type uR} {A₁ : Type uA₁} {A₂ : Type uA₂} [CommSemiring R] [Semiring A₁]
+  [Semiring A₂] [Algebra R A₁] [Algebra R A₂] (f : A₁ →ₐ[R] A₂) (hf : Function.Bijective ⇑f) : A₁ ≃ₐ[R] A₂
+QuadraticAlgebra.lift_apply_apply.{u_2, u_3} {R : Type u_2} {a b : R} [CommSemiring R] {A : Type u_3} [Ring A]
+  [Algebra R A] (u : { u // u * u = a • 1 + b • u }) (z : QuadraticAlgebra R a b) :
+  (QuadraticAlgebra.lift u) z = z.re • 1 + z.im • ↑u
+exploration/FullRingBasis.lean:41:7: error(lean.unknownIdentifier): Unknown identifier `ComplexEmbedding.isReal_iff`

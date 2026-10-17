@@ -1,0 +1,27 @@
+exploration/RootDeterminantLowerTrial.lean:21:32: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ((RingHom.mapMatrix ?f) ?M).det
+in the target expression
+  ‖(∏ i, f (a i)) * (M.map ⇑f).det‖ = (∏ i, ‖f (a i)‖) * ‖f M.det‖
+
+R : Type u_1
+n : Type u_2
+inst✝² : CommRing R
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+f : R →+* ℂ
+a : n → R
+u : n → ℂ
+M : Matrix n n R
+hu : ∀ (i : n), u i ^ 2 = f (a i)
+hp : (∏ i, u i) ^ 2 = ∏ i, f (a i)
+⊢ ‖(∏ i, f (a i)) * (M.map ⇑f).det‖ = (∏ i, ‖f (a i)‖) * ‖f M.det‖
+exploration/RootDeterminantLowerTrial.lean:33:4: error(lean.unknownIdentifier): Unknown constant `Finset.prod_nonneg_iff.mpr`
+exploration/RootDeterminantLowerTrial.lean:41:10: error: Function expected at
+  finrank
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  ℚ
+
+Hint: The identifier `finrank` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.

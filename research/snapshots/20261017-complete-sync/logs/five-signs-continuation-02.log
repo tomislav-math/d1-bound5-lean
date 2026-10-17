@@ -1,0 +1,35 @@
+exploration/FiveSignsContinuation.lean:56:6: error: Tactic `rewrite` failed: motive is not type correct:
+  fun _a =>
+    if _a then SignedEntryBounds f (a j) (a i) (u j) (u i) r (50 / 99) (625 / 264627)
+    else
+      if j = 0 ∨ i = 0 then SignedEntryBounds f (a j) (a i) (u j) (u i) r (5 / 9) (25 / 486)
+      else SignedEntryBounds f (a j) (a i) (u j) (u i) r (7 / 13) (1 / 64)
+Error: Application type mismatch: The argument
+  instDecidableOr
+has type
+  Decidable (j = 4 ∨ i = 4)
+but is expected to have type
+  Decidable _a
+in the application
+  @ite Prop _a instDecidableOr
+
+Explanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.
+
+Possible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).
+
+R : Type u_1
+inst✝ : CommRing R
+f : R →+* ℂ
+a : Fin 5 → R
+u : Fin 5 → ℂ
+i j : Fin 5
+r : R
+h :
+  if i = 4 ∨ j = 4 then SignedEntryBounds f (a i) (a j) (u i) (u j) r (50 / 99) (625 / 264627)
+  else
+    if i = 0 ∨ j = 0 then SignedEntryBounds f (a i) (a j) (u i) (u j) r (5 / 9) (25 / 486)
+    else SignedEntryBounds f (a i) (a j) (u i) (u j) r (7 / 13) (1 / 64)
+⊢ if j = 4 ∨ i = 4 then SignedEntryBounds f (a j) (a i) (u j) (u i) r (50 / 99) (625 / 264627)
+  else
+    if j = 0 ∨ i = 0 then SignedEntryBounds f (a j) (a i) (u j) (u i) r (5 / 9) (25 / 486)
+    else SignedEntryBounds f (a j) (a i) (u j) (u i) r (7 / 13) (1 / 64)

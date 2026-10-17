@@ -1,0 +1,20 @@
+exploration/AdjugateCoverageTrial.lean:27:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+exploration/AdjugateCoverageTrial.lean:90:33: error: unsolved goals
+case «0».«1»
+F : Matrix (Fin 4) (Fin 4) ℂ
+hzero : ∀ (i : Fin 4), F i i = 0
+hsym : ∀ (i j : Fin 4), F i j = F j i
+hnear : ∀ (i j : Fin 4), i ≠ j → ‖F i j - 1 / 2‖ < 128 / 8649
+⊢ F 1 0 = F 0 1
+
+case «1».«0»
+F : Matrix (Fin 4) (Fin 4) ℂ
+hzero : ∀ (i : Fin 4), F i i = 0
+hsym : ∀ (i j : Fin 4), F i j = F j i
+hnear : ∀ (i j : Fin 4), i ≠ j → ‖F i j - 1 / 2‖ < 128 / 8649
+⊢ F 1 0 = F 0 1
+COVERAGE_AXIO​​MS D1Bound5.symmetricFour_adjugate_formula: [propext, Classical.choice, Quot.sound]
+COVERAGE_AXIO​​MS D1Bound5.symmetricFour_adjugate_norm_lt: [propext, Classical.choice, Quot.sound]
+exploration/AdjugateCoverageTrial.lean:104:0: error: Forbidden axioms for D1Bound5.symmetric_zero_four_adjugate_norm_lt: [sorryAx]

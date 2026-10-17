@@ -1,0 +1,29 @@
+exploration/AdjugateFourTrial.lean:49:46: warning: This simp argument is unused:
+  Fin.sum_univ_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.updateRow_apply, Pi.single_apply, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:165:12: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:174:12: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ADJUGATE_TRIAL_AXIOMS D1Bound5.four_operator_norm_lt_of_entry_bounds: [propext, Classical.choice, Quot.sound]
+ADJUGATE_TRIAL_AXIOMS D1Bound5.symmetricZeroFour_adjugate_00: [propext, Classical.choice, Quot.sound]
+ADJUGATE_TRIAL_AXIOMS D1Bound5.symmetricZeroFour_adjugate_01: [propext, Classical.choice, Quot.sound]
+ADJUGATE_TRIAL_AXIOMS D1Bound5.four_adjugate_numeric_margin: [propext, Classical.choice, Quot.sound]
+ADJUGATE_TRIAL_AXIOMS D1Bound5.four_adjugate_bound_of_entry_bounds: [propext, Classical.choice, Quot.sound]
+ADJUGATE_TRIAL_AXIOMS D1Bound5.nearHalf_triple_cofactor_bound: [propext, Classical.choice, Quot.sound]
+ADJUGATE_TRIAL_AXIOM_PASS: 6 theorems

@@ -1,0 +1,29 @@
+AUDITED D1Bound5.scaledRootMatrix_eq_rankOne_add_error: [propext, Quot.sound]
+AUDITED D1Bound5.normalizedRootError_det: [propext, Classical.choice, Quot.sound]
+AUDITED D1Bound5.normalizedRootError_diag: [propext]
+AUDITED D1Bound5.normalizedRootError: []
+AUDITED D1Bound5.root_error_sub_half: [propext, Classical.choice, Quot.sound]
+AUDITED D1Bound5.scaledRootMatrix_det: [propext, Classical.choice, Quot.sound]
+AUDITED D1Bound5.scaledRootMatrix.eq_1: []
+AUDITED D1Bound5.normalizedRootError.eq_1: []
+AUDITED D1Bound5.scaledRootMatrix: []
+AUDITED D1Bound5.normalizedRootError_relation: [propext, Quot.sound]
+AUDITED D1Bound5.root_error_quadratic: [propext, Quot.sound]
+DET_NORMALIZATION_AXIOMS_PASS: 11 declarations
+D1Bound5.scaledRootMatrix_det.{u_1, u_2} {R : Type u_1} {n : Type u_2} [CommRing R] [Fintype n] [DecidableEq n]
+  (u : n → R) (M : Matrix n n R) : (D1Bound5.scaledRootMatrix u M).det = (∏ i, u i) ^ 2 * M.det
+D1Bound5.root_error_quadratic.{u_1} {R : Type u_1} [CommRing R] (a b u v r : R) (hu : u ^ 2 = a) (hv : v ^ 2 = b)
+  (hr : r ^ 2 = a * b + 1) : (u * r * v - a * b) ^ 2 + 2 * a * b * (u * r * v - a * b) = a * b
+D1Bound5.normalizedRootError_relation.{u_1, u_2} {R : Type u_1} {n : Type u_2} [CommRing R] (a u : n → R)
+  (M : Matrix n n R) (hu : ∀ (i : n), u i ^ 2 = a i) (hs : ∀ (i j : n), i ≠ j → M i j ^ 2 = a i * a j + 1) (i j : n)
+  (hij : i ≠ j) :
+  D1Bound5.normalizedRootError a u M i j ^ 2 + 2 * a i * a j * D1Bound5.normalizedRootError a u M i j = a i * a j
+D1Bound5.normalizedRootError_diag.{u_1, u_2} {R : Type u_1} {n : Type u_2} [CommRing R] (a u : n → R) (M : Matrix n n R)
+  (hu : ∀ (i : n), u i ^ 2 = a i) (hd : ∀ (i : n), M i i = a i) (i : n) : D1Bound5.normalizedRootError a u M i i = 0
+D1Bound5.normalizedRootError_det.{u_1, u_2} {R : Type u_1} {n : Type u_2} [CommRing R] [Fintype n] [DecidableEq n]
+  (a u : n → R) (M : Matrix n n R) (hu : ∀ (i : n), u i ^ 2 = a i) :
+  (Matrix.det fun i j => a i * a j + D1Bound5.normalizedRootError a u M i j) = (∏ i, a i) * M.det
+D1Bound5.root_error_sub_half (a b u v r : ℂ) (hab : a * b ≠ 0) (hu : u ^ 2 = a) (hv : v ^ 2 = b)
+  (hr : r ^ 2 = a * b + 1) : u * r * v - a * b - 1 / 2 = -(u * r * v - a * b) ^ 2 / (2 * a * b)
+'D1Bound5.normalizedRootError_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.root_error_sub_half' depends on axioms: [propext, Classical.choice, Quot.sound]

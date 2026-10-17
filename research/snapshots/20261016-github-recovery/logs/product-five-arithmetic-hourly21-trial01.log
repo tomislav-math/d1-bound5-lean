@@ -1,0 +1,36 @@
+exploration/ProductFiveArithmeticTrial.lean:96:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (f.mapMatrix M).det
+in the target expression
+  (M.map ⇑f).det = 0
+
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : NumberField K
+inst✝ : NumberField.IsTotallyComplex K
+hK : finrank ℚ K = 2
+phi : K →+* ℂ
+a : Fin 5 → 𝓞 K
+M : Matrix (Fin 5) (Fin 5) (𝓞 K)
+u : Fin 5 → ℂ
+hu : ∀ (i : Fin 5), u i ^ 2 = phi ↑(a i)
+hdiag : ∀ (i : Fin 5), M i i = a i
+hsym : ∀ (i j : Fin 5), M i j = M j i
+hd : (fiveLastValue fun i => phi ↑(a i)) ≠ 0
+hGne : (fiveNormalizedSchur (fun i => phi ↑(a i)) u (M.map ⇑(phi.comp (algebraMap (𝓞 K) K)))).det ≠ 0
+hGlt : ‖(fiveNormalizedSchur (fun i => phi ↑(a i)) u (M.map ⇑(phi.comp (algebraMap (𝓞 K) K)))).det‖ < 1 / 3
+f : 𝓞 K →+* ℂ := phi.comp (algebraMap (𝓞 K) K)
+t : Fin 5 → ℂ := fun i => f (a i)
+N : Matrix (Fin 5) (Fin 5) ℂ := M.map ⇑f
+G : Matrix (Fin 4) (Fin 4) ℂ := fiveNormalizedSchur t u N
+d : ℂ := fiveLastValue t
+hd' : d ≠ 0
+hdn : 0 < ‖d‖
+hdiag' : ∀ (i : Fin 5), N i i = t i
+hsym' : Nᵀ = N
+hN : N.det ≠ 0
+hm : M.det = 0
+⊢ (M.map ⇑f).det = 0
+exploration/ProductFiveArithmeticTrial.lean:133:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  MulLeftStrictMono ℝ
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.

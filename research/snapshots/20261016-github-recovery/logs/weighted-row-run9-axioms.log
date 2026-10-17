@@ -1,0 +1,16 @@
+WEIGHTED_ROW_AXIOMS D1Bound5.weightedFourWeights_pos: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS D1Bound5.mixedFourEnvelope_nonneg: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS D1Bound5.mixedFourEnvelope_symmetric: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS D1Bound5.mixedFourEnvelope_weighted_rows: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS D1Bound5.mixedFourEnvelope_first_row_strict: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS D1Bound5.mixedFour_entry_norm_le_envelope: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS D1Bound5.mixedFour_entrywise_weighted_row_bound: [propext, Classical.choice, Quot.sound]
+WEIGHTED_ROW_AXIOMS_PASS 7 theorems
+D1Bound5.mixedFourEnvelope_weighted_rows : ∀ (i : Fin 4),
+  ∑ j, D1Bound5.mixedFourEnvelope i j * D1Bound5.weightedFourWeights j ≤ 11 / 96 * D1Bound5.weightedFourWeights i
+D1Bound5.mixedFour_entrywise_weighted_row_bound : ∀ (E : Matrix (Fin 4) (Fin 4) ℂ),
+  (∀ (i : Fin 4), E i i = 0) →
+    (∀ (i j : Fin 4), i ≠ j → i = 0 ∨ j = 0 → ‖E i j‖ < 1 / 18) →
+      (∀ (i j : Fin 4), i ≠ j → ¬(i = 0 ∨ j = 0) → ‖E i j‖ < 1 / 64) →
+        ∀ (i : Fin 4), ∑ j, ‖E i j‖ * D1Bound5.weightedFourWeights j ≤ 11 / 96 * D1Bound5.weightedFourWeights i
+'D1Bound5.mixedFour_entrywise_weighted_row_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

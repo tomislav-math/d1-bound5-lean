@@ -1,0 +1,34 @@
+FIVE_PREFIX_INVERSE_AXIOMS_PASS D1Bound5.five_compatible_prefix_operator_bound: [propext, Classical.choice, Quot.sound]
+FIVE_PREFIX_INVERSE_AXIOMS_PASS D1Bound5.five_compatible_inverse_vector_bound: [propext, Classical.choice, Quot.sound]
+FIVE_PREFIX_INVERSE_AXIOMS_PASS D1Bound5.productFive_bilinear_l2_le: [propext, Classical.choice, Quot.sound]
+FIVE_PREFIX_INVERSE_AXIOMS_PASS D1Bound5.productFive_selfBilinear_norm_lt_one: [propext, Classical.choice, Quot.sound]
+FIVE_PREFIX_INVERSE_AXIOMS_PASS D1Bound5.five_compatible_bilinear_p_bound: [propext, Classical.choice, Quot.sound]
+@D1Bound5.five_compatible_prefix_operator_bound : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i : Fin 5), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 5), S i i = a i) →
+      (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) →
+        ‖D1Bound5.fivePrefixError (D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)) -
+              D1Bound5.halfOffDiagonal‖ ≤
+          11 / 96
+@D1Bound5.five_compatible_inverse_vector_bound : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i : Fin 5), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 5), S i i = a i) →
+      (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) →
+        have E := D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j);
+        have F := D1Bound5.fivePrefixError E;
+        have v := D1Bound5.fiveLastError E;
+        ‖WithLp.toLp 2 (F⁻¹.mulVec v)‖ < 11 / 12
+D1Bound5.productFive_bilinear_l2_le : ∀ (v w : Fin 4 → ℂ), ‖v ⬝ᵥ w‖ ≤ ‖WithLp.toLp 2 v‖ * ‖WithLp.toLp 2 w‖
+D1Bound5.productFive_selfBilinear_norm_lt_one : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ) (v : Fin 4 → ℂ),
+  ‖WithLp.toLp 2 v‖ < 201 / 200 → ‖WithLp.toLp 2 (F⁻¹.mulVec v)‖ < 11 / 12 → ‖v ⬝ᵥ F⁻¹.mulVec v‖ < 1
+@D1Bound5.five_compatible_bilinear_p_bound : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i : Fin 5), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 5), S i i = a i) →
+      (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) →
+        have E := D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j);
+        have F := D1Bound5.fivePrefixError E;
+        have v := D1Bound5.fiveLastError E;
+        ‖v ⬝ᵥ F⁻¹.mulVec v‖ < 1

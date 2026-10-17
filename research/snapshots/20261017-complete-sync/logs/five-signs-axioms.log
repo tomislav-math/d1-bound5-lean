@@ -1,0 +1,114 @@
+FIVE_SIGNS_AXIOMS D1Bound5.signedEntryBounds_fiftyfour_or_neg: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.FiveSignedEntryGood: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.fiveSignedEntryGood_swap: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.fiveSignedEntryGood_or_neg: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.exists_five_signed_root_matrix: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.fiveSignedEntryGood_prefix: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.fiveSignedEntryGood_last_column: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.exists_five_signed_root_matrix_with_bounds: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.IsD1Tuple.five_last_modulus_gt_fiftyfour: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.IsD1Tuple.exists_five_compatible_signed_matrix: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS D1Bound5.fiveLastColumn_l2_bounds: [propext, Classical.choice, Quot.sound]
+FIVE_SIGNS_AXIOMS_PASS: 11 declarations
+@D1Bound5.signedEntryBounds_fiftyfour_or_neg : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a b r : R) (u v : ℂ),
+  u ^ 2 = f a →
+    v ^ 2 = f b →
+      r ^ 2 = a * b + 1 →
+        54 ≤ ‖f a * f b‖ →
+          D1Bound5.SignedEntryBounds f a b u v r (50 / 99) (625 / 264627) ∨
+            D1Bound5.SignedEntryBounds f a b u v (-r) (50 / 99) (625 / 264627)
+@D1Bound5.FiveSignedEntryGood : {R : Type u_1} →
+  [inst : CommRing R] → (R →+* ℂ) → (Fin 5 → R) → (Fin 5 → ℂ) → Fin 5 → Fin 5 → R → Prop
+@D1Bound5.fiveSignedEntryGood_swap : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R) (u : Fin 5 → ℂ)
+  (i j : Fin 5) (r : R), D1Bound5.FiveSignedEntryGood f a u i j r → D1Bound5.FiveSignedEntryGood f a u j i r
+@D1Bound5.fiveSignedEntryGood_or_neg : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (i j : Fin 5) (r : R),
+  (∀ (k : Fin 5), u k ^ 2 = f (a k)) →
+    r ^ 2 = a i * a j + 1 →
+      3 ≤ ‖f (a i) * f (a j)‖ →
+        (¬(i = 0 ∨ j = 0) → 9 ≤ ‖f (a i) * f (a j)‖) →
+          (i = 4 ∨ j = 4 → 54 ≤ ‖f (a i) * f (a j)‖) →
+            D1Bound5.FiveSignedEntryGood f a u i j r ∨ D1Bound5.FiveSignedEntryGood f a u i j (-r)
+@D1Bound5.exists_five_signed_root_matrix : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (M : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i : Fin 5), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 5), M i i = a i) →
+      (∀ (i j : Fin 5), M i j = M j i) →
+        (∀ (i j : Fin 5), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+          (∀ (i j : Fin 5), i ≠ j → 3 ≤ ‖f (a i) * f (a j)‖) →
+            (∀ (i j : Fin 5), i ≠ j → ¬(i = 0 ∨ j = 0) → 9 ≤ ‖f (a i) * f (a j)‖) →
+              (∀ (i j : Fin 5), i ≠ j → i = 4 ∨ j = 4 → 54 ≤ ‖f (a i) * f (a j)‖) →
+                ∃ S,
+                  (∀ (i : Fin 5), S i i = a i) ∧
+                    (∀ (i j : Fin 5), S i j = S j i) ∧
+                      (∀ (i j : Fin 5), i ≠ j → S i j = M i j ∨ S i j = -M i j) ∧
+                        (∀ (i j : Fin 5), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                          ∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)
+@D1Bound5.fiveSignedEntryGood_prefix : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) →
+    ∀ (i j : Fin 4),
+      i ≠ j →
+        D1Bound5.MixedSignedEntryGood f (fun k => a (Fin.castAdd 1 k)) (fun k => u (Fin.castAdd 1 k)) i j
+          (S (Fin.castAdd 1 i) (Fin.castAdd 1 j))
+@D1Bound5.fiveSignedEntryGood_last_column : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 5 → R)
+  (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) →
+    ∀ (i : Fin 4),
+      ‖D1Bound5.fiveLastError (D1Bound5.normalizedRootError (fun k => f (a k)) u fun k l => f (S k l)) i‖ < 50 / 99 ∧
+        ‖D1Bound5.fiveLastError (D1Bound5.normalizedRootError (fun k => f (a k)) u fun k l => f (S k l)) i - 1 / 2‖ <
+          1 / 400
+@D1Bound5.exists_five_signed_root_matrix_with_bounds : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ)
+  (a : Fin 5 → R) (M : Matrix (Fin 5) (Fin 5) R),
+  (∀ (i : Fin 5), M i i = a i) →
+    (∀ (i j : Fin 5), M i j = M j i) →
+      (∀ (i j : Fin 5), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+        (∀ (i j : Fin 5), i ≠ j → 3 ≤ ‖f (a i) * f (a j)‖) →
+          (∀ (i j : Fin 5), i ≠ j → ¬(i = 0 ∨ j = 0) → 9 ≤ ‖f (a i) * f (a j)‖) →
+            (∀ (i j : Fin 5), i ≠ j → i = 4 ∨ j = 4 → 54 ≤ ‖f (a i) * f (a j)‖) →
+              ∃ u S,
+                (∀ (i : Fin 5), u i ^ 2 = f (a i)) ∧
+                  (∀ (i : Fin 5), S i i = a i) ∧
+                    (∀ (i j : Fin 5), S i j = S j i) ∧
+                      (∀ (i j : Fin 5), i ≠ j → S i j = M i j ∨ S i j = -M i j) ∧
+                        (∀ (i j : Fin 5), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                          (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) ∧
+                            ‖(D1Bound5.fivePrefixError
+                                      (D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j))).det‖ <
+                                33 / 128 ∧
+                              ∀ (i : Fin 4),
+                                ‖D1Bound5.fiveLastError
+                                        (D1Bound5.normalizedRootError (fun k => f (a k)) u fun k l => f (S k l)) i -
+                                      1 / 2‖ <
+                                  1 / 400
+@D1Bound5.IsD1Tuple.five_last_modulus_gt_fiftyfour : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a → (Monotone fun i => ‖phi ↑(a i)‖) → 3 ≤ ‖phi ↑(a 1)‖ → 54 < ‖phi ↑(a 4)‖
+@D1Bound5.IsD1Tuple.exists_five_compatible_signed_matrix : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          1 ≤ ‖phi ↑(a 0)‖ →
+            3 ≤ ‖phi ↑(a 1)‖ →
+              have f := phi.comp (algebraMap (NumberField.RingOfIntegers K) K);
+              ∃ u S,
+                (∀ (i : Fin 5), u i ^ 2 = f (a i)) ∧
+                  (∀ (i : Fin 5), S i i = a i) ∧
+                    (∀ (i j : Fin 5), S i j = S j i) ∧
+                      (∀ (i j : Fin 5), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                        (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) ∧
+                          ‖(D1Bound5.fivePrefixError
+                                    (D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j))).det‖ <
+                              33 / 128 ∧
+                            ∀ (i : Fin 4),
+                              ‖D1Bound5.fiveLastError
+                                      (D1Bound5.normalizedRootError (fun k => f (a k)) u fun k l => f (S k l)) i -
+                                    1 / 2‖ <
+                                1 / 400
+D1Bound5.fiveLastColumn_l2_bounds : ∀ (v : Fin 4 → ℂ),
+  (∀ (i : Fin 4), ‖v i - 1 / 2‖ < 1 / 400) →
+    ‖WithLp.toLp 2 fun i => v i - 1 / 2‖ < 1 / 200 ∧ ‖WithLp.toLp 2 v‖ < 201 / 200

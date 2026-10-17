@@ -1,0 +1,35 @@
+exploration/SymmetricFourDetTrial.lean:47:16: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/SymmetricFourDetTrial.lean:104:16: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/SymmetricFourDetTrial.lean:114:10: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/SymmetricFourDetTrial.lean:167:33: error: unsolved goals
+case «0».«1»
+F : Matrix (Fin 4) (Fin 4) ℂ
+hd : ∀ (i : Fin 4), F i i = 0
+hsymm : ∀ (i j : Fin 4), F i j = F j i
+hsmall : ∀ (i j : Fin 4), i ≠ j → ‖F i j - 1 / 2‖ < 128 / 8649
+⊢ F 1 0 = F 0 1
+
+case «1».«0»
+F : Matrix (Fin 4) (Fin 4) ℂ
+hd : ∀ (i : Fin 4), F i i = 0
+hsymm : ∀ (i j : Fin 4), F i j = F j i
+hsmall : ∀ (i j : Fin 4), i ≠ j → ‖F i j - 1 / 2‖ < 128 / 8649
+⊢ F 1 0 = F 0 1

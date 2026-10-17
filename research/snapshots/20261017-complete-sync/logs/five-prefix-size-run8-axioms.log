@@ -1,0 +1,10 @@
+'D1Bound5.productFive_prefix_sq_lt_last_div_nine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.productFive_prefix_l2_lt_last_div_nine' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.productFive_cross_div_norm_lt_11_108' depends on axioms: [propext, Classical.choice, Quot.sound]
+D1Bound5.productFive_prefix_sq_lt_last_div_nine : ∀ (a b c s d : ℝ),
+  0 ≤ a → a ≤ b → b ≤ c → c ≤ s → 3 ≤ b → 2 * b * c * s < d → a ^ 2 + b ^ 2 + c ^ 2 + s ^ 2 < (d / 9) ^ 2
+D1Bound5.productFive_prefix_l2_lt_last_div_nine : ∀ (t : Fin 5 → ℂ),
+  (Monotone fun i => ‖t i‖) →
+    3 ≤ ‖t 1‖ → 2 * ‖t 1‖ * ‖t 2‖ * ‖t 3‖ < ‖t 4‖ → ‖WithLp.toLp 2 (D1Bound5.fivePrefixValues t)‖ < ‖t 4‖ / 9
+D1Bound5.productFive_cross_div_norm_lt_11_108 : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ) (v w : Fin 4 → ℂ) (d : ℂ),
+  d ≠ 0 → Fᵀ = F → ‖WithLp.toLp 2 w‖ < ‖d‖ / 9 → ‖WithLp.toLp 2 (F⁻¹ *ᵥ v)‖ < 11 / 12 → ‖v ⬝ᵥ F⁻¹ *ᵥ w / d‖ < 11 / 108

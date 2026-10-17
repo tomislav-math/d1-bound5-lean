@@ -1,0 +1,15 @@
+PRODUCT_FIVE_PREFIX_AXIOMS D1Bound5.threePair_quadratic_norm_le: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_PREFIX_AXIOMS D1Bound5.mixedThreePairDet_norm_lt_33_128: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_PREFIX_AXIOMS D1Bound5.mixedSymmetricFour_det_lt_33_128: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_PREFIX_AXIOMS D1Bound5.mixed_zero_four_det_norm_lt_33_128: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_PREFIX_AXIOMS_PASS: 4 theorems
+D1Bound5.threePair_quadratic_norm_le (a b c : ℂ) (epsilon : ℝ) (he : 0 ≤ epsilon) (ha : ‖a‖ ≤ epsilon)
+  (hb : ‖b‖ ≤ epsilon) (hc : ‖c‖ ≤ epsilon) : ‖a ^ 2 + b ^ 2 + c ^ 2 - 2 * (a * b + a * c + b * c)‖ ≤ 9 * epsilon ^ 2
+D1Bound5.mixedThreePairDet_norm_lt_33_128 (P Q R : ℂ) (hP : ‖P - 1 / 4‖ < 7 / 192) (hQ : ‖Q - 1 / 4‖ < 7 / 192)
+  (hR : ‖R - 1 / 4‖ < 7 / 192) : ‖P ^ 2 + Q ^ 2 + R ^ 2 - 2 * (P * Q + P * R + Q * R)‖ < 33 / 128
+D1Bound5.mixedSymmetricFour_det_lt_33_128 (x y z u v w : ℂ) (hx : ‖x - 1 / 2‖ < 1 / 18) (hy : ‖y - 1 / 2‖ < 1 / 18)
+  (hz : ‖z - 1 / 2‖ < 1 / 18) (hu : ‖u - 1 / 2‖ < 1 / 64) (hv : ‖v - 1 / 2‖ < 1 / 64) (hw : ‖w - 1 / 2‖ < 1 / 64) :
+  ‖!![0, x, y, z; x, 0, u, v; y, u, 0, w; z, v, w, 0].det‖ < 33 / 128
+D1Bound5.mixed_zero_four_det_norm_lt_33_128 (F : Matrix (Fin 4) (Fin 4) ℂ) (hd : ∀ (i : Fin 4), F i i = 0)
+  (hsymm : ∀ (i j : Fin 4), F i j = F j i) (hfirst : ∀ (i j : Fin 4), i ≠ j → i = 0 ∨ j = 0 → ‖F i j - 1 / 2‖ < 1 / 18)
+  (hlater : ∀ (i j : Fin 4), i ≠ j → ¬(i = 0 ∨ j = 0) → ‖F i j - 1 / 2‖ < 1 / 64) : ‖F.det‖ < 33 / 128

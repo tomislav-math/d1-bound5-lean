@@ -1,0 +1,29 @@
+REFERENCE_PERTURBATION_AUDIT D1Bound5.reference_perturbed_det_ne_zero: [propext, Classical.choice, Quot.sound]
+REFERENCE_PERTURBATION_AUDIT D1Bound5.reference_perturbed_det_ne_zero_of_near: [propext, Classical.choice, Quot.sound]
+REFERENCE_PERTURBATION_AUDIT D1Bound5.reference_perturbed_inverse_norm_lt: [propext, Classical.choice, Quot.sound]
+REFERENCE_PERTURBATION_AUDIT D1Bound5.exists_signed_root_matrix_with_bounded_inverse: [propext,
+ Classical.choice,
+ Quot.sound]
+REFERENCE_PERTURBATION_AXIOM_AUDIT_PASS: 4 declarations
+D1Bound5.reference_perturbed_det_ne_zero : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ),
+  ‖D1Bound5.halfOffDiagonalInverse * (F - D1Bound5.halfOffDiagonal)‖ < 1 → F.det ≠ 0
+D1Bound5.reference_perturbed_det_ne_zero_of_near : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ),
+  ‖F - D1Bound5.halfOffDiagonal‖ < 3 * (128 / 8649) → F.det ≠ 0
+D1Bound5.reference_perturbed_inverse_norm_lt : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ),
+  ‖F - D1Bound5.halfOffDiagonal‖ < 1 / 8 → ‖F⁻¹‖ < 8 / 3
+@D1Bound5.exists_signed_root_matrix_with_bounded_inverse : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ)
+  (a : Fin 4 → R) (M : Matrix (Fin 4) (Fin 4) R),
+  (∀ (i : Fin 4), M i i = a i) →
+    (∀ (i j : Fin 4), M i j = M j i) →
+      (∀ (i j : Fin 4), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+        (∀ (i j : Fin 4), i ≠ j → 9 ≤ ‖f (a i) * f (a j)‖) →
+          ∃ u S,
+            (∀ (i : Fin 4), u i ^ 2 = f (a i)) ∧
+              (∀ (i : Fin 4), S i i = a i) ∧
+                (∀ (i j : Fin 4), S i j = S j i) ∧
+                  (∀ (i j : Fin 4), i ≠ j → S i j = M i j ∨ S i j = -M i j) ∧
+                    (∀ (i j : Fin 4), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                      (D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).det ≠ 0 ∧
+                        ‖(D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j))⁻¹‖ < 8 / 3
+'D1Bound5.reference_perturbed_inverse_norm_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.exists_signed_root_matrix_with_bounded_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]

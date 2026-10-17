@@ -1,0 +1,48 @@
+✖ [2948/2954] Building D1Bound5.Basic (10s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/Basic.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/Basic.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/Basic.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/Basic.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/Basic.setup.json --json
+error: D1Bound5/Basic.lean:36:19: Type mismatch: After simplification, term
+  congrArg (⇑e) hr
+ has type
+  @Eq S (e r * e r) (e a * e b + 1)
+but is expected to have type
+  @Eq S (e r * e r) (e.toEmbedding a * e.toEmbedding b + 1)
+error: Lean exited with code 1
+✖ [2952/2954] Building D1Bound5.SmallTailCertificates (17s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/SmallTailCertificates.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/SmallTailCertificates.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/SmallTailCertificates.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/SmallTailCertificates.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/SmallTailCertificates.setup.json --json
+error: D1Bound5/SmallTailCertificates.lean:28:4: mod_cast has type
+  r.re * r.re - nu * r.im * r.im = u
+but is expected to have type
+  ↑(r.re * r.re - nu * r.im * r.im) = ↑u
+error: D1Bound5/SmallTailCertificates.lean:30:4: mod_cast has type
+  2 * r.re * r.im + tau * r.im * r.im = v
+but is expected to have type
+  ↑(2 * r.re * r.im + tau * r.im * r.im) = ↑v
+error: D1Bound5/SmallTailCertificates.lean:34:39: failed to synthesize
+  Decidable (NoSquareResidues 3 0 2 1 4)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/SmallTailCertificates.lean:38:43: failed to synthesize
+  Decidable (NoSquareResidues 5 0 2 (-10) 4)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/SmallTailCertificates.lean:42:40: failed to synthesize
+  Decidable (NoSquareResidues 4 1 1 22 0)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/SmallTailCertificates.lean:46:43: failed to synthesize
+  Decidable (NoSquareResidues 5 0 6 (-27) 0)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/SmallTailCertificates.lean:50:43: failed to synthesize
+  Decidable (NoSquareResidues 4 1 3 (-14) 0)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/SmallTailCertificates.lean:54:43: failed to synthesize
+  Decidable (NoSquareResidues 4 1 9 (-38) 0)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.Basic
+- D1Bound5.SmallTailCertificates
+error: build failed

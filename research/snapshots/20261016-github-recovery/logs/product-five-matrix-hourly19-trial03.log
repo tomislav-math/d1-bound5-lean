@@ -1,0 +1,30 @@
+exploration/ProductFiveMatrixBridgeTrial.lean:51:2: error: unsolved goals
+case inr.inl.«0»
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+j : Fin 4
+he : E (Fin.natAdd 4 0) (Fin.castAdd 1 j) = E (Fin.castAdd 1 j) (Fin.natAdd 4 0)
+⊢ t 4 * t (Fin.castAdd 1 j) + E 4 (Fin.castAdd 1 j) = E (Fin.castAdd 1 j) 4 + t 4 * t (Fin.castAdd 1 j)
+exploration/ProductFiveMatrixBridgeTrial.lean:62:2: error: unsolved goals
+case inr.inr.«0».«0»
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+⊢ E 4 4 = 0
+exploration/ProductFiveMatrixBridgeTrial.lean:61:58: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fiveLastError, fiveLastValue, fivePrefixValues]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:68:25: warning: This simp argument is unused:
+  hdiag
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fiveLastValue, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

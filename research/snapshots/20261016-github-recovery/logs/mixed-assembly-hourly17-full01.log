@@ -1,0 +1,11 @@
+exploration/MixedFourAssemblyTrial.lean:21:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+exploration/MixedFourAssemblyTrial.lean:190:4: error: Type mismatch: After simplification, term
+  mixed_signed_root_det_and_adjugate_upper f a u S hu hd hs hgood
+ has type
+  And (‖(normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).det‖ < 3 / 10)
+    (‖(normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).adjugate‖ < 155 / 96 * (59 / 96) ^ 2)
+but is expected to have type
+  And (‖(normalizedRootError (fun i => f (a i)) u (S.map ⇑f)).det‖ < 3 / 10)
+    (‖(normalizedRootError (fun i => f (a i)) u (S.map ⇑f)).adjugate‖ < 155 / 96 * (59 / 96) ^ 2)

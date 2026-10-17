@@ -1,0 +1,25 @@
+WEIGHTED_SCHUR_AXIOMS D1Bound5.weightedCS_four_row: [propext, Classical.choice, Quot.sound]
+WEIGHTED_SCHUR_AXIOMS D1Bound5.weightedSchur_four_energy: [propext, Classical.choice, Quot.sound]
+WEIGHTED_SCHUR_AXIOMS D1Bound5.weightedSchur_four_opNorm: [propext, Classical.choice, Quot.sound]
+WEIGHTED_SCHUR_AXIOMS D1Bound5.mixedFour_operator_norm_le: [propext, Classical.choice, Quot.sound]
+WEIGHTED_SCHUR_AXIOM_PASS: 4 theorems
+D1Bound5.weightedCS_four_row : ∀ (b w x : Fin 4 → ℝ),
+  (∀ (j : Fin 4), 0 ≤ b j) →
+    (∀ (j : Fin 4), 0 < w j) → (∑ j, b j * x j) ^ 2 ≤ (∑ j, b j * w j) * ∑ j, b j * x j ^ 2 / w j
+D1Bound5.weightedSchur_four_energy : ∀ (b : Matrix (Fin 4) (Fin 4) ℝ) (w x : Fin 4 → ℝ) (c : ℝ),
+  (∀ (i j : Fin 4), 0 ≤ b i j) →
+    (∀ (i : Fin 4), 0 < w i) →
+      0 ≤ c →
+        (∀ (i j : Fin 4), b i j = b j i) →
+          (∀ (i : Fin 4), ∑ j, b i j * w j ≤ c * w i) → ∑ i, (∑ j, b i j * x j) ^ 2 ≤ c ^ 2 * ∑ j, x j ^ 2
+D1Bound5.weightedSchur_four_opNorm : ∀ (E : Matrix (Fin 4) (Fin 4) ℂ) (b : Matrix (Fin 4) (Fin 4) ℝ) (w : Fin 4 → ℝ)
+  (c : ℝ),
+  (∀ (i j : Fin 4), 0 ≤ b i j) →
+    (∀ (i : Fin 4), 0 < w i) →
+      0 ≤ c →
+        (∀ (i j : Fin 4), b i j = b j i) →
+          (∀ (i : Fin 4), ∑ j, b i j * w j ≤ c * w i) → (∀ (i j : Fin 4), ‖E i j‖ ≤ b i j) → ‖E‖ ≤ c
+D1Bound5.mixedFour_operator_norm_le : ∀ (E : Matrix (Fin 4) (Fin 4) ℂ),
+  (∀ (i : Fin 4), E i i = 0) →
+    (∀ (i j : Fin 4), i ≠ j → i = 0 ∨ j = 0 → ‖E i j‖ < 1 / 18) →
+      (∀ (i j : Fin 4), i ≠ j → ¬(i = 0 ∨ j = 0) → ‖E i j‖ < 1 / 64) → ‖E‖ ≤ 11 / 96

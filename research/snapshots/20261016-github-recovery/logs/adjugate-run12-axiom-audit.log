@@ -1,0 +1,40 @@
+ADJUGATE_ROOT_AXIOMS D1Bound5.four_operator_norm_lt_of_entry_bounds: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.symmetricZeroFour_adjugate_00: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.symmetricZeroFour_adjugate_01: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.four_adjugate_numeric_margin: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.four_adjugate_bound_of_entry_bounds: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.nearHalf_triple_cofactor_bound: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.nearHalf_offDiagonal_cofactor_bound: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.symmetricFour_adjugate_formula: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.symmetricFour_adjugate_norm_lt: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.symmetric_zero_four_adjugate_norm_lt: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.signed_root_matrix_adjugate_upper: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS D1Bound5.exists_signed_root_matrix_adjugate_upper: [propext, Classical.choice, Quot.sound]
+ADJUGATE_ROOT_AXIOMS_PASS: 12 theorems
+D1Bound5.symmetric_zero_four_adjugate_norm_lt : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ),
+  (∀ (i : Fin 4), F i i = 0) →
+    (∀ (i j : Fin 4), F i j = F j i) →
+      (∀ (i j : Fin 4), i ≠ j → ‖F i j - 1 / 2‖ < 128 / 8649) →
+        ‖F.adjugate‖ < D1Bound5.productFourH * D1Bound5.productFourS ^ 2
+@D1Bound5.signed_root_matrix_adjugate_upper : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 4 → R)
+  (u : Fin 4 → ℂ) (S : Matrix (Fin 4) (Fin 4) R),
+  (∀ (i : Fin 4), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 4), S i i = a i) →
+      (∀ (i j : Fin 4), S i j = S j i) →
+        (∀ (i j : Fin 4), i ≠ j → D1Bound5.SignedEntryGood f (a i) (a j) (u i) (u j) (S i j)) →
+          ‖(D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).adjugate‖ <
+            D1Bound5.productFourH * D1Bound5.productFourS ^ 2
+@D1Bound5.exists_signed_root_matrix_adjugate_upper : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 4 → R)
+  (M : Matrix (Fin 4) (Fin 4) R),
+  (∀ (i : Fin 4), M i i = a i) →
+    (∀ (i j : Fin 4), M i j = M j i) →
+      (∀ (i j : Fin 4), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+        (∀ (i j : Fin 4), i ≠ j → 9 ≤ ‖f (a i) * f (a j)‖) →
+          ∃ u S,
+            (∀ (i : Fin 4), u i ^ 2 = f (a i)) ∧
+              (∀ (i : Fin 4), S i i = a i) ∧
+                (∀ (i j : Fin 4), S i j = S j i) ∧
+                  (∀ (i j : Fin 4), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                    ‖(D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j)).adjugate‖ <
+                      D1Bound5.productFourH * D1Bound5.productFourS ^ 2
+'D1Bound5.exists_signed_root_matrix_adjugate_upper' depends on axioms: [propext, Classical.choice, Quot.sound]

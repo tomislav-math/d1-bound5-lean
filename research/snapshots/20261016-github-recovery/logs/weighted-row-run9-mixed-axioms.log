@@ -1,0 +1,38 @@
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.signedEntryBounds_swap: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.signedEntryBounds_three_or_neg: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.signedEntryBounds_twelve_or_neg: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.signedEntryBounds_nine_or_neg: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.mixedSignedEntryGood_swap: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.mixedSignedEntryGood_or_neg: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.exists_mixed_symmetric_root_matrix: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AXIOMS D1Bound5.exists_mixed_symmetric_root_matrix_with_roots: [propext, Classical.choice, Quot.sound]
+MIXED_ROOT_SIGNS_AUDIT_PASS: 8 theorems
+@D1Bound5.exists_mixed_symmetric_root_matrix : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a : Fin 4 → R)
+  (u : Fin 4 → ℂ) (M : Matrix (Fin 4) (Fin 4) R),
+  (∀ (i : Fin 4), u i ^ 2 = f (a i)) →
+    (∀ (i : Fin 4), M i i = a i) →
+      (∀ (i j : Fin 4), M i j = M j i) →
+        (∀ (i j : Fin 4), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+          (∀ (i j : Fin 4), i ≠ j → i = 0 ∨ j = 0 → 3 ≤ ‖f (a i) * f (a j)‖) →
+            (∀ (i j : Fin 4), i ≠ j → ¬(i = 0 ∨ j = 0) → 9 ≤ ‖f (a i) * f (a j)‖) →
+              ∃ S,
+                (∀ (i : Fin 4), S i i = a i) ∧
+                  (∀ (i j : Fin 4), S i j = S j i) ∧
+                    (∀ (i j : Fin 4), i ≠ j → S i j = M i j ∨ S i j = -M i j) ∧
+                      (∀ (i j : Fin 4), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                        ∀ (i j : Fin 4), i ≠ j → D1Bound5.MixedSignedEntryGood f a u i j (S i j)
+@D1Bound5.exists_mixed_symmetric_root_matrix_with_roots : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ)
+  (a : Fin 4 → R) (M : Matrix (Fin 4) (Fin 4) R),
+  (∀ (i : Fin 4), M i i = a i) →
+    (∀ (i j : Fin 4), M i j = M j i) →
+      (∀ (i j : Fin 4), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+        (∀ (i j : Fin 4), i ≠ j → i = 0 ∨ j = 0 → 3 ≤ ‖f (a i) * f (a j)‖) →
+          (∀ (i j : Fin 4), i ≠ j → ¬(i = 0 ∨ j = 0) → 9 ≤ ‖f (a i) * f (a j)‖) →
+            ∃ u S,
+              (∀ (i : Fin 4), u i ^ 2 = f (a i)) ∧
+                (∀ (i : Fin 4), S i i = a i) ∧
+                  (∀ (i j : Fin 4), S i j = S j i) ∧
+                    (∀ (i j : Fin 4), i ≠ j → S i j = M i j ∨ S i j = -M i j) ∧
+                      (∀ (i j : Fin 4), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                        ∀ (i j : Fin 4), i ≠ j → D1Bound5.MixedSignedEntryGood f a u i j (S i j)
+'D1Bound5.exists_mixed_symmetric_root_matrix_with_roots' depends on axioms: [propext, Classical.choice, Quot.sound]

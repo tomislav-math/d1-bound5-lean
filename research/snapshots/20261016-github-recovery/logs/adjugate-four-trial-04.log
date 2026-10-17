@@ -1,0 +1,8 @@
+exploration/AdjugateFourTrial.lean:49:46: warning: This simp argument is unused:
+  Fin.sum_univ_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.updateRow_apply, Pi.single_apply, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

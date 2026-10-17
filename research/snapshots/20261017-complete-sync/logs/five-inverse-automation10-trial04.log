@@ -1,0 +1,7 @@
+exploration/FiveInverseVectorTrial.lean:93:10: error: Type mismatch: After simplification, term
+  l2_opNorm_mulVec (F - halfOffDiagonal) (WithLp.toLp 2 y)
+ has type
+  @LE.le ℝ Real.instLE ‖(EuclideanSpace.equiv (Fin 4) ℂ).symm ((F - halfOffDiagonal) *ᵥ y)‖
+    (‖F - halfOffDiagonal‖ * ‖WithLp.toLp 2 y‖)
+but is expected to have type
+  @LE.le ℝ Real.instLE ‖WithLp.toLp 2 ((F - halfOffDiagonal) *ᵥ y)‖ (‖F - halfOffDiagonal‖ * ‖WithLp.toLp 2 y‖)

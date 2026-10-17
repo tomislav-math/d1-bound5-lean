@@ -1,0 +1,24 @@
+exploration/ProductFiveDetNumericTrial22.lean:28:4: error: No goals to be solved
+exploration/ProductFiveDetNumericTrial22.lean:41:51: error(lean.unknownIdentifier): Unknown identifier `norm_ofNat`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/ProductFiveDetNumericTrial22.lean:40:49: error: unsolved goals
+a h p q d : ℂ
+hd : d ≠ 0
+ha : ‖a‖ ≤ 33 / 128
+hh : ‖h / d‖ ≤ 11 / 108
+hp : ‖p‖ ≤ 1
+hq : ‖q / d ^ 2‖ ≤ 8 / 243
+hpd : ‖p / d ^ 2‖ ≤ 1 / 2916
+x : ℂ := h / d
+y : ℂ := q / d ^ 2
+z : ℂ := p / d ^ 2
+hx : ‖x‖ ≤ 11 / 108
+hy : ‖y‖ ≤ 8 / 243
+hz : ‖z‖ ≤ 1 / 2916
+heq : 1 - 2 * h / d + (h ^ 2 - p * q - p) / d ^ 2 = 1 - 2 * x + (x ^ 2 - p * y - z)
+⊢ 1 + ‖2‖ * ‖x‖ + ‖x‖ ^ 2 + ‖p‖ * ‖y‖ + ‖z‖ = 1 + ‖x‖ * 2 + ‖x‖ ^ 2 + ‖p‖ * ‖y‖ + ‖z‖

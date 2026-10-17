@@ -1,0 +1,113 @@
+exploration/FiveBlockDetRuntime9.lean:19:60: error: unsolved goals
+case «0».«0»
+n : Type u_1
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+A : Matrix n n ℂ
+b c : n → ℂ
+d : ℂ
+hd : d ≠ 0
+B : Matrix n (Fin 1) ℂ := fun i x => b i
+C : Matrix (Fin 1) n ℂ := fun x j => c j
+D : Matrix (Fin 1) (Fin 1) ℂ := fun x x_1 => d
+⊢ ((fun x x_1 => d) * of fun x x_1 => d⁻¹) 0 0 = 1
+exploration/FiveBlockDetRuntime9.lean:24:60: error: unsolved goals
+case «0».«0»
+n : Type u_1
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+A : Matrix n n ℂ
+b c : n → ℂ
+d : ℂ
+hd : d ≠ 0
+B : Matrix n (Fin 1) ℂ := fun i x => b i
+C : Matrix (Fin 1) n ℂ := fun x j => c j
+D : Matrix (Fin 1) (Fin 1) ℂ := fun x x_1 => d
+hi : (D * of fun x x_1 => d⁻¹) = 1
+⊢ ((of fun x x_1 => d⁻¹) * fun x x_1 => d) 0 0 = 1
+exploration/FiveBlockDetRuntime9.lean:29:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/FiveBlockDetRuntime9.lean:31:50: error: unsolved goals
+n : Type u_1
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+A : Matrix n n ℂ
+b c : n → ℂ
+d : ℂ
+hd : d ≠ 0
+B : Matrix n (Fin 1) ℂ := fun i x => b i
+C : Matrix (Fin 1) n ℂ := fun x j => c j
+D : Matrix (Fin 1) (Fin 1) ℂ := fun x x_1 => d
+hi : (D * of fun x x_1 => d⁻¹) = 1
+hj : (of fun x x_1 => d⁻¹) * D = 1
+this : Invertible D := { invOf := of fun x x_1 => d⁻¹, invOf_mul_self := hj, mul_invOf_self := hi }
+i j : n
+⊢ (((fun i x => b i) * ⅟fun x x_1 => d) * fun x j => c j) i j * d = b i * c j
+exploration/FiveBlockDetRuntime9.lean:23:13: warning: This simp argument is unused:
+  Matrix.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Fin.sum_univ_one, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:23:31: warning: This simp argument is unused:
+  Fin.sum_univ_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Matrix.mul_apply, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:23:49: warning: This simp argument is unused:
+  hd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Matrix.mul_apply, Fin.sum_univ_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:28:13: warning: This simp argument is unused:
+  Matrix.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Fin.sum_univ_one, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:28:31: warning: This simp argument is unused:
+  Fin.sum_univ_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Matrix.mul_apply, hd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:28:49: warning: This simp argument is unused:
+  hd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, Matrix.mul_apply, Fin.sum_univ_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:33:19: warning: This simp argument is unused:
+  Matrix.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [B, C, D, Fin.sum_univ_one, Matrix.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/FiveBlockDetRuntime9.lean:33:37: warning: This simp argument is unused:
+  Fin.sum_univ_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [B, C, D, Matrix.mul_apply, Matrix.sub_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

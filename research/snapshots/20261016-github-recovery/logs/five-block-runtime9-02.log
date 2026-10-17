@@ -1,0 +1,45 @@
+exploration/FiveBlockDetRuntime9.lean:15:11: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub (Matrix n n ℂ) (n → n → ℂ) ?m.43
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:19:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul (Matrix (Fin 1) (Fin 1) ℂ) (Fin 1 → Fin 1 → ℂ) ?m.79
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:24:12: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HMul (Fin 1 → Fin 1 → ℂ) (Matrix (Fin 1) (Fin 1) ℂ) ?m.96
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:29:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+exploration/FiveBlockDetRuntime9.lean:31:6: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub (Matrix n n ℂ) (n → n → ℂ) ?m.142
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:37:9: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  HSub (Matrix n n ℂ) (n → n → ℂ) ?m.176
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+exploration/FiveBlockDetRuntime9.lean:39:58: error: Invalid argument: Variable `hc` is not a proposition or let-declaration
+exploration/FiveBlockDetRuntime9.lean:15:67: error: unsolved goals
+n : Type u_1
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+A : Matrix n n ℂ
+b c : n → ℂ
+d : ℂ
+hd : d ≠ 0
+B : Matrix n (Fin 1) ℂ := fun i x => b i
+C : Matrix (Fin 1) n ℂ := fun x j => c j
+D : Matrix (Fin 1) (Fin 1) ℂ := fun x x_1 => d
+hi : sorry
+hj : sorry
+this : Invertible D := { invOf := fun x x_1 => d⁻¹, invOf_mul_self := ⋯, mul_invOf_self := ⋯ }
+hc : sorry
+⊢ d * (A - B * ⅟D * C).det = d * sorry

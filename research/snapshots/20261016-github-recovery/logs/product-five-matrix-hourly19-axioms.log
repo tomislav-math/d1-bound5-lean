@@ -1,0 +1,22 @@
+PRODUCT_FIVE_MATRIX_AXIOMS D1Bound5.five_reindex_rankOne_plus_error: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_MATRIX_AXIOMS D1Bound5.five_integrated_det_of_symmetric_error: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_MATRIX_AXIOMS D1Bound5.five_normalized_root_det: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_MATRIX_AXIOMS_PASS: 3 theorems
+D1Bound5.five_reindex_rankOne_plus_error (t : Fin 5 → ℂ) (E : Matrix (Fin 5) (Fin 5) ℂ)
+  (hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0) (hsym : E.transpose = E) :
+  ((Matrix.reindex finSumFinEquiv.symm finSumFinEquiv.symm) fun i j => t i * t j + E i j) =
+    D1Bound5.productFiveIntegratedBlock (D1Bound5.fivePrefixError E) (D1Bound5.fiveLastError E)
+      (D1Bound5.fivePrefixValues t) (D1Bound5.fiveLastValue t)
+D1Bound5.five_integrated_det_of_symmetric_error (t : Fin 5 → ℂ) (E : Matrix (Fin 5) (Fin 5) ℂ)
+  (hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0) (hsym : E.transpose = E) (hd : D1Bound5.fiveLastValue t ≠ 0) :
+  (Matrix.of fun i j => t i * t j + E i j).det =
+    D1Bound5.fiveLastValue t ^ 2 *
+      (D1Bound5.productFiveSchur (D1Bound5.fivePrefixError E) (D1Bound5.fiveLastError E) (D1Bound5.fivePrefixValues t)
+          (D1Bound5.fiveLastValue t)).det
+D1Bound5.five_normalized_root_det (t u : Fin 5 → ℂ) (M : Matrix (Fin 5) (Fin 5) ℂ) (hu : ∀ (i : Fin 5), u i ^ 2 = t i)
+  (hdiag : ∀ (i : Fin 5), M i i = t i) (hsym : M.transpose = M) (hd : D1Bound5.fiveLastValue t ≠ 0) :
+  (∏ i, t i) * M.det =
+    D1Bound5.fiveLastValue t ^ 2 *
+      (D1Bound5.productFiveSchur (D1Bound5.fivePrefixError (D1Bound5.normalizedRootError t u M))
+          (D1Bound5.fiveLastError (D1Bound5.normalizedRootError t u M)) (D1Bound5.fivePrefixValues t)
+          (D1Bound5.fiveLastValue t)).det

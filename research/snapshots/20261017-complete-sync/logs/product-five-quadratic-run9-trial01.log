@@ -1,0 +1,16 @@
+exploration/ProductFiveNormalizedQuadraticRun9Trial.lean:47:44: error: Application type mismatch: The argument
+  hbound
+has type
+  ‖w ⬝ᵥ F⁻¹ *ᵥ w‖ < ‖d‖ ^ 2 * (8 / 243)
+but is expected to have type
+  ‖w ⬝ᵥ F⁻¹ *ᵥ w‖ < 8 / 243 * ‖d‖ ^ 2
+in the application
+  (div_lt_iff₀ (pow_pos hdpos 2)).mpr hbound
+exploration/ProductFiveNormalizedQuadraticRun9Trial.lean:53:30: error: unsolved goals
+case calc.step
+p d : ℂ
+hp : ‖p‖ < 1
+hd : 54 ≤ ‖d‖
+hdpos : 0 < ‖d‖
+hdsq : 2916 ≤ ‖d‖ ^ 2
+⊢ ‖d‖ ^ 2 * (1 / 2916) < 1 / 2916 * ‖d‖ ^ 2

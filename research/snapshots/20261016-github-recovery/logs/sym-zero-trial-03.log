@@ -1,0 +1,57 @@
+exploration/SymmetricFourDetTrial.lean:15:32: warning: This simp argument is unused:
+  Finset.sum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fin.sum_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/SymmetricFourDetTrial.lean:44:10: error: Type mismatch
+  add_le_add_right (norm_add_le ?m.387 ?m.388) ?m.389
+has type
+  ?m.389 + ‖?m.387 + ?m.388‖ ≤ ?m.389 + (‖?m.387‖ + ‖?m.388‖)
+but is expected to have type
+  ‖a * b + 1 / 2 * a‖ + ‖1 / 2 * b‖ ≤ ‖a * b‖ + ‖1 / 2 * a‖ + ‖1 / 2 * b‖
+exploration/SymmetricFourDetTrial.lean:46:16: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/SymmetricFourDetTrial.lean:102:39: error: unsolved goals
+P Q R : ℂ
+hP : ‖P - 1 / 4‖ < 1 / 40
+hQ : ‖Q - 1 / 4‖ < 1 / 40
+hR : ‖R - 1 / 4‖ < 1 / 40
+a : ℂ := P - 1 / 4
+b : ℂ := Q - 1 / 4
+c : ℂ := R - 1 / 4
+ha : ‖a‖ < 1 / 40
+hb : ‖b‖ < 1 / 40
+hc : ‖c‖ < 1 / 40
+hsum : ‖a + b + c‖ < 3 / 40
+hdiff : ‖a - b - c‖ < 3 / 40
+hsq : ‖a - b - c‖ ^ 2 < (3 / 40) ^ 2
+hprod : ‖b‖ * ‖c‖ < 1 / 1600
+⊢ 4 * ‖b‖ * ‖c‖ = 4 * (‖b‖ * ‖c‖)
+exploration/SymmetricFourDetTrial.lean:119:8: error: Type mismatch
+  add_le_add_right (norm_sub_le ?m.1322 ?m.1323) ?m.1324
+has type
+  ?m.1324 + ‖?m.1322 - ?m.1323‖ ≤ ?m.1324 + (‖?m.1322‖ + ‖?m.1323‖)
+but is expected to have type
+  ‖-(3 / 16) - (a + b + c) / 2‖ + ‖(a - b - c) ^ 2 - 4 * b * c‖ ≤
+    ‖-(3 / 16)‖ + ‖(a + b + c) / 2‖ + ‖(a - b - c) ^ 2 - 4 * b * c‖
+exploration/SymmetricFourDetTrial.lean:103:16: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/SymmetricFourDetTrial.lean:112:10: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

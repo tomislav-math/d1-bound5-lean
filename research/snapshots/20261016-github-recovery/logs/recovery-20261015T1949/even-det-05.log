@@ -1,0 +1,139 @@
+✖ [2954/2954] Building D1Bound5.EvenDeterminant (104s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/EvenDeterminant.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/EvenDeterminant.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/EvenDeterminant.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/EvenDeterminant.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/EvenDeterminant.setup.json --json
+info: D1Bound5/EvenDeterminant.lean:25:53: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/EvenDeterminant.lean:22:2: unsolved goals
+case e'_2
+R : Type u_1
+n : Type u_2
+inst✝² : CommRing R
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+v : n → R
+A : Matrix n (Fin 2) R := fun i j => if j = 0 then 1 else v i
+h : (1 + A * Aᵀ).det = (1 + Aᵀ * A) 0 0 * (1 + Aᵀ * A) 1 1 - (1 + Aᵀ * A) 0 1 * (1 + Aᵀ * A) 1 0
+i j : n
+⊢ (1 + if i = j then 1 else 0) + v i * v j =
+    (if i = j then 1 else 0) + ((fun i j => if j = 0 then 1 else v i) * (fun i j => if j = 0 then 1 else v i)ᵀ) i j
+info: D1Bound5/EvenDeterminant.lean:28:23: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/EvenDeterminant.lean:26:2: unsolved goals
+case e'_3
+R : Type u_1
+n : Type u_2
+inst✝² : CommRing R
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+v : n → R
+A : Matrix n (Fin 2) R := fun i j => if j = 0 then 1 else v i
+h : (1 + A * Aᵀ).det = (1 + Aᵀ * A) 0 0 * (1 + Aᵀ * A) 1 1 - (1 + Aᵀ * A) 0 1 * (1 + Aᵀ * A) 1 0
+⊢ 1 + ↑(Fintype.card n) + ↑(Fintype.card n) * ∑ x, v x ^ 2 + ∑ x, v x ^ 2 - (∑ i, v i) ^ 2 =
+    1 + ((fun i j => if j = 0 then 1 else v i)ᵀ * fun i j => if j = 0 then 1 else v i) 0 0 +
+          ((fun i j => if j = 0 then 1 else v i)ᵀ * fun i j => if j = 0 then 1 else v i) 0 0 *
+            ((fun i j => if j = 0 then 1 else v i)ᵀ * fun i j => if j = 0 then 1 else v i) 1 1 +
+        ((fun i j => if j = 0 then 1 else v i)ᵀ * fun i j => if j = 0 then 1 else v i) 1 1 -
+      ((fun i j => if j = 0 then 1 else v i)ᵀ * fun i j => if j = 0 then 1 else v i) 0 1 *
+        ((fun i j => if j = 0 then 1 else v i)ᵀ * fun i j => if j = 0 then 1 else v i) 1 0
+warning: D1Bound5/EvenDeterminant.lean:24:44: This simp argument is unused:
+  Matrix.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, Matrix.one_apply, Fin.sum_univ_two, Matrix.transpose_apply, A]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:25:6: This simp argument is unused:
+  Fin.sum_univ_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, Matrix.one_apply, Matrix.mul_apply, Matrix.transpose_apply, A]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:25:23: This simp argument is unused:
+  Matrix.transpose_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, Matrix.one_apply, Matrix.mul_apply, Fin.sum_univ_two, A]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:26:49: This simp argument is unused:
+  Matrix.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_apply, Matrix.one_apply, Matrix.transpose_apply, A]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:27:6: This simp argument is unused:
+  Matrix.transpose_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_apply, Matrix.one_apply, Matrix.mul_apply, A]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: D1Bound5/EvenDeterminant.lean:73:73: unsolved goals
+case re
+K : Type u_1
+n : Type u_2
+inst✝³ : Field K
+inst✝² : NumberField K
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+hK : finrank ℚ K = 2
+hn : Even (Fintype.card n)
+v : n → 𝓞 K
+M : Matrix n n (𝓞 K)
+hd : ∀ (i : n), M i i = v i
+hs : ∀ (i j : n), i ≠ j → M i j ^ 2 = v i * v j + 1
+tau nu : ℤ
+left✝ : tau = 0 ∨ tau = 1
+e : QuadInt tau nu ≃+* 𝓞 K
+S : Type := QuadraticAlgebra (ZMod 2) (-↑nu) ↑tau
+⊢ 2 = 0
+warning: D1Bound5/EvenDeterminant.lean:73:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+error: D1Bound5/EvenDeterminant.lean:82:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (f.mapMatrix M).det
+in the target expression
+  (M.map ⇑f).det ^ 2 = 1
+
+K : Type u_1
+n : Type u_2
+inst✝³ : Field K
+inst✝² : NumberField K
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+hK : finrank ℚ K = 2
+hn : Even (Fintype.card n)
+v : n → 𝓞 K
+M : Matrix n n (𝓞 K)
+hd : ∀ (i : n), M i i = v i
+hs : ∀ (i j : n), i ≠ j → M i j ^ 2 = v i * v j + 1
+tau nu : ℤ
+left✝ : tau = 0 ∨ tau = 1
+e : QuadInt tau nu ≃+* 𝓞 K
+S : Type := QuadraticAlgebra (ZMod 2) (-↑nu) ↑tau
+this : CharP S 2 :=
+  CharTwo.of_one_ne_zero_of_two_eq_zero one_ne_zero
+    (QuadraticAlgebra.ext (id sorry) (of_eq_true (Eq.trans (eq_self 0) (eq_true True.intro))))
+f : 𝓞 K →+* S := (quadraticReductionTwo tau nu).comp e.symm.toRingHom
+hdiag : ∀ (i : n), M.map (⇑f) i i = f (v i)
+hsquare : ∀ (i j : n), i ≠ j → M.map (⇑f) i j ^ 2 = f (v i) * f (v j) + 1
+h : (M.map ⇑f).det ^ 2 = 1
+⊢ M.det ≠ 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.EvenDeterminant
+error: build failed

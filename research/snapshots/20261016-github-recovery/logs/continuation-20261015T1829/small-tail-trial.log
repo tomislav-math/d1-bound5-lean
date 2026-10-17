@@ -1,0 +1,26 @@
+exploration/SmallTailTrial.lean:9:2: error: failed to synthesize
+  Decidable
+    (∀ b ∈ QuadInt.disk 0 1 15,
+      ∀ c ∈ QuadInt.disk 0 1 15,
+        9 ≤ QuadraticAlgebra.norm b →
+          QuadraticAlgebra.norm b ≤ QuadraticAlgebra.norm c →
+            b ≠ c →
+              (b * c + 1).hasSquareRoot = true →
+                ∀ d ∈ {b + c + 2 * (b * c + 1).rootCandidate, b + c - 2 * (b * c + 1).rootCandidate},
+                  d ≠ 0 →
+                    d ≠ b →
+                      d ≠ c →
+                        QuadraticAlgebra.norm c ≤ QuadraticAlgebra.norm d →
+                          ∀ a ∈ QuadInt.disk 0 1 15,
+                            a ≠ 0 →
+                              a ≠ b →
+                                a ≠ c →
+                                  a ≠ d →
+                                    QuadraticAlgebra.norm a ≤ QuadraticAlgebra.norm b →
+                                      (a * b + 1).hasSquareRoot = true →
+                                        (a * c + 1).hasSquareRoot = true → (a * d + 1).hasSquareRoot = false)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+'D1Bound5.smallTailTrial' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+
+EXIT=1; SECONDS=27.34

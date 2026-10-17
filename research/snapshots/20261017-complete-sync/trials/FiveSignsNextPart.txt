@@ -1,0 +1,88 @@
+/-- A simultaneous five-entry choice retains the existing mixed prefix predicate. -/
+theorem fiveSignedEntryGood_prefix {R : Type*} [CommRing R]
+    (f : R →+* ℂ) (a : Fin 5 → R) (u : Fin 5 → ℂ)
+    (S : Matrix (Fin 5) (Fin 5) R)
+    (hgood : ∀ i j, i ≠ j → FiveSignedEntryGood f a u i j (S i j)) :
+    ∀ i j : Fin 4, i ≠ j →
+      MixedSignedEntryGood f (fun k => a (Fin.castAdd 1 k))
+        (fun k => u (Fin.castAdd 1 k)) i j
+        (S (Fin.castAdd 1 i) (Fin.castAdd 1 j)) := by
+  have h4 (i : Fin 4) : Fin.castAdd 1 i ≠ (4 : Fin 5) := by
+    intro h
+    have hv := congrArg Fin.val h
+    simp only [Fin.val_castAdd] at hv
+    omega
+  have h0 (i : Fin 4) : Fin.castAdd 1 i = (0 : Fin 5) ↔ i = 0 := by
+    constructor
+    · intro h
+      apply Fin.ext
+      exact congrArg Fin.val h
+    · intro h
+      subst i
+      rfl
+  intro i j hij
+  have hne : Fin.castAdd 1 i ≠ Fin.castAdd 1 j := by
+    intro h
+    exact hij (Fin.ext (congrArg Fin.val h))
+  have h := hgood (Fin.castAdd 1 i) (Fin.castAdd 1 j) hne
+  simpa only [FiveSignedEntryGood, h4 i, h4 j, false_or, ite_false,
+    h0 i, h0 j, MixedSignedEntryGood] using h
+
+/-- Last-column bounds refer to the SAME normalized five-entry matrix. -/
+theorem fiveSignedEntryGood_last_column {R : Type*} [CommRing R]
+    (f : R →+* ℂ) (a : Fin 5 → R) (u : Fin 5 → ℂ)
+    (S : Matrix (Fin 5) (Fin 5) R)
+    (hgood : ∀ i j, i ≠ j → FiveSignedEntryGood f a u i j (S i j)) :
+    ∀ i : Fin 4,
+      ‖fiveLastError (normalizedRootError (fun k => f (a k)) u
+        (fun k l => f (S k l))) i‖ < (50/99 : ℝ) ∧
+      ‖fiveLastError (normalizedRootError (fun k => f (a k)) u
+        (fun k l => f (S k l))) i - (1/2 : ℂ)‖ < (1/400 : ℝ) := by
+  intro i
+  have hi : Fin.castAdd 1 i ≠ (4 : Fin 5) := by
+    intro h
+    have hv := congrArg Fin.val h
+    simp only [Fin.val_castAdd] at hv
+    omega
+  have h : SignedEntryBounds f (a (Fin.castAdd 1 i)) (a 4)
+      (u (Fin.castAdd 1 i)) (u 4) (S (Fin.castAdd 1 i) 4)
+      (50/99) (625/264627) := by
+    simpa [FiveSignedEntryGood] using hgood (Fin.castAdd 1 i) 4 hi
+  exact ⟨h.1, lt_trans h.2 (by norm_num)⟩
+
+/-- Choose all five complex square roots and all ten original-ring signs.
+The prefix determinant and last-column bounds use a single witness S. -/
+theorem exists_five_signed_root_matrix_with_bounds
+    {R : Type*} [CommRing R] (f : R →+* ℂ)
+    (a : Fin 5 → R) (M : Matrix (Fin 5) (Fin 5) R)
+    (hdiag : ∀ i, M i i = a i)
+    (hsymm : ∀ i j, M i j = M j i)
+    (hroot : ∀ i j, i ≠ j → (M i j)^2 = a i * a j + 1)
+    (hfirst : ∀ i j, i ≠ j → 3 ≤ ‖f (a i)*f (a j)‖)
+    (hlater : ∀ i j, i ≠ j → ¬(i = 0 ∨ j = 0) →
+      9 ≤ ‖f (a i)*f (a j)‖)
+    (hlast : ∀ i j, i ≠ j → i = 4 ∨ j = 4 →
+      54 ≤ ‖f (a i)*f (a j)‖) :
+    ∃ (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) R),
+      (∀ i, (u i)^2 = f (a i)) ∧
+      (∀ i, S i i = a i) ∧
+      (∀ i j, S i j = S j i) ∧
+      (∀ i j, i ≠ j → S i j = M i j ∨ S i j = -M i j) ∧
+      (∀ i j, i ≠ j → (S i j)^2 = a i*a j+1) ∧
+      (∀ i j, i ≠ j → FiveSignedEntryGood f a u i j (S i j)) ∧
+      ‖(fivePrefixError (normalizedRootError (fun i => f (a i)) u
+        (fun i j => f (S i j)))).det‖ < (33/128 : ℝ) ∧
+      (∀ i : Fin 4,
+        ‖fiveLastError (normalizedRootError (fun k => f (a k)) u
+          (fun k l => f (S k l))) i - (1/2 : ℂ)‖ < (1/400 : ℝ)) := by
+  classical
+  have hr (i : Fin 5) : ∃ z : ℂ, z^2 = f (a i) :=
+    IsAlgClosed.exists_pow_nat_eq (f (a i)) (by decide : 0 < 2)
+  let u : Fin 5 → ℂ := fun i => Classical.choose (hr i)
+  have hu (i : Fin 5) : (u i)^2 = f (a i) := Classical.choose_spec (hr i)
+  obtain ⟨S, hd, hs, hsign, hsq, hg⟩ :=
+    exists_five_signed_root_matrix f a u M hu hdiag hsymm hroot hfirst hlater hlast
+  have hp := fiveSignedEntryGood_prefix f a u S hg
+  have hdet := five_prefix_det_upper_of_mixed_signed_entries f a u S hu hd hs hp
+  have hcol := fiveSignedEntryGood_last_column f a u S hg
+  exact ⟨u, S, hu, hd, hs, hsign, hsq, hg, hdet, fun i => (hcol i).2⟩

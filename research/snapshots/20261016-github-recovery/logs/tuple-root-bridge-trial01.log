@@ -1,0 +1,9 @@
+exploration/TupleRootMatrixBridgeTrial.lean:31:4: error: Type mismatch
+  Classical.choose_spec (ht.right.right (min i j) (max i j) (min_ne_max_fin i j hij))
+has type
+  Classical.choose ⋯ * Classical.choose ⋯ = t (min i j) * t (max i j) + 1
+but is expected to have type
+  tuplePairRoot t ht i j hij ^ 2 = t (min i j) * t (max i j) + 1
+exploration/TupleRootMatrixBridgeTrial.lean:60:30: error(lean.invalidField): Invalid field `symm`: The environment does not contain `Function.symm`, so it is not possible to project the field `symm` from an expression
+  hij
+of type `i = j → False`

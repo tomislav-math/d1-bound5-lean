@@ -1,0 +1,14 @@
+exploration/FiveInverseVectorTrial.lean:9:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instDivInvMonoid', which is 'noncomputable'
+exploration/FiveInverseVectorTrial.lean:10:12: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Complex.instDivInvMonoid', which is 'noncomputable'
+exploration/FiveInverseVectorTrial.lean:13:40: error: unsolved goals
+case «0»
+⊢ ((1 / 6 + if 0 = 2 then 0 else 1 / 6) + if 0 = 3 then 0 else 1 / 6) = 1 / 2
+
+case «1»
+⊢ ((1 / 6 + if 1 = 2 then 0 else 1 / 6) + if 1 = 3 then 0 else 1 / 6) = 1 / 2
+
+case «2»
+⊢ ((1 / 3 + if ⟨2, ⋯⟩ = 2 then 0 else 1 / 6) + if ⟨2, ⋯⟩ = 3 then 0 else 1 / 6) = 1 / 2
+
+case «3»
+⊢ ((1 / 3 + if ⟨3, ⋯⟩ = 2 then 0 else 1 / 6) + if ⟨3, ⋯⟩ = 3 then 0 else 1 / 6) = 1 / 2

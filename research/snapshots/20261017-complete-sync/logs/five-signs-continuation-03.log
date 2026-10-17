@@ -1,0 +1,26 @@
+exploration/FiveSignsContinuation.lean:177:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ b ≤ 3
+where
+ b := ↑↑i
+exploration/FiveSignsContinuation.lean:182:29: error: Application type mismatch: The argument
+  h
+has type
+  Fin.castAdd 1 i = 0
+but is expected to have type
+  i = 0
+in the application
+  congrArg Fin.val h
+exploration/FiveSignsContinuation.lean:189:41: error: Application type mismatch: The argument
+  h
+has type
+  Fin.castAdd 1 i = Fin.castAdd 1 j
+but is expected to have type
+  i = j
+in the application
+  congrArg Fin.val h
+exploration/FiveSignsContinuation.lean:209:4: error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  0 ≤ b ≤ 3
+where
+ b := ↑↑i

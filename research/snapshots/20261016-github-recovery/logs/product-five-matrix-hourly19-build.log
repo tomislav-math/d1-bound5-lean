@@ -1,0 +1,28 @@
+⚠ [1907/1924] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2886/2910] Replayed D1Bound5.RootMatrixSigns
+warning: D1Bound5/RootMatrixSigns.lean:55:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2909/2910] Replayed D1Bound5.ProductFiveBlockDet
+warning: D1Bound5/ProductFiveBlockDet.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [2910/2910] Built D1Bound5.ProductFiveMatrixBridge (46s)
+Build completed successfully (2910 jobs).

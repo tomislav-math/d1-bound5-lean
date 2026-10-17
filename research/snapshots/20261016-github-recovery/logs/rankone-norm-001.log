@@ -1,0 +1,22 @@
+exploration/RankOneNormTrial.lean:22:6: error: expected token
+exploration/RankOneNormTrial.lean:14:38: error(lean.unknownIdentifier): Unknown identifier `toLp`
+exploration/RankOneNormTrial.lean:15:38: error(lean.unknownIdentifier): Unknown identifier `toLp`
+exploration/RankOneNormTrial.lean:18:37: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ‖?x‖ ^ 2
+in the target expression
+  ∑ i, ‖y.ofLp i‖ ^ 2 = ∑ i, ‖y.ofLp i‖ ^ 2
+
+F : Matrix (Fin 4) (Fin 4) ℂ
+w : Fin 4 → ℂ
+x : EuclideanSpace ℂ (Fin 4) := sorry
+y : EuclideanSpace ℂ (Fin 4) := sorry
+⊢ ∑ i, ‖y.ofLp i‖ ^ 2 = ∑ i, ‖y.ofLp i‖ ^ 2
+exploration/RankOneNormTrial.lean:21:7: error: Missing cases:
+exploration/RankOneNormTrial.lean:13:48: error: unsolved goals
+F : Matrix (Fin 4) (Fin 4) ℂ
+w : Fin 4 → ℂ
+x : EuclideanSpace ℂ (Fin 4) := sorry
+y : EuclideanSpace ℂ (Fin 4) := sorry
+hy : ‖y‖ = ‖x‖
+hinner : w ⬝ᵥ F *ᵥ w = sorry
+⊢ ‖w ⬝ᵥ F *ᵥ w‖ ≤ ‖F‖ * ∑ i, ‖w i‖ ^ 2

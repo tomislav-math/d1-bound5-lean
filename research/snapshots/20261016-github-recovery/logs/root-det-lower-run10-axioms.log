@@ -1,0 +1,24 @@
+ROOT_DET_LOWER_AXIOMS D1Bound5.scaledRootMatrix_det_norm_identity: [propext, Classical.choice, Quot.sound]
+ROOT_DET_LOWER_AXIOMS D1Bound5.scaledRootMatrix_det_norm_lower: [propext, Classical.choice, Quot.sound]
+ROOT_DET_LOWER_AXIOMS D1Bound5.full_ring_scaledRootMatrix_det_norm_lower: [propext, Classical.choice, Quot.sound]
+ROOT_DET_LOWER_AXIOM_AUDIT_PASS: 3 theorems
+@D1Bound5.scaledRootMatrix_det_norm_identity : ∀ {R : Type u_1} {n : Type u_2} [inst : CommRing R] [inst_1 : Fintype n]
+  [inst_2 : DecidableEq n] (f : R →+* ℂ) (a : n → R) (u : n → ℂ) (M : Matrix n n R),
+  (∀ (i : n), u i ^ 2 = f (a i)) → ‖(D1Bound5.scaledRootMatrix u (M.map ⇑f)).det‖ = (∏ i, ‖f (a i)‖) * ‖f M.det‖
+@D1Bound5.scaledRootMatrix_det_norm_lower : ∀ {R : Type u_1} {n : Type u_2} [inst : CommRing R] [inst_1 : Fintype n]
+  [inst_2 : DecidableEq n] (f : R →+* ℂ) (a : n → R) (u : n → ℂ) (M : Matrix n n R),
+  (∀ (i : n), u i ^ 2 = f (a i)) → 1 ≤ ‖f M.det‖ → ∏ i, ‖f (a i)‖ ≤ ‖(D1Bound5.scaledRootMatrix u (M.map ⇑f)).det‖
+@D1Bound5.full_ring_scaledRootMatrix_det_norm_lower : ∀ {K : Type u_1} {n : Type u_2} [inst : Field K]
+  [inst_1 : NumberField K] [NumberField.IsTotallyComplex K] [inst_3 : Fintype n] [inst_4 : DecidableEq n],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ),
+      Even (Fintype.card n) →
+        ∀ (a : n → NumberField.RingOfIntegers K) (M : Matrix n n (NumberField.RingOfIntegers K)),
+          (∀ (i : n), M i i = a i) →
+            (∀ (i j : n), i ≠ j → M i j ^ 2 = a i * a j + 1) →
+              ∀ (u : n → ℂ),
+                (∀ (i : n), u i ^ 2 = phi ↑(a i)) →
+                  ∏ i, ‖phi ↑(a i)‖ ≤
+                    ‖(D1Bound5.scaledRootMatrix u
+                          (M.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K)))).det‖
+'D1Bound5.full_ring_scaledRootMatrix_det_norm_lower' depends on axioms: [propext, Classical.choice, Quot.sound]

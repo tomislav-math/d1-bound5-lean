@@ -1,0 +1,6 @@
+PRODUCT_FIVE_QUADRATIC_AXIOMS D1Bound5.productFive_quadratic_q_div_norm_lt: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_QUADRATIC_AXIOMS D1Bound5.productFive_p_div_sq_norm_lt: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_QUADRATIC_AXIOMS_PASS: 2 theorems
+D1Bound5.productFive_quadratic_q_div_norm_lt : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ) (w : Fin 4 → ℂ) (d : ℂ),
+  d ≠ 0 → ‖F - D1Bound5.halfOffDiagonal‖ < 1 / 8 → ‖WithLp.toLp 2 w‖ < ‖d‖ / 9 → ‖w ⬝ᵥ F⁻¹.mulVec w / d ^ 2‖ < 8 / 243
+D1Bound5.productFive_p_div_sq_norm_lt : ∀ (p d : ℂ), ‖p‖ < 1 → 54 ≤ ‖d‖ → ‖p / d ^ 2‖ < 1 / 2916

@@ -1,0 +1,20 @@
+PRODUCT_FIVE_EXACT_AXIOMS D1Bound5.five_prefix_symmetric: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_EXACT_AXIOMS D1Bound5.five_normalized_error_symmetric: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_EXACT_AXIOMS D1Bound5.five_normalized_root_det_rankTwo: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_EXACT_AXIOMS_PASS: 3 theorems
+D1Bound5.five_prefix_symmetric (E : Matrix (Fin 5) (Fin 5) ℂ) (hsym : E.transpose = E) :
+  (D1Bound5.fivePrefixError E).transpose = D1Bound5.fivePrefixError E
+D1Bound5.five_normalized_error_symmetric (t u : Fin 5 → ℂ) (M : Matrix (Fin 5) (Fin 5) ℂ) (hsym : M.transpose = M) :
+  (D1Bound5.normalizedRootError t u M).transpose = D1Bound5.normalizedRootError t u M
+D1Bound5.five_normalized_root_det_rankTwo (t u : Fin 5 → ℂ) (M : Matrix (Fin 5) (Fin 5) ℂ)
+  (hu : ∀ (i : Fin 5), u i ^ 2 = t i) (hdiag : ∀ (i : Fin 5), M i i = t i) (hsym : M.transpose = M)
+  (hd : D1Bound5.fiveLastValue t ≠ 0) (hF : (D1Bound5.fivePrefixError (D1Bound5.normalizedRootError t u M)).det ≠ 0) :
+  have E := D1Bound5.normalizedRootError t u M;
+  have F := D1Bound5.fivePrefixError E;
+  have f := D1Bound5.fiveLastError E;
+  have w := D1Bound5.fivePrefixValues t;
+  have d := D1Bound5.fiveLastValue t;
+  (∏ i, t i) * M.det =
+    d ^ 2 * F.det *
+      (1 - 2 * f ⬝ᵥ F⁻¹.mulVec w / d +
+        ((f ⬝ᵥ F⁻¹.mulVec w) ^ 2 - f ⬝ᵥ F⁻¹.mulVec f * w ⬝ᵥ F⁻¹.mulVec w - f ⬝ᵥ F⁻¹.mulVec f) / d ^ 2)

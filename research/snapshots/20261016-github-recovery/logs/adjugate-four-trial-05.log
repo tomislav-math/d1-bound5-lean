@@ -1,0 +1,37 @@
+exploration/AdjugateFourTrial.lean:49:46: warning: This simp argument is unused:
+  Fin.sum_univ_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.updateRow_apply, Pi.single_apply, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:151:46: error: unsolved goals
+x y z : ℂ
+hx : ‖x - 1 / 2‖ < 128 / 8649
+hy : ‖y - 1 / 2‖ < 128 / 8649
+hz : ‖z - 1 / 2‖ < 128 / 8649
+e : ℝ := 128 / 8649
+t : ℝ := 1 / 2 + e
+hxe : ‖x - 1 / 2‖ ≤ e
+hye : ‖y - 1 / 2‖ ≤ e
+hze : ‖z - 1 / 2‖ ≤ e
+hny : ‖y‖ ≤ t
+hnz : ‖z‖ ≤ t
+hp : ‖x - 1 / 2‖ * ‖y‖ * ‖z‖ ≤ e * t * t
+h1 : ‖y - 1 / 2‖ * ‖z‖ ≤ e * ‖z‖
+⊢ 0 ≤ ?m.688
+exploration/AdjugateFourTrial.lean:164:12: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateFourTrial.lean:173:12: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

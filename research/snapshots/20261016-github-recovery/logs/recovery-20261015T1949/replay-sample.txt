@@ -1,0 +1,204 @@
+Analysis of sampling lean (pid 14139) every 1 millisecond
+Process:         lean [14139]
+Path:            /Users/USER/*/lean
+Load Address:    0x1024cc000
+Identifier:      lean
+Version:         ???
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  lake [14114]
+
+Date/Time:       2026-10-15 22:28:43.311 +0200
+Launch Time:     2026-10-15 22:18:47.878 +0200
+OS Version:      macOS 12.2.1 (21D62)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         1.2G
+Physical footprint (peak):  1.2G
+----
+
+Call graph:
+    839 Thread_25068799   DispatchQueue_1: com.apple.main-thread  (serial)
+    + 839 start  (in dyld) + 520  [0x1027750f4]
+    +   839 lean_main  (in libleanshared.dylib) + 560  [0x10d0c2724]
+    +     839 lean::run_with_thread_stack(std::__1::function<void ()> const&)  (in libleanshared.dylib) + 100  [0x1136bf770]
+    +       839 _pthread_join  (in libsystem_pthread.dylib) + 452  [0x19749b574]
+    +         839 __ulock_wait  (in libsystem_kernel.dylib) + 8  [0x19745f70c]
+    839 Thread_25068800
+    + 839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+    +   839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+    +     839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+    +       839 lean::event_loop_run_loop(lean::event_loop_t*)  (in libleanshared.dylib) + 36  [0x1136fad18]
+    +         839 uv_run  (in libleanshared.dylib) + 276  [0x113749b98]
+    +           839 uv__io_poll  (in libleanshared.dylib) + 712  [0x11374011c]
+    +             839 kevent  (in libsystem_kernel.dylib) + 8  [0x1974638cc]
+    839 Thread_25068804
+    + 839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+    +   839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+    +     839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+    +       839 std::__1::__function::__func<lean_main::$_0, std::__1::allocator<lean_main::$_0>, void ()>::operator()()  (in libleanshared.dylib) + 56  [0x10d0c3c54]
+    +         839 lean::run_shell_main(int, char**, lean::object_ref const&)  (in libleanshared.dylib) + 376  [0x10d0c1f5c]
+    +           839 lean_shell_main  (in libleanshared.dylib) + 13544  [0x113468088]
+    +             839 lean_eval_main  (in libleanshared.dylib) + 36  [0x1136aa748]
+    +               839 lean::ir::run_main(lean::elab_environment const&, lean::options const&, lean::list_ref<lean::string_ref> const&)  (in libleanshared.dylib) + 144  [0x1136aa3bc]
+    +                 839 unsigned int lean::ir::interpreter::with_interpreter<unsigned int>(lean::elab_environment const&, lean::options const&, lean::name const&, std::__1::function<unsigned int (lean::ir::interpreter&)> const&)  (in libleanshared.dylib) + 320  [0x1136aa5ec]
+    +                   839 lean::ir::interpreter::run_main(lean::list_ref<lean::string_ref> const&)  (in libleanshared.dylib) + 628  [0x1136b1848]
+    +                     839 lean::ir::interpreter::call_boxed(lean::name const&, unsigned int, lean_object**)  (in libleanshared.dylib) + 480  [0x1136ab484]
+    +                       839 lean_apply_2  (in libleanshared.dylib) + 3164  [0x1136d1848]
+    +                         839 lean::ir::interpreter::stub_5_aux(lean_object*, lean_object*, lean_object*, lean_object*, lean_object*)  (in libleanshared.dylib) + 48  [0x1136b0b38]
+    +                           839 lean::ir::interpreter::stub_m_aux(lean_object**)  (in libleanshared.dylib) + 92  [0x1136b1034]
+    +                             839 lean::ir::interpreter::stub_m(lean_object**)  (in libleanshared.dylib) + 396  [0x1136b13a0]
+    +                               839 lean::ir::interpreter::eval_body(lean::object_ref const&)  (in libleanshared.dylib) + 1784  [0x1136adf60]
+    +                                 839 lean::ir::interpreter::call(lean::name const&, lean::array_ref<lean::object_ref> const&)  (in libleanshared.dylib) + 1024  [0x1136afe4c]
+    +                                   839 lean::ir::interpreter::eval_body(lean::object_ref const&)  (in libleanshared.dylib) + 1784  [0x1136adf60]
+    +                                     839 lean::ir::interpreter::call(lean::name const&, lean::array_ref<lean::object_ref> const&)  (in libleanshared.dylib) + 1024  [0x1136afe4c]
+    +                                       839 lean::ir::interpreter::eval_body(lean::object_ref const&)  (in libleanshared.dylib) + 1784  [0x1136adf60]
+    +                                         839 lean::ir::interpreter::call(lean::name const&, lean::array_ref<lean::object_ref> const&)  (in libleanshared.dylib) + 1024  [0x1136afe4c]
+    +                                           839 lean::ir::interpreter::eval_body(lean::object_ref const&)  (in libleanshared.dylib) + 1784  [0x1136adf60]
+    +                                             839 lean::ir::interpreter::call(lean::name const&, lean::array_ref<lean::object_ref> const&)  (in libleanshared.dylib) + 512  [0x1136afc4c]
+    +                                               839 lean::curry(void*, unsigned int, lean_object**)  (in libleanshared.dylib) + 472  [0x1136ce830]
+    +                                                 839 l_Lean_finalizeImport___boxed  (in libleanshared.dylib) + 88  [0x11078e440]
+    +                                                   839 l_Lean_finalizeImport  (in libleanshared.dylib) + 4596  [0x11078d618]
+    +                                                     701 l___private_Lean_Environment_0__Lean_setImportedEntries  (in libleanshared.dylib) + 760  [0x11077c508]
+    +                                                     ! 689 l_WellFounded_opaqueFix_u2083___at___00WellFounded_opaqueFix_u2083___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__2_spec__2___redArg  (in libleanshared.dylib) + 124  [0x11077bb54]
+    +                                                     ! : 285 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 148  [0x11077b6ec]
+    +                                                     ! : | 280 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 164  [0x11077b6fc]
+    +                                                     ! : | 5 l___private_Lean_Environment_0__Lean_EnvExtension_modifyStateImpl___redArg  (in libleanshared.dylib) + 176  [0x110768dc4]
+    +                                                     ! : |   4 lean_apply_1  (in libleanshared.dylib) + 2140  [0x1136cf148]
+    +                                                     ! : |   ! 4 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1___lam__0___boxed  (in libleanshared.dylib) + 24  [0x11077b60c]
+    +                                                     ! : |   !   4 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1___lam__0___boxed  (in libleanshared.dylib) + 24  [0x11077b60c]
+    +                                                     ! : |   !     4 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1___lam__0  (in libleanshared.dylib) + 188  [0x11077b4f0]
+    +                                                     ! : |   1 lean_apply_1  (in libleanshared.dylib) + 0  [0x1136ce8ec]
+    +                                                     ! : 238 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 176  [0x11077b708]
+    +                                                     ! : | 171 l_Std_DHashMap_Internal_Raw_u2080_Const_get_x3f___at___00Lean_SMap_find_x3f_x27___at___00Lean_Kernel_Environment_find_x3f_spec__0_spec__0___redArg  (in libleanshared.dylib) + 160  [0x11074d00c]
+    +                                                     ! : | + 167 lean_name_eq  (in libleanshared.dylib) + 124  [0x1136cb948]
+    +                                                     ! : | + ! 163 lean_name_eq  (in libleanshared.dylib) + 52,92,...  [0x1136cb900,0x1136cb928,...]
+    +                                                     ! : | + ! 4 _platform_memcmp  (in libsystem_platform.dylib) + 8,108  [0x1974adcd8,0x1974add3c]
+    +                                                     ! : | + 2 l_Std_DHashMap_Internal_Raw_u2080_Const_get_x3f___at___00Lean_SMap_find_x3f_x27___at___00Lean_Kernel_Environment_find_x3f_spec__0_spec__0___redArg  (in libleanshared.dylib) + 160  [0x11074d00c]
+    +                                                     ! : | + ! 2 lean_name_eq  (in libleanshared.dylib) + 92  [0x1136cb928]
+    +                                                     ! : | + 1 l_Std_DHashMap_Internal_Raw_u2080_Const_get_x3f___at___00Lean_SMap_find_x3f_x27___at___00Lean_Kernel_Environment_find_x3f_spec__0_spec__0___redArg  (in libleanshared.dylib) + 160  [0x11074d00c]
+    +                                                     ! : | + 1 lean_name_eq  (in libleanshared.dylib) + 32  [0x1136cb8ec]
+    +                                                     ! : | 66 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 176  [0x11077b708]
+    +                                                     ! : | + 66 l_Std_DHashMap_Internal_Raw_u2080_Const_get_x3f___at___00Lean_SMap_find_x3f_x27___at___00Lean_Kernel_Environment_find_x3f_spec__0_spec__0___redArg  (in libleanshared.dylib) + 32  [0x11074cf8c]
+    +                                                     ! : | 1 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 164  [0x11077b6fc]
+    +                                                     ! : 160 l_WellFounded_opaqueFix_u2083___at___00WellFounded_opaqueFix_u2083___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__2_spec__2___redArg  (in libleanshared.dylib) + 124  [0x11077bb54]
+    +                                                     ! : | 160 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 164  [0x11077b6fc]
+    +                                                     ! : 5 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 300  [0x11077b784]
+    +                                                     ! : | 4 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 464,572  [0x11077b828,0x11077b894]
+    +                                                     ! : | 1 lean_free_object  (in libleanshared.dylib) + 80  [0x1136c2c44]
+    +                                                     ! : 1 l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib) + 96  [0x11077b6b8]
+    +                                                     ! :   1 lean_alloc_object  (in libleanshared.dylib) + 12  [0x1136c2ca4]
+    +                                                     ! :     1 mi_malloc  (in libleanshared.dylib) + 28  [0x1137037fc]
+    +                                                     ! :       1 tlv_get_addr  (in libdyld.dylib) + 4  [0x1974a0534]
+    +                                                     ! 12 l_WellFounded_opaqueFix_u2083___at___00WellFounded_opaqueFix_u2083___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__2_spec__2___redArg  (in libleanshared.dylib) + 220  [0x11077bbb4]
+    +                                                     !   12 l_WellFounded_opaqueFix_u2083___at___00WellFounded_opaqueFix_u2083___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__2_spec__2___redArg  (in libleanshared.dylib) + 92,96  [0x11077bb34,0x11077bb38]
+    +                                                     138 l___private_Lean_Environment_0__Lean_setImportedEntries  (in libleanshared.dylib) + 1180  [0x11077c6ac]
+    +                                                       138 lean_dec_ref_cold  (in libleanshared.dylib) + 236  [0x1136c2e10]
+    +                                                         138 lean_dec_ref_cold  (in libleanshared.dylib) + 236  [0x1136c2e10]
+    +                                                           138 lean::lean_del_core_other(lean_object*, unsigned char, lean_object*)  (in libleanshared.dylib) + 676  [0x1136cca54]
+    839 Thread_25068805
+    + 839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+    +   839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+    +     839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+    +       839 lean::task_manager::spawn_worker()::'lambda'()::operator()() const  (in libleanshared.dylib) + 96  [0x1136ce1c8]
+    +         839 std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 28  [0x1973e7ddc]
+    +           839 _pthread_cond_wait  (in libsystem_pthread.dylib) + 1228  [0x197499808]
+    +             839 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x1974610c0]
+    839 Thread_25068808
+    + 839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+    +   839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+    +     839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+    +       839 lean::task_manager::spawn_worker()::'lambda'()::operator()() const  (in libleanshared.dylib) + 96  [0x1136ce1c8]
+    +         839 std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 28  [0x1973e7ddc]
+    +           839 _pthread_cond_wait  (in libsystem_pthread.dylib) + 1228  [0x197499808]
+    +             839 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x1974610c0]
+    839 Thread_25068809
+    + 839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+    +   839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+    +     839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+    +       839 lean::task_manager::spawn_worker()::'lambda'()::operator()() const  (in libleanshared.dylib) + 96  [0x1136ce1c8]
+    +         839 std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 28  [0x1973e7ddc]
+    +           839 _pthread_cond_wait  (in libsystem_pthread.dylib) + 1228  [0x197499808]
+    +             839 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x1974610c0]
+    839 Thread_25068810
+    + 839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+    +   839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+    +     839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+    +       839 lean::task_manager::spawn_worker()::'lambda'()::operator()() const  (in libleanshared.dylib) + 96  [0x1136ce1c8]
+    +         839 std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 28  [0x1973e7ddc]
+    +           839 _pthread_cond_wait  (in libsystem_pthread.dylib) + 1228  [0x197499808]
+    +             839 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x1974610c0]
+    839 Thread_25068811
+      839 thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+        839 _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+          839 lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+            839 lean::task_manager::spawn_worker()::'lambda'()::operator()() const  (in libleanshared.dylib) + 96  [0x1136ce1c8]
+              839 std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 28  [0x1973e7ddc]
+                839 _pthread_cond_wait  (in libsystem_pthread.dylib) + 1228  [0x197499808]
+                  839 __psynch_cvwait  (in libsystem_kernel.dylib) + 8  [0x1974610c0]
+
+Total number in stack (recursive counted multiple, when >=5):
+        7       _pthread_start  (in libsystem_pthread.dylib) + 148  [0x197499240]
+        7       lean::lthread::imp::_main(void*)  (in libleanshared.dylib) + 52  [0x1136c0230]
+        7       thread_start  (in libsystem_pthread.dylib) + 8  [0x197494024]
+        5       __psynch_cvwait  (in libsystem_kernel.dylib) + 0  [0x1974610b8]
+        5       _pthread_cond_wait  (in libsystem_pthread.dylib) + 1228  [0x197499808]
+        5       lean::task_manager::spawn_worker()::'lambda'()::operator()() const  (in libleanshared.dylib) + 96  [0x1136ce1c8]
+        5       std::__1::condition_variable::wait(std::__1::unique_lock<std::__1::mutex>&)  (in libc++.1.dylib) + 28  [0x1973e7ddc]
+
+Sort by top of stack, same collapsed (when >= 5):
+        __psynch_cvwait  (in libsystem_kernel.dylib)        4195
+        __ulock_wait  (in libsystem_kernel.dylib)        839
+        kevent  (in libsystem_kernel.dylib)        839
+        l___private_Init_Data_Array_Basic_0__Array_forIn_x27Unsafe_loop___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__1  (in libleanshared.dylib)        445
+        lean_name_eq  (in libleanshared.dylib)        166
+        lean::lean_del_core_other(lean_object*, unsigned char, lean_object*)  (in libleanshared.dylib)        138
+        l_Std_DHashMap_Internal_Raw_u2080_Const_get_x3f___at___00Lean_SMap_find_x3f_x27___at___00Lean_Kernel_Environment_find_x3f_spec__0_spec__0___redArg  (in libleanshared.dylib)        67
+        l_WellFounded_opaqueFix_u2083___at___00WellFounded_opaqueFix_u2083___at___00__private_Lean_Environment_0__Lean_setImportedEntries_spec__2_spec__2___redArg  (in libleanshared.dylib)        12
+
+Binary Images:
+       0x1024cc000 -        0x1024cd6eb +lean (???) <4C4C44A6-5555-3144-A187-E6E77AF4B481> /Users/*/lean
+       0x102770000 -        0x1027ccbb7  dyld (941.5) <D21A73EA-79CD-36EB-8AC9-2C5CF5181A27> /usr/lib/dyld
+       0x10d0c0000 -        0x113af0f9f +libleanshared.dylib (0) <4C4C4407-5555-3144-A176-726D6B372C15> /Users/*/libleanshared.dylib
+       0x1971dc000 -        0x1971ddffe  libsystem_blocks.dylib (79) <0DBEE155-6231-3352-84A0-2D9E11BCD4F2> /usr/lib/system/libsystem_blocks.dylib
+       0x1971de000 -        0x197217ff7  libxpc.dylib (2235.80.3) <FD3E0E8D-4618-3CE5-A24A-5639BE86B979> /usr/lib/system/libxpc.dylib
+       0x197218000 -        0x197231ffe  libsystem_trace.dylib (1375.40.2) <4EE35FBA-FAF5-3289-9AD8-D4693D48E0E4> /usr/lib/system/libsystem_trace.dylib
+       0x197232000 -        0x1972abfd7  libcorecrypto.dylib (1217.80.9) <2FC16D60-2CC6-3982-80AC-7A5495577AE8> /usr/lib/system/libcorecrypto.dylib
+       0x1972ac000 -        0x1972d6ffb  libsystem_malloc.dylib (374.60.3) <961751ED-F18B-30D4-8025-AA12CA23197B> /usr/lib/system/libsystem_malloc.dylib
+       0x1972d7000 -        0x19731dff7  libdispatch.dylib (1324.60.3) <93E1DCFC-EF56-3113-8E7C-1BA85266A93B> /usr/lib/system/libdispatch.dylib
+       0x19731e000 -        0x197359fe6  libobjc.A.dylib (838.1) <2EB32E1D-90CB-3256-8681-9034085A06A6> /usr/lib/libobjc.A.dylib
+       0x19735a000 -        0x19735cfff  libsystem_featureflags.dylib (56) <A766D61C-DEB5-3E58-BBFD-2DD108C4D6AE> /usr/lib/system/libsystem_featureflags.dylib
+       0x19735d000 -        0x1973ddfff  libsystem_c.dylib (1506.40.4) <0DBC8B95-0037-3725-A769-0C772C293488> /usr/lib/system/libsystem_c.dylib
+       0x1973de000 -        0x197441ffb  libc++.1.dylib (1200.3) <0EB3A986-B1BC-3F18-B7CC-51E2E5E00DC3> /usr/lib/libc++.1.dylib
+       0x197442000 -        0x19745bffb  libc++abi.dylib (1200.3) <8F8963C1-403D-3282-AE5E-4F6E0E85F5A6> /usr/lib/libc++abi.dylib
+       0x19745c000 -        0x197491fef  libsystem_kernel.dylib (8019.80.24) <384945E6-DD71-37E5-9A3D-84FFF14A1E60> /usr/lib/system/libsystem_kernel.dylib
+       0x197492000 -        0x19749eff3  libsystem_pthread.dylib (485.60.2) <F7B2ECCF-E6F1-3109-AE81-9028C0B8332A> /usr/lib/system/libsystem_pthread.dylib
+       0x19749f000 -        0x1974abfff  libdyld.dylib (941.5) <62FBC245-880D-325E-9E4A-04E81F44FABD> /usr/lib/system/libdyld.dylib
+       0x1974ac000 -        0x1974b3ffb  libsystem_platform.dylib (273.40.1) <49CF1536-27E5-3A34-9724-D75552CBAB56> /usr/lib/system/libsystem_platform.dylib
+       0x1974b4000 -        0x1974dffff  libsystem_info.dylib (554) <352F50DB-BE83-34F0-B0DE-03BDB41745FF> /usr/lib/system/libsystem_info.dylib
+       0x199bc3000 -        0x199bcdffb  libsystem_darwin.dylib (1506.40.4) <FD8E4E6D-0245-343C-942E-3942D6DD188F> /usr/lib/system/libsystem_darwin.dylib
+       0x19a017000 -        0x19a025fff  libsystem_notify.dylib (301) <64EAA151-0DA2-32A5-A0AF-1383B8753EB5> /usr/lib/system/libsystem_notify.dylib
+       0x19c5c2000 -        0x19c5d9ff7  libsystem_networkextension.dylib (1471.80.4) <B9F72E76-4B73-3B63-89E0-9D359BFDE954> /usr/lib/system/libsystem_networkextension.dylib
+       0x19c631000 -        0x19c648ff3  libsystem_asl.dylib (392) <EE47A955-DE2C-3F9F-AFFF-CE705090E6F8> /usr/lib/system/libsystem_asl.dylib
+       0x19dd6e000 -        0x19dd76fff  libsystem_symptoms.dylib (1617.80.3) <E8ECC1E3-C8D5-30CA-8444-DA1A975F94DD> /usr/lib/system/libsystem_symptoms.dylib
+       0x19fcd6000 -        0x19fcf4fff  libsystem_containermanager.dylib (382.60.2) <3ECA998E-3413-3007-8B8A-D632C592259D> /usr/lib/system/libsystem_containermanager.dylib
+       0x1a0a52000 -        0x1a0a56fff  libsystem_configuration.dylib (1163.80.2) <39408FBA-903A-3A20-B806-8E3EE3663C79> /usr/lib/system/libsystem_configuration.dylib
+       0x1a0a57000 -        0x1a0a5bfff  libsystem_sandbox.dylib (1656.60.9) <2FF6F533-7444-3D58-A9C8-133E4DBE98BF> /usr/lib/system/libsystem_sandbox.dylib
+       0x1a1593000 -        0x1a1595fff  libquarantine.dylib (133.80.2) <C232054B-E5AD-34FA-893E-31631536E609> /usr/lib/system/libquarantine.dylib
+       0x1a1bfa000 -        0x1a1bfffff  libsystem_coreservices.dylib (133) <1DADB38D-A4E2-30B4-9B35-69652D194FEB> /usr/lib/system/libsystem_coreservices.dylib
+       0x1a1e5b000 -        0x1a1e91ffb  libsystem_m.dylib (3204.80.2) <D0704EF9-26A5-3996-B1DF-DC8E61CBD7AE> /usr/lib/system/libsystem_m.dylib
+       0x1a1e93000 -        0x1a1e98ffb  libmacho.dylib (987) <05205390-323A-35B0-816B-E72480A9ED5C> /usr/lib/system/libmacho.dylib
+       0x1a1eb1000 -        0x1a1ebdfff  libcommonCrypto.dylib (60190) <BCB5AB77-5F11-3BB5-B37D-3DA47DEC997B> /usr/lib/system/libcommonCrypto.dylib
+       0x1a1ebe000 -        0x1a1ec8fff  libunwind.dylib (201) <CF584B24-4773-3E77-9AEC-8DDE83A3C376> /usr/lib/system/libunwind.dylib
+       0x1a1ec9000 -        0x1a1ed0ffb  liboah.dylib (254.5.5) <9D75F846-BA9D-344B-BD04-D077A16F6EB1> /usr/lib/liboah.dylib
+       0x1a1ed1000 -        0x1a1ed9ff3  libcopyfile.dylib (179.40.2) <358744F0-3901-3E9A-AA74-4DA3FECC0059> /usr/lib/system/libcopyfile.dylib
+       0x1a1eda000 -        0x1a1eddfff  libcompiler_rt.dylib (102.2) <9AC76168-D7F1-398E-8255-D0F6BF83999F> /usr/lib/system/libcompiler_rt.dylib
+       0x1a1ede000 -        0x1a1ee2fff  libsystem_collections.dylib (1506.40.4) <0C161841-B559-3AA6-BF10-52D05A35575F> /usr/lib/system/libsystem_collections.dylib
+       0x1a1ee3000 -        0x1a1ee5ffb  libsystem_secinit.dylib (106.40.3) <89D17A7A-5140-3B7F-9633-92A38EF2C977> /usr/lib/system/libsystem_secinit.dylib
+       0x1a1ee6000 -        0x1a1ee8fff  libremovefile.dylib (60) <CA9A0D50-7AE5-33E2-81E8-2C031135C40F> /usr/lib/system/libremovefile.dylib
+       0x1a1ee9000 -        0x1a1ee9fff  libkeymgr.dylib (31) <B71A275E-D823-3545-83CA-86BA7B51761E> /usr/lib/system/libkeymgr.dylib
+       0x1a1eea000 -        0x1a1ef2ff3  libsystem_dnssd.dylib (1556.80.2) <36D21EB1-5370-34CC-85B1-B433757A5801> /usr/lib/system/libsystem_dnssd.dylib
+       0x1a1ef3000 -        0x1a1ef8ff7  libcache.dylib (85) <1EC2C88D-6B0F-34B3-A8DA-93C406307172> /usr/lib/system/libcache.dylib
+       0x1a1ef9000 -        0x1a1efaff3  libSystem.B.dylib (1311) <0BD51883-26CA-31CF-A74F-E6FD711C9EDA> /usr/lib/libSystem.B.dylib
+       0x1a80fd000 -        0x1a80fdfff  libsystem_product_info_filter.dylib (10) <4C764B23-AD79-31AC-A616-030CD7679DCB> /usr/lib/system/libsystem_product_info_filter.dylib

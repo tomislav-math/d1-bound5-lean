@@ -1,0 +1,46 @@
+exploration/FullRingBasis.lean:56:4: error: Type mismatch: After simplification, term
+  Eq.symm (Int.gcd_eq_gcd_ab a b)
+ has type
+  a * a.gcdA b + b * a.gcdB b = ↑(a.gcd b)
+but is expected to have type
+  a * u + b * v = 1
+exploration/FullRingBasis.lean:71:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ↑?n + ↑?m * w
+in the target expression
+  (fun p => ↑p.1 + ↑p.2 * w) p = (fun p => ↑p.1 + ↑p.2 * w) q
+
+case refine_1
+K : Type u_1
+inst✝¹ : Field K
+inst✝ : NumberField K
+hK : finrank ℚ K = 2
+B : Basis (Fin 2) ℤ (𝓞 K) := finBasisOfFinrankEq ℤ (𝓞 K) ⋯
+a : ℤ := (B.repr 1) 0
+b : ℤ := (B.repr 1) 1
+u : ℤ := a.gcdA b
+v : ℤ := a.gcdB b
+hab : a * u + b * v = 1
+hrep : ↑a * B 0 + ↑b * B 1 = 1
+w : 𝓞 K := -v • B 0 + u • B 1
+hform : ∀ (n m : ℤ), ↑n + ↑m * w = (a * n - v * m) • B 0 + (b * n + u * m) • B 1
+p q : ℤ × ℤ
+hpq : (fun p => ↑p.1 + ↑p.2 * w) p = (fun p => ↑p.1 + ↑p.2 * w) q
+⊢ p = q
+exploration/FullRingBasis.lean:102:4: error: Type mismatch: After simplification, term
+  h
+ has type
+  Function.Bijective fun x_1 =>
+    ↑({ toFun := fun z => (z.re, z.im), invFun := fun p => { re := p.1, im := p.2 }, left_inv := ⋯, right_inv := ⋯ }
+            x_1).1 +
+      ↑({ toFun := fun z => (z.re, z.im), invFun := fun p => { re := p.1, im := p.2 }, left_inv := ⋯, right_inv := ⋯ }
+              x_1).2 *
+        w
+but is expected to have type
+  Function.Bijective ⇑(QuadraticAlgebra.lift ⟨w, hw2⟩)
+exploration/FullRingBasis.lean:105:2: error: Type mismatch: After simplification, term
+  have this := Nonempty.intro (AlgEquiv.ofBijective f hf).toRingEquiv;
+  this
+ has type
+  Nonempty (QuadraticAlgebra ℤ x y ≃+* 𝓞 K)
+but is expected to have type
+  Nonempty (QuadraticAlgebra ℤ (- -x) y ≃+* 𝓞 K)

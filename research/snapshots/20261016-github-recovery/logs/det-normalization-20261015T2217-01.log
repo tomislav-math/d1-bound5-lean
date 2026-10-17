@@ -1,0 +1,61 @@
+⚠ [2954/2955] Replayed D1Bound5.EvenDeterminant
+warning: D1Bound5/EvenDeterminant.lean:45:29: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, h00, h01, h10, h11, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✖ [2955/2955] Building D1Bound5.DeterminantNormalization (341s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/DeterminantNormalization.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/DeterminantNormalization.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/DeterminantNormalization.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/DeterminantNormalization.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/DeterminantNormalization.setup.json --json
+error: D1Bound5/DeterminantNormalization.lean:27:4: No goals to be solved
+error: D1Bound5/DeterminantNormalization.lean:29:4: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (diagonal ?m.99).det
+in the target expression
+  (∏ i, u i) * M.det * ∏ i, u i = (∏ i, u i) ^ 2 * M.det
+
+R : Type u_1
+n : Type u_2
+inst✝² : CommRing R
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+u : n → R
+M : Matrix n n R
+h : scaledRootMatrix u M = diagonal u * M * diagonal u
+⊢ (∏ i, u i) * M.det * ∏ i, u i = (∏ i, u i) ^ 2 * M.det
+error: D1Bound5/DeterminantNormalization.lean:75:2: No goals to be solved
+error: D1Bound5/DeterminantNormalization.lean:86:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ∏ x ∈ ?s, ?f x ^ ?n
+in the target expression
+  (∏ i, u i) ^ 2 = ∏ i, a i
+
+R : Type u_1
+n : Type u_2
+inst✝² : CommRing R
+inst✝¹ : Fintype n
+inst✝ : DecidableEq n
+a u : n → R
+M : Matrix n n R
+hu : ∀ (i : n), u i ^ 2 = a i
+⊢ (∏ i, u i) ^ 2 = ∏ i, a i
+error: D1Bound5/DeterminantNormalization.lean:104:29: ring failed, ring expressions not equal
+a b u v r : ℂ
+hab : a * b ≠ 0
+hu : u ^ 2 = a
+hv : v ^ 2 = b
+hr : r ^ 2 = a * b + 1
+hd : 2 * a * b ≠ 0
+h : (u * r * v - a * b) ^ 2 + 2 * a * b * (u * r * v - a * b) = a * b
+⊢ -(a * b * 2) - a ^ 2 * b ^ 2 * 2 + u ^ 2 * r ^ 2 * v ^ 2 * 2 = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.DeterminantNormalization
+error: build failed

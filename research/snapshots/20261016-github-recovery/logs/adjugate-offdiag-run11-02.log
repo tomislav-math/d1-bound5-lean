@@ -1,0 +1,229 @@
+exploration/AdjugateOffdiagTrial.lean:59:6: error: linarith failed to find a contradiction
+x y z u v w : ℂ
+hx : ‖x - 1 / 2‖ < 128 / 8649
+hy : ‖y - 1 / 2‖ < 128 / 8649
+hz : ‖z - 1 / 2‖ < 128 / 8649
+hu : ‖u - 1 / 2‖ < 128 / 8649
+hv : ‖v - 1 / 2‖ < 128 / 8649
+hw : ‖w - 1 / 2‖ < 128 / 8649
+ε : ℝ := 128 / 8649
+a : ℂ := x - 1 / 2
+b : ℂ := z - 1 / 2
+c : ℂ := u - 1 / 2
+d : ℂ := y - 1 / 2
+e : ℂ := v - 1 / 2
+f : ℂ := w - 1 / 2
+hε : 0 ≤ ε
+ha : ‖a‖ ≤ ε
+hb : ‖b‖ ≤ ε
+hc : ‖c‖ ≤ ε
+hd : ‖d‖ ≤ ε
+he : ‖e‖ ≤ ε
+hf : ‖f‖ ≤ ε
+hpair : ∀ (r s : ℂ), ‖r‖ ≤ ε → ‖s‖ ≤ ε → ‖r * s‖ ≤ ε ^ 2
+B : ℂ := a - b - c - d - e
+C : ℂ := a - (b + c + d + e) / 2
+D : ℂ := f ^ 2 - b * c - d * e
+T : ℂ := a * f - b * c - d * e
+hB : ‖B‖ ≤ 5 * ε
+h1 : ‖b + c‖ ≤ ‖b‖ + ‖c‖
+h2 : ‖b + c + d‖ ≤ ‖b + c‖ + ‖d‖
+h3 : ‖b + c + d + e‖ ≤ ‖b + c + d‖ + ‖e‖
+h4 : ‖a - (b + c + d + e) / 2‖ ≤ ‖a‖ + ‖(b + c + d + e) / 2‖
+h5 : ‖(b + c + d + e) / 2‖ = ‖b + c + d + e‖ / 2
+hs : ‖b + c + d + e‖ ≤ 4 * ε
+a✝ : 2 * ε < ‖b + c + d + e‖ / 2
+⊢ False
+failed
+exploration/AdjugateOffdiagTrial.lean:61:4: error: linarith failed to find a contradiction
+x y z u v w : ℂ
+hx : ‖x - 1 / 2‖ < 128 / 8649
+hy : ‖y - 1 / 2‖ < 128 / 8649
+hz : ‖z - 1 / 2‖ < 128 / 8649
+hu : ‖u - 1 / 2‖ < 128 / 8649
+hv : ‖v - 1 / 2‖ < 128 / 8649
+hw : ‖w - 1 / 2‖ < 128 / 8649
+ε : ℝ := 128 / 8649
+a : ℂ := x - 1 / 2
+b : ℂ := z - 1 / 2
+c : ℂ := u - 1 / 2
+d : ℂ := y - 1 / 2
+e : ℂ := v - 1 / 2
+f : ℂ := w - 1 / 2
+hε : 0 ≤ ε
+ha : ‖a‖ ≤ ε
+hb : ‖b‖ ≤ ε
+hc : ‖c‖ ≤ ε
+hd : ‖d‖ ≤ ε
+he : ‖e‖ ≤ ε
+hf : ‖f‖ ≤ ε
+hpair : ∀ (r s : ℂ), ‖r‖ ≤ ε → ‖s‖ ≤ ε → ‖r * s‖ ≤ ε ^ 2
+B : ℂ := a - b - c - d - e
+C : ℂ := a - (b + c + d + e) / 2
+D : ℂ := f ^ 2 - b * c - d * e
+T : ℂ := a * f - b * c - d * e
+hB : ‖B‖ ≤ 5 * ε
+h1 : ‖b + c‖ ≤ ‖b‖ + ‖c‖
+h2 : ‖b + c + d‖ ≤ ‖b + c‖ + ‖d‖
+h3 : ‖b + c + d + e‖ ≤ ‖b + c + d‖ + ‖e‖
+h4 : ‖a - (b + c + d + e) / 2‖ ≤ ‖a‖ + ‖(b + c + d + e) / 2‖
+h5 : ‖(b + c + d + e) / 2‖ = ‖b + c + d + e‖ / 2
+hs : ‖b + c + d + e‖ ≤ 4 * ε
+hhalf : ‖(b + c + d + e) / 2‖ ≤ 2 * ε
+a✝ : 3 * ε < ‖a - (b + c + d + e) / 2‖
+⊢ False
+failed
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/AdjugateOffdiagTrial.lean:109:35: error: linarith failed to find a contradiction
+x y z u v w : ℂ
+hx : ‖x - 1 / 2‖ < 128 / 8649
+hy : ‖y - 1 / 2‖ < 128 / 8649
+hz : ‖z - 1 / 2‖ < 128 / 8649
+hu : ‖u - 1 / 2‖ < 128 / 8649
+hv : ‖v - 1 / 2‖ < 128 / 8649
+hw : ‖w - 1 / 2‖ < 128 / 8649
+ε : ℝ := 128 / 8649
+a : ℂ := x - 1 / 2
+b : ℂ := z - 1 / 2
+c : ℂ := u - 1 / 2
+d : ℂ := y - 1 / 2
+e : ℂ := v - 1 / 2
+f : ℂ := w - 1 / 2
+hε : 0 ≤ ε
+ha : ‖a‖ ≤ ε
+hb : ‖b‖ ≤ ε
+hc : ‖c‖ ≤ ε
+hd : ‖d‖ ≤ ε
+he : ‖e‖ ≤ ε
+hf : ‖f‖ ≤ ε
+hpair : ∀ (r s : ℂ), ‖r‖ ≤ ε → ‖s‖ ≤ ε → ‖r * s‖ ≤ ε ^ 2
+B : ℂ := a - b - c - d - e
+C : ℂ := a - (b + c + d + e) / 2
+D : ℂ := f ^ 2 - b * c - d * e
+T : ℂ := a * f - b * c - d * e
+hB : ‖B‖ ≤ 5 * ε
+hC : ‖C‖ ≤ 3 * ε
+hD : ‖D‖ ≤ 3 * ε ^ 2
+hT : ‖T‖ ≤ 3 * ε ^ 2
+hfC : ‖f * C‖ ≤ 3 * ε ^ 2
+hfT : ‖f * T‖ ≤ 3 * ε ^ 3
+hid : w ^ 2 * x - w * z * u - w * y * v + 1 / 8 = B / 4 + f * C + D / 2 + f * T
+htri : ‖B / 4 + f * C + D / 2 + f * T‖ ≤ ‖B / 4‖ + ‖f * C‖ + ‖D / 2‖ + ‖f * T‖
+hB4 : ‖B / 4‖ = ‖B‖ / 4
+hD2 : ‖D / 2‖ = ‖D‖ / 2
+hn : 5 * ε / 4 + 3 * ε ^ 2 + 3 * ε ^ 2 / 2 + 3 * ε ^ 3 < 197 / 10000
+a✝ : 5 * ε / 4 < ‖B‖ / 4
+⊢ False
+failed
+exploration/AdjugateOffdiagTrial.lean:110:37: error: linarith failed to find a contradiction
+x y z u v w : ℂ
+hx : ‖x - 1 / 2‖ < 128 / 8649
+hy : ‖y - 1 / 2‖ < 128 / 8649
+hz : ‖z - 1 / 2‖ < 128 / 8649
+hu : ‖u - 1 / 2‖ < 128 / 8649
+hv : ‖v - 1 / 2‖ < 128 / 8649
+hw : ‖w - 1 / 2‖ < 128 / 8649
+ε : ℝ := 128 / 8649
+a : ℂ := x - 1 / 2
+b : ℂ := z - 1 / 2
+c : ℂ := u - 1 / 2
+d : ℂ := y - 1 / 2
+e : ℂ := v - 1 / 2
+f : ℂ := w - 1 / 2
+hε : 0 ≤ ε
+ha : ‖a‖ ≤ ε
+hb : ‖b‖ ≤ ε
+hc : ‖c‖ ≤ ε
+hd : ‖d‖ ≤ ε
+he : ‖e‖ ≤ ε
+hf : ‖f‖ ≤ ε
+hpair : ∀ (r s : ℂ), ‖r‖ ≤ ε → ‖s‖ ≤ ε → ‖r * s‖ ≤ ε ^ 2
+B : ℂ := a - b - c - d - e
+C : ℂ := a - (b + c + d + e) / 2
+D : ℂ := f ^ 2 - b * c - d * e
+T : ℂ := a * f - b * c - d * e
+hB : ‖B‖ ≤ 5 * ε
+hC : ‖C‖ ≤ 3 * ε
+hD : ‖D‖ ≤ 3 * ε ^ 2
+hT : ‖T‖ ≤ 3 * ε ^ 2
+hfC : ‖f * C‖ ≤ 3 * ε ^ 2
+hfT : ‖f * T‖ ≤ 3 * ε ^ 3
+hid : w ^ 2 * x - w * z * u - w * y * v + 1 / 8 = B / 4 + f * C + D / 2 + f * T
+htri : ‖B / 4 + f * C + D / 2 + f * T‖ ≤ ‖B / 4‖ + ‖f * C‖ + ‖D / 2‖ + ‖f * T‖
+hB4 : ‖B / 4‖ = ‖B‖ / 4
+hD2 : ‖D / 2‖ = ‖D‖ / 2
+hn : 5 * ε / 4 + 3 * ε ^ 2 + 3 * ε ^ 2 / 2 + 3 * ε ^ 3 < 197 / 10000
+hb4 : ‖B‖ / 4 ≤ 5 * ε / 4
+a✝ : 3 * ε ^ 2 / 2 < ‖D‖ / 2
+⊢ False
+failed
+exploration/AdjugateOffdiagTrial.lean:113:4: error: linarith failed to find a contradiction
+x y z u v w : ℂ
+hx : ‖x - 1 / 2‖ < 128 / 8649
+hy : ‖y - 1 / 2‖ < 128 / 8649
+hz : ‖z - 1 / 2‖ < 128 / 8649
+hu : ‖u - 1 / 2‖ < 128 / 8649
+hv : ‖v - 1 / 2‖ < 128 / 8649
+hw : ‖w - 1 / 2‖ < 128 / 8649
+ε : ℝ := 128 / 8649
+a : ℂ := x - 1 / 2
+b : ℂ := z - 1 / 2
+c : ℂ := u - 1 / 2
+d : ℂ := y - 1 / 2
+e : ℂ := v - 1 / 2
+f : ℂ := w - 1 / 2
+hε : 0 ≤ ε
+ha : ‖a‖ ≤ ε
+hb : ‖b‖ ≤ ε
+hc : ‖c‖ ≤ ε
+hd : ‖d‖ ≤ ε
+he : ‖e‖ ≤ ε
+hf : ‖f‖ ≤ ε
+hpair : ∀ (r s : ℂ), ‖r‖ ≤ ε → ‖s‖ ≤ ε → ‖r * s‖ ≤ ε ^ 2
+B : ℂ := a - b - c - d - e
+C : ℂ := a - (b + c + d + e) / 2
+D : ℂ := f ^ 2 - b * c - d * e
+T : ℂ := a * f - b * c - d * e
+hB : ‖B‖ ≤ 5 * ε
+hC : ‖C‖ ≤ 3 * ε
+hD : ‖D‖ ≤ 3 * ε ^ 2
+hT : ‖T‖ ≤ 3 * ε ^ 2
+hfC : ‖f * C‖ ≤ 3 * ε ^ 2
+hfT : ‖f * T‖ ≤ 3 * ε ^ 3
+hid : w ^ 2 * x - w * z * u - w * y * v + 1 / 8 = B / 4 + f * C + D / 2 + f * T
+htri : ‖B / 4 + f * C + D / 2 + f * T‖ ≤ ‖B / 4‖ + ‖f * C‖ + ‖D / 2‖ + ‖f * T‖
+hB4 : ‖B / 4‖ = ‖B‖ / 4
+hD2 : ‖D / 2‖ = ‖D‖ / 2
+hn : 5 * ε / 4 + 3 * ε ^ 2 + 3 * ε ^ 2 / 2 + 3 * ε ^ 3 < 197 / 10000
+hb4 : ‖B‖ / 4 ≤ 5 * ε / 4
+hd2 : ‖D‖ / 2 ≤ 3 * ε ^ 2 / 2
+a✝ : 5 * ε / 4 + 3 * ε ^ 2 + 3 * ε ^ 2 / 2 + 3 * ε ^ 3 < ‖B‖ / 4 + ‖f * C‖ + ‖D‖ / 2 + ‖f * T‖
+⊢ False
+failed
+exploration/AdjugateOffdiagTrial.lean:54:12: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateOffdiagTrial.lean:105:41: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateOffdiagTrial.lean:106:41: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/AdjugateOffdiagTrial.lean:122:0: error: Forbidden axioms for D1Bound5.nearHalf_offDiagonal_cofactor_bound: [sorryAx]

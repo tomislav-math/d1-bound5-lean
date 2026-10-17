@@ -1,0 +1,4 @@
+FIVE_INVERSE_VECTOR_AXIOMS_PASS D1Bound5.productFive_inverse_vector_bound: [propext, Classical.choice, Quot.sound]
+D1Bound5.productFive_inverse_vector_bound : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ) (v : Fin 4 → ℂ),
+  ‖F - D1Bound5.halfOffDiagonal‖ ≤ 11 / 96 →
+    ‖WithLp.toLp 2 fun i => v i - 1 / 2‖ < 1 / 200 → ‖WithLp.toLp 2 (F⁻¹.mulVec v)‖ < 11 / 12

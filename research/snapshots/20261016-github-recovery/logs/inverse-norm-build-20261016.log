@@ -1,0 +1,36 @@
+⚠ [1907/1944] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2885/2905] Replayed D1Bound5.RootMatrixSigns
+warning: D1Bound5/RootMatrixSigns.lean:55:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [2904/2905] Built D1Bound5.ReferenceInverseNorm (47s)
+⚠ [3005/3007] Replayed D1Bound5.EvenDeterminant
+warning: D1Bound5/EvenDeterminant.lean:45:29: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, h00, h01, h10, h11, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [3006/3007] Built D1Bound5 (69s)
+Build completed successfully (3007 jobs).

@@ -1,0 +1,21 @@
+exploration/ProductFivePrefixDetTrial.lean:29:24: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFivePrefixDetTrial.lean:36:12: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFivePrefixDetTrial.lean:114:5: error: Type mismatch
+  !![0, x, y, z; x, 0, u, v; y, u, 0, w]
+has type
+  Matrix (Fin 3) (Fin 4) ℂ
+but is expected to have type
+  Matrix (Fin 4) (Fin 4) ℂ
+exploration/ProductFivePrefixDetTrial.lean:142:8: error(lean.unknownIdentifier): Unknown identifier `mixedSymmetricFour_det_lt_33_128`

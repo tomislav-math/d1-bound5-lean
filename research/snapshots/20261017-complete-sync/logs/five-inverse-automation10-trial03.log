@@ -1,0 +1,34 @@
+exploration/FiveInverseVectorTrial.lean:45:4: error: Type mismatch: After simplification, term
+  hv
+ has type
+  ‖WithLp.toLp 2 fun i => v i - 2⁻¹‖ < 200⁻¹
+but is expected to have type
+  ‖WithLp.toLp 2 v - WithLp.toLp 2 fiveZ‖ < 200⁻¹
+exploration/FiveInverseVectorTrial.lean:62:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (?M * ?N) *ᵥ ?v
+in the target expression
+  F⁻¹ *ᵥ F *ᵥ y = y
+
+F : Matrix (Fin 4) (Fin 4) ℂ
+v : Fin 4 → ℂ
+hnear : ‖F - halfOffDiagonal‖ ≤ 11 / 96
+hv : ‖WithLp.toLp 2 fun i => v i - 1 / 2‖ < 1 / 200
+y : Fin 4 → ℂ := fiveY
+z : Fin 4 → ℂ := fiveZ
+hy : ‖WithLp.toLp 2 y‖ = 2 / 3
+hHz : halfOffDiagonal *ᵥ y = z
+hv' : ‖WithLp.toLp 2 (v - z)‖ < 1 / 200
+hsmall : ‖F - halfOffDiagonal‖ < 1 / 8
+hInv : ‖F⁻¹‖ < 8 / 3
+hQ : ‖halfOffDiagonalInverse * (F - halfOffDiagonal)‖ < 1
+hdet : F.det ≠ 0
+hu : IsUnit F.det
+⊢ F⁻¹ *ᵥ F *ᵥ y = y
+exploration/FiveInverseVectorTrial.lean:86:8: error: Type mismatch
+  add_le_add_left (l2_opNorm_mulVec (F - halfOffDiagonal) (WithLp.toLp 2 y)) ?m.630
+has type
+  ‖(EuclideanSpace.equiv (Fin 4) ℂ).symm ((F - halfOffDiagonal) *ᵥ (WithLp.toLp 2 y).ofLp)‖ + ?m.630 ≤
+    ‖F - halfOffDiagonal‖ * ‖WithLp.toLp 2 y‖ + ?m.630
+but is expected to have type
+  ‖WithLp.toLp 2 (v - z)‖ + ‖WithLp.toLp 2 ((F - halfOffDiagonal) *ᵥ y)‖ ≤
+    ‖WithLp.toLp 2 (v - z)‖ + ‖F - halfOffDiagonal‖ * ‖WithLp.toLp 2 y‖

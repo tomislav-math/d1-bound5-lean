@@ -1,0 +1,38 @@
+exploration/ProductFiveMatrixBridgeTrial.lean:62:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  E (Fin.natAdd 4 0) (Fin.castAdd 1 j)
+in the target expression
+  t 4 * t (Fin.castAdd 1 j) + E 4 (Fin.castAdd 1 j) = E (Fin.castAdd 1 j) 4 + t 4 * t (Fin.castAdd 1 j)
+
+case inr.inl.«0»
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+j : Fin 4
+he : E (Fin.natAdd 4 0) (Fin.castAdd 1 j) = E (Fin.castAdd 1 j) (Fin.natAdd 4 0)
+⊢ t 4 * t (Fin.castAdd 1 j) + E 4 (Fin.castAdd 1 j) = E (Fin.castAdd 1 j) 4 + t 4 * t (Fin.castAdd 1 j)
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    E 4
+exploration/ProductFiveMatrixBridgeTrial.lean:86:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ((reindex ?e ?e) ?A).det
+in the target expression
+  ((reindex finSumFinEquiv.symm finSumFinEquiv.symm) fun i j => t i * t j + E i j).det =
+    (productFiveIntegratedBlock (fivePrefixError E) (fiveLastError E) (fivePrefixValues t) (fiveLastValue t)).det
+
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+hd : fiveLastValue t ≠ 0
+hm :
+  ((reindex finSumFinEquiv.symm finSumFinEquiv.symm) fun i j => t i * t j + E i j) =
+    productFiveIntegratedBlock (fivePrefixError E) (fiveLastError E) (fivePrefixValues t) (fiveLastValue t)
+hdet :
+  ((reindex finSumFinEquiv.symm finSumFinEquiv.symm) fun i j => t i * t j + E i j).det =
+    (productFiveIntegratedBlock (fivePrefixError E) (fiveLastError E) (fivePrefixValues t) (fiveLastValue t)).det
+⊢ (of fun i j => t i * t j + E i j).det =
+    fiveLastValue t ^ 2 *
+      (productFiveSchur (fivePrefixError E) (fiveLastError E) (fivePrefixValues t) (fiveLastValue t)).det

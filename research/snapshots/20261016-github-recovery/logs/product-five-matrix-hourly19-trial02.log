@@ -1,0 +1,190 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/ProductFiveMatrixBridgeTrial.lean:40:2: error: unsolved goals
+case inl.inl
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+i j : Fin 4
+⊢ (reindex finSumFinEquiv.symm finSumFinEquiv.symm) (fun i j => t i * t j + E i j) (Sum.inl i) (Sum.inl j) =
+    fromBlocks (fivePrefixError E + of fun i j => t (Fin.castAdd 1 i) * t (Fin.castAdd 1 j))
+      (fun i x => E (Fin.castAdd 1 i) 4 + t 4 * t (Fin.castAdd 1 i))
+      (fun x j => t 4 * t (Fin.castAdd 1 j) + E (Fin.castAdd 1 j) 4) (fun x x_1 => t 4 ^ 2) (Sum.inl i) (Sum.inl j)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/ProductFiveMatrixBridgeTrial.lean:44:2: error: unsolved goals
+case inl.inr.«0»
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+i : Fin 4
+⊢ (reindex finSumFinEquiv.symm finSumFinEquiv.symm) (fun i j => t i * t j + E i j) (Sum.inl i) (Sum.inr 0) =
+    fromBlocks (fivePrefixError E + of fun i j => t (Fin.castAdd 1 i) * t (Fin.castAdd 1 j))
+      (fun i x => E (Fin.castAdd 1 i) 4 + t 4 * t (Fin.castAdd 1 i))
+      (fun x j => t 4 * t (Fin.castAdd 1 j) + E (Fin.castAdd 1 j) 4) (fun x x_1 => t 4 ^ 2) (Sum.inl i) (Sum.inr 0)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+exploration/ProductFiveMatrixBridgeTrial.lean:49:2: error: unsolved goals
+case inr.inl.«0»
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+j : Fin 4
+he : E (Fin.natAdd 4 0) (Fin.castAdd 1 j) = E (Fin.castAdd 1 j) (Fin.natAdd 4 0)
+⊢ (reindex finSumFinEquiv.symm finSumFinEquiv.symm) (fun i j => t i * t j + E i j) (Sum.inr 0) (Sum.inl j) =
+    fromBlocks (fivePrefixError E + of fun i j => t (Fin.castAdd 1 i) * t (Fin.castAdd 1 j))
+      (fun i x => E (Fin.castAdd 1 i) 4 + t 4 * t (Fin.castAdd 1 i))
+      (fun x j => t 4 * t (Fin.castAdd 1 j) + E (Fin.castAdd 1 j) 4) (fun x x_1 => t 4 ^ 2) (Sum.inr 0) (Sum.inl j)
+exploration/ProductFiveMatrixBridgeTrial.lean:60:2: error: unsolved goals
+case inr.inr.«0».«0»
+t : Fin 5 → ℂ
+E : Matrix (Fin 5) (Fin 5) ℂ
+hdiag : E (Fin.natAdd 4 0) (Fin.natAdd 4 0) = 0
+hsym : Eᵀ = E
+⊢ (reindex finSumFinEquiv.symm finSumFinEquiv.symm) (fun i j => t i * t j + E i j) (Sum.inr 0) (Sum.inr 0) =
+    fromBlocks (fivePrefixError E + of fun i j => t (Fin.castAdd 1 i) * t (Fin.castAdd 1 j))
+      (fun i x => E (Fin.castAdd 1 i) 4 + t 4 * t (Fin.castAdd 1 i))
+      (fun x j => E (Fin.castAdd 1 j) 4 + t 4 * t (Fin.castAdd 1 j)) (fun x x_1 => t 4 ^ 2) (Sum.inr 0) (Sum.inr 0)
+exploration/ProductFiveMatrixBridgeTrial.lean:40:10: warning: This simp argument is unused:
+  Matrix.reindex_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₁₁, Matrix.add_apply, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:41:6: warning: This simp argument is unused:
+  fivePrefixError
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₁₁, Matrix.add_apply, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:42:6: warning: This simp argument is unused:
+  Matrix.fromBlocks_apply₁₁
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, Matrix.add_apply, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:42:33: warning: This simp argument is unused:
+  Matrix.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, Matrix.fromBlocks_apply₁₁, Matrix.of_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:42:51: warning: This simp argument is unused:
+  Matrix.of_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, Matrix.fromBlocks_apply₁₁, Matrix.add_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:45:10: warning: This simp argument is unused:
+  Matrix.reindex_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₁₂]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:46:6: warning: This simp argument is unused:
+  fivePrefixError
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₁₂]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:47:6: warning: This simp argument is unused:
+  Matrix.fromBlocks_apply₁₂
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:56:10: warning: This simp argument is unused:
+  Matrix.reindex_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₂₁, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:57:6: warning: This simp argument is unused:
+  fivePrefixError
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₂₁, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:58:6: warning: This simp argument is unused:
+  Matrix.fromBlocks_apply₂₁
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:58:33: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, Matrix.fromBlocks_apply₂₁]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:62:10: warning: This simp argument is unused:
+  Matrix.reindex_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₂₂, hdiag]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:63:6: warning: This simp argument is unused:
+  fivePrefixError
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fiveLastError, fivePrefixValues, fiveLastValue,
+    Matrix.fromBlocks_apply₂₂, hdiag]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:64:6: warning: This simp argument is unused:
+  Matrix.fromBlocks_apply₂₂
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, hdiag]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/ProductFiveMatrixBridgeTrial.lean:64:33: warning: This simp argument is unused:
+  hdiag
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.reindex_apply, productFiveIntegratedBlock, fivePrefixError, fiveLastError, fivePrefixValues,
+    fiveLastValue, Matrix.fromBlocks_apply₂₂]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
