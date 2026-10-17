@@ -1,0 +1,134 @@
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_eq_hsymm: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_option_succ: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_zero: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_option_closed: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.hsymm_aeval_option_succ: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.hsymm_aeval_option_closed: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.barycentric_denominator_insert: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.barycentric_sum_insert_cancel: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.lagrange_power_moment_insert: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_equiv: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_insert: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.homogeneousMultisetSum_singleton: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.lagrange_power_moment_eq_homogeneousMultisetSum: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.lagrange_power_moment_eq_hsymm: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_vandermonde_product: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_anchor_weight_term: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_vandermonde_reverse: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_anchor_weight_standard: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_anchor_sum_transfer: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_anchor_first_nonzero: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS D1Bound5.reciprocal_anchor_sum_eq_hsymm: [propext, Classical.choice, Quot.sound]
+INTERPOLATION_AXIOMS_PASS: 22 declarations
+@D1Bound5.homogeneousMultisetSum : {ι : Type u_1} →
+  {R : Type u_2} → [Fintype ι] → [DecidableEq ι] → [CommSemiring R] → (ι → R) → ℕ → R
+@D1Bound5.homogeneousMultisetSum_eq_hsymm : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a n = (MvPolynomial.aeval a) (MvPolynomial.hsymm ι R n)
+@D1Bound5.homogeneousMultisetSum_option_succ : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a (n + 1) =
+    a none * D1Bound5.homogeneousMultisetSum a n + D1Bound5.homogeneousMultisetSum (fun i => a (some i)) (n + 1)
+@D1Bound5.homogeneousMultisetSum_zero : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : ι → R), D1Bound5.homogeneousMultisetSum a 0 = 1
+@D1Bound5.homogeneousMultisetSum_option_closed : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a n =
+    ∑ j ∈ Finset.range (n + 1), a none ^ (n - j) * D1Bound5.homogeneousMultisetSum (fun i => a (some i)) j
+@D1Bound5.hsymm_aeval_option_succ : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  (MvPolynomial.aeval a) (MvPolynomial.hsymm (Option ι) R (n + 1)) =
+    a none * (MvPolynomial.aeval a) (MvPolynomial.hsymm (Option ι) R n) +
+      (MvPolynomial.aeval fun i => a (some i)) (MvPolynomial.hsymm ι R (n + 1))
+@D1Bound5.hsymm_aeval_option_closed : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  (MvPolynomial.aeval a) (MvPolynomial.hsymm (Option ι) R n) =
+    ∑ j ∈ Finset.range (n + 1), a none ^ (n - j) * (MvPolynomial.aeval fun i => a (some i)) (MvPolynomial.hsymm ι R j)
+@D1Bound5.barycentric_denominator_insert : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F) (t i : ι),
+  t ∉ s → i ∈ s → ∏ j ∈ (insert t s).erase i, (a i - a j) = (a i - a t) * ∏ j ∈ s.erase i, (a i - a j)
+@D1Bound5.barycentric_sum_insert_cancel : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a g : ι → F),
+  ∀ t ∉ s,
+    (∀ i ∈ s, a i ≠ a t) →
+      ∑ i ∈ insert t s, (a i - a t) * g i / ∏ j ∈ (insert t s).erase i, (a i - a j) =
+        ∑ i ∈ s, g i / ∏ j ∈ s.erase i, (a i - a j)
+@D1Bound5.lagrange_power_moment_insert : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  ∀ t ∉ s,
+    (∀ i ∈ s, a i ≠ a t) →
+      ∀ (n : ℕ),
+        ∑ i ∈ insert t s, a i ^ (n + 1) / ∏ j ∈ (insert t s).erase i, (a i - a j) =
+          a t * ∑ i ∈ insert t s, a i ^ n / ∏ j ∈ (insert t s).erase i, (a i - a j) +
+            ∑ i ∈ s, a i ^ n / ∏ j ∈ s.erase i, (a i - a j)
+@D1Bound5.homogeneousMultisetSum_equiv : ∀ {ι : Type u_1} {κ : Type u_2} {R : Type u_3} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : Fintype κ] [inst_3 : DecidableEq κ] [inst_4 : CommSemiring R] (e : ι ≃ κ)
+  (a : κ → R) (n : ℕ), D1Bound5.homogeneousMultisetSum (fun i => a (e i)) n = D1Bound5.homogeneousMultisetSum a n
+@D1Bound5.homogeneousMultisetSum_insert : ∀ {ι : Type u_1} {R : Type u_2} [inst : DecidableEq ι]
+  [inst_1 : CommSemiring R] (s : Finset ι) (a : ι → R),
+  ∀ t ∉ s,
+    ∀ (n : ℕ),
+      D1Bound5.homogeneousMultisetSum (fun i => a ↑i) (n + 1) =
+        a t * D1Bound5.homogeneousMultisetSum (fun i => a ↑i) n +
+          D1Bound5.homogeneousMultisetSum (fun i => a ↑i) (n + 1)
+@D1Bound5.homogeneousMultisetSum_singleton : ∀ {ι : Type u_1} {R : Type u_2} [inst : DecidableEq ι]
+  [inst_1 : CommSemiring R] (a : ι → R) (t : ι) (n : ℕ), D1Bound5.homogeneousMultisetSum (fun i => a ↑i) n = a t ^ n
+@D1Bound5.lagrange_power_moment_eq_homogeneousMultisetSum : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → F),
+  s.Nonempty →
+    Set.InjOn a ↑s →
+      ∀ (k : ℕ),
+        ∑ i ∈ s, a i ^ (s.card - 1 + k) / ∏ j ∈ s.erase i, (a i - a j) =
+          D1Bound5.homogeneousMultisetSum (fun i => a ↑i) k
+@D1Bound5.lagrange_power_moment_eq_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  s.Nonempty →
+    Set.InjOn a ↑s →
+      ∀ (k : ℕ),
+        ∑ i ∈ s, a i ^ (s.card - 1 + k) / ∏ j ∈ s.erase i, (a i - a j) =
+          (MvPolynomial.aeval fun i => a ↑i) (MvPolynomial.hsymm (↥s) F k)
+@D1Bound5.reciprocal_vandermonde_product : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ i ∈ s,
+      ∏ j ∈ s.erase i, (a i - a j) =
+        (a i ^ (s.erase i).card * ∏ j ∈ s.erase i, a j) * ∏ j ∈ s.erase i, ((a j)⁻¹ - (a i)⁻¹)
+@D1Bound5.reciprocal_anchor_weight_term : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ i ∈ s,
+      ∀ (k : ℕ),
+        (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+          (∏ j ∈ s, a j)⁻¹ * (a i)⁻¹ ^ (k + (s.erase i).card) / ∏ j ∈ s.erase i, ((a j)⁻¹ - (a i)⁻¹)
+@D1Bound5.reciprocal_vandermonde_reverse : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  ∀ i ∈ s, ∏ j ∈ s.erase i, ((a j)⁻¹ - (a i)⁻¹) = (-1) ^ (s.card - 1) * ∏ j ∈ s.erase i, ((a i)⁻¹ - (a j)⁻¹)
+@D1Bound5.reciprocal_anchor_weight_standard : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ i ∈ s,
+      ∀ (k : ℕ),
+        (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+          (-1) ^ (s.card - 1) * (∏ j ∈ s, a j)⁻¹ * (a i)⁻¹ ^ (k + s.card - 1) / ∏ j ∈ s.erase i, ((a i)⁻¹ - (a j)⁻¹)
+@D1Bound5.reciprocal_anchor_sum_transfer : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    ∀ (k : ℕ),
+      ∑ i ∈ s, (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+        (-1) ^ (s.card - 1) * (∏ j ∈ s, a j)⁻¹ *
+          ∑ i ∈ s, (a i)⁻¹ ^ (k + s.card - 1) / ∏ j ∈ s.erase i, ((a i)⁻¹ - (a j)⁻¹)
+@D1Bound5.reciprocal_anchor_first_nonzero : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  (∀ j ∈ s, a j ≠ 0) →
+    Set.InjOn a ↑s →
+      s.Nonempty → ∑ i ∈ s, (a i)⁻¹ / ∏ j ∈ s.erase i, (a i - a j) = (-1) ^ (s.card - 1) * (∏ j ∈ s, a j)⁻¹
+@D1Bound5.reciprocal_anchor_sum_eq_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : DecidableEq ι]
+  (s : Finset ι) (a : ι → F),
+  s.Nonempty →
+    (∀ i ∈ s, a i ≠ 0) →
+      Set.InjOn a ↑s →
+        ∀ (k : ℕ),
+          ∑ i ∈ s, (a i)⁻¹ ^ (k + 1) / ∏ j ∈ s.erase i, (a i - a j) =
+            (-1) ^ (s.card - 1) * (∏ i ∈ s, a i)⁻¹ *
+              (MvPolynomial.aeval fun i => (a ↑i)⁻¹) (MvPolynomial.hsymm (↥s) F k)

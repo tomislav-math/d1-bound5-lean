@@ -1,0 +1,73 @@
+# Exact staging preparation review
+
+2026-10-17T17:00:28.646955+02:00
+
+All paths below are UTF-8 regular project files under explicit approved scopes, each at most 5 MiB. Scoped credential scan PASS, without printing any matched values. Index was empty and HEAD 64a1094e7e969cdbfc168858cfcd2791bdd1580a. Source/import audit and final root/axiom/fresh-kernel receipts were reviewed separately. Earlier inactive continuation records and the FINISHED 16:47 UNCOMPILED trial are preserved as research only, never imported as accepted dependencies. No contents from another run were edited. This review file is additionally staged and does not self-hash.
+
+- `D1Bound5.lean` (3062 bytes), SHA256 `6db560ab5f162a1e2229effa306aecb0a7a7825c9c69690e821dede3050a2c7d`
+- `D1Bound5/HomogeneousSymmetric.lean` (4310 bytes), SHA256 `9ca0c1b5630feef5d0a34c972d9c43d84be51f3ce74b855f5c9873ea76bd8466`
+- `D1Bound5/InterpolationWeights.lean` (1067 bytes), SHA256 `f0694cf6e24749b6ebbea5b804a44acbab942bf3fc03c6d3a67996fffcda18a7`
+- `D1Bound5/LagrangeAdjunction.lean` (2671 bytes), SHA256 `8078b0e0b630a0efdfdb1b29b441485777d7118007ce69e74197ac884086e248`
+- `D1Bound5/LagrangeHomogeneous.lean` (5490 bytes), SHA256 `b4a9130e2e09325e0a7c90a60c13433e1e3d45746589329d45719e084b45b442`
+- `D1Bound5/ReciprocalAnchors.lean` (5675 bytes), SHA256 `0eef21f646e4e303b7482f6be00f9e043fad50634704078870004bfb326da97b`
+- `STATUS.md` (46411 bytes), SHA256 `7d0b3cd6f07f281b7089973203b3af0611fd604b2737bab233f7455383ceea07`
+- `records/build-record.md` (66414 bytes), SHA256 `180d23b37ab7b57f9d972eef328e8868e262a7f1f0746941ce2401dfa616bc1c`
+- `records/interpolation-all-orders-20261017.md` (4122 bytes), SHA256 `95b6df8ce5fbed7aff478c4be96449248d87a9c541140f9b78dbfcdd5bb88da3`
+- `records/open-obligations.md` (31165 bytes), SHA256 `6afdd55c3347a86fb56ea5bc664b3295335a2dbf972f20063afbb140c72e610b`
+- `records/paper-to-lean.md` (46569 bytes), SHA256 `669301b96de45f48ca71cd3e23ef87db699a751d72422f2de69e1bc54e527669`
+- `records/proof-source-sha256.txt` (8883 bytes), SHA256 `73f4a8ad0c441b33f74791e0315d2bb5baddc4565f628e36cca6d231bd4dc7bf`
+- `records/runs/20261017T154335CEST-hsymm-recurrence-GIT-PRE_EXECUTION_DENIED.md` (2085 bytes), SHA256 `177832ef226c6deb50d45d3b2caf5b750dd1a81f92ca91ddf472b642352144cb`
+- `records/runs/20261017T154548CEST-hsymm-option-recurrence-FINISH.md` (2938 bytes), SHA256 `a49e74de4fb70112f91a7d5dab4496237bc392a4289247cce9025c842d7a2f08`
+- `records/runs/20261017T154548CEST-hsymm-option-recurrence-PROGRESS.md` (791 bytes), SHA256 `c344f9ecb5d56498a86ee1d4bd5f1120bfdfdeafb9c71048844f4a23418bef7b`
+- `records/runs/20261017T154548CEST-hsymm-option-recurrence-START.md` (951 bytes), SHA256 `fc6bea158fbef269026a05960b6f53fe7a0dc91af7dad57a4933e35261703321`
+- `records/runs/20261017T162240CEST-lagrange-node-adjunction-PRE_EXECUTION_DENIED.md` (1168 bytes), SHA256 `d5542de947011768848078ee3c0178934d86d352a1dd391565e2d1f1c1a77860`
+- `records/runs/20261017T162240CEST-lagrange-node-adjunction-START.md` (941 bytes), SHA256 `6fb6b1e1a180828924dc8bb8d929c0ea2f7e4427699d95d96e4db0cbb66c3ac0`
+- `records/runs/20261017T164243CEST-interpolation-recovery-FINISH.md` (2904 bytes), SHA256 `de39ed439229daaf4b43d26e12c969c7173578445e6477ef07b812baf7af5e63`
+- `records/runs/20261017T164243CEST-interpolation-recovery-PROGRESS.md` (1334 bytes), SHA256 `7ee2cfd4c1981e3cc7117ca0efdf29576cd85eba690bea619ad3a1c19ebeaf6b`
+- `records/runs/20261017T164243CEST-interpolation-recovery-START.md` (1029 bytes), SHA256 `57c7bbe07e4fed5bdc5f6cbdfeb394fdc9b9d9a75355ce0b7b581c839e046790`
+- `records/runs/20261017T164712CEST-pole-tail-FINISH.md` (2543 bytes), SHA256 `c5a607a007d14508797b915d679dae60cfbd592208265e3fb6f9f002175abcec`
+- `records/runs/20261017T164712CEST-pole-tail-PRE_EXECUTION_DENIED.md` (1222 bytes), SHA256 `9ce92879fda418dbdb1e41ee61ff85ea6eec22ab80a13fbebf3da4d69ac80180`
+- `records/runs/20261017T164712CEST-pole-tail-PROGRESS.md` (1173 bytes), SHA256 `0b23d290184c5f6f114dfaf5c9cd4ba96fefd7db3cea2084ee9e3ba2d28f52da`
+- `records/runs/20261017T164712CEST-pole-tail-START.md` (1001 bytes), SHA256 `00e0fc38ea33dc79cecb2ab147eb4896ae90303c57524853f82c441f65b087e0`
+- `records/verification-tools-sha256.txt` (4867 bytes), SHA256 `528358ca2d4c3563e6a2b1411dd7ea345acbc1e480ad4b8d81d439b7b8a9277b`
+- `research/continuations/20261017T141411CEST-reciprocal-anchors/logs/current-index-review-unstaged.log` (4007 bytes), SHA256 `1257b81bd8903e8cd9beaf79dd7b6743e95d743f3f65ca8970ea1c489d917570`
+- `research/continuations/20261017T141411CEST-reciprocal-anchors/logs/private-git-preflight-after-staging-unstaged.log` (506 bytes), SHA256 `4403a7119c0a3f863d1824e0e564bd316c8849e12929c49f6eb2c74173e44d4a`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/HsymmOptionSplitTrial.lean` (4915 bytes), SHA256 `25a343c7c383be2ccd503a43c7fe54135402385331d310c41037f0ce8ae07e6a`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/README.md` (2836 bytes), SHA256 `a3a898bb996b3951b59d7ae09e17a862a9d211a8e52b6ced169702f25ba9de86`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/isolated-module-build.log` (2539 bytes), SHA256 `28537cdcfcd3542e5c1eb4f995db7b323c8e8cbb82b5257c381d5913c1b0646c`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/leanchecker-final.log` (57 bytes), SHA256 `1b622ae87e1f504f32caeef1b344b656a56cde786994f5437ae7e46c345c5e1e`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/leanchecker-lake-env.log` (85 bytes), SHA256 `76ab3292c4390746f023789171bdefc68a4fefc7b6db441e464b7c43efcd2a25`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/leanchecker.log` (85 bytes), SHA256 `76ab3292c4390746f023789171bdefc68a4fefc7b6db441e464b7c43efcd2a25`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/pinned-olean-build.log` (2539 bytes), SHA256 `28537cdcfcd3542e5c1eb4f995db7b323c8e8cbb82b5257c381d5913c1b0646c`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/private-git-preflight.log` (506 bytes), SHA256 `7620acef326d1a274f3559c2bdb31c3d9c0bc45696dd275a700d94c70b5873e7`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/trial01.log` (2951 bytes), SHA256 `29ef1f679dcf58c4a443b402b7fe10b18d3553987a84f8a2aa7187274a5fcf72`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/trial02.log` (1301 bytes), SHA256 `2581592dd9e088a79462bfacc0a804c8cf4f60c4dd2956c74b99d51357ca721e`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/trial03.log` (3034 bytes), SHA256 `1cffa48c126bd00eb6c9c1ccbe096c91f3ce154d74a8cc026782b7cb0619d464`
+- `research/continuations/20261017T154548CEST-hsymm-option-recurrence/logs/trial04.log` (1301 bytes), SHA256 `2581592dd9e088a79462bfacc0a804c8cf4f60c4dd2956c74b99d51357ca721e`
+- `research/continuations/20261017T162240CEST-lagrange-node-adjunction/LagrangeNodeAdjunctionTrial.lean` (2813 bytes), SHA256 `0434647a5f7c7fea062347e939ebc7851b90c5488ece0a45a5da15afda674c87`
+- `research/continuations/20261017T162240CEST-lagrange-node-adjunction/MATHEMATICS.md` (4267 bytes), SHA256 `587340abb7533a3d25b133203e9397599c597227ad6e85f070c1d4a6026040cc`
+- `research/continuations/20261017T162240CEST-lagrange-node-adjunction/Probe.lean` (259 bytes), SHA256 `644b6c50f87ede23316508ae7fa7e4d03879c4af771283d4e6f088a7b7854133`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/InterpolationWeights.lean` (1067 bytes), SHA256 `f0694cf6e24749b6ebbea5b804a44acbab942bf3fc03c6d3a67996fffcda18a7`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/LagrangeAdjunction.lean` (2671 bytes), SHA256 `8078b0e0b630a0efdfdb1b29b441485777d7118007ce69e74197ac884086e248`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/LagrangeHomogeneousTrial01.lean` (5252 bytes), SHA256 `ec248cd1ab62700935281d4bbf709e0f235dcbcca2c81c5071f707b33ca215f3`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/LagrangeHomogeneousTrial02.lean` (5438 bytes), SHA256 `a6cfe3f1371cfc7ecb0664adcce350d9a791cda4828260a4f9b0709974318a1a`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/LagrangeHomogeneousTrial03.lean` (5490 bytes), SHA256 `b4a9130e2e09325e0a7c90a60c13433e1e3d45746589329d45719e084b45b442`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/README.md` (1121 bytes), SHA256 `6b4b86da98aa26f7fe11f3e9fcf0f6ed84a0dc487c4893efb2fb2e09633d52c4`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/STATEMENT_REVIEW.md` (2745 bytes), SHA256 `9b28b8742089e446ddc67e9b7087b772c2f9e378646e7aeb1d642fe36892460c`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/all-order-compile-result.md` (862 bytes), SHA256 `63e2ce0a72398744f39448086dfb9b1772760faf45e7a632bc64230a3e56bc69`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/all-order-trial01.log` (2298 bytes), SHA256 `60ec4c249ad0262be60f6a449f2cbc943f8e847b8b69bb0318a1ea7119fdd3b3`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/all-order-trial02.log` (1208 bytes), SHA256 `aec88bde57b23ff92a698717a41fe134249f2252add0963e52e969ddfdc8c150`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/all-order-trial03.log` (0 bytes), SHA256 `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/inherited-commit-review.json` (14198 bytes), SHA256 `de2ee6240c227f44abeb5d04c8c0279549ca59c369a1ae635ffe6610f5fcddfb`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/kernel-fresh.log` (53 bytes), SHA256 `a2503431d649273c165e07e5d1ce975df1abb01558e52895e95c9565f1592f10`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/kernel-result.md` (738 bytes), SHA256 `d0b4ed88672d310f553f881b9ff35687c3a6b5d35851a3249b374b07e699ea00`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/preflight-before-staging.log` (506 bytes), SHA256 `c1acafda58ba902803dac6814e982b8b1246eb0bab86bbe8c136e20bf8f56a44`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/root-build01.log` (9077 bytes), SHA256 `aeb2b3e9385a6e531ab872f2689bafb3d2a77b196dbb10651e8ea1bff9c13b90`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/root-build02.log` (9133 bytes), SHA256 `45ec323edf523738bdf61d48571cbe952ecafcff2b6708bffffa8181e00e282d`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/source-audit.log` (53 bytes), SHA256 `1248388c2751fd84d90ba776d1545e457bc807d08f1e9cedb78b00065068df8b`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/source-hashes.log` (3303 bytes), SHA256 `34f3e3c3d7ff190e2c3c855b1b300dc6ec1494df46d78125227713797677fa13`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/tool-hashes.log` (1953 bytes), SHA256 `c211d455e5b5b4591a5a1df9fd10d9bf63ebc87418689e7f54607984d798ecd2`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/trial01-result.md` (507 bytes), SHA256 `fdc440ada4677015f953344030ee209f876e8d5a7fd2508a4b5361277c2338e0`
+- `research/continuations/20261017T164243CEST-interpolation-recovery/types-axioms.log` (9989 bytes), SHA256 `8cf884b933562743b5dae6368594b233f22fefcaf193fe0bbe1836a7240b9c2c`
+- `research/continuations/20261017T164712CEST-pole-tail/WeightedPoleFiniteTailTrial.lean` (2850 bytes), SHA256 `8f59a0fb5599e2fc87d4ce72f31341bd9fc27d913ba47867648c9794e6d8c049`
+- `scripts/InterpolationWeightsAudit.lean` (2700 bytes), SHA256 `094eca0f4876f8bb4b7ed3c61b12fe5dc100e5a27165b63a9f3a0bcca9db7414`

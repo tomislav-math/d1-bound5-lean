@@ -83,3 +83,8 @@ import D1Bound5.ProductFiveSchurNear
 import D1Bound5.ProductFivePrefixSizeCross
 import D1Bound5.ProductFiveTupleSchur
 import D1Bound5.ProductFiveTupleGrowth
+import D1Bound5.HomogeneousSymmetric
+import D1Bound5.LagrangeAdjunction
+import D1Bound5.LagrangeHomogeneous
+import D1Bound5.ReciprocalAnchors
+import D1Bound5.InterpolationWeights

@@ -650,3 +650,15 @@ Cached pinned `LEAN_NUM_THREADS=1 lake build D1Bound5` EXIT 0, 3045 jobs,
 PASS (82 modules, 387 theorems). All 12 Git-index review fixture tests PASS.
 Prior theorem/axiom and targeted same-kernel receipts were inspected, not rerun.
 See `records/github-sync-20261017T094740CEST.md` and subsequent Git receipts.
+
+## 2026-10-17 16:42 continuation — all-order interpolation weights
+
+- Initial adjunction/cancellation proof: pinned `lake env lean exploration/LagrangeAdjunction.lean`, PID 91227 EXIT 0.
+- All-order bridge trial01 and trial02: actual elaboration errors EXIT 1, repaired by explicit singleton subtype, exact Sym.replicate/Finset.insert_empty API and one-monomial sum proof. Trial03 PID 91547 EXIT 0, warning-free; failed sources/logs preserved outside accepted imports.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake build D1Bound5.InterpolationWeights D1Bound5`: PID 91597 EXIT 0, 3051 jobs; full log root-build02.log under the 16:42 continuation.
+- `lake env lean scripts/InterpolationWeightsAudit.lean`: PID 91734 EXIT 0. All 22 project declarations and exact types checked, transitive axiom policy enforced to propext/Classical.choice/Quot.sound only.
+- `LEAN_NUM_THREADS=1 /Users/tp/.elan/bin/lake env leanchecker --fresh --verbose D1Bound5.InterpolationWeights`: PID 91788 EXIT 0, 267.27 seconds, output collected. This replays the complete imported closure of this target from an empty environment with the SAME installed kernel. It is NOT independent review or a whole-root/clean-checkout build.
+- Source/import scan PASS: 87 modules, 407 lexical theorem declarations. Strict source/config manifest 90 entries and tool manifest 47 entries PASS.
+- Frozen v4 SHA256 reconfirmed 776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3. Pinned Lean 4.33.1/mathlib commit unchanged. No manuscript, handoff, automation, permission or external project changes.
+- Separate 16:47 research worker respected this owner's root/index and did not start a heavy compiler; its FINISH at 16:52:53 is PARTIAL/uncompiled. Its immutable trial is not an accepted dependency. No process killed and no proof worker intentionally left running by this invocation.
+- Git publication is subject to separate plain reviewed commit/push and a subsequent receipt; mathematical verification alone does not imply upload. MainStatement remains UNPROVED.

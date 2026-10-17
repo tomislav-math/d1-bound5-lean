@@ -1,0 +1,67 @@
+exploration/LagrangeHomogeneous.lean:18:55: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Sym.equivCongr, Sym.coe_map, Multiset.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/LagrangeHomogeneous.lean:42:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+exploration/LagrangeHomogeneous.lean:45:7: error: Application type mismatch: The argument
+  ↑v
+has type
+  Multiset ↥{t}
+but is expected to have type
+  Multiset ι
+in the application
+  Multiset.map (fun i => a i) ↑v
+exploration/LagrangeHomogeneous.lean:40:76: error: unsolved goals
+ι : Type u_1
+R : Type u_2
+inst✝¹ : DecidableEq ι
+inst✝ : CommSemiring R
+a : ι → R
+t : ι
+n : ℕ
+t' : ↥{t} := ⟨t, ⋯⟩
+this : Unique ↥{t} := { default := t', uniq := ⋯ }
+hp : ∀ (v : Sym (↥{t}) n), (Multiset.map (fun i => a i) sorry).prod = a t ^ n
+⊢ (Multiset.map (fun i => a ↑i) ↑default).prod = a t ^ n
+exploration/LagrangeHomogeneous.lean:48:32: warning: This simp argument is unused:
+  hp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [homogeneousMultisetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/LagrangeHomogeneous.lean:67:6: error: unsolved goals
+case insert.inl
+F : Type u_1
+ι : Type u_2
+inst✝¹ : Field F
+inst✝ : DecidableEq ι
+a : ι → F
+t : ι
+k : ℕ
+ht : t ∉ ∅
+ih :
+  ∀ (k : ℕ),
+    ∅.Nonempty →
+      Set.InjOn a ↑∅ →
+        ∑ i ∈ ∅, a i ^ (#∅ - 1 + k) / ∏ j ∈ ∅.erase i, (a i - a j) = homogeneousMultisetSum (fun i => a ↑i) k
+hs : (insert t ∅).Nonempty
+hinj : Set.InjOn a ↑(insert t ∅)
+⊢ a t ^ k = homogeneousMultisetSum (fun i => a ↑i) k
+exploration/LagrangeHomogeneous.lean:67:14: warning: This simp argument is unused:
+  homogeneousMultisetSum_singleton
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

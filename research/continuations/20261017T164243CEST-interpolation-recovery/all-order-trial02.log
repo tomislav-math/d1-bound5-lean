@@ -1,0 +1,33 @@
+exploration/LagrangeHomogeneous.lean:45:68: error: unsolved goals
+ι : Type u_1
+R : Type u_2
+inst✝¹ : DecidableEq ι
+inst✝ : CommSemiring R
+a : ι → R
+t : ι
+n : ℕ
+t' : ↥{t} := ⟨t, ⋯⟩
+this : Unique ↥{t} := { default := t', uniq := ⋯ }
+v : Sym (↥{t}) n
+⊢ (Multiset.map (fun i => a ↑i) ↑(Sym.replicate n ⟨t, ⋯⟩)).prod = a t ^ n
+exploration/LagrangeHomogeneous.lean:40:76: error: unsolved goals
+ι : Type u_1
+R : Type u_2
+inst✝¹ : DecidableEq ι
+inst✝ : CommSemiring R
+a : ι → R
+t : ι
+n : ℕ
+t' : ↥{t} := ⟨t, ⋯⟩
+this : Unique ↥{t} := { default := t', uniq := ⋯ }
+hp : ∀ (v : Sym (↥{t}) n), (Multiset.map (fun i => a ↑i) ↑v).prod = a t ^ n
+⊢ (Multiset.map (fun i => a ↑i) ↑default).prod = a t ^ n
+exploration/LagrangeHomogeneous.lean:48:32: warning: This simp argument is unused:
+  hp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [homogeneousMultisetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+exploration/LagrangeHomogeneous.lean:67:19: error(lean.unknownIdentifier): Unknown constant `Finset.insert_empty_eq`
+exploration/LagrangeHomogeneous.lean:67:8: error: `simp` made no progress

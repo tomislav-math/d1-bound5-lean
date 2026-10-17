@@ -1,0 +1,28 @@
+@D1Bound5.homogeneousMultisetSum_eq_hsymm : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a n = (MvPolynomial.aeval a) (MvPolynomial.hsymm ι R n)
+@D1Bound5.homogeneousMultisetSum_option_succ : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a (n + 1) =
+    a none * D1Bound5.homogeneousMultisetSum a n + D1Bound5.homogeneousMultisetSum (fun i => a (some i)) (n + 1)
+'D1Bound5.homogeneousMultisetSum_eq_hsymm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.homogeneousMultisetSum_option_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+@D1Bound5.homogeneousMultisetSum_zero : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : ι → R), D1Bound5.homogeneousMultisetSum a 0 = 1
+@D1Bound5.homogeneousMultisetSum_option_closed : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a n =
+    ∑ j ∈ Finset.range (n + 1), a none ^ (n - j) * D1Bound5.homogeneousMultisetSum (fun i => a (some i)) j
+@D1Bound5.hsymm_aeval_option_succ : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  (MvPolynomial.aeval a) (MvPolynomial.hsymm (Option ι) R (n + 1)) =
+    a none * (MvPolynomial.aeval a) (MvPolynomial.hsymm (Option ι) R n) +
+      (MvPolynomial.aeval fun i => a (some i)) (MvPolynomial.hsymm ι R (n + 1))
+@D1Bound5.hsymm_aeval_option_closed : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  (MvPolynomial.aeval a) (MvPolynomial.hsymm (Option ι) R n) =
+    ∑ j ∈ Finset.range (n + 1), a none ^ (n - j) * (MvPolynomial.aeval fun i => a (some i)) (MvPolynomial.hsymm ι R j)
+'D1Bound5.homogeneousMultisetSum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.homogeneousMultisetSum_option_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.hsymm_aeval_option_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
+'D1Bound5.hsymm_aeval_option_closed' depends on axioms: [propext, Classical.choice, Quot.sound]

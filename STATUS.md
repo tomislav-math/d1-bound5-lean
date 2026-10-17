@@ -1,5 +1,13 @@
 # Status
 
+## 17 October 2026 — all-order interpolation weights ROOT-PROVED
+
+The five root modules `HomogeneousSymmetric`, `LagrangeAdjunction`, `LagrangeHomogeneous`, `ReciprocalAnchors`, and `InterpolationWeights` now prove the Lagrange moment/hsymm identity for EVERY degree k and the exact reciprocal-anchor identity with sign (-1)^(m-1) and denominator product(a_i). The ordinary identity allows zero nodes; the reciprocal version assumes only nonempty, distinct, nonzero anchors over any field. This closes the algebraic n>=m interpolation-weight branch before frozen v4 eq:coherent-exact.
+
+Nine genuinely new theorems; twelve previously verified current-continuation theorems promoted and rechecked, not recounted as new. All 22 project declarations (21 theorems plus the multiset-sum definition) passed exact-type/transitive-axiom auditing with only propext, Classical.choice, Quot.sound. Final pinned root build EXIT 0 (3051 jobs); `leanchecker --fresh --verbose D1Bound5.InterpolationWeights` EXIT 0, replaying the entire new module import closure in the SAME installed kernel. Source/import and strict source/tool fingerprints PASS (87 modules; 90/47 manifest entries). See `records/interpolation-all-orders-20261017.md` and the 16:42 run records.
+
+Still OPEN: analytic summability/interpolation remainder bounds, arbitrary-order Bennett determinant, exhaustive finite certificates/descent, final sextuple exclusions and MainStatement. No independent statement reviewer, fresh clean checkout or whole-root replay has been performed. The complete full-ring product-five growth theorem remains unchanged and already proved.
+
 ## 17 October 2026 — actual full-ring product-five growth proved
 
 `IsD1Tuple.productFive_growth` is now root-imported and proves the complete manuscript lemma `lem:product-five`: for every ordered injective nonzero D(1) quintuple in the FULL integer ring of every imaginary quadratic field, with second modulus at least three, `3 * A * B * S * C < D` (expressed as a product of the first four complex moduli). The first modulus bound `A >= 1` is derived from full-ring integrality, not assumed. Zero pair-square roots, half-integral bases and modulus ties are allowed.

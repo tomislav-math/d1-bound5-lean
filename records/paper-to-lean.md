@@ -480,3 +480,9 @@ The prefix size <D/9 follows formally from the ordered last-four product-four gr
 ## `lem:product-five`: analytic Schur proximity (17 October 2026)
 
 `ProductFiveSchurNear.lean` now closes the dimension-four entrywise Schur norm inequality, the rank-two correction <9/100 per matrix entry and the resulting `||G-H||<1/2` theorem with its exact coordinate hypotheses, plus the necessary 1/18 ordered prefix-coordinate ratio. Five new root-integrated proved theorems, 79 modules/380 explicit theorem inventory. It is an interface lemma, not yet the v4 `lem:product-five` for actual tuples. Next specialize to the same `IsD1Tuple.exists_five_compatible_signed_matrix` witness, close the numeric determinant bounds and use `full_ring_productFive_growth_of_schur_estimates`.
+
+## Frozen v4 interpolation weights — all degrees, 17 October 2026
+
+`HomogeneousSymmetric`: the multiset-sum definition and six prior checked hsymm Option-variable theorems, root-promoted without trailing exploratory audit commands. `LagrangeAdjunction`: three new denominator/cancellation/power-recurrence proofs. `LagrangeHomogeneous`: three finite-type/finite-set infrastructure lemmas plus the two all-degree moment identities, including exact evaluation of mathlib hsymm. `ReciprocalAnchors`: six prior checked reciprocal-weight transfer statements, root-promoted. `InterpolationWeights.reciprocal_anchor_sum_eq_hsymm` (namespace D1Bound5): the new all-k signed reciprocal identity, exactly the n>=m branch of the displayed formula before eq:coherent-exact (frozen v4 lines 561-571, n=m+k).
+
+Nine new and twelve reused theorem declarations, all type/axiom audited; complete fresh same-kernel replay of InterpolationWeights and its imports passed. No analytic infinite-sum interchange or remainder bound is included. MainStatement remains UNPROVED. Evidence: records/interpolation-all-orders-20261017.md and research/continuations/20261017T164243CEST-interpolation-recovery/.

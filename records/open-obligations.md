@@ -1,5 +1,11 @@
 # Open mathematical obligations
 
+## 17 October 2026 — all-k moment/hsymm bridge CLOSED
+
+Root-proved and freshly same-kernel replayed: `lagrange_power_moment_eq_hsymm` and `reciprocal_anchor_sum_eq_hsymm`, for arbitrary finite nonempty node sets and every natural k. Do NOT redo or describe this identity as still open. The proof uses actual finite-set and degree induction, not guessed recurrence assumptions. See `records/interpolation-all-orders-20261017.md`.
+
+Next: derive the complex hsymm norm envelope, absolute summability and the square-root interpolation remainder estimate. This algebraic unit does not prove eq:coherent-exact as an infinite-series statement, Bennett's determinant, complete finite descent/coverage, final exclusions or MainStatement. The 16:47 finite-pole trial is separate UNCOMPILED research and is not an accepted dependency.
+
 The main theorem is UNPROVED in Lean. None of the items below is assumed
 as a custom axiom or silently supplied as a hypothesis of a claimed proof.
 

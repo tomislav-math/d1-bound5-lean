@@ -1,0 +1,47 @@
+/Users/tp/Lean/D1Bound5/research/continuations/20261017T154548CEST-hsymm-option-recurrence/HsymmOptionSplitTrial.lean:20:57: error: unsolved goals
+ι : Type u_1
+R : Type u_2
+inst✝² : Fintype ι
+inst✝¹ : DecidableEq ι
+inst✝ : CommSemiring R
+a : ι → R
+n : ℕ
+⊢ ∑ t, (Multiset.map a ↑t).prod = ∑ x, (MvPolynomial.eval a) (Multiset.map MvPolynomial.X ↑x).prod
+/Users/tp/Lean/D1Bound5/research/continuations/20261017T154548CEST-hsymm-option-recurrence/HsymmOptionSplitTrial.lean:22:4: warning: This simp argument is unused:
+  MvPolynomial.aeval_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [homogeneousMultisetSum, MvPolynomial.hsymm, MvPolynomial.aeval_prod, MvPolynomial.aeval_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261017T154548CEST-hsymm-option-recurrence/HsymmOptionSplitTrial.lean:22:28: warning: This simp argument is unused:
+  MvPolynomial.aeval_prod
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [homogeneousMultisetSum, MvPolynomial.hsymm, MvPolynomial.aeval_sum, MvPolynomial.aeval_X]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261017T154548CEST-hsymm-option-recurrence/HsymmOptionSplitTrial.lean:22:53: warning: This simp argument is unused:
+  MvPolynomial.aeval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [homogeneousMultisetSum, MvPolynomial.hsymm, MvPolynomial.aeval_sum, MvPolynomial.aeval_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261017T154548CEST-hsymm-option-recurrence/HsymmOptionSplitTrial.lean:44:28: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [symOptionSuccEquiv, SymOptionSuccEquiv.decode, Sym.coe_cons, Sym.coe_map, Multiset.map_cons,
+    Multiset.map_map, Multiset.prod_cons, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+@D1Bound5.homogeneousMultisetSum_eq_hsymm : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [inst_2 : CommSemiring R] (a : ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a n = (MvPolynomial.aeval a) (MvPolynomial.hsymm ι R n)
+@D1Bound5.homogeneousMultisetSum_option_succ : ∀ {ι : Type u_1} {R : Type u_2} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [inst_2 : CommSemiring R] (a : Option ι → R) (n : ℕ),
+  D1Bound5.homogeneousMultisetSum a (n + 1) =
+    a none * D1Bound5.homogeneousMultisetSum a n + D1Bound5.homogeneousMultisetSum (fun i => a (some i)) (n + 1)
+'D1Bound5.homogeneousMultisetSum_eq_hsymm' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'D1Bound5.homogeneousMultisetSum_option_succ' depends on axioms: [propext, Classical.choice, Quot.sound]
