@@ -1,5 +1,9 @@
 # Status
 
+## 17 October 2026 — new proof continuation privately synchronized
+
+The complete reviewed continuation, including all new accepted proofs and retained research evidence, was privately pushed as b0d1b3721bc51984797e1138fb015d29156287bc. A separate read-only check at 2026-10-17T22:56:23.474904+00:00 confirmed local/origin HEAD equality, PRIVATE visibility and a clean project working tree. See records/runs/20261017T234500CEST-agent-continuation-POST_PUSH.md. The publication-pending sentence in the pre-push FINISH record is superseded by this receipt. MainStatement remains UNPROVED; the two hourly automations remain paused.
+
 ## 17 October 2026 — cross-block, coherent interpolation and first-order Bennett verified
 
 Seven new root-imported modules prove 45 exported theorems (plus 3 private cross-block helpers) and add 8 public definitions. The new results are the full-ring cross-block determinant lower bound; exact convergent coherent interpolation, manuscript tail estimate and coherent-root compatibility; the arbitrary-size k=1 Bennett determinant with explicit entries and nonvanishing; the conditional all-order determinant/degree and simple-residue coefficient principles; and the local inverse-power binomial expansion.
