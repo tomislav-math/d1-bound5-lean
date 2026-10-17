@@ -1,0 +1,22 @@
+scripts/HalfBinomialConvolutionAbsAudit.lean:6:76: error: unexpected token 'run_cmd'; expected 'lemma'
+SHARP_HALF_CONV_AXIOMS D1Bound5.halfBinomialCoeff_interior_convolution: [propext, Classical.choice, Quot.sound]
+SHARP_HALF_CONV_AXIOMS D1Bound5.halfBinomialCoeff_abs_signed: [propext, Classical.choice, Quot.sound]
+SHARP_HALF_CONV_AXIOMS D1Bound5.halfBinomialCoeff_pair_abs_signed: [propext, Classical.choice, Quot.sound]
+SHARP_HALF_CONV_AXIOMS D1Bound5.halfBinomialCoeff_interior_abs_sum: [propext, Classical.choice, Quot.sound]
+SHARP_HALF_CONV_AXIOMS D1Bound5.halfBinomialCoeff_abs_convolution: [propext, Classical.choice, Quot.sound]
+SHARP_HALF_CONV_AXIOMS_PASS: 5 declarations
+D1Bound5.halfBinomialCoeff_interior_convolution : ∀ (k : ℕ),
+  ∑ ij ∈ Finset.antidiagonal k, D1Bound5.halfBinomialCoeff (ij.1 + 1) * D1Bound5.halfBinomialCoeff (ij.2 + 1) =
+    -2 * D1Bound5.halfBinomialCoeff (k + 2)
+D1Bound5.halfBinomialCoeff_abs_signed : ∀ (k : ℕ),
+  |D1Bound5.halfBinomialCoeff (k + 1)| = (-1) ^ k * D1Bound5.halfBinomialCoeff (k + 1)
+D1Bound5.halfBinomialCoeff_pair_abs_signed : ∀ (i j : ℕ),
+  |D1Bound5.halfBinomialCoeff (i + 1) * D1Bound5.halfBinomialCoeff (j + 1)| =
+    (-1) ^ (i + j + 2) * (D1Bound5.halfBinomialCoeff (i + 1) * D1Bound5.halfBinomialCoeff (j + 1))
+D1Bound5.halfBinomialCoeff_interior_abs_sum : ∀ (k : ℕ),
+  ∑ ij ∈ Finset.antidiagonal k, |D1Bound5.halfBinomialCoeff (ij.1 + 1) * D1Bound5.halfBinomialCoeff (ij.2 + 1)| =
+    2 * |D1Bound5.halfBinomialCoeff (k + 2)|
+D1Bound5.halfBinomialCoeff_abs_convolution : ∀ (n : ℕ),
+  2 ≤ n →
+    ∑ ij ∈ Finset.antidiagonal n, |D1Bound5.halfBinomialCoeff ij.1 * D1Bound5.halfBinomialCoeff ij.2| =
+      4 * |D1Bound5.halfBinomialCoeff n|

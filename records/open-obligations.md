@@ -1,5 +1,11 @@
 # Open mathematical obligations
 
+## 17 October 2026 — sharp real half-binomial convolution CLOSED
+
+The root-imported `halfBinomialCoeff_abs_convolution` proves exactly `sum_(i+j=n) |b(i)*b(j)| = 4|b(n)|` for all n>=2, where `b(n)=choose(1/2,n)` over the reals. Its new intermediate theorems prove the interior sum and its total absolute value. Integrated pinned build, exact type/axiom audit, targeted same-kernel replay, root-source audit and exact source/tool manifest checks all passed. No additional mathematical assumptions were inserted. No independent reviewer or clean checkout.
+
+**Still OPEN:** formalize the complex weighted convolution `f_n(x,y)` and use the sharp real equality, the already proved antitone absolute coefficients, and the powers of the node norm to prove `|f_n(x,y)| <= 4|b(m+1)|P^(-n)` for n>=m+1, with the correct hypotheses m>=1 and norm bounds. Then identify the paper's analytic square-root remainder with the generic coherent weighted tail; Bennett's arbitrary-order determinant, complete finite coverage/descent, final exclusions and MainStatement also remain open.
+
 ## 17 October 2026 — weighted homogeneous analytic tail sum CLOSED under coefficient envelope
 
 Root-imported `coherent_weighted_remainder_summable_and_norm_le` proves the exact sum-of-norms bound `C*t^m*((1-rho*t)^(-m_nodes)-1)` and absolute summability for arbitrary complex weighted complete-homogeneous coefficients, with the necessary coefficient envelope explicitly present in its formal type. All root build, axiom, fresh same-kernel replay, import and fingerprint gates passed. The parent negative-binomial positive-tail identity is root-imported too.

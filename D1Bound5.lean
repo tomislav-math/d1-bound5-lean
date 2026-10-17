@@ -98,3 +98,4 @@ import D1Bound5.PoleHsymmHasSum
 import D1Bound5.CoherentMajorant
 import D1Bound5.CoherentWeightedRemainder
 import D1Bound5.HalfBinomialCoefficients
+import D1Bound5.HalfBinomialConvolutionAbs

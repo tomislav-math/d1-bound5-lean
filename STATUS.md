@@ -1,5 +1,9 @@
 # Status
 
+## 17 October 2026 — sharp half-binomial absolute convolution ROOT-PROVED
+
+`D1Bound5/HalfBinomialConvolutionAbs.lean` proves for every n>=2 that the full antidiagonal sum of absolute products of half-binomial coefficients is exactly `4*abs(b(n))`. The proof splits both endpoints, uses the earlier Chu--Vandermonde cancellation and the common interior sign, and assumes no additional mathematical lemma. Pinned integrated Lake build EXIT 0 (3065 jobs), all five new elaborated types/transitive axioms PASS (only propext, Classical.choice, Quot.sound), targeted installed SAME-kernel replay EXIT 0, source/import audit PASS (97 modules/429 theorems), source/tool SHA-256 manifests PASS (100/56 entries). No independent review or clean checkout. The complex weighted convolution envelope and v4 coherent-tail application still need formal proofs; Bennett's arbitrary-order identity, complete finite descent/coverage, final sextuple exclusions and MainStatement remain UNPROVED. See `records/sharp-half-binomial-convolution-20261017.md`.
+
 ## 17 October 2026 — all pending work privately synchronized
 
 All 113 reviewed pending source/research/record files were pushed in commit `098a7d1b812e95cee51ef4224e9c2918c1508b56` to PRIVATE `tomislav-math/d1-bound5-lean`, branch main. Local and remote HEAD equality and private visibility were independently checked on 17 October 2026 at 21:41 CEST. The older PENDING/LOCAL ONLY Git remarks below are historical and superseded by this synchronization receipt; failed or unintegrated research retains its original mathematical status.

@@ -1,0 +1,5 @@
+# PROGRESS — 2026-10-17, isolated proof success
+
+The nontrivial identity `halfBinomialCoeff_abs_convolution` is proved for every natural n>=2: the absolute sum of all real half-binomial convolution terms over antidiagonal n equals four times the absolute nth coefficient. Its proof uses only the imported signed-positivity and zero-convolution results; the interior sum is -2*b(n), its absolute sum is 2*|b(n)|, and the two endpoints contribute another 2*|b(n)|. The trial additionally proves the signed absolute-value interfaces. No prior result has been relabeled as new.
+
+Trial01 elaboration EXIT 1 due to a wrong qualified name `Finset.Nat.mem_antidiagonal.mp`, which was replaced with `Finset.mem_antidiagonal.mp`. Trial02 pinned `lake env lean` EXIT 0, with `#check` of the exact theorem and `#print axioms` returning only `propext`, `Classical.choice`, `Quot.sound`. Files: research/continuations/20261017T214725CEST-sharp-half-convolution/SharpHalfConvolutionTrial.lean and trial01.log/trial02.log. Root integration, targeted verification and Git publication are still pending. MainStatement UNPROVED.

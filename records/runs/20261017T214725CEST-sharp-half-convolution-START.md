@@ -1,0 +1,3 @@
+# START — 2026-10-17 21:47:25 CEST
+
+Outcome pending. Project: /Users/tp/Lean/D1Bound5; branch main; HEAD bc07809978bb7b82c46eb94189dcff1f9fa64d5d; clean working tree/index; no project Lean process observed. The authoritative source is the current imported HalfBinomialCoefficients module and the existing CoherentWeightedRemainder interface. Work unit: prove a new sharp absolute convolution identity for all half-binomial coefficients in degree n >= 2, possibly its immediate complex weighted consequence. Do not redo the already imported recurrence, sign, monotonicity, or zero-convolution results. Preserve frozen sources and other writers; keep trials outside root until compiled. MainStatement is UNPROVED.

@@ -1,0 +1,5 @@
+D1Bound5.halfBinomialCoeff_abs_convolution : ∀ (n : ℕ),
+  2 ≤ n →
+    ∑ ij ∈ antidiagonal n, |D1Bound5.halfBinomialCoeff ij.1 * D1Bound5.halfBinomialCoeff ij.2| =
+      4 * |D1Bound5.halfBinomialCoeff n|
+'D1Bound5.halfBinomialCoeff_abs_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]
