@@ -74,3 +74,9 @@ import D1Bound5.ProductFiveExactIdentity
 import D1Bound5.ProductFiveArithmeticClosure
 import D1Bound5.ProductFiveDetNumeric
 import D1Bound5.ProductFivePrefixDet
+import D1Bound5.ProductFivePrefixSigned
+import D1Bound5.ProductFiveCompatibleSigns
+import D1Bound5.ProductFiveInverseVector
+import D1Bound5.ProductFiveSignedPrefixInverse
+import D1Bound5.ProductFiveNormalizedQuadratic
+import D1Bound5.ProductFiveSchurNear

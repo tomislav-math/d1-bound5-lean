@@ -1,5 +1,11 @@
 # Status
 
+## 17 October 2026 — checked product-five Schur proximity interface
+
+`D1Bound5/ProductFiveSchurNear.lean` proves five theorems: entrywise 4x4 operator norm < 4δ, Schur distance <1/2 from the exact scalar correction <9/100, and an ordered prefix-coordinate ratio <1/18 from product-four growth. All are conditional only on the hypotheses stated in the formal types; they are not yet specialized to an actual signed D(1) quintuple. The pinned target+root build EXIT 0 (3042 jobs); exact types/axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound); targeted installed same-kernel replay EXIT 0; source/import audit EXIT 0 (79 modules, 380 theorems); both SHA256 manifests EXIT 0 (82/43 paths). See `records/product-five-schur-near-20261017.md`. No fresh clean checkout or independent reviewer.
+
+Next: connect the ratio and last-column estimates to the SAME actual five-entry integral sign witness, close the Schur determinant bound and the full `product-five` lemma. Bennett, certified finite enumeration/descent, sextuple exclusions and `MainStatement` remain UNPROVED.
+
 2026-10-16. IN PROGRESS. MAIN THEOREM UNPROVED.
 
 ## Latest checked unit — sharpened product-five prefix determinant (22:34 CEST)
@@ -330,3 +336,21 @@ Three new Lean theorems in `D1Bound5/ProductFiveMatrixBridge.lean` prove the exa
 Root-integrated `D1Bound5/ProductFiveDetNumeric.lean` proves the explicit scalar bound and its rank-two Schur specialization: if `|det F|<=33/128`, `|h/d|<=11/108`, `|p|<=1`, `|q/d²|<=8/243`, `|p/d²|<=1/2916`, then `|det G|<1/3`. No Hermitian assumptions or unstated tuple hypotheses. Pinned root+target build EXIT 0 (3035 jobs); transitive-axiom audit EXIT 0 (only propext, Classical.choice, Quot.sound); targeted same-kernel leanchecker EXIT 0; source/import audit EXIT 0 (72 modules, 351 proved declarations); source/tool hashes 75/34 PASS. See `records/product-five-det-numeric-20261016.md`.
 
 The manuscript's stronger prefix `|det F|<33/128`, actual bilinear norm bounds, and `||G-H||<1/2` from an ordered five-tuple still need formal proofs. Thus `lem:product-five`, Bennett all-orders identity, certified finite graph/descent and `MainStatement` remain UNPROVED. No clean checkout or independent review in this run.
+
+## 2026-10-16 23:28 CEST — signed product-five prefix determinant transfer
+
+Root-imported `ProductFivePrefixSigned.lean` now proves `mixed_signed_root_det_upper_33_128` for any symmetric original-ring mixed-signed four-entry matrix, and `five_prefix_det_upper_of_mixed_signed_entries` for the canonical Fin 4 prefix of a Fin 5 original-ring signed matrix. The strict bound is `||det F|| < 33/128`. The latter theorem assumes mixed sign-quality only on the six prefix edges and does NOT construct compatible choices on the fifth row or column. Two theorem types/axioms audited (allowed axioms only), pinned integrated Lake build EXIT 0 (3037 jobs), targeted installed same-kernel replay EXIT 0, source audit EXIT 0 (74 root modules, 357 proved declarations), source/tools hashes 77/36 PASS. No independent review or clean checkout. The remaining product-five bilinear/Schur analytic bounds, Bennett, complete finite exclusions and MainStatement are OPEN. See records/runs/20261016T231824Zagreb-automation9-FINISH.md.
+
+## 2026-10-17 — signed five-prefix inverse and p-bound
+
+`ProductFiveSignedPrefixInverse.lean` is now root-imported. Five new theorems carry the SAME five-entry original-ring sign witness to `||F-H||<=11/96`, `||F^-1 v||_2<11/12` and `|v dot (F^-1 v)|<1`; they also prove general complex bilinear Cauchy--Schwarz. Integrated build, five-type/transitive-axiom audit, targeted same-kernel replay, and source/import audit all EXIT 0 (77 modules, 373 explicit theorems). SHA manifest refresh/check was blocked BEFORE execution; no Git commit or push for this unit. See records/product-five-signed-prefix-inverse-20261017.md and the latest run record. `MainStatement` is UNPROVED.
+
+## 2026-10-17 03:26 CEST — product-five prefix size/cross estimate (isolated)
+
+Three Lean proof declarations compile in `exploration/ProductFivePrefixSizeContinuationTrial.lean`: ordered prefix Euclidean size ||w||_2<||d||/9 from 2BCS<D, and the complex bilinear cross estimate |(v dot F^-1*w)/d|<11/108 for symmetric F under the already formalized inverse-vector bound. Trial03 EXIT 0 and explicit elaborated types/transitive axioms EXIT 0 (only propext, Classical.choice, Quot.sound). ISOLATED ONLY: a separate root-module copy command was PRE_EXECUTION_DENIED before execution. Source audit remains 77 imported modules/373 proved declarations, NOT including these three. Read-only Git preflight fails on an inherited stale D1Bound5.lean manifest hash, so no commit/push. Details in records/product-five-prefix-size-cross-20261017.md and run START/PROGRESS/FINISH. Next root integrate and replay when allowed, then specialize to the actual tuple and finish q/d^2, p/d^2 and Schur closeness. MainStatement UNPROVED.
+
+## 2026-10-17 — normalized product-five q and p quadratic estimates
+
+`D1Bound5/ProductFiveNormalizedQuadratic.lean` is ROOT-INTEGRATED. Two verified theorems prove `||(w dot F^-1*w)/d^2||<8/243` from `||F-halfOffDiagonal||<1/8`, `||w||_2<||d||/9`, `d!=0`, and `||p/d^2||<1/2916` from `||p||<1` and `||d||>=54`. Integrated pinned build EXIT 0 (3041 jobs), exact-type/transitive axiom audit EXIT 0 (allowed three axioms only), targeted same-kernel replay EXIT 0, source/import audit EXIT 0 (78 root modules, 375 explicit theorem declarations), both SHA256 manifest checks EXIT 0. No clean-checkout or independent review. Full tuple-level product-five and `MainStatement` UNPROVED.
+
+Next: integrate and connect the isolated prefix-size/cross-form lemma to ordered actual quintuple data, then discharge the determinant and Schur proximity hypotheses for a single signed five-entry witness. Bennett, certified finite coverage/descent, and final sextuple exclusions are still OPEN. See `records/product-five-normalized-quadratic-20261017.md`.

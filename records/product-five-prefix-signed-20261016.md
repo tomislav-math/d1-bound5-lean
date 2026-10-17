@@ -1,0 +1,11 @@
+# Product-five prefix determinant transfer from an original-ring signed root matrix
+
+Status: PROVED and ROOT-INTEGRATED, but CONDITIONAL on six prefix sign-quality predicates. This is not the full product-five lemma.
+
+The first theorem, `mixed_signed_root_det_upper_33_128`, combines the original-ring normalized signed-root matrix construction with the accepted sharp direct determinant inequality. The fixed matrix S is required to be symmetric, have diagonal a, and satisfy `MixedSignedEntryGood` on all six distinct prefix edges. Roots u_i satisfy u_i²=f(a_i). The conclusion is the strict bound `||det F|| < 33/128`, and no invertibility hypothesis is used. The same exact matrix S can be used in later estimates.
+
+The second theorem, `five_prefix_det_upper_of_mixed_signed_entries`, starts with an actual Fin 5 original-ring matrix S and passes via the canonical `Fin.castAdd 1` inclusion to its first four entries. Matrix extensionality proves the exact identity between the Fin 5 normalized-root prefix and the normalized Fin 4 signed-root matrix. Consequently its determinant has norm strictly less than 33/128. No new approximation properties are asserted for edges incident to the fifth element. No assumption that the first four tuple moduli are distinct is introduced.
+
+Source `D1Bound5/ProductFivePrefixSigned.lean`; trial `exploration/ProductFivePrefixSignedTrial.lean`; byte-for-byte source SHA-256 67927433726cef75fdd9aa0e90ee3efa28390b5ebb1e6e6ed986d66f238c97c6. The pinned integrated root+target Lake build exited 0 (3037 jobs). Exact theorem types and transitive axioms were checked with a dedicated audit, exit 0 (propext, Classical.choice, Quot.sound only). Targeted installed same-kernel `leanchecker` replay exited 0. Source/import audit: 74 modules, 357 proved declarations, exit 0. Source/tool SHA-256 manifests: 77/36 paths, both exit 0. These are not independent review or a new clean-checkout verification.
+
+NEXT: construct one compatible symmetric Fin 5 sign choice satisfying these prefix predicates and sufficiently sharp fifth-column bounds. Then prove inverse bilinear bounds for h, p and q and the strict Schur distance `||G-halfOffDiagonal|| < 1/2` for the actual ordered D(1)-quintuple. Use accepted numeric/arithmetical product-five conclusions. MainStatement remains UNPROVED.

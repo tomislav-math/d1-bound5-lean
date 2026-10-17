@@ -437,3 +437,40 @@ New arithmetic module: four proved theorems, integrated build PASS, exact-type/a
 ## `lem:product-five` — sharp prefix determinant, 2026-10-16
 
 `D1Bound5/ProductFivePrefixDet.lean` contains four root-imported proofs and the dedicated audit `scripts/ProductFivePrefixDetAudit.lean`. From the paper's exact four-by-four symmetric determinant formula and three complementary pair products within `7/192` of `1/4`, it proves the stronger `|det F|<33/128`. The previously proved `<3/10` bound was insufficient for `ProductFiveDetNumeric`. This is a verified analytic sublemma conditional on the six signed-entry bounds, not a formal proof of the full `lem:product-five`. Target/root build, axiom audit, targeted Lean-kernel replay and source/import audit PASS; remaining five-tuple sign compatibility, inverse/last-column controls, Schur closeness and tuple assembly OPEN.
+
+## Product-five signed prefix determinant transfer (2026-10-16 23:28 CEST)
+
+- `mixed_signed_root_det_upper_33_128`: sharpened original-ring mixed signed-root 4x4 determinant, with one fixed symmetric sign choice and six explicit `MixedSignedEntryGood` hypotheses.
+- `five_prefix_det_upper_of_mixed_signed_entries`: exact Fin 5-to-Fin 4 prefix restriction gives `||det F|| < 33/128` for the same five-entry integral root matrix, provided its six prefix edge signs satisfy the mixed predicate. No extra fifth-column hypothesis, and no implicit compatibility/existence statement.
+
+Both root-integrated with verified build, exact-type and transitive-axiom audit, targeted same-kernel replay. Still OPEN: construct globally compatible five-entry signs, bound last-column terms and Schur distance. See the run FINISH record.
+
+## Product-five compatible signs and last-column estimates (16 October 2026)
+
+`D1Bound5/ProductFiveCompatibleSigns.lean` adds ten theorems and the predicate `FiveSignedEntryGood`. It closes the same-witness full-five-entry sign construction, rather than making separate prefix and last-column choices.
+
+- `signedEntryBounds_fiftyfour_or_neg`: c=49/50 gives correction modulus <50/99 and distance to 1/2 <625/264627 when the pair product has modulus >=54.
+- `fiveSignedEntryGood_swap`, `fiveSignedEntryGood_or_neg`, `exists_five_signed_root_matrix`: all ten original-ring signs chosen on unordered pairs, preserving symmetry and all pair-square identities.
+- `fiveSignedEntryGood_prefix`, `fiveSignedEntryGood_last_column`: exact Fin4-in-Fin5 restriction gives the existing mixed prefix predicate and last-column distance <1/400.
+- `exists_five_signed_root_matrix_with_bounds`: one matrix has prefix determinant <33/128 AND all four last-column bounds.
+- `IsD1Tuple.five_last_modulus_gt_fiftyfour`: D>54 is derived from the already proved large product-four bound on the last four elements.
+- `IsD1Tuple.exists_five_compatible_signed_matrix`: actual ordered quintuple over every imaginary quadratic full integer ring, with only IsD1Tuple, monotone moduli, A>=1 and B>=3 as inputs; no extra sign/existence/last-size hypotheses.
+- `fiveLastColumn_l2_bounds`: component bounds imply ||f-f0||_2<1/200 and ||f||_2<201/200, with the Euclidean norm explicit in Lean.
+
+Trial05 and integrated target/root build EXIT 0 (3038 jobs). Source/import audit PASS (75 modules, 367 explicit theorems), source/tool manifests PASS (78/38). Final type/axiom/kernel receipts are recorded separately in the current run. This is not full product-five or global bound-five completion.
+
+## Product-five signed prefix analytic bridge (17 October 2026)
+
+D1Bound5/ProductFiveSignedPrefixInverse.lean connects the EXISTING one-witness `FiveSignedEntryGood` tuple construction to the original-ring normalized Fin4 prefix: operator proximity <=11/96, inverse-vector L2 norm <11/12 and p-form modulus <1. This is an actual proof for the SAME signed matrix, including the complex bilinear Cauchy--Schwarz reduction. It is a dependency of the manuscript's product-five estimates, not the complete lemma. Pinned integrated build, transitive axiom audit, installed same-kernel replay and source audit succeeded; SHA manifests and Git synchronization are pending after a PRE_EXECUTION_DENIED refresh. Remaining h/d, q/d^2, p/d^2, Schur closeness, arithmetic assembly and final exclusions are OPEN.
+
+## 2026-10-17 — product-five vector and cross-form isolated bridge
+
+The prefix size <D/9 follows formally from the ordered last-four product-four growth inequality. Complex bilinear Cauchy--Schwarz and symmetry give |h/d|<11/108 from the existing inverse-vector estimate. Both are elaborated as trial theorems, with a separately checked real scalar lemma. No root-imported new theorem is claimed, since a root-module copy command was denied before execution. Next: root import/replay and specialize all assumptions to the actual five-tuple's single original-ring sign matrix. See records/product-five-prefix-size-cross-20261017.md.
+
+## Product-five normalized bilinear q and p controls (17 October 2026)
+
+`ProductFiveNormalizedQuadratic.lean` proves `productFive_quadratic_q_div_norm_lt` and `productFive_p_div_sq_norm_lt` in the exact scalar forms required by `productFive_schur_det_upper_of_bilinear_bounds`. They have explicit analytic hypotheses `||F-H||<1/8`, `||w||_2<||d||/9`, `d!=0`, or `||p||<1` and `||d||>=54`. No symmetry/Hermitian assumption is needed in the q estimate. Both are root-imported, type/axiom audited and targeted same-kernel replayed. An actual quintuple-level bridge and the Schur determinant/nonvanishing closure are NOT supplied by this unit.
+
+## `lem:product-five`: analytic Schur proximity (17 October 2026)
+
+`ProductFiveSchurNear.lean` now closes the dimension-four entrywise Schur norm inequality, the rank-two correction <9/100 per matrix entry and the resulting `||G-H||<1/2` theorem with its exact coordinate hypotheses, plus the necessary 1/18 ordered prefix-coordinate ratio. Five new root-integrated proved theorems, 79 modules/380 explicit theorem inventory. It is an interface lemma, not yet the v4 `lem:product-five` for actual tuples. Next specialize to the same `IsD1Tuple.exists_five_compatible_signed_matrix` witness, close the numeric determinant bounds and use `full_ring_productFive_growth_of_schur_estimates`.
