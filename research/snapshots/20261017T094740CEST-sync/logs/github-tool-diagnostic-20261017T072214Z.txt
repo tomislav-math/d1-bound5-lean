@@ -1,0 +1,77 @@
+GITHUB / REMOTE DESKTOP COMMANDER DIAGNOSTIC COMPARISON
+Observed 17 October 2026, 09:17-09:22 CEST (UTC+02:00).
+Scope: read-only comparison plus this diagnostic file. No permission changes,
+no change to the mathematical sources, no background upload process, and no
+change to either automation. Another Lean invocation started at 09:19 CEST;
+its source and staged files were not modified by this investigation.
+
+1. SAME MACHINE AND AUTHENTICATION, DIFFERENT CALL PACKAGING
+Both projects use the authorized Mac and /Users/tp/.local/bin/gh.
+Both GitHub repositories are PRIVATE and the CLI account has ADMIN access:
+  tomislav-math/d1-bound5-lean
+  tomislav-math/d1-quintuples-research
+Neither inspected checkout has an active non-sample Git hook, a custom
+core.hooksPath, or commit.gpgsign enabled. Remote Desktop Commander app
+permission is already Allow all actions; global default is Allow low-risk
+actions. The local blockedCommands list does not contain git.
+
+2. ACTUAL SUCCESSFUL COMPARISON FROM REMOTE TOOL HISTORY
+The 17 October round59 research upload used Remote Desktop Commander
+start_process at 07:15:55 CEST to run:
+  python3 /Users/tp/Research/d1-quintuples-research/provenance/round59_publish_recovery.py
+The inspected script verifies privacy, checks a fixed predecessor commit and
+an explicit staged file scope, checks archived hashes, runs ordinary git
+commit and git push, then verifies remote SHA equality. It produced 4fb8ede.
+Its earlier attempt had a REAL git diff --cached --check exit 2 caused by
+blank-at-EOF warnings; that is distinct from a pre-execution safety refusal.
+The script uses a process-local gh credential helper for fetch/push. Local
+commit itself does not require GitHub authentication.
+The Lean project instead uses separate plain git commit and git push calls.
+These ALSO succeeded in this same project at 07:45:30 / 07:45:45 CEST
+(commit 17f13f8) and 07:53:58 / 07:54:11 CEST (commit 781dca4).
+Thus the script-vs-separate-call difference is observed, NOT a proven cause
+of the intermittent refusals and NOT a reason to conceal Git operations.
+
+3. REPORTED REFUSALS, AND EVIDENCE LIMIT
+Saved Lean-run record at approximately 05:26 CEST gives the exact message:
+  Script error: This tool call was blocked by OpenAI's safety checks. Please double check what you are sending.
+Command recorded there:
+  git -C /Users/tp/Lean/D1Bound5 commit -m "Verify product-five signs and normalized quadratic bounds"
+No remote PID, Git exit code, or platform request identifier was supplied.
+The approximately 08:28 CEST continuation also reports pre-execution refusal
+of a commit, and the local tool history shows successful staging/checks but
+no corresponding executed commit. This is consistent with rejection before
+remote execution, but absence from remote history is NOT an independent
+platform policy trace and does NOT reveal a classification reason.
+No new safety refusal was observed in the current diagnostic calls.
+
+4. SEPARATE CONNECTOR AND SCHEMA FINDINGS
+The currently exposed direct GitHub connector returned HTTP 404 for BOTH
+private repositories; list_installations returned an empty installation list.
+The same repositories were accessible via the authenticated CLI on the Mac.
+This is a separate missing connection/installation in this runtime, not a
+failure of the remote GitHub CLI. It does not establish the connector state
+in other ChatGPT contexts. Official documentation currently describes the
+standard ChatGPT GitHub app as read-only, so reconnecting that app is not a
+verified push remedy.
+The currently supplied edit_block schema has no input arguments although its
+description requires file_path/old_string/new_string. This is a separate
+schema anomaly. start_process and write_file have usable schemas. The
+provider/ChatGPT interface needs inspection; responsibility is not established.
+
+5. CONCLUSION AND SUPPORT REQUEST
+No local Git or provider-permission defect explaining the recurring denials
+was found. App authorization does not override separate safety protections.
+Do not label a later successful manual push a permanent repair. Do not move
+denied effects into opaque wrappers, another service, or unattended jobs.
+Request an OpenAI investigation of the raw rejected tool calls and their
+available request/trace IDs, compare scheduled vs interactive invocations,
+and inspect malformed/intermittently missing tool schemas. Supply the chat
+and task context to Support privately; do not publish credentials or the
+mathematical manuscript. The recurring cause remains UNKNOWN.
+
+Official references checked on 17 October 2026:
+https://help.openai.com/en/articles/20001495-managing-app-permissions-in-chatgpt
+https://help.openai.com/en/articles/11145903-connecting-github-to-chatgpt
+https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt
+https://help.openai.com/en/articles/6614161-how-can-i-contact-support

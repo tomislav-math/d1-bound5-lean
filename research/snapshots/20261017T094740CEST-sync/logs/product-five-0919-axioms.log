@@ -1,0 +1,85 @@
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.productFive_prefix_sq_lt_last_div_nine: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.productFive_prefix_l2_lt_last_div_nine: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.productFive_cross_div_norm_lt_11_108: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.IsD1Tuple.five_compatible_schur_near: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.IsD1Tuple.exists_five_signed_schur_witness: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.IsD1Tuple.five_compatible_schur_det_small: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS D1Bound5.IsD1Tuple.productFive_growth: [propext, Classical.choice, Quot.sound]
+PRODUCT_FIVE_TUPLE_AXIOMS_PASS: 7 theorems
+D1Bound5.productFive_prefix_sq_lt_last_div_nine : ∀ (a b c s d : ℝ),
+  0 ≤ a → a ≤ b → b ≤ c → c ≤ s → 3 ≤ b → 2 * b * c * s < d → a ^ 2 + b ^ 2 + c ^ 2 + s ^ 2 < (d / 9) ^ 2
+D1Bound5.productFive_prefix_l2_lt_last_div_nine : ∀ (t : Fin 5 → ℂ),
+  (Monotone fun i => ‖t i‖) →
+    3 ≤ ‖t 1‖ → 2 * ‖t 1‖ * ‖t 2‖ * ‖t 3‖ < ‖t 4‖ → ‖WithLp.toLp 2 (D1Bound5.fivePrefixValues t)‖ < ‖t 4‖ / 9
+D1Bound5.productFive_cross_div_norm_lt_11_108 : ∀ (F : Matrix (Fin 4) (Fin 4) ℂ) (v w : Fin 4 → ℂ) (d : ℂ),
+  d ≠ 0 →
+    F.transpose = F →
+      ‖WithLp.toLp 2 w‖ < ‖d‖ / 9 → ‖WithLp.toLp 2 (F⁻¹.mulVec v)‖ < 11 / 12 → ‖v ⬝ᵥ F⁻¹.mulVec w / d‖ < 11 / 108
+@D1Bound5.IsD1Tuple.five_compatible_schur_near : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          3 ≤ ‖phi ↑(a 1)‖ →
+            ∀ (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) (NumberField.RingOfIntegers K)),
+              (∀ (i : Fin 5), u i ^ 2 = phi ↑(a i)) →
+                (∀ (i : Fin 5), S i i = a i) →
+                  (∀ (i j : Fin 5),
+                      i ≠ j →
+                        D1Bound5.FiveSignedEntryGood (phi.comp (algebraMap (NumberField.RingOfIntegers K) K)) a u i j
+                          (S i j)) →
+                    ‖D1Bound5.fiveNormalizedSchur (fun i => phi ↑(a i)) u
+                            (S.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K))) -
+                          D1Bound5.halfOffDiagonal‖ <
+                      1 / 2
+@D1Bound5.IsD1Tuple.exists_five_signed_schur_witness : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          1 ≤ ‖phi ↑(a 0)‖ →
+            3 ≤ ‖phi ↑(a 1)‖ →
+              have f := phi.comp (algebraMap (NumberField.RingOfIntegers K) K);
+              ∃ u S,
+                (∀ (i : Fin 5), u i ^ 2 = f (a i)) ∧
+                  (∀ (i : Fin 5), S i i = a i) ∧
+                    (∀ (i j : Fin 5), S i j = S j i) ∧
+                      (∀ (i j : Fin 5), i ≠ j → S i j ^ 2 = a i * a j + 1) ∧
+                        (∀ (i j : Fin 5), i ≠ j → D1Bound5.FiveSignedEntryGood f a u i j (S i j)) ∧
+                          ‖(D1Bound5.fivePrefixError
+                                    (D1Bound5.normalizedRootError (fun i => f (a i)) u fun i j => f (S i j))).det‖ <
+                              33 / 128 ∧
+                            (∀ (i : Fin 4),
+                                ‖D1Bound5.fiveLastError
+                                        (D1Bound5.normalizedRootError (fun k => f (a k)) u fun k l => f (S k l)) i -
+                                      1 / 2‖ <
+                                  1 / 400) ∧
+                              ‖D1Bound5.fiveNormalizedSchur (fun i => f (a i)) u (S.map ⇑f) -
+                                    D1Bound5.halfOffDiagonal‖ <
+                                1 / 2
+@D1Bound5.IsD1Tuple.five_compatible_schur_det_small : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          3 ≤ ‖phi ↑(a 1)‖ →
+            ∀ (u : Fin 5 → ℂ) (S : Matrix (Fin 5) (Fin 5) (NumberField.RingOfIntegers K)),
+              (∀ (i : Fin 5), u i ^ 2 = phi ↑(a i)) →
+                (∀ (i : Fin 5), S i i = a i) →
+                  (∀ (i j : Fin 5), S i j = S j i) →
+                    (∀ (i j : Fin 5),
+                        i ≠ j →
+                          D1Bound5.FiveSignedEntryGood (phi.comp (algebraMap (NumberField.RingOfIntegers K) K)) a u i j
+                            (S i j)) →
+                      ‖(D1Bound5.fiveNormalizedSchur (fun i => phi ↑(a i)) u
+                              (S.map ⇑(phi.comp (algebraMap (NumberField.RingOfIntegers K) K)))).det‖ <
+                        1 / 3
+@D1Bound5.IsD1Tuple.productFive_growth : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) → 3 ≤ ‖phi ↑(a 1)‖ → 3 * ∏ i, ‖phi ↑(a (Fin.castAdd 1 i))‖ < ‖phi ↑(a 4)‖
