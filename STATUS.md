@@ -1,5 +1,11 @@
 # Status
 
+## 17 October 2026 — all pending work privately synchronized
+
+All 113 reviewed pending source/research/record files were pushed in commit `098a7d1b812e95cee51ef4224e9c2918c1508b56` to PRIVATE `tomislav-math/d1-bound5-lean`, branch main. Local and remote HEAD equality and private visibility were independently checked on 17 October 2026 at 21:41 CEST. The older PENDING/LOCAL ONLY Git remarks below are historical and superseded by this synchronization receipt; failed or unintegrated research retains its original mathematical status.
+
+The delivered source snapshot includes HalfBinomialCoefficients and all preceding analytic additions: source/import audit 96 files / 424 lexical theorem declarations; exact source/config and audit fingerprints 99/55 PASS. The pinned integrated build and targeted axiom/kernel evidence are reviewed in `research/continuations/20261017T213000CEST-private-sync/VERIFICATION_REVIEW.md`. No source proof was edited by synchronization. MainStatement remains UNPROVED. See `records/runs/20261017T213000CEST-private-sync-FINISH.md` and `-POST_PUSH.md` for the successful transfer and its precise verification scope.
+
 ## 17 October 2026 — coherent weighted remainder bound ROOT-PROVED
 
 `D1Bound5/CoherentWeightedRemainder.lean` proves absolute summability and the exact negative-binomial norm bound for the full positive-degree weighted homogeneous tail, under an explicit pointwise envelope on the interpolation coefficients. It gives `C*t^m*((1-rho*t)^(-card)-1)`, the precise analytic sum factor in frozen v4 `eq:coherent-tail`. This **does not yet prove** the required square-root-binomial coefficient envelope or the unconditional manuscript tail inequality. The previously separately compiled `CoherentMajorant` two-theorem negative-binomial factor is now root-imported.
