@@ -1,0 +1,18 @@
+--- failed-convert-trial
++++ explicit-division-calculation
+@@ -54,8 +54,13 @@
+   have hscaled : z*(p-q) < (Real.log (2*X*H)/L)*p := by
+     change (Real.log Z / L) * (Real.log R / L - Real.log H / L) <
+       (Real.log (2*X*H) / L) * (Real.log R / L)
+-    apply (mul_lt_mul_iff_of_pos_right (sq_pos_of_pos hL)).mp
+-    convert hi using 1 <;> field_simp [hL.ne'] <;> ring
++    calc
++      (Real.log Z / L) * (Real.log R / L - Real.log H / L) =
++          (Real.log Z * (Real.log R - Real.log H)) / L^2 := by
++            rw [← sub_div, div_mul_div_comm, pow_two]
++      _ < (Real.log (2*X*H) * Real.log R) / L^2 :=
++        div_lt_div_of_pos_right hi (sq_pos_of_pos hL)
++      _ = _ := by rw [div_mul_div_comm, pow_two]
+   have hnumid : 2*X*H = 252*B^2*C^2 := by
+     dsimp [X,H]
+     field_simp [hB0.ne'] <;> ring

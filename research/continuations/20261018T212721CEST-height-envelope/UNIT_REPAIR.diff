@@ -1,0 +1,11 @@
+--- prepared
++++ exact-rational-normalization
+@@ -46,7 +46,7 @@
+     (by linarith only [hlogS]) (by linarith only [hlogS])
+     (by intro k hk; simpa only [one_pow,mul_one,one_mul] using horders k hk)
+   norm_num at h
+-  exact h
++  linarith only [h]
+ 
+ /-- The unit-pair cubic iteration and the actual all-order inequalities
+ force the first extension below 10^4. The conditional input merely

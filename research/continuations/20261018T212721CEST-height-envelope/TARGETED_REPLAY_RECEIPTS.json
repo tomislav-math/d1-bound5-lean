@@ -1,0 +1,69 @@
+[
+  {
+    "label": "height-type-axioms",
+    "pid": 65395,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "lean",
+      "/Users/tp/Lean/D1Bound5/research/continuations/20261018T212721CEST-height-envelope/HeightEnvelopeAudit.lean"
+    ],
+    "time": "2026-10-18T21:50:22.746551+02:00",
+    "exit": 0,
+    "seconds": 58.2846836252138,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "height-type-axioms.log"
+  },
+  {
+    "label": "OrdinaryLog10-targeted-replay",
+    "pid": 65419,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--verbose",
+      "D1Bound5.OrdinaryLog10"
+    ],
+    "time": "2026-10-18T21:51:21.062575+02:00",
+    "exit": 0,
+    "seconds": 55.68416400020942,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "OrdinaryLog10-targeted-replay.log"
+  },
+  {
+    "label": "OrdinaryHeightEnvelope-targeted-replay",
+    "pid": 65465,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--verbose",
+      "D1Bound5.OrdinaryHeightEnvelope"
+    ],
+    "time": "2026-10-18T21:52:16.774350+02:00",
+    "exit": 0,
+    "seconds": 75.26766791706905,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "OrdinaryHeightEnvelope-targeted-replay.log"
+  },
+  {
+    "label": "UnitPairHeightCutoff-targeted-replay",
+    "pid": 65503,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--verbose",
+      "D1Bound5.UnitPairHeightCutoff"
+    ],
+    "time": "2026-10-18T21:53:32.117216+02:00",
+    "exit": 0,
+    "seconds": 94.07690591691062,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "UnitPairHeightCutoff-targeted-replay.log"
+  }
+]

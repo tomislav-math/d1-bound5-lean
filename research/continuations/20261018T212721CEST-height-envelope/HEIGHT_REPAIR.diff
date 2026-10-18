@@ -1,0 +1,11 @@
+--- prepared
++++ repaired
+@@ -53,7 +53,7 @@
+       exact horders k hk)
+   have hscaled : z*(p-q) < (Real.log (2*X*H)/L)*p := by
+     have hh := div_lt_div_of_pos_right hi (sq_pos_of_pos hL)
+-    convert hh using 1 <;> dsimp [z,p,q,L,ordinaryLog10]
++    convert hh using 1 <;> simp only [z,p,q,L,ordinaryLog10]
+     all_goals field_simp [ordinaryLog10_base_pos.ne']
+     all_goals ring
+   have hnumid : 2*X*H = 252*B^2*C^2 := by

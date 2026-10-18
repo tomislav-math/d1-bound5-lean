@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T21:32:00.852635+02:00
+
+OrdinaryLog10 compiled unchanged under the existing guarded pinned driver, exit 0 in 153.32 seconds. All ten logarithm and rational-parameter theorems and the definition have elaborated as part of this build; exact type/axiom audit and targeted kernel replay are still pending. Source SHA256 09aeaea7ebd8948074c88ecfb8ed793209871b3b024d7443a02f1048da4ea91c; dependency and compiled-artifact guards passed. The next current job is OrdinaryHeightEnvelope. No mathematical claim is inferred from the scheduler or from the unrelated older uncompiled archive. MainStatement remains unproved.

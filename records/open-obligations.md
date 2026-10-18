@@ -1,5 +1,9 @@
 # Open mathematical obligations
 
+## 18 October 2026 — ordinary height envelope and conditional unit-pair cutoff verified
+
+Three working modules OrdinaryLog10, OrdinaryHeightEnvelope and UnitPairHeightCutoff passed guarded pinned compilation, exact audits of 15 theorems and one definition, and three targeted installed SAME-kernel replays. All original theorem statements are unchanged. The cutoff S<10000 is derived from the explicit growth/root/all-order hypotheses, not assumed for arbitrary tuples. All ten wave119 repair targets now have current guarded compiled status. The earlier mixed full-ring gap was already verified in commit 5ca7c28 and was not repeated. Root integration, the remaining full-ring Bennett bridges, exhaustive finite certificates, and MainStatement remain open. Evidence: research/continuations/20261018T212721CEST-height-envelope/VERIFICATION_SUMMARY.json.
+
 ## 18 October 2026 — two Bennett analytic working modules verified
 
 `BennettResidualMajorant` and `BennettPositiveSeries` now have repaired guarded pinned builds, exact audits of fourteen original theorems plus one helper and one definition, and successful installed SAME-kernel targeted replays. The combined fresh closure replay exceeded its 240-second budget and is unconfirmed. No original theorem headers or budgets were weakened. These modules are not root-integrated and MainStatement remains UNPROVED. Evidence: `research/continuations/20261018T1901CEST-bennett-analytic/VERIFICATION_SUMMARY.json`. Next ready reviewed repairs: RetainedMixedFourScalar, RetainedMixedScalar. Automation/diagnostic settings were not changed.

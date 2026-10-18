@@ -1,0 +1,9 @@
+# Verified ordinary height and conditional unit-pair cutoff
+
+Authoritative result: VERIFICATION_SUMMARY.json. The three current .lean files in this directory are byte-identical preservation copies of the compiled working D1Bound5 modules. They are separately verified working dependencies, NOT accepted-root imports. Source/header review, exact 16-declaration type/axiom output, three targeted installed same-kernel replay logs, guarded build records, and the complete four-project-module source closure are included.
+
+OrdinaryLog10 compiled unchanged. OrdinaryHeightEnvelope required an explicit division calculation instead of progress-sensitive convert/simplification steps. UnitPairHeightCutoff required exact reassociation of 607/25+2/5 as 617/25. All original theorem statements and assumptions are unchanged. Failed initial/intermediate trials retain their true failed build receipts and do not replace the successful sources.
+
+The actual mathematical results and full hypothesis restrictions are explained in MATHEMATICS.md, UNIT_CUTOFF_REVIEW.md, STATEMENT_REVIEW.md and height-type-axioms.log. In particular, S<10000 is proved from the explicit real-variable growth, root-size and all-positive-integer-order hypotheses; this does not assume those estimates for arbitrary full-ring tuples. NEXT_DEPENDENCIES.json identifies the still-unverified full-ring Bennett/tuple bridges. WAVE119_CURRENT_BUILDS.json records all ten current prepared repair targets as compiled, not mathematical completion of the whole project.
+
+No full clean checkout, fresh entire-root replay or independent final statement review was performed in this unit. MainStatement remains UNPROVED. Existing frozen manuscript/handoff, pins, unrelated files and the inherited Git index entry are unchanged. No automation was modified. Post-push receipts belong to their actual later save stages.

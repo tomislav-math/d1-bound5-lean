@@ -552,3 +552,7 @@ The residual module proves the exact negative-binomial/homogeneous majorant need
 ## 18 October 2026 — retained mixed scalar growth verified
 
 RetainedMixedFourScalar (two theorems) and the repaired RetainedMixedScalar (one theorem) passed pinned guarded builds, exact type/transitive-axiom audits and installed SAME-kernel targeted replays. Original theorem headers and limits are unchanged. These are separately verified working dependencies, not accepted-root integration. CoherentRetainedMixedGap still requires CoherentRetainedMixedSizes and CoherentRetainedMixedForms. Evidence: research/continuations/20261018T203306CEST-retained-scalars/. MainStatement remains UNPROVED.
+
+## 18 October 2026 — ordinary height envelope and conditional unit-pair cutoff verified
+
+Three working modules OrdinaryLog10, OrdinaryHeightEnvelope and UnitPairHeightCutoff passed guarded pinned compilation, exact audits of 15 theorems and one definition, and three targeted installed SAME-kernel replays. All original theorem statements are unchanged. The cutoff S<10000 is derived from the explicit growth/root/all-order hypotheses, not assumed for arbitrary tuples. All ten wave119 repair targets now have current guarded compiled status. The earlier mixed full-ring gap was already verified in commit 5ca7c28 and was not repeated. Root integration, the remaining full-ring Bennett bridges, exhaustive finite certificates, and MainStatement remain open. Evidence: research/continuations/20261018T212721CEST-height-envelope/VERIFICATION_SUMMARY.json.

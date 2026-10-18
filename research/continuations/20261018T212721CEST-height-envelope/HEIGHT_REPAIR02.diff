@@ -1,0 +1,17 @@
+--- failed-simp-trial
++++ explicit-positive-square-scaling
+@@ -52,10 +52,10 @@
+       rw [heq]
+       exact horders k hk)
+   have hscaled : z*(p-q) < (Real.log (2*X*H)/L)*p := by
+-    have hh := div_lt_div_of_pos_right hi (sq_pos_of_pos hL)
+-    convert hh using 1 <;> simp only [z,p,q,L,ordinaryLog10]
+-    all_goals field_simp [ordinaryLog10_base_pos.ne']
+-    all_goals ring
++    change (Real.log Z / L) * (Real.log R / L - Real.log H / L) <
++      (Real.log (2*X*H) / L) * (Real.log R / L)
++    apply (mul_lt_mul_iff_of_pos_right (sq_pos_of_pos hL)).mp
++    convert hi using 1 <;> field_simp [hL.ne'] <;> ring
+   have hnumid : 2*X*H = 252*B^2*C^2 := by
+     dsimp [X,H]
+     field_simp [hB0.ne'] <;> ring
