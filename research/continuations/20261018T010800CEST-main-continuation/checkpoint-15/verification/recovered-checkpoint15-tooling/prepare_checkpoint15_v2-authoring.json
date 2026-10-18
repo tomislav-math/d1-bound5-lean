@@ -1,0 +1,29 @@
+{
+  "author": "source_audit",
+  "base": {
+    "bytes": 27083,
+    "path": "recovered-checkpoint15-tooling/prepare_checkpoint15.py",
+    "sha256": "83d8f8497aa71f5cfb3cabca08276d44a905f94bc30d83b9bb7a506a84889f3b"
+  },
+  "candidate": {
+    "bytes": 27676,
+    "path": "recovered-checkpoint15-tooling/prepare_checkpoint15_v2.py",
+    "sha256": "93d2c6612e4b09d9dfa5ed22663a7c499f9b10a7c5f2a3262b229130bb418815"
+  },
+  "changes": [
+    "Decode only the established exact two-key gzip-base64 envelope before the unchanged decoded source inventory and SHA checks.",
+    "Require the new v2 source, exact diff, this authoring record and independent peer-review receipt as explicit runtime artifacts; preserve original83d8 runtime history."
+  ],
+  "diff_sha256": "2aa1074f1ee9c3b25c4085c01e11dd4a972414c1a9c1b8759c81aeba0b6845b7",
+  "not_done": [
+    "No prepare/stage/intake execution",
+    "No project, queue, artifact, compiler, Git or original script mutation"
+  ],
+  "preserved": [
+    "Frozen helper packet is not read or changed by authoring.",
+    "Original wave envelope bytes remain in runtime_bytes and are archived unchanged.",
+    "Plain mapping waves and all existing source/hash/receipt/lock/Git/index gates are unchanged."
+  ],
+  "status": "AUTHORING_AND_SYNTAX_ONLY_NOT_EXECUTED",
+  "utc": "2026-10-18T06:45:47.674150+00:00"
+}

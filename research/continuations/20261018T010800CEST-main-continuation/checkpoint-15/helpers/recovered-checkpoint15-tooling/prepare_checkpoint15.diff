@@ -1,0 +1,214 @@
+--- prepare_checkpoint14.py
++++ prepare_checkpoint15.py
+@@ -1,4 +1,4 @@
+-"""Prepare the fourteenth unaccepted research delta; never commit or push.
++"""Prepare the fifteenth unaccepted research delta; never commit or push.
+ 
+ The coordinator must review this script before running it on the authorized
+ Mac. Runtime state and source bytes are captured under the intake lock. The
+@@ -16,20 +16,19 @@
+ import os
+ import re
+ import subprocess
+-import importlib.util
+ import sys
+ 
+ assert sys.flags.optimize == 0 and sys.flags.dont_write_bytecode, "Use Python -B without optimization"
+ 
+ ROOT = Path('/Users/tp/Lean/D1Bound5')
+ RUN = ROOT / 'research/continuations/20261018T010800CEST-main-continuation'
+-DEST = RUN / 'checkpoint-14'
+-WORK = RUN / ('checkpoint-14-preparing-' + str(os.getpid()))
+-HEAD = 'de54cc736d61d9cbfc317218d1b805bdb085eb2f'
+-FIRST_WAVE = 101
+-MINIMUM_LATEST_WAVE = 107
+-RECORD = ROOT / 'records/runs/20261018T010800CEST-main-continuation-CHECKPOINT-14.md'
+-REVIEWED = RUN / 'checkpoint-14-reviewed-paths.json'
++DEST = RUN / 'checkpoint-15'
++WORK = RUN / ('checkpoint-15-preparing-' + str(os.getpid()))
++HEAD = '323ce078b4626ba5165aef17364ac1755e29daf8'
++FIRST_WAVE = 110
++MINIMUM_LATEST_WAVE = 112
++RECORD = ROOT / 'records/runs/20261018T010800CEST-main-continuation-CHECKPOINT-15.md'
++REVIEWED = RUN / 'checkpoint-15-reviewed-paths.json'
+ FROZEN_PAPER = Path('/Users/tp/Lean/D1Bound5Handoff/verification/output/D1_bound5-v4.tex')
+ PAPER_SHA = '776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3'
+ 
+@@ -72,11 +71,11 @@
+     'continuation_driver_parallel.py', 'continuation_driver_parallel_REVIEW.md',
+     'continuation_driver_parallel_dummy_test.py', 'intake_continuation.py',
+     'continuation-builds.json', 'continuation-active.json', 'continuation-queue.json',
+-    'continuation-trusted-baseline.json', 'recovered-checkpoint14-tooling/prepare_checkpoint14.py',
+-    'recovered-checkpoint14-tooling/stage_checkpoint14.py',
+-    'checkpoint-13-push-receipt.json', 'checkpoint-13-index-review.json',
++    'continuation-trusted-baseline.json', 'recovered-checkpoint15-tooling/prepare_checkpoint15.py',
++    'recovered-checkpoint15-tooling/stage_checkpoint15.py',
++    'checkpoint-14-push-receipt.json', 'checkpoint-14-index-review.json',
+     'prepare_light_rows_recovered.py', 'prepare_light47_bootstrap.py',
+-    'helper14-manifest.json', 'checkpoint-13-commit-receipt.json',
++    'helper14-manifest.json', 'checkpoint-14-commit-receipt.json',
+     'continuation_driver_capacity.py', 'continuation_driver_capacity_dummy_test.py',
+     'continuation_driver_capacity_dummy_test_v2.py',
+     'continuation-driver-capacity-review.json', 'continuation-driver-capacity-review-v2.json',
+@@ -141,8 +140,8 @@
+         # Capture all local Lean modules for exact closure fingerprints, including
+         # tracked accepted prerequisites; only untracked drafts enter SOURCE_MAP.
+         source_bytes = {p.stem: stable_read(p) for p in sorted((ROOT / 'D1Bound5').glob('*.lean'))}
+-        old_map_bytes = stable_read(RUN / 'checkpoint-13/SOURCE_MAP.json')
+-        helpers_packet = stable_read(RUN / 'checkpoint14-helpers.json')
++        old_map_bytes = stable_read(RUN / 'checkpoint-14/SOURCE_MAP.json')
++        helpers_packet = stable_read(RUN / 'checkpoint15-helpers.json')
+         wave_files = {}
+         for path in RUN.glob('wave*.json'):
+             match = re.fullmatch(r'wave(\d+)-(intake|receipt)\.json', path.name)
+@@ -277,6 +276,7 @@
+     'SmallPairGraphData45', 'SmallPairLightAssembly45',
+     'PellLightMatching', 'PellLightMatchingBridge',
+     'PellLightMatchingField7', 'PellLightMatchingField7Adapter',
++    'PellLightAllMatchingCertificates', 'PellLightAllFiniteCertificates',
+ ]
+ wave_targets = set()
+ wave_summary = []
+@@ -305,25 +305,32 @@
+                                       for name, data in runtime_bytes.items()],
+                 'helper_packet_sha256': sha(helpers_packet)}
+ 
+-# Verify the exact prepared-source archive before creating the checkpoint tree.
+-# All extraction is through checked in-memory member streams; no source is installed.
+-helper_meta = json.loads(runtime_bytes['helper14-manifest.json'])
+-assert helper_meta['format'] == 'checkpoint14-helper-manifest-v1'
++# Reference the already committed cp14 source packages; do not recreate or copy archives.
++helper_meta = json.loads(runtime_bytes['helper15-manifest.json'])
++assert helper_meta['format'] == 'checkpoint15-helper-manifest-v1'
+ assert helper_meta['expected_head'] == HEAD
+ assert helper_meta['packet_sha256'] == sha(helpers_packet)
+-archive_utility_path = RUN / 'recovered-checkpoint14-tooling/checkpoint14_archives.py'
+-archive_utility_bytes = stable_read(archive_utility_path)
+-assert sha(archive_utility_bytes) == '5f0ce687d3858ca91b90cf049797157bbb2f796f56f935e688d7ad36ade8f17b'
+-archive_spec = importlib.util.spec_from_file_location('checkpoint14_archive_verifier', archive_utility_path)
+-archive_tools = importlib.util.module_from_spec(archive_spec)
+-archive_spec.loader.exec_module(archive_tools)
+-archive_root = RUN / 'checkpoint14-payloads'
+-archive_index_bytes = stable_read(archive_root / 'ARCHIVE_INDEX.json')
+-assert sha(archive_index_bytes) == helper_meta['archive_index_sha256']
+-archive_index = archive_tools.verify_set(archive_root)
+-archive_blobs = {p.name: stable_read(p) for p in sorted(archive_root.iterdir())}
+-assert all(len(b) < 100_000_000 for b in archive_blobs.values())
+-
++archive_index_path = RUN / 'checkpoint-14/archives/ARCHIVE_INDEX.json'
++archive_index_bytes = stable_read(archive_index_path)
++assert sha(archive_index_bytes) == 'a357b1195d445246087b16882710b5c771536e39a07f0c84069eca47c4df8d4c'
++archive_index = json.loads(archive_index_bytes)
++archive_refs = helper_meta['archive_references']
++expected_archive_refs = {
++    str(archive_index_path.relative_to(ROOT)): {
++        'sha256': sha(archive_index_bytes), 'bytes': len(archive_index_bytes)}
++}
++for row in archive_index['shards']:
++    path = archive_index_path.parent / relative_name(row['path'])
++    assert path.parent == archive_index_path.parent
++    expected_archive_refs[str(path.relative_to(ROOT))] = {
++        'sha256': row['sha256'], 'bytes': row['bytes']}
++assert len(archive_refs) == len(expected_archive_refs) == 5
++assert {row['path']: {'sha256': row['sha256'], 'bytes': row['bytes']} for row in archive_refs} == expected_archive_refs
++tracked_paths = set(git('ls-files').splitlines())
++for row in archive_refs:
++    assert row['path'] in tracked_paths
++    data = stable_read(ROOT / relative_name(row['path']))
++    assert len(data) == row['bytes'] and sha(data) == row['sha256']
+ WORK.mkdir()
+ 
+ 
+@@ -358,37 +365,43 @@
+     relative_name(name)
+     assert isinstance(content, str), name
+     put('helpers/' + name, content.encode())
+-# Preserve references to exact already-tracked helpers without duplicating bytes.
+-tracked_paths = set(git('ls-files').splitlines())
++# Reuse exact tracked helpers and duplicate packet contents by explicit references.
+ packet_members = set()
++assert len({row['path'] for row in helper_meta['helper_files']}) == len(helper_meta['helper_files'])
+ for row in helper_meta['helper_files']:
+     relative_name(row['path'])
+-    kinds = [key for key in ('packet_member', 'stored_at', 'archive_member') if key in row]
++    kinds = [key for key in ('packet_member', 'stored_at') if key in row]
+     assert len(kinds) == 1, row['path']
+     if 'packet_member' in row:
+-        assert row['packet_member'] == row['path'] and row['path'] not in packet_members
+-        packet_members.add(row['path'])
+-        data = helpers[row['path']].encode()
+-        assert len(data) == row['bytes'] and sha(data) == row['sha256']
+-    elif 'stored_at' in row:
++        member = row['packet_member']
++        relative_name(member)
++        packet_members.add(member)
++        data = helpers[member].encode()
++    else:
+         assert row['stored_at'] in tracked_paths
+         data = stable_read(ROOT / relative_name(row['stored_at']))
+-        assert len(data) == row['bytes'] and sha(data) == row['sha256']
++    assert len(data) == row['bytes'] and sha(data) == row['sha256']
++assert packet_members == set(helpers)
++put('verification/ARCHIVE_REFERENCES.json', (json.dumps({
++    'source_checkpoint': 14, 'archive_files_copied': 0, 'files': archive_refs}, indent=2) + '\n').encode())
++runtime_map = []
++for name, data in runtime_bytes.items():
++    prior = RUN / 'checkpoint-14/verification' / relative_name(name)
++    prior_name = str(prior.relative_to(ROOT))
++    if prior_name in tracked_paths and prior.is_file() and stable_read(prior) == data:
++        stored = prior_name
+     else:
+-        member = archive_index['members'][row['archive_member']]
+-        assert member['bytes'] == row['bytes'] and member['sha256'] == row['sha256']
+-assert packet_members == set(helpers)
+-for name, data in archive_blobs.items():
+-    assert relative_name(name).parent == Path('.')
+-    put('archives/' + name, data)
+-for name, data in runtime_bytes.items():
+-    put('verification/' + name, data)
++        put('verification/' + name, data)
++        stored = str((DEST / 'verification' / name).relative_to(ROOT))
++    runtime_map.append({'runtime_path': name, 'stored_at': stored,
++                        'bytes': len(data), 'sha256': sha(data)})
++put('verification/RUNTIME_MAP.json', (json.dumps(runtime_map, indent=2) + '\n').encode())
+ put('verification/CHECKPOINT_STATUS.json', (json.dumps(status_report, indent=2) + '\n').encode())
+ put('verification/INTAKE_CAPTURE.json', (json.dumps(intake_report, indent=2) + '\n').encode())
+ 
+ # Every log copied below belongs to a terminal ledger row captured above. Never
+ # copy a live compiler stream merely because it is present in the log directory.
+-parents = [RUN / f'checkpoint-{n}/verification/continuation-builds' for n in (13, 12, 11, 10, 9, 8, 7, 6, 5)]
++parents = [RUN / f'checkpoint-{n}/verification/continuation-builds' for n in (14, 13, 12, 11, 10, 9, 8, 7, 6, 5)]
+ parents += [RUN / 'checkpoint-4/addendum/verification/continuation-builds',
+             RUN / 'checkpoint-4/verification/continuation-builds',
+             RUN / 'checkpoint-3/verification/continuation-builds']
+@@ -413,7 +426,7 @@
+     assert not forbidden.search(scope['remove_comments'](source_bytes[Path(row['source']).stem].decode())), row['source']
+ 
+ table = '\n'.join('| ' + row['module'] + ' | ' + row['status'] + ' |' for row in statuses)
+-record_bytes = f'''# Main-theorem continuation: fourteenth research checkpoint
++record_bytes = f'''# Main-theorem continuation: fifteenth research checkpoint
+ 
+ Captured {stamp}. **MainStatement remains UNPROVED.** The complete assembly is an unaccepted research artifact. Its full dependency closure has not passed the required acceptance gates. The accepted root/configuration and historical 107/484/922 verification baseline remain unchanged. This private research backup retains the same pinned manuscript.
+ 
+@@ -425,15 +438,15 @@
+ 
+ Every intake/receipt pair from wave {FIRST_WAVE} through observed wave {latest_wave} is present, paired and hash-checked. These are source-intake receipts, not compilation receipts. Status targets include every module in these waves and earlier right-class, Pell-light and analytic milestones. A successful isolated checker does not establish its assembly, triangle, branch or MainStatement.
+ 
+-The recovered Mac preparation helpers and their reviewed provenance are preserved through checkpoint14-helpers.json and the captured runtime records. Prepared Light47 sources, a Python reproduction, or a source review do not constitute source intake or Lean acceptance. The successful Light47 preparation receipt, when present, permits capture of its terminal preparation logs and exact manifests. These checkpoint scripts install no prepared source.
++The reviewed production and merge helpers and their provenance are preserved through checkpoint15-helpers.json and the captured runtime records. Equal helper contents are stored once or referenced from tracked earlier checkpoints. RUNTIME_MAP records unchanged runtime metadata reused from checkpoint14. Prepared Light47 sources, a Python reproduction, or a source review do not constitute source intake or Lean acceptance. The successful Light47 preparation receipt, when present, permits capture of its terminal preparation logs and exact manifests. These checkpoint scripts install no prepared source.
+ 
+ The earlier analytic readiness report checked direct parents. The scheduler's stronger full-closure gate also requires individual acceptance records for CoherentNearOne, CoherentPolynomialWeights and CoherentTwoVanishing. Priority records and current terminal statuses document their actual progress; no artifact or acceptance gate is weakened.
+ 
+-The checkpoint-13 push and index receipts record the previous private research backup. Current runtime JSON, new paired intakes, preparation/review/priority records and prepared manifests are listed with exact hashes in INTAKE_CAPTURE.json. The mandatory helper packet is decoded without executing its contents. Snapshotting a helper does not execute its preparation, Git or compiler actions.
+-
+-The source map reuses unchanged exact drafts stored in checkpoint 13 or earlier. Only captured terminal-ledger logs are considered. Byte-identical logs already stored in checkpoints 13, 12, 11, 10, 9, 8, 7, 6, 5, 4/addendum, 4 and 3 are not duplicated. Active compiler logs are excluded. Queue and active receipts remain point-in-time records.
+-
+-The checkpoint includes deterministic compressed archives of the remaining39 prepared sources, row45 proof delta, remaining38 adaptive40000-pair proof deltas and the uniquely namespaced Pell matching pilot. Every archived source and manifest has an exact hash, and every archive member was extracted as a checked stream before snapshot publication. No archive blob reaches100MB. These packages are source backups, not compiler acceptance or installation claims.
++The checkpoint-14 push and index receipts record the previous private research backup. Current runtime JSON, new paired intakes, preparation/review/priority records and prepared manifests are listed with exact hashes in INTAKE_CAPTURE.json. The mandatory helper packet is decoded without executing its contents. Snapshotting a helper does not execute its preparation, Git or compiler actions.
++
++The source map reuses unchanged exact drafts stored in checkpoint 14 or earlier. Only captured terminal-ledger logs are considered. Byte-identical logs already stored in checkpoints 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4/addendum, 4 and 3 are not duplicated. Active compiler logs are excluded. Queue and active receipts remain point-in-time records.
++
++The checkpoint references the five already committed checkpoint14 archive files through exact hashes and tracked paths. No archive bytes are recreated, decompressed, copied or staged again. Their807 source members remain available in the previous private checkpoint. New409-field matching production sources are captured by paired intake112 and the current source map. The small helper packet preserves generator/provenance manifests and exact merge45 preimages; these records do not constitute compiler acceptance.
+ 
+ Helper provenance includes the failed initial capacity test report, corrected reports, Python3.12 tests and the actual opt-in single-worker restart receipt. Earlier failed evidence is preserved honestly. Pell matching generation uses its frozen original bridge as provenance; later proof-only bridge repairs and their failures/reviews are separate history. The actual source and wave cut above determines current status.
+ 

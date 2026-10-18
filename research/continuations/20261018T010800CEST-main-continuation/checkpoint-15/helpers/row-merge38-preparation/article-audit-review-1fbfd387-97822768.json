@@ -1,0 +1,98 @@
+{
+  "source_sha256": "1fbfd387d02d3399137e8e7af3d539dab0bcd5d026b1509c70a82b2c2b6fb1bf",
+  "dry_manifest_sha256": "97822768254678a3080495490f1409ed81a0b7b9c925612eefe2b35b2de0d330",
+  "source_review_pass": true,
+  "reviewer": "article_audit",
+  "status": "Independent source and in-memory dry-output replay PASS; root approval not granted by this receipt",
+  "scope": "New research output under the continuation run directory only. No project installation, queue modification, compiler invocation or Git operation.",
+  "base_manifest_sha256": "0091cf518b0bdac90510d96a318241dc5b170065e4787fba789385492a3f1f62",
+  "adaptive_manifest_sha256": "3cfaff9aeff48634d1b4ea1ca9ceeb5b9f89a55d98c10fa92c80d0b3076d350f",
+  "body_helper_sha256": "93e03376a48b47580239744508aa6bfa2e941dbdfa4de499e8daa3d4272f0335",
+  "reviewed_rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    33,
+    35,
+    36,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    46,
+    48
+  ],
+  "independent_replay": {
+    "original_bodies": 304,
+    "merged_candidates": 38,
+    "unique_public_names": 1064,
+    "candidate_total_bytes": 90043240,
+    "all_archived_preimage_hashes_and_lengths_match": true,
+    "all_header_and_body_hashes_lengths_offsets_match": true,
+    "all_candidate_sha256_values_reconstructed_exactly": true,
+    "all_original_dfs_external_import_orders_match": true,
+    "all_namespace_scopes_balanced": true,
+    "all_public_names_preserved_and_unique": true,
+    "original_virtual_main_count": 1464,
+    "merged_virtual_main_count": 1198,
+    "exact_absorbed_set_size": 266,
+    "main_difference_exactly_absorbed_modules": true,
+    "lean_files_in_dry_directory": 0
+  },
+  "source_review": [
+    "Read the complete frozen planner and previously reviewed body helper.",
+    "Base selection is the38 requested rows plus45; adaptive selection is exactly38. Protected rows are excluded and virtual source records are checked unchanged.",
+    "Actual project sources are overlaid by pinned archived base and adaptive sources for dependency planning; no files are installed.",
+    "Each merge preserves all eight import-stripped bodies and original declaration names. Internal body order is topological and external D1 closure is checked unchanged.",
+    "Emit requires exact planner/dry-manifest review receipt, source_review_pass, reviewer and root_approved. This receipt deliberately omits root_approved.",
+    "Emit compares candidate/body/import records and every external source reference to the reviewed dry manifest, then requires actual exact373463 pilot source and Driver.accepted current closure/artifacts.",
+    "All candidate writes use a new output directory and exclusive files; original archives and project/queue are not mutated.",
+    "Owning module and earlier availability of external imports still require per-candidate Lean checking; source equivalence is not kernel acceptance."
+  ],
+  "remaining_intake_gate": {
+    "global_unknown_at_dry_snapshot": [
+      "SmallPairGraphInputs2"
+    ],
+    "queued_outside_consumers": {
+      "SmallPairGraphInputs2": [
+        "SmallPairGraphLeft2",
+        "SmallPairGraphRight2"
+      ]
+    },
+    "action": "Root must resolve these legacy queue consumers explicitly before project intake; the planner reports them and does not prune them.",
+    "live_outside_consumers_on_virtual_main_or_root": []
+  },
+  "limitations": [
+    "The receipt approves source preparation only and does not authorize project intake.",
+    "Use a new output child of the continuation run directory; the CLI accepts a general output path.",
+    "Current driver acceptance/readiness diagnostics were inspected in source and dry metadata, not rerun by this reviewer.",
+    "No Lean generation to disk, generator execution, compilation, project-source write, queue change or Git action was performed during review.",
+    "The only review write is this research receipt."
+  ]
+}

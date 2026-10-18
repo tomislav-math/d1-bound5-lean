@@ -1,0 +1,56 @@
+{
+  "status": "Source-only draft; AST/readback and evidence-pin checks; no helper/prepare/stage execution",
+  "base_sources": {
+    "prepare_checkpoint14.py": "ae92c4db6670332afc3170cda7a96d6bfaa0913d8fe71fc94b2583d80e2ef2cc",
+    "stage_checkpoint14.py": "66c4397fbb753876474cddaec52d66c32e1c0d05bbeae6c5b601c71f98388ef2"
+  },
+  "expected_head": "323ce078b4626ba5165aef17364ac1755e29daf8",
+  "first_wave": 110,
+  "minimum_latest_wave": 112,
+  "existing_archive_bytes_copied": 0,
+  "reviewed_merge38_source_and_dry_manifest_only": true,
+  "files": {
+    "prepare_checkpoint15_helpers.py": {
+      "bytes": 11474,
+      "sha256": "5181d7bb5ddd779bbc8ebef861d94d307200f160d5c3ff616355d8aeecd4fe21"
+    },
+    "prepare_checkpoint15.py": {
+      "bytes": 27083,
+      "sha256": "83d8f8497aa71f5cfb3cabca08276d44a905f94bc30d83b9bb7a506a84889f3b"
+    },
+    "stage_checkpoint15.py": {
+      "bytes": 4704,
+      "sha256": "8db464962a204227224be2fc7fa9decf9c3aac140d60727748b47ea424b2cfdc"
+    },
+    "PROPOSAL.md": {
+      "bytes": 3085,
+      "sha256": "ff6bbc6d26973562f2d91b8755df43f13b12b7065072771f1b67573f796030f1"
+    },
+    "prepare_checkpoint15.diff": {
+      "bytes": 15667,
+      "sha256": "e557dfd2a545d1301adf5af61ac5a9c4112bf07af425abb8c757d12a5ca7a192"
+    },
+    "stage_checkpoint15.diff": {
+      "bytes": 4615,
+      "sha256": "1bd4a64dcb31f2dfe17cba9b65dc61c1404584b540855e58dd06537cadf33155"
+    },
+    "prepare_checkpoint15_helpers.v1.py": {
+      "bytes": 11328,
+      "sha256": "d47ecd8cee00080cc6403b4f5014bb7dce7f5a36952b9e339c5b1393a5385fc7"
+    },
+    "helpers-review-receipt-update.diff": {
+      "bytes": 1151,
+      "sha256": "c902d6b37d8e4463e87bdfcbb531146a555de1775f48222e0c3dbca20d6ce2ed"
+    },
+    "authoring_manifest.v1.json": {
+      "bytes": 1418,
+      "sha256": "f3a9514df90f1c82ec8190df8001fe875b7fc1a85e15147dbeeec7ec2f15a7e0"
+    }
+  },
+  "helper_receipt_update": {
+    "previous_helper_sha256": "d47ecd8cee00080cc6403b4f5014bb7dce7f5a36952b9e339c5b1393a5385fc7",
+    "previous_authoring_manifest_sha256": "f3a9514df90f1c82ec8190df8001fe875b7fc1a85e15147dbeeec7ec2f15a7e0",
+    "review_receipt_sha256": "78f479dd81dd31137f06e4ba513021c8d35264255a4ee2f458ea6bcca53c5726",
+    "purpose": "Add exact independent merge38 source/output review receipt; no new generated sources or execution"
+  }
+}

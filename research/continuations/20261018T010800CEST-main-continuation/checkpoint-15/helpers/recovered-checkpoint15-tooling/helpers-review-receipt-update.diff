@@ -1,0 +1,19 @@
+--- helpers-v1
++++ helpers-v2
+@@ -20,6 +20,7 @@
+ OPTIONAL_MERGE_PINS = {
+  "row-merge38-preparation/prepare_remaining_row_merges.py":"1fbfd387d02d3399137e8e7af3d539dab0bcd5d026b1509c70a82b2c2b6fb1bf",
+  "row-merge38-preparation/dry/dry-manifest.json":"97822768254678a3080495490f1409ed81a0b7b9c925612eefe2b35b2de0d330",
++ "row-merge38-preparation/article-audit-review-1fbfd387-97822768.json":"78f479dd81dd31137f06e4ba513021c8d35264255a4ee2f458ea6bcca53c5726",
+ }  # Article_audit independently reviewed source and all38 dry outputs; no execution here.
+ PINS = {
+  "recovered-pell-matching-production/prepare_pell_light_matching_production.py":"d045b82f28d953175e0ec4dacd0646da2db17da38d494e5be775a82e9ff46198",
+@@ -61,7 +62,7 @@
+ 
+     candidates = set(PINS)
+     optional_directories = []
+-    # Only the two exact reviewed merge38 source/dry artifacts enter the optional scope.
++    # Only the exact reviewed merge38 source, dry manifest and review receipt enter this scope.
+     for name, digest in OPTIONAL_MERGE_PINS.items():
+         relative(name)
+         require(name.startswith("row-merge38-preparation/"), "Unexpected optional merge scope")

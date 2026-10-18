@@ -1,0 +1,24 @@
+--- prepare_checkpoint15.py
++++ prepare_checkpoint15_v2.py
+@@ -73,6 +73,10 @@
+     'continuation-builds.json', 'continuation-active.json', 'continuation-queue.json',
+     'continuation-trusted-baseline.json', 'recovered-checkpoint15-tooling/prepare_checkpoint15.py',
+     'recovered-checkpoint15-tooling/stage_checkpoint15.py',
++    'recovered-checkpoint15-tooling/prepare_checkpoint15_v2.py',
++    'recovered-checkpoint15-tooling/prepare_checkpoint15_v2.diff',
++    'recovered-checkpoint15-tooling/prepare_checkpoint15_v2-authoring.json',
++    'recovered-checkpoint15-tooling/prepare_checkpoint15_v2-review.json',
+     'checkpoint-14-push-receipt.json', 'checkpoint-14-index-review.json',
+     'prepare_light_rows_recovered.py', 'prepare_light47_bootstrap.py',
+     'helper14-manifest.json', 'checkpoint-14-commit-receipt.json',
+@@ -282,6 +286,10 @@
+ wave_summary = []
+ for number in sorted(wave_files):
+     intake = json.loads(runtime_bytes[wave_files[number]['intake']])
++    # Decode the existing intake protocol; preserve the original runtime bytes.
++    if isinstance(intake, dict) and intake.get('encoding') == 'gzip-base64':
++        assert set(intake) == {'encoding', 'data'}, number
++        intake = json.loads(gzip.decompress(base64.b64decode(intake['data'], validate=True)))
+     receipt = json.loads(runtime_bytes[wave_files[number]['receipt']])
+     assert isinstance(intake, dict) and isinstance(receipt, dict), number
+     pins = receipt['source_sha256']

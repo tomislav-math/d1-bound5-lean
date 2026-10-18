@@ -1,0 +1,22 @@
+{
+  "reviewer": "/root/bennett",
+  "utc": "2026-10-18T06:46:50.588418+00:00",
+  "source_review_pass": true,
+  "source_sha256": "93d2c6612e4b09d9dfa5ed22663a7c499f9b10a7c5f2a3262b229130bb418815",
+  "base_sha256": "83d8f8497aa71f5cfb3cabca08276d44a905f94bc30d83b9bb7a506a84889f3b",
+  "diff_sha256": "2aa1074f1ee9c3b25c4085c01e11dd4a972414c1a9c1b8759c81aeba0b6845b7",
+  "checks": [
+    "Independently reconstructed every candidate byte from exact two additions to the reviewed83d8 base.",
+    "Regenerated complete unified diff byte-for-byte; AST parsed without executing source.",
+    "Only exact encoding=gzip-base64 two-key envelope is decoded; base64 uses validate=True, then gzip and JSON parsing; malformed data fails closed.",
+    "Decoded inventory remains subject to unchanged dict, exact source/receipt key-set, filename, string-type and per-source SHA checks.",
+    "Plain mapping waves retain prior behavior; original runtime_bytes and their captured hashes/copies remain unmodified.",
+    "All four new provenance artifacts are mandatory runtime inputs; old prepare source remains captured; no lock, scope, source, archive-reference, staging or Git gates changed."
+  ],
+  "not_done": [
+    "No checkpoint preparation or staging",
+    "No intake, queue, compiler or Git action",
+    "No archive or source packet creation"
+  ],
+  "main_statement_proved": false
+}

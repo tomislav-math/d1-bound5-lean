@@ -1,0 +1,107 @@
+⚠ [1503/1773] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1504/1773] Replayed D1Bound5.BennettBinomialTransfer
+warning: D1Bound5/BennettBinomialTransfer.lean:11:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettSeries_coeff_C_add_X_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [1947/1947] Building D1Bound5.BennettCoefficientMajorant (37s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettCoefficientMajorant.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettCoefficientMajorant.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettCoefficientMajorant.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettCoefficientMajorant.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettCoefficientMajorant.setup.json --json
+error: D1Bound5/BennettCoefficientMajorant.lean:14:43: Unknown constant `Polynomial.descPochhammer`
+error: D1Bound5/BennettCoefficientMajorant.lean:15:14: Unknown constant `Polynomial.descPochhammer`
+error: D1Bound5/BennettCoefficientMajorant.lean:16:7: Unknown constant `Polynomial.descPochhammer`
+error: D1Bound5/BennettCoefficientMajorant.lean:14:84: unsolved goals
+s : ℝ
+h : ℕ
+⊢ ↑h.factorial * Ring.choose s h = sorry
+error: D1Bound5/BennettCoefficientMajorant.lean:34:18: Unknown constant `Polynomial.descPochhammer_nonneg`
+error: D1Bound5/BennettCoefficientMajorant.lean:28:70: unsolved goals
+k h : ℕ
+hh : h ≤ k
+hh' : ↑h ≤ ↑k
+hlow : ↑h - 1 ≤ ↑k + 1 / 2
+hhigh : ↑h - 1 ≤ ↑(k + 1)
+hupper : ↑k + 1 / 2 ≤ ↑(k + 1)
+hf : 0 < ↑h.factorial
+⊢ |Ring.choose (↑k + 1 / 2) h| ≤ ↑((k + 1).choose h)
+warning: D1Bound5/BennettCoefficientMajorant.lean:73:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettCoefficientMajorant.lean:73:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: D1Bound5/BennettCoefficientMajorant.lean:89:8: Unknown constant `Polynomial.not_mem_support_iff.mp`
+warning: D1Bound5/BennettCoefficientMajorant.lean:123:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+error: D1Bound5/BennettCoefficientMajorant.lean:125:19: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ‖↑?r‖
+in the target expression
+  ‖Ring.choose (↑↑k + 1 / 2) hu.1‖ ≤ ↑((k + 1).choose hu.1)
+
+k t : ℕ
+ht : t ≤ k
+a N : ℂ
+B : PowerSeries ℂ
+D : PowerSeries ℝ
+hU : 0 < ‖N + a‖
+hB : ∀ (h : ℕ), ‖(PowerSeries.coeff h) B‖ ≤ (PowerSeries.coeff h) D
+hu : ℕ × ℕ
+hhu : hu ∈ antidiagonal t
+hh : hu.1 ≤ k
+hcast : Ring.choose (↑k + 1 / 2) hu.1 = Ring.choose (↑↑k + 1 / 2) hu.1
+⊢ ‖Ring.choose (↑↑k + 1 / 2) hu.1‖ ≤ ↑((k + 1).choose hu.1)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettCoefficientMajorant
+error: build failed
