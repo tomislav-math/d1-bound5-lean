@@ -1,5 +1,9 @@
 # Status
 
+## 18 October 2026 — Chat continuation and single hourly task prepared
+
+Read `records/CHAT_CONTINUATION_PLAN.md` and the current October 18 handoff/runtime before using the older sections below. The existing task `Formalizacija D1 ograde pet` is enabled for 11:15 Europe/Zagreb on 18 October, then hourly at :15. It performs bounded proof work, verification and private synchronization in one execution stream. No other automation was changed. The wave119 priority has been restored at the front of the existing queue under both locks; all ten source hashes match, seven are immediately eligible. The queue remains deliberately paused until an owned scheduled batch starts, with max_parallel=1. No new proof was compiled in this operations-only setup, and MainStatement remains UNPROVED. See `records/runs/20261018T104441CEST-chat-resume-setup/FINISH.md`.
+
 ## 17 October 2026 — new proof continuation privately synchronized
 
 The complete reviewed continuation, including all new accepted proofs and retained research evidence, was privately pushed as b0d1b3721bc51984797e1138fb015d29156287bc. A separate read-only check at 2026-10-17T22:56:23.474904+00:00 confirmed local/origin HEAD equality, PRIVATE visibility and a clean project working tree. See records/runs/20261017T234500CEST-agent-continuation-POST_PUSH.md. The publication-pending sentence in the pre-push FINISH record is superseded by this receipt. MainStatement remains UNPROVED; the two hourly automations remain paused.
