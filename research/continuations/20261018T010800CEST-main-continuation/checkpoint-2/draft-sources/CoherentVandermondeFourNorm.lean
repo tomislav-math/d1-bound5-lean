@@ -1,0 +1,56 @@
+import D1Bound5.CoherentPolynomialWeights
+import Mathlib.Analysis.Complex.Basic
+
+open Finset
+
+namespace D1Bound5
+
+/-- The exact 24-monomial expansion of the four-anchor Vandermonde
+has the sorted modulus bound used in the direct-four estimate. -/
+theorem coherentVandermonde4_norm_le
+    (a : Fin 4 → ℂ)
+    (h01 : ‖a 0‖ ≤ ‖a 1‖) (h12 : ‖a 1‖ ≤ ‖a 2‖)
+    (h23 : ‖a 2‖ ≤ ‖a 3‖) :
+    ‖coherentVandermonde4 a‖ ≤ 24 * ‖a 1‖ * ‖a 2‖^2 * ‖a 3‖^3 := by
+  let v : Fin 24 → ℂ := ![(a 1 * a 2 * a 2 * a 3 * a 3 * a 3),
+    -(a 1 * a 2 * a 2 * a 2 * a 3 * a 3),
+    -(a 1 * a 1 * a 2 * a 3 * a 3 * a 3),
+    (a 1 * a 1 * a 2 * a 2 * a 2 * a 3),
+    (a 1 * a 1 * a 1 * a 2 * a 3 * a 3),
+    -(a 1 * a 1 * a 1 * a 2 * a 2 * a 3),
+    -(a 0 * a 2 * a 2 * a 3 * a 3 * a 3),
+    (a 0 * a 2 * a 2 * a 2 * a 3 * a 3),
+    (a 0 * a 1 * a 1 * a 3 * a 3 * a 3),
+    -(a 0 * a 1 * a 1 * a 2 * a 2 * a 2),
+    -(a 0 * a 1 * a 1 * a 1 * a 3 * a 3),
+    (a 0 * a 1 * a 1 * a 1 * a 2 * a 2),
+    (a 0 * a 0 * a 2 * a 3 * a 3 * a 3),
+    -(a 0 * a 0 * a 2 * a 2 * a 2 * a 3),
+    -(a 0 * a 0 * a 1 * a 3 * a 3 * a 3),
+    (a 0 * a 0 * a 1 * a 2 * a 2 * a 2),
+    (a 0 * a 0 * a 1 * a 1 * a 1 * a 3),
+    -(a 0 * a 0 * a 1 * a 1 * a 1 * a 2),
+    -(a 0 * a 0 * a 0 * a 2 * a 3 * a 3),
+    (a 0 * a 0 * a 0 * a 2 * a 2 * a 3),
+    (a 0 * a 0 * a 0 * a 1 * a 3 * a 3),
+    -(a 0 * a 0 * a 0 * a 1 * a 2 * a 2),
+    -(a 0 * a 0 * a 0 * a 1 * a 1 * a 3),
+    (a 0 * a 0 * a 0 * a 1 * a 1 * a 2)]
+  have heq : coherentVandermonde4 a = ∑ i, v i := by
+    simp [coherentVandermonde4, v, Fin.sum_univ_succ]
+    ring
+  have hv (i : Fin 24) : ‖v i‖ ≤ ‖a 1‖ * ‖a 2‖^2 * ‖a 3‖^3 := by
+    have heq : ‖a 1‖ * ‖a 2‖^2 * ‖a 3‖^3 =
+        ‖a 1‖ * ‖a 2‖ * ‖a 2‖ * ‖a 3‖ * ‖a 3‖ * ‖a 3‖ := by ring
+    rw [heq]
+    fin_cases i <;> simp only [v, Matrix.cons_val_zero, Matrix.cons_val_succ, norm_neg, norm_mul]
+    all_goals gcongr <;> linarith
+  rw [heq]
+  calc
+    ‖∑ i, v i‖ ≤ ∑ i, ‖v i‖ := norm_sum_le _ _
+    _ ≤ ∑ _i : Fin 24, ‖a 1‖ * ‖a 2‖^2 * ‖a 3‖^3 :=
+      Finset.sum_le_sum (fun i _ => hv i)
+    _ = _ := by simp; ring
+
+end D1Bound5
+
