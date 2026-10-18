@@ -1,0 +1,2228 @@
+{
+  "utc": "2026-10-18T04:19:56.528494+00:00",
+  "runtime_sha256": {
+    "queue": "5d084accd7ad27fdee68f6e9219c7e4dab19b0c574e74bee6b19e38a987f3943",
+    "ledger": "8fce0fa660e4503298f7cffeac951f8e2958efbb1c32556ab249fb04dd4f79fb",
+    "baseline": "553fef23a3b8bad09e4597f7ca3e6846ff02a281dbbda12f87c61973bc92bfc4"
+  },
+  "pell_status": {
+    "PellCFPrefixCheck": {
+      "sha256": "a5468d17d5b8fd8febaae9f486b606a6148827a88a3b76dca5782d036662adba",
+      "fingerprint": "181b7166efe20893b527d030027dbb5d0b0b2e9ae093562f7b2a356ba22c49d8",
+      "imports": [
+        "PellConvergentCompleteness"
+      ],
+      "in_queue": true,
+      "held": false,
+      "current_receipt": {
+        "accepted_build": true,
+        "seconds": 76.0037926249206,
+        "utc": "2026-10-18T02:19:12.754704+00:00",
+        "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellCFPrefixCheck-20261018T021756746310Z.log",
+        "source_sha256": "a5468d17d5b8fd8febaae9f486b606a6148827a88a3b76dca5782d036662adba",
+        "timed_out": false
+      },
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 8
+    },
+    "PellConvergentCompleteness": {
+      "sha256": "c43074daa228222fbe1ca798070304a8be11d05710c382ec9a9e73d7799c8266",
+      "fingerprint": "dd15521a3bc432f0f57951620794ccefdead22ac39cf596b12a5f3b75f1c3cc8",
+      "imports": [],
+      "in_queue": true,
+      "held": false,
+      "current_receipt": {
+        "accepted_build": true,
+        "seconds": 61.373704250436276,
+        "utc": "2026-10-18T02:12:11.313570+00:00",
+        "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellConvergentCompleteness-20261018T021109933088Z.log",
+        "source_sha256": "c43074daa228222fbe1ca798070304a8be11d05710c382ec9a9e73d7799c8266",
+        "timed_out": false
+      },
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 8
+    },
+    "PellFiniteCertificate": {
+      "sha256": "2bf16b7db5d3fcd397b763bbabe27877978ae5f84daeba0bc35f5d4e2272764f",
+      "fingerprint": "30a83cedc005913ffc20e6caea8d746bcceae5edad93f6401da0343bf3f644b1",
+      "imports": [
+        "PellCFPrefixCheck",
+        "PellMatchingCheck",
+        "UnitPairRealReduction",
+        "FullRingBridge"
+      ],
+      "in_queue": true,
+      "held": false,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData1": {
+      "sha256": "e587e7f84c2be8d0ac5b3c9f967af2f3d8dcf8b589c29f23a0a5481ddfb4c706",
+      "fingerprint": "c287693f8027970a12cec57dfdd78437f260d6e3cc92f5797a927a1c1336383c",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData1"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData10": {
+      "sha256": "ee7039bb1ac9ab3be4c000f08f84747f26df60a4305551469bdac32f810c24ec",
+      "fingerprint": "b4453aff33401994ffde3f9a9f543406e46352b8f4a07aa9a0de5cbe2ab0b77d",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData5"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData11": {
+      "sha256": "f4b171c8882f27a72cfab4b82e179bb0f11371e41a607ac10ac9dc626902998a",
+      "fingerprint": "8853ed42c1e85ce5fb988ddf0a780f864c1fcfbf9f4507233cfb940d8171d9b9",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData5",
+        "PellMatchingData6"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData12": {
+      "sha256": "23740e1dd751a7ae5eba51e2424b237fd33054476e79ef5b3df34c5580dac2c2",
+      "fingerprint": "eea07328ab74f2d64582f6f3c20be1867b4c6e508729922b1a0edbd0a33dec7f",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData6"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData13": {
+      "sha256": "b7cdd130428e74c6b2b5afa3d3c1f62d1995e9309f03a244cf2742d2ca7574de",
+      "fingerprint": "80b4ecf5a2ac7a55fea0bf33c731d8fc527206b3b6f4a0926f0e065b82cc55e8",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData6"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData14": {
+      "sha256": "8d2604de2e420588661ac721902192ae472ec117e113ea367eddfbfb23d3d000",
+      "fingerprint": "a3283de6f19ae68d9dfcd8fd95c12a3e28bc679e1f4a2eedc9b7c7d89f58d88d",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData6",
+        "PellMatchingData7"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData15": {
+      "sha256": "63942eb94ab0780dfe304c2ad1525e15227ff8807b6db04e92d4b3782fe209b8",
+      "fingerprint": "78142a8c8a92c6d7a7f54e257281eec654f761e079c64fb52be6bfc904859583",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData7"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData16": {
+      "sha256": "53c7b06318f25def4d46281c08f1b6a9fce9f9c45e4119477a26a72f726a24f2",
+      "fingerprint": "03170641c75a03f98313d94783fb91c5974b330ea0010f6156bfd8130e1fe25d",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData7"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData17": {
+      "sha256": "c390a81dd10e919894c5a4ec95364c7f0231b3653d0eacbfb6d75bcc8275353c",
+      "fingerprint": "ff6a5ba93a795f82ff9728c2731be80ded867c282470d79e72d1430bf4c0f897",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData7",
+        "PellMatchingData8"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData18": {
+      "sha256": "2d769cb2efa943ea1dfe3c796f124a9f63b10a836b405af8cf2d68e151e0112f",
+      "fingerprint": "68ae86db299b72d69f1a07df675579ee7fc4fb9caf0ab14be29e05136b445413",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData8"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData19": {
+      "sha256": "fef1508eaad01d8fc372585390af869ec0019006e130bb56740a5fe659a32797",
+      "fingerprint": "c25c73cbe68cc5077e59db081e61f907160e5085fe6ce9d33cc49508d3bdd265",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData8",
+        "PellMatchingData9"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData2": {
+      "sha256": "f95a7767b38ac03e0244fe01e8b1f254e98a21ed1ae79aa1f8516f83b11423ff",
+      "fingerprint": "7f4ea147845081e953eda55b4c56c4732046923f258650addc7208197e189fd3",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData1",
+        "PellMatchingData2"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData20": {
+      "sha256": "a3404059220ca7ed1d9705af045080c51b57512fbc0de7fdab9ee048698f8fe4",
+      "fingerprint": "1b796f972bd31e15464b9684bb84af8237a8fb5e7163c4775fa387ea8f45b9ea",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData9"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData21": {
+      "sha256": "62a471fb6ac15f8cc2381f62344d6eaba7bc5422463231bca069b44c970d34cb",
+      "fingerprint": "3e296f45a7b682343a8e23bcc6b7db627f0e82a8d9ad302f99f463e2976cc989",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData10",
+        "PellMatchingData9"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData22": {
+      "sha256": "2881bc249f64edb44d327529aa9538cb3d991c86fcc0d2a2656d2574ee41c5a3",
+      "fingerprint": "053853fd1ccc7f2e5805e03ca45686f356a8f8f015ac5ae844b70fc4f05e0ccf",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData10"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData23": {
+      "sha256": "938def5b0f26b8c2be8965c4f71d26ca3b0233029adfc8b842190d742d75ef34",
+      "fingerprint": "f03b9a8167a6773c4728c781c3f5029b0bfbd7ba9d30a13fc246b88ba9cfc664",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData10"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData24": {
+      "sha256": "3ff7a3a6542a0b96fa6b450decbe9feca12c8b845d176ad2eaf673aecdf31ead",
+      "fingerprint": "05b27786c3a56bc29a1544e20e5af1378c4964f29f966a0436770f91684fdf21",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData10",
+        "PellMatchingData11"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData25": {
+      "sha256": "8da654544a2c1b5240df4f4dcebbfde0755debbcc5f91ed93b7d2eb2aa0a19e3",
+      "fingerprint": "af2952348979402cb017120e1df159337e1528c47ede9d52370f22d67109c2c0",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData11"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData26": {
+      "sha256": "e79478adf336ef94f50695d81fe11cd2d2d8f14739f782ec9e14d5b557b1ef1b",
+      "fingerprint": "f6fc8d42641338cb5b6263cc291ee335baf2e7ec83d0119b01a551f937e1a937",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData11"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData27": {
+      "sha256": "c2b8483349c1a0300910b400eb1be3f2eb8e5021d9c5bdac8ef9d6dd7eaf9c21",
+      "fingerprint": "1f4418d90f02f5b30bba76fe5c13b5d1aa0390dffe2af8fe2e5338f4a1fccaa9",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData11",
+        "PellMatchingData12"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData28": {
+      "sha256": "bc19e2f0b28361254bae883521797c14d5ac40e175a8f4c7423a21729d3c5d9a",
+      "fingerprint": "91c2e0ae5e5ea8f8151e7e37969ec1efa645ca82a0c90aa943b6e54ed5f9c8f2",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData12"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData29": {
+      "sha256": "db556d7720452a62ff935b5726b7768d87df80f090eefef01257170a589dff70",
+      "fingerprint": "20b79c26992a33ab69da3827ecc49b247f224dacce3ef4114813c506a3437cc9",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData12",
+        "PellMatchingData13"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData3": {
+      "sha256": "83c00f7800d92b0aa021b4d31acdcbb539c98c337bf700e35323135eaa2d2dd9",
+      "fingerprint": "25ec51ffb4c3f8363058babb895f052af57c3d448d1651620dd1a67a19b100b8",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData2"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData30": {
+      "sha256": "9b35e33cfd85e54f76c99d89dcaf792a81467f7ae1fcde2348307f790a8fa583",
+      "fingerprint": "e7aba65cebe62587244b556ba6f52df0d5b92f7a6628434b2e68c3945e5aa02e",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData13"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData31": {
+      "sha256": "584ed12cfd3b9cacdf568855f79e0205293823aad4763cfad695f2a12abd2593",
+      "fingerprint": "c5eba6c4e75c670a52a6c383d6caedad217da173498639355d1da87f0048a897",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData13"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData32": {
+      "sha256": "93c1cb754ec24f2ff1e51ad55d7d8aad26d340f12142d53a56e7a3733540ecaf",
+      "fingerprint": "0e5ec35d4a765dab61376dc7f72880774bb29561100be40707f934c7521d0ccb",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData13",
+        "PellMatchingData14"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData33": {
+      "sha256": "7bdfa62a53f72f6a2576e905e7c18048a2544cf7e61493d61666cb6c69e4556d",
+      "fingerprint": "d4a368ef7698bb39f3786e27528955b13e61a23066f0e7a0f1fa1d3a820b971c",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData14"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData34": {
+      "sha256": "4a77ee2002651549fcf961943eb4b6508430b0e77a4c82f8fa28d4ec03e019eb",
+      "fingerprint": "19a0d207560fafe165cda8127f3f79a5e36b8486eef79b3fd74cb302056683d9",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData14",
+        "PellMatchingData15"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData35": {
+      "sha256": "535c1a40a423271111b87e652c5e46830f879954165f3beb5f339527f108849d",
+      "fingerprint": "9d78dbeddb58650ee3fd6eb363873c0df57b0db30824c308b6c1148cfe6f0195",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData15"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData36": {
+      "sha256": "612fcd59d8ada93fb310f27e3675198aae6792c638e5e1674e47b90b5776e293",
+      "fingerprint": "ed4a24c0cfbe2246fe054155200b17e230d9251ca0f3c6314b6f578314c53182",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData15"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData37": {
+      "sha256": "4c0becae89811e998a45efb1ab650c30d0096574edc42cd8958b28d5fd67286d",
+      "fingerprint": "7b8cac5da21789395e95caa1b8a14dec42eb06557d49506c9f29abcb5c97691c",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData16"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData38": {
+      "sha256": "f08632f8a2a7b11b352df5f2a75364ed75bd5b3fe8991e44409b0d1c2c6a64de",
+      "fingerprint": "95f2130486e7969cb62013b1ef28c240d51b77f6dafedef4e8c23f22a1b3e92b",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData16"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData39": {
+      "sha256": "f946f01abde951833f42db226366a8fc6162a2ecb5d98f0bb612c3d83a9f3a46",
+      "fingerprint": "273991dd9d6fcf01fc8717f88711cd3934acb155991e8a057c93fe7de3fb9aa8",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData16"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData4": {
+      "sha256": "39bbf389ddc5cd37b6f7a31a07d0bc471ed5672b3d2a36a12f1532d112bffe5a",
+      "fingerprint": "616de593a73a10fcbfe12b51b2476f758048da0a9b8c5fc6fa6bd177c8c87110",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData2",
+        "PellMatchingData3"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData40": {
+      "sha256": "d81bfb700a269fc7e79d7814edc66a6d6ae53f2d192aa07cbcbe900334a35459",
+      "fingerprint": "f6e926b7c95a9606ca074e66e89e4c628b980eec64ab853e82fb9963bde235b5",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData16",
+        "PellMatchingData17"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData41": {
+      "sha256": "cb6c909e4cfc146fc532bc0c5501f96f2f5bbdeae1ef4cdefde4163a35f0a130",
+      "fingerprint": "2b9597b7591c1aa574cc7ab8a94086dee96d48c4db6444a8ed715d78341e1a7a",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData17"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData42": {
+      "sha256": "2663ccb2344e83b97990e285b23d9428feb6ea65758e4e75d671ada0e4cddf12",
+      "fingerprint": "3d96dad921f1f9b1785332524c1fc187bf70485dd736e656a6da241a38f6e0aa",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData17",
+        "PellMatchingData18"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData43": {
+      "sha256": "5b9a925015a5257b0b3d9e2f22474276017ccf03b58e7d1ee152c13defc6ece3",
+      "fingerprint": "2f35a2b7319627dd12c9716dd8305fb701fc651c7c92b87be2cf074f9d1350b7",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData18"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData44": {
+      "sha256": "70962c61e6ec031aba6e980460cceaff4647f4da0c58d7c4ddeb8c66d0be9d29",
+      "fingerprint": "265ec803e9783ebcd43ddd796d2c856373107f3fef455a23c8ff9ce23391a3ed",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData18"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData45": {
+      "sha256": "11a6c0f45dbf2530581acb1e5a505e882365a1a74023245d2509df8a5ed35bc6",
+      "fingerprint": "89e3fe777bc2958b179d2d37dcb7fce8af43bf609d0b4ce3f43ffcc151d935f5",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData18",
+        "PellMatchingData19"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData46": {
+      "sha256": "c31783013ad5572ff8e1bafd0fb075d653d3d7532072516afb31f1c9f922ea2c",
+      "fingerprint": "803b40d3d9fa6fdeb6858417f49afbea1a76159dbe423ee5e7f9a48690ae76ef",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData19"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData47": {
+      "sha256": "efd9d896fab8aacc3f98d945bde5d32cbb04c96206a5991407510385b0b90341",
+      "fingerprint": "c1bd3ec8375659bf66d39e6cfc710d82e2a89f67c5e6c46cdd804276a18dadef",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData19",
+        "PellMatchingData20"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData48": {
+      "sha256": "35c89335fa7cc3f3a3f742b351aafcf3d92b1ed33d964f8ed11715487115573f",
+      "fingerprint": "e02c901a8a9f5fcf9d37472707f4f1e4bfee439485f5a45898744253fb8ad57a",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData20"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData49": {
+      "sha256": "b3257dfe036f5ecb526c5b1dc43a49db6406c9ca0a7cd41771ac4ea2a4801ca1",
+      "fingerprint": "9140f6a36d187b40131596638d87cfdfe54e715d1515f71bb20b4e232d2c61e1",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData20"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData5": {
+      "sha256": "85b650c7c20dc732b30d0f1ac30d3bc40c3ee777f45e1f1756520a55db5e6c21",
+      "fingerprint": "f252bede707f974118f1931a988dab73fbf7d6d2a82bb4621aeb64eba2b5eced",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData3"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData50": {
+      "sha256": "9aba8bc9f5d7de2fcaff049be3c1da87b55cf93544ae3ff9616041dc27f0be27",
+      "fingerprint": "aec6b5a8994a5e6de8277f3621c3fc328d5feff12903a75f8c3c9320bcd6b355",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData20",
+        "PellMatchingData21"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData51": {
+      "sha256": "de13e40957a093e112350624f263657bb93e055e449063ad69d137d0d8b52b11",
+      "fingerprint": "818f449c9810ed92b2fc5bac80d9195d086b1da1d38d83ba844096ff3c21a819",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData21"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData52": {
+      "sha256": "8b9d5c21bd00ad7c5f4d733d807bbdd3342d92789645819fad195017e9bd9408",
+      "fingerprint": "b04a0c8fe3ef0500ed102ebea4131cff121432887c75603ca8b6a3fa4ae0cb10",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData21",
+        "PellMatchingData22"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData53": {
+      "sha256": "38925f0ec99917f96306457a3ba5b19c0e0cab5ae61f41485805209fb9e0929c",
+      "fingerprint": "9d72763b8e26e373e6847a1f279717b085c2f6a9d2794158f4aa97bc69aa0204",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData22"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData54": {
+      "sha256": "0ab773dc13c1debe864893b8ca3f22578206a78e6d8ea2c63de711924bc83885",
+      "fingerprint": "7e1361f914938284a7c9f70692867dbdbfb323e0ef9ae08338852d44445eb6f5",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData22"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData55": {
+      "sha256": "3a08fbbab15c5d703d53a5369a3918536d296b91b24b6f99f25f70cccac8a2b4",
+      "fingerprint": "12dd53d97a32fca9e0f8a334d4ac546fc73ebc7c425a9bd5397e6217dc185513",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData22",
+        "PellMatchingData23"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData56": {
+      "sha256": "4449d3e7c8d7d099bd829ffd68e8967043dce26357e8c190e2c09091b5705a48",
+      "fingerprint": "452a794b9df167b5f94f0fe8779b3518205500d0bf514369cd718550aa383e4f",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData23"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData57": {
+      "sha256": "a4d25d0dc78f8a49c62944bb993d8bdbd8da98c1e6e158e2bcde8d59bcc78a9a",
+      "fingerprint": "d75d5f61a9b949c4b0e3152f60d13ff56614a441a2784bec22da3abe0bbc3c0a",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData23"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData58": {
+      "sha256": "1da6cc270d628ccfad9a9cb5c4ba04d719af913cdb2e1a4397c678c4cd6f904e",
+      "fingerprint": "b9b622da870cefca1f40d450c78d7ce48134bb12541f32917bcf029905e23733",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData23",
+        "PellMatchingData24"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData59": {
+      "sha256": "2fe34272b55fe0a95f73d2e41c45b0f2278b8ea91ae12c1ff89705e846a04741",
+      "fingerprint": "4be7c5e8c7fd7a05214a5b009cbcd84e436a147123c60674c603714fc0d38dd1",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData24"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData6": {
+      "sha256": "b8031d1f3d35b281db294ec96be148cb272a1163d3dc366dadf722d03a3f7d07",
+      "fingerprint": "7266a6647ddb3cf4bb2c9aa589efb3cd300e14c7b68945777031b334b24b4666",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData3"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData60": {
+      "sha256": "fe439f1eaf916732b35fc86696044470bf44c19f6bb32aa596c1f328fe65e29e",
+      "fingerprint": "6613bd19a072c704ebec667c86f83b52b2fa85fc4ac9f3fb4761661068d98d3c",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData24",
+        "PellMatchingData25"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData61": {
+      "sha256": "8ce8e43724d6a93d82c9057da707251206dc0921be799d8a2b4997b19694f769",
+      "fingerprint": "28f7df85a56ee9118ccc228b179fefdf6ed424d504986195e8f19441233878ed",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData25"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData62": {
+      "sha256": "6790cc8d77a85e374177f6f1e5953f1a6b6041622ae0ee9fce5f7d47c411fbbc",
+      "fingerprint": "674845691ffdf0db5e700f3ed500330c4c6e7d2674b9d1169e33934e2babe412",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData25"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData63": {
+      "sha256": "cdbbc89bac8f15584824e1043017e4a43a8675cb203a448c50359a7346d70464",
+      "fingerprint": "7c504f6e3c24a6e198061ce08f9aa083cfee08df93cfcb5e85c2aab56e918f11",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData26"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData64": {
+      "sha256": "3cf0d233bf9fbb39328aabfd35a63e18bce51587f891bf20e77c77c62711f5be",
+      "fingerprint": "fc3fdbbc2d4cce45f93ebd69bcf6d1e4667436c78977f49962bba7625507bcfb",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData26"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData7": {
+      "sha256": "6e42fc03bcc2ebeeed8bddb6179db6c2b2eff507e7a01787e8a515bff6561e57",
+      "fingerprint": "ab55cf26430236b3a5b2b2fa78bae54a1567c8f7d9ab3974c6651ff6b08598a0",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData3",
+        "PellMatchingData4"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData8": {
+      "sha256": "6b32c6b510404f8cd9a4780738fe5f526117a63da89a12a61e122fb935e69b75",
+      "fingerprint": "dc07adf952ddfb59c4ed3a72fd3c26731edc09d67e559b57149b6715e0f29815",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData4"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteData9": {
+      "sha256": "40f33ee23747a501eb4258e0a4833ea569f1d517571d6e2e039398da8a31fe9e",
+      "fingerprint": "43988977be2dcc2a17d8f23f76e49e47824f5f3911374e0b224a3e4fb6b2438a",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingData4",
+        "PellMatchingData5"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFiniteFields": {
+      "sha256": "d53a205f458a39f63b2d2b0ce79839340264ea820b70ceb4cbf43cac88971728",
+      "fingerprint": "dbb79b56691c07adf8a2e93a367332a3579e0a11998057200f8327d7d83f64c5",
+      "imports": [
+        "PellFinitePilot",
+        "PellFiniteData1",
+        "PellFiniteData2",
+        "PellFiniteData3",
+        "PellFiniteData4",
+        "PellFiniteData5",
+        "PellFiniteData6",
+        "PellFiniteData7",
+        "PellFiniteData8",
+        "PellFiniteData9",
+        "PellFiniteData10",
+        "PellFiniteData11",
+        "PellFiniteData12",
+        "PellFiniteData13",
+        "PellFiniteData14",
+        "PellFiniteData15",
+        "PellFiniteData16",
+        "PellFiniteData17",
+        "PellFiniteData18",
+        "PellFiniteData19",
+        "PellFiniteData20",
+        "PellFiniteData21",
+        "PellFiniteData22",
+        "PellFiniteData23",
+        "PellFiniteData24",
+        "PellFiniteData25",
+        "PellFiniteData26",
+        "PellFiniteData27",
+        "PellFiniteData28",
+        "PellFiniteData29",
+        "PellFiniteData30",
+        "PellFiniteData31",
+        "PellFiniteData32",
+        "PellFiniteData33",
+        "PellFiniteData34",
+        "PellFiniteData35",
+        "PellFiniteData36",
+        "PellFiniteData37",
+        "PellFiniteData38",
+        "PellFiniteData39",
+        "PellFiniteData40",
+        "PellFiniteData41",
+        "PellFiniteData42",
+        "PellFiniteData43",
+        "PellFiniteData44",
+        "PellFiniteData45",
+        "PellFiniteData46",
+        "PellFiniteData47",
+        "PellFiniteData48",
+        "PellFiniteData49",
+        "PellFiniteData50",
+        "PellFiniteData51",
+        "PellFiniteData52",
+        "PellFiniteData53",
+        "PellFiniteData54",
+        "PellFiniteData55",
+        "PellFiniteData56",
+        "PellFiniteData57",
+        "PellFiniteData58",
+        "PellFiniteData59",
+        "PellFiniteData60",
+        "PellFiniteData61",
+        "PellFiniteData62",
+        "PellFiniteData63",
+        "PellFiniteData64"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellFinitePilot": {
+      "sha256": "d641c1d72a9eabbb940319d37c8f8a94f8c5a3feaa207c284b496d69f8223ac7",
+      "fingerprint": "a2bf0ebfc5f069ab811ff34941aa4f5ae28332c0edce5c4cda06038d19ffaa90",
+      "imports": [
+        "PellFiniteCertificate",
+        "PellMatchingPilot"
+      ],
+      "in_queue": true,
+      "held": false,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingCheck": {
+      "sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+      "fingerprint": "1a4825179ddde69ef1131403ac3c9ef42e52489e60084860da492796cf3daea7",
+      "imports": [],
+      "in_queue": true,
+      "held": false,
+      "current_receipt": {
+        "accepted_build": true,
+        "seconds": 105.34562387457117,
+        "utc": "2026-10-18T01:11:57.423496+00:00",
+        "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingCheck-20261018T011012Z.log",
+        "source_sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+        "timed_out": false
+      },
+      "trusted_baseline_current": true,
+      "artifact_manifest_count": 8
+    },
+    "PellMatchingData1": {
+      "sha256": "4e50cd4ea81386b59a97b6de37846d484690780955d264313684ef33f9699869",
+      "fingerprint": "c4963f45df5a4ab878ad6df03dd3c598636428cab01bafe43aea6e6d2af24fa4",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData10": {
+      "sha256": "ba809583d03629d83554522dfd457cb152e1a2def909bf1d9ad41e706a2c336d",
+      "fingerprint": "1a282ced4c3847cd5c82d65b8504be2ca0bad956e24669e9ef21ef534880388a",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData11": {
+      "sha256": "7f2d9a100074c01a0c05f6a695ff67c85adc780cd0f25b03dd4bfeb96d60b593",
+      "fingerprint": "56df3b84054ffe3d25d5f82560a8f8caa2853c7fa74391dde0c79d855d2bf6a0",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData12": {
+      "sha256": "2c6d733d8b595031e52ce4cdc110f21eee5257894e156d775bc44e7b03fde496",
+      "fingerprint": "442032ed96e88baf427663c32c05c72b3e79a9501c5967a2a7288c059d81a66a",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData13": {
+      "sha256": "e65aa5e86e6e975f772edbc21fd39b60388d9688c49fac31ba8b5a39623f55d5",
+      "fingerprint": "1ad02df5d38f8e549b802326b36fed8ee79c644a2c2a6854d780a26108a780e6",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData14": {
+      "sha256": "635380a543d79fe6bdfe2e94a4ee77d8415b64a7e4158799feff228f47f0b399",
+      "fingerprint": "d9950647f02430c363aeb8dd7f770d98dace0dbb39abe1dc0738332535392232",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData15": {
+      "sha256": "b5d47ffea461a5c31fae9c700286cad26a9dcebaaa5ba8fe3e90051b2bd579ec",
+      "fingerprint": "65f737c7ac8c991833df68d181fc061dac1c4395aad60c14eecade89126a28d7",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData16": {
+      "sha256": "a99ecca18435c9da2a1e93bae4511218ecf8565dd964c2bf2c7f8964878346ae",
+      "fingerprint": "1db931e84a6ff0075c2aebb2ff4eb0f384217f38806221a61071e18048d022ff",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData17": {
+      "sha256": "4bf3fbb7ee5eacfa16e80f6a6b05d6875116466e7fb2f68df4660ae03659205d",
+      "fingerprint": "5e509eb43adc4525428ef66e15b0902a3b8aa9ffff7a39a83e37e7745caf5cd7",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData18": {
+      "sha256": "bba7bb5f2a62a148964d6eb663e96f1c9bb2fdddebb9e6e03ba6ec11bcc56386",
+      "fingerprint": "65abf57d886a9ac3f1392a1d7f7b54cd6531c11d48369c0b79e14e3d5ea0ab64",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData19": {
+      "sha256": "1c7d25735e2301ddad84446965bb527ff66aab77d3ed0becfc7c029162c5a542",
+      "fingerprint": "6af63af0565d75ddd8e1d9343ae6ec2e0e798379a77e19a28f4c3b40e4941e78",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData2": {
+      "sha256": "603fbbad5cd1f676c7b5d4f05678ed0716cc31e766487aa81dad2e9d405d3d73",
+      "fingerprint": "f580e791196f48bc1ec0d908d6b00b85bd788c1ff24d6542b597f5c13f4001ee",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData20": {
+      "sha256": "af0547746404b38f6d3555e80021368512af9efc29515cace98025f0f2b24d31",
+      "fingerprint": "b7dcc6ef220ba01afdb4b8df3410da176c5ba3348b1670756b4448e45e7f2a65",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData21": {
+      "sha256": "7d614c3fbe1e4814583a29cc8abe85f31476ecb4d0016cc705e807bd599fc4c9",
+      "fingerprint": "c787d3425ed6c1adedcf0d2ff221fdecdc55f77de2e1cc61ccb541b05bcc3107",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData22": {
+      "sha256": "662ded95e73d7d5d3bbc0abb752940ad57c5dfbee8805bfc73ff45409d4809f6",
+      "fingerprint": "02e8f40ada44a0d723472e8499665bdd1a643841d31bb559da73cae862b0dfc2",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData23": {
+      "sha256": "44030395db98c4d7293df17e3bb158c3e0d44525262c69b0892e9d75665e8141",
+      "fingerprint": "1fc1117336e43013eef7af79d456cd87b09d48e7569a5e09ab6a05d5dfd76bd6",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData24": {
+      "sha256": "91118e19e5aac28f4b1258eaad6fc9572996fc530ca0082533d45205a97f2a18",
+      "fingerprint": "d22e2681bf63861126c01bc1e9c4715d7169fa0be89526a92c64be8ea6e94409",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData25": {
+      "sha256": "281a3fbef51a97e71bda046a9377b9cf8b2aed9f9085c2cd431471ea345bc635",
+      "fingerprint": "ad5b0d0f59f3eac94a05ec5a6519dbddcd356d83fb3e3b78f09a37f25f219cf1",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData26": {
+      "sha256": "f64ecc1be0640e1286dff258971eba3a4d2bad546a2087027c5f9720e4c4de3c",
+      "fingerprint": "41853d8f3c7d776cb994c198b93a3d8f03b49140e60e612bc3b7cfdce182dd0a",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData3": {
+      "sha256": "ebbed025e58033ddcdd4e28192a00f65fb88db7128c0b6186abf4ad4ca1d74f8",
+      "fingerprint": "a4dc93d1103a16b51b12ce74c9f4a076ea3762b2135ed1f64a5f072d07d41c65",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData4": {
+      "sha256": "9fa8f09d4510acf1eae16dec898cd3ea2b5309df8e2d62601f2e37fa8609b71e",
+      "fingerprint": "d0d3a9ba330426999ddddfc456f1d2e9496fed7c2455a1be6b0ed18123d779a6",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData5": {
+      "sha256": "6207c3c37fa471af71b19be5908ee3d0eaca09cbaf022bde99d1ec41845dd3ac",
+      "fingerprint": "3f95f022060e98cdbba54dde17c244b88d57f451c0e305a95072b45721de2c51",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData6": {
+      "sha256": "3d19bea566e9060fa01501f308b69f6b963324cb8c806083e0f19b0d3077f675",
+      "fingerprint": "6e0c6c6e8e2506e28fbce88fb46eef4295beede65d56cc8d123a13dfe9c99928",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData7": {
+      "sha256": "c6853723db6fb9c4ad7c33e6138686280446e9b2f3de0fdd2e4b6bf293dd5a23",
+      "fingerprint": "be17616a8587256325515e92fa15fd62c50b9746fe71afd17942faa99c161eaf",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData8": {
+      "sha256": "ff582c497d2c1073c010032579cd6b80a3f28e75ae350c507e27ee2f3ff36ed9",
+      "fingerprint": "c990a638a30300a5293d76e84e7a0245aedbd9bb849a2a4efcb32a0acd507446",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingData9": {
+      "sha256": "91845471f1238dc7bee0d333fb6787d20faad638c3278d5adb5d07557b506dfe",
+      "fingerprint": "32e1c0134a3de985a17337f0fb5fda12caf8ab0d6fc991cfc1f5a610e6d5495b",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    },
+    "PellMatchingPilot": {
+      "sha256": "b3354d245d028c0332eb8923755ca62c393732ccc165dfddfa48128283c5db65",
+      "fingerprint": "2000229894a41d085fe0c5118a8a17959051478fe9ae07c27c9a3ab19300bf04",
+      "imports": [
+        "PellMatchingCheck"
+      ],
+      "in_queue": true,
+      "held": false,
+      "current_receipt": {
+        "accepted_build": true,
+        "seconds": 83.3203677921556,
+        "utc": "2026-10-18T01:13:21.621751+00:00",
+        "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingPilot-20261018T011158Z.log",
+        "source_sha256": "b3354d245d028c0332eb8923755ca62c393732ccc165dfddfa48128283c5db65",
+        "timed_out": false
+      },
+      "trusted_baseline_current": true,
+      "artifact_manifest_count": 8
+    },
+    "PellUnitPairBounded": {
+      "sha256": "1d8bb8dadbd286e45dfc5179488d68a8ffa6de0657142440b2b3042e3e431b70",
+      "fingerprint": "18334c26c76dc10dcd3586c4ab755fb4eef4e40ac3d9713fc5d2630e477ea7e8",
+      "imports": [
+        "PellFiniteFields",
+        "UnitPairFieldBound"
+      ],
+      "in_queue": false,
+      "held": true,
+      "current_receipt": null,
+      "trusted_baseline_current": false,
+      "artifact_manifest_count": 0
+    }
+  },
+  "dependency_details": {
+    "PellMatchingData26": {
+      "PellMatchingCheck": {
+        "sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+        "fingerprint": "1a4825179ddde69ef1131403ac3c9ef42e52489e60084860da492796cf3daea7",
+        "imports": [],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 105.34562387457117,
+          "utc": "2026-10-18T01:11:57.423496+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingCheck-20261018T011012Z.log",
+          "source_sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+          "timed_out": false
+        },
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      }
+    },
+    "PellFiniteCertificate": {
+      "PellCFPrefixCheck": {
+        "sha256": "a5468d17d5b8fd8febaae9f486b606a6148827a88a3b76dca5782d036662adba",
+        "fingerprint": "181b7166efe20893b527d030027dbb5d0b0b2e9ae093562f7b2a356ba22c49d8",
+        "imports": [
+          "PellConvergentCompleteness"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 76.0037926249206,
+          "utc": "2026-10-18T02:19:12.754704+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellCFPrefixCheck-20261018T021756746310Z.log",
+          "source_sha256": "a5468d17d5b8fd8febaae9f486b606a6148827a88a3b76dca5782d036662adba",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "PellConvergentCompleteness": {
+        "sha256": "c43074daa228222fbe1ca798070304a8be11d05710c382ec9a9e73d7799c8266",
+        "fingerprint": "dd15521a3bc432f0f57951620794ccefdead22ac39cf596b12a5f3b75f1c3cc8",
+        "imports": [],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 61.373704250436276,
+          "utc": "2026-10-18T02:12:11.313570+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellConvergentCompleteness-20261018T021109933088Z.log",
+          "source_sha256": "c43074daa228222fbe1ca798070304a8be11d05710c382ec9a9e73d7799c8266",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "PellMatchingCheck": {
+        "sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+        "fingerprint": "1a4825179ddde69ef1131403ac3c9ef42e52489e60084860da492796cf3daea7",
+        "imports": [],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 105.34562387457117,
+          "utc": "2026-10-18T01:11:57.423496+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingCheck-20261018T011012Z.log",
+          "source_sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+          "timed_out": false
+        },
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "UnitPairRealReduction": {
+        "sha256": "cd94773a437964063bac7ab2166363cc91e6f7def1cf54462389c1582fed23d0",
+        "fingerprint": "800f4f873f421d8cabbcf43265e5a983e9911b9f1ca3cdf6e50b91e5b15eaa03",
+        "imports": [
+          "UnitPairArithmeticModel",
+          "UnitPairPellParity"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "UnitPairArithmeticModel": {
+        "sha256": "7e9aec028480b50c2cb220094e0e90211007d0ea28f519db94089e93d0ea1c55",
+        "fingerprint": "2e0583005fae172673c58fcc1815bcab54c6d015ea376288ec429b4fdcb0b4cf",
+        "imports": [
+          "UnitPairPellBounds",
+          "OneThreeNegative",
+          "UnitPairSymmetric"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "UnitPairPellBounds": {
+        "sha256": "1178dc6a1d489f674cee08cf292f50fddb6f3feea7fb0740aede10bca22fc23b",
+        "fingerprint": "59eac6e314372429432797c4929235399cf6b8e7f6cc6c76b076b331eae2ab90",
+        "imports": [
+          "FullRingUnitPairPell"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "FullRingUnitPairPell": {
+        "sha256": "acf5fd1a1e92192060d5a61d38f1baec77bc13af3dbc3770ebd76174375951b8",
+        "fingerprint": "96dc3dd802f016764eda52d856701b34786578cd95377fed4601120531845a96",
+        "imports": [
+          "UnitPairPellClassification"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "UnitPairPellClassification": {
+        "sha256": "ed563d0e0ef72594c7e02ac4b7f74ecee2b8f06a15744f42426fbaf31c5404db",
+        "fingerprint": "e3c2fc3f78eefa15b0f22f1489b610832baea71225fc18f256563fa26f9160b5",
+        "imports": [
+          "UnitPairAxes",
+          "MaximalCoordinates"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": false,
+          "seconds": 68.53854541713372,
+          "utc": "2026-10-18T04:19:07.620063+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/UnitPairPellClassification-20261018T041759080392Z.log",
+          "source_sha256": "ed563d0e0ef72594c7e02ac4b7f74ecee2b8f06a15744f42426fbaf31c5404db",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 1
+      },
+      "UnitPairAxes": {
+        "sha256": "962949e26b960ded71475c07a864292143df862dfb3852bf3e50c4c82e49d4cf",
+        "fingerprint": "f335eee4f52071bfe796df05b18d7d21059b298760760b9dfeb7a9cd287f8736",
+        "imports": [
+          "FullRingBridge"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 92.04018887504935,
+          "utc": "2026-10-18T03:23:40.425418+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/UnitPairAxes-20261018T032208385178Z.log",
+          "source_sha256": "962949e26b960ded71475c07a864292143df862dfb3852bf3e50c4c82e49d4cf",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "FullRingBridge": {
+        "sha256": "dc7878b5987408dc5ad74248ad83af5608a906791f27df468ed3d05ac252ac2f",
+        "fingerprint": "c0ab2c81766025e0fc17e7ff3cd52cd76d9bff55d5c469a4ec39a1ceea93b373",
+        "imports": [
+          "FullRingBasis",
+          "ComplexCoordinates",
+          "Specification",
+          "OneThree"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "FullRingBasis": {
+        "sha256": "7a7a55f350ab7d5224275914efa11b126ec34a9ae9cc9e505c2669503411924c",
+        "fingerprint": "07559ca9dd4c06f4193e1295232a1a47151bd6d4da1a64a23401260180054943",
+        "imports": [
+          "CoordinateChange"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "CoordinateChange": {
+        "sha256": "9b6bb34c1875a40d3412565a34153ddaa67227fb9054d869e7926e05c690437d",
+        "fingerprint": "f47cf042ba69f44acbcc605e50bbd03ea4357ae5a39d9fad4a16719cb970d624",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "Coordinates": {
+        "sha256": "da0cb0c42a6044e813dcdaaa1831735e6baddba8fa16b037f5289e53bcfae065",
+        "fingerprint": "306ea3305df361f880373523ae183f100d16fe55da7aace2cf1abbdc09d20431",
+        "imports": [],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "ComplexCoordinates": {
+        "sha256": "1683447b1e232bc1f4d7a3f22a33ac3030c9c47df02e5a5ff8d90857c32c1858",
+        "fingerprint": "7226b095222adc68a2a7b5d76464f53e5610fdc0f7b166b1a44449fe5d1a5df5",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "Specification": {
+        "sha256": "60d7ff20e6ffc449c6452bceb3b22f98c1db628f9ed34831c674a58bbcf40b50",
+        "fingerprint": "e2578274086e117306a7eea76b2f9be9c5aa96afd9d5b50368d5efaaa8dec674",
+        "imports": [
+          "Basic"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "Basic": {
+        "sha256": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+        "fingerprint": "3624b1b7c4eaa177d938168cce9c9e8ef4217e6a289f2732f82253d82c5c0dc9",
+        "imports": [],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "OneThree": {
+        "sha256": "c460b2250b70545a8f61a27e15dc979839749602cbbccd3fc8fadf6e21e02682",
+        "fingerprint": "a1a97e9d3bc5952bdfa5993972a746360ad3d5ad49eab44f7f894437b1ca0bc7",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "MaximalCoordinates": {
+        "sha256": "db32306018b4cc9c601d0bd15648a6675ec234d51750d3dd04f9988129483527",
+        "fingerprint": "1eb325d0fbc6587634572c2053082381ab50205505d2d843318fd3db32e79dec",
+        "imports": [
+          "FullRingBasis"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "OneThreeNegative": {
+        "sha256": "608590903d9651b83081c7c7b14962c497bd29944ae7411568eb23eee5734f08",
+        "fingerprint": "406d22376e3f6723163e80bac1f9062161f59e72592048f4faf324d600cb595d",
+        "imports": [
+          "FullRingRationalSquares"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 75.78888199990615,
+          "utc": "2026-10-17T23:53:55.531795+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/OneThreeNegative-20261017T235239Z.log",
+          "source_sha256": "608590903d9651b83081c7c7b14962c497bd29944ae7411568eb23eee5734f08",
+          "timed_out": null
+        },
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "FullRingRationalSquares": {
+        "sha256": "5e6a9ffe5db3306b6d3f7e27d41771f8b8cc8d19bc56609362cb3ac1f5ebd2ab",
+        "fingerprint": "d523d8253ce1910519bb01e035bbfbaa90d6902a58afc80eeab26bf62c87e94b",
+        "imports": [
+          "RationalSquares",
+          "FullRingClassification"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "RationalSquares": {
+        "sha256": "4cd56ab129029a6551801f8c22878c2598ef5298b732a909ebb1ad48e70f5e58",
+        "fingerprint": "8b8c52c52660721158e10e066529a33164bac10bbe332f95d68f614cb393a096",
+        "imports": [
+          "SquareTest"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "SquareTest": {
+        "sha256": "adcc13a33378056841f44d21785e69909232e4def68eb73ca742e5a49ce15ac3",
+        "fingerprint": "dd54b95c8ce7858098e3f1f09735dc958bb1009d73a08036a023d10f007a6b3e",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "FullRingClassification": {
+        "sha256": "e53f31704f6ab515c54419ab5c745dab013cec5002a43430a644fe0477662aea",
+        "fingerprint": "8c6a3a71ad057e227634bb026e3118031eb78bd6e364dd04ed863b97ba92c3a5",
+        "imports": [
+          "FullRingBridge",
+          "MaximalCoordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "UnitPairSymmetric": {
+        "sha256": "695ec9ac631f60966fa825624a829a3fc795041a1c15a2f07c5f310997593968",
+        "fingerprint": "819d10c43b1a7cbb89995275674efa112092f9466736ecf73925bd40df663ad3",
+        "imports": [
+          "FullRingBridge"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 71.05874212505296,
+          "utc": "2026-10-18T03:24:51.681116+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/UnitPairSymmetric-20261018T032340619165Z.log",
+          "source_sha256": "695ec9ac631f60966fa825624a829a3fc795041a1c15a2f07c5f310997593968",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "UnitPairPellParity": {
+        "sha256": "c3ddfaf5f52b6eb5e200c691ed8fef73987c7bcf94ceaba681f82626823199bf",
+        "fingerprint": "ea39e92906033de233ddb4a12cd17ca89025af2834dfcdbfb38d4c53301dbf0b",
+        "imports": [
+          "UnitPairPellBounds",
+          "FullRingRationalSquares"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      }
+    },
+    "PellFinitePilot": {
+      "PellFiniteCertificate": {
+        "sha256": "2bf16b7db5d3fcd397b763bbabe27877978ae5f84daeba0bc35f5d4e2272764f",
+        "fingerprint": "30a83cedc005913ffc20e6caea8d746bcceae5edad93f6401da0343bf3f644b1",
+        "imports": [
+          "PellCFPrefixCheck",
+          "PellMatchingCheck",
+          "UnitPairRealReduction",
+          "FullRingBridge"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "PellCFPrefixCheck": {
+        "sha256": "a5468d17d5b8fd8febaae9f486b606a6148827a88a3b76dca5782d036662adba",
+        "fingerprint": "181b7166efe20893b527d030027dbb5d0b0b2e9ae093562f7b2a356ba22c49d8",
+        "imports": [
+          "PellConvergentCompleteness"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 76.0037926249206,
+          "utc": "2026-10-18T02:19:12.754704+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellCFPrefixCheck-20261018T021756746310Z.log",
+          "source_sha256": "a5468d17d5b8fd8febaae9f486b606a6148827a88a3b76dca5782d036662adba",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "PellConvergentCompleteness": {
+        "sha256": "c43074daa228222fbe1ca798070304a8be11d05710c382ec9a9e73d7799c8266",
+        "fingerprint": "dd15521a3bc432f0f57951620794ccefdead22ac39cf596b12a5f3b75f1c3cc8",
+        "imports": [],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 61.373704250436276,
+          "utc": "2026-10-18T02:12:11.313570+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellConvergentCompleteness-20261018T021109933088Z.log",
+          "source_sha256": "c43074daa228222fbe1ca798070304a8be11d05710c382ec9a9e73d7799c8266",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "PellMatchingCheck": {
+        "sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+        "fingerprint": "1a4825179ddde69ef1131403ac3c9ef42e52489e60084860da492796cf3daea7",
+        "imports": [],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 105.34562387457117,
+          "utc": "2026-10-18T01:11:57.423496+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingCheck-20261018T011012Z.log",
+          "source_sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+          "timed_out": false
+        },
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "UnitPairRealReduction": {
+        "sha256": "cd94773a437964063bac7ab2166363cc91e6f7def1cf54462389c1582fed23d0",
+        "fingerprint": "800f4f873f421d8cabbcf43265e5a983e9911b9f1ca3cdf6e50b91e5b15eaa03",
+        "imports": [
+          "UnitPairArithmeticModel",
+          "UnitPairPellParity"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "UnitPairArithmeticModel": {
+        "sha256": "7e9aec028480b50c2cb220094e0e90211007d0ea28f519db94089e93d0ea1c55",
+        "fingerprint": "2e0583005fae172673c58fcc1815bcab54c6d015ea376288ec429b4fdcb0b4cf",
+        "imports": [
+          "UnitPairPellBounds",
+          "OneThreeNegative",
+          "UnitPairSymmetric"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "UnitPairPellBounds": {
+        "sha256": "1178dc6a1d489f674cee08cf292f50fddb6f3feea7fb0740aede10bca22fc23b",
+        "fingerprint": "59eac6e314372429432797c4929235399cf6b8e7f6cc6c76b076b331eae2ab90",
+        "imports": [
+          "FullRingUnitPairPell"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "FullRingUnitPairPell": {
+        "sha256": "acf5fd1a1e92192060d5a61d38f1baec77bc13af3dbc3770ebd76174375951b8",
+        "fingerprint": "96dc3dd802f016764eda52d856701b34786578cd95377fed4601120531845a96",
+        "imports": [
+          "UnitPairPellClassification"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "UnitPairPellClassification": {
+        "sha256": "ed563d0e0ef72594c7e02ac4b7f74ecee2b8f06a15744f42426fbaf31c5404db",
+        "fingerprint": "e3c2fc3f78eefa15b0f22f1489b610832baea71225fc18f256563fa26f9160b5",
+        "imports": [
+          "UnitPairAxes",
+          "MaximalCoordinates"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": false,
+          "seconds": 68.53854541713372,
+          "utc": "2026-10-18T04:19:07.620063+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/UnitPairPellClassification-20261018T041759080392Z.log",
+          "source_sha256": "ed563d0e0ef72594c7e02ac4b7f74ecee2b8f06a15744f42426fbaf31c5404db",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 1
+      },
+      "UnitPairAxes": {
+        "sha256": "962949e26b960ded71475c07a864292143df862dfb3852bf3e50c4c82e49d4cf",
+        "fingerprint": "f335eee4f52071bfe796df05b18d7d21059b298760760b9dfeb7a9cd287f8736",
+        "imports": [
+          "FullRingBridge"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 92.04018887504935,
+          "utc": "2026-10-18T03:23:40.425418+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/UnitPairAxes-20261018T032208385178Z.log",
+          "source_sha256": "962949e26b960ded71475c07a864292143df862dfb3852bf3e50c4c82e49d4cf",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "FullRingBridge": {
+        "sha256": "dc7878b5987408dc5ad74248ad83af5608a906791f27df468ed3d05ac252ac2f",
+        "fingerprint": "c0ab2c81766025e0fc17e7ff3cd52cd76d9bff55d5c469a4ec39a1ceea93b373",
+        "imports": [
+          "FullRingBasis",
+          "ComplexCoordinates",
+          "Specification",
+          "OneThree"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "FullRingBasis": {
+        "sha256": "7a7a55f350ab7d5224275914efa11b126ec34a9ae9cc9e505c2669503411924c",
+        "fingerprint": "07559ca9dd4c06f4193e1295232a1a47151bd6d4da1a64a23401260180054943",
+        "imports": [
+          "CoordinateChange"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "CoordinateChange": {
+        "sha256": "9b6bb34c1875a40d3412565a34153ddaa67227fb9054d869e7926e05c690437d",
+        "fingerprint": "f47cf042ba69f44acbcc605e50bbd03ea4357ae5a39d9fad4a16719cb970d624",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "Coordinates": {
+        "sha256": "da0cb0c42a6044e813dcdaaa1831735e6baddba8fa16b037f5289e53bcfae065",
+        "fingerprint": "306ea3305df361f880373523ae183f100d16fe55da7aace2cf1abbdc09d20431",
+        "imports": [],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "ComplexCoordinates": {
+        "sha256": "1683447b1e232bc1f4d7a3f22a33ac3030c9c47df02e5a5ff8d90857c32c1858",
+        "fingerprint": "7226b095222adc68a2a7b5d76464f53e5610fdc0f7b166b1a44449fe5d1a5df5",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "Specification": {
+        "sha256": "60d7ff20e6ffc449c6452bceb3b22f98c1db628f9ed34831c674a58bbcf40b50",
+        "fingerprint": "e2578274086e117306a7eea76b2f9be9c5aa96afd9d5b50368d5efaaa8dec674",
+        "imports": [
+          "Basic"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "Basic": {
+        "sha256": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+        "fingerprint": "3624b1b7c4eaa177d938168cce9c9e8ef4217e6a289f2732f82253d82c5c0dc9",
+        "imports": [],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "OneThree": {
+        "sha256": "c460b2250b70545a8f61a27e15dc979839749602cbbccd3fc8fadf6e21e02682",
+        "fingerprint": "a1a97e9d3bc5952bdfa5993972a746360ad3d5ad49eab44f7f894437b1ca0bc7",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "MaximalCoordinates": {
+        "sha256": "db32306018b4cc9c601d0bd15648a6675ec234d51750d3dd04f9988129483527",
+        "fingerprint": "1eb325d0fbc6587634572c2053082381ab50205505d2d843318fd3db32e79dec",
+        "imports": [
+          "FullRingBasis"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "OneThreeNegative": {
+        "sha256": "608590903d9651b83081c7c7b14962c497bd29944ae7411568eb23eee5734f08",
+        "fingerprint": "406d22376e3f6723163e80bac1f9062161f59e72592048f4faf324d600cb595d",
+        "imports": [
+          "FullRingRationalSquares"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 75.78888199990615,
+          "utc": "2026-10-17T23:53:55.531795+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/OneThreeNegative-20261017T235239Z.log",
+          "source_sha256": "608590903d9651b83081c7c7b14962c497bd29944ae7411568eb23eee5734f08",
+          "timed_out": null
+        },
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "FullRingRationalSquares": {
+        "sha256": "5e6a9ffe5db3306b6d3f7e27d41771f8b8cc8d19bc56609362cb3ac1f5ebd2ab",
+        "fingerprint": "d523d8253ce1910519bb01e035bbfbaa90d6902a58afc80eeab26bf62c87e94b",
+        "imports": [
+          "RationalSquares",
+          "FullRingClassification"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "RationalSquares": {
+        "sha256": "4cd56ab129029a6551801f8c22878c2598ef5298b732a909ebb1ad48e70f5e58",
+        "fingerprint": "8b8c52c52660721158e10e066529a33164bac10bbe332f95d68f614cb393a096",
+        "imports": [
+          "SquareTest"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "SquareTest": {
+        "sha256": "adcc13a33378056841f44d21785e69909232e4def68eb73ca742e5a49ce15ac3",
+        "fingerprint": "dd54b95c8ce7858098e3f1f09735dc958bb1009d73a08036a023d10f007a6b3e",
+        "imports": [
+          "Coordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "FullRingClassification": {
+        "sha256": "e53f31704f6ab515c54419ab5c745dab013cec5002a43430a644fe0477662aea",
+        "fingerprint": "8c6a3a71ad057e227634bb026e3118031eb78bd6e364dd04ed863b97ba92c3a5",
+        "imports": [
+          "FullRingBridge",
+          "MaximalCoordinates"
+        ],
+        "in_queue": false,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      },
+      "UnitPairSymmetric": {
+        "sha256": "695ec9ac631f60966fa825624a829a3fc795041a1c15a2f07c5f310997593968",
+        "fingerprint": "819d10c43b1a7cbb89995275674efa112092f9466736ecf73925bd40df663ad3",
+        "imports": [
+          "FullRingBridge"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 71.05874212505296,
+          "utc": "2026-10-18T03:24:51.681116+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/UnitPairSymmetric-20261018T032340619165Z.log",
+          "source_sha256": "695ec9ac631f60966fa825624a829a3fc795041a1c15a2f07c5f310997593968",
+          "timed_out": false
+        },
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 8
+      },
+      "UnitPairPellParity": {
+        "sha256": "c3ddfaf5f52b6eb5e200c691ed8fef73987c7bcf94ceaba681f82626823199bf",
+        "fingerprint": "ea39e92906033de233ddb4a12cd17ca89025af2834dfcdbfb38d4c53301dbf0b",
+        "imports": [
+          "UnitPairPellBounds",
+          "FullRingRationalSquares"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": null,
+        "trusted_baseline_current": false,
+        "artifact_manifest_count": 0
+      },
+      "PellMatchingPilot": {
+        "sha256": "b3354d245d028c0332eb8923755ca62c393732ccc165dfddfa48128283c5db65",
+        "fingerprint": "2000229894a41d085fe0c5118a8a17959051478fe9ae07c27c9a3ab19300bf04",
+        "imports": [
+          "PellMatchingCheck"
+        ],
+        "in_queue": true,
+        "held": false,
+        "current_receipt": {
+          "accepted_build": true,
+          "seconds": 83.3203677921556,
+          "utc": "2026-10-18T01:13:21.621751+00:00",
+          "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingPilot-20261018T011158Z.log",
+          "source_sha256": "b3354d245d028c0332eb8923755ca62c393732ccc165dfddfa48128283c5db65",
+          "timed_out": false
+        },
+        "trusted_baseline_current": true,
+        "artifact_manifest_count": 8
+      }
+    }
+  },
+  "sources": {
+    "PellFiniteCertificate": "import D1Bound5.PellCFPrefixCheck\nimport D1Bound5.PellMatchingCheck\nimport D1Bound5.UnitPairRealReduction\nimport D1Bound5.FullRingBridge\n\nopen scoped NumberField\nopen Module\n\nnamespace D1Bound5\n\n/-- The matching is linked to the actual computed continued-fraction list.\nThus completeness is a proved field of the eventual endpoint, not an\nexternal assertion about a supplied list of Pell solutions. -/\nstructure PellFiniteCertificate (d X : ℤ) where\n  a0 : ℤ\n  lastIndex : ℕ\n  graph : PellMatchingCertificate d\n  prefix_checked : pellCFPrefixCheck d a0 lastIndex = true\n  stopping : X < (pellCFAt d a0 (pellCFInit a0) lastIndex).p\n  magnitudes_eq :\n    (pellCFSolutions d a0 X lastIndex).map (fun uv => uv.1^2-1) = graph.magnitudes\n\ntheorem PellFiniteCertificate.signed_member {d X : ℤ}\n    (C : PellFiniteCertificate d X) (hd : 7 ≤ d) (hX : 1 ≤ X)\n    (u v z : ℤ) (hv : v ≠ 0) (heq : u^2-d*v^2=2)\n    (hbound : u^2-1 ≤ X^2) (hz : z=d*v^2+1 ∨ z=-(d*v^2+1)) :\n    PellSignedMember C.graph.magnitudes z := by\n  have hsol := pellCFSolutions_complete_abs hd C.prefix_checked C.stopping hX hv heq hbound\n  have hmem : |u|^2-1 ∈\n      (pellCFSolutions d C.a0 X C.lastIndex).map (fun uv => uv.1^2-1) :=\n    List.mem_map.mpr ⟨(|u|,|v|),hsol,rfl⟩\n  rw [C.magnitudes_eq] at hmem\n  rw [sq_abs] at hmem\n  refine ⟨u^2-1,hmem,?_⟩\n  rcases hz with hz | hz\n  · exact Or.inl (by nlinarith [heq])\n  · exact Or.inr (by nlinarith [heq])\n\n/-- Convert actual full-ring squares of ordinary integers using the same\nfixed d as the Pell description, including zero and negative radicands. -/\ntheorem UnitPairArithmeticModel.pellIntegerSquare\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank ℚ K = 2) (M : UnitPairArithmeticModel (𝓞 K))\n    (m : ℤ) (hs : ∃ r : 𝓞 K, r*r = (m : 𝓞 K)) : PellIntegerSquare M.d m := by\n  by_cases hm : 0 < m\n  · obtain ⟨r,hr⟩ := full_ring_positive_integer_square hK hm hs\n    exact Or.inl ⟨r,by nlinarith [hr]⟩\n  · obtain ⟨r,hr⟩ := M.negative_square m (by omega) hs\n    exact Or.inr ⟨r,by nlinarith [hr]⟩\n\n/-- Closed radius X^2 is represented by squared complex norm at most X^4.\nBoth signs of each real Pell extension are retained. -/\ntheorem PellFiniteCertificate.full_ring_member\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank ℚ K = 2) (phi : K →+* ℂ) {d X : ℤ}\n    (C : PellFiniteCertificate d X) (hd : 7 ≤ d) (hX : 1 ≤ X)\n    (z : 𝓞 K) (hreal : UnitPairRealDescription d z)\n    (hbound : ‖phi (z : K)‖^2 ≤ (X : ℝ)^4) :\n    ∃ m : ℤ, z=(m : 𝓞 K) ∧ PellSignedMember C.graph.magnitudes m := by\n  obtain ⟨u,v,hv,heq,hz⟩ := hreal\n  let m : ℤ := d*v^2+1\n  have hm : 0 < m := by\n    dsimp [m]\n    have hp := mul_nonneg (show 0 ≤ d by omega) (sq_nonneg v)\n    omega\n  obtain ⟨tau,nu,_,_,⟨e⟩⟩ := exists_imaginary_quadratic_ring_equiv hK\n  have hint : ‖phi ((m : 𝓞 K) : K)‖^2 = (m : ℝ)^2 := by\n    have hh := norm_sq_full_ring_equiv e phi (m : QuadInt tau nu)\n    simpa [QuadInt.norm_formula] using hh\n  have hn : ‖phi (z : K)‖^2 = (m : ℝ)^2 := by\n    rcases hz with hz | hz\n    · simpa [m,hz] using hint\n    · simpa [m,hz] using hint\n  have hbound' : m^2 ≤ X^4 := by\n    rw [hn] at hbound\n    exact_mod_cast hbound\n  have hmag : u^2-1 ≤ X^2 := by\n    have hrel : u^2-1=m := by dsimp [m]; nlinarith [heq]\n    rw [hrel]\n    by_contra h\n    have hlo : 0 < m-X^2 := by omega\n    have hhi : 0 < m+X^2 := by positivity\n    have hp := mul_pos hlo hhi\n    nlinarith\n  rcases hz with hz | hz\n  · exact ⟨m,hz,C.signed_member hd hX u v m hv heq hmag (Or.inl rfl)⟩\n  · refine ⟨-m,by simpa only [m,Int.cast_neg] using hz,?_⟩\n    exact C.signed_member hd hX u v (-m) hv heq hmag (Or.inr rfl)\n\n/-- The complete finite theorem in the actual full ring. Its only finite\ninput is a concrete kernel-checked certificate whose list is proved complete\nby the ordinary continued-fraction theorem. -/\ntheorem PellFiniteCertificate.full_ring_no_three\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank ℚ K = 2) (phi : K →+* ℂ)\n    (M : UnitPairArithmeticModel (𝓞 K)) {X : ℤ}\n    (C : PellFiniteCertificate M.d X) (hd : 7 ≤ M.d) (hX : 1 ≤ X)\n    (t : Fin 3 → 𝓞 K) (ht : IsD1Tuple t)\n    (hreal : ∀ i, UnitPairRealDescription M.d (t i))\n    (hbound : ∀ i, ‖phi (t i : K)‖^2 ≤ (X : ℝ)^4) : False := by\n  choose z hz hmem using fun i => C.full_ring_member hK phi hd hX (t i) (hreal i) (hbound i)\n  have hne (i j : Fin 3) (hij : i ≠ j) : z i ≠ z j := by\n    intro he\n    apply hij\n    apply ht.1\n    rw [hz i,hz j,he]\n  have hs (i j : Fin 3) (hij : i ≠ j) : PellIntegerSquare M.d (z i*z j+1) := by\n    apply M.pellIntegerSquare hK\n    obtain ⟨r,hr⟩ := ht.2.2 i j hij\n    exact ⟨r,by simpa only [hz i,hz j,Int.cast_add,Int.cast_mul,Int.cast_one] using hr⟩\n  exact C.graph.no_three M.positive (z 0) (z 1) (z 2) (hmem 0) (hmem 1) (hmem 2)\n    (hne 0 1 (by decide)) (hne 0 2 (by decide)) (hne 1 2 (by decide))\n    (hs 0 1 (by decide)) (hs 0 2 (by decide))\n\nend D1Bound5\n"
+  },
+  "queue_pell_holds": [
+    "PellFiniteData1",
+    "PellFiniteData10",
+    "PellFiniteData11",
+    "PellFiniteData12",
+    "PellFiniteData13",
+    "PellFiniteData14",
+    "PellFiniteData15",
+    "PellFiniteData16",
+    "PellFiniteData17",
+    "PellFiniteData18",
+    "PellFiniteData19",
+    "PellFiniteData2",
+    "PellFiniteData20",
+    "PellFiniteData21",
+    "PellFiniteData22",
+    "PellFiniteData23",
+    "PellFiniteData24",
+    "PellFiniteData25",
+    "PellFiniteData26",
+    "PellFiniteData27",
+    "PellFiniteData28",
+    "PellFiniteData29",
+    "PellFiniteData3",
+    "PellFiniteData30",
+    "PellFiniteData31",
+    "PellFiniteData32",
+    "PellFiniteData33",
+    "PellFiniteData34",
+    "PellFiniteData35",
+    "PellFiniteData36",
+    "PellFiniteData37",
+    "PellFiniteData38",
+    "PellFiniteData39",
+    "PellFiniteData4",
+    "PellFiniteData40",
+    "PellFiniteData41",
+    "PellFiniteData42",
+    "PellFiniteData43",
+    "PellFiniteData44",
+    "PellFiniteData45",
+    "PellFiniteData46",
+    "PellFiniteData47",
+    "PellFiniteData48",
+    "PellFiniteData49",
+    "PellFiniteData5",
+    "PellFiniteData50",
+    "PellFiniteData51",
+    "PellFiniteData52",
+    "PellFiniteData53",
+    "PellFiniteData54",
+    "PellFiniteData55",
+    "PellFiniteData56",
+    "PellFiniteData57",
+    "PellFiniteData58",
+    "PellFiniteData59",
+    "PellFiniteData6",
+    "PellFiniteData60",
+    "PellFiniteData61",
+    "PellFiniteData62",
+    "PellFiniteData63",
+    "PellFiniteData64",
+    "PellFiniteData7",
+    "PellFiniteData8",
+    "PellFiniteData9",
+    "PellFiniteFields",
+    "PellMatchingData1",
+    "PellMatchingData10",
+    "PellMatchingData11",
+    "PellMatchingData12",
+    "PellMatchingData13",
+    "PellMatchingData14",
+    "PellMatchingData15",
+    "PellMatchingData16",
+    "PellMatchingData17",
+    "PellMatchingData18",
+    "PellMatchingData19",
+    "PellMatchingData2",
+    "PellMatchingData20",
+    "PellMatchingData21",
+    "PellMatchingData22",
+    "PellMatchingData23",
+    "PellMatchingData24",
+    "PellMatchingData25",
+    "PellMatchingData26",
+    "PellMatchingData3",
+    "PellMatchingData4",
+    "PellMatchingData5",
+    "PellMatchingData6",
+    "PellMatchingData7",
+    "PellMatchingData8",
+    "PellMatchingData9",
+    "PellUnitPairBounded"
+  ],
+  "active_names": [
+    "PairResidueMaskNat"
+  ],
+  "metadata_unchanged": true
+}

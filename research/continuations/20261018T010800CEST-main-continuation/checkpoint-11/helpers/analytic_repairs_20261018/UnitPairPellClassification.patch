@@ -1,0 +1,40 @@
+--- remoteed563d0e
++++ UnitPairPellClassification.lean
+@@ -63,7 +63,7 @@
+         left
+         refine ⟨s.re,r.im,hv,hPell,Or.inr ?_⟩
+         apply QuadraticAlgebra.ext
+-        · simp only [QuadraticAlgebra.re_neg, QuadraticAlgebra.re_intCast]
++        · simp only [QuadraticAlgebra.re_neg, QuadraticAlgebra.re_intCast, Int.cast_id]
+           rw [hrr0] at hrr
+           nlinarith only [hrr]
+         · simpa only [QuadraticAlgebra.im_neg, QuadraticAlgebra.im_intCast,neg_zero] using hreal
+@@ -79,7 +79,7 @@
+         left
+         refine ⟨r.re,s.im,hv,hPell,Or.inl ?_⟩
+         apply QuadraticAlgebra.ext
+-        · simp only [QuadraticAlgebra.re_intCast]
++        · simp only [QuadraticAlgebra.re_intCast, Int.cast_id]
+           rw [hsr0] at hsr
+           nlinarith only [hsr]
+         · simpa only [QuadraticAlgebra.im_intCast] using hreal
+@@ -97,7 +97,9 @@
+   · have hzre : z.re = 0 := by nlinarith only [himag]
+     have hv : r.im ≠ 0 := by
+       intro hzero
+-      have hzimm : z.im = 0 := by nlinarith only [hri,hzero]
++      have hzimm : z.im = 0 := by
++        rw [hzero, mul_zero] at hri
++        exact hri.symm
+       exact hz (QuadraticAlgebra.ext hzre hzimm)
+     right
+     refine ⟨r.re,r.im,hv,by nlinarith only [hrr,hzre],?_⟩
+@@ -143,7 +145,7 @@
+     have heven : r.im % 2 = 0 := by
+       rcases hcases with h | h
+       · exact h
+-      · norm_num [Int.add_emod,Int.sub_emod,Int.mul_emod,Int.pow_emod,h] at hmod
++      · norm_num [pow_two,Int.add_emod,Int.sub_emod,Int.mul_emod,h] at hmod
+     exact ⟨r.im/2,by omega⟩
+ 
+ theorem unit_pair_half_root_lift {nu : ℤ}

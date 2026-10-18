@@ -1,0 +1,426 @@
+{
+  "utc": "2026-10-18T04:21:32.610748+00:00",
+  "matching_check_source_sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0",
+  "matching_check_fingerprint": "1a4825179ddde69ef1131403ac3c9ef42e52489e60084860da492796cf3daea7",
+  "accepted_receipt": {
+    "accepted_build": true,
+    "seconds": 105.34562387457117,
+    "utc": "2026-10-18T01:11:57.423496+00:00",
+    "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PellMatchingCheck-20261018T011012Z.log",
+    "source_sha256": "c1c0284d3cb9fe91ae3599a7d1d28cf05b2201c8cbaef193b20c1b2b5f4ccfa0"
+  },
+  "dependency_artifacts": [
+    {
+      "path": ".lake/build/ir/D1Bound5/PellMatchingCheck.c",
+      "bytes": 45714,
+      "expected_sha256": "50f484af2052edd20b9d6ceb2686383f362efc8c3e618caeacce5d6f214991a6",
+      "actual_sha256": "50f484af2052edd20b9d6ceb2686383f362efc8c3e618caeacce5d6f214991a6",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/ir/D1Bound5/PellMatchingCheck.c.hash",
+      "bytes": 16,
+      "expected_sha256": "eeec993ef296cfe37e737430222bff59dfbe2f1fec7565630226cb6c94d1f080",
+      "actual_sha256": "eeec993ef296cfe37e737430222bff59dfbe2f1fec7565630226cb6c94d1f080",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/ir/D1Bound5/PellMatchingCheck.setup.json",
+      "bytes": 1884214,
+      "expected_sha256": "53d8b17d6342c9cf16f03e7fdeeced70311b87454e29f683f180395c00e85d8c",
+      "actual_sha256": "53d8b17d6342c9cf16f03e7fdeeced70311b87454e29f683f180395c00e85d8c",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/lib/lean/D1Bound5/PellMatchingCheck.ilean",
+      "bytes": 23911,
+      "expected_sha256": "17a8a66546181e6390adab9b7c7a546d935b9f1d57151385c4948c1a6ab30879",
+      "actual_sha256": "17a8a66546181e6390adab9b7c7a546d935b9f1d57151385c4948c1a6ab30879",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/lib/lean/D1Bound5/PellMatchingCheck.ilean.hash",
+      "bytes": 16,
+      "expected_sha256": "e587f2dbd9fcb78fed33b19227e1d0b449ff0d8de699175a29df05c334fb0b21",
+      "actual_sha256": "e587f2dbd9fcb78fed33b19227e1d0b449ff0d8de699175a29df05c334fb0b21",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/lib/lean/D1Bound5/PellMatchingCheck.olean",
+      "bytes": 822992,
+      "expected_sha256": "873eb246169898ba4d9ee516775fef3210b06970e2385c6e35ac9caf6083ba48",
+      "actual_sha256": "873eb246169898ba4d9ee516775fef3210b06970e2385c6e35ac9caf6083ba48",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/lib/lean/D1Bound5/PellMatchingCheck.olean.hash",
+      "bytes": 16,
+      "expected_sha256": "3bed2ac4c9cde6f09e390a8ac832bd20de1b38704d8bc8c67f05d9bfc2dae242",
+      "actual_sha256": "3bed2ac4c9cde6f09e390a8ac832bd20de1b38704d8bc8c67f05d9bfc2dae242",
+      "matches": true
+    },
+    {
+      "path": ".lake/build/lib/lean/D1Bound5/PellMatchingCheck.trace",
+      "bytes": 3014,
+      "expected_sha256": "df3532a4b8681f554b509fc2466ab12d6091750dbd27ca2276ddf4f74c03afac",
+      "actual_sha256": "df3532a4b8681f554b509fc2466ab12d6091750dbd27ca2276ddf4f74c03afac",
+      "matches": true
+    }
+  ],
+  "all_dependency_artifacts_match": true,
+  "modules": {
+    "PellMatchingData10": {
+      "sha256": "ba809583d03629d83554522dfd457cb152e1a2def909bf1d9ad41e706a2c336d",
+      "bytes": 76109,
+      "imports": [
+        "D1Bound5.PellMatchingCheck"
+      ],
+      "theorems": [
+        "pellMagnitudes_3271",
+        "pellMasks_3271",
+        "pellWitnesses_3271",
+        "pellMasks_3271_valid",
+        "pellMatching_3271_checked",
+        "pellMagnitudes_3271_large",
+        "pellGraphCertificate_3271",
+        "pellMagnitudes_3319",
+        "pellMasks_3319",
+        "pellWitnesses_3319",
+        "pellMasks_3319_valid",
+        "pellMatching_3319_checked",
+        "pellMagnitudes_3319_large",
+        "pellGraphCertificate_3319",
+        "pellMagnitudes_3343",
+        "pellMasks_3343",
+        "pellWitnesses_3343",
+        "pellMasks_3343_valid",
+        "pellMatching_3343_checked",
+        "pellMagnitudes_3343_large",
+        "pellGraphCertificate_3343",
+        "pellMagnitudes_3359",
+        "pellMasks_3359",
+        "pellWitnesses_3359",
+        "pellMasks_3359_valid",
+        "pellMatching_3359_checked",
+        "pellMagnitudes_3359_large",
+        "pellGraphCertificate_3359",
+        "pellMagnitudes_3383",
+        "pellMasks_3383",
+        "pellWitnesses_3383",
+        "pellMasks_3383_valid",
+        "pellMatching_3383_checked",
+        "pellMagnitudes_3383_large",
+        "pellGraphCertificate_3383",
+        "pellMagnitudes_3391",
+        "pellMasks_3391",
+        "pellWitnesses_3391",
+        "pellMasks_3391_valid",
+        "pellMatching_3391_checked",
+        "pellMagnitudes_3391_large",
+        "pellGraphCertificate_3391",
+        "pellMagnitudes_3407",
+        "pellMasks_3407",
+        "pellWitnesses_3407",
+        "pellMasks_3407_valid",
+        "pellMatching_3407_checked",
+        "pellMagnitudes_3407_large",
+        "pellGraphCertificate_3407",
+        "pellMagnitudes_3431",
+        "pellMasks_3431",
+        "pellWitnesses_3431",
+        "pellMasks_3431_valid",
+        "pellMatching_3431_checked",
+        "pellMagnitudes_3431_large",
+        "pellGraphCertificate_3431",
+        "pellMagnitudes_3463",
+        "pellMasks_3463",
+        "pellWitnesses_3463",
+        "pellMasks_3463_valid",
+        "pellMatching_3463_checked",
+        "pellMagnitudes_3463_large",
+        "pellGraphCertificate_3463",
+        "pellMagnitudes_3511",
+        "pellMasks_3511",
+        "pellWitnesses_3511",
+        "pellMasks_3511_valid",
+        "pellMatching_3511_checked",
+        "pellMagnitudes_3511_large",
+        "pellGraphCertificate_3511",
+        "pellMagnitudes_3527",
+        "pellMasks_3527",
+        "pellWitnesses_3527",
+        "pellMasks_3527_valid",
+        "pellMatching_3527_checked",
+        "pellMagnitudes_3527_large",
+        "pellGraphCertificate_3527",
+        "pellMagnitudes_3559",
+        "pellMasks_3559",
+        "pellWitnesses_3559",
+        "pellMasks_3559_valid",
+        "pellMatching_3559_checked",
+        "pellMagnitudes_3559_large",
+        "pellGraphCertificate_3559",
+        "pellMagnitudes_3583",
+        "pellMasks_3583",
+        "pellWitnesses_3583",
+        "pellMasks_3583_valid",
+        "pellMatching_3583_checked",
+        "pellMagnitudes_3583_large",
+        "pellGraphCertificate_3583",
+        "pellMagnitudes_3607",
+        "pellMasks_3607",
+        "pellWitnesses_3607",
+        "pellMasks_3607_valid",
+        "pellMatching_3607_checked",
+        "pellMagnitudes_3607_large",
+        "pellGraphCertificate_3607",
+        "pellMagnitudes_3623",
+        "pellMasks_3623",
+        "pellWitnesses_3623",
+        "pellMasks_3623_valid",
+        "pellMatching_3623_checked",
+        "pellMagnitudes_3623_large",
+        "pellGraphCertificate_3623",
+        "pellMagnitudes_3631",
+        "pellMasks_3631",
+        "pellWitnesses_3631",
+        "pellMasks_3631_valid",
+        "pellMatching_3631_checked",
+        "pellMagnitudes_3631_large",
+        "pellGraphCertificate_3631"
+      ],
+      "in_queue": false,
+      "held": true
+    },
+    "PellFiniteData22": {
+      "sha256": "2881bc249f64edb44d327529aa9538cb3d991c86fcc0d2a2656d2574ee41c5a3",
+      "bytes": 4250,
+      "imports": [
+        "D1Bound5.PellFiniteCertificate",
+        "D1Bound5.PellMatchingData10"
+      ],
+      "theorems": [
+        "pellFiniteCertificate_3287",
+        "pellFiniteCertificate_3295",
+        "pellFiniteCertificate_3311",
+        "pellFiniteCertificate_3319",
+        "pellFiniteCertificate_3327",
+        "pellFiniteCertificate_3335",
+        "pellFiniteCertificate_3343",
+        "pellFiniteCertificate_3351",
+        "pellFiniteCertificate_3359",
+        "pellFiniteCertificate_3367",
+        "pellFiniteCertificate_3383",
+        "pellFiniteCertificate_3391",
+        "pellFiniteCertificate_3399",
+        "pellFiniteCertificate_3407",
+        "pellFiniteCertificate_3415",
+        "pellFiniteCertificate_3423"
+      ],
+      "in_queue": false,
+      "held": true
+    },
+    "PellFiniteData23": {
+      "sha256": "938def5b0f26b8c2be8965c4f71d26ca3b0233029adfc8b842190d742d75ef34",
+      "bytes": 4250,
+      "imports": [
+        "D1Bound5.PellFiniteCertificate",
+        "D1Bound5.PellMatchingData10"
+      ],
+      "theorems": [
+        "pellFiniteCertificate_3431",
+        "pellFiniteCertificate_3439",
+        "pellFiniteCertificate_3455",
+        "pellFiniteCertificate_3463",
+        "pellFiniteCertificate_3471",
+        "pellFiniteCertificate_3487",
+        "pellFiniteCertificate_3495",
+        "pellFiniteCertificate_3503",
+        "pellFiniteCertificate_3511",
+        "pellFiniteCertificate_3527",
+        "pellFiniteCertificate_3535",
+        "pellFiniteCertificate_3543",
+        "pellFiniteCertificate_3551",
+        "pellFiniteCertificate_3559",
+        "pellFiniteCertificate_3567",
+        "pellFiniteCertificate_3583"
+      ],
+      "in_queue": false,
+      "held": true
+    },
+    "PellFiniteFields": {
+      "sha256": "d53a205f458a39f63b2d2b0ce79839340264ea820b70ceb4cbf43cac88971728",
+      "bytes": 48491,
+      "imports": [
+        "D1Bound5.PellFinitePilot",
+        "D1Bound5.PellFiniteData1",
+        "D1Bound5.PellFiniteData2",
+        "D1Bound5.PellFiniteData3",
+        "D1Bound5.PellFiniteData4",
+        "D1Bound5.PellFiniteData5",
+        "D1Bound5.PellFiniteData6",
+        "D1Bound5.PellFiniteData7",
+        "D1Bound5.PellFiniteData8",
+        "D1Bound5.PellFiniteData9",
+        "D1Bound5.PellFiniteData10",
+        "D1Bound5.PellFiniteData11",
+        "D1Bound5.PellFiniteData12",
+        "D1Bound5.PellFiniteData13",
+        "D1Bound5.PellFiniteData14",
+        "D1Bound5.PellFiniteData15",
+        "D1Bound5.PellFiniteData16",
+        "D1Bound5.PellFiniteData17",
+        "D1Bound5.PellFiniteData18",
+        "D1Bound5.PellFiniteData19",
+        "D1Bound5.PellFiniteData20",
+        "D1Bound5.PellFiniteData21",
+        "D1Bound5.PellFiniteData22",
+        "D1Bound5.PellFiniteData23",
+        "D1Bound5.PellFiniteData24",
+        "D1Bound5.PellFiniteData25",
+        "D1Bound5.PellFiniteData26",
+        "D1Bound5.PellFiniteData27",
+        "D1Bound5.PellFiniteData28",
+        "D1Bound5.PellFiniteData29",
+        "D1Bound5.PellFiniteData30",
+        "D1Bound5.PellFiniteData31",
+        "D1Bound5.PellFiniteData32",
+        "D1Bound5.PellFiniteData33",
+        "D1Bound5.PellFiniteData34",
+        "D1Bound5.PellFiniteData35",
+        "D1Bound5.PellFiniteData36",
+        "D1Bound5.PellFiniteData37",
+        "D1Bound5.PellFiniteData38",
+        "D1Bound5.PellFiniteData39",
+        "D1Bound5.PellFiniteData40",
+        "D1Bound5.PellFiniteData41",
+        "D1Bound5.PellFiniteData42",
+        "D1Bound5.PellFiniteData43",
+        "D1Bound5.PellFiniteData44",
+        "D1Bound5.PellFiniteData45",
+        "D1Bound5.PellFiniteData46",
+        "D1Bound5.PellFiniteData47",
+        "D1Bound5.PellFiniteData48",
+        "D1Bound5.PellFiniteData49",
+        "D1Bound5.PellFiniteData50",
+        "D1Bound5.PellFiniteData51",
+        "D1Bound5.PellFiniteData52",
+        "D1Bound5.PellFiniteData53",
+        "D1Bound5.PellFiniteData54",
+        "D1Bound5.PellFiniteData55",
+        "D1Bound5.PellFiniteData56",
+        "D1Bound5.PellFiniteData57",
+        "D1Bound5.PellFiniteData58",
+        "D1Bound5.PellFiniteData59",
+        "D1Bound5.PellFiniteData60",
+        "D1Bound5.PellFiniteData61",
+        "D1Bound5.PellFiniteData62",
+        "D1Bound5.PellFiniteData63",
+        "D1Bound5.PellFiniteData64",
+        "Mathlib.Algebra.Group.Int.Units"
+      ],
+      "theorems": [
+        "pellCertifiedFields",
+        "pellExcludedFactors",
+        "pellFieldCoverage_checked",
+        "pellFiniteCertificate_exists"
+      ],
+      "in_queue": false,
+      "held": true
+    },
+    "PellUnitPairBounded": {
+      "sha256": "1d8bb8dadbd286e45dfc5179488d68a8ffa6de0657142440b2b3042e3e431b70",
+      "bytes": 2929,
+      "imports": [
+        "D1Bound5.PellFiniteFields",
+        "D1Bound5.UnitPairFieldBound"
+      ],
+      "theorems": [
+        "full_ring_unit_pair_pell_no_three_bounded",
+        "IsD1Tuple.unit_pair_fifth_large"
+      ],
+      "in_queue": false,
+      "held": true
+    },
+    "UnitPairFiniteReduction": {
+      "sha256": "4c985f3362a3ffa72266af357f8b21e31a3eb40f6bdc85b15d6a449bfa269acc",
+      "bytes": 2850,
+      "imports": [
+        "D1Bound5.PellUnitPairBounded",
+        "D1Bound5.TwoSmallLargeSBound",
+        "D1Bound5.TwoSmallLargeTBound"
+      ],
+      "theorems": [
+        "IsD1Tuple.unit_pair_third_norm_ge_eight",
+        "IsD1Tuple.unit_pair_reduced_range"
+      ],
+      "in_queue": false,
+      "held": false
+    },
+    "UnitPairImpossible": {
+      "sha256": "4c2c87182eaafedb4e09a0e7ed0a5df2fe634a496242cdfdf9316b2aefde68ea",
+      "bytes": 1132,
+      "imports": [
+        "D1Bound5.UnitPairFiniteReduction",
+        "D1Bound5.TwoSmallFifthBound"
+      ],
+      "theorems": [
+        "IsD1Tuple.unit_pair_impossible"
+      ],
+      "in_queue": false,
+      "held": false
+    },
+    "DegeneratePairImpossible": {
+      "sha256": "449a3a0eb81ab63cbb073585d13a396c6886de6c7e8f6b4565307a657ed38f67",
+      "bytes": 5379,
+      "imports": [
+        "D1Bound5.DegeneratePairClassification",
+        "D1Bound5.UnitPairImpossible",
+        "D1Bound5.EisensteinExceptionalPair",
+        "D1Bound5.EisensteinImaginaryExtensions"
+      ],
+      "theorems": [
+        "IsD1Tuple.simultaneous_neg",
+        "IsD1Tuple.coordinate_equiv",
+        "IsD1Tuple.eisenstein_canonical_pair_impossible",
+        "IsD1Tuple.rational_unit_pair_impossible",
+        "IsD1Tuple.degenerate_first_pair_impossible"
+      ],
+      "in_queue": false,
+      "held": false
+    },
+    "MainTheorem": {
+      "sha256": "0d4652828c5f48475a6e80d8d00fa209e39c0638a58ebd99fd719e271c2670f6",
+      "bytes": 1343,
+      "imports": [
+        "D1Bound5.MainCaseReduction",
+        "D1Bound5.AllLargeImpossible",
+        "D1Bound5.OneSmallImpossible",
+        "D1Bound5.ThreeSmallExclusion",
+        "D1Bound5.TwoSmallNondegenerateImpossible",
+        "D1Bound5.DegeneratePairImpossible"
+      ],
+      "theorems": [
+        "main_statement"
+      ],
+      "in_queue": false,
+      "held": false
+    }
+  },
+  "related_ledger": [
+    {
+      "name": "PellMatchingPilot",
+      "accepted_build": false,
+      "source_sha256": "b3354d245d028c0332eb8923755ca62c393732ccc165dfddfa48128283c5db65",
+      "seconds": 71.14925675000995,
+      "utc": "2026-10-18T01:06:21.513601+00:00"
+    },
+    {
+      "name": "PellMatchingPilot",
+      "accepted_build": true,
+      "source_sha256": "b3354d245d028c0332eb8923755ca62c393732ccc165dfddfa48128283c5db65",
+      "seconds": 83.3203677921556,
+      "utc": "2026-10-18T01:13:21.621751+00:00"
+    }
+  ]
+}

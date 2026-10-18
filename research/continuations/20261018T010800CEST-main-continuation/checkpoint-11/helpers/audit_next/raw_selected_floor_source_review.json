@@ -1,0 +1,38 @@
+{
+  "source": "pair_witness_next/PairRawSelectedFloorWitnesses.lean",
+  "source_sha256": "16663ee7ed18799dce07207a0b374d05787f04c1c37fca43ad73b4907ad0a013",
+  "reviewer": "bennett",
+  "result": "PASS, independent full mathematical/source review; no compilation",
+  "definition_checks": [
+    {
+      "new_definition": "pairSelectedCachedMaskNatRejectBool",
+      "comparison": "pairSelectedCachedMaskRejectBool",
+      "identical_after_name_and_mask_substitution": true
+    },
+    {
+      "new_definition": "pairRawSelectedFloorRowBool",
+      "comparison": "pairSelectedFloorRowBool",
+      "identical_after_name_and_mask_substitution": true
+    },
+    {
+      "new_definition": "pairRawSelectedFloorIndependentBool",
+      "comparison": "pairSelectedFloorIndependentBool",
+      "identical_after_name_and_mask_substitution": true
+    },
+    {
+      "new_definition": "pairRawSelectedFloorIndependentCertificateBool",
+      "comparison": "pairSelectedFloorIndependentCertificateBool",
+      "identical_after_name_and_mask_substitution": true
+    }
+  ],
+  "proof_review": [
+    "Aligned getElem? branches preserve failure for every missing entry.",
+    "Mask equality lifts through Boolean negation to exact selected lookup equality.",
+    "Full-tail row induction generalizes packed word and floor list; every branch uses the same recursive arguments.",
+    "Malformed tags, extra digits, duplicate handling, negative guard, missing/extra floor witnesses are unchanged.",
+    "Outer lockstep mismatch cases coincide exactly.",
+    "Full vertex projection and canonical signature checks remain byte-identical after definition renaming.",
+    "The final symmetry/transitivity transports raw=true to accepted=true in the correct direction.",
+    "No signature, mask-validity or arithmetic premise is added or removed; final positive-discriminant premise is unchanged."
+  ]
+}

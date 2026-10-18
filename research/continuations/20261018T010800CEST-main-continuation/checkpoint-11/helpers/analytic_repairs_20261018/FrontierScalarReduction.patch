@@ -1,0 +1,10 @@
+--- remote004ce8dd
++++ FrontierScalarReduction.lean
+@@ -73,7 +73,6 @@
+       (2*K*(A^2+B^2+C^2+T^2)+L*(A*B+A*C+A*T+B*C+B*T+C*T)+Q)/(A^2*B^2*C^2) := by
+     have h := div_le_div_of_nonneg_right hupper (by positivity : 0 ≤ A^2*B^2*C^2)
+     convert h using 1
+-    dsimp [tau]
+     field_simp [hAn, hBn, hCn]
+     ring
+   change tau ≤ _

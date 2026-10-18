@@ -1,0 +1,87 @@
+{
+  "status": "Independent source/import-availability review PASS; no compilation, installation or remote mutation",
+  "helper_sha256": "4c120fa958983bdc2f39d1fd38db30738f541f1372d28ac5de5b035ebb113e78",
+  "base_manifest_sha256": "8dbdf530c318fd2d4f52149ebb78af2ababf65e18ce4205e0c2c50044bbddc20",
+  "variant_manifest_sha256": "ea0c17c70258d31f49a9fab572c8e4a587aaa3c6931257d0495cd58b703bf710",
+  "helper_review": "Full source read and ast.parse only; helper not executed. Checks pinned source manifest and all source hashes/lengths, literal-only Inputs schema, exactly two import changes, disjoint new output and accepted-pilot exclusions before writing; freezes original manifest and rechecks original inputs afterward.",
+  "exact_changes": [
+    "Inputs replaces only SmallPairGraphCheck import with Coordinates",
+    "Arithmetic adds explicit SmallPairGraphCheck import"
+  ],
+  "all_six_bodies_byte_identical": true,
+  "other_four_files_byte_identical": true,
+  "original_five_public_theorem_types_exact": true,
+  "coordinates_read": {
+    "device": "788d1b22-4569-4161-bfbe-d886d48c6a75",
+    "path": "/Users/tp/Lean/D1Bound5/D1Bound5/Coordinates.lean",
+    "sha256": "da0cb0c42a6044e813dcdaaa1831735e6baddba8fa16b037f5289e53bcfae065",
+    "bytes": 2477
+  },
+  "import_availability": [
+    "Actual remote Coordinates imports QuadraticAlgebra.Basic and defines D1Bound5.QuadInt plus its namespace. Inputs contains only five literal coordinate/list/Nat definitions; no graph checker or theorem is used there.",
+    "Arithmetic explicitly restores SmallPairGraphCheck, retaining TwoSmallSeedDisks for seedRootDisk_1_1.",
+    "WitnessData explicitly imports PairClosureWitness, which defines PairRootWitness and imports PairExtensionCore. Indexed closure imports PairClosureIndexedWitness; PairExtensionCore defines pairClosureBool.",
+    "Triangle explicitly imports PairTraceZeroGraph, which imports PairGraphNoThreeTransfer, which explicitly imports SmallPairGraphCheck. Sieve import is unchanged.",
+    "GraphData retains all three theorem-owner imports. No generated import cycle or removed public theorem results."
+  ],
+  "local_dependency_sources": {
+    "pair_witness_next/PairClosureWitness.lean": "c3e5b89a544885205672d45a9a3cb231a99a79dcff6c62a96059e9f00b860a62",
+    "pair_witness_next/PairClosureIndexedWitness.lean": "396e39b992bc9611aabcfcda13356692e98676409381a756555e84104fe22420",
+    "pair_structural_next/PairTraceZeroGraph.lean": "0d64054a8011cced0bc7f67ef2726805eba0ee9f00ed409f60ae1163ef294ee0",
+    "pair_structural_next/PairGraphNoThreeTransfer.lean": "10b2bdca2160b3f93442ff75882d77cb4a22b0c8e74c0b3b0b8565bc741f9adb",
+    "finite_next/extensions/D1Bound5/PairExtensionCore.lean": "d45446b353f1adcd08c1943cfe73040bef48ad11485fc541c7388b34f9e5255f",
+    "finite_next/two_small/D1Bound5/SmallPairGraphCheck.lean": "a1fd39ac1e63a1a407d5fbedb3ad3d7599b1489a8857fc7d2c2d3c2c9b4396e6"
+  },
+  "files": [
+    {
+      "file": "D1Bound5/SmallPairGraphInputs22.lean",
+      "pre_sha256": "6b07e07cf99d284e2effcdbc1c7a0f300a5fae0095f50fb17e318a10c71131f8",
+      "post_sha256": "80fc64a577b7f0bce1fad78a8a739fd743a5d3d0a54b1fba3b6fe37336797e1f",
+      "bytes": 1083856,
+      "body_byte_identical": true,
+      "file_byte_identical": false
+    },
+    {
+      "file": "D1Bound5/SmallPairGraphWitnessData22.lean",
+      "pre_sha256": "88d86ba1365cc03da254499906a5a491aea78f2aa8e3442586fe18d71098ef11",
+      "post_sha256": "88d86ba1365cc03da254499906a5a491aea78f2aa8e3442586fe18d71098ef11",
+      "bytes": 578577,
+      "body_byte_identical": true,
+      "file_byte_identical": true
+    },
+    {
+      "file": "D1Bound5/SmallPairGraphArithmetic22.lean",
+      "pre_sha256": "afc360cdf4b13742948372045698d43fe9716e98df5ce8668e52c4ac4ee37ba3",
+      "post_sha256": "adb0922d008fd88dc4e6c502403fa271eff76e18e3492f2421c3a144fe6a9dcf",
+      "bytes": 603,
+      "body_byte_identical": true,
+      "file_byte_identical": false
+    },
+    {
+      "file": "D1Bound5/SmallPairGraphClosure22.lean",
+      "pre_sha256": "b9f89fd466791aed87b64c4ef892c16d72f86ee34e55c0e951a4608666c7e843",
+      "post_sha256": "b9f89fd466791aed87b64c4ef892c16d72f86ee34e55c0e951a4608666c7e843",
+      "bytes": 734,
+      "body_byte_identical": true,
+      "file_byte_identical": true
+    },
+    {
+      "file": "D1Bound5/SmallPairGraphTriangle22.lean",
+      "pre_sha256": "58638067b16baf712fde2bbf74290c3f56092c20baf1439abf609ad558706acb",
+      "post_sha256": "58638067b16baf712fde2bbf74290c3f56092c20baf1439abf609ad558706acb",
+      "bytes": 621,
+      "body_byte_identical": true,
+      "file_byte_identical": true
+    },
+    {
+      "file": "D1Bound5/SmallPairGraphData22.lean",
+      "pre_sha256": "085148f916e446e95200d487e090360797aaf1d8f56630fbf9d319a73ca53c8b",
+      "post_sha256": "085148f916e446e95200d487e090360797aaf1d8f56630fbf9d319a73ca53c8b",
+      "bytes": 124,
+      "body_byte_identical": true,
+      "file_byte_identical": true
+    }
+  ],
+  "total_source_bytes": 1664515,
+  "limitation": "Source-level availability and preservation only; Lean elaboration and kernel computations remain coordinator gates. The import reduction makes no runtime or final-main completion claim."
+}

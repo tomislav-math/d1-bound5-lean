@@ -1,0 +1,12 @@
+{
+  "source": "D1Bound5/UnitPairPellClassification.lean",
+  "before_sha256": "ed563d0e0ef72594c7e02ac4b7f74ecee2b8f06a15744f42426fbaf31c5404db",
+  "after_sha256": "e341ce21d7fb1df24b87b482804148ffb2b4b0b3efe42d9b54d600c5e4d52faa",
+  "actual_log": "UnitPairPellClassification-20261018T041759080392Z.log",
+  "changes": [
+    "Add Int.cast_id to two coordinate simp blocks, matching actual cast-retaining error goals and earlier accepted ImaginaryExtensions repair.",
+    "Replace nonlinear hri/hzero nlinarith with direct rewrite of r.im=0 then symmetry.",
+    "Replace nonexistent Int.pow_emod by pow_two before existing Int.mul_emod simplification."
+  ],
+  "validation": "Read actual remote log and source; whole source body matches local exact pinned bytes (RDC omits trailing newline). Local patch only; not compiled."
+}

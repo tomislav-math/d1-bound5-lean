@@ -1,0 +1,86 @@
+✖ [2956/2956] Building D1Bound5.UnitPairPellClassification (61s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/UnitPairPellClassification.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairPellClassification.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairPellClassification.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairPellClassification.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairPellClassification.setup.json --json
+error: D1Bound5/UnitPairPellClassification.lean:68:10: linarith failed to find a contradiction
+case inl.inl.inr.re.h1
+d : ℤ
+hd : 0 < d
+z r s : QuadInt 0 d
+hz : z ≠ 0
+hr : r * r = z + 1
+hs : s * s = 1 - z
+hrr : 0 ^ 2 - d * r.im ^ 2 = z.re + 1
+hri : 2 * r.re * r.im = z.im
+hsr : s.re ^ 2 - d * s.im ^ 2 = 1 - z.re
+hsi : 2 * s.re * s.im = -z.im
+hd' : 0 < discriminant 0 d
+hreal : z.im = 0
+hrp : r.re * r.im = 0
+hsp : s.re * s.im = 0
+hrr0 : r.re = 0
+hsi0 : s.im = 0
+hPell : s.re ^ 2 - d * r.im ^ 2 = 2
+hv : r.im ≠ 0
+a✝ : z.re < -↑(d * r.im ^ 2 + 1)
+⊢ False
+failed
+error: D1Bound5/UnitPairPellClassification.lean:84:10: linarith failed to find a contradiction
+case inl.inr.inl.re.h1
+d : ℤ
+hd : 0 < d
+z r s : QuadInt 0 d
+hz : z ≠ 0
+hr : r * r = z + 1
+hs : s * s = 1 - z
+hrr : r.re ^ 2 - d * r.im ^ 2 = z.re + 1
+hri : 2 * r.re * r.im = z.im
+hsr : 0 ^ 2 - d * s.im ^ 2 = 1 - z.re
+hsi : 2 * s.re * s.im = -z.im
+hd' : 0 < discriminant 0 d
+hreal : z.im = 0
+hrp : r.re * r.im = 0
+hsp : s.re * s.im = 0
+hri0 : r.im = 0
+hsr0 : s.re = 0
+hPell : r.re ^ 2 - d * s.im ^ 2 = 2
+hv : s.im ≠ 0
+a✝ : z.re < ↑(d * s.im ^ 2 + 1)
+⊢ False
+failed
+error: D1Bound5/UnitPairPellClassification.lean:100:34: linarith failed to find a contradiction
+case h1
+d : ℤ
+hd : 0 < d
+z r s : QuadInt 0 d
+hz : z ≠ 0
+hr : r * r = z + 1
+hs : s * s = 1 - z
+hrr : r.re ^ 2 - d * r.im ^ 2 = z.re + 1
+hri : 2 * r.re * r.im = z.im
+hsr : s.re ^ 2 - d * s.im ^ 2 = 1 - z.re
+hsi : 2 * s.re * s.im = -z.im
+hd' : 0 < discriminant 0 d
+himag : 2 * z.re + 0 * z.im = 0
+hzre : z.re = 0
+hzero : r.im = 0
+a✝ : z.im < 0
+⊢ False
+failed
+error: D1Bound5/UnitPairPellClassification.lean:146:57: Unknown constant `Int.pow_emod`
+error: D1Bound5/UnitPairPellClassification.lean:146:6: unsolved goals
+case inr
+nu : ℤ
+hd : 0 < discriminant 1 nu
+z r s : QuadInt 1 nu
+hr : r * r = z + 1
+hs : s * s = 1 - z
+hrr : r.re * r.re + -nu * r.im * r.im = z.re + 1
+hri : r.re * r.im + r.im * r.re + 1 * r.im * r.im = z.im + 0
+himag : 2 * z.re + 1 * z.im = 0
+htrace : 2 * r.re ^ 2 + 2 * r.re * r.im + (1 - 2 * nu) * r.im ^ 2 = 2
+h : r.im % 2 = 1
+hmod : 2 ∣ r.im ^ 2
+⊢ r.im % 2 = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.UnitPairPellClassification
+error: build failed

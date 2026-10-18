@@ -1,0 +1,38 @@
+{
+  "status": "Author static validation PASS; scripts not executed",
+  "expected_HEAD": "c12aaebc684e6c012d982e31c29ca9925d38d8ec",
+  "first_wave": 78,
+  "minimum_latest_wave": 83,
+  "latest_wave": "Discovered at locked capture; every intervening intake/receipt pair required and packet hashes verified",
+  "helper_packet": "checkpoint11-helpers.json",
+  "source_map_base": "checkpoint-10/SOURCE_MAP.json",
+  "main_status": "UNPROVED; script refuses matching-current-closure MainTheorem PASS until wording reviewed",
+  "files": {
+    "prepare_checkpoint11.py": {
+      "bytes": 20093,
+      "sha256": "61cbed48f87ae6dabdfd16126dc1326515cfbcf580857c43a3754728f9667b50"
+    },
+    "stage_checkpoint11.py": {
+      "bytes": 3339,
+      "sha256": "d7d129a272466fe9c5aba8225f4982b75496db8efedd5568e730df5678ae1f4b"
+    },
+    "checkpoint11-prepare-from10.patch": {
+      "bytes": 14348,
+      "sha256": "f0a579b06fa562897735fe2066001f9c5def7f20a8cc8c6babbf255f334984d5"
+    },
+    "checkpoint11-stage-from10.patch": {
+      "bytes": 2667,
+      "sha256": "d92c179792e8faedc1537aaaf3846b74c7996fa67210b062d20a892c93f78033"
+    }
+  },
+  "validation": [
+    "Full source/diff inspection",
+    "ast.parse only; no top-level script execution",
+    "stage script exactly executed cp10 implementation after HEAD/checkpoint-path substitution",
+    "Runtime read boundary rejects files resolving outside project except exact frozen manuscript",
+    "Canonical wave filenames prevent numeric alias overwrite",
+    "No Git commands or remote writes performed by author",
+    "Explicit PellMatchingData10 status target included for held/unheld queue change outside intake waves"
+  ],
+  "peer_review": "audit_next/checkpoint11_independent_review.json (reviewer supplies final pin)"
+}

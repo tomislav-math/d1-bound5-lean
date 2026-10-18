@@ -1,0 +1,56 @@
+{
+  "Coordinates": {
+    "sha256": "da0cb0c42a6044e813dcdaaa1831735e6baddba8fa16b037f5289e53bcfae065",
+    "imports": [
+      "import Mathlib.Algebra.QuadraticAlgebra.Basic",
+      "import Mathlib.Tactic.Linarith"
+    ],
+    "setup_import_count": 1520,
+    "source": "import Mathlib.Algebra.QuadraticAlgebra.Basic\nimport Mathlib.Tactic.Linarith\n\nnamespace D1Bound5\n\n/-- Coordinates x+y*omega with omega^2=tau*omega-nu.\nBoth tau=0 and tau=1 are included. Identification with the full ring of\nintegers is a separate obligation, not part of this definition. -/\nabbrev QuadInt (tau nu : ℤ) := QuadraticAlgebra ℤ (-nu) tau\n\nnamespace QuadInt\n\nvariable {tau nu : ℤ}\n\ndef discriminant (tau nu : ℤ) : ℤ := 4*nu-tau^2\n\n/-- Equation (integrated-disk), first identity. -/\ntheorem norm_formula (z : QuadInt tau nu) :\n    z.norm = z.re^2 + tau*z.re*z.im + nu*z.im^2 := by\n  rw [QuadraticAlgebra.norm_def]\n  ring\n\n/-- Equation (integrated-disk), completed-square identity. -/\ntheorem four_norm (z : QuadInt tau nu) :\n    4*z.norm = (2*z.re+tau*z.im)^2 + discriminant tau nu*z.im^2 := by\n  rw [norm_formula]\n  unfold discriminant\n  ring\n\ntheorem norm_nonneg (hd : 0 < discriminant tau nu) (z : QuadInt tau nu) :\n    0 ≤ z.norm := by\n  have h := four_norm z\n  have hprod := mul_nonneg hd.le (sq_nonneg z.im)\n  nlinarith [sq_nonneg (2*z.re+tau*z.im)]\n\ntheorem norm_eq_zero_iff (hd : 0 < discriminant tau nu) (z : QuadInt tau nu) :\n    z.norm = 0 ↔ z = 0 := by\n  constructor\n  · intro hz\n    have h := four_norm z\n    have hy : z.im = 0 := by\n      by_contra hy\n      have hp := mul_pos hd (sq_pos_of_ne_zero hy)\n      nlinarith [sq_nonneg (2*z.re+tau*z.im)]\n    have hx : z.re = 0 := by\n      rw [hz, hy] at h\n      nlinarith\n    exact QuadraticAlgebra.ext hx hy\n  · intro hz\n    simp [hz]\n\ntheorem norm_pos (hd : 0 < discriminant tau nu) {z : QuadInt tau nu}\n    (hz : z ≠ 0) : 0 < z.norm := by\n  have hn := norm_nonneg hd z\n  have hne : z.norm ≠ 0 := fun h => hz ((norm_eq_zero_iff hd z).mp h)\n  omega\n\n/-- The integer norm of a nonzero element is at least one. -/\ntheorem one_le_norm (hd : 0 < discriminant tau nu) {z : QuadInt tau nu}\n    (hz : z ≠ 0) : 1 ≤ z.norm := by\n  have := norm_pos hd hz\n  omega\n\n/-- A nonreal element in a bounded disk bounds the field discriminant.\nUsed for the Delta<=60 reduction in lem:tail-irregular. -/\ntheorem discriminant_le_four_bound (hd : 0 < discriminant tau nu)\n    {z : QuadInt tau nu} {M : ℤ} (hM : z.norm ≤ M) (hy : z.im ≠ 0) :\n    discriminant tau nu ≤ 4*M := by\n  have hypos := sq_pos_of_ne_zero hy\n  have hyone : 1 ≤ z.im^2 := by omega\n  have hp := mul_le_mul_of_nonneg_left hyone hd.le\n  have h := four_norm z\n  nlinarith [sq_nonneg (2*z.re+tau*z.im)]\n\nend QuadInt\nend D1Bound5\n"
+  },
+  "PairClosureWitness": {
+    "sha256": "c3e5b89a544885205672d45a9a3cb231a99a79dcff6c62a96059e9f00b860a62",
+    "imports": [
+      "import D1Bound5.PairExtensionCore"
+    ],
+    "setup_import_count": 1530
+  },
+  "PairClosureIndexedWitness": {
+    "sha256": "396e39b992bc9611aabcfcda13356692e98676409381a756555e84104fe22420",
+    "imports": [
+      "import D1Bound5.PairClosureWitness"
+    ],
+    "setup_import_count": 1531
+  },
+  "TwoSmallSeedDisks": {
+    "sha256": "510bd0817de84470204906e29a31775f06a975fc27f5a457bad4d81a12b411eb",
+    "imports": [
+      "import D1Bound5.FastDiskList",
+      "import D1Bound5.PairSeedDisks"
+    ],
+    "setup_import_count": 1532
+  },
+  "SmallPairGraphCheck": {
+    "sha256": "a1fd39ac1e63a1a407d5fbedb3ad3d7599b1489a8857fc7d2c2d3c2c9b4396e6",
+    "imports": [
+      "import D1Bound5.FastSquareTest",
+      "import D1Bound5.PairExtensionComplete"
+    ],
+    "setup_import_count": 2948
+  },
+  "PairTraceZeroGraph": {
+    "sha256": "0d64054a8011cced0bc7f67ef2726805eba0ee9f00ed409f60ae1163ef294ee0",
+    "imports": [
+      "import D1Bound5.PairGraphNoThreeTransfer",
+      "import D1Bound5.PairTraceZeroNoThree"
+    ],
+    "setup_import_count": 2952
+  },
+  "PairGraphNoThreeTransfer": {
+    "sha256": "10b2bdca2160b3f93442ff75882d77cb4a22b0c8e74c0b3b0b8565bc741f9adb",
+    "imports": [
+      "import D1Bound5.SmallPairGraphCheck"
+    ],
+    "setup_import_count": 2949
+  }
+}
