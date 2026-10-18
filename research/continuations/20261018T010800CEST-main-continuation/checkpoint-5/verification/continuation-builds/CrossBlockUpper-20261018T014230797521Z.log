@@ -1,0 +1,50 @@
+⚠ [1907/1963] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✖ [2958/2958] Building D1Bound5.CrossBlockUpper (54s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CrossBlockUpper.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CrossBlockUpper.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CrossBlockUpper.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CrossBlockUpper.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CrossBlockUpper.setup.json --json
+warning: D1Bound5/CrossBlockUpper.lean:81:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: D1Bound5/CrossBlockUpper.lean:127:8: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  Matrix.det ?A
+in the target expression
+  (Matrix.det fun i j => (a i * b j) ^ 2 + 1 / 2 * (a i * b j) + E i j) =
+    t ![0, 1, 2] + t ![1, 2, 0] + t ![2, 0, 1] - (t ![0, 2, 1] + t ![1, 0, 2] + t ![2, 1, 0])
+
+a b : Fin 3 → ℂ
+E : Fin 3 → Fin 3 → ℂ
+M P c : ℝ
+hM : 0 ≤ M
+hP : 0 ≤ P
+hc : 0 ≤ c
+hentry : ∀ (i j : Fin 3), ‖a i * b j‖ ≤ M
+hpair : ∀ (i j k l : Fin 3), i ≠ j → k ≠ l → ‖(a i * b k) ^ 2 * (a j * b l)‖ ≤ P
+hE : ∀ (i j : Fin 3), ‖E i j‖ ≤ c
+t : (Fin 3 → Fin 3) → ℂ := fun p => crossBlock_keptProduct (fun i => a i * b (p i)) fun i => E i (p i)
+C : ℝ := c ^ 3 + 3 * M ^ 2 * c ^ 2 + 3 / 2 * M * c ^ 2 + 3 * P * c
+ht : ∀ (p : Fin 3 → Fin 3), Function.Injective p → ‖t p‖ ≤ C
+⊢ (Matrix.det fun i j => (a i * b j) ^ 2 + 1 / 2 * (a i * b j) + E i j) =
+    t ![0, 1, 2] + t ![1, 2, 0] + t ![2, 0, 1] - (t ![0, 2, 1] + t ![1, 0, 2] + t ![2, 1, 0])
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  Application type mismatch: The argument
+    fun i j => (a i * b j) ^ 2 + 1 / 2 * (a i * b j) + E i j
+  has type
+    Fin 3 → Fin 3 → ℂ
+  but is expected to have type
+    Matrix (Fin 3) (Fin 3) ℂ
+  in the application
+    Matrix.det fun i j => (a i * b j) ^ 2 + 1 / 2 * (a i * b j) + E i j
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CrossBlockUpper
+error: build failed
