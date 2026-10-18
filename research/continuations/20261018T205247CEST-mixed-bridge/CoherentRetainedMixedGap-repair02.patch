@@ -1,0 +1,13 @@
+--- before
++++ after
+@@ -120,7 +120,9 @@
+     hA hB hratio.1 hratio.2 hlam.1 hlam.2
+   have hbase : 0 < A^2*P^5/S^2 := by positivity
+   have hh := mul_lt_mul_of_pos_right hc hbase
+-  exact ⟨hret, by simpa only [one_mul] using hh.trans hret⟩
++  refine ⟨hret, ?_⟩
++  change A^2*P^5/S^2 < C
++  simpa only [one_mul] using hh.trans hret
+ 
+ end D1Bound5
+ 

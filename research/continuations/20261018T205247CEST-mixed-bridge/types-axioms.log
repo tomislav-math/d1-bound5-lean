@@ -1,0 +1,92 @@
+MIXED_BRIDGE_AXIOMS_PASS D1Bound5.coherent_retained_mixed_size_parameters: [propext, Classical.choice, Quot.sound]
+MIXED_BRIDGE_AXIOMS_PASS D1Bound5.CoherentRetainedRow: [propext, Classical.choice, Quot.sound]
+MIXED_BRIDGE_AXIOMS_PASS D1Bound5.CoherentRetainedRow.parameters: [propext, Classical.choice, Quot.sound]
+MIXED_BRIDGE_AXIOMS_PASS D1Bound5.full_ring_retained_three_mixed_lower_upper: [propext, Classical.choice, Quot.sound]
+MIXED_BRIDGE_AXIOMS_PASS D1Bound5.coherent_retained_mixed_coefficient_gt_one: [propext, Classical.choice, Quot.sound]
+MIXED_BRIDGE_AXIOMS_PASS D1Bound5.full_ring_retained_three_mixed_gap: [propext, Classical.choice, Quot.sound]
+D1Bound5.coherent_retained_mixed_size_parameters : ∀ (A B S T C : ℝ),
+  1 ≤ A →
+    3 ≤ B →
+      B ≤ S →
+        32 ≤ A * T →
+          2 * A * B * S < T →
+            3 * A * B * S * T < C →
+              5 * S ≤ T ∧
+                5 * A * B * T ≤ C ∧
+                  32 ≤ A * T ∧
+                    4 * T ≤ C ∧
+                      10000 < T * C ∧
+                        (A ^ 2 * T ^ 3 < 10001 / 10000 * C → 5 * B * S * T ≤ C) ∧
+                          (B ^ 2 * T ^ 3 < 10001 / 10000 * C → 179 / 10 * A * B * S * T ^ 2 < C)
+def D1Bound5.CoherentRetainedRow : ℝ → ℝ → ℝ → Prop :=
+fun H lam U => H = 32 ∧ lam = 1 / 10 ∧ U = 179 / 10 ∨ H = 48 ∧ lam = 19 / 200 ∧ U = 15
+@D1Bound5.CoherentRetainedRow.parameters : ∀ {H lam U : ℝ},
+  D1Bound5.CoherentRetainedRow H lam U →
+    1 < H ∧
+      H ≤ 48 ∧
+        U ≤ 179 / 10 ∧
+          0 < D1Bound5.coherentThreeLowerConstant H ∧
+            0 < D1Bound5.coherentThreeUpperConstant H ∧
+              100 * D1Bound5.coherentThreeUpperConstant H / 99 < lam ∧
+                5 < 100 / (201 * D1Bound5.coherentThreeUpperConstant H) ∧
+                  100 / (199 * D1Bound5.coherentThreeLowerConstant H) < U
+@D1Bound5.full_ring_retained_three_mixed_lower_upper : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {Tup : Finset (NumberField.RingOfIntegers K)},
+      D1Bound5.IsD1 Tup →
+        ∀ (a : Fin 5 → NumberField.RingOfIntegers K),
+          Function.Injective a →
+            (∀ (i : Fin 5), a i ∈ Tup) →
+              1 ≤ ‖phi ↑(a 0)‖ →
+                3 ≤ ‖phi ↑(a 1)‖ →
+                  ‖phi ↑(a 0)‖ ≤ ‖phi ↑(a 1)‖ →
+                    ‖phi ↑(a 1)‖ ≤ ‖phi ↑(a 2)‖ →
+                      2 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ < ‖phi ↑(a 3)‖ →
+                        3 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ * ‖phi ↑(a 3)‖ < ‖phi ↑(a 4)‖ →
+                          ∀ (H lam U : ℝ),
+                            D1Bound5.CoherentRetainedRow H lam U →
+                              H ≤ ‖phi ↑(a 0)‖ * ‖phi ↑(a 3)‖ →
+                                ∀ (eta : ℂ),
+                                  eta ^ 2 = phi ↑(a 3) * phi ↑(a 4) →
+                                    have v := fun i => phi ↑(a (![0, 1, 2] i));
+                                    have L :=
+                                      D1Bound5.coherentQuotientForm v (D1Bound5.coherentVandermonde3 v) (phi ↑(a 3))
+                                        (phi ↑(a 4)) eta;
+                                    have Z := ‖D1Bound5.coherentTerminalRoot (phi ↑(a 3)) (phi ↑(a 4)) eta‖;
+                                    ‖phi ↑(a 1)‖ ^ 2 * ‖phi ↑(a 3)‖ ^ 3 < 10001 / 10000 * ‖phi ↑(a 4)‖ ∧
+                                      L ≠ 0 ∧
+                                        1 ≤ ‖L‖ ∧
+                                          ‖L‖ <
+                                            51 * ‖D1Bound5.coherentVandermonde3 v‖ / (100 * Z) +
+                                              lam * ‖D1Bound5.coherentVandermonde3 v‖ * Z /
+                                                (‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ * ‖phi ↑(a 3)‖ ^ 3)
+D1Bound5.coherent_retained_mixed_coefficient_gt_one : ∀ (A B R lam : ℝ),
+  1 ≤ A →
+    3 ≤ B →
+      0 < R →
+        R ≤ 8 → 0 < lam → lam ≤ 1 / 10 → 1 < 9999 / 10000 / lam ^ 2 * (1 / R - 51051 / 400000 / (A ^ 2 * B ^ 2)) ^ 2
+@D1Bound5.full_ring_retained_three_mixed_gap : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {Tup : Finset (NumberField.RingOfIntegers K)},
+      D1Bound5.IsD1 Tup →
+        ∀ (a : Fin 5 → NumberField.RingOfIntegers K),
+          Function.Injective a →
+            (∀ (i : Fin 5), a i ∈ Tup) →
+              1 ≤ ‖phi ↑(a 0)‖ →
+                3 ≤ ‖phi ↑(a 1)‖ →
+                  ‖phi ↑(a 0)‖ ≤ ‖phi ↑(a 1)‖ →
+                    ‖phi ↑(a 1)‖ ≤ ‖phi ↑(a 2)‖ →
+                      2 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ < ‖phi ↑(a 3)‖ →
+                        3 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ * ‖phi ↑(a 3)‖ < ‖phi ↑(a 4)‖ →
+                          ∀ (H lam U : ℝ),
+                            D1Bound5.CoherentRetainedRow H lam U →
+                              H ≤ ‖phi ↑(a 0)‖ * ‖phi ↑(a 3)‖ →
+                                have v := fun i => phi ↑(a (![0, 1, 2] i));
+                                have R := ‖D1Bound5.coherentVandermonde3 v‖ / (‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ ^ 2);
+                                9999 / 10000 / lam ^ 2 *
+                                        (1 / R - 51051 / 400000 / (‖phi ↑(a 0)‖ ^ 2 * ‖phi ↑(a 1)‖ ^ 2)) ^ 2 *
+                                      (‖phi ↑(a 0)‖ ^ 2 * ‖phi ↑(a 3)‖ ^ 5 / ‖phi ↑(a 2)‖ ^ 2) <
+                                    ‖phi ↑(a 4)‖ ∧
+                                  ‖phi ↑(a 0)‖ ^ 2 * ‖phi ↑(a 3)‖ ^ 5 / ‖phi ↑(a 2)‖ ^ 2 < ‖phi ↑(a 4)‖
