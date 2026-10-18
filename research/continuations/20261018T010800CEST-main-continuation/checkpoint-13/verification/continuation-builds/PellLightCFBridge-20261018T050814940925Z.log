@@ -1,0 +1,78 @@
+⚠ [3008/3010] Replayed D1Bound5.PellConvergentCompleteness
+warning: D1Bound5/PellConvergentCompleteness.lean:70:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/PellConvergentCompleteness.lean:70:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3009/3010] Replayed D1Bound5.PellCFPrefixCheck
+warning: D1Bound5/PellCFPrefixCheck.lean:139:25: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.snd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/PellCFPrefixCheck.lean:139:34: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.fst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/PellCFPrefixCheck.lean:139:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/PellCFPrefixCheck.lean:195:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [3010/3010] Building D1Bound5.PellLightCFBridge (60s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PellLightCFBridge.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellLightCFBridge.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellLightCFBridge.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellLightCFBridge.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellLightCFBridge.setup.json --json
+error: D1Bound5/PellLightCFBridge.lean:56:64: unsolved goals
+d a0 X : ℤ
+N : ℕ
+⊢ List.filterMap (fun s => if 0 < s.p ∧ 0 < s.q ∧ s.p ≤ X ∧ s.p ^ 2 - d * s.q ^ 2 = 2 then some (s.p, s.q) else none)
+      (pellLightCFTrace d a0
+        { m := (pellCFInit a0).m, Q := (pellCFInit a0).Q, a := (pellCFInit a0).a, pp := (pellCFInit a0).pp,
+          p := (pellCFInit a0).p, qq := (pellCFInit a0).qq, q := (pellCFInit a0).q }
+        N) =
+    List.filterMap (fun s => if 0 < s.p ∧ 0 < s.q ∧ s.p ≤ X ∧ s.p ^ 2 - d * s.q ^ 2 = 2 then some (s.p, s.q) else none)
+      (pellCFTrace d a0 (pellCFInit a0) N)
+warning: D1Bound5/PellLightCFBridge.lean:58:4: This simp argument is unused:
+  pellLightCFTrace_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pellLightCFSolutions, pellCFSolutions, pellLightCFInit_eq, List.filterMap_map, Function.comp_def,
+    pellCFStateToLight]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/PellLightCFBridge.lean:58:25: This simp argument is unused:
+  List.filterMap_map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pellLightCFSolutions, pellCFSolutions, pellLightCFInit_eq, pellLightCFTrace_eq, Function.comp_def,
+    pellCFStateToLight]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/PellLightCFBridge.lean:58:45: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pellLightCFSolutions, pellCFSolutions, pellLightCFInit_eq, pellLightCFTrace_eq, List.filterMap_map,
+    pellCFStateToLight]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: D1Bound5/PellLightCFBridge.lean:73:4: Type mismatch: After simplification, term
+  hs
+ has type
+  X <
+    (pellLightCFAt d a0
+        { m := (pellCFInit a0).m, Q := (pellCFInit a0).Q, a := (pellCFInit a0).a, pp := (pellCFInit a0).pp,
+          p := (pellCFInit a0).p, qq := (pellCFInit a0).qq, q := (pellCFInit a0).q }
+        N).p
+but is expected to have type
+  X < (pellCFAt d a0 (pellCFInit a0) N).p
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PellLightCFBridge
+error: build failed

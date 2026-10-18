@@ -1,0 +1,149 @@
+ℹ [1974/2109] Replayed D1Bound5.CoherentWeightedRemainder
+info: D1Bound5/CoherentWeightedRemainder.lean:88:0: @D1Bound5.coherent_weighted_remainder_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ) (C ρ t : ℝ),
+  0 ≤ C →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * t < 1 →
+            (∀ (j : ℕ), ‖f (m + (j + 1))‖ ≤ C * t ^ (m + (j + 1))) →
+              (Summable fun j => f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                ‖∑' (j : ℕ), f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                  C * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+info: D1Bound5/CoherentWeightedRemainder.lean:89:0: 'D1Bound5.coherent_weighted_remainder_summable_and_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1975/2109] Replayed D1Bound5.HalfBinomialCoefficients
+warning: D1Bound5/HalfBinomialCoefficients.lean:34:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2776/3005] Replayed D1Bound5.CoherentAnalyticInterpolation
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:16:32: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:310:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:362:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [3000/3005] Replayed D1Bound5.CoherentIntegralForms
+info: D1Bound5/CoherentIntegralForms.lean:133:0: 'D1Bound5.IsD1.coherent_terminal_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:134:0: 'D1Bound5.IsD1.coherent_anchor_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:135:0: 'D1Bound5.IsD1.coherent_linear_form_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:136:0: 'D1Bound5.full_ring_coherent_linear_form_one_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3001/3005] Replayed D1Bound5.CoherentPolynomialWeights
+warning: D1Bound5/CoherentPolynomialWeights.lean:44:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3004/3005] Replayed D1Bound5.CoherentFormBounds
+warning: D1Bound5/CoherentFormBounds.lean:111:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✖ [3005/3005] Building D1Bound5.CoherentThreeGeneral (53s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CoherentThreeGeneral.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoherentThreeGeneral.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoherentThreeGeneral.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoherentThreeGeneral.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoherentThreeGeneral.setup.json --json
+error: D1Bound5/CoherentThreeGeneral.lean:93:30: No goals to be solved
+error: D1Bound5/CoherentThreeGeneral.lean:92:39: Type mismatch
+  hc
+has type
+  ‖halfBinomialWeightedCoeff x y 3‖ ≤ 1 / 4 * (P ^ 3)⁻¹
+but is expected to have type
+  ‖halfBinomialWeightedCoeff x y 3‖ ≤ 1 / 4 * (1 / P) ^ 3
+error: D1Bound5/CoherentThreeGeneral.lean:100:4: Type mismatch
+  h
+has type
+  512 / 729 ≤ (1 - P⁻¹ * A⁻¹) ^ 3
+but is expected to have type
+  512 / 729 ≤ (1 - 1 / (A * P)) ^ 3
+error: D1Bound5/CoherentThreeGeneral.lean:104:4: linarith failed to find a contradiction
+x y : ℂ
+A P : ℝ
+hA : 0 < A
+hP : 0 < P
+hx : ‖x‖ ≤ 1 / P
+hy : ‖y‖ ≤ 1 / P
+hAP : 9 ≤ A * P
+hb3 : halfBinomialCoeff 3 = 1 / 16
+hb4 : halfBinomialCoeff 4 = -5 / 128
+hc : ‖halfBinomialWeightedCoeff x y 3‖ ≤ 1 / 4 * (P ^ 3)⁻¹
+hc' : ‖halfBinomialWeightedCoeff x y 3‖ ≤ 1 / (4 * P ^ 3)
+hinv : 1 / (A * P) ≤ 1 / 9
+hbase : 8 / 9 ≤ 1 - 1 / (A * P)
+hbase3 : 512 / 729 ≤ (1 - 1 / (A * P)) ^ 3
+h : ((1 - P⁻¹ * A⁻¹) ^ 3)⁻¹ ≤ 729 / 512
+a✝ : 217 / 512 < 1 / (1 - 1 / (A * P)) ^ 3 - 1
+⊢ False
+failed
+info: D1Bound5/CoherentThreeGeneral.lean:113:18: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/CoherentThreeGeneral.lean:113:15: unsolved goals
+x y : ℂ
+A P : ℝ
+hA : 0 < A
+hP : 0 < P
+hx : ‖x‖ ≤ 1 / P
+hy : ‖y‖ ≤ 1 / P
+hAP : 9 ≤ A * P
+hb3 : halfBinomialCoeff 3 = 1 / 16
+hb4 : halfBinomialCoeff 4 = -5 / 128
+hc : ‖halfBinomialWeightedCoeff x y 3‖ ≤ 1 / 4 * (P ^ 3)⁻¹
+hc' : ‖halfBinomialWeightedCoeff x y 3‖ ≤ 1 / (4 * P ^ 3)
+hinv : 1 / (A * P) ≤ 1 / 9
+hbase : 8 / 9 ≤ 1 - 1 / (A * P)
+hbase3 : 512 / 729 ≤ (1 - 1 / (A * P)) ^ 3
+hfactor : 1 / (1 - 1 / (A * P)) ^ 3 - 1 ≤ 217 / 512
+⊢ P⁻¹ ^ 3 * (1085 / 16384) = ?m.724
+error: D1Bound5/CoherentThreeGeneral.lean:110:6: invalid 'calc' step, left-hand side is
+  5 / 32 / P ^ 3 * (1 / (1 - 1 / (A * P)) ^ 3 - 1) : ℝ
+but is expected to be
+  5 / 32 / P ^ 3 * (((1 - P⁻¹ * A⁻¹) ^ 3)⁻¹ - 1) : ℝ
+error: D1Bound5/CoherentThreeGeneral.lean:119:67: No goals to be solved
+error: D1Bound5/CoherentThreeGeneral.lean:121:32: No goals to be solved
+error: D1Bound5/CoherentThreeGeneral.lean:151:54: No goals to be solved
+warning: D1Bound5/CoherentThreeGeneral.lean:209:16: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: D1Bound5/CoherentThreeGeneral.lean:280:0: 'D1Bound5.coherent_cpow_half_near_one_36' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentThreeGeneral.lean:281:0: 'D1Bound5.coherent_three_remainder_envelope' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentThreeGeneral.lean:282:0: 'D1Bound5.coherent_three_general_scalar' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentThreeGeneral.lean:283:0: 'D1Bound5.coherent_three_general_norm_lt' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CoherentThreeGeneral
+error: build failed

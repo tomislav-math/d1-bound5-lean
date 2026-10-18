@@ -1,0 +1,521 @@
+{
+  "utc": "2026-10-18T05:35:12.219403+00:00",
+  "status": "Research source preparation only; no installation or Lean compilation",
+  "script_sha256": "494a481766a0c197fae7a5f776525da0fd6681a7cd7d801b6b26e821dbc629ad",
+  "generator_sha256": "4942337e7b44f4c84ef0ef0b75ef6aeb2c90fd5e17d74df28ba8df8af750ec7a",
+  "narrow_helper_sha256": "4c120fa958983bdc2f39d1fd38db30738f541f1372d28ac5de5b035ebb113e78",
+  "frozen_expected_manifest_sha256": "f545ddfd9ae3dfd75f318f815b229afa74119756b6648b919ff0a986d266b198",
+  "frozen134_requirements_sha256": "5a15034bf8bad9a11647231e683f1006f5b4512c3f715a21269555273b6a85fb",
+  "rows": [
+    27,
+    31,
+    32,
+    37
+  ],
+  "source_count": 24,
+  "narrow_source_bytes": 3068788,
+  "expanded_manifest_sha256": "1e66e1b343e99b5a93c374b2e8dbfe8851a8dad300a8ea20158fe5b645f0346a",
+  "narrow": {
+    "27": {
+      "directory": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-narrow27",
+      "manifest_sha256": "3780b0005c11b0ac40c83ed048bd4abf60476108761881b1add3ea5e033d56ae",
+      "source_bytes": 834623,
+      "outputs": {
+        "D1Bound5/SmallPairGraphInputs27.lean": {
+          "pre_sha256": "e423760dfa0bc604d82c0406325e93741498c57bfb5796cb0180b75a5aef4190",
+          "post_sha256": "ed660c68c0e143989b0255217848aae830b4a604ad74fe2e9a106faf59ea0bfb",
+          "pre_bytes": 542658,
+          "post_bytes": 542650,
+          "body_sha256": "13d526910ebea9635bf46976e65a2c03e59ebf5c2f0dbbb5ab52cfd17f476f96",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphCheck"
+          ],
+          "new_imports": [
+            "import D1Bound5.Coordinates"
+          ]
+        },
+        "D1Bound5/SmallPairGraphWitnessData27.lean": {
+          "pre_sha256": "951a4ff4c96513cb392f890eb92871ae70a8c57647d5499702a5ebeac74cf4cf",
+          "post_sha256": "951a4ff4c96513cb392f890eb92871ae70a8c57647d5499702a5ebeac74cf4cf",
+          "pre_bytes": 289891,
+          "post_bytes": 289891,
+          "body_sha256": "83d2f5d1da9a0ac8a0416cab80d8a62e4d93361d63bfbcdb7cff63dba4db4a3e",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs27",
+            "import D1Bound5.PairClosureWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs27",
+            "import D1Bound5.PairClosureWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphArithmetic27.lean": {
+          "pre_sha256": "4a9cc9a30701bc3b0fbeadf93340df9e051abb80b4f6811cdcd7eaccb0234130",
+          "post_sha256": "399818bc674ca081e08a5f91d4f63a18326234fecd9182d863ffe24f60a0a63e",
+          "pre_bytes": 567,
+          "post_bytes": 603,
+          "body_sha256": "f71426b5c7ffef1c17bfe2da2c2242114e00623b36adabce1135004886b0803d",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs27",
+            "import D1Bound5.TwoSmallSeedDisks"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs27",
+            "import D1Bound5.TwoSmallSeedDisks",
+            "import D1Bound5.SmallPairGraphCheck"
+          ]
+        },
+        "D1Bound5/SmallPairGraphClosure27.lean": {
+          "pre_sha256": "d077587b50fdf4bae44e9ac3733a891d809f3bd20c8ce63e05c8cfa6313203f6",
+          "post_sha256": "d077587b50fdf4bae44e9ac3733a891d809f3bd20c8ce63e05c8cfa6313203f6",
+          "pre_bytes": 734,
+          "post_bytes": 734,
+          "body_sha256": "7b50195586932354d61afb6f370f399774ca23b8e67f3db5b69865d3f1d80288",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData27",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData27",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphTriangle27.lean": {
+          "pre_sha256": "73d4d2e2c7548eb456d501f4040726a2687fee6081981c1fac51f5f0887881f0",
+          "post_sha256": "73d4d2e2c7548eb456d501f4040726a2687fee6081981c1fac51f5f0887881f0",
+          "pre_bytes": 621,
+          "post_bytes": 621,
+          "body_sha256": "c72f5c229a50186660252c0c04f4dce55c2cd25d57aeb919f40be1eef7992c22",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs27",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_1_1"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs27",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_1_1"
+          ]
+        },
+        "D1Bound5/SmallPairGraphData27.lean": {
+          "pre_sha256": "3b213946cf5a3e07877df13b5d15c23c00bb47f8be8da18dab5e16a9e5b1053b",
+          "post_sha256": "3b213946cf5a3e07877df13b5d15c23c00bb47f8be8da18dab5e16a9e5b1053b",
+          "pre_bytes": 124,
+          "post_bytes": 124,
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic27",
+            "import D1Bound5.SmallPairGraphClosure27",
+            "import D1Bound5.SmallPairGraphTriangle27"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic27",
+            "import D1Bound5.SmallPairGraphClosure27",
+            "import D1Bound5.SmallPairGraphTriangle27"
+          ]
+        }
+      }
+    },
+    "31": {
+      "directory": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-narrow31",
+      "manifest_sha256": "cf50032bb6970d06e4e157463ba016b8c5703ccde34fc13d3c6c5654b39d8a40",
+      "source_bytes": 485141,
+      "outputs": {
+        "D1Bound5/SmallPairGraphInputs31.lean": {
+          "pre_sha256": "bdf94e947064b0ec6b185cd2e65d81dc106dad6b6eee32b6a69c654ce0fdc0ed",
+          "post_sha256": "4b0c3d91ecd8304253f04b27ca110aaad636526950b810d32765b694ac32b711",
+          "pre_bytes": 236622,
+          "post_bytes": 236614,
+          "body_sha256": "3b77f87c1bf44edcfdd542eed50167850ddebb76d3f962c2516acabd1e4f6aa6",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphCheck"
+          ],
+          "new_imports": [
+            "import D1Bound5.Coordinates"
+          ]
+        },
+        "D1Bound5/SmallPairGraphWitnessData31.lean": {
+          "pre_sha256": "b8f7c7e6747eda660d4e5f46d9bec2d34e67f610bc6766f194a20f6534f42be2",
+          "post_sha256": "b8f7c7e6747eda660d4e5f46d9bec2d34e67f610bc6766f194a20f6534f42be2",
+          "pre_bytes": 246444,
+          "post_bytes": 246444,
+          "body_sha256": "238c46328bd67165af1fd12b5a9381c460ca5a592837593251b149d5479e6df7",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs31",
+            "import D1Bound5.PairClosureWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs31",
+            "import D1Bound5.PairClosureWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphArithmetic31.lean": {
+          "pre_sha256": "15924635c312823fb97cb13ccdc4f8722fcba9c164be51198e0dedddd3c6a3b2",
+          "post_sha256": "1a7c88f2e5e6b6327f3a5b127183b65db23615cebc216ac91176801db6b20d2f",
+          "pre_bytes": 567,
+          "post_bytes": 603,
+          "body_sha256": "08057791fde466f8af5aba511893a1c21924d199b6b9102233135f2b70355d4d",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs31",
+            "import D1Bound5.TwoSmallSeedDisks"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs31",
+            "import D1Bound5.TwoSmallSeedDisks",
+            "import D1Bound5.SmallPairGraphCheck"
+          ]
+        },
+        "D1Bound5/SmallPairGraphClosure31.lean": {
+          "pre_sha256": "158ad2bc2984a2c5ba3dac1285f2ee71d25d8138367e6f04ba67264e3cc71dca",
+          "post_sha256": "158ad2bc2984a2c5ba3dac1285f2ee71d25d8138367e6f04ba67264e3cc71dca",
+          "pre_bytes": 734,
+          "post_bytes": 734,
+          "body_sha256": "96b70b9731b2a3dced5ed9a9e300e3b2069ad008787982253e001ea4917b0cf7",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData31",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData31",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphTriangle31.lean": {
+          "pre_sha256": "a206463f9ff12debd40c88e6a83a850e9f3b508578f175b748ce63c018e9df0d",
+          "post_sha256": "a206463f9ff12debd40c88e6a83a850e9f3b508578f175b748ce63c018e9df0d",
+          "pre_bytes": 622,
+          "post_bytes": 622,
+          "body_sha256": "5e859bd1a97bbf974774a50cfd533d082d332524f8a934784ceb22dad9a00da4",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs31",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_0_5"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs31",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_0_5"
+          ]
+        },
+        "D1Bound5/SmallPairGraphData31.lean": {
+          "pre_sha256": "c5419f200698e376a6675d4b56c4f469c766a1ea7cb057a08e1ac8575c057e2f",
+          "post_sha256": "c5419f200698e376a6675d4b56c4f469c766a1ea7cb057a08e1ac8575c057e2f",
+          "pre_bytes": 124,
+          "post_bytes": 124,
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic31",
+            "import D1Bound5.SmallPairGraphClosure31",
+            "import D1Bound5.SmallPairGraphTriangle31"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic31",
+            "import D1Bound5.SmallPairGraphClosure31",
+            "import D1Bound5.SmallPairGraphTriangle31"
+          ]
+        }
+      }
+    },
+    "32": {
+      "directory": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-narrow32",
+      "manifest_sha256": "bb3c88c9deb82c31cff76b4d72eae8aa1765182149a1df00307fe9ff08ec8c5e",
+      "source_bytes": 460510,
+      "outputs": {
+        "D1Bound5/SmallPairGraphInputs32.lean": {
+          "pre_sha256": "cedbe1d1273c40b32af03ceb1f1f800a077db1e5dcbb06d1d7f3f0057d2120d8",
+          "post_sha256": "34a929b8972cc7de2a2445d2f3a3697cb8cae7fca0efb819f1f881c0d6a17d50",
+          "pre_bytes": 224558,
+          "post_bytes": 224550,
+          "body_sha256": "5435cc8ed1fe998846ee18a731cc3a6c61c8c4fd7bd5a2ef37ce06a85ec81df9",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphCheck"
+          ],
+          "new_imports": [
+            "import D1Bound5.Coordinates"
+          ]
+        },
+        "D1Bound5/SmallPairGraphWitnessData32.lean": {
+          "pre_sha256": "d940794bf3f594e5b5e02f9ea6a41a85ab8957604250463b46beab15a5eac31a",
+          "post_sha256": "d940794bf3f594e5b5e02f9ea6a41a85ab8957604250463b46beab15a5eac31a",
+          "pre_bytes": 233877,
+          "post_bytes": 233877,
+          "body_sha256": "1f3210440b36611e1ba11e0741147c7f6860897820bc75577b5f48058ad31fa1",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs32",
+            "import D1Bound5.PairClosureWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs32",
+            "import D1Bound5.PairClosureWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphArithmetic32.lean": {
+          "pre_sha256": "678962f82129bc8dc08165dd09c85521b5d2e80ddf2467b7a07069e34929db6f",
+          "post_sha256": "2cdfb46191da8d0a668035c89b1e4ccd361c01f01417759e813632466acc7296",
+          "pre_bytes": 567,
+          "post_bytes": 603,
+          "body_sha256": "a53de2bd1bef08a76f397f5f35b286b14ca82e7e1432b3fc95b532f3bedad64c",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs32",
+            "import D1Bound5.TwoSmallSeedDisks"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs32",
+            "import D1Bound5.TwoSmallSeedDisks",
+            "import D1Bound5.SmallPairGraphCheck"
+          ]
+        },
+        "D1Bound5/SmallPairGraphClosure32.lean": {
+          "pre_sha256": "d81733301ce0970cad0d6399ce480fe28c4050506f7914c71497601099e30860",
+          "post_sha256": "d81733301ce0970cad0d6399ce480fe28c4050506f7914c71497601099e30860",
+          "pre_bytes": 734,
+          "post_bytes": 734,
+          "body_sha256": "3e463156bbfa1db4e3b550f817fedab48993400cd73de75193f0a0e9ca7f2bc4",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData32",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData32",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphTriangle32.lean": {
+          "pre_sha256": "690f85bc066eb0817f5e7eac1fdc67eaa4dffaac85c1fea15bfddc8b4808010a",
+          "post_sha256": "690f85bc066eb0817f5e7eac1fdc67eaa4dffaac85c1fea15bfddc8b4808010a",
+          "pre_bytes": 622,
+          "post_bytes": 622,
+          "body_sha256": "eef4da33a60dfb9d57c8c9dcf9516927eb46672a345cc407515ebdf60cc3d9a8",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs32",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_0_6"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs32",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_0_6"
+          ]
+        },
+        "D1Bound5/SmallPairGraphData32.lean": {
+          "pre_sha256": "6452ff239841152c50bee3a164833ba432399f9e91029511ad6075cbce916d33",
+          "post_sha256": "6452ff239841152c50bee3a164833ba432399f9e91029511ad6075cbce916d33",
+          "pre_bytes": 124,
+          "post_bytes": 124,
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic32",
+            "import D1Bound5.SmallPairGraphClosure32",
+            "import D1Bound5.SmallPairGraphTriangle32"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic32",
+            "import D1Bound5.SmallPairGraphClosure32",
+            "import D1Bound5.SmallPairGraphTriangle32"
+          ]
+        }
+      }
+    },
+    "37": {
+      "directory": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-narrow37",
+      "manifest_sha256": "61e0d42839b373b0ff71750e2647311e9afa0743b4a2f004396be7fbaae17cb4",
+      "source_bytes": 1288514,
+      "outputs": {
+        "D1Bound5/SmallPairGraphInputs37.lean": {
+          "pre_sha256": "5c416ba0635e8f9ed8fb494eb5036323d22ca527bb8875521b992e9c27ada4b2",
+          "post_sha256": "5af3fbff4cd2905866321141b8856740c7279b51da519ff439316630999046c7",
+          "pre_bytes": 838544,
+          "post_bytes": 838536,
+          "body_sha256": "85cf0268d5d625d1e0bbc42627c605b78562b2f7bdf204e4a24e244158bd238a",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphCheck"
+          ],
+          "new_imports": [
+            "import D1Bound5.Coordinates"
+          ]
+        },
+        "D1Bound5/SmallPairGraphWitnessData37.lean": {
+          "pre_sha256": "b47b83584061be4cf55d863b7571a6b9b6b09314129919a5c17ca542e7b512ed",
+          "post_sha256": "b47b83584061be4cf55d863b7571a6b9b6b09314129919a5c17ca542e7b512ed",
+          "pre_bytes": 447896,
+          "post_bytes": 447896,
+          "body_sha256": "e7509e60aa3a1ddd7e644985232901734c33880f0b4f50d2391ae8811679e925",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs37",
+            "import D1Bound5.PairClosureWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs37",
+            "import D1Bound5.PairClosureWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphArithmetic37.lean": {
+          "pre_sha256": "b0d0dd638976c6ddc015b08b73b120940a3d3f10461f3eefb44d36b441329d4b",
+          "post_sha256": "7261cda8270070eae87a83e46a05e8dfdd9d47ce64647c0cd5b58d0edc9f00a4",
+          "pre_bytes": 567,
+          "post_bytes": 603,
+          "body_sha256": "fd34e254ff9fcca60d149d8147c57493f0013870dd14dc06f991c775d40c6c02",
+          "body_byte_identical": true,
+          "file_byte_identical": false,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs37",
+            "import D1Bound5.TwoSmallSeedDisks"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs37",
+            "import D1Bound5.TwoSmallSeedDisks",
+            "import D1Bound5.SmallPairGraphCheck"
+          ]
+        },
+        "D1Bound5/SmallPairGraphClosure37.lean": {
+          "pre_sha256": "09b5a4a57f94e87fa296af7e61e22007eb05c3765852d327173a3584374b39e4",
+          "post_sha256": "09b5a4a57f94e87fa296af7e61e22007eb05c3765852d327173a3584374b39e4",
+          "pre_bytes": 734,
+          "post_bytes": 734,
+          "body_sha256": "90b18088862678f39332388ff4e2a73f13b54f4b532ab638412f52cc5a715766",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData37",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphWitnessData37",
+            "import D1Bound5.PairClosureIndexedWitness"
+          ]
+        },
+        "D1Bound5/SmallPairGraphTriangle37.lean": {
+          "pre_sha256": "83c52ca82dffbb6e620c5ebbfe9a207409c223b81ecc80fd1de8bd0e8709fa5c",
+          "post_sha256": "83c52ca82dffbb6e620c5ebbfe9a207409c223b81ecc80fd1de8bd0e8709fa5c",
+          "pre_bytes": 621,
+          "post_bytes": 621,
+          "body_sha256": "56ad929fc7120803f67e3864634ac9e3c2835efe505dab02c20b079fd584b0c3",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphInputs37",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_1_2"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphInputs37",
+            "import D1Bound5.PairTraceZeroGraph",
+            "import D1Bound5.SmallPairSieve_1_2"
+          ]
+        },
+        "D1Bound5/SmallPairGraphData37.lean": {
+          "pre_sha256": "f1b1b7608ba968de465ecbd674e1783d7a345c2c2ad08c0816de0bf6ef25e1ab",
+          "post_sha256": "f1b1b7608ba968de465ecbd674e1783d7a345c2c2ad08c0816de0bf6ef25e1ab",
+          "pre_bytes": 124,
+          "post_bytes": 124,
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "body_byte_identical": true,
+          "file_byte_identical": true,
+          "old_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic37",
+            "import D1Bound5.SmallPairGraphClosure37",
+            "import D1Bound5.SmallPairGraphTriangle37"
+          ],
+          "new_imports": [
+            "import D1Bound5.SmallPairGraphArithmetic37",
+            "import D1Bound5.SmallPairGraphClosure37",
+            "import D1Bound5.SmallPairGraphTriangle37"
+          ]
+        }
+      }
+    }
+  },
+  "project_preimages": {
+    "D1Bound5/SmallPairGraphArithmetic16.lean": "bd98f697bcf6d72c3084f4bb93b5d03975a38ffeff8bbcce40f798c8c7e817f6",
+    "D1Bound5/SmallPairGraphArithmetic22.lean": "adb0922d008fd88dc4e6c502403fa271eff76e18e3492f2421c3a144fe6a9dcf",
+    "D1Bound5/SmallPairGraphArithmetic27.lean": null,
+    "D1Bound5/SmallPairGraphArithmetic31.lean": null,
+    "D1Bound5/SmallPairGraphArithmetic32.lean": null,
+    "D1Bound5/SmallPairGraphArithmetic34.lean": "4fd515feae97b8be9538890f102e6379da84a749b5ea6b0ffea89e5e7e28cbc9",
+    "D1Bound5/SmallPairGraphArithmetic37.lean": null,
+    "D1Bound5/SmallPairGraphArithmetic41.lean": null,
+    "D1Bound5/SmallPairGraphClosure16.lean": "e51e8f3f7dbc61120f11289c75d41b1c8c3e288c304655a307682772ef02795a",
+    "D1Bound5/SmallPairGraphClosure22.lean": "b9f89fd466791aed87b64c4ef892c16d72f86ee34e55c0e951a4608666c7e843",
+    "D1Bound5/SmallPairGraphClosure27.lean": null,
+    "D1Bound5/SmallPairGraphClosure31.lean": null,
+    "D1Bound5/SmallPairGraphClosure32.lean": null,
+    "D1Bound5/SmallPairGraphClosure34.lean": "a5f83b9e9c8233fc7e1eafda5a5ecb640388506da389699f4913e630e946b9f2",
+    "D1Bound5/SmallPairGraphClosure37.lean": null,
+    "D1Bound5/SmallPairGraphClosure41.lean": null,
+    "D1Bound5/SmallPairGraphData16.lean": "f917eca3387027f5175797c419c182404282f688596cf7dfb4c55672558f9751",
+    "D1Bound5/SmallPairGraphData22.lean": "085148f916e446e95200d487e090360797aaf1d8f56630fbf9d319a73ca53c8b",
+    "D1Bound5/SmallPairGraphData27.lean": "3946cf515b61bb71d8c89d115f92062a1e8b3b9f80d820648dc72afeac1684ab",
+    "D1Bound5/SmallPairGraphData31.lean": "e86ee47918e95b1cb1f035a5c37c3792ac40a7277b834db4471defa10969a0b4",
+    "D1Bound5/SmallPairGraphData32.lean": "fe9b3a0580925202447717acbef7068474e9690a20314a4f4d7d831384fd495f",
+    "D1Bound5/SmallPairGraphData34.lean": "d8ad1aa220dcaed2a832293313c73ab7450749353b1a506e9fa01fa978593a38",
+    "D1Bound5/SmallPairGraphData37.lean": "0810e082004bf924250fb6366a84845fa35c334bee3bb6bd659848ea2642a8e7",
+    "D1Bound5/SmallPairGraphData41.lean": "6c8c0126a7151a578309a619162d064752a9a6a8ac9c7dba1beb89045753d3f5",
+    "D1Bound5/SmallPairGraphInputs16.lean": "2770d85b35b65de738d7d3961500f55cab1f2c8390d598b61e3a51703b564fb7",
+    "D1Bound5/SmallPairGraphInputs22.lean": "80fc64a577b7f0bce1fad78a8a739fd743a5d3d0a54b1fba3b6fe37336797e1f",
+    "D1Bound5/SmallPairGraphInputs27.lean": null,
+    "D1Bound5/SmallPairGraphInputs31.lean": null,
+    "D1Bound5/SmallPairGraphInputs32.lean": null,
+    "D1Bound5/SmallPairGraphInputs34.lean": "80081fbe80d8267dc85a4c97cf17a7c063a9e61364395f31e58acc93a3d048b9",
+    "D1Bound5/SmallPairGraphInputs37.lean": null,
+    "D1Bound5/SmallPairGraphInputs41.lean": null,
+    "D1Bound5/SmallPairGraphTriangle16.lean": "1a071f72136db2d9c9d20b8fdb7889fe95a14d4af51bdc59513e3ec8b737e5e9",
+    "D1Bound5/SmallPairGraphTriangle22.lean": "58638067b16baf712fde2bbf74290c3f56092c20baf1439abf609ad558706acb",
+    "D1Bound5/SmallPairGraphTriangle27.lean": null,
+    "D1Bound5/SmallPairGraphTriangle31.lean": null,
+    "D1Bound5/SmallPairGraphTriangle32.lean": null,
+    "D1Bound5/SmallPairGraphTriangle34.lean": "30dd46ed576d94888a4ff2d2e0b4f49b2514119e230c44f4243f7ecb3f286a62",
+    "D1Bound5/SmallPairGraphTriangle37.lean": null,
+    "D1Bound5/SmallPairGraphTriangle41.lean": null,
+    "D1Bound5/SmallPairGraphWitnessData16.lean": "bbf875d01181051a1e0b39ead4ce1e3d8ff956cbc741f40913a42da43019ec7c",
+    "D1Bound5/SmallPairGraphWitnessData22.lean": "88d86ba1365cc03da254499906a5a491aea78f2aa8e3442586fe18d71098ef11",
+    "D1Bound5/SmallPairGraphWitnessData27.lean": null,
+    "D1Bound5/SmallPairGraphWitnessData31.lean": null,
+    "D1Bound5/SmallPairGraphWitnessData32.lean": null,
+    "D1Bound5/SmallPairGraphWitnessData34.lean": "e58cfc96ec234e5aa25d5402fe923f04ce6d44e4516f93b51289899b0f68b714",
+    "D1Bound5/SmallPairGraphWitnessData37.lean": null,
+    "D1Bound5/SmallPairGraphWitnessData41.lean": null
+  },
+  "tracked_project_sources_unchanged": true,
+  "frozen134_sources_unchanged": true,
+  "no_queue_or_git_action": true
+}

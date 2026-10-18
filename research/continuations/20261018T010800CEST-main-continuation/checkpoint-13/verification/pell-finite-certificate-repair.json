@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-18T05:27:21.079052+00:00",
+  "before_sha256": "2bf16b7db5d3fcd397b763bbabe27877978ae5f84daeba0bc35f5d4e2272764f",
+  "after_sha256": "dcc2fd88b881b2c8eafcbde15c1cb33b51af6fe491a0856432d4dcd395c5e1ed",
+  "diff": "--- before\n+++ after\n@@ -70,7 +70,10 @@\n   have hn : \u2016phi (z : K)\u2016^2 = (m : \u211d)^2 := by\n     rcases hz with hz | hz\n     \u00b7 simpa [m,hz] using hint\n-    \u00b7 simpa [m,hz] using hint\n+    \u00b7 have hz' : z = -(m : \ud835\udcde K) := hz\n+      change \u2016(phi.comp (algebraMap (\ud835\udcde K) K)) z\u2016^2 = (m : \u211d)^2\n+      rw [hz', map_neg, norm_neg]\n+      exact hint\n   have hbound' : m^2 \u2264 X^4 := by\n     rw [hn] at hbound\n     exact_mod_cast hbound\n",
+  "review": "Root actualsource and log; analytic_bridge proposal; allorder_det source/API fragment peer review. Lean compilation pending."
+}

@@ -1,0 +1,119 @@
+{
+  "status": "Source-only import variant; not installed or compiled; no kernel claim",
+  "row": 32,
+  "backend": "structural",
+  "input_manifest_sha256": "1e66e1b343e99b5a93c374b2e8dbfe8851a8dad300a8ea20158fe5b645f0346a",
+  "transform_sha256": "4c120fa958983bdc2f39d1fd38db30738f541f1372d28ac5de5b035ebb113e78",
+  "source_generator_executed": false,
+  "all_bodies_byte_identical": true,
+  "unchanged_files": 4,
+  "total_pre_bytes": 460482,
+  "total_post_bytes": 460510,
+  "files": {
+    "D1Bound5/SmallPairGraphInputs32.lean": {
+      "pre_sha256": "cedbe1d1273c40b32af03ceb1f1f800a077db1e5dcbb06d1d7f3f0057d2120d8",
+      "post_sha256": "34a929b8972cc7de2a2445d2f3a3697cb8cae7fca0efb819f1f881c0d6a17d50",
+      "pre_bytes": 224558,
+      "post_bytes": 224550,
+      "body_sha256": "5435cc8ed1fe998846ee18a731cc3a6c61c8c4fd7bd5a2ef37ce06a85ec81df9",
+      "body_byte_identical": true,
+      "file_byte_identical": false,
+      "old_imports": [
+        "import D1Bound5.SmallPairGraphCheck"
+      ],
+      "new_imports": [
+        "import D1Bound5.Coordinates"
+      ]
+    },
+    "D1Bound5/SmallPairGraphWitnessData32.lean": {
+      "pre_sha256": "d940794bf3f594e5b5e02f9ea6a41a85ab8957604250463b46beab15a5eac31a",
+      "post_sha256": "d940794bf3f594e5b5e02f9ea6a41a85ab8957604250463b46beab15a5eac31a",
+      "pre_bytes": 233877,
+      "post_bytes": 233877,
+      "body_sha256": "1f3210440b36611e1ba11e0741147c7f6860897820bc75577b5f48058ad31fa1",
+      "body_byte_identical": true,
+      "file_byte_identical": true,
+      "old_imports": [
+        "import D1Bound5.SmallPairGraphInputs32",
+        "import D1Bound5.PairClosureWitness"
+      ],
+      "new_imports": [
+        "import D1Bound5.SmallPairGraphInputs32",
+        "import D1Bound5.PairClosureWitness"
+      ]
+    },
+    "D1Bound5/SmallPairGraphArithmetic32.lean": {
+      "pre_sha256": "678962f82129bc8dc08165dd09c85521b5d2e80ddf2467b7a07069e34929db6f",
+      "post_sha256": "2cdfb46191da8d0a668035c89b1e4ccd361c01f01417759e813632466acc7296",
+      "pre_bytes": 567,
+      "post_bytes": 603,
+      "body_sha256": "a53de2bd1bef08a76f397f5f35b286b14ca82e7e1432b3fc95b532f3bedad64c",
+      "body_byte_identical": true,
+      "file_byte_identical": false,
+      "old_imports": [
+        "import D1Bound5.SmallPairGraphInputs32",
+        "import D1Bound5.TwoSmallSeedDisks"
+      ],
+      "new_imports": [
+        "import D1Bound5.SmallPairGraphInputs32",
+        "import D1Bound5.TwoSmallSeedDisks",
+        "import D1Bound5.SmallPairGraphCheck"
+      ]
+    },
+    "D1Bound5/SmallPairGraphClosure32.lean": {
+      "pre_sha256": "d81733301ce0970cad0d6399ce480fe28c4050506f7914c71497601099e30860",
+      "post_sha256": "d81733301ce0970cad0d6399ce480fe28c4050506f7914c71497601099e30860",
+      "pre_bytes": 734,
+      "post_bytes": 734,
+      "body_sha256": "3e463156bbfa1db4e3b550f817fedab48993400cd73de75193f0a0e9ca7f2bc4",
+      "body_byte_identical": true,
+      "file_byte_identical": true,
+      "old_imports": [
+        "import D1Bound5.SmallPairGraphWitnessData32",
+        "import D1Bound5.PairClosureIndexedWitness"
+      ],
+      "new_imports": [
+        "import D1Bound5.SmallPairGraphWitnessData32",
+        "import D1Bound5.PairClosureIndexedWitness"
+      ]
+    },
+    "D1Bound5/SmallPairGraphTriangle32.lean": {
+      "pre_sha256": "690f85bc066eb0817f5e7eac1fdc67eaa4dffaac85c1fea15bfddc8b4808010a",
+      "post_sha256": "690f85bc066eb0817f5e7eac1fdc67eaa4dffaac85c1fea15bfddc8b4808010a",
+      "pre_bytes": 622,
+      "post_bytes": 622,
+      "body_sha256": "eef4da33a60dfb9d57c8c9dcf9516927eb46672a345cc407515ebdf60cc3d9a8",
+      "body_byte_identical": true,
+      "file_byte_identical": true,
+      "old_imports": [
+        "import D1Bound5.SmallPairGraphInputs32",
+        "import D1Bound5.PairTraceZeroGraph",
+        "import D1Bound5.SmallPairSieve_0_6"
+      ],
+      "new_imports": [
+        "import D1Bound5.SmallPairGraphInputs32",
+        "import D1Bound5.PairTraceZeroGraph",
+        "import D1Bound5.SmallPairSieve_0_6"
+      ]
+    },
+    "D1Bound5/SmallPairGraphData32.lean": {
+      "pre_sha256": "6452ff239841152c50bee3a164833ba432399f9e91029511ad6075cbce916d33",
+      "post_sha256": "6452ff239841152c50bee3a164833ba432399f9e91029511ad6075cbce916d33",
+      "pre_bytes": 124,
+      "post_bytes": 124,
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "body_byte_identical": true,
+      "file_byte_identical": true,
+      "old_imports": [
+        "import D1Bound5.SmallPairGraphArithmetic32",
+        "import D1Bound5.SmallPairGraphClosure32",
+        "import D1Bound5.SmallPairGraphTriangle32"
+      ],
+      "new_imports": [
+        "import D1Bound5.SmallPairGraphArithmetic32",
+        "import D1Bound5.SmallPairGraphClosure32",
+        "import D1Bound5.SmallPairGraphTriangle32"
+      ]
+    }
+  }
+}

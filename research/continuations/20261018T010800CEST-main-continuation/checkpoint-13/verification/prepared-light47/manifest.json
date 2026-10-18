@@ -1,0 +1,1411 @@
+{
+  "status": "Uncompiled representation-only light backend; no performance or theorem acceptance claimed",
+  "generator_sha256": "67e22402774fe51120cd22ac20826b4bd3f1c44a8bb5c401465f023c3f220dde",
+  "source_pins": {
+    "pair_witness_next/all48_input_fingerprints.json": "bdd16d0325e6237beb4875fb7056ffa037e57fc6c6e7b4371f389e2b4f1ed403",
+    "pair_witness_next/all48_diagnostic_manifest.json": "49b6332742a0dfadd90242da13148e67192ff4aaab1e672bb790db4a5b50162e",
+    "pair_witness_next/cached_sieve_fingerprints.json": "ac4f2af9a284c846b122a07028e564646c8bf341f745b084f0aa7ed1e56e1893",
+    "sparse_floor_next/generated/manifest.json": "729158bc68316f922d0572617ea551e25e1aca63ea1c871c69935e5c7d0a12f9",
+    "sparse_floor_next/generate_floor_witnesses.py": "1f9564b5ac95a26dc7017d7c4dbca1bad0b15eed0aad02817452a97903790f68",
+    "crossblock_performance_next/selected_mask_costs.json": "dd0ca04c26af37ee65400336ed7b5ba1ae64b11dab3345c25cfbd45db51f5da3",
+    "pair_backend_next/stage_pair_backends.py": "4942337e7b44f4c84ef0ef0b75ef6aeb2c90fd5e17d74df28ba8df8af750ec7a",
+    "pair_backend_next/backend_source_pins.json": "07bcd289cf1e66855f3178c79fd66053518d5657c0e1ae8a55a614e0b7f3d25c",
+    "pair_backend_next/all47_dry/manifest.json": "f545ddfd9ae3dfd75f318f815b229afa74119756b6648b919ff0a986d266b198",
+    "pair_selected_next/generated/SmallPairSelectedData34.lean": "9a05216afd22493a58f74a21dd802492e7d8d57e0e80180cb8c7e7bd0d6e06c6",
+    "pair_witness_next/PairSelectedCachedMask.lean": "842d5e0cce863d3301c8c65c34a04d2d07c08d156761bf506cdbbebcdd0db1f4",
+    "pair_witness_next/PairSelectedFloorWitnesses.lean": "5627d261d76c8200c3ce7a8601856a8cef8aa9e7be044b0ebf81c7f060ce8b74",
+    "pair_witness_next/PairResidueMaskNat.lean": "f838a6119a4b84b5889032242bf1d0b6ceb9a78264fea0197c14bf45d2cae39f",
+    "pair_witness_next/PairRawSelectedFloorWitnesses.lean": "16663ee7ed18799dce07207a0b374d05787f04c1c37fca43ad73b4907ad0a013",
+    "pair_light_next/PairLightArithmetic.lean": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb",
+    "pair_light_next/PairLightArithmeticBridge.lean": "74989ea9779fa4da2831c156377a44908c388871054e7832fd443986758442a6",
+    "audit_next/pair_light_bridge_74989ea_review.json": "be8112b3252d0e023ee26bf4e4a63c7ca82f0c31819084142e688cf0353fb6b6",
+    "pair_selected_scale_next/prepare_selected_rows.py": "ec862156543e3f4304b253e54591adfbcdc32acfd4f459f6fd8c16547bf32174"
+  },
+  "backend_pins": {
+    "pair_witness_next/pair_staging.py": "65cc9c99e14c9be47edfeb3c6199dd57b04719f6b46d32aee7c73ba9820e9332",
+    "sparse_floor_next/generate_floor_witnesses.py": "1f9564b5ac95a26dc7017d7c4dbca1bad0b15eed0aad02817452a97903790f68",
+    "pair_witness_next/PairClosureWitness.lean": "c3e5b89a544885205672d45a9a3cb231a99a79dcff6c62a96059e9f00b860a62",
+    "pair_witness_next/PairClosureIndexedWitness.lean": "396e39b992bc9611aabcfcda13356692e98676409381a756555e84104fe22420",
+    "pair_witness_next/PairCachedResidues.lean": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100",
+    "pair_witness_next/PairNegativeIntegerObstruction.lean": "099be79d73801fcfb76bdc30024dc74b43ab6bdb2e935fcd75d8e115af902e02",
+    "pair_witness_next/PairCachedIntegerObstruction.lean": "7b88d466ebd17d36afddd0cdfa2f271c4c69b7b89fd533ce1008f98608cfc19e",
+    "floor_next/QuadSquareFloorObstruction.lean": "189bc6919f96623fb014a3f2f03e165069f8dce0da25caec94ef0406cc2c9b3e",
+    "pair_witness_next/PairCachedFloorWitnesses.lean": "344ed1b90b84f82b59da3776e3d6e5f30a12a3e268e2e655e2aac504ca085b06",
+    "pair_witness_next/PairTraceZeroNoThree.lean": "05241394baba13ad0c936d0b25bff457bd0afdadbe4186e3e3cfec5b20a4cbe4",
+    "pair_structural_next/PairGraphNoThreeTransfer.lean": "10b2bdca2160b3f93442ff75882d77cb4a22b0c8e74c0b3b0b8565bc741f9adb",
+    "pair_structural_next/PairTraceZeroGraph.lean": "0d64054a8011cced0bc7f67ef2726805eba0ee9f00ed409f60ae1163ef294ee0"
+  },
+  "rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "staged_rows": [
+    47
+  ],
+  "results": [
+    {
+      "row": 1,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 790138,
+          "selected_mask_calls": 63236,
+          "selected_index_sum": 692302,
+          "vertices": 360,
+          "pairs": 64620,
+          "floor_tags": 1384
+        },
+        {
+          "old_mask_calls": 776133,
+          "selected_mask_calls": 62508,
+          "selected_index_sum": 678750,
+          "floor_tags": 1395,
+          "vertices": 358,
+          "pairs": 63903
+        }
+      ],
+      "packed_codes_digest": "8cce5142ad1a8f971201db88725d9256c95167b397793c0894bd995a8feba0e1",
+      "selected_rows_digest": "da884c63f5fcf0f48e2999b71f056ce403a3f57cc6a923657078cb4f6486deba",
+      "class_indices_digest": "c9be6aae4c954098b23905f68500c91e4ee3a9810ba246fd7bcff3b15654be8e"
+    },
+    {
+      "row": 2,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 120609,
+          "selected_mask_calls": 21321,
+          "selected_index_sum": 99288,
+          "vertices": 207,
+          "pairs": 21321
+        },
+        {
+          "old_mask_calls": 122275,
+          "selected_mask_calls": 21321,
+          "selected_index_sum": 100954,
+          "vertices": 207,
+          "pairs": 21321
+        }
+      ],
+      "packed_codes_digest": "50e0f75e5efcca0d183c058a32ee94a2218e7d8b37594a0f5c0f9345352524a0",
+      "selected_rows_digest": "b7dd4b4b0af537ed0b46a7f07afa4e9887712d461874cbc840cc9885f92ae225",
+      "class_indices_digest": "b49593a6ef7f1275d7592b96540d3d8e0840c7fb7476fcaef9c6f35b8d6cb090"
+    },
+    {
+      "row": 3,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 422718,
+          "selected_mask_calls": 85078,
+          "selected_index_sum": 337640,
+          "vertices": 413,
+          "pairs": 85078
+        },
+        {
+          "old_mask_calls": 424677,
+          "selected_mask_calls": 85491,
+          "selected_index_sum": 339186,
+          "vertices": 414,
+          "pairs": 85491
+        }
+      ],
+      "packed_codes_digest": "1f895ac5b713a1dc84bbf55fd662caae7d978258d99b9545ec406f48933df8bb",
+      "selected_rows_digest": "00f78dce9f8f4cd5235c604f8467eb8cf58050139813e0d556a004931c7b3681",
+      "class_indices_digest": "cef06192054ea4c0e55d2c6a2060b66c82a09de89b274ef30c5c6a478edba160"
+    },
+    {
+      "row": 4,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 881602,
+          "selected_mask_calls": 177310,
+          "selected_index_sum": 704292,
+          "vertices": 596,
+          "pairs": 177310
+        },
+        {
+          "old_mask_calls": 900071,
+          "selected_mask_calls": 177310,
+          "selected_index_sum": 722761,
+          "vertices": 596,
+          "pairs": 177310
+        }
+      ],
+      "packed_codes_digest": "9916913647277cefda501d6143da24ec1a8034741ac395e2730a72d8482b94f0",
+      "selected_rows_digest": "3bd1d5b913c634356ee28716d3b5bf2ade2526f73470795fd632ab5064295bf2",
+      "class_indices_digest": "305b48d868b4465fb950415dbafe95c50b01fce470cc2b5b5b884501419f7652"
+    },
+    {
+      "row": 5,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 504143,
+          "selected_mask_calls": 92665,
+          "selected_index_sum": 411478,
+          "vertices": 431,
+          "pairs": 92665
+        },
+        {
+          "old_mask_calls": 504732,
+          "selected_mask_calls": 92235,
+          "selected_index_sum": 412497,
+          "vertices": 430,
+          "pairs": 92235
+        }
+      ],
+      "packed_codes_digest": "63805cfd06b655a6c6570d0767689cfad57dd824ea9bfecd793febaacb6f8528",
+      "selected_rows_digest": "da47e96cd27b4ca09a032df8a440bef1352676b91116d392c2b17fb836df3633",
+      "class_indices_digest": "63cb68e78ccece57f9c06686bfe6733af3d8e1e9383351db0ca1554a8f23de9a"
+    },
+    {
+      "row": 6,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 2053561,
+          "selected_mask_calls": 212872,
+          "selected_index_sum": 1758664,
+          "vertices": 658,
+          "pairs": 216153,
+          "floor_tags": 3281
+        },
+        {
+          "old_mask_calls": 2048959,
+          "selected_mask_calls": 212185,
+          "selected_index_sum": 1753999,
+          "floor_tags": 3311,
+          "vertices": 657,
+          "pairs": 215496
+        }
+      ],
+      "packed_codes_digest": "7bfffa06190ae92d819ab39a0c6160ddac11ab503b5abcc8f3e47ab8f52a3271",
+      "selected_rows_digest": "fb244535649843944077ec117eb12756204ed0e5504e7d6b839b0edd55e52625",
+      "class_indices_digest": "beb6f4b8795c2be804de84706397e513bf4d1c79c2222647766536f3563a5fc2"
+    },
+    {
+      "row": 7,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 446158,
+          "selected_mask_calls": 93096,
+          "selected_index_sum": 353062,
+          "vertices": 432,
+          "pairs": 93096
+        },
+        {
+          "old_mask_calls": 442993,
+          "selected_mask_calls": 92235,
+          "selected_index_sum": 350758,
+          "vertices": 430,
+          "pairs": 92235
+        }
+      ],
+      "packed_codes_digest": "7c31ed53b75b9ced751c7613c94f6221511a675a7a76e2e4ebd90725c2a234ed",
+      "selected_rows_digest": "aebb1c265370dc07ed73891c9d6a5e1708941f2bb3b59f82dc3bf2e754fd2334",
+      "class_indices_digest": "534029ba497b47648758d25ebd0c36eb0959b2424bcf6288fff5b0db23ce2c0d"
+    },
+    {
+      "row": 8,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 898448,
+          "selected_mask_calls": 255969,
+          "selected_index_sum": 642454,
+          "vertices": 716,
+          "pairs": 255970,
+          "floor_tags": 1
+        },
+        {
+          "old_mask_calls": 1561739,
+          "selected_mask_calls": 257401,
+          "selected_index_sum": 1304288,
+          "vertices": 718,
+          "pairs": 257403,
+          "floor_tags": 2
+        }
+      ],
+      "packed_codes_digest": "57866c136e32cc8756a607d4fb23c24126b49dfd1441fb2b690bb390527d68c1",
+      "selected_rows_digest": "0d5b82bc6d40d1d0e006b84f08a54bf206d27b3d04330309e5be411a4a0d0cb2",
+      "class_indices_digest": "13c8582ea962b42b76c5493f57df7e28efed2592ae4d34e6ed5ecb1658226ba1"
+    },
+    {
+      "row": 9,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 247830,
+          "selected_mask_calls": 23197,
+          "selected_index_sum": 207783,
+          "floor_tags": 674,
+          "vertices": 219,
+          "pairs": 23871
+        },
+        {
+          "old_mask_calls": 247739,
+          "selected_mask_calls": 23205,
+          "selected_index_sum": 207884,
+          "floor_tags": 666,
+          "vertices": 219,
+          "pairs": 23871
+        }
+      ],
+      "packed_codes_digest": "052b0a5195b69cfc5ee60c9452a079e9095a256791c5ebbb987e821379fc86ef",
+      "selected_rows_digest": "606e69f0521b8b6b5c1a876201ce0530f815a294e3cc867a330d1c0272fcdbcd",
+      "class_indices_digest": "693ff5a7275b6813bdd3eea663f45073c2e4e9914536a7c9723fe4d322002a85"
+    },
+    {
+      "row": 10,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 874266,
+          "selected_mask_calls": 177310,
+          "selected_index_sum": 696956,
+          "vertices": 596,
+          "pairs": 177310
+        },
+        {
+          "old_mask_calls": 872752,
+          "selected_mask_calls": 177310,
+          "selected_index_sum": 695442,
+          "vertices": 596,
+          "pairs": 177310
+        }
+      ],
+      "packed_codes_digest": "5f71da8e07dd01b96dea24c5d38326bf4623a13d5d233bc5f98b422cc18f3d4b",
+      "selected_rows_digest": "c61df477e17aff186b8762b0c8b00e7fdbe5472bf9ae3c39f9c58f9a0ca82388",
+      "class_indices_digest": "0aca074eb6277a3570fb48a83f35a86399fc784f176741270cfd4e0d216c6bcf"
+    },
+    {
+      "row": 11,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 800090,
+          "selected_mask_calls": 62883,
+          "selected_index_sum": 702757,
+          "floor_tags": 1378,
+          "vertices": 359,
+          "pairs": 64261
+        },
+        {
+          "old_mask_calls": 803154,
+          "selected_mask_calls": 62850,
+          "selected_index_sum": 705029,
+          "floor_tags": 1411,
+          "vertices": 359,
+          "pairs": 64261
+        }
+      ],
+      "packed_codes_digest": "a913e1026213500b9e17b036898477ca5e5c4dcb8743c99578480f0adddf0f2b",
+      "selected_rows_digest": "8fad7499335a6cb97a3a9a95293167e9c642cfd68088428ccce861f55d043e1f",
+      "class_indices_digest": "9abe59dfc05815a9cc5114da89c3476fa6a8647de345502ea7d6051db9c5e8c8"
+    },
+    {
+      "row": 12,
+      "tau": 0,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 639390,
+          "selected_mask_calls": 63844,
+          "selected_index_sum": 565121,
+          "vertices": 359,
+          "pairs": 64261,
+          "floor_tags": 417
+        },
+        {
+          "old_mask_calls": 835910,
+          "selected_mask_calls": 62666,
+          "selected_index_sum": 733369,
+          "floor_tags": 1595,
+          "vertices": 359,
+          "pairs": 64261
+        }
+      ],
+      "packed_codes_digest": "137e8e8c73b683b236482d88d52d62f1fa41d37db0f3142f81eb75b706846a4c",
+      "selected_rows_digest": "a6b29268f386fd63375b50a412b463245e46ccc374c01ccf70509b29ed08e87c",
+      "class_indices_digest": "9abe59dfc05815a9cc5114da89c3476fa6a8647de345502ea7d6051db9c5e8c8"
+    },
+    {
+      "row": 13,
+      "tau": 0,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 155660,
+          "selected_mask_calls": 30628,
+          "selected_index_sum": 125032,
+          "vertices": 248,
+          "pairs": 30628
+        },
+        {
+          "old_mask_calls": 154696,
+          "selected_mask_calls": 30628,
+          "selected_index_sum": 124068,
+          "vertices": 248,
+          "pairs": 30628
+        }
+      ],
+      "packed_codes_digest": "d9feed4aa40ea1998c0e69eb41e4d8be0823027be0b6431def2b5cd237a3e68f",
+      "selected_rows_digest": "852ac046957b78f34bf3e228521f13f5599f8897e7880b7d29dc0d38e2868bfc",
+      "class_indices_digest": "eae68d220b1424dc8d09a4fdbc64132fabcb0aa56eb69a88447df7b6b79fa6a8"
+    },
+    {
+      "row": 14,
+      "tau": 0,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 539282,
+          "selected_mask_calls": 122265,
+          "selected_index_sum": 417017,
+          "vertices": 495,
+          "pairs": 122265
+        },
+        {
+          "old_mask_calls": 541422,
+          "selected_mask_calls": 122760,
+          "selected_index_sum": 418662,
+          "vertices": 496,
+          "pairs": 122760
+        }
+      ],
+      "packed_codes_digest": "6291f9c7388080d1f922ad2ffca12886702fc2dac8ab1b907591a4ac955c1656",
+      "selected_rows_digest": "65435c421969df1b88959dee30cf31c14a02fe65a6c07aecb805c5ee18044241",
+      "class_indices_digest": "0d8990737da743291e9732d867882904b016b8c4bd64ee2bdd597a18dbbe8163"
+    },
+    {
+      "row": 15,
+      "tau": 0,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 1264804,
+          "selected_mask_calls": 113615,
+          "selected_index_sum": 1105564,
+          "floor_tags": 570,
+          "guard_tags": 1255,
+          "vertices": 481,
+          "pairs": 115440
+        },
+        {
+          "old_mask_calls": 1258293,
+          "selected_mask_calls": 113250,
+          "selected_index_sum": 1102293,
+          "floor_tags": 493,
+          "guard_tags": 1217,
+          "vertices": 480,
+          "pairs": 114960
+        }
+      ],
+      "packed_codes_digest": "b138a371f27ac99c2f42819f2d4c79ad9fd3608617eb114912e8a4452a6f7ab3",
+      "selected_rows_digest": "69ea97a9ef0b5c64386e4a64ef8391dcb8a70908b2082e451a9cf28d653be914",
+      "class_indices_digest": "40b3e91ad3ff608a9d8e4e7ff64ff7265e71f18d011ac1cedc9ce72cb0e53ecb"
+    },
+    {
+      "row": 16,
+      "tau": 0,
+      "nu": 2,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 469279,
+          "selected_mask_calls": 36129,
+          "selected_index_sum": 387625,
+          "guard_tags": 1821,
+          "vertices": 276,
+          "pairs": 37950
+        },
+        {
+          "old_mask_calls": 470348,
+          "selected_mask_calls": 36010,
+          "selected_index_sum": 385838,
+          "guard_tags": 1940,
+          "vertices": 276,
+          "pairs": 37950
+        }
+      ],
+      "packed_codes_digest": "ab3d94756c5a6eae43cad740c030defdeeb17f6e1c83528ec300a136dcde63e9",
+      "selected_rows_digest": "76f197273c4e206aa2d71a603c930e919b5d045e63ae957a7bb3eeaaebbed297",
+      "class_indices_digest": "1c82c319650b3b49a48e040026a2d53f6992bbc8cc66f837718ce2df145deb98"
+    },
+    {
+      "row": 17,
+      "tau": 0,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 668376,
+          "selected_mask_calls": 63856,
+          "selected_index_sum": 585420,
+          "floor_tags": 406,
+          "guard_tags": 358,
+          "vertices": 360,
+          "pairs": 64620
+        },
+        {
+          "old_mask_calls": 870757,
+          "selected_mask_calls": 61978,
+          "selected_index_sum": 760654,
+          "floor_tags": 992,
+          "guard_tags": 933,
+          "vertices": 358,
+          "pairs": 63903
+        }
+      ],
+      "packed_codes_digest": "0c7fdaccfba027d40bf6ff861ff1e00870daa114d6eae3bc2827839a896ddacf",
+      "selected_rows_digest": "e2239501386f1cbbbbd492071159c24c18a5f9ff576ce706c515953b3590314a",
+      "class_indices_digest": "c9be6aae4c954098b23905f68500c91e4ee3a9810ba246fd7bcff3b15654be8e"
+    },
+    {
+      "row": 18,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 182434,
+          "selected_mask_calls": 34191,
+          "selected_index_sum": 148243,
+          "vertices": 262,
+          "pairs": 34191
+        },
+        {
+          "old_mask_calls": 181423,
+          "selected_mask_calls": 34191,
+          "selected_index_sum": 147232,
+          "vertices": 262,
+          "pairs": 34191
+        }
+      ],
+      "packed_codes_digest": "379b68553b6a9c3560448e780a99deb3bf29b3c5c03446f49ac6366d52a34e61",
+      "selected_rows_digest": "4c0489ddda956c3685a30db6cbea7867bbfec6af2c11e9f8f0d533d1160a23d9",
+      "class_indices_digest": "436eadf6af53a62cf4415a7e7373cd40352767afd331aa1298cbc9388a6681bc"
+    },
+    {
+      "row": 19,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 487812,
+          "selected_mask_calls": 99235,
+          "selected_index_sum": 388577,
+          "vertices": 446,
+          "pairs": 99235
+        },
+        {
+          "old_mask_calls": 487786,
+          "selected_mask_calls": 99235,
+          "selected_index_sum": 388551,
+          "vertices": 446,
+          "pairs": 99235
+        }
+      ],
+      "packed_codes_digest": "9ad10c3d94b6942ad65fd7b70266a90f3e1237e46428f69a625ce0497913e4f6",
+      "selected_rows_digest": "aece957738f2f32136ec271280d068ee4fc9e40e528ff5f3d4c2b2dfcebbf83a",
+      "class_indices_digest": "2206c81508200205649d7fd2981ba3ed13c4731ff359af07dcb93287e56ebd72"
+    },
+    {
+      "row": 20,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 122240,
+          "selected_mask_calls": 24753,
+          "selected_index_sum": 97487,
+          "vertices": 223,
+          "pairs": 24753
+        },
+        {
+          "old_mask_calls": 121968,
+          "selected_mask_calls": 24753,
+          "selected_index_sum": 97215,
+          "vertices": 223,
+          "pairs": 24753
+        }
+      ],
+      "packed_codes_digest": "c0ea7c8ec4302fae191a16d3756ccfc4ed85b081a74088dab02e14d886bf0e3e",
+      "selected_rows_digest": "35b0aa4d3e38b06b0fdb5081b6c900d5ece523230ad30d08cc17abeddc8cbda0",
+      "class_indices_digest": "67d0f8296d0d1eb6cba6a159185b9fe0c12a873f74bd5f3204ada40206756729"
+    },
+    {
+      "row": 21,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 640553,
+          "selected_mask_calls": 137026,
+          "selected_index_sum": 503527,
+          "vertices": 524,
+          "pairs": 137026
+        },
+        {
+          "old_mask_calls": 631481,
+          "selected_mask_calls": 137026,
+          "selected_index_sum": 494455,
+          "vertices": 524,
+          "pairs": 137026
+        }
+      ],
+      "packed_codes_digest": "df518bafaec664c3bdcc856ca0246a6ec4a7e6c2ecf2691a4ad645afa2ab439e",
+      "selected_rows_digest": "093823cb5b788001bfc05ef977a667693f45a312fb16776e57634fb09a2682ea",
+      "class_indices_digest": "d5563baadaf046dd19c8297c7d28c752768fa9658b49c8a6c4fccab96482c475"
+    },
+    {
+      "row": 22,
+      "tau": 1,
+      "nu": 1,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 1153831,
+          "selected_mask_calls": 112109,
+          "selected_index_sum": 958447,
+          "guard_tags": 3331,
+          "vertices": 481,
+          "pairs": 115440
+        },
+        {
+          "old_mask_calls": 1153831,
+          "selected_mask_calls": 112109,
+          "selected_index_sum": 958447,
+          "guard_tags": 3331,
+          "vertices": 481,
+          "pairs": 115440
+        }
+      ],
+      "packed_codes_digest": "f968ff6c196147387d80080cd20594ebae57bb85d7aab9327e0c890561cc1863",
+      "selected_rows_digest": "3fae53500b7dc755057033c60232cd0559f347022a9a1c107873589a2c527801",
+      "class_indices_digest": "4c6b246bfb18d58bb76f46f0b8bdc4c2d51f39a039dce7a5af2d42fd69a4181e"
+    },
+    {
+      "row": 23,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 1032025,
+          "selected_mask_calls": 113524,
+          "selected_index_sum": 858576,
+          "guard_tags": 1368,
+          "floor_tags": 1029,
+          "vertices": 482,
+          "pairs": 115921
+        },
+        {
+          "old_mask_calls": 1023655,
+          "selected_mask_calls": 112597,
+          "selected_index_sum": 851983,
+          "floor_tags": 1057,
+          "guard_tags": 1306,
+          "vertices": 480,
+          "pairs": 114960
+        }
+      ],
+      "packed_codes_digest": "fe63f5666009e6610a17fb2db79efa09e7efbc308de0329f67fccfbdb19fc024",
+      "selected_rows_digest": "1acdf37af715c29acd585d77ec9b120ca9d0f8217cff69926026c6e9e43c84fc",
+      "class_indices_digest": "a44171edcba432579b4dc1326b985a8b13cb05524f49917fa1c4b08eab833494"
+    },
+    {
+      "row": 24,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 419743,
+          "selected_mask_calls": 99234,
+          "selected_index_sum": 320484,
+          "vertices": 446,
+          "pairs": 99235,
+          "floor_tags": 1
+        },
+        {
+          "old_mask_calls": 420839,
+          "selected_mask_calls": 99235,
+          "selected_index_sum": 321604,
+          "vertices": 446,
+          "pairs": 99235
+        }
+      ],
+      "packed_codes_digest": "43423a990c212904b116dd1927b9b25dd5de122c66bb607bb7581b65322c8a15",
+      "selected_rows_digest": "292e3f9130f5e158971422a5151cddc220d736ee98e2dab4aaf350dc6a2981d8",
+      "class_indices_digest": "e7e9534226cd9ad11e21fe0de1868dbfcc56b780025dbe4b4298ec8055ebead2"
+    },
+    {
+      "row": 25,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 383544,
+          "selected_mask_calls": 72010,
+          "selected_index_sum": 311534,
+          "vertices": 380,
+          "pairs": 72010
+        },
+        {
+          "old_mask_calls": 384696,
+          "selected_mask_calls": 72390,
+          "selected_index_sum": 312306,
+          "vertices": 381,
+          "pairs": 72390
+        }
+      ],
+      "packed_codes_digest": "90a80dee1ee6c470ab412ba6eb4f6ce98a70e54471d3b8ecbbd6e2e69d9d9f46",
+      "selected_rows_digest": "d192210a7189523cb3398a3e3f9f13a986c669634fbb159bbeb712d3dcb31cb5",
+      "class_indices_digest": "86a29249365072240c936e4a490b76dca588f000a2fe902e90be791246ec92b5"
+    },
+    {
+      "row": 26,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 1358714,
+          "selected_mask_calls": 289180,
+          "selected_index_sum": 1069534,
+          "vertices": 761,
+          "pairs": 289180
+        },
+        {
+          "old_mask_calls": 1360497,
+          "selected_mask_calls": 289180,
+          "selected_index_sum": 1071317,
+          "vertices": 761,
+          "pairs": 289180
+        }
+      ],
+      "packed_codes_digest": "577cd7b4b02ccda3656f4ca7a921ebe00c80fd6a8cb9848ffa17da5ff9ffc2fb",
+      "selected_rows_digest": "edb32397cd43b80c45b57d6500dce53c49231cca3f0321f08fd359186768e870",
+      "class_indices_digest": "1b9612f015b210d7d7eaff73a8164f823b197a5be4b7e2e2262e963e596a42af"
+    },
+    {
+      "row": 27,
+      "tau": 1,
+      "nu": 1,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 366253,
+          "selected_mask_calls": 27087,
+          "selected_index_sum": 299341,
+          "guard_tags": 1593,
+          "vertices": 240,
+          "pairs": 28680
+        },
+        {
+          "old_mask_calls": 368019,
+          "selected_mask_calls": 27383,
+          "selected_index_sum": 302211,
+          "guard_tags": 1537,
+          "vertices": 241,
+          "pairs": 28920
+        }
+      ],
+      "packed_codes_digest": "79ad53d15c66af4d88dbc3e3878702893f8ae6221a380701515d4794f605699f",
+      "selected_rows_digest": "25a039d96e270b0c2d23262ab9e228d7858352484984fe4f6e5504ac5ac980f5",
+      "class_indices_digest": "2212b2c67b5ece271344a69baf6292b70084628dfdfdef9180bbfcff77188ec3"
+    },
+    {
+      "row": 28,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 681341,
+          "selected_mask_calls": 137026,
+          "selected_index_sum": 544315,
+          "vertices": 524,
+          "pairs": 137026
+        },
+        {
+          "old_mask_calls": 678176,
+          "selected_mask_calls": 137026,
+          "selected_index_sum": 541150,
+          "vertices": 524,
+          "pairs": 137026
+        }
+      ],
+      "packed_codes_digest": "11f880d8bd1741b5551ba9f45ad515c053a7978cc0f963658241ee1682fa5230",
+      "selected_rows_digest": "9dccd25d18b18ba57e4c163bc2713f20669aa665f6a912e15b20c35b03da4a00",
+      "class_indices_digest": "28f026e078518eee2cec8299393b7ef9dde6466aa8a765f24345d434b4106af4"
+    },
+    {
+      "row": 29,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 410093,
+          "selected_mask_calls": 72010,
+          "selected_index_sum": 338083,
+          "vertices": 380,
+          "pairs": 72010
+        },
+        {
+          "old_mask_calls": 259692,
+          "selected_mask_calls": 72390,
+          "selected_index_sum": 187302,
+          "vertices": 381,
+          "pairs": 72390
+        }
+      ],
+      "packed_codes_digest": "431fadb6b14870952999009418753daa38549badb06f273110ce30f3c282a745",
+      "selected_rows_digest": "ece5a61337884b52a45162ced8045f764227df772376f8dc4a0ae141f103ade7",
+      "class_indices_digest": "9869019a1141dbde86e723c8f1a223106d374d1710b2e5de800e13d01e6cb097"
+    },
+    {
+      "row": 30,
+      "tau": 1,
+      "nu": 1,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 412164,
+          "selected_mask_calls": 115921,
+          "selected_index_sum": 296243,
+          "vertices": 482,
+          "pairs": 115921
+        },
+        {
+          "old_mask_calls": 1066283,
+          "selected_mask_calls": 111900,
+          "selected_index_sum": 877883,
+          "floor_tags": 1518,
+          "guard_tags": 1542,
+          "vertices": 480,
+          "pairs": 114960
+        }
+      ],
+      "packed_codes_digest": "197c68568d0c15c585753bc4c8b8dbcf4f521a3052826660544fc27130543610",
+      "selected_rows_digest": "5bf43cca2fe20cf16c6cceadfaa74a4898982c03de43604ce533d5a15fd9fe32",
+      "class_indices_digest": "a44171edcba432579b4dc1326b985a8b13cb05524f49917fa1c4b08eab833494"
+    },
+    {
+      "row": 31,
+      "tau": 0,
+      "nu": 5,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 278244,
+          "selected_mask_calls": 20354,
+          "selected_index_sum": 243990,
+          "guard_tags": 556,
+          "vertices": 205,
+          "pairs": 20910
+        },
+        {
+          "old_mask_calls": 278765,
+          "selected_mask_calls": 20280,
+          "selected_index_sum": 242735,
+          "guard_tags": 630,
+          "vertices": 205,
+          "pairs": 20910
+        }
+      ],
+      "packed_codes_digest": "aec7209c3fdb5f7b95bd6864437a007bc348f9ce994194b985057af799a023bc",
+      "selected_rows_digest": "4b11b57bbea41a006e01847a216100e9e7b71a7f1cab8fdc420f1d95d84a4ae8",
+      "class_indices_digest": "81cef4e0547f5a817dfca311a698e7a545e307f081df441b54b3b71ac492b287"
+    },
+    {
+      "row": 32,
+      "tau": 0,
+      "nu": 6,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 235459,
+          "selected_mask_calls": 18139,
+          "selected_index_sum": 197920,
+          "guard_tags": 776,
+          "vertices": 195,
+          "pairs": 18915
+        },
+        {
+          "old_mask_calls": 233950,
+          "selected_mask_calls": 17942,
+          "selected_index_sum": 196533,
+          "guard_tags": 779,
+          "vertices": 194,
+          "pairs": 18721
+        }
+      ],
+      "packed_codes_digest": "e250d0a89a7bdddb718d2110f6be1de7d937a79c9d569c41bcb939a6b1098706",
+      "selected_rows_digest": "ce63d587be6709ce2a9b86346e66c5e4b34c75ba1d510bf146189eb9b91d61a1",
+      "class_indices_digest": "91ffc70f62c6fc53f5e0783b03868667a4da641788dece323af8e2b0a7ce3b8c"
+    },
+    {
+      "row": 33,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 706263,
+          "selected_mask_calls": 63144,
+          "selected_index_sum": 606219,
+          "floor_tags": 547,
+          "guard_tags": 929,
+          "vertices": 360,
+          "pairs": 64620
+        },
+        {
+          "old_mask_calls": 699533,
+          "selected_mask_calls": 62414,
+          "selected_index_sum": 599894,
+          "floor_tags": 588,
+          "guard_tags": 901,
+          "vertices": 358,
+          "pairs": 63903
+        }
+      ],
+      "packed_codes_digest": "c588b6fdb77a2e3efb48c7653ea853e18c51d58a135d7538308a0936803ce0b8",
+      "selected_rows_digest": "d09ad3bb34c0c3baa945bda6686dfdd921c26007d86d7d709a42352f4b8bdd3c",
+      "class_indices_digest": "c9be6aae4c954098b23905f68500c91e4ee3a9810ba246fd7bcff3b15654be8e"
+    },
+    {
+      "row": 34,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 179338,
+          "selected_mask_calls": 26104,
+          "selected_index_sum": 153184,
+          "vertices": 229,
+          "pairs": 26106,
+          "floor_tags": 2
+        },
+        {
+          "old_mask_calls": 178244,
+          "selected_mask_calls": 25877,
+          "selected_index_sum": 152342,
+          "vertices": 228,
+          "pairs": 25878,
+          "floor_tags": 1
+        }
+      ],
+      "packed_codes_digest": "439fc54436b8857b0e5399ca4b12051b2f23b8fb59d584614f4e019eaf1caf5f",
+      "selected_rows_digest": "87aa134842fc184ff0a4411b9dd6f5fcdf2cd1966f50a11d0132f1ec54be5958",
+      "class_indices_digest": "4e24e08f8f0acf0f81ef8f027d7b246626e8b06ea3086817dd2d60ea739c9e4f"
+    },
+    {
+      "row": 35,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 380311,
+          "selected_mask_calls": 67896,
+          "selected_index_sum": 312415,
+          "vertices": 369,
+          "pairs": 67896
+        },
+        {
+          "old_mask_calls": 378936,
+          "selected_mask_calls": 67528,
+          "selected_index_sum": 311408,
+          "vertices": 368,
+          "pairs": 67528
+        }
+      ],
+      "packed_codes_digest": "1a1bd0db335f893981bf9afe2dcd2ea416235658aca4aeb69aa48f9e26182dd2",
+      "selected_rows_digest": "2c723618588a6dd159dd2a20ad42a56e3cc2aaf00fdb717ae30f81e13d112f18",
+      "class_indices_digest": "cc4838004f077ddfad84d472080fd93d54d411716dd534a482b27fabd27c8b46"
+    },
+    {
+      "row": 36,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 837520,
+          "selected_mask_calls": 157080,
+          "selected_index_sum": 680440,
+          "vertices": 561,
+          "pairs": 157080
+        },
+        {
+          "old_mask_calls": 842176,
+          "selected_mask_calls": 156520,
+          "selected_index_sum": 685656,
+          "vertices": 560,
+          "pairs": 156520
+        }
+      ],
+      "packed_codes_digest": "b0cad1be3ef61d2351afbda863a873f9b7502346a837535cc9caf3abcfc1fb73",
+      "selected_rows_digest": "0c638d3337d19e5d6904d409539fdc426eef18d8001cf1705a1677519707ca29",
+      "class_indices_digest": "46a13bb4afeff0cd518be3a215ba184a34972aa5d6540142ca55322d32d1a56c"
+    },
+    {
+      "row": 37,
+      "tau": 1,
+      "nu": 2,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 938739,
+          "selected_mask_calls": 65633,
+          "selected_index_sum": 788781,
+          "guard_tags": 3373,
+          "vertices": 372,
+          "pairs": 69006
+        },
+        {
+          "old_mask_calls": 937525,
+          "selected_mask_calls": 65585,
+          "selected_index_sum": 786415,
+          "guard_tags": 3421,
+          "vertices": 372,
+          "pairs": 69006
+        }
+      ],
+      "packed_codes_digest": "418ea113fbfa101726a5086ec95757477bc8c0e13fdfff0a4e71f198fce45ec6",
+      "selected_rows_digest": "8ec625a1b60bb1fbc5f4296d8f03b73645c48d2f984c7ae85fcf1a8ecdc7f9d6",
+      "class_indices_digest": "56f1f35f5626644d14a53b10fef673eb32c5750117384d0751a9b34f884a1813"
+    },
+    {
+      "row": 38,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 183748,
+          "selected_mask_calls": 39060,
+          "selected_index_sum": 144688,
+          "vertices": 280,
+          "pairs": 39060
+        },
+        {
+          "old_mask_calls": 184070,
+          "selected_mask_calls": 39340,
+          "selected_index_sum": 144730,
+          "vertices": 281,
+          "pairs": 39340
+        }
+      ],
+      "packed_codes_digest": "653d44b4f8a4ab9e1a9d65c5058ca6eff67329541abc29fe8de54f6dc83a0f98",
+      "selected_rows_digest": "e7cb1e4ff3e6757664f3e3669516fa53e6f46c5e3558970e4c7ee76dfb74be7f",
+      "class_indices_digest": "dfec869dbeaaaf284a2cfd3294bf7927a18e976b5be1b6b49dbcfb32a25c023d"
+    },
+    {
+      "row": 39,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 342991,
+          "selected_mask_calls": 104653,
+          "selected_index_sum": 238338,
+          "vertices": 458,
+          "pairs": 104653
+        },
+        {
+          "old_mask_calls": 617100,
+          "selected_mask_calls": 103740,
+          "selected_index_sum": 513360,
+          "vertices": 456,
+          "pairs": 103740
+        }
+      ],
+      "packed_codes_digest": "da9132e7f70f684bfc142efda909587fc3a4058e074cf1a220eb6efd28c85362",
+      "selected_rows_digest": "5d84aaaf446fae7337a4edde5a2cfd6811f3608831062632fe7d3559d77b426a",
+      "class_indices_digest": "aafe2dbb5a7364b9e7f72884dde3eee7111529c706437111584246b14509a52b"
+    },
+    {
+      "row": 40,
+      "tau": 1,
+      "nu": 2,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 315960,
+          "selected_mask_calls": 64620,
+          "selected_index_sum": 251340,
+          "vertices": 360,
+          "pairs": 64620
+        },
+        {
+          "old_mask_calls": 740396,
+          "selected_mask_calls": 62379,
+          "selected_index_sum": 639917,
+          "floor_tags": 751,
+          "guard_tags": 773,
+          "vertices": 358,
+          "pairs": 63903
+        }
+      ],
+      "packed_codes_digest": "b0cf9a250a10f7ba205eda221d2e563bbd9e26824ad8c9c7e9532984cf4cabca",
+      "selected_rows_digest": "df80288f79ce63bc5b88cf0fa73b60f36d87f89f158227e7378cb98d2b5b2991",
+      "class_indices_digest": "c9be6aae4c954098b23905f68500c91e4ee3a9810ba246fd7bcff3b15654be8e"
+    },
+    {
+      "row": 41,
+      "tau": 1,
+      "nu": 2,
+      "structural": true,
+      "classes": [
+        {
+          "old_mask_calls": 200149,
+          "selected_mask_calls": 16321,
+          "selected_index_sum": 161728,
+          "guard_tags": 884,
+          "vertices": 186,
+          "pairs": 17205
+        },
+        {
+          "old_mask_calls": 198829,
+          "selected_mask_calls": 16395,
+          "selected_index_sum": 162184,
+          "guard_tags": 810,
+          "vertices": 186,
+          "pairs": 17205
+        }
+      ],
+      "packed_codes_digest": "6e352969d41f378a495e3e93881124c6a84f21348e2c8dacdbad779f89a49bdc",
+      "selected_rows_digest": "7157d17a2ecf4f4da9e6a09c2cf7511cf0746273a3884224dcc3da119dc550df",
+      "class_indices_digest": "3c8db9b46669096e21683cfe92e8f1f22322343dfe5e459f7585aebc20a88230"
+    },
+    {
+      "row": 42,
+      "tau": 1,
+      "nu": 3,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 149537,
+          "selected_mask_calls": 29161,
+          "selected_index_sum": 120376,
+          "vertices": 242,
+          "pairs": 29161
+        },
+        {
+          "old_mask_calls": 149902,
+          "selected_mask_calls": 29161,
+          "selected_index_sum": 120741,
+          "vertices": 242,
+          "pairs": 29161
+        }
+      ],
+      "packed_codes_digest": "b89843331dbab691a071dc8c8f064a883d4eae51380d939a723b08005d47557d",
+      "selected_rows_digest": "aa83c595836f852d6cd677f01ad15b5518053279403bfc67357e4442743d6c23",
+      "class_indices_digest": "c2d3c664ede1217f044a5bb271a9c0be084b7cad502b289ed500833c95807084"
+    },
+    {
+      "row": 43,
+      "tau": 1,
+      "nu": 3,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 1066652,
+          "selected_mask_calls": 115764,
+          "selected_index_sum": 946963,
+          "vertices": 482,
+          "pairs": 115921,
+          "floor_tags": 88,
+          "guard_tags": 69
+        },
+        {
+          "old_mask_calls": 1184281,
+          "selected_mask_calls": 113703,
+          "selected_index_sum": 1039153,
+          "floor_tags": 666,
+          "guard_tags": 591,
+          "vertices": 480,
+          "pairs": 114960
+        }
+      ],
+      "packed_codes_digest": "b38744385f095ca04831074e4bde409072bb91ced833c395f3190a04cd52b199",
+      "selected_rows_digest": "03b88c1d112ebc6feca38b5cce39cb60e1879c6d97288acb50164c84c3ebf2f1",
+      "class_indices_digest": "a44171edcba432579b4dc1326b985a8b13cb05524f49917fa1c4b08eab833494"
+    },
+    {
+      "row": 44,
+      "tau": 1,
+      "nu": 4,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 124521,
+          "selected_mask_calls": 24090,
+          "selected_index_sum": 100431,
+          "vertices": 220,
+          "pairs": 24090
+        },
+        {
+          "old_mask_calls": 125563,
+          "selected_mask_calls": 24090,
+          "selected_index_sum": 101473,
+          "vertices": 220,
+          "pairs": 24090
+        }
+      ],
+      "packed_codes_digest": "87f2a1d06c4828645971beccc6fe8f27bdc032e129a1c916e67fc0968d9f7dfa",
+      "selected_rows_digest": "a6c631d9a946060c80bb968bdcf70f1eb761078d2f049f7a6baa41fb00e7d465",
+      "class_indices_digest": "25d84df2655558bc16c9c60bd72d85f8822289752828209e77604eb683defd54"
+    },
+    {
+      "row": 45,
+      "tau": 1,
+      "nu": 5,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 126765,
+          "selected_mask_calls": 20910,
+          "selected_index_sum": 105855,
+          "vertices": 205,
+          "pairs": 20910
+        },
+        {
+          "old_mask_calls": 127458,
+          "selected_mask_calls": 21115,
+          "selected_index_sum": 106343,
+          "vertices": 206,
+          "pairs": 21115
+        }
+      ],
+      "packed_codes_digest": "031d3ed45ce381269b9aa4b58d14764266c2c1e6ae218c675ab5c9d0f66cde67",
+      "selected_rows_digest": "c52b17f5898b7fcea9b8643f34a594f3abb32faa7a3fc6804139f0ef53cdf83c",
+      "class_indices_digest": "e3c5ea93c4f9c9d3de7f991b2e762a1dd207926078f9f7bf23d2d96d5269f5b6"
+    },
+    {
+      "row": 46,
+      "tau": 1,
+      "nu": 6,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 763714,
+          "selected_mask_calls": 62947,
+          "selected_index_sum": 658942,
+          "vertices": 360,
+          "pairs": 64620,
+          "floor_tags": 922,
+          "guard_tags": 751
+        },
+        {
+          "old_mask_calls": 780404,
+          "selected_mask_calls": 60448,
+          "selected_index_sum": 633581,
+          "floor_tags": 1843,
+          "guard_tags": 1612,
+          "vertices": 358,
+          "pairs": 63903
+        }
+      ],
+      "packed_codes_digest": "062487043e36ae2c5da28ae1c7afeae9141cc7c3a3d192d272f2c4414f86f17d",
+      "selected_rows_digest": "7ed95c2c1f5e62e24f8a3139804613c3a6c15a490d50fcc0a8c88a390264934f",
+      "class_indices_digest": "c9be6aae4c954098b23905f68500c91e4ee3a9810ba246fd7bcff3b15654be8e"
+    },
+    {
+      "row": 47,
+      "tau": 1,
+      "nu": 6,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 86057,
+          "selected_mask_calls": 18915,
+          "selected_index_sum": 67142,
+          "vertices": 195,
+          "pairs": 18915
+        },
+        {
+          "old_mask_calls": 84848,
+          "selected_mask_calls": 18721,
+          "selected_index_sum": 66127,
+          "vertices": 194,
+          "pairs": 18721
+        }
+      ],
+      "packed_codes_digest": "c1ae549fcde59f4e043d272bd7ddca9ad4cf598a51f3fa3f0d3242b90641e768",
+      "selected_rows_digest": "3c98eedc281285bf50d0bc823c50f8a8ac4dc3b6c22f1e64cf768676346e703a",
+      "class_indices_digest": "6ba169263781234f9f62a586e7516246a2f4e835ae75457d40cfc1cc8edfdcfe",
+      "files": {
+        "D1Bound5/SmallPairGraphInputs47.lean": {
+          "sha256": "f501c9534e027510c4689ea6afae0efbfa1eebe21b7a5bb741e80e06359fea20",
+          "bytes": 437607
+        },
+        "D1Bound5/SmallPairGraphWitnessData47.lean": {
+          "sha256": "ec7574bd0dd92e0ed2fbb3e470b67a51820bcfd972cbd2daf9edb2f2e144d1df",
+          "bytes": 233668
+        },
+        "D1Bound5/SmallPairGraphArithmetic47.lean": {
+          "sha256": "33d28d1cdc773c8feaf8f5fa9085c4d1ab9e83a9f52e395db9c66a0df6c6682e",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure47.lean": {
+          "sha256": "f5845bcbddbf3ce55102aeb16e2ffd1e5b4683d4a47756516936f9f5eaf11de0",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphData47.lean": {
+          "sha256": "879a89751861ba90c45e9a8e119d516c8d3d45039542ce95c409bd3dc3a12fc0",
+          "bytes": 124
+        },
+        "D1Bound5/SmallPairRawSelectedData47.lean": {
+          "sha256": "68810e7e2da7bc88e83a26f6403ffe367da0976e1d1852937fbee18a6bb72e06",
+          "bytes": 371523
+        },
+        "D1Bound5/SmallPairGraphTriangle47.lean": {
+          "sha256": "e4ae4a4a5a6c844e8dc14eb854ed54f24f7f858b504ed2aa8b31ff80091af674",
+          "bytes": 396
+        },
+        "D1Bound5/SmallPairLightData47.lean": {
+          "sha256": "e39c3a0f41cff9601d28c05134df094f54341fb91db64b215658d15d90e43602",
+          "bytes": 605920
+        },
+        "D1Bound5/SmallPairLightLeft47.lean": {
+          "sha256": "3e8d45055b201733f4da8d677cdf32ca10aba4e85a7df53bec0a2f2dbec1274d",
+          "bytes": 926
+        },
+        "D1Bound5/SmallPairLightRight47.lean": {
+          "sha256": "355ed326016df7561798201e0e3affdfea19475d8fa22c49999126fab337ba69",
+          "bytes": 941
+        },
+        "D1Bound5/SmallPairLightAssembly47.lean": {
+          "sha256": "f6a171b324aab343a87dce66e76db94cd8d9d029fdf2a63b2f0ffc3a7537664a",
+          "bytes": 2047
+        }
+      }
+    },
+    {
+      "row": 48,
+      "tau": 1,
+      "nu": 8,
+      "structural": false,
+      "classes": [
+        {
+          "old_mask_calls": 725753,
+          "selected_mask_calls": 63975,
+          "selected_index_sum": 645653,
+          "vertices": 360,
+          "pairs": 64620,
+          "floor_tags": 307,
+          "guard_tags": 338
+        },
+        {
+          "old_mask_calls": 721499,
+          "selected_mask_calls": 61284,
+          "selected_index_sum": 594740,
+          "floor_tags": 1318,
+          "guard_tags": 1301,
+          "vertices": 358,
+          "pairs": 63903
+        }
+      ],
+      "packed_codes_digest": "8fa1f1d9bc8eb6f38fc4ab84ebb211d0fb67099ae49bb59069b5678ee0cf86f4",
+      "selected_rows_digest": "8b668c0eefadffa27a2910677184e426cebf40de492d60e4ffcf95aea72799e8",
+      "class_indices_digest": "c9be6aae4c954098b23905f68500c91e4ee3a9810ba246fd7bcff3b15654be8e"
+    }
+  ],
+  "bridge_source_review_is_not_kernel_acceptance": true,
+  "all_original_data_and_public_types_preserved": true,
+  "pure_data_and_checks_have_no_heavy_import": true,
+  "mandatory_assembly_equalities": [
+    "sieve",
+    "ordered original split vertices",
+    "original cached records",
+    "original packed words and floors"
+  ],
+  "file_count": 11,
+  "total_source_bytes": 1654453
+}

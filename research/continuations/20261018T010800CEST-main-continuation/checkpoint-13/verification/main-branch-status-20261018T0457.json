@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-18T04:56:28.517389+00:00",
+  "meaning": "exact current source and terminal ledger, not fresh artifact audit",
+  "branches": {
+    "AllLargeImpossible": {
+      "modules": 232,
+      "status": "PENDING",
+      "counts": {
+        "BASELINE": 83,
+        "PASS": 18,
+        "PENDING": 131
+      },
+      "failed": {}
+    },
+    "OneSmallImpossible": {
+      "modules": 400,
+      "status": "PENDING",
+      "counts": {
+        "BASELINE": 90,
+        "PASS": 33,
+        "PENDING": 277
+      },
+      "failed": {}
+    },
+    "ThreeSmallExclusion": {
+      "modules": 217,
+      "status": "PENDING",
+      "counts": {
+        "BASELINE": 76,
+        "PASS": 33,
+        "PENDING": 108
+      },
+      "failed": {}
+    },
+    "TwoSmallNondegenerateImpossible": {
+      "modules": 316,
+      "status": "PENDING",
+      "counts": {
+        "BASELINE": 76,
+        "HELD": 8,
+        "PASS": 83,
+        "PENDING": 148,
+        "TIMEOUT": 1
+      },
+      "failed": {
+        "SmallPairSelectedRight34": "TIMEOUT"
+      }
+    },
+    "DegeneratePairImpossible": {
+      "modules": 301,
+      "status": "PENDING",
+      "counts": {
+        "BASELINE": 78,
+        "HELD": 69,
+        "PASS": 34,
+        "PENDING": 120
+      },
+      "failed": {}
+    },
+    "MainTheorem": {
+      "modules": 695,
+      "status": "PENDING",
+      "counts": {
+        "BASELINE": 96,
+        "HELD": 77,
+        "PASS": 98,
+        "PENDING": 423,
+        "TIMEOUT": 1
+      },
+      "failed": {
+        "SmallPairSelectedRight34": "TIMEOUT"
+      }
+    }
+  }
+}

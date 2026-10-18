@@ -1,0 +1,46 @@
+⚠ [2957/2967] Replayed D1Bound5.FullRingUnitPairPell
+warning: D1Bound5/FullRingUnitPairPell.lean:65:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FullRingUnitPairPell.lean:84:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2963/2967] Replayed D1Bound5.OneThreeNegative
+warning: D1Bound5/OneThreeNegative.lean:141:35: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2965/2967] Replayed D1Bound5.UnitPairArithmeticModel
+warning: D1Bound5/UnitPairArithmeticModel.lean:77:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/UnitPairArithmeticModel.lean:89:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [2967/2967] Building D1Bound5.UnitPairRealReduction (55s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/UnitPairRealReduction.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairRealReduction.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairRealReduction.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairRealReduction.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairRealReduction.setup.json --json
+error: D1Bound5/UnitPairRealReduction.lean:28:34: ring failed, ring expressions not equal
+R : Type u_1
+inst✝² : CommRing R
+inst✝¹ : IsDomain R
+inst✝ : CharZero R
+M : UnitPairArithmeticModel R
+z : R
+hz : z ≠ 0
+m : ℤ
+hm : z = ↑m
+n : ℤ
+hn : z = ↑n * M.w
+hfix : M.conjugate z = z
+hneg : M.conjugate z = -z
+⊢ z * 4 = 0
+error: D1Bound5/UnitPairRealReduction.lean:190:50: omega could not prove the goal:
+No usable constraints found. You may need to unfold definitions so `omega` can see linear arithmetic facts about `Nat` and `Int`, which may also involve multiplication, division, and modular remainder by constants.
+error: D1Bound5/UnitPairRealReduction.lean:191:50: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  1 ≤ a ≤ 5
+where
+ a := ↑↑(e i)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.UnitPairRealReduction
+error: build failed

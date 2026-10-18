@@ -1,0 +1,47 @@
+{
+  "scope": "Source-only minimal-diff checkpoint adaptation; no prepare/stage execution, Git operation or compiler invocation",
+  "reviewer": "/root/source_audit",
+  "coordinator_authorized_new_files_only": true,
+  "base_source_sha256": {
+    "prepare_checkpoint12.py": "481b96aa453fba73186b9850970854e5a2cc78746b4ea16757c5133e7597db6c",
+    "stage_checkpoint12.py": "8c4a74e5b2588dc8fa1f404bf72679b05f42998153efe746fef5a8078b490ece"
+  },
+  "candidate_sources": {
+    "prepare_checkpoint13.py": {
+      "sha256": "f36f64dc4c75731635d81dc65f8d9a779a7c227ea110fdce97a164d06652f3d4",
+      "bytes": 21545
+    },
+    "stage_checkpoint13.py": {
+      "sha256": "d5885fa6f3eb647fdd3c4e05cd13dd4fc06f10751155e652646134547ceb18ce",
+      "bytes": 3432
+    }
+  },
+  "expected_head": "0bfbd880cfa7a1f3e8242148a7e766d57486a009",
+  "first_wave": 92,
+  "minimum_latest_wave": 95,
+  "source_map_base": "checkpoint-12/SOURCE_MAP.json",
+  "required_helper_packet": "checkpoint13-helpers.json",
+  "preserved_gates": [
+    "Intake-lock snapshot",
+    "Stable safe-path reads",
+    "Contiguous paired source-hash-verified waves",
+    "Exact current closure fingerprint status",
+    "Terminal-ledger logs only",
+    "Source/credential audit",
+    "Private origin and fixed HEAD gates",
+    "Literal index pathspec and every indexed blob SHA",
+    "No main/root acceptance claim"
+  ],
+  "changes": [
+    "Checkpoint number and expected HEAD only in staging script",
+    "Previous source map and log reuse advanced to checkpoint12",
+    "Recovered Light47 helper scripts and previous push/index receipts required",
+    "Terminal Light47 preparation logs/manifests added only when final preparation receipt exists",
+    "Right34, PellLight and analytic prerequisite status targets added",
+    "Truthful thirteenth-checkpoint narrative"
+  ],
+  "syntax_only_validation": true,
+  "preparation_or_staging_executed": false,
+  "main_statement_proved": false,
+  "notes": "Current intake helper8fd9 remains unchanged; actual legacy/protected/job-union closure alias equality was verified and no guard change was made."
+}
