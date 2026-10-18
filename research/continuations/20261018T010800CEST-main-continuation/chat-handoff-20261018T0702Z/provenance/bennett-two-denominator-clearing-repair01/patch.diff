@@ -1,0 +1,25 @@
+--- BennettTwoDenominatorClearing.before.lean
++++ BennettTwoDenominatorClearing.lean
+@@ -114,7 +114,10 @@
+     _ = (-1 : F) ^ ((k + d1 + h1) + (k + d2 + h2)) *
+         ((a * b * (a - b) ^ 2) ^ k * (a * b * c) ^ (k - h0) *
+           (b⁻¹) ^ (k + d1 + h1) * (a⁻¹) ^ (k + d2 + h2)) := by
+-      simp only [inv_neg, neg_pow, pow_add]
++      simp only [inv_neg]
++      rw [show -(b⁻¹) = (-1 : F)*b⁻¹ by ring,
++        show -(a⁻¹) = (-1 : F)*a⁻¹ by ring]
++      simp only [mul_pow, pow_add]
+       ring
+     _ = _ := by rw [bennett_two_clear_column_zero a b c ha hb k d0 d1 d2 h0 h1 h2 hk hd hh]
+ 
+@@ -134,7 +137,9 @@
+         ((a * b * (a - b) ^ 2) ^ k * (a * b * c + b) ^ (k - h1) *
+           (b⁻¹) ^ (k + d0 + h0) * ((a - b)⁻¹) ^ (k + d2 + h2)) := by
+       rw [hneg]
+-      simp only [inv_neg, neg_pow]
++      simp only [inv_neg]
++      rw [show -((a-b)⁻¹) = (-1 : F)*(a-b)⁻¹ by ring]
++      simp only [mul_pow]
+       ring
+     _ = _ := by rw [bennett_two_clear_column_one a b c hb hab k d0 d1 d2 h0 h1 h2 hk hd hh]
+ 

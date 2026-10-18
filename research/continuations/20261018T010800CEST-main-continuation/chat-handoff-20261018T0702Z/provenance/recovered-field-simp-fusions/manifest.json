@@ -1,0 +1,132 @@
+{
+  "scope": "Exactly eight terminal field_simp/ring fusions in six pinned sources",
+  "imports_statements_options_unchanged": true,
+  "original_project_files_unchanged": true,
+  "no_build_or_kernel_claim": true,
+  "module_count": 6,
+  "replacement_count": 8,
+  "files": [
+    {
+      "module": "BennettPositiveSeries",
+      "original_path": "/Users/tp/Lean/D1Bound5/D1Bound5/BennettPositiveSeries.lean",
+      "before_file": "before/BennettPositiveSeries.lean",
+      "candidate_file": "D1Bound5/BennettPositiveSeries.lean",
+      "before_sha256": "5ff168e92be4f027ef5b8cdc1da262da0c26a287ca8c8f4221ae00f5721ef798",
+      "after_sha256": "481510461434f198f14739843f1f8e93f925afb49fe390e7b4bcb564ff2f2bf0",
+      "before_bytes": 6489,
+      "after_bytes": 6485,
+      "changes": [
+        {
+          "original_line": 61,
+          "original": "        field_simp [hd.ne', hbase.ne', hsub.ne']\n        ring\n",
+          "replacement": "        field_simp [hd.ne', hbase.ne', hsub.ne'] <;> ring\n"
+        }
+      ],
+      "diff_sha256": "2df44cf9537d17b0434812481163169b4e2075ec1e53dec631e0ecc100f24d24"
+    },
+    {
+      "module": "CoherentRetainedMixedGap",
+      "original_path": "/Users/tp/Lean/D1Bound5/D1Bound5/CoherentRetainedMixedGap.lean",
+      "before_file": "before/CoherentRetainedMixedGap.lean",
+      "candidate_file": "D1Bound5/CoherentRetainedMixedGap.lean",
+      "before_sha256": "8ffc4c989640d731a55a53fd499678598ad7a8efe69b2031e84b2de1f7becdff",
+      "after_sha256": "2fffa8ff61ad4388a2c7ee7bf5ff257646e13250395da51ae5c2bb49297c760b",
+      "before_bytes": 6338,
+      "after_bytes": 6338,
+      "changes": [
+        {
+          "original_line": 109,
+          "original": "    field_simp\n    ring\n",
+          "replacement": "    field_simp <;> ring\n"
+        }
+      ],
+      "diff_sha256": "e88a57b27b2c6de1fd6e57d62814b9336bda530863d89e6c31372030bf43d7e0"
+    },
+    {
+      "module": "OrdinaryHeightEnvelope",
+      "original_path": "/Users/tp/Lean/D1Bound5/D1Bound5/OrdinaryHeightEnvelope.lean",
+      "before_file": "before/OrdinaryHeightEnvelope.lean",
+      "candidate_file": "D1Bound5/OrdinaryHeightEnvelope.lean",
+      "before_sha256": "8ea17e4dedc02ac380d23a322044180f6bdfd6c5bd37e9eabbbc47afb1c5b9a3",
+      "after_sha256": "129e1dafe70a3da4879ef2ebbbf82e591aa445a468de5e50e0e1ebad7581ed52",
+      "before_bytes": 3585,
+      "after_bytes": 3581,
+      "changes": [
+        {
+          "original_line": 51,
+          "original": "        field_simp [hB0.ne',hZ0.ne']\n        ring\n",
+          "replacement": "        field_simp [hB0.ne',hZ0.ne'] <;> ring\n"
+        },
+        {
+          "original_line": 62,
+          "original": "    field_simp [hB0.ne']\n    ring\n",
+          "replacement": "    field_simp [hB0.ne'] <;> ring\n"
+        }
+      ],
+      "diff_sha256": "1f6c1ed3c49166f63ad346542aa5bcaf12923d81c33b82c9b489a8357f18952d"
+    },
+    {
+      "module": "OrdinaryHeightScalar",
+      "original_path": "/Users/tp/Lean/D1Bound5/D1Bound5/OrdinaryHeightScalar.lean",
+      "before_file": "before/OrdinaryHeightScalar.lean",
+      "candidate_file": "D1Bound5/OrdinaryHeightScalar.lean",
+      "before_sha256": "e329bf0cb55a6bb6bffae329805238202c3a16e11d5f4a082f1027c7774b7f21",
+      "after_sha256": "0823b901aedbcca1a333b2b988ab8e6173c80406182e7af0372435df321e588d",
+      "before_bytes": 4405,
+      "after_bytes": 4405,
+      "changes": [
+        {
+          "original_line": 85,
+          "original": "    field_simp [hxPos.ne']\n    ring\n",
+          "replacement": "    field_simp [hxPos.ne'] <;> ring\n"
+        }
+      ],
+      "diff_sha256": "9dfbf76aa6b2e2a08debc33a8c2a9a1e3e1e0f05a4de000bc94020258100e28f"
+    },
+    {
+      "module": "RetainedMixedFourScalar",
+      "original_path": "/Users/tp/Lean/D1Bound5/D1Bound5/RetainedMixedFourScalar.lean",
+      "before_file": "before/RetainedMixedFourScalar.lean",
+      "candidate_file": "D1Bound5/RetainedMixedFourScalar.lean",
+      "before_sha256": "c32586d14f42963ebfc9159cbea9af4ebe96f1fe730983614b5adfb7d55b1a65",
+      "after_sha256": "a4ae2cd4aa93ee653bdc1acf1660c5bb84963f8e3f72e7896314845810407848",
+      "before_bytes": 4213,
+      "after_bytes": 4213,
+      "changes": [
+        {
+          "original_line": 98,
+          "original": "    field_simp [hSn, hTn]\n    ring\n",
+          "replacement": "    field_simp [hSn, hTn] <;> ring\n"
+        }
+      ],
+      "diff_sha256": "e2546af1766502abf29e0c0e957022cf9094d5948c39306c10d730e64d29119a"
+    },
+    {
+      "module": "RetainedMixedScalar",
+      "original_path": "/Users/tp/Lean/D1Bound5/D1Bound5/RetainedMixedScalar.lean",
+      "before_file": "before/RetainedMixedScalar.lean",
+      "candidate_file": "D1Bound5/RetainedMixedScalar.lean",
+      "before_sha256": "eae6636380e731308833f0b990840b99e81b816718f662b13af91ee82cd7bc95",
+      "after_sha256": "0c6c95dcb358b3d703833d182158296ddeff084f38b48d4c182c1ac2a7be80a0",
+      "before_bytes": 4280,
+      "after_bytes": 4278,
+      "changes": [
+        {
+          "original_line": 55,
+          "original": "      field_simp [hAn, hBn, hSn, hTn]\n      ring\n",
+          "replacement": "      field_simp [hAn, hBn, hSn, hTn] <;> ring\n"
+        },
+        {
+          "original_line": 106,
+          "original": "    field_simp [hAn, hBn, hSn, hQn, hlamn]\n    ring\n",
+          "replacement": "    field_simp [hAn, hBn, hSn, hQn, hlamn] <;> ring\n"
+        }
+      ],
+      "diff_sha256": "45a9c7ef190b092f08e3b10751dc95c218ff5933feba5488d02b49e67c3f09b7"
+    }
+  ],
+  "source_payload_file": "source_payload.json",
+  "source_payload_sha256": "de87368e3e06afe8ef0a08156aa0cd1595f63108f4dc31ea735b2e679f38b7d9",
+  "diff_file": "changes.patch",
+  "diff_sha256": "1d589d3e18474c12b9c031c7cd3790876bc3ee58125e4d8c016b2fb95b756e36"
+}

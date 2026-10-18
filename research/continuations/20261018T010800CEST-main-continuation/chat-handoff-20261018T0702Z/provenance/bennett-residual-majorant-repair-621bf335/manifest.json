@@ -1,0 +1,35 @@
+{
+  "scope": "research-only proof/API repair; no project, queue, compiler or Git changes",
+  "preimage_sha256": "621bf3350b583bf323a08abac3edc3459f36cec3092a6486cd8040d14d1acbc9",
+  "candidate_sha256": "c58bc0d04eb00993d5135dfb42fb11860498ef68a0255ced84b00198787da454",
+  "actual_log_sha256": "924e1dfc5514138b8f45c00c652f23bd8cceee078d861e3683ce7aef73d2d8b7",
+  "public_theorem_types_unchanged": true,
+  "changes": [
+    "Use global ascPochhammer_pos instead of nonexistent Polynomial-qualified name.",
+    "Rewrite complex choose as ofReal(real choose) using the pinned Complex.ofReal_choose identity before taking norms.",
+    "Allow standard simp cast normalization in the final specialization alongside the explicit exponent equality."
+  ],
+  "pinned_api_evidence": [
+    "Analysis/Analytic/Binomial.lean:41 Complex.ofReal_choose: ofReal(choose a n)=choose(ofReal a)n",
+    "RingTheory/Polynomial/Pochhammer.lean:475 uses global ascPochhammer_pos n (s-n+1) h"
+  ],
+  "payload_shape": "exact filename -> full Lean source",
+  "files": {
+    "BennettResidualMajorant.before.txt": {
+      "sha256": "621bf3350b583bf323a08abac3edc3459f36cec3092a6486cd8040d14d1acbc9",
+      "bytes": 7882
+    },
+    "BennettResidualMajorant.lean": {
+      "sha256": "c58bc0d04eb00993d5135dfb42fb11860498ef68a0255ced84b00198787da454",
+      "bytes": 7934
+    },
+    "BennettResidualMajorant.diff": {
+      "sha256": "57935ec3edef2add0b610cc293e196182143a08ba7ed7c5e9980952a49663a4c",
+      "bytes": 1357
+    },
+    "source-payload.json": {
+      "sha256": "10e2d1ddce1f7ed7a8b598e13efb4b46bc20dac80d9af0b5789cc3968d74b5b0",
+      "bytes": 8138
+    }
+  }
+}

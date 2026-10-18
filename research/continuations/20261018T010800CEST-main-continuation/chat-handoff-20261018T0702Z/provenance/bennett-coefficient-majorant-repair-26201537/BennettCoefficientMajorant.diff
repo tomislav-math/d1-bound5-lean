@@ -1,0 +1,52 @@
+--- a/D1Bound5/BennettCoefficientMajorant.lean
++++ b/D1Bound5/BennettCoefficientMajorant.lean
+@@ -11,12 +11,12 @@
+ namespace D1Bound5
+ 
+ private theorem bennett_real_factorial_mul_choose (s : ℝ) (h : ℕ) :
+-    (h.factorial : ℝ) * Ring.choose s h = (Polynomial.descPochhammer ℝ h).eval s := by
+-  have heq : (Polynomial.descPochhammer ℤ h).smeval s =
+-      (Polynomial.descPochhammer ℝ h).eval s := by
++    (h.factorial : ℝ) * Ring.choose s h = (descPochhammer ℝ h).eval s := by
++  have heq : (descPochhammer ℤ h).smeval s =
++      (descPochhammer ℝ h).eval s := by
+     rw [Polynomial.descPochhammer_smeval_eq_ascPochhammer,
+       Polynomial.ascPochhammer_smeval_eq_eval,
+-      Polynomial.descPochhammer_eval_eq_ascPochhammer]
++      descPochhammer_eval_eq_ascPochhammer]
+   have hh := Ring.descPochhammer_eq_factorial_smul_choose s h
+   rw [heq, nsmul_eq_mul] at hh
+   exact hh.symm
+@@ -31,10 +31,10 @@
+   have hhigh : (h : ℝ) - 1 ≤ ((k + 1 : ℕ) : ℝ) := by push_cast; linarith
+   have hupper : (k : ℝ) + 1 / 2 ≤ ((k + 1 : ℕ) : ℝ) := by push_cast; linarith
+   have hf : 0 < (h.factorial : ℝ) := by positivity
+-  have hnonneg := Polynomial.descPochhammer_nonneg hlow
++  have hnonneg := descPochhammer_nonneg hlow
+   rw [← bennett_real_factorial_mul_choose] at hnonneg
+   have hc : 0 ≤ Ring.choose ((k : ℝ) + 1 / 2) h := by nlinarith
+-  have hmono := (Polynomial.monotoneOn_descPochhammer_eval h) hlow hhigh hupper
++  have hmono := (monotoneOn_descPochhammer_eval h) hlow hhigh hupper
+   rw [← bennett_real_factorial_mul_choose, ← bennett_real_factorial_mul_choose,
+     Ring.choose_natCast] at hmono
+   rw [abs_of_nonneg hc]
+@@ -86,7 +86,9 @@
+   have hP : (P : PowerSeries ℝ) = bennettNumeratorMajorant U k := by
+     simp [P, bennettNumeratorMajorant]
+   have hpzero (h : ℕ) (hh : h ∉ P.support) : P.coeff h * r ^ h = 0 := by
+-    rw [Polynomial.not_mem_support_iff.mp hh, zero_mul]
++    have hcoeff : P.coeff h = 0 := by
++      simpa only [Polynomial.mem_support_iff, not_not] using hh
++    rw [hcoeff, zero_mul]
+   have hp : HasSum (fun h : ℕ => P.coeff h * r ^ h) (P.eval r) := by
+     simpa only [Polynomial.eval_eq_sum, Polynomial.sum] using
+       (hasSum_sum_of_ne_finset_zero (s := P.support) hpzero)
+@@ -119,7 +121,7 @@
+       have hchoose : ‖Ring.choose ((k : ℂ) + 1 / 2) hu.1‖ ≤
+           (Nat.choose (k + 1) hu.1 : ℝ) := by
+         have hcast : Ring.choose ((k : ℂ) + 1 / 2) hu.1 =
+-            (Ring.choose ((k : ℝ) + 1 / 2) hu.1 : ℂ) := by
++            Complex.ofReal (Ring.choose ((k : ℝ) + 1 / 2) hu.1) := by
+           simpa using
+             (Ring.map_choose (algebraMap ℝ ℂ) ((k : ℝ) + 1 / 2) hu.1).symm
+         rw [hcast, Complex.norm_real, Real.norm_eq_abs]

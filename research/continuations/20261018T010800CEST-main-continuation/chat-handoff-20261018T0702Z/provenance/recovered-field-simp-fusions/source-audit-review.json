@@ -1,0 +1,82 @@
+{
+  "checks": [
+    "Each candidate is exactly its frozen preimage with only the stated same-indent adjacent field_simp/ring pairs fused to field_simp ... <;> ring.",
+    "Payload inventory and each full source string exactly equal the six reviewed candidates.",
+    "All per-file manifest pre/post SHA256 and byte sizes, per-file diffs, complete concatenated diff and all frozen packet pins independently match.",
+    "Every current project source equals its frozen preimage at review time.",
+    "No imports, public declarations, options, hypotheses, or bytes outside the eight exact proof-syntax replacements change."
+  ],
+  "diagnostic_note": "An initial inventory assertion expected bare filenames, but the actual payload uses D1Bound5/ relative paths. It failed before any write; the corrected check validates precisely those six relative paths.",
+  "files": [
+    {
+      "actual_project_still_equals_before": true,
+      "after_bytes": 6485,
+      "after_sha256": "481510461434f198f14739843f1f8e93f925afb49fe390e7b4bcb564ff2f2bf0",
+      "before_bytes": 6489,
+      "before_sha256": "5ff168e92be4f027ef5b8cdc1da262da0c26a287ca8c8f4221ae00f5721ef798",
+      "file": "BennettPositiveSeries.lean",
+      "fusions": 1
+    },
+    {
+      "actual_project_still_equals_before": true,
+      "after_bytes": 6338,
+      "after_sha256": "2fffa8ff61ad4388a2c7ee7bf5ff257646e13250395da51ae5c2bb49297c760b",
+      "before_bytes": 6338,
+      "before_sha256": "8ffc4c989640d731a55a53fd499678598ad7a8efe69b2031e84b2de1f7becdff",
+      "file": "CoherentRetainedMixedGap.lean",
+      "fusions": 1
+    },
+    {
+      "actual_project_still_equals_before": true,
+      "after_bytes": 3581,
+      "after_sha256": "129e1dafe70a3da4879ef2ebbbf82e591aa445a468de5e50e0e1ebad7581ed52",
+      "before_bytes": 3585,
+      "before_sha256": "8ea17e4dedc02ac380d23a322044180f6bdfd6c5bd37e9eabbbc47afb1c5b9a3",
+      "file": "OrdinaryHeightEnvelope.lean",
+      "fusions": 2
+    },
+    {
+      "actual_project_still_equals_before": true,
+      "after_bytes": 4405,
+      "after_sha256": "0823b901aedbcca1a333b2b988ab8e6173c80406182e7af0372435df321e588d",
+      "before_bytes": 4405,
+      "before_sha256": "e329bf0cb55a6bb6bffae329805238202c3a16e11d5f4a082f1027c7774b7f21",
+      "file": "OrdinaryHeightScalar.lean",
+      "fusions": 1
+    },
+    {
+      "actual_project_still_equals_before": true,
+      "after_bytes": 4213,
+      "after_sha256": "a4ae2cd4aa93ee653bdc1acf1660c5bb84963f8e3f72e7896314845810407848",
+      "before_bytes": 4213,
+      "before_sha256": "c32586d14f42963ebfc9159cbea9af4ebe96f1fe730983614b5adfb7d55b1a65",
+      "file": "RetainedMixedFourScalar.lean",
+      "fusions": 1
+    },
+    {
+      "actual_project_still_equals_before": true,
+      "after_bytes": 4278,
+      "after_sha256": "0c6c95dcb358b3d703833d182158296ddeff084f38b48d4c182c1ac2a7be80a0",
+      "before_bytes": 4280,
+      "before_sha256": "eae6636380e731308833f0b990840b99e81b816718f662b13af91ee82cd7bc95",
+      "file": "RetainedMixedScalar.lean",
+      "fusions": 2
+    }
+  ],
+  "not_done": [
+    "No Lean build or kernel acceptance claim",
+    "No project, queue, artifact, Git or original package mutation",
+    "No task or theorem completion claim"
+  ],
+  "pins": {
+    "changes.patch": "1d589d3e18474c12b9c031c7cd3790876bc3ee58125e4d8c016b2fb95b756e36",
+    "manifest.json": "1a98351e5aa6bbacc03db8d0d91855c05ec4e69f2054364d6c1a6db03672b8df",
+    "source_payload.json": "de87368e3e06afe8ef0a08156aa0cd1595f63108f4dc31ea735b2e679f38b7d9"
+  },
+  "reviewer": "source_audit",
+  "scope": "Independent exact-byte verification of six source candidates and all eight field_simp/ring fusions.",
+  "semantics": "The all-goals combinator applies ring to every goal remaining after field_simp, and succeeds without running ring when field_simp closes the goal. Lean kernel checking remains required.",
+  "source_review_pass": true,
+  "total_fusions": 8,
+  "utc": "2026-10-18T06:57:25.929141+00:00"
+}

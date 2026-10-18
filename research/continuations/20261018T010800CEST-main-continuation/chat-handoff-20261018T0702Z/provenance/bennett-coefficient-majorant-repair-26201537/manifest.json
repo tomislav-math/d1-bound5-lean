@@ -1,0 +1,35 @@
+{
+  "scope": "research-only proof/API repair; no project, queue, compiler or Git changes",
+  "preimage_sha256": "262015379ab0c23d38539dcb142f97cb4f8aac74f3782fa689d8d3c8d2f38c5b",
+  "candidate_sha256": "745a19f711c6a5e9f988ec4a734c6c301b951eab2348d592fcd7ff6b670b433b",
+  "actual_log_sha256": "3d6dc4717dac8e1fc46dca6b3334f97ca47a882973a8272b20c868663d8ef899",
+  "public_theorem_types_unchanged": true,
+  "changes": [
+    "Use the actual global Pochhammer definitions and ordered-evaluation lemmas; keep smeval lemmas in Polynomial namespace.",
+    "Derive coefficient zero from not-in-support via Polynomial.mem_support_iff and double negation.",
+    "Force the real choose value under explicit Complex.ofReal before norm_real."
+  ],
+  "pinned_api_evidence": [
+    "RingTheory/Polynomial/Pochhammer.lean:266 descPochhammer;371 descPochhammer_eval_eq_ascPochhammer;478 descPochhammer_nonneg;499 monotoneOn_descPochhammer_eval",
+    "RingTheory/Binomial.lean:200 Polynomial.ascPochhammer_smeval_eq_eval;533 Ring.map_choose"
+  ],
+  "payload_shape": "exact filename -> full Lean source",
+  "files": {
+    "BennettCoefficientMajorant.before.txt": {
+      "sha256": "262015379ab0c23d38539dcb142f97cb4f8aac74f3782fa689d8d3c8d2f38c5b",
+      "bytes": 6561
+    },
+    "BennettCoefficientMajorant.lean": {
+      "sha256": "745a19f711c6a5e9f988ec4a734c6c301b951eab2348d592fcd7ff6b670b433b",
+      "bytes": 6576
+    },
+    "BennettCoefficientMajorant.diff": {
+      "sha256": "7eb02b6be3779b2a4547bc11d7253f4c336b2c05864389af050e26d8ccb1c2fd",
+      "bytes": 2766
+    },
+    "source-payload.json": {
+      "sha256": "0c96f086de3b695ea5fa7594241f592e992b0df509603d800adc18e7a05e70e8",
+      "bytes": 6759
+    }
+  }
+}

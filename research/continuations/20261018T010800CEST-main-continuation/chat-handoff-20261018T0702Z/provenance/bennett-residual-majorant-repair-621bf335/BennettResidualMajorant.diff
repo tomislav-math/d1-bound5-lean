@@ -1,0 +1,30 @@
+--- a/D1Bound5/BennettResidualMajorant.lean
++++ b/D1Bound5/BennettResidualMajorant.lean
+@@ -23,7 +23,7 @@
+     0 < Ring.multichoose q t := by
+   have h := Ring.factorial_nsmul_multichoose_eq_ascPochhammer q t
+   rw [nsmul_eq_mul, Polynomial.ascPochhammer_smeval_eq_eval] at h
+-  have hp := Polynomial.ascPochhammer_pos t q hq
++  have hp := ascPochhammer_pos t q hq
+   have hf : 0 < (t.factorial : ℝ) := by positivity
+   nlinarith
+ 
+@@ -101,7 +101,8 @@
+           MvPolynomial.aeval a (MvPolynomial.hsymm ι ℂ t) * x ^ (n + t)‖ =
+         |Ring.choose s (n + t)| *
+           ‖MvPolynomial.aeval a (MvPolynomial.hsymm ι ℂ t)‖ * ‖x‖ ^ (n + t) := by
+-            simp [norm_mul, norm_pow, Real.norm_eq_abs]
++            rw [norm_mul, norm_mul, norm_pow, ← Complex.ofReal_choose,
++              Complex.norm_real, Real.norm_eq_abs]
+       _ ≤ |Ring.choose s (n + t)| *
+           ((Nat.choose (n + t) t : ℝ) * ρ ^ t) * ‖x‖ ^ (n + t) := by
+             apply mul_le_mul_of_nonneg_right _ (pow_nonneg (norm_nonneg _) _)
+@@ -155,7 +156,7 @@
+     linarith
+   have hexp : ((3 * k : ℕ) : ℝ) - ((k : ℝ) + 1 / 2) =
+       2 * (k : ℝ) - 1 / 2 := by push_cast; ring
+-  simpa only [hexp] using
++  simpa [hexp] using
+     bennett_homogeneous_tail_summable_and_norm_le a (3 * k)
+       ((k : ℝ) + 1 / 2) ρ x hcard hs hρ0 ha hradius
+ 

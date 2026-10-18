@@ -1,0 +1,41 @@
+{
+  "status": "Actual-error proof-only research candidate; uncompiled",
+  "source_pre_sha256": "fe93309e4ed29ce50db58301d6c4c7ac9f15423c0e17871ef3b2d6557acc2c1f",
+  "source_post_sha256": "21eca1644697a9c747a683cd3c26583cb9a60c7838c517047d556b782f76b0da",
+  "actual_failure_log_sha256": "5ca12defc76222e8b9e07613abbdaab1ab002ef39a1e338b82f097b2432dee8b",
+  "public_statement_or_import_change": false,
+  "changes": [
+    "Replace two global neg_pow simp rewrites by targeted negative-inverse base identities and finite mul_pow/pow_add expansion."
+  ],
+  "resource_limits_changed": false,
+  "payload_format": "filename to full source text; manifest is metadata only",
+  "peer_review": {
+    "reviewer": "bennett",
+    "result": "PASS",
+    "scope": "Exact supplied source/error fragments and pins; no independent remote reread or compiler.",
+    "reason": "Each targeted rewrite is -x=(-1)*x; finite power expansion preserves the exact column-zero and column-one signs and the existing final ring argument."
+  },
+  "main_statement_proved": false,
+  "files": {
+    "BennettTwoDenominatorClearing.before.lean": {
+      "sha256": "fe93309e4ed29ce50db58301d6c4c7ac9f15423c0e17871ef3b2d6557acc2c1f",
+      "bytes": 5962
+    },
+    "BennettTwoDenominatorClearing.lean": {
+      "sha256": "21eca1644697a9c747a683cd3c26583cb9a60c7838c517047d556b782f76b0da",
+      "bytes": 6158
+    },
+    "compile-failure.log": {
+      "sha256": "5ca12defc76222e8b9e07613abbdaab1ab002ef39a1e338b82f097b2432dee8b",
+      "bytes": 5870
+    },
+    "patch.diff": {
+      "sha256": "f20e8cf89516e2abb29df16353d9d966f1478236e997585ef4255636529ce40b",
+      "bytes": 1050
+    },
+    "payload.json": {
+      "sha256": "f7a2dc7cb7887ae0c3a69fd20bb4fc6338819058e3a857a7a131b153827d8003",
+      "bytes": 6347
+    }
+  }
+}

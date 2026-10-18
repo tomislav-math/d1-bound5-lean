@@ -1,0 +1,92 @@
+--- before/BennettPositiveSeries.lean
++++ D1Bound5/BennettPositiveSeries.lean
+@@ -58,8 +58,7 @@
+       have hbase : 0 < 1-r/d := sub_pos.mpr hratio1
+       have hsub : 0 < d-r := sub_pos.mpr hrd
+       have hinner : d⁻¹*(1-r/d)⁻¹ = (d-r)⁻¹ := by
+-        field_simp [hd.ne', hbase.ne', hsub.ne']
+-        ring
++        field_simp [hd.ne', hbase.ne', hsub.ne'] <;> ring
+       have htotal : d⁻¹ ^ (p+1) * (1/(1-r/d)^((p+1 : ℕ) : ℝ)) =
+           (d-r)⁻¹ ^ (p+1) := by
+         rw [Real.rpow_natCast]
+--- before/CoherentRetainedMixedGap.lean
++++ D1Bound5/CoherentRetainedMixedGap.lean
+@@ -106,8 +106,7 @@
+     nlinarith only [hz0,hpos,hroots.1]
+   have hdelta : R*B*S^2 = ‖coherentVandermonde3 v‖ := by
+     dsimp [R]
+-    field_simp
+-    ring
++    field_simp <;> ring
+   have hupper : ‖L‖ < 51*(R*B*S^2)/(100*Z) +
+       lam*(R*B*S^2)*Z/(A*B*S*P^3) := by
+     rw [hdelta]
+--- before/OrdinaryHeightEnvelope.lean
++++ D1Bound5/OrdinaryHeightEnvelope.lean
+@@ -48,8 +48,7 @@
+       intro k hk
+       have heq : X*H^k/Z = 3*C*H^k/(B*Z) := by
+         dsimp [X]
+-        field_simp [hB0.ne',hZ0.ne']
+-        ring
++        field_simp [hB0.ne',hZ0.ne'] <;> ring
+       rw [heq]
+       exact horders k hk)
+   have hscaled : z*(p-q) < (Real.log (2*X*H)/L)*p := by
+@@ -59,8 +58,7 @@
+     all_goals ring
+   have hnumid : 2*X*H = 252*B^2*C^2 := by
+     dsimp [X,H]
+-    field_simp [hB0.ne']
+-    ring
++    field_simp [hB0.ne'] <;> ring
+   have hnumlt : 2*X*H < 253*B^2*C^2 := by
+     rw [hnumid]
+     have hh := mul_pos (sq_pos_of_pos hB0) (sq_pos_of_pos hC0)
+--- before/OrdinaryHeightScalar.lean
++++ D1Bound5/OrdinaryHeightScalar.lean
+@@ -82,8 +82,7 @@
+   have hid : (2/5 : ℝ)-x+2*((2*x+u)*(2*x+r)/(x-(h-r))) =
+       7*x+(4*u+8*h-4*r)+
+         (2*u*r+(4*u+8*h-4*r)*(h-r))/(x-(h-r))+(2/5 : ℝ) := by
+-    field_simp [hxPos.ne']
+-    ring
++    field_simp [hxPos.ne'] <;> ring
+   rw [← hid]
+   linarith only [hd,hzupper]
+ 
+--- before/RetainedMixedFourScalar.lean
++++ D1Bound5/RetainedMixedFourScalar.lean
+@@ -95,8 +95,7 @@
+   apply (mul_lt_mul_iff_of_pos_left hC0).mp
+   have heq : C*(A^2*C^7/(S^2*T^4)) = Y^2 := by
+     dsimp [Y]
+-    field_simp [hSn, hTn]
+-    ring
++    field_simp [hSn, hTn] <;> ring
+   rw [heq]
+   exact hCD
+ 
+--- before/RetainedMixedScalar.lean
++++ D1Bound5/RetainedMixedScalar.lean
+@@ -52,8 +52,7 @@
+       lam*Q*S*W/(A*T^3) := by
+     have heq : lam*(Q*B*S^2)*W/(A*B*S*T^3) =
+         lam*Q*S*W/(A*T^3) := by
+-      field_simp [hAn, hBn, hSn, hTn]
+-      ring
++      field_simp [hAn, hBn, hSn, hTn] <;> ring
+     rw [heq] at hupper
+     linarith only [hL, hupper, hfirst]
+   have hWlower : alpha*A*T^3/S < W := by
+@@ -103,8 +102,7 @@
+       (1/Q-(51051/400000 : ℝ)/(A^2*B^2))^2 * (A^2*T^5/S^2)) =
+       (9999/10000 : ℝ)*Y^2 := by
+     dsimp [Y, alpha]
+-    field_simp [hAn, hBn, hSn, hQn, hlamn]
+-    ring
++    field_simp [hAn, hBn, hSn, hQn, hlamn] <;> ring
+   rw [heq]
+   exact hTC
+ 

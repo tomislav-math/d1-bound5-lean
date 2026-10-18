@@ -1,0 +1,11 @@
+--- before
++++ after
+@@ -117,7 +117,7 @@
+   have hv : Function.Injective v :=
+     hf.comp (hinj.comp (by decide : Function.Injective (![0,1,2] : Fin 3 → Fin 5)))
+   have hratio := coherent_three_vandermonde_ratio_bounds v hv hA0 hAB hBS
+-  have hp5 : (3*A*B*S)^5 ≤ P^5 := by gcongr; exact hfrontier.le
++  have hp5 : (3*A*B*S)^5 ≤ P^5 := by gcongr
+   have hbase : 3^5*(A^7*B^5*S^3) ≤ A^2*P^5/S^2 := by
+     calc
+       _ = A^2*(3*A*B*S)^5/S^2 := by field_simp
