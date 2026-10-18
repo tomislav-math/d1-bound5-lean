@@ -1,0 +1,3 @@
+# Targeted milestone replay scope
+
+Prepared before any replay execution. All six modules must pass guarded pinned compilation, source/dependency/artifact verification, and the combined exact-type/transitive-axiom audit of all 31 public declarations. The additional installed SAME-kernel replay is targeted at three coherent endpoints: BennettWeightedHeight, BennettResiduesAtInfinity and BennettResidualBound. This is not a fresh replay of every imported dependency, an independent kernel implementation, a clean-checkout build or independent statement review. Original private helpers remain checked during compilation and covered transitively by the public axiom audit. The final integrated whole-root gates remain mandatory.

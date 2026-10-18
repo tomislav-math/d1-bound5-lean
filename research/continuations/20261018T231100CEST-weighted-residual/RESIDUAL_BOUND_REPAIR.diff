@@ -1,0 +1,21 @@
+--- prepared
++++ repaired
+@@ -51,16 +51,11 @@
+         ∑ j, bennettLocalResidue a e
+           (Polynomial.X ^ (Fintype.card I * k + t)) j) *
+             x ^ (Fintype.card I * k + t)) _ at htail
+-  have hchoose (t : ℕ) :
+-      Ring.choose ((k : ℂ) + (ν : ℂ)) (Fintype.card I * k + t) =
+-        (Ring.choose ((k : ℝ) + ν) (Fintype.card I * k + t) : ℂ) := by
+-    rw [Complex.ofReal_choose]
+-    congr 1 <;> push_cast
+-  simp_rw [hmoment, hchoose] at htail
++  simp_rw [hmoment] at htail
+   have hbound := bennett_homogeneous_tail_summable_and_norm_le
+     A (Fintype.card I * k) ((k : ℝ) + ν) ρ x hcard hs hρ0 hA hradius
+   rw [← htail.tsum_eq]
+-  exact hbound.2
++  simpa only [Complex.ofReal_add, Complex.ofReal_natCast] using hbound.2
+ 
+ /-- Exact two-anchor analytic residual estimate, including the manuscript's
+ Gamma factor and exponent 2k-1/2. This concerns the actual P-matrix. -/

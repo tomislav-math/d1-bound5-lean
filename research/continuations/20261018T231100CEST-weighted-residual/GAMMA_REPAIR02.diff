@@ -1,0 +1,22 @@
+--- failed02
++++ repaired03
+@@ -46,7 +46,9 @@
+   have h := Ring.descPochhammer_eq_factorial_smul_choose r n
+   rw [heq, nsmul_eq_mul] at h
+   have ha := congrArg abs h
+-  rw [abs_mul, abs_of_nonneg (Nat.cast_nonneg n.factorial)] at ha
++  have hfacabs : |(n.factorial : ℝ)| = (n.factorial : ℝ) :=
++    abs_of_nonneg (Nat.cast_nonneg n.factorial)
++  rw [abs_mul, hfacabs] at ha
+   exact ha.symm
+ 
+ /-- The positive initial segment in the shifted-half descending product. -/
+@@ -69,7 +71,7 @@
+   norm_num only [neg_div, neg_neg] at ha
+   rw [abs_of_pos (bennett_ascPochhammer_half_pos m), abs_mul, abs_pow,
+     abs_neg, abs_one, one_pow, one_mul] at ha
+-  exact ha.symm
++  simpa only [neg_div] using ha.symm
+ 
+ /-- Exact absolute Gamma formula after the positive part of a shifted
+ half-binomial coefficient. This is proved from finite choose identities,

@@ -1,0 +1,13 @@
+--- prepared
++++ repaired
+@@ -42,6 +42,9 @@
+       hA hB hAB (by positivity) k hk
+   have hfirst := (div_lt_div_of_pos_right h1 hA).trans_le hpower
+   have hsecond := div_lt_div_of_pos_right h2 hB
+-  linarith only [hfirst, hsecond]
++  calc
++    _ < (42*‖b‖^3*‖c‖)^k/‖b‖ + (42*‖b‖^3*‖c‖)^k/‖b‖ :=
++      add_lt_add hfirst hsecond
++    _ = _ := by ring
+ 
+ end D1Bound5

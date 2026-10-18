@@ -1,0 +1,37 @@
+--- prepared
++++ repaired
+@@ -46,7 +46,7 @@
+   have h := Ring.descPochhammer_eq_factorial_smul_choose r n
+   rw [heq, nsmul_eq_mul] at h
+   have ha := congrArg abs h
+-  rw [abs_mul, abs_of_nonneg (Nat.cast_nonneg _)] at ha
++  rw [abs_mul, abs_of_nonneg (Nat.cast_nonneg n.factorial)] at ha
+   exact ha.symm
+ 
+ /-- The positive initial segment in the shifted-half descending product. -/
+@@ -64,7 +64,7 @@
+     (m.factorial : ℝ) * |Ring.choose (-1 / 2 : ℝ) m| =
+       (ascPochhammer ℝ m).eval (1 / 2) := by
+   rw [bennett_factorial_mul_abs_choose]
+-  have h := ascPochhammer_eval_neg_eq_descPochhammer (-1 / 2 : ℝ) m
++  have h := ascPochhammer_eval_neg_eq_descPochhammer ℝ (-1 / 2 : ℝ) m
+   have ha := congrArg abs h
+   norm_num only [neg_div, neg_neg] at ha
+   rw [abs_of_pos (bennett_ascPochhammer_half_pos m), abs_mul, abs_pow,
+@@ -111,10 +111,14 @@
+       _ = _ := by rw [bennett_shifted_half_initial_abs, bennett_negative_half_abs]
+   have hG1 : Real.Gamma ((k : ℝ) + 3 / 2) = Real.Gamma (1 / 2 : ℝ) *
+       (ascPochhammer ℝ (k + 1)).eval (1 / 2) := by
+-    convert bennett_Gamma_half_add_nat (k + 1) using 1 <;> push_cast <;> ring
++    have harg : (k : ℝ) + 3 / 2 = (1 / 2 : ℝ) + ((k + 1 : ℕ) : ℝ) := by
++      push_cast
++      ring
++    rw [harg]
++    exact bennett_Gamma_half_add_nat (k + 1)
+   have hG2 : Real.Gamma ((m : ℝ) + 1 / 2) = Real.Gamma (1 / 2 : ℝ) *
+       (ascPochhammer ℝ m).eval (1 / 2) := by
+-    convert bennett_Gamma_half_add_nat m using 1 <;> ring
++    simpa only [add_comm] using bennett_Gamma_half_add_nat m
+   have hhalf : Real.Gamma (1 / 2 : ℝ) ^ 2 = Real.pi := by
+     rw [Real.Gamma_one_half_eq]
+     exact Real.sq_sqrt Real.pi_pos.le

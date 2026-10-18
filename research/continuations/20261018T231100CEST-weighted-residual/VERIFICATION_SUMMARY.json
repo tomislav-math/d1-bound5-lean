@@ -1,0 +1,154 @@
+{
+  "outcome": "COMPLETED_UNIT",
+  "time": "2026-10-18T23:53:46.127391+02:00",
+  "targets": {
+    "BennettWeightedHeight": {
+      "source_sha256": "75e011686e317cc4f4aee29eb48fc02385e388f50e84d12c29ee7a3ad4bb85f9",
+      "build_exit": 0,
+      "build_seconds": 154.2749714157544,
+      "original_theorem_headers_unchanged": true
+    },
+    "BennettResidualEvaluation": {
+      "source_sha256": "d030bc1b298c007855437a873b058dcac35949cc3daa110cf555bdf87d4fd831",
+      "build_exit": 0,
+      "build_seconds": 98.61809662496671,
+      "original_theorem_headers_unchanged": true
+    },
+    "BennettResiduesAtInfinity": {
+      "source_sha256": "58386256effb45be605c396f13b3729aec81aaca34f62f0de6ccd21675f2e5ad",
+      "build_exit": 0,
+      "build_seconds": 38.27482841676101,
+      "original_theorem_headers_unchanged": true
+    },
+    "BennettChooseGamma": {
+      "source_sha256": "ed364c7393e2791f97fcc92aa240c1e9f11c109de4d2306c76becc3f16ded4f0",
+      "build_exit": 0,
+      "build_seconds": 187.11228420818225,
+      "original_theorem_headers_unchanged": true
+    },
+    "BennettRepeatedHsymm": {
+      "source_sha256": "2c35125785b6ff0c9b69a4236b7a718a4b75a5a68706b7a3ada2c46efaddc905",
+      "build_exit": 0,
+      "build_seconds": 105.76201116712764,
+      "original_theorem_headers_unchanged": true
+    },
+    "BennettResidualBound": {
+      "source_sha256": "8d3e33dd05c3d6f083c46bb963cedd7bdf12fde7cdfacb5185f8bb3a9a8ff44f",
+      "build_exit": 0,
+      "build_seconds": 93.75224991701543,
+      "original_theorem_headers_unchanged": true
+    }
+  },
+  "public_theorems": 28,
+  "private_helpers": 4,
+  "public_declarations": 31,
+  "checks": [
+    {
+      "label": "weighted-residual-type-axioms",
+      "pid": 73845,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261018T231100CEST-weighted-residual/WeightedResidualAudit.lean"
+      ],
+      "time": "2026-10-18T23:47:31.985011+02:00",
+      "exit": 0,
+      "seconds": 49.91330916667357,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "weighted-residual-type-axioms.log"
+    },
+    {
+      "label": "BennettWeightedHeight-targeted-replay",
+      "pid": 73866,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettWeightedHeight"
+      ],
+      "time": "2026-10-18T23:48:22.057697+02:00",
+      "exit": 0,
+      "seconds": 37.553550333250314,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettWeightedHeight-targeted-replay.log"
+    },
+    {
+      "label": "BennettResiduesAtInfinity-targeted-replay",
+      "pid": 73894,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettResiduesAtInfinity"
+      ],
+      "time": "2026-10-18T23:48:59.735573+02:00",
+      "exit": 0,
+      "seconds": 20.35410716664046,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettResiduesAtInfinity-targeted-replay.log"
+    },
+    {
+      "label": "BennettResidualBound-targeted-replay",
+      "pid": 73946,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettResidualBound"
+      ],
+      "time": "2026-10-18T23:49:20.220988+02:00",
+      "exit": 0,
+      "seconds": 56.43583004223183,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettResidualBound-targeted-replay.log"
+    }
+  ],
+  "project_source_closure": {
+    "BennettWeightedHeight": "75e011686e317cc4f4aee29eb48fc02385e388f50e84d12c29ee7a3ad4bb85f9",
+    "BennettTwoHeightBounds": "fdaa812fbb34a8a666e2436a20b9c6dd6a699844aa0547a9a65c1f759aa97515",
+    "BennettTwoEntryBounds": "14876837f679d01eed3a777728ec991e30224838aed15293edc00f667fea9a45",
+    "BennettLocalCoefficientBound": "fd4a0f2effe871e8ebc1c24036cd22f28f05f6913ef472311d8f40670735ea89",
+    "BennettCoefficientMajorant": "52f2dc90c9817830bd21c1880dfcf0e6477a59dce71efbcde2deafd50273de8e",
+    "BennettClearedResidues": "ec76df5d4e2c4d6b07d0919f3d7f1eca9b85a57c220d930e6ae87c93827d8f29",
+    "BennettPoleSeries": "d467fe1ce7d532a4e4fe7ebbe139b749331fe498c06b5ac2897ed0a4d7fa6354",
+    "BennettBinomialTransfer": "7c8a669a4f1cc287328c81f5b671e332dd23a6d5cc77c366017077852274896c",
+    "BennettPositiveSeries": "97c8e1703cfe77445d9777396cd5b2920aa185f7c75649ef58d66b03bb6b026f",
+    "BennettResidualMajorant": "b75484763e5bdb67dae9e19c0cad718baf723c8291fc2f17c55a13171ba3db40",
+    "CoherentMajorant": "7556732be060ea55e0263542b247cb96b16048503d14b4fd541c9746cc7af0d4",
+    "HsymmSummability": "592835d9084304e364d98889ecdfa742c48241dc735f5f7280ef640d86c616fa",
+    "ComplexHsymmNorm": "c7252d7667b324417f5f8a714dc25e995730949e38f38c8de4aa92481c81dc43",
+    "HomogeneousSymmetric": "9ca0c1b5630feef5d0a34c972d9c43d84be51f3ce74b855f5c9873ea76bd8466",
+    "BennettTwoCoefficientConstants": "034cf7aa6d3e853901a9f7bd5f2be74a2cd9af0c2f34f1de6a52a0f80541821b",
+    "BennettTwoIntegralEntries": "07d63d84699ae294fc3d395f046972fa36aa179a18de306e5f612beceaaf5f1b",
+    "BennettTwoIntegralSummands": "cf848c27c1e7b66b43f1bb2e9f008252599e35de774adedcbacb56ab48e836d3",
+    "BennettTwoDenominatorClearing": "21eca1644697a9c747a683cd3c26583cb9a60c7838c517047d556b782f76b0da",
+    "BennettSubringSums": "5c21c49f96a2c66d645b20532b67dda8cde35833f4e0f3fe6b545b7454d81ecf",
+    "BennettBinomialIntegrality": "f95293967308ba92e9451def9a6f848adc0cc2ec40690f494052e3d6316f0262",
+    "BennettResiduePolynomials": "5264fd8f08d4a6fb748bab8f101f05ca183c3e4658b02954972b81e086f0144d",
+    "BennettHeightNormalization": "b5e61e5d6eb88e26d2647369bff77c509498654f629d2229d692762546241a03",
+    "BennettResidualEvaluation": "d030bc1b298c007855437a873b058dcac35949cc3daa110cf555bdf87d4fd831",
+    "BennettResidualCancellation": "0e8f4d1dac16aef29c7622ad8fa6e48d05646e38a9ebaf133da673991996797d",
+    "BennettLocalResidues": "69884bc84f14bf065cb46a21f71bb9f253dca11c8d085058e033df4ac0004d31",
+    "BennettPartialFractions": "010f048f17daf1a97c4058a3ed6d941a8ab25f1f4871529526b7412bcf71a21c",
+    "BennettResidueCoefficient": "8c207032d119b0629e3cee3a36cfe0f7dd94d73784c8b28b8cba78efa262f829",
+    "BennettResidualDeterminant": "d4ad136bba1428279a794309f2af79d21c79a906eda481e0c4808281896bf444",
+    "BennettResiduesAtInfinity": "58386256effb45be605c396f13b3729aec81aaca34f62f0de6ccd21675f2e5ad",
+    "BennettChooseGamma": "ed364c7393e2791f97fcc92aa240c1e9f11c109de4d2306c76becc3f16ded4f0",
+    "BennettRepeatedHsymm": "2c35125785b6ff0c9b69a4236b7a718a4b75a5a68706b7a3ada2c46efaddc905",
+    "LagrangeHomogeneous": "b4a9130e2e09325e0a7c90a60c13433e1e3d45746589329d45719e084b45b442",
+    "LagrangeAdjunction": "8078b0e0b630a0efdfdb1b29b441485777d7118007ce69e74197ac884086e248",
+    "BennettResidualBound": "8d3e33dd05c3d6f083c46bb963cedd7bdf12fde7cdfacb5185f8bb3a9a8ff44f"
+  },
+  "root_integrated": false,
+  "independent_review": false,
+  "clean_checkout": false,
+  "main_statement_proved": false
+}

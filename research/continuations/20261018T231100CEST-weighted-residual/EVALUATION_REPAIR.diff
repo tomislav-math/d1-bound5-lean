@@ -1,0 +1,30 @@
+--- prepared
++++ repaired
+@@ -17,7 +17,7 @@
+     HasSum (fun r : ℕ => PowerSeries.coeff r ((P : PowerSeries ℂ) * B) * x ^ r)
+       (P.eval x * b) := by
+   have hpzero (r : ℕ) (hr : r ∉ P.support) : P.coeff r * x ^ r = 0 := by
+-    rw [Polynomial.not_mem_support_iff.mp hr, zero_mul]
++    rw [Polynomial.notMem_support_iff.mp hr, zero_mul]
+   have hp : HasSum (fun r : ℕ => P.coeff r * x ^ r) (P.eval x) := by
+     simpa only [Polynomial.eval_eq_sum, Polynomial.sum] using
+       (hasSum_sum_of_ne_finset_zero (s := P.support) hpzero)
+@@ -128,7 +128,7 @@
+       (bennettOtherPoles univ a k i j) : PowerSeries F) *
+         PowerSeries.rescale (a j) (PowerSeries.binomialSeries F ν)) = _
+   rw [bennettResidueTaylor_coeff_mul_binomial k (e j) r (he_le j)]
+-  simp only [bennettLocalResidue, hshift, hB]
++  simp only [bennettLocalResidue, hshift, hB, e]
+ 
+ /-- After the proved cancellation, the actual analytic residual is exactly
+ the high-degree residue-moment tail. -/
+@@ -157,7 +157,8 @@
+       PowerSeries.coeff (t + Fintype.card I * k) R * x ^ (t + Fintype.card I * k))
+       (∑ j, (bennettPolynomialResidue univ a k ν i j).eval x *
+         (1 + a j * x) ^ ν) := by
+-    apply (hasSum_nat_add_iff (Fintype.card I * k)).mpr
++    apply (hasSum_nat_add_iff
++      (f := fun r : ℕ => PowerSeries.coeff r R * x ^ r) (Fintype.card I * k)).mpr
+     rw [hzero, add_zero]
+     exact bennettPolynomialResidue_residual_hasSum a k ν x i hx
+   simpa only [R, Nat.add_comm,

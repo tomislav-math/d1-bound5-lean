@@ -1,5 +1,9 @@
 # Open mathematical obligations
 
+## 18 October 2026 — weighted height and actual Bennett residual verified
+
+Six working modules now prove the combined weighted column height, exact analytic residue evaluation, the inverse-denominator/repeated-node coefficient identity, and the actual arbitrary-order residual bound including its exact Gamma specialization. All original theorem headers are unchanged. The guarded pinned builds, exact public type/transitive-axiom audit and targeted installed SAME-kernel replays of the weighted-height, infinity and residual-bound endpoints passed with only propext, Classical.choice and Quot.sound. Applying the integral clearing factor and residual rate, the full-ring all-order inequalities, root integration, exhaustive finite checks and MainStatement remain open. Evidence: research/continuations/20261018T231100CEST-weighted-residual/VERIFICATION_SUMMARY.json.
+
 ## 18 October 2026 — Bennett coefficient bounds and signed-root approximation verified
 
 Six working modules now prove the actual Bennett base-42 bounds for both nonzero columns and the integral signed-root approximation with strict factor3/2. All 17 original public theorems and one private helper compiled; five modules needed proof-body-only repairs, with all original headers preserved. The exact public type/transitive-axiom audit and six targeted installed SAME-kernel replays passed, with only propext/Classical.choice/Quot.sound. The final source review covers 33 project dependencies. Root integration, the weighted combined bound, residual evaluation/rate, full-ring all-order conclusion, exhaustive finite checks and MainStatement remain open. Evidence: research/continuations/20261018T222403CEST-coeff-root/VERIFICATION_SUMMARY.json.

@@ -1,0 +1,20 @@
+✖ [2753/2753] Building D1Bound5.BennettChooseGamma (75s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettChooseGamma.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettChooseGamma.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettChooseGamma.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettChooseGamma.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettChooseGamma.setup.json --json
+error: D1Bound5/BennettChooseGamma.lean:49:29: Application type mismatch: The argument
+  Nat.cast_nonneg n.factorial
+has type
+  0 ≤ ↑n.factorial
+but is expected to have type
+  0 ≤ eval r (descPochhammer ℝ n)
+in the application
+  abs_of_nonneg (Nat.cast_nonneg n.factorial)
+error: D1Bound5/BennettChooseGamma.lean:72:2: Type mismatch
+  Eq.symm ha
+has type
+  |eval (-(1 / 2)) (descPochhammer ℝ m)| = eval (1 / 2) (ascPochhammer ℝ m)
+but is expected to have type
+  |eval (-1 / 2) (descPochhammer ℝ m)| = eval (1 / 2) (ascPochhammer ℝ m)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettChooseGamma
+error: build failed

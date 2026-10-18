@@ -1,0 +1,62 @@
+{
+  "time": "2026-10-18T23:53:46.127391+02:00",
+  "unknown": [],
+  "targets": {
+    "BennettTwoResidualBound": {
+      "accepted": false,
+      "eligible": true,
+      "unaccepted_dependencies": [],
+      "ready_prerequisites": []
+    },
+    "BennettTwoResidualRate": {
+      "accepted": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "BennettTwoResidualBound"
+      ],
+      "ready_prerequisites": [
+        "BennettTwoResidualBound"
+      ]
+    },
+    "BennettRootTransfer": {
+      "accepted": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "BennettTwoResidualRate",
+        "BennettTwoResidualBound"
+      ],
+      "ready_prerequisites": [
+        "BennettTwoResidualBound"
+      ]
+    },
+    "FullRingOrdinaryHeight": {
+      "accepted": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "BennettRootTransfer",
+        "BennettTwoResidualRate",
+        "BennettTwoResidualBound"
+      ],
+      "ready_prerequisites": [
+        "BennettTwoResidualBound"
+      ]
+    },
+    "UnitPairFirstExtensionBound": {
+      "accepted": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "FullRingOrdinaryHeight",
+        "BennettRootTransfer",
+        "BennettTwoResidualRate",
+        "BennettTwoResidualBound",
+        "UnitPairCubicIteration",
+        "UnitPairCubic",
+        "UnitPairCubicNumeric"
+      ],
+      "ready_prerequisites": [
+        "BennettTwoResidualBound",
+        "UnitPairCubicNumeric"
+      ]
+    }
+  }
+}

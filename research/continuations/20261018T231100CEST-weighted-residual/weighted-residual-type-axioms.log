@@ -1,0 +1,205 @@
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_weighted_even_power_le: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_weighted_height: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_polynomial_series_hasSum: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_rescaled_binomial_hasSum: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettPolynomialResidue_residual_hasSum: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettPolynomialResidue_residual_coeff_eq_moment: [propext,
+ Classical.choice,
+ Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettPolynomialResidue_residual_tail_hasSum: [propext,
+ Classical.choice,
+ Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_inverse_reverse_coeff: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettLocalResidue_eq_zero_of_denominator_dvd: [propext,
+ Classical.choice,
+ Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettLocalResidue_add: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettLocalResidue_sum_eq_remainder_coeff: [propext,
+ Classical.choice,
+ Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettReciprocalInfinity: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettReciprocalInfinity_mul: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettLocalResidue_sum_X_pow_eq_infinity_coeff: [propext,
+ Classical.choice,
+ Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_Gamma_half_add_nat: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_ascPochhammer_half_pos: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_factorial_mul_abs_choose: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_shifted_half_initial_abs: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_negative_half_abs: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_shifted_half_tail_abs_Gamma: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_two_residual_choose_abs_Gamma: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettHomogeneousSeries: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettHomogeneousSeries_finset_mul: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettHomogeneousSeries_mul: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.BennettRepeatedNodes: []
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettRepeatedNodes_card: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettReciprocalInfinity_eq_homogeneous: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettReciprocalInfinity_coeff_eq_hsymm: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettLocalResidue_sum_X_pow_eq_hsymm: [propext, Classical.choice, Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennettPolynomialResidue_residual_norm_le: [propext,
+ Classical.choice,
+ Quot.sound]
+WEIGHTED_RESIDUAL_AXIOMS_PASS D1Bound5.bennett_two_polynomial_residual_norm_le: [propext, Classical.choice, Quot.sound]
+D1Bound5.bennett_weighted_even_power_le : ∀ (A B H : ℝ),
+  0 < A → 0 < B → A ≤ B → 0 ≤ H → ∀ (k : ℕ), 1 ≤ k → (A ^ 2 * H) ^ k / A ≤ (B ^ 2 * H) ^ k / B
+D1Bound5.bennettTwoClearedEntry_weighted_height : ∀ (a b c : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        a ≠ b →
+          ‖a‖ ≤ ‖b‖ →
+            1000 ≤ ‖a‖ * ‖c‖ →
+              ∀ (k : ℕ),
+                1 ≤ k →
+                  ∀ (i : Fin 3),
+                    ‖D1Bound5.bennettTwoClearedEntry a b c k i 1‖ / ‖a‖ +
+                        ‖D1Bound5.bennettTwoClearedEntry a b c k i 2‖ / ‖b‖ <
+                      2 * (42 * ‖b‖ ^ 3 * ‖c‖) ^ k / ‖b‖
+D1Bound5.bennett_polynomial_series_hasSum : ∀ (P : Polynomial ℂ) (B : PowerSeries ℂ) (x b : ℂ),
+  HasSum (fun r => (PowerSeries.coeff r) B * x ^ r) b →
+    (Summable fun r => ‖(PowerSeries.coeff r) B * x ^ r‖) →
+      HasSum (fun r => (PowerSeries.coeff r) (↑P * B) * x ^ r) (Polynomial.eval x P * b)
+D1Bound5.bennett_rescaled_binomial_hasSum : ∀ (a ν x : ℂ),
+  ‖a * x‖ < 1 →
+    HasSum (fun r => (PowerSeries.coeff r) ((PowerSeries.rescale a) (PowerSeries.binomialSeries ℂ ν)) * x ^ r)
+        ((1 + a * x) ^ ν) ∧
+      Summable fun r => ‖(PowerSeries.coeff r) ((PowerSeries.rescale a) (PowerSeries.binomialSeries ℂ ν)) * x ^ r‖
+@D1Bound5.bennettPolynomialResidue_residual_hasSum : ∀ {I : Type u_1} [inst : Fintype I] [inst_1 : DecidableEq I]
+  (a : I → ℂ) (k : ℕ) (ν x : ℂ) (i : I),
+  (∀ (j : I), ‖a j * x‖ < 1) →
+    HasSum
+      (fun r =>
+        (PowerSeries.coeff r)
+            (∑ j,
+              ↑(D1Bound5.bennettPolynomialResidue Finset.univ a k ν i j) *
+                (PowerSeries.rescale (a j)) (PowerSeries.binomialSeries ℂ ν)) *
+          x ^ r)
+      (∑ j, Polynomial.eval x (D1Bound5.bennettPolynomialResidue Finset.univ a k ν i j) * (1 + a j * x) ^ ν)
+@D1Bound5.bennettPolynomialResidue_residual_coeff_eq_moment : ∀ {I : Type u_1} [inst : Fintype I]
+  [inst_1 : DecidableEq I] {F : Type u_2} [inst_2 : Field F] [inst_3 : CharZero F] (a : I → F) (k : ℕ),
+  1 ≤ k →
+    ∀ (ν : F) (i : I) (r : ℕ),
+      (PowerSeries.coeff r)
+          (∑ j,
+            ↑(D1Bound5.bennettPolynomialResidue Finset.univ a k ν i j) *
+              (PowerSeries.rescale (a j)) (PowerSeries.binomialSeries F ν)) =
+        Ring.choose (↑k + ν) r *
+          ∑ j, D1Bound5.bennettLocalResidue a (fun l => (k + if i = l then 1 else 0) - 1) (Polynomial.X ^ r) j
+@D1Bound5.bennettPolynomialResidue_residual_tail_hasSum : ∀ {I : Type u_1} [inst : Fintype I] [inst_1 : DecidableEq I]
+  (a : I → ℂ),
+  Function.Injective a →
+    ∀ (k : ℕ),
+      1 ≤ k →
+        ∀ (ν x : ℂ) (i : I),
+          (∀ (j : I), ‖a j * x‖ < 1) →
+            HasSum
+              (fun t =>
+                (Ring.choose (↑k + ν) (Fintype.card I * k + t) *
+                    ∑ j,
+                      D1Bound5.bennettLocalResidue a (fun l => (k + if i = l then 1 else 0) - 1)
+                        (Polynomial.X ^ (Fintype.card I * k + t)) j) *
+                  x ^ (Fintype.card I * k + t))
+              (∑ j, Polynomial.eval x (D1Bound5.bennettPolynomialResidue Finset.univ a k ν i j) * (1 + a j * x) ^ ν)
+@D1Bound5.bennett_inverse_reverse_coeff : ∀ {F : Type u_1} [inst : Field F] (D : Polynomial F),
+  D.Monic →
+    0 < D.natDegree →
+      ∀ (H : PowerSeries F),
+        ↑D.reverse * H = 1 →
+          ∀ (t : ℕ), (PowerSeries.coeff t) H = (Polynomial.X ^ (D.natDegree - 1 + t) %ₘ D).coeff (D.natDegree - 1)
+@D1Bound5.bennettLocalResidue_eq_zero_of_denominator_dvd : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : CharZero F] [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F) (e : ι → ℕ) (f : Polynomial F),
+  D1Bound5.bennettPoleDenominator a e ∣ f → ∀ (i : ι), D1Bound5.bennettLocalResidue a e f i = 0
+@D1Bound5.bennettLocalResidue_add : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : CharZero F]
+  [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F) (e : ι → ℕ) (f g : Polynomial F) (i : ι),
+  D1Bound5.bennettLocalResidue a e (f + g) i =
+    D1Bound5.bennettLocalResidue a e f i + D1Bound5.bennettLocalResidue a e g i
+@D1Bound5.bennettLocalResidue_sum_eq_remainder_coeff : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : CharZero F] [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F),
+  Function.Injective a →
+    ∀ (e : ι → ℕ) (f : Polynomial F),
+      ∑ i, D1Bound5.bennettLocalResidue a e f i = (f %ₘ D1Bound5.bennettPoleDenominator a e).coeff (∑ i, (e i + 1) - 1)
+@D1Bound5.bennettReciprocalInfinity : {F : Type u_1} →
+  {ι : Type u_2} → [inst : Field F] → [CharZero F] → [Fintype ι] → (ι → F) → (ι → ℕ) → PowerSeries F
+@D1Bound5.bennettReciprocalInfinity_mul : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F] [inst_1 : CharZero F]
+  [inst_2 : Fintype ι] [DecidableEq ι] (a : ι → F) (e : ι → ℕ),
+  ↑(D1Bound5.bennettPoleDenominator a e).reverse * D1Bound5.bennettReciprocalInfinity a e = 1
+@D1Bound5.bennettLocalResidue_sum_X_pow_eq_infinity_coeff : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : CharZero F] [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F),
+  Function.Injective a →
+    ∀ (e : ι → ℕ),
+      0 < ∑ i, (e i + 1) →
+        ∀ (t : ℕ),
+          ∑ i, D1Bound5.bennettLocalResidue a e (Polynomial.X ^ (∑ l, (e l + 1) - 1 + t)) i =
+            (PowerSeries.coeff t) (D1Bound5.bennettReciprocalInfinity a e)
+D1Bound5.bennett_Gamma_half_add_nat : ∀ (n : ℕ),
+  Real.Gamma (1 / 2 + ↑n) = Real.Gamma (1 / 2) * Polynomial.eval (1 / 2) (ascPochhammer ℝ n)
+D1Bound5.bennett_ascPochhammer_half_pos : ∀ (n : ℕ), 0 < Polynomial.eval (1 / 2) (ascPochhammer ℝ n)
+D1Bound5.bennett_factorial_mul_abs_choose : ∀ (r : ℝ) (n : ℕ),
+  ↑n.factorial * |Ring.choose r n| = |Polynomial.eval r (descPochhammer ℝ n)|
+D1Bound5.bennett_shifted_half_initial_abs : ∀ (k : ℕ),
+  ↑(k + 1).factorial * |Ring.choose (↑k + 1 / 2) (k + 1)| = Polynomial.eval (1 / 2) (ascPochhammer ℝ (k + 1))
+D1Bound5.bennett_negative_half_abs : ∀ (m : ℕ),
+  ↑m.factorial * |Ring.choose (-1 / 2) m| = Polynomial.eval (1 / 2) (ascPochhammer ℝ m)
+D1Bound5.bennett_shifted_half_tail_abs_Gamma : ∀ (k m : ℕ),
+  |Ring.choose (↑k + 1 / 2) (k + 1 + m)| =
+    Real.Gamma (↑k + 3 / 2) * Real.Gamma (↑m + 1 / 2) / (Real.pi * Real.Gamma (↑(k + 1 + m) + 1))
+D1Bound5.bennett_two_residual_choose_abs_Gamma : ∀ (k : ℕ),
+  1 ≤ k →
+    |Ring.choose (↑k + 1 / 2) (3 * k)| =
+      Real.Gamma (↑k + 3 / 2) * Real.Gamma (2 * ↑k - 1 / 2) / (Real.pi * Real.Gamma (3 * ↑k + 1))
+@D1Bound5.bennettHomogeneousSeries : {R : Type u_1} →
+  {ι : Type u_2} → [CommRing R] → [DecidableEq ι] → [Fintype ι] → (ι → R) → PowerSeries R
+@D1Bound5.bennettHomogeneousSeries_finset_mul : ∀ {R : Type u_1} {ι : Type u_2} [inst : CommRing R]
+  [inst_1 : DecidableEq ι] (s : Finset ι) (a : ι → R),
+  ((∏ i ∈ s, (1 - PowerSeries.C (a i) * PowerSeries.X)) * D1Bound5.bennettHomogeneousSeries fun i => a ↑i) = 1
+@D1Bound5.bennettHomogeneousSeries_mul : ∀ {R : Type u_1} {ι : Type u_2} [inst : CommRing R] [inst_1 : DecidableEq ι]
+  [inst_2 : Fintype ι] (a : ι → R),
+  (∏ i, (1 - PowerSeries.C (a i) * PowerSeries.X)) * D1Bound5.bennettHomogeneousSeries a = 1
+@D1Bound5.BennettRepeatedNodes : {ι : Type u_1} → (ι → ℕ) → Type u_1
+@D1Bound5.bennettRepeatedNodes_card : ∀ {ι : Type u_1} [inst : Fintype ι] [DecidableEq ι] (e : ι → ℕ),
+  Fintype.card (D1Bound5.BennettRepeatedNodes e) = ∑ i, (e i + 1)
+@D1Bound5.bennettReciprocalInfinity_eq_homogeneous : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : CharZero F] [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F) (e : ι → ℕ),
+  D1Bound5.bennettReciprocalInfinity a e = D1Bound5.bennettHomogeneousSeries fun i => a i.fst
+@D1Bound5.bennettReciprocalInfinity_coeff_eq_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : CharZero F] [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F) (e : ι → ℕ) (t : ℕ),
+  (PowerSeries.coeff t) (D1Bound5.bennettReciprocalInfinity a e) =
+    (MvPolynomial.aeval fun i => a i.fst) (MvPolynomial.hsymm (D1Bound5.BennettRepeatedNodes e) F t)
+@D1Bound5.bennettLocalResidue_sum_X_pow_eq_hsymm : ∀ {F : Type u_1} {ι : Type u_2} [inst : Field F]
+  [inst_1 : CharZero F] [inst_2 : Fintype ι] [inst_3 : DecidableEq ι] (a : ι → F),
+  Function.Injective a →
+    ∀ (e : ι → ℕ),
+      0 < ∑ i, (e i + 1) →
+        ∀ (t : ℕ),
+          ∑ i, D1Bound5.bennettLocalResidue a e (Polynomial.X ^ (∑ l, (e l + 1) - 1 + t)) i =
+            (MvPolynomial.aeval fun i => a i.fst) (MvPolynomial.hsymm (D1Bound5.BennettRepeatedNodes e) F t)
+@D1Bound5.bennettPolynomialResidue_residual_norm_le : ∀ {I : Type u_1} [inst : Fintype I] [inst_1 : DecidableEq I]
+  (a : I → ℂ),
+  Function.Injective a →
+    ∀ (k : ℕ),
+      1 ≤ k →
+        ∀ (ν ρ : ℝ) (x : ℂ) (i : I),
+          ↑k + ν < ↑(Fintype.card I * k) →
+            0 ≤ ρ →
+              (∀ (j : I), ‖a j‖ ≤ ρ) →
+                ρ * ‖x‖ < 1 →
+                  ‖∑ j,
+                        Polynomial.eval x (D1Bound5.bennettPolynomialResidue Finset.univ a k (↑ν) i j) *
+                          (1 + a j * x) ^ ↑ν‖ ≤
+                    |Ring.choose (↑k + ν) (Fintype.card I * k)| * ‖x‖ ^ (Fintype.card I * k) /
+                      (1 - ρ * ‖x‖) ^ (↑(Fintype.card I * k) - (↑k + ν))
+D1Bound5.bennett_two_polynomial_residual_norm_le : ∀ (a : Fin 3 → ℂ),
+  Function.Injective a →
+    ∀ (k : ℕ),
+      1 ≤ k →
+        ∀ (ρ : ℝ) (x : ℂ) (i : Fin 3),
+          0 ≤ ρ →
+            (∀ (j : Fin 3), ‖a j‖ ≤ ρ) →
+              ρ * ‖x‖ < 1 →
+                ‖∑ j,
+                      Polynomial.eval x (D1Bound5.bennettPolynomialResidue Finset.univ a k (1 / 2) i j) *
+                        (1 + a j * x) ^ (1 / 2)‖ ≤
+                  Real.Gamma (↑k + 3 / 2) * Real.Gamma (2 * ↑k - 1 / 2) / (Real.pi * Real.Gamma (3 * ↑k + 1)) *
+                      ‖x‖ ^ (3 * k) /
+                    (1 - ρ * ‖x‖) ^ (2 * ↑k - 1 / 2)

@@ -1,0 +1,48 @@
+✖ [2753/2753] Building D1Bound5.BennettChooseGamma (97s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettChooseGamma.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettChooseGamma.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettChooseGamma.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettChooseGamma.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettChooseGamma.setup.json --json
+error: D1Bound5/BennettChooseGamma.lean:49:29: Application type mismatch: The argument
+  Nat.cast_nonneg ?m.100
+has type
+  0 ≤ ↑?m.100
+but is expected to have type
+  0 ≤ eval r (descPochhammer ℝ n)
+in the application
+  abs_of_nonneg (Nat.cast_nonneg ?m.100)
+error: D1Bound5/BennettChooseGamma.lean:67:53: Application type mismatch: The argument
+  -1 / 2
+has type
+  ℝ
+of sort `Type` but is expected to have type
+  Type ?u.30
+of sort `Type (?u.30 + 1)` in the application
+  @ascPochhammer_eval_neg_eq_descPochhammer (-1 / 2)
+error: D1Bound5/BennettChooseGamma.lean:65:42: unsolved goals
+case refine_2
+m : ℕ
+h : ∀ (k : ℕ), eval (-sorry) (ascPochhammer sorry k) = (-1) ^ k * eval sorry (descPochhammer sorry k)
+⊢ |eval (-1 / 2) (descPochhammer ℝ m)| = eval (1 / 2) (ascPochhammer ℝ m)
+info: D1Bound5/BennettChooseGamma.lean:114:73: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/BennettChooseGamma.lean:117:53: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: D1Bound5/BennettChooseGamma.lean:114:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettChooseGamma.lean:114:69: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettChooseGamma.lean:117:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettChooseGamma
+error: build failed

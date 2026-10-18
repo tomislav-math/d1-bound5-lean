@@ -1,0 +1,21 @@
+--- prepared
++++ repaired
+@@ -57,7 +57,8 @@
+       (r.reflect (d + t)).coeff i = 0 := by
+     rw [Polynomial.coeff_reflect, Polynomial.revAt_le (by omega)]
+     apply Polynomial.coeff_eq_zero_of_degree_lt
+-    exact hr.trans_le (WithBot.coe_le_coe.mpr (by omega))
++    have hidx : d ≤ d + t - i := by omega
++    exact hr.trans_le (WithBot.coe_le_coe.mpr hidx)
+   have hrfirst : (r.reflect (d + t)).coeff (t + 1) = r.coeff (d - 1) := by
+     rw [Polynomial.coeff_reflect, Polynomial.revAt_le (by omega)]
+     congr 1
+@@ -162,7 +163,7 @@
+ 
+ private theorem bennett_reverse_X_sub_C (a : F) :
+     (X - C a : F[X]).reverse = 1 - C a * X := by
+-  have hsub : (X - C a : F[X]) = X + C (-a) := by simp
++  have hsub : (X - C a : F[X]) = X + C (-a) := by simp [sub_eq_add_neg]
+   have hX : (X : F[X]).reverse = 1 := by
+     simp only [Polynomial.reverse, Polynomial.natDegree_X, Polynomial.reflect_one_X]
+   rw [hsub, Polynomial.reverse_add_C, hX, Polynomial.natDegree_X, pow_one, map_neg]
