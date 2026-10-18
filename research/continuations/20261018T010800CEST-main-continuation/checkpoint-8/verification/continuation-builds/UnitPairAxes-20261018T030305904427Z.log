@@ -1,0 +1,32 @@
+✖ [2954/2954] Building D1Bound5.UnitPairAxes (84s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/UnitPairAxes.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairAxes.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairAxes.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairAxes.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairAxes.setup.json --json
+error: D1Bound5/UnitPairAxes.lean:71:4: interval_cases failed: could not find bounds on p
+error: D1Bound5/UnitPairAxes.lean:99:2: linarith failed to find a contradiction
+case neg.h1
+d x y u v : ℤ
+hd : 0 < d
+hn : x ^ 2 + u ^ 2 - d * (y ^ 2 + v ^ 2) = 8
+ho : x * y + u * v = 0
+h : x ^ 2 = u ^ 2
+hx : ¬x = 0
+hx2 : x ^ 2 ≠ 0
+hyv : y ^ 2 = v ^ 2
+a✝ : x ^ 2 - d * y ^ 2 < 4
+⊢ False
+failed
+error: D1Bound5/UnitPairAxes.lean:163:4: Type mismatch: After simplification, term
+  hh
+ has type
+  (phi ((algebraMap (𝓞 K) K) (e.toRingHom (e.symm z)))).im = 0
+but is expected to have type
+  (phi ↑z).im = 0
+error: D1Bound5/UnitPairAxes.lean:177:4: Type mismatch: After simplification, term
+  hh
+ has type
+  (phi ((algebraMap (𝓞 K) K) (e.toRingHom (e.symm z)))).re = 0
+but is expected to have type
+  (phi ↑z).re = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.UnitPairAxes
+error: build failed

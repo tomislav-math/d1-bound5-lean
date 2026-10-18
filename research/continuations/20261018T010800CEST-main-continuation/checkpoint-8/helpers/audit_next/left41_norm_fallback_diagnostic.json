@@ -1,0 +1,5338 @@
+{
+  "status": "Python exact-integer diagnostic only; no Lean changes or kernel acceptance",
+  "inputs_sha256": {
+    "finite_fast_next/graphs/SmallPairBipartitePilotData41.lean": "2b372ea69aa4ddf10ba200548e2c8626875c378f5024f82c705abd17039c238b",
+    "finite_fast_next/sieves/SmallPairSieve_1_2.lean": "0e06eb108afce10f63dd87b8402973d477820e1a7d76cfa29f8e0be3d77d5235",
+    "finite_next/two_small/D1Bound5/SmallPairGraphData41.lean": "2fb18d40fa756d1fe49844454f5ddeff9c85122a82d47bf5c418699a95b879b1",
+    "finite_next/two_small/generate_pair_closures.py": "d34a4e980c38ec61cd520b5b6112221374ec479ffeafa726d09567726beca894",
+    "pair_witness_next/PairCachedResidues.lean": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100",
+    "pair_witness_next/cached_pilot41/cached_pilot41_manifest.json": "79ba1195d0261088d4c803bb02664cbad106493c44ab3bce2fff7fdd5a2dc4fb",
+    "pair_witness_next/generate_cached_pilot41.py": "11a2e06799092deaa526b10ef8e5948db1fa37da0f37c254ef4ce14f9b8b9bdf",
+    "pair_witness_next/cached_pilot41/SmallPairCachedData41.lean": "8675170ee8dd4cc2f8b97a8045aab373693eeb10d3ad80f0d24e5d1dc549c779",
+    "pair_witness_next/cached_pilot41/SmallPairCachedLeft41.lean": "a52e679de7890d6bac467cbcc164e8b97c592b1d833214a773f07f4b291f741f",
+    "pair_witness_next/cached_pilot41/SmallPairCachedPilot41.lean": "c0f4bf9ac5af7caa12571a3c7ba5d505533a04594ca8d6f0b860336c7ab6ec94",
+    "pair_witness_next/cached_pilot41/SmallPairCachedRight41.lean": "2ed87cf544d8a89125a662faa03067e13dec4a00c69f967b931e36261a979d64"
+  },
+  "diagnostic_script_sha256": "909d6ce76ad894fcbbc0fc1500cfafa20394c71e2dabbc159f9e44ff7d650e8e",
+  "tau": 1,
+  "nu": 2,
+  "class": "Left (mask bit 0)",
+  "vertices": 186,
+  "unordered_pairs": 17205,
+  "fallback_pairs": 884,
+  "norm_nonsquares": 0,
+  "norm_perfect_squares": 884,
+  "all_original_quadratic_root_tests_reject": true,
+  "least_modulus_histogram": {},
+  "max_least_nonsquare_modulus": null,
+  "unresolved_nonsquare_norm_count": 0,
+  "modulus_search_limit": 10000,
+  "norm_bit_length_min": 308,
+  "norm_bit_length_max": 7176,
+  "fallback_pair_diagnostics": [
+    {
+      "i": 0,
+      "j": 11,
+      "norm_is_square": true,
+      "norm_bit_length": 7078
+    },
+    {
+      "i": 0,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 5292
+    },
+    {
+      "i": 0,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 4409
+    },
+    {
+      "i": 0,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 0,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 4193
+    },
+    {
+      "i": 1,
+      "j": 5,
+      "norm_is_square": true,
+      "norm_bit_length": 7176
+    },
+    {
+      "i": 1,
+      "j": 68,
+      "norm_is_square": true,
+      "norm_bit_length": 5940
+    },
+    {
+      "i": 1,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 5272
+    },
+    {
+      "i": 1,
+      "j": 119,
+      "norm_is_square": true,
+      "norm_bit_length": 4939
+    },
+    {
+      "i": 1,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 1,
+      "j": 138,
+      "norm_is_square": true,
+      "norm_bit_length": 4566
+    },
+    {
+      "i": 1,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 1,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 1,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 1,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 2,
+      "j": 9,
+      "norm_is_square": true,
+      "norm_bit_length": 7078
+    },
+    {
+      "i": 2,
+      "j": 11,
+      "norm_is_square": true,
+      "norm_bit_length": 7038
+    },
+    {
+      "i": 2,
+      "j": 15,
+      "norm_is_square": true,
+      "norm_bit_length": 6960
+    },
+    {
+      "i": 2,
+      "j": 50,
+      "norm_is_square": true,
+      "norm_bit_length": 6273
+    },
+    {
+      "i": 2,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 5469
+    },
+    {
+      "i": 2,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4900
+    },
+    {
+      "i": 2,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 4821
+    },
+    {
+      "i": 2,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 2,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 4507
+    },
+    {
+      "i": 2,
+      "j": 145,
+      "norm_is_square": true,
+      "norm_bit_length": 4409
+    },
+    {
+      "i": 2,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 4134
+    },
+    {
+      "i": 2,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 3997
+    },
+    {
+      "i": 2,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 3,
+      "j": 34,
+      "norm_is_square": true,
+      "norm_bit_length": 6567
+    },
+    {
+      "i": 3,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 3,
+      "j": 180,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 4,
+      "j": 8,
+      "norm_is_square": true,
+      "norm_bit_length": 7058
+    },
+    {
+      "i": 4,
+      "j": 42,
+      "norm_is_square": true,
+      "norm_bit_length": 6391
+    },
+    {
+      "i": 4,
+      "j": 63,
+      "norm_is_square": true,
+      "norm_bit_length": 5979
+    },
+    {
+      "i": 4,
+      "j": 74,
+      "norm_is_square": true,
+      "norm_bit_length": 5763
+    },
+    {
+      "i": 4,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 5155
+    },
+    {
+      "i": 4,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 4448
+    },
+    {
+      "i": 4,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 4,
+      "j": 162,
+      "norm_is_square": true,
+      "norm_bit_length": 4036
+    },
+    {
+      "i": 4,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 3644
+    },
+    {
+      "i": 5,
+      "j": 18,
+      "norm_is_square": true,
+      "norm_bit_length": 6842
+    },
+    {
+      "i": 5,
+      "j": 37,
+      "norm_is_square": true,
+      "norm_bit_length": 6469
+    },
+    {
+      "i": 5,
+      "j": 43,
+      "norm_is_square": true,
+      "norm_bit_length": 6352
+    },
+    {
+      "i": 5,
+      "j": 73,
+      "norm_is_square": true,
+      "norm_bit_length": 5763
+    },
+    {
+      "i": 5,
+      "j": 79,
+      "norm_is_square": true,
+      "norm_bit_length": 5645
+    },
+    {
+      "i": 5,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 5390
+    },
+    {
+      "i": 5,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 5057
+    },
+    {
+      "i": 5,
+      "j": 151,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 5,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 3899
+    },
+    {
+      "i": 6,
+      "j": 10,
+      "norm_is_square": true,
+      "norm_bit_length": 6979
+    },
+    {
+      "i": 6,
+      "j": 12,
+      "norm_is_square": true,
+      "norm_bit_length": 6940
+    },
+    {
+      "i": 6,
+      "j": 14,
+      "norm_is_square": true,
+      "norm_bit_length": 6901
+    },
+    {
+      "i": 6,
+      "j": 16,
+      "norm_is_square": true,
+      "norm_bit_length": 6862
+    },
+    {
+      "i": 6,
+      "j": 37,
+      "norm_is_square": true,
+      "norm_bit_length": 6450
+    },
+    {
+      "i": 6,
+      "j": 38,
+      "norm_is_square": true,
+      "norm_bit_length": 6430
+    },
+    {
+      "i": 6,
+      "j": 41,
+      "norm_is_square": true,
+      "norm_bit_length": 6371
+    },
+    {
+      "i": 6,
+      "j": 51,
+      "norm_is_square": true,
+      "norm_bit_length": 6175
+    },
+    {
+      "i": 6,
+      "j": 58,
+      "norm_is_square": true,
+      "norm_bit_length": 6038
+    },
+    {
+      "i": 6,
+      "j": 69,
+      "norm_is_square": true,
+      "norm_bit_length": 5822
+    },
+    {
+      "i": 6,
+      "j": 79,
+      "norm_is_square": true,
+      "norm_bit_length": 5626
+    },
+    {
+      "i": 6,
+      "j": 80,
+      "norm_is_square": true,
+      "norm_bit_length": 5606
+    },
+    {
+      "i": 6,
+      "j": 100,
+      "norm_is_square": true,
+      "norm_bit_length": 5214
+    },
+    {
+      "i": 6,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 5174
+    },
+    {
+      "i": 6,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 5135
+    },
+    {
+      "i": 6,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 4998
+    },
+    {
+      "i": 6,
+      "j": 113,
+      "norm_is_square": true,
+      "norm_bit_length": 4958
+    },
+    {
+      "i": 6,
+      "j": 117,
+      "norm_is_square": true,
+      "norm_bit_length": 4880
+    },
+    {
+      "i": 6,
+      "j": 122,
+      "norm_is_square": true,
+      "norm_bit_length": 4782
+    },
+    {
+      "i": 6,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 4429
+    },
+    {
+      "i": 6,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 4350
+    },
+    {
+      "i": 6,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 4311
+    },
+    {
+      "i": 6,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 4134
+    },
+    {
+      "i": 6,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 6,
+      "j": 178,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 7,
+      "j": 24,
+      "norm_is_square": true,
+      "norm_bit_length": 6685
+    },
+    {
+      "i": 7,
+      "j": 59,
+      "norm_is_square": true,
+      "norm_bit_length": 5998
+    },
+    {
+      "i": 7,
+      "j": 74,
+      "norm_is_square": true,
+      "norm_bit_length": 5704
+    },
+    {
+      "i": 7,
+      "j": 101,
+      "norm_is_square": true,
+      "norm_bit_length": 5174
+    },
+    {
+      "i": 7,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4801
+    },
+    {
+      "i": 7,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 7,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 7,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 8,
+      "j": 49,
+      "norm_is_square": true,
+      "norm_bit_length": 6175
+    },
+    {
+      "i": 8,
+      "j": 85,
+      "norm_is_square": true,
+      "norm_bit_length": 5469
+    },
+    {
+      "i": 8,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 5096
+    },
+    {
+      "i": 8,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 5076
+    },
+    {
+      "i": 8,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4782
+    },
+    {
+      "i": 8,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 4409
+    },
+    {
+      "i": 8,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 8,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 9,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 5940
+    },
+    {
+      "i": 9,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 5410
+    },
+    {
+      "i": 9,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 9,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 9,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 3546
+    },
+    {
+      "i": 10,
+      "j": 39,
+      "norm_is_square": true,
+      "norm_bit_length": 6332
+    },
+    {
+      "i": 10,
+      "j": 84,
+      "norm_is_square": true,
+      "norm_bit_length": 5449
+    },
+    {
+      "i": 10,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 5057
+    },
+    {
+      "i": 10,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 11,
+      "j": 19,
+      "norm_is_square": true,
+      "norm_bit_length": 6705
+    },
+    {
+      "i": 11,
+      "j": 61,
+      "norm_is_square": true,
+      "norm_bit_length": 5881
+    },
+    {
+      "i": 11,
+      "j": 66,
+      "norm_is_square": true,
+      "norm_bit_length": 5783
+    },
+    {
+      "i": 11,
+      "j": 85,
+      "norm_is_square": true,
+      "norm_bit_length": 5410
+    },
+    {
+      "i": 11,
+      "j": 97,
+      "norm_is_square": true,
+      "norm_bit_length": 5174
+    },
+    {
+      "i": 11,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 11,
+      "j": 127,
+      "norm_is_square": true,
+      "norm_bit_length": 4586
+    },
+    {
+      "i": 11,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 4448
+    },
+    {
+      "i": 11,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 4350
+    },
+    {
+      "i": 11,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 3644
+    },
+    {
+      "i": 12,
+      "j": 29,
+      "norm_is_square": true,
+      "norm_bit_length": 6489
+    },
+    {
+      "i": 12,
+      "j": 51,
+      "norm_is_square": true,
+      "norm_bit_length": 6057
+    },
+    {
+      "i": 12,
+      "j": 125,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 12,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 4409
+    },
+    {
+      "i": 12,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 12,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 4193
+    },
+    {
+      "i": 12,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 12,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 3722
+    },
+    {
+      "i": 12,
+      "j": 171,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 13,
+      "j": 31,
+      "norm_is_square": true,
+      "norm_bit_length": 6430
+    },
+    {
+      "i": 13,
+      "j": 36,
+      "norm_is_square": true,
+      "norm_bit_length": 6332
+    },
+    {
+      "i": 13,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 3997
+    },
+    {
+      "i": 13,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 14,
+      "j": 38,
+      "norm_is_square": true,
+      "norm_bit_length": 6273
+    },
+    {
+      "i": 14,
+      "j": 43,
+      "norm_is_square": true,
+      "norm_bit_length": 6175
+    },
+    {
+      "i": 14,
+      "j": 62,
+      "norm_is_square": true,
+      "norm_bit_length": 5802
+    },
+    {
+      "i": 14,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 5214
+    },
+    {
+      "i": 14,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 4880
+    },
+    {
+      "i": 14,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 4370
+    },
+    {
+      "i": 15,
+      "j": 24,
+      "norm_is_square": true,
+      "norm_bit_length": 6528
+    },
+    {
+      "i": 15,
+      "j": 26,
+      "norm_is_square": true,
+      "norm_bit_length": 6489
+    },
+    {
+      "i": 15,
+      "j": 28,
+      "norm_is_square": true,
+      "norm_bit_length": 6450
+    },
+    {
+      "i": 15,
+      "j": 66,
+      "norm_is_square": true,
+      "norm_bit_length": 5704
+    },
+    {
+      "i": 15,
+      "j": 76,
+      "norm_is_square": true,
+      "norm_bit_length": 5508
+    },
+    {
+      "i": 15,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 5390
+    },
+    {
+      "i": 15,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 5292
+    },
+    {
+      "i": 15,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 5194
+    },
+    {
+      "i": 15,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 4586
+    },
+    {
+      "i": 15,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 4370
+    },
+    {
+      "i": 15,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 15,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 16,
+      "j": 39,
+      "norm_is_square": true,
+      "norm_bit_length": 6214
+    },
+    {
+      "i": 16,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 5802
+    },
+    {
+      "i": 16,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 5174
+    },
+    {
+      "i": 16,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 4978
+    },
+    {
+      "i": 16,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4821
+    },
+    {
+      "i": 16,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 4801
+    },
+    {
+      "i": 16,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 16,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 16,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 16,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 3565
+    },
+    {
+      "i": 16,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 3526
+    },
+    {
+      "i": 17,
+      "j": 49,
+      "norm_is_square": true,
+      "norm_bit_length": 5998
+    },
+    {
+      "i": 17,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 3526
+    },
+    {
+      "i": 18,
+      "j": 24,
+      "norm_is_square": true,
+      "norm_bit_length": 6469
+    },
+    {
+      "i": 18,
+      "j": 39,
+      "norm_is_square": true,
+      "norm_bit_length": 6175
+    },
+    {
+      "i": 18,
+      "j": 85,
+      "norm_is_square": true,
+      "norm_bit_length": 5272
+    },
+    {
+      "i": 18,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4900
+    },
+    {
+      "i": 18,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 4762
+    },
+    {
+      "i": 18,
+      "j": 119,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 18,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4586
+    },
+    {
+      "i": 18,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 18,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 18,
+      "j": 184,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 19,
+      "j": 66,
+      "norm_is_square": true,
+      "norm_bit_length": 5626
+    },
+    {
+      "i": 19,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 19,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4566
+    },
+    {
+      "i": 19,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 3820
+    },
+    {
+      "i": 20,
+      "j": 38,
+      "norm_is_square": true,
+      "norm_bit_length": 6155
+    },
+    {
+      "i": 20,
+      "j": 56,
+      "norm_is_square": true,
+      "norm_bit_length": 5802
+    },
+    {
+      "i": 20,
+      "j": 117,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 20,
+      "j": 121,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 20,
+      "j": 136,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 20,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 20,
+      "j": 157,
+      "norm_is_square": true,
+      "norm_bit_length": 3820
+    },
+    {
+      "i": 20,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 3428
+    },
+    {
+      "i": 21,
+      "j": 88,
+      "norm_is_square": true,
+      "norm_bit_length": 5155
+    },
+    {
+      "i": 21,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 4821
+    },
+    {
+      "i": 21,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4723
+    },
+    {
+      "i": 21,
+      "j": 142,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 21,
+      "j": 162,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 21,
+      "j": 178,
+      "norm_is_square": true,
+      "norm_bit_length": 3389
+    },
+    {
+      "i": 22,
+      "j": 54,
+      "norm_is_square": true,
+      "norm_bit_length": 5802
+    },
+    {
+      "i": 22,
+      "j": 96,
+      "norm_is_square": true,
+      "norm_bit_length": 4978
+    },
+    {
+      "i": 22,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 23,
+      "j": 36,
+      "norm_is_square": true,
+      "norm_bit_length": 6136
+    },
+    {
+      "i": 23,
+      "j": 80,
+      "norm_is_square": true,
+      "norm_bit_length": 5272
+    },
+    {
+      "i": 23,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 5057
+    },
+    {
+      "i": 23,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 23,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 24,
+      "j": 34,
+      "norm_is_square": true,
+      "norm_bit_length": 6155
+    },
+    {
+      "i": 24,
+      "j": 54,
+      "norm_is_square": true,
+      "norm_bit_length": 5763
+    },
+    {
+      "i": 24,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 5645
+    },
+    {
+      "i": 24,
+      "j": 71,
+      "norm_is_square": true,
+      "norm_bit_length": 5429
+    },
+    {
+      "i": 24,
+      "j": 75,
+      "norm_is_square": true,
+      "norm_bit_length": 5351
+    },
+    {
+      "i": 24,
+      "j": 77,
+      "norm_is_square": true,
+      "norm_bit_length": 5312
+    },
+    {
+      "i": 24,
+      "j": 81,
+      "norm_is_square": true,
+      "norm_bit_length": 5233
+    },
+    {
+      "i": 24,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 5214
+    },
+    {
+      "i": 24,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 5037
+    },
+    {
+      "i": 24,
+      "j": 98,
+      "norm_is_square": true,
+      "norm_bit_length": 4900
+    },
+    {
+      "i": 24,
+      "j": 117,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 24,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4468
+    },
+    {
+      "i": 24,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 24,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 24,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 24,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 3565
+    },
+    {
+      "i": 24,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 3369
+    },
+    {
+      "i": 25,
+      "j": 32,
+      "norm_is_square": true,
+      "norm_bit_length": 6175
+    },
+    {
+      "i": 25,
+      "j": 56,
+      "norm_is_square": true,
+      "norm_bit_length": 5704
+    },
+    {
+      "i": 25,
+      "j": 84,
+      "norm_is_square": true,
+      "norm_bit_length": 5155
+    },
+    {
+      "i": 25,
+      "j": 119,
+      "norm_is_square": true,
+      "norm_bit_length": 4468
+    },
+    {
+      "i": 25,
+      "j": 131,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 25,
+      "j": 137,
+      "norm_is_square": true,
+      "norm_bit_length": 4115
+    },
+    {
+      "i": 25,
+      "j": 138,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 25,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 3506
+    },
+    {
+      "i": 25,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 3408
+    },
+    {
+      "i": 26,
+      "j": 42,
+      "norm_is_square": true,
+      "norm_bit_length": 5959
+    },
+    {
+      "i": 26,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 5253
+    },
+    {
+      "i": 26,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4978
+    },
+    {
+      "i": 26,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4625
+    },
+    {
+      "i": 26,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4429
+    },
+    {
+      "i": 26,
+      "j": 137,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 26,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 3899
+    },
+    {
+      "i": 26,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 26,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 26,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 3487
+    },
+    {
+      "i": 27,
+      "j": 50,
+      "norm_is_square": true,
+      "norm_bit_length": 5783
+    },
+    {
+      "i": 27,
+      "j": 75,
+      "norm_is_square": true,
+      "norm_bit_length": 5292
+    },
+    {
+      "i": 27,
+      "j": 94,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 27,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4723
+    },
+    {
+      "i": 27,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 27,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 28,
+      "j": 30,
+      "norm_is_square": true,
+      "norm_bit_length": 6155
+    },
+    {
+      "i": 28,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 28,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 29,
+      "j": 31,
+      "norm_is_square": true,
+      "norm_bit_length": 6116
+    },
+    {
+      "i": 29,
+      "j": 38,
+      "norm_is_square": true,
+      "norm_bit_length": 5979
+    },
+    {
+      "i": 29,
+      "j": 42,
+      "norm_is_square": true,
+      "norm_bit_length": 5900
+    },
+    {
+      "i": 29,
+      "j": 50,
+      "norm_is_square": true,
+      "norm_bit_length": 5743
+    },
+    {
+      "i": 29,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 5194
+    },
+    {
+      "i": 29,
+      "j": 80,
+      "norm_is_square": true,
+      "norm_bit_length": 5155
+    },
+    {
+      "i": 29,
+      "j": 97,
+      "norm_is_square": true,
+      "norm_bit_length": 4821
+    },
+    {
+      "i": 29,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4684
+    },
+    {
+      "i": 29,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4370
+    },
+    {
+      "i": 29,
+      "j": 127,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 29,
+      "j": 145,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 29,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3860
+    },
+    {
+      "i": 30,
+      "j": 61,
+      "norm_is_square": true,
+      "norm_bit_length": 5508
+    },
+    {
+      "i": 30,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 5096
+    },
+    {
+      "i": 30,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3840
+    },
+    {
+      "i": 30,
+      "j": 153,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 30,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 31,
+      "j": 37,
+      "norm_is_square": true,
+      "norm_bit_length": 5959
+    },
+    {
+      "i": 31,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 5508
+    },
+    {
+      "i": 31,
+      "j": 79,
+      "norm_is_square": true,
+      "norm_bit_length": 5135
+    },
+    {
+      "i": 31,
+      "j": 97,
+      "norm_is_square": true,
+      "norm_bit_length": 4782
+    },
+    {
+      "i": 31,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 31,
+      "j": 127,
+      "norm_is_square": true,
+      "norm_bit_length": 4193
+    },
+    {
+      "i": 31,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3860
+    },
+    {
+      "i": 31,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3820
+    },
+    {
+      "i": 31,
+      "j": 163,
+      "norm_is_square": true,
+      "norm_bit_length": 3487
+    },
+    {
+      "i": 31,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 3134
+    },
+    {
+      "i": 32,
+      "j": 34,
+      "norm_is_square": true,
+      "norm_bit_length": 5998
+    },
+    {
+      "i": 32,
+      "j": 44,
+      "norm_is_square": true,
+      "norm_bit_length": 5802
+    },
+    {
+      "i": 32,
+      "j": 55,
+      "norm_is_square": true,
+      "norm_bit_length": 5586
+    },
+    {
+      "i": 32,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 5488
+    },
+    {
+      "i": 32,
+      "j": 61,
+      "norm_is_square": true,
+      "norm_bit_length": 5469
+    },
+    {
+      "i": 32,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 4880
+    },
+    {
+      "i": 32,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4507
+    },
+    {
+      "i": 32,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 32,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 4193
+    },
+    {
+      "i": 32,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 32,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 3114
+    },
+    {
+      "i": 33,
+      "j": 80,
+      "norm_is_square": true,
+      "norm_bit_length": 5076
+    },
+    {
+      "i": 33,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 4468
+    },
+    {
+      "i": 33,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 34,
+      "j": 39,
+      "norm_is_square": true,
+      "norm_bit_length": 5861
+    },
+    {
+      "i": 34,
+      "j": 50,
+      "norm_is_square": true,
+      "norm_bit_length": 5645
+    },
+    {
+      "i": 34,
+      "j": 57,
+      "norm_is_square": true,
+      "norm_bit_length": 5508
+    },
+    {
+      "i": 34,
+      "j": 74,
+      "norm_is_square": true,
+      "norm_bit_length": 5174
+    },
+    {
+      "i": 34,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 4939
+    },
+    {
+      "i": 34,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 4625
+    },
+    {
+      "i": 34,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4272
+    },
+    {
+      "i": 34,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 34,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 34,
+      "j": 183,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 35,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 35,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 36,
+      "j": 49,
+      "norm_is_square": true,
+      "norm_bit_length": 5626
+    },
+    {
+      "i": 36,
+      "j": 65,
+      "norm_is_square": true,
+      "norm_bit_length": 5312
+    },
+    {
+      "i": 36,
+      "j": 67,
+      "norm_is_square": true,
+      "norm_bit_length": 5272
+    },
+    {
+      "i": 36,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4880
+    },
+    {
+      "i": 36,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 36,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4429
+    },
+    {
+      "i": 36,
+      "j": 112,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 36,
+      "j": 131,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 36,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 3860
+    },
+    {
+      "i": 36,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 36,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 36,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 36,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 37,
+      "j": 50,
+      "norm_is_square": true,
+      "norm_bit_length": 5586
+    },
+    {
+      "i": 37,
+      "j": 84,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 37,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 38,
+      "j": 39,
+      "norm_is_square": true,
+      "norm_bit_length": 5783
+    },
+    {
+      "i": 38,
+      "j": 44,
+      "norm_is_square": true,
+      "norm_bit_length": 5684
+    },
+    {
+      "i": 38,
+      "j": 45,
+      "norm_is_square": true,
+      "norm_bit_length": 5665
+    },
+    {
+      "i": 38,
+      "j": 49,
+      "norm_is_square": true,
+      "norm_bit_length": 5586
+    },
+    {
+      "i": 38,
+      "j": 50,
+      "norm_is_square": true,
+      "norm_bit_length": 5567
+    },
+    {
+      "i": 38,
+      "j": 66,
+      "norm_is_square": true,
+      "norm_bit_length": 5253
+    },
+    {
+      "i": 38,
+      "j": 69,
+      "norm_is_square": true,
+      "norm_bit_length": 5194
+    },
+    {
+      "i": 38,
+      "j": 71,
+      "norm_is_square": true,
+      "norm_bit_length": 5155
+    },
+    {
+      "i": 38,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 4860
+    },
+    {
+      "i": 38,
+      "j": 90,
+      "norm_is_square": true,
+      "norm_bit_length": 4782
+    },
+    {
+      "i": 38,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 4762
+    },
+    {
+      "i": 38,
+      "j": 96,
+      "norm_is_square": true,
+      "norm_bit_length": 4664
+    },
+    {
+      "i": 38,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4507
+    },
+    {
+      "i": 38,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 4115
+    },
+    {
+      "i": 38,
+      "j": 125,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 38,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 38,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3919
+    },
+    {
+      "i": 38,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 3801
+    },
+    {
+      "i": 38,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3722
+    },
+    {
+      "i": 38,
+      "j": 145,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 38,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 3428
+    },
+    {
+      "i": 38,
+      "j": 161,
+      "norm_is_square": true,
+      "norm_bit_length": 3389
+    },
+    {
+      "i": 38,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 38,
+      "j": 180,
+      "norm_is_square": true,
+      "norm_bit_length": 3016
+    },
+    {
+      "i": 39,
+      "j": 45,
+      "norm_is_square": true,
+      "norm_bit_length": 5645
+    },
+    {
+      "i": 39,
+      "j": 54,
+      "norm_is_square": true,
+      "norm_bit_length": 5469
+    },
+    {
+      "i": 39,
+      "j": 56,
+      "norm_is_square": true,
+      "norm_bit_length": 5429
+    },
+    {
+      "i": 39,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 4998
+    },
+    {
+      "i": 39,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 39,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4821
+    },
+    {
+      "i": 39,
+      "j": 100,
+      "norm_is_square": true,
+      "norm_bit_length": 4566
+    },
+    {
+      "i": 39,
+      "j": 117,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 39,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 39,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 39,
+      "j": 136,
+      "norm_is_square": true,
+      "norm_bit_length": 3860
+    },
+    {
+      "i": 39,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 39,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 3506
+    },
+    {
+      "i": 39,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 3232
+    },
+    {
+      "i": 39,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 39,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 3055
+    },
+    {
+      "i": 39,
+      "j": 178,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 40,
+      "j": 44,
+      "norm_is_square": true,
+      "norm_bit_length": 5645
+    },
+    {
+      "i": 40,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 40,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 41,
+      "j": 54,
+      "norm_is_square": true,
+      "norm_bit_length": 5429
+    },
+    {
+      "i": 41,
+      "j": 73,
+      "norm_is_square": true,
+      "norm_bit_length": 5057
+    },
+    {
+      "i": 41,
+      "j": 115,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 41,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3624
+    },
+    {
+      "i": 42,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 4331
+    },
+    {
+      "i": 42,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4115
+    },
+    {
+      "i": 42,
+      "j": 121,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 42,
+      "j": 131,
+      "norm_is_square": true,
+      "norm_bit_length": 3899
+    },
+    {
+      "i": 42,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 42,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 43,
+      "j": 56,
+      "norm_is_square": true,
+      "norm_bit_length": 5351
+    },
+    {
+      "i": 43,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 5272
+    },
+    {
+      "i": 43,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4291
+    },
+    {
+      "i": 43,
+      "j": 119,
+      "norm_is_square": true,
+      "norm_bit_length": 4115
+    },
+    {
+      "i": 43,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 43,
+      "j": 121,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 43,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 3722
+    },
+    {
+      "i": 43,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 43,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2996
+    },
+    {
+      "i": 44,
+      "j": 49,
+      "norm_is_square": true,
+      "norm_bit_length": 5469
+    },
+    {
+      "i": 44,
+      "j": 57,
+      "norm_is_square": true,
+      "norm_bit_length": 5312
+    },
+    {
+      "i": 44,
+      "j": 59,
+      "norm_is_square": true,
+      "norm_bit_length": 5272
+    },
+    {
+      "i": 44,
+      "j": 76,
+      "norm_is_square": true,
+      "norm_bit_length": 4939
+    },
+    {
+      "i": 44,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4625
+    },
+    {
+      "i": 44,
+      "j": 93,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 44,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 44,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 44,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 44,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 3310
+    },
+    {
+      "i": 44,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 44,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 2996
+    },
+    {
+      "i": 45,
+      "j": 76,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 45,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 4880
+    },
+    {
+      "i": 45,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 45,
+      "j": 138,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 45,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 3310
+    },
+    {
+      "i": 46,
+      "j": 56,
+      "norm_is_square": true,
+      "norm_bit_length": 5292
+    },
+    {
+      "i": 46,
+      "j": 68,
+      "norm_is_square": true,
+      "norm_bit_length": 5057
+    },
+    {
+      "i": 46,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 4331
+    },
+    {
+      "i": 46,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4036
+    },
+    {
+      "i": 46,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 47,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 47,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3546
+    },
+    {
+      "i": 48,
+      "j": 115,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 48,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 48,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 3134
+    },
+    {
+      "i": 49,
+      "j": 53,
+      "norm_is_square": true,
+      "norm_bit_length": 5292
+    },
+    {
+      "i": 49,
+      "j": 65,
+      "norm_is_square": true,
+      "norm_bit_length": 5057
+    },
+    {
+      "i": 49,
+      "j": 72,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 49,
+      "j": 74,
+      "norm_is_square": true,
+      "norm_bit_length": 4880
+    },
+    {
+      "i": 49,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 4801
+    },
+    {
+      "i": 49,
+      "j": 80,
+      "norm_is_square": true,
+      "norm_bit_length": 4762
+    },
+    {
+      "i": 49,
+      "j": 97,
+      "norm_is_square": true,
+      "norm_bit_length": 4429
+    },
+    {
+      "i": 49,
+      "j": 101,
+      "norm_is_square": true,
+      "norm_bit_length": 4350
+    },
+    {
+      "i": 49,
+      "j": 107,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 49,
+      "j": 108,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 49,
+      "j": 116,
+      "norm_is_square": true,
+      "norm_bit_length": 4056
+    },
+    {
+      "i": 49,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 49,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 3605
+    },
+    {
+      "i": 49,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 3389
+    },
+    {
+      "i": 49,
+      "j": 179,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 50,
+      "j": 63,
+      "norm_is_square": true,
+      "norm_bit_length": 5076
+    },
+    {
+      "i": 50,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 4703
+    },
+    {
+      "i": 50,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 50,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 50,
+      "j": 98,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 50,
+      "j": 101,
+      "norm_is_square": true,
+      "norm_bit_length": 4331
+    },
+    {
+      "i": 50,
+      "j": 108,
+      "norm_is_square": true,
+      "norm_bit_length": 4193
+    },
+    {
+      "i": 50,
+      "j": 116,
+      "norm_is_square": true,
+      "norm_bit_length": 4036
+    },
+    {
+      "i": 50,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 50,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 3722
+    },
+    {
+      "i": 50,
+      "j": 133,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 50,
+      "j": 136,
+      "norm_is_square": true,
+      "norm_bit_length": 3644
+    },
+    {
+      "i": 50,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 3546
+    },
+    {
+      "i": 50,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 50,
+      "j": 162,
+      "norm_is_square": true,
+      "norm_bit_length": 3134
+    },
+    {
+      "i": 50,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 2761
+    },
+    {
+      "i": 50,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 2741
+    },
+    {
+      "i": 51,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 4684
+    },
+    {
+      "i": 51,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 51,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4586
+    },
+    {
+      "i": 51,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4252
+    },
+    {
+      "i": 51,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 51,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 3860
+    },
+    {
+      "i": 51,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3467
+    },
+    {
+      "i": 51,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 52,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4115
+    },
+    {
+      "i": 53,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 3310
+    },
+    {
+      "i": 53,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 54,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4429
+    },
+    {
+      "i": 54,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 54,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 54,
+      "j": 130,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 54,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 3644
+    },
+    {
+      "i": 54,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 54,
+      "j": 149,
+      "norm_is_square": true,
+      "norm_bit_length": 3310
+    },
+    {
+      "i": 54,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 54,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2781
+    },
+    {
+      "i": 54,
+      "j": 185,
+      "norm_is_square": true,
+      "norm_bit_length": 2604
+    },
+    {
+      "i": 55,
+      "j": 74,
+      "norm_is_square": true,
+      "norm_bit_length": 4762
+    },
+    {
+      "i": 55,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 55,
+      "j": 128,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 56,
+      "j": 65,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 56,
+      "j": 66,
+      "norm_is_square": true,
+      "norm_bit_length": 4900
+    },
+    {
+      "i": 56,
+      "j": 69,
+      "norm_is_square": true,
+      "norm_bit_length": 4841
+    },
+    {
+      "i": 56,
+      "j": 85,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 56,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 56,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4154
+    },
+    {
+      "i": 56,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 56,
+      "j": 122,
+      "norm_is_square": true,
+      "norm_bit_length": 3801
+    },
+    {
+      "i": 56,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 56,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 56,
+      "j": 172,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 56,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2741
+    },
+    {
+      "i": 56,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 2722
+    },
+    {
+      "i": 57,
+      "j": 64,
+      "norm_is_square": true,
+      "norm_bit_length": 4919
+    },
+    {
+      "i": 57,
+      "j": 106,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 57,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 57,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 3742
+    },
+    {
+      "i": 57,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 58,
+      "j": 60,
+      "norm_is_square": true,
+      "norm_bit_length": 4978
+    },
+    {
+      "i": 58,
+      "j": 90,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 58,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 59,
+      "j": 145,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 59,
+      "j": 180,
+      "norm_is_square": true,
+      "norm_bit_length": 2604
+    },
+    {
+      "i": 60,
+      "j": 69,
+      "norm_is_square": true,
+      "norm_bit_length": 4762
+    },
+    {
+      "i": 60,
+      "j": 77,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 60,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 4331
+    },
+    {
+      "i": 60,
+      "j": 101,
+      "norm_is_square": true,
+      "norm_bit_length": 4134
+    },
+    {
+      "i": 60,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 60,
+      "j": 122,
+      "norm_is_square": true,
+      "norm_bit_length": 3722
+    },
+    {
+      "i": 60,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 60,
+      "j": 127,
+      "norm_is_square": true,
+      "norm_bit_length": 3624
+    },
+    {
+      "i": 60,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3487
+    },
+    {
+      "i": 60,
+      "j": 149,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 60,
+      "j": 167,
+      "norm_is_square": true,
+      "norm_bit_length": 2839
+    },
+    {
+      "i": 60,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2663
+    },
+    {
+      "i": 61,
+      "j": 65,
+      "norm_is_square": true,
+      "norm_bit_length": 4821
+    },
+    {
+      "i": 61,
+      "j": 101,
+      "norm_is_square": true,
+      "norm_bit_length": 4115
+    },
+    {
+      "i": 61,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3742
+    },
+    {
+      "i": 61,
+      "j": 128,
+      "norm_is_square": true,
+      "norm_bit_length": 3585
+    },
+    {
+      "i": 61,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 62,
+      "j": 75,
+      "norm_is_square": true,
+      "norm_bit_length": 4605
+    },
+    {
+      "i": 62,
+      "j": 94,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 62,
+      "j": 121,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 62,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 2663
+    },
+    {
+      "i": 63,
+      "j": 94,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 63,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 63,
+      "j": 130,
+      "norm_is_square": true,
+      "norm_bit_length": 3506
+    },
+    {
+      "i": 63,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 64,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 4507
+    },
+    {
+      "i": 64,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 64,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 64,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 64,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 2918
+    },
+    {
+      "i": 65,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 65,
+      "j": 98,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 65,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 65,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 2800
+    },
+    {
+      "i": 65,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 65,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 66,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 4468
+    },
+    {
+      "i": 66,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 4389
+    },
+    {
+      "i": 66,
+      "j": 114,
+      "norm_is_square": true,
+      "norm_bit_length": 3762
+    },
+    {
+      "i": 66,
+      "j": 116,
+      "norm_is_square": true,
+      "norm_bit_length": 3722
+    },
+    {
+      "i": 66,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 66,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 3232
+    },
+    {
+      "i": 66,
+      "j": 143,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 66,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3173
+    },
+    {
+      "i": 66,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 66,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 2525
+    },
+    {
+      "i": 66,
+      "j": 179,
+      "norm_is_square": true,
+      "norm_bit_length": 2486
+    },
+    {
+      "i": 66,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 66,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 2427
+    },
+    {
+      "i": 67,
+      "j": 74,
+      "norm_is_square": true,
+      "norm_bit_length": 4527
+    },
+    {
+      "i": 67,
+      "j": 89,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 67,
+      "j": 116,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 67,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 3506
+    },
+    {
+      "i": 67,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 68,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 3801
+    },
+    {
+      "i": 68,
+      "j": 115,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 68,
+      "j": 116,
+      "norm_is_square": true,
+      "norm_bit_length": 3683
+    },
+    {
+      "i": 68,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 69,
+      "j": 114,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 69,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 69,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3114
+    },
+    {
+      "i": 69,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3075
+    },
+    {
+      "i": 69,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 69,
+      "j": 184,
+      "norm_is_square": true,
+      "norm_bit_length": 2329
+    },
+    {
+      "i": 70,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 70,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4213
+    },
+    {
+      "i": 70,
+      "j": 93,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 70,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 3389
+    },
+    {
+      "i": 70,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 2702
+    },
+    {
+      "i": 70,
+      "j": 183,
+      "norm_is_square": true,
+      "norm_bit_length": 2329
+    },
+    {
+      "i": 71,
+      "j": 78,
+      "norm_is_square": true,
+      "norm_bit_length": 4370
+    },
+    {
+      "i": 71,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 71,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3546
+    },
+    {
+      "i": 71,
+      "j": 121,
+      "norm_is_square": true,
+      "norm_bit_length": 3526
+    },
+    {
+      "i": 71,
+      "j": 138,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 71,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 3173
+    },
+    {
+      "i": 71,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 71,
+      "j": 157,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 71,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 2800
+    },
+    {
+      "i": 71,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 72,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 3840
+    },
+    {
+      "i": 72,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 72,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 3134
+    },
+    {
+      "i": 72,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 3016
+    },
+    {
+      "i": 72,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 2624
+    },
+    {
+      "i": 72,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 73,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 73,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2408
+    },
+    {
+      "i": 74,
+      "j": 82,
+      "norm_is_square": true,
+      "norm_bit_length": 4232
+    },
+    {
+      "i": 74,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4134
+    },
+    {
+      "i": 74,
+      "j": 103,
+      "norm_is_square": true,
+      "norm_bit_length": 3820
+    },
+    {
+      "i": 74,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 3781
+    },
+    {
+      "i": 74,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 74,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 3114
+    },
+    {
+      "i": 74,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 3016
+    },
+    {
+      "i": 74,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 2937
+    },
+    {
+      "i": 74,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 74,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 2525
+    },
+    {
+      "i": 74,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 2408
+    },
+    {
+      "i": 75,
+      "j": 88,
+      "norm_is_square": true,
+      "norm_bit_length": 4095
+    },
+    {
+      "i": 75,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 75,
+      "j": 108,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 75,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 2604
+    },
+    {
+      "i": 76,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 3389
+    },
+    {
+      "i": 76,
+      "j": 128,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 76,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3173
+    },
+    {
+      "i": 76,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 2977
+    },
+    {
+      "i": 76,
+      "j": 162,
+      "norm_is_square": true,
+      "norm_bit_length": 2624
+    },
+    {
+      "i": 77,
+      "j": 90,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 77,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3644
+    },
+    {
+      "i": 77,
+      "j": 151,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 77,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 78,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 4076
+    },
+    {
+      "i": 78,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 78,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3624
+    },
+    {
+      "i": 78,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 3232
+    },
+    {
+      "i": 78,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 2937
+    },
+    {
+      "i": 78,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 2211
+    },
+    {
+      "i": 79,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 3938
+    },
+    {
+      "i": 79,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 79,
+      "j": 167,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 79,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 80,
+      "j": 87,
+      "norm_is_square": true,
+      "norm_bit_length": 4017
+    },
+    {
+      "i": 80,
+      "j": 128,
+      "norm_is_square": true,
+      "norm_bit_length": 3212
+    },
+    {
+      "i": 80,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 2859
+    },
+    {
+      "i": 81,
+      "j": 92,
+      "norm_is_square": true,
+      "norm_bit_length": 3899
+    },
+    {
+      "i": 81,
+      "j": 94,
+      "norm_is_square": true,
+      "norm_bit_length": 3860
+    },
+    {
+      "i": 81,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 81,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 81,
+      "j": 130,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 81,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 3114
+    },
+    {
+      "i": 81,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 2800
+    },
+    {
+      "i": 81,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 2604
+    },
+    {
+      "i": 81,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 82,
+      "j": 86,
+      "norm_is_square": true,
+      "norm_bit_length": 3997
+    },
+    {
+      "i": 82,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 82,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 82,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 2741
+    },
+    {
+      "i": 82,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 2624
+    },
+    {
+      "i": 82,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 82,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2231
+    },
+    {
+      "i": 83,
+      "j": 90,
+      "norm_is_square": true,
+      "norm_bit_length": 3899
+    },
+    {
+      "i": 83,
+      "j": 96,
+      "norm_is_square": true,
+      "norm_bit_length": 3781
+    },
+    {
+      "i": 83,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 83,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 2604
+    },
+    {
+      "i": 84,
+      "j": 88,
+      "norm_is_square": true,
+      "norm_bit_length": 3919
+    },
+    {
+      "i": 84,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 3585
+    },
+    {
+      "i": 84,
+      "j": 106,
+      "norm_is_square": true,
+      "norm_bit_length": 3565
+    },
+    {
+      "i": 84,
+      "j": 136,
+      "norm_is_square": true,
+      "norm_bit_length": 2977
+    },
+    {
+      "i": 84,
+      "j": 137,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 84,
+      "j": 142,
+      "norm_is_square": true,
+      "norm_bit_length": 2859
+    },
+    {
+      "i": 84,
+      "j": 151,
+      "norm_is_square": true,
+      "norm_bit_length": 2682
+    },
+    {
+      "i": 84,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 2329
+    },
+    {
+      "i": 85,
+      "j": 89,
+      "norm_is_square": true,
+      "norm_bit_length": 3879
+    },
+    {
+      "i": 85,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 2231
+    },
+    {
+      "i": 85,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 2074
+    },
+    {
+      "i": 86,
+      "j": 91,
+      "norm_is_square": true,
+      "norm_bit_length": 3820
+    },
+    {
+      "i": 86,
+      "j": 133,
+      "norm_is_square": true,
+      "norm_bit_length": 2996
+    },
+    {
+      "i": 86,
+      "j": 137,
+      "norm_is_square": true,
+      "norm_bit_length": 2918
+    },
+    {
+      "i": 86,
+      "j": 145,
+      "norm_is_square": true,
+      "norm_bit_length": 2761
+    },
+    {
+      "i": 86,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 86,
+      "j": 179,
+      "norm_is_square": true,
+      "norm_bit_length": 2094
+    },
+    {
+      "i": 87,
+      "j": 96,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 87,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3232
+    },
+    {
+      "i": 87,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 87,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 2565
+    },
+    {
+      "i": 87,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 2525
+    },
+    {
+      "i": 87,
+      "j": 160,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 87,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 2349
+    },
+    {
+      "i": 88,
+      "j": 105,
+      "norm_is_square": true,
+      "norm_bit_length": 3506
+    },
+    {
+      "i": 88,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3212
+    },
+    {
+      "i": 89,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3193
+    },
+    {
+      "i": 89,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 90,
+      "j": 93,
+      "norm_is_square": true,
+      "norm_bit_length": 3703
+    },
+    {
+      "i": 90,
+      "j": 114,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 90,
+      "j": 157,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 90,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 2408
+    },
+    {
+      "i": 91,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 91,
+      "j": 137,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 91,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 2290
+    },
+    {
+      "i": 91,
+      "j": 185,
+      "norm_is_square": true,
+      "norm_bit_length": 1878
+    },
+    {
+      "i": 92,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3350
+    },
+    {
+      "i": 92,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 92,
+      "j": 111,
+      "norm_is_square": true,
+      "norm_bit_length": 3310
+    },
+    {
+      "i": 92,
+      "j": 115,
+      "norm_is_square": true,
+      "norm_bit_length": 3232
+    },
+    {
+      "i": 92,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3134
+    },
+    {
+      "i": 92,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 2761
+    },
+    {
+      "i": 92,
+      "j": 149,
+      "norm_is_square": true,
+      "norm_bit_length": 2565
+    },
+    {
+      "i": 92,
+      "j": 151,
+      "norm_is_square": true,
+      "norm_bit_length": 2525
+    },
+    {
+      "i": 92,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 92,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 2153
+    },
+    {
+      "i": 92,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 2074
+    },
+    {
+      "i": 92,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 2035
+    },
+    {
+      "i": 93,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 93,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 2349
+    },
+    {
+      "i": 94,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 94,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 2977
+    },
+    {
+      "i": 94,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 94,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 94,
+      "j": 153,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 95,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3291
+    },
+    {
+      "i": 95,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 1878
+    },
+    {
+      "i": 96,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3271
+    },
+    {
+      "i": 96,
+      "j": 130,
+      "norm_is_square": true,
+      "norm_bit_length": 2859
+    },
+    {
+      "i": 96,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 96,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 2506
+    },
+    {
+      "i": 96,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1996
+    },
+    {
+      "i": 96,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 1937
+    },
+    {
+      "i": 97,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 97,
+      "j": 121,
+      "norm_is_square": true,
+      "norm_bit_length": 3016
+    },
+    {
+      "i": 98,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 98,
+      "j": 130,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 99,
+      "j": 112,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 99,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 99,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 99,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 100,
+      "j": 102,
+      "norm_is_square": true,
+      "norm_bit_length": 3330
+    },
+    {
+      "i": 100,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 2035
+    },
+    {
+      "i": 100,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1917
+    },
+    {
+      "i": 101,
+      "j": 104,
+      "norm_is_square": true,
+      "norm_bit_length": 3271
+    },
+    {
+      "i": 101,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 2368
+    },
+    {
+      "i": 101,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1898
+    },
+    {
+      "i": 101,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 1878
+    },
+    {
+      "i": 101,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 1741
+    },
+    {
+      "i": 102,
+      "j": 109,
+      "norm_is_square": true,
+      "norm_bit_length": 3153
+    },
+    {
+      "i": 102,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 3134
+    },
+    {
+      "i": 102,
+      "j": 114,
+      "norm_is_square": true,
+      "norm_bit_length": 3055
+    },
+    {
+      "i": 102,
+      "j": 115,
+      "norm_is_square": true,
+      "norm_bit_length": 3036
+    },
+    {
+      "i": 102,
+      "j": 119,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 102,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 2643
+    },
+    {
+      "i": 102,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 2172
+    },
+    {
+      "i": 103,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 2329
+    },
+    {
+      "i": 103,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 1937
+    },
+    {
+      "i": 103,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 1721
+    },
+    {
+      "i": 104,
+      "j": 114,
+      "norm_is_square": true,
+      "norm_bit_length": 3016
+    },
+    {
+      "i": 104,
+      "j": 117,
+      "norm_is_square": true,
+      "norm_bit_length": 2957
+    },
+    {
+      "i": 104,
+      "j": 125,
+      "norm_is_square": true,
+      "norm_bit_length": 2800
+    },
+    {
+      "i": 104,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 2663
+    },
+    {
+      "i": 104,
+      "j": 135,
+      "norm_is_square": true,
+      "norm_bit_length": 2604
+    },
+    {
+      "i": 104,
+      "j": 136,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 104,
+      "j": 143,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 104,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 2427
+    },
+    {
+      "i": 104,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 2388
+    },
+    {
+      "i": 104,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 2211
+    },
+    {
+      "i": 104,
+      "j": 163,
+      "norm_is_square": true,
+      "norm_bit_length": 2055
+    },
+    {
+      "i": 104,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 1780
+    },
+    {
+      "i": 104,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 1682
+    },
+    {
+      "i": 105,
+      "j": 142,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 105,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 2329
+    },
+    {
+      "i": 105,
+      "j": 183,
+      "norm_is_square": true,
+      "norm_bit_length": 1642
+    },
+    {
+      "i": 106,
+      "j": 110,
+      "norm_is_square": true,
+      "norm_bit_length": 3055
+    },
+    {
+      "i": 106,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 2859
+    },
+    {
+      "i": 106,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 106,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 1976
+    },
+    {
+      "i": 107,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 2839
+    },
+    {
+      "i": 107,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 108,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 108,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 108,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 1741
+    },
+    {
+      "i": 109,
+      "j": 119,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 109,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 2800
+    },
+    {
+      "i": 109,
+      "j": 131,
+      "norm_is_square": true,
+      "norm_bit_length": 2584
+    },
+    {
+      "i": 109,
+      "j": 138,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 109,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 2427
+    },
+    {
+      "i": 109,
+      "j": 140,
+      "norm_is_square": true,
+      "norm_bit_length": 2408
+    },
+    {
+      "i": 109,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 2055
+    },
+    {
+      "i": 109,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 1760
+    },
+    {
+      "i": 109,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 1701
+    },
+    {
+      "i": 110,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 2722
+    },
+    {
+      "i": 110,
+      "j": 127,
+      "norm_is_square": true,
+      "norm_bit_length": 2643
+    },
+    {
+      "i": 110,
+      "j": 131,
+      "norm_is_square": true,
+      "norm_bit_length": 2565
+    },
+    {
+      "i": 110,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 2506
+    },
+    {
+      "i": 110,
+      "j": 151,
+      "norm_is_square": true,
+      "norm_bit_length": 2172
+    },
+    {
+      "i": 110,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 2035
+    },
+    {
+      "i": 110,
+      "j": 172,
+      "norm_is_square": true,
+      "norm_bit_length": 1760
+    },
+    {
+      "i": 111,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 2525
+    },
+    {
+      "i": 111,
+      "j": 153,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 113,
+      "j": 115,
+      "norm_is_square": true,
+      "norm_bit_length": 2820
+    },
+    {
+      "i": 113,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 2211
+    },
+    {
+      "i": 114,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 2643
+    },
+    {
+      "i": 114,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 2427
+    },
+    {
+      "i": 114,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1937
+    },
+    {
+      "i": 114,
+      "j": 167,
+      "norm_is_square": true,
+      "norm_bit_length": 1780
+    },
+    {
+      "i": 115,
+      "j": 132,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 115,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 2310
+    },
+    {
+      "i": 115,
+      "j": 167,
+      "norm_is_square": true,
+      "norm_bit_length": 1760
+    },
+    {
+      "i": 115,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 1642
+    },
+    {
+      "i": 115,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1623
+    },
+    {
+      "i": 115,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 1584
+    },
+    {
+      "i": 116,
+      "j": 129,
+      "norm_is_square": true,
+      "norm_bit_length": 2486
+    },
+    {
+      "i": 116,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 116,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 1760
+    },
+    {
+      "i": 117,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 2133
+    },
+    {
+      "i": 118,
+      "j": 120,
+      "norm_is_square": true,
+      "norm_bit_length": 2624
+    },
+    {
+      "i": 118,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 1741
+    },
+    {
+      "i": 119,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 1623
+    },
+    {
+      "i": 120,
+      "j": 123,
+      "norm_is_square": true,
+      "norm_bit_length": 2525
+    },
+    {
+      "i": 120,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 2506
+    },
+    {
+      "i": 120,
+      "j": 126,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 120,
+      "j": 127,
+      "norm_is_square": true,
+      "norm_bit_length": 2447
+    },
+    {
+      "i": 120,
+      "j": 128,
+      "norm_is_square": true,
+      "norm_bit_length": 2427
+    },
+    {
+      "i": 120,
+      "j": 133,
+      "norm_is_square": true,
+      "norm_bit_length": 2329
+    },
+    {
+      "i": 120,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 2310
+    },
+    {
+      "i": 120,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 120,
+      "j": 151,
+      "norm_is_square": true,
+      "norm_bit_length": 1976
+    },
+    {
+      "i": 120,
+      "j": 152,
+      "norm_is_square": true,
+      "norm_bit_length": 1956
+    },
+    {
+      "i": 120,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 1917
+    },
+    {
+      "i": 120,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 1642
+    },
+    {
+      "i": 120,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 1623
+    },
+    {
+      "i": 120,
+      "j": 171,
+      "norm_is_square": true,
+      "norm_bit_length": 1584
+    },
+    {
+      "i": 120,
+      "j": 172,
+      "norm_is_square": true,
+      "norm_bit_length": 1564
+    },
+    {
+      "i": 120,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 1544
+    },
+    {
+      "i": 120,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 1387
+    },
+    {
+      "i": 121,
+      "j": 152,
+      "norm_is_square": true,
+      "norm_bit_length": 1937
+    },
+    {
+      "i": 121,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 1525
+    },
+    {
+      "i": 122,
+      "j": 124,
+      "norm_is_square": true,
+      "norm_bit_length": 2467
+    },
+    {
+      "i": 122,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 1564
+    },
+    {
+      "i": 123,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 123,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1466
+    },
+    {
+      "i": 123,
+      "j": 184,
+      "norm_is_square": true,
+      "norm_bit_length": 1270
+    },
+    {
+      "i": 124,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 2094
+    },
+    {
+      "i": 124,
+      "j": 156,
+      "norm_is_square": true,
+      "norm_bit_length": 1799
+    },
+    {
+      "i": 124,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 1642
+    },
+    {
+      "i": 124,
+      "j": 183,
+      "norm_is_square": true,
+      "norm_bit_length": 1270
+    },
+    {
+      "i": 125,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 1976
+    },
+    {
+      "i": 126,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 1917
+    },
+    {
+      "i": 127,
+      "j": 131,
+      "norm_is_square": true,
+      "norm_bit_length": 2231
+    },
+    {
+      "i": 128,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 1348
+    },
+    {
+      "i": 129,
+      "j": 141,
+      "norm_is_square": true,
+      "norm_bit_length": 1996
+    },
+    {
+      "i": 129,
+      "j": 154,
+      "norm_is_square": true,
+      "norm_bit_length": 1741
+    },
+    {
+      "i": 130,
+      "j": 134,
+      "norm_is_square": true,
+      "norm_bit_length": 2113
+    },
+    {
+      "i": 130,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1623
+    },
+    {
+      "i": 131,
+      "j": 163,
+      "norm_is_square": true,
+      "norm_bit_length": 1525
+    },
+    {
+      "i": 131,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 1407
+    },
+    {
+      "i": 132,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 1839
+    },
+    {
+      "i": 132,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 1466
+    },
+    {
+      "i": 132,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 1250
+    },
+    {
+      "i": 132,
+      "j": 180,
+      "norm_is_square": true,
+      "norm_bit_length": 1172
+    },
+    {
+      "i": 132,
+      "j": 184,
+      "norm_is_square": true,
+      "norm_bit_length": 1093
+    },
+    {
+      "i": 133,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 1466
+    },
+    {
+      "i": 133,
+      "j": 185,
+      "norm_is_square": true,
+      "norm_bit_length": 1054
+    },
+    {
+      "i": 134,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 1937
+    },
+    {
+      "i": 134,
+      "j": 147,
+      "norm_is_square": true,
+      "norm_bit_length": 1780
+    },
+    {
+      "i": 134,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 1760
+    },
+    {
+      "i": 134,
+      "j": 157,
+      "norm_is_square": true,
+      "norm_bit_length": 1584
+    },
+    {
+      "i": 134,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1544
+    },
+    {
+      "i": 134,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 1407
+    },
+    {
+      "i": 134,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 1270
+    },
+    {
+      "i": 134,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1250
+    },
+    {
+      "i": 134,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 1093
+    },
+    {
+      "i": 135,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1525
+    },
+    {
+      "i": 135,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 1387
+    },
+    {
+      "i": 137,
+      "j": 139,
+      "norm_is_square": true,
+      "norm_bit_length": 1878
+    },
+    {
+      "i": 137,
+      "j": 144,
+      "norm_is_square": true,
+      "norm_bit_length": 1780
+    },
+    {
+      "i": 137,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 1662
+    },
+    {
+      "i": 137,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 1054
+    },
+    {
+      "i": 139,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 1623
+    },
+    {
+      "i": 139,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 1525
+    },
+    {
+      "i": 139,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 1230
+    },
+    {
+      "i": 139,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 1132
+    },
+    {
+      "i": 140,
+      "j": 153,
+      "norm_is_square": true,
+      "norm_bit_length": 1544
+    },
+    {
+      "i": 140,
+      "j": 169,
+      "norm_is_square": true,
+      "norm_bit_length": 1230
+    },
+    {
+      "i": 140,
+      "j": 172,
+      "norm_is_square": true,
+      "norm_bit_length": 1172
+    },
+    {
+      "i": 142,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 1642
+    },
+    {
+      "i": 142,
+      "j": 165,
+      "norm_is_square": true,
+      "norm_bit_length": 1270
+    },
+    {
+      "i": 142,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 1093
+    },
+    {
+      "i": 143,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 1054
+    },
+    {
+      "i": 144,
+      "j": 146,
+      "norm_is_square": true,
+      "norm_bit_length": 1603
+    },
+    {
+      "i": 144,
+      "j": 148,
+      "norm_is_square": true,
+      "norm_bit_length": 1564
+    },
+    {
+      "i": 144,
+      "j": 150,
+      "norm_is_square": true,
+      "norm_bit_length": 1525
+    },
+    {
+      "i": 144,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 1368
+    },
+    {
+      "i": 144,
+      "j": 173,
+      "norm_is_square": true,
+      "norm_bit_length": 1073
+    },
+    {
+      "i": 144,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 1034
+    },
+    {
+      "i": 144,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 995
+    },
+    {
+      "i": 145,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 1348
+    },
+    {
+      "i": 146,
+      "j": 155,
+      "norm_is_square": true,
+      "norm_bit_length": 1387
+    },
+    {
+      "i": 146,
+      "j": 161,
+      "norm_is_square": true,
+      "norm_bit_length": 1270
+    },
+    {
+      "i": 146,
+      "j": 163,
+      "norm_is_square": true,
+      "norm_bit_length": 1230
+    },
+    {
+      "i": 146,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 956
+    },
+    {
+      "i": 148,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1270
+    },
+    {
+      "i": 148,
+      "j": 180,
+      "norm_is_square": true,
+      "norm_bit_length": 858
+    },
+    {
+      "i": 150,
+      "j": 166,
+      "norm_is_square": true,
+      "norm_bit_length": 1093
+    },
+    {
+      "i": 150,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 877
+    },
+    {
+      "i": 151,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 1230
+    },
+    {
+      "i": 151,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 1034
+    },
+    {
+      "i": 151,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 877
+    },
+    {
+      "i": 153,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1172
+    },
+    {
+      "i": 153,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 877
+    },
+    {
+      "i": 154,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 1054
+    },
+    {
+      "i": 154,
+      "j": 183,
+      "norm_is_square": true,
+      "norm_bit_length": 681
+    },
+    {
+      "i": 155,
+      "j": 157,
+      "norm_is_square": true,
+      "norm_bit_length": 1172
+    },
+    {
+      "i": 155,
+      "j": 158,
+      "norm_is_square": true,
+      "norm_bit_length": 1152
+    },
+    {
+      "i": 155,
+      "j": 164,
+      "norm_is_square": true,
+      "norm_bit_length": 1034
+    },
+    {
+      "i": 155,
+      "j": 168,
+      "norm_is_square": true,
+      "norm_bit_length": 956
+    },
+    {
+      "i": 156,
+      "j": 159,
+      "norm_is_square": true,
+      "norm_bit_length": 1113
+    },
+    {
+      "i": 158,
+      "j": 170,
+      "norm_is_square": true,
+      "norm_bit_length": 858
+    },
+    {
+      "i": 158,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 642
+    },
+    {
+      "i": 159,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 720
+    },
+    {
+      "i": 161,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 720
+    },
+    {
+      "i": 162,
+      "j": 175,
+      "norm_is_square": true,
+      "norm_bit_length": 681
+    },
+    {
+      "i": 164,
+      "j": 167,
+      "norm_is_square": true,
+      "norm_bit_length": 799
+    },
+    {
+      "i": 164,
+      "j": 174,
+      "norm_is_square": true,
+      "norm_bit_length": 661
+    },
+    {
+      "i": 164,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 504
+    },
+    {
+      "i": 166,
+      "j": 171,
+      "norm_is_square": true,
+      "norm_bit_length": 681
+    },
+    {
+      "i": 167,
+      "j": 180,
+      "norm_is_square": true,
+      "norm_bit_length": 485
+    },
+    {
+      "i": 168,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 544
+    },
+    {
+      "i": 169,
+      "j": 182,
+      "norm_is_square": true,
+      "norm_bit_length": 406
+    },
+    {
+      "i": 170,
+      "j": 176,
+      "norm_is_square": true,
+      "norm_bit_length": 504
+    },
+    {
+      "i": 170,
+      "j": 183,
+      "norm_is_square": true,
+      "norm_bit_length": 367
+    },
+    {
+      "i": 171,
+      "j": 177,
+      "norm_is_square": true,
+      "norm_bit_length": 465
+    },
+    {
+      "i": 175,
+      "j": 179,
+      "norm_is_square": true,
+      "norm_bit_length": 347
+    },
+    {
+      "i": 175,
+      "j": 181,
+      "norm_is_square": true,
+      "norm_bit_length": 308
+    }
+  ]
+}

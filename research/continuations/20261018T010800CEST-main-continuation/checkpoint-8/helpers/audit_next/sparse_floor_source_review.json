@@ -1,0 +1,17 @@
+{
+  "scope": "Independent full-source mathematical/interface review; no Lean compilation or remote mutation",
+  "result": "PASS",
+  "sources": {
+    "floor_next/QuadSquareFloorObstruction.lean": "681d029399e948749766bc59da39f9c99fd35022e8c1582a1085c068b6abec83",
+    "pair_witness_next/PairCachedFloorWitnesses.lean": "344ed1b90b84f82b59da3776e3d6e5f30a12a3e268e2e655e2aac504ca085b06"
+  },
+  "findings": [
+    "The integer absolute-value argument excludes all signed integer squares in a strict nonnegative floor interval; scaled cancellation assumes an honestly positive scale.",
+    "Real positive radicands use the actual full coordinate-ring positive integer square theorem. Negative trace-zero and trace-one cases use exactly nu and 4*nu-1. hd derives scale positivity; zero cannot satisfy strict inequalities. Unsupported negative-real models reject.",
+    "Nonreal radicands use multiplicativity of the integer norm; this needs no extra root or sign assumption.",
+    "Sparse row traversal visits every actual full tail, skipping only equal vertices or cached sieve rejection or a proved actual negative-integer obstruction. It consumes a natural only at the residual pair, and missing/extra naturals or head rows reject.",
+    "The cached row soundness is valid even for malformed signatures, since its endpoint is the same cached predicate. Actual full independence is reached only after the retained exact vertex projection and canonical-signature validation.",
+    "The endpoint is the original pairIndependentBool=true; no graph meaning, full-ring coverage, zero-root allowance, or downstream theorem type is narrowed."
+  ],
+  "generated_data_replay": "The separately saved sparse_floor_next/generated/verification.json parses every emitted Lean natural and checks exact original pair coverage and all 28614 floor inequalities without importing the generator or calling square-root routines."
+}

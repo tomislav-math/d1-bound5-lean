@@ -1,0 +1,15 @@
+{
+  "source": "pair_witness_next/PairCachedIndependentChunks.lean",
+  "sha256": "ce3bc5496ad1cbfec217cabf2597ba650c807568476c17e7d32f26513c8113ef",
+  "mathematical_source_review": "PASS",
+  "compiler_status": "pending coordinator",
+  "coverage": "Each prefix row compares its head to the entire remaining original tail, so every cross-chunk unordered pair is retained at its earlier index.",
+  "boundaries": "n=0, n at or beyond length, empty lists, duplicate vertices all preserve the exact original checker.",
+  "certificate": "Exact full vertex projection and full signature validation are unchanged; only the independence Boolean is factored.",
+  "pinned_apis": [
+    "Bool.true_and and Bool.and_assoc: Init/SimpLemmas.lean",
+    "Bool.and_eq_true_iff: Init/Data/Bool.lean:176",
+    "List.drop_zero and drop_succ_cons: Init/Data/List/Basic.lean:942-943"
+  ],
+  "source_changes": "none"
+}
