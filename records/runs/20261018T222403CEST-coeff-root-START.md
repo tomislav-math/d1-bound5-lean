@@ -1,0 +1,3 @@
+# START — 2026-10-18T22:24:53.517697+02:00
+
+Continue the current verified two-anchor Bennett construction with its coefficient constants, root approximation, local coefficient and entry bounds. Sources were read before selection; all are unaccepted current targets, and only dependency-ready targets will be launched serially through the existing guarded driver. No root integration or MainStatement proof is claimed. Expected branch main, starting HEAD 0ef727d0b84ea578ccbeb92880c55b108c80ecac. No live compiler and both locks were free. The inherited staged receipt is recorded and must remain unchanged. Frozen handoff/manuscript and pins remain untouched.

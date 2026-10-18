@@ -1,0 +1,35 @@
+{
+  "time": "2026-10-18T22:24:53.454137+02:00",
+  "unknown": [],
+  "targets": {
+    "BennettTwoCoefficientConstants": {
+      "accepted": false,
+      "eligible": true,
+      "missing": [],
+      "source_sha256": "034cf7aa6d3e853901a9f7bd5f2be74a2cd9af0c2f34f1de6a52a0f80541821b"
+    },
+    "BennettRootApproximation": {
+      "accepted": false,
+      "eligible": true,
+      "missing": [],
+      "source_sha256": "c859a7ac4551e632ed52309e168fbb30a02664778979c67d38b93ad6478c49f6"
+    },
+    "BennettLocalCoefficientBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "BennettTwoCoefficientConstants"
+      ],
+      "source_sha256": "f25dc1b6d49fdeba5043e54c65ce44f010106a4e0ce8bcf6463618e26b690621"
+    },
+    "BennettTwoEntryBounds": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "BennettLocalCoefficientBound",
+        "BennettTwoCoefficientConstants"
+      ],
+      "source_sha256": "243b0bcf3c9486d49b30dfd18957d9a99bef7e4772a7c116d481081e36bfba0c"
+    }
+  }
+}

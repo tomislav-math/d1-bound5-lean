@@ -1,0 +1,145 @@
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_two_local_radius_product: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_two_row_radius_power_le: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_two_distance_ratio_le: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_two_coefficient_rounding: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_prefactor_absorb: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_exists_sign_root_error: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_root_ratio_square_error: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_exists_integral_root_ratio: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_exists_integral_root_ratio_bound: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennettTwoNodes_branch_one_two: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennettClearedTaylor_two_poles_weighted_norm_le: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennettClearedTaylor_two_poles_norm_le: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_one_norm_le_local: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_two_norm_le_local: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_two_scaled_radius_ratio_le: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennett_two_height_normalization: [propext, Classical.choice, Quot.sound]
+COEFF_ROOT_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_height_bounds: [propext, Classical.choice, Quot.sound]
+D1Bound5.bennett_two_local_radius_product : ∀ (u v : ℝ),
+  2 * u / 5 * (u - 2 * u / 5) * (v - 2 * u / 5) = 6 / 25 * u ^ 2 * (v - 2 * u / 5)
+D1Bound5.bennett_two_row_radius_power_le : ∀ (r D E : ℝ),
+  0 < r →
+    r ≤ D →
+      r ≤ E →
+        ∀ (k d0 d1 d2 : ℕ), 1 ≤ k → d0 + d1 + d2 = 1 → (r * D * E) ^ k ≤ r ^ (k + d0 - 1) * D ^ (k + d1) * E ^ (k + d2)
+D1Bound5.bennett_two_distance_ratio_le : ∀ (B u v : ℝ),
+  0 < B → 0 < u → u ≤ B → u ≤ v → v ≤ u + B → v ^ 2 / (v - 2 * u / 5) ≤ 5 / 2 * B
+D1Bound5.bennett_two_coefficient_rounding : ∀ (T : ℝ),
+  1000 ≤ T → (1 + 7 / (5 * T)) / (1 - 1 / T) * (125 / 3 * (1 + 7 / (5 * T))) < 42
+D1Bound5.bennett_prefactor_absorb : ∀ (M H : ℝ), 1 ≤ M → 0 ≤ H → ∀ (k : ℕ), 1 ≤ k → M * H ^ k ≤ (M * H) ^ k
+D1Bound5.bennett_exists_sign_root_error : ∀ (t θ : ℂ),
+  θ ≠ 0 → ∃ v, (v = t ∨ v = -t) ∧ 0 ≤ (v / θ).re ∧ ‖θ - v‖ ≤ ‖t ^ 2 - θ ^ 2‖ / ‖θ‖
+D1Bound5.bennett_root_ratio_square_error : ∀ (a c d z r v θ : ℂ),
+  a ≠ 0 →
+    c ≠ 0 →
+      z ≠ 0 →
+        r ^ 2 = a * c + 1 →
+          v ^ 2 = a * d + 1 →
+            z ^ 2 = c * d + 1 → θ ^ 2 = 1 + 1 / (a * c) → (r * v / (a * z)) ^ 2 - θ ^ 2 = θ ^ 2 * (c - a) / (a * z ^ 2)
+@D1Bound5.bennett_exists_integral_root_ratio : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ) (a c d z r v : R)
+  (θ : ℂ),
+  f a ≠ 0 →
+    f c ≠ 0 →
+      f z ≠ 0 →
+        θ ≠ 0 →
+          r ^ 2 = a * c + 1 →
+            v ^ 2 = a * d + 1 →
+              z ^ 2 = c * d + 1 →
+                θ ^ 2 = 1 + 1 / (f a * f c) →
+                  ∃ s,
+                    (s = r * v ∨ s = -(r * v)) ∧
+                      0 ≤ (f s / (f a * f z) / θ).re ∧ ‖θ - f s / (f a * f z)‖ ≤ ‖θ‖ * ‖f c - f a‖ / (‖f a‖ * ‖f z‖ ^ 2)
+@D1Bound5.bennett_exists_integral_root_ratio_bound : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ)
+  (a c d z r v : R),
+  f a ≠ 0 →
+    f c ≠ 0 →
+      f z ≠ 0 →
+        r ^ 2 = a * c + 1 →
+          v ^ 2 = a * d + 1 →
+            z ^ 2 = c * d + 1 →
+              1000 ≤ ‖f a‖ * ‖f c‖ →
+                4 * ‖f a‖ ≤ ‖f c‖ →
+                  ∃ s,
+                    (s = r * v ∨ s = -(r * v)) ∧
+                      ‖(1 + 1 / (f a * f c)) ^ (1 / 2) - f s / (f a * f z)‖ < 3 / 2 * ‖f c‖ / (‖f a‖ * ‖f z‖ ^ 2)
+D1Bound5.bennettTwoNodes_branch_one_two : ∀ (a b c : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        (1 + D1Bound5.bennettTwoNodes a b 1 * (a * b * c)⁻¹) ^ (1 / 2) = (1 + 1 / (a * c)) ^ (1 / 2) ∧
+          (1 + D1Bound5.bennettTwoNodes a b 2 * (a * b * c)⁻¹) ^ (1 / 2) = (1 + 1 / (b * c)) ^ (1 / 2)
+D1Bound5.bennettClearedTaylor_two_poles_weighted_norm_le : ∀ (a N d e : ℂ) (k t p q : ℕ),
+  t ≤ k →
+    ∀ (r : ℝ),
+      0 ≤ r →
+        0 < ‖N + a‖ →
+          r < ‖d‖ →
+            r < ‖e‖ →
+              ‖Polynomial.eval N
+                      (D1Bound5.bennettClearedTaylor k t (1 / 2) a
+                        (D1Bound5.bennettPoleSeries d p * D1Bound5.bennettPoleSeries e q))‖ *
+                  r ^ t ≤
+                (‖N + a‖ + r) ^ (k + 1) / ‖N + a‖ * ((‖d‖ - r)⁻¹ ^ p * (‖e‖ - r)⁻¹ ^ q)
+D1Bound5.bennettClearedTaylor_two_poles_norm_le : ∀ (a N d e : ℂ) (k d0 d1 d2 : ℕ),
+  1 ≤ k →
+    d0 + d1 + d2 = 1 →
+      ∀ (r : ℝ),
+        0 < r →
+          0 < ‖N + a‖ →
+            2 * r ≤ ‖d‖ →
+              2 * r ≤ ‖e‖ →
+                ‖Polynomial.eval N
+                      (D1Bound5.bennettClearedTaylor k (k + d0 - 1) (1 / 2) a
+                        (D1Bound5.bennettPoleSeries d (k + d1) * D1Bound5.bennettPoleSeries e (k + d2)))‖ ≤
+                  (‖N + a‖ + r) / ‖N + a‖ * ((‖N + a‖ + r) / (r * (‖d‖ - r) * (‖e‖ - r))) ^ k
+D1Bound5.bennettTwoClearedEntry_one_norm_le_local : ∀ (a b c : ℂ) (k : ℕ),
+  1 ≤ k →
+    ∀ (i : Fin 3) (r : ℝ),
+      0 < r →
+        0 < ‖a * b * c + b‖ →
+          2 * r ≤ ‖b‖ →
+            2 * r ≤ ‖a - b‖ →
+              ‖D1Bound5.bennettTwoClearedEntry a b c k i 1‖ ≤
+                (4 * ‖a‖ * ‖b‖ * ‖a - b‖ ^ 2) ^ k * ((‖a * b * c + b‖ + r) / ‖a * b * c + b‖) *
+                  ((‖a * b * c + b‖ + r) / (r * (‖b‖ - r) * (‖a - b‖ - r))) ^ k
+D1Bound5.bennettTwoClearedEntry_two_norm_le_local : ∀ (a b c : ℂ) (k : ℕ),
+  1 ≤ k →
+    ∀ (i : Fin 3) (r : ℝ),
+      0 < r →
+        0 < ‖a * b * c + a‖ →
+          2 * r ≤ ‖a‖ →
+            2 * r ≤ ‖a - b‖ →
+              ‖D1Bound5.bennettTwoClearedEntry a b c k i 2‖ ≤
+                (4 * ‖a‖ * ‖b‖ * ‖a - b‖ ^ 2) ^ k * ((‖a * b * c + a‖ + r) / ‖a * b * c + a‖) *
+                  ((‖a * b * c + a‖ + r) / (r * (‖a‖ - r) * (‖a - b‖ - r))) ^ k
+D1Bound5.bennett_two_scaled_radius_ratio_le : ∀ (X δ B r : ℝ),
+  0 < X →
+    0 < δ → 0 < B → X ≤ B → δ ≤ X + B → r = 2 * min X δ / 5 → 4 * X * δ ^ 2 / (r * (X - r) * (δ - r)) ≤ 125 / 3 * B / X
+D1Bound5.bennett_two_height_normalization : ∀ (X Y δ B C N U r : ℝ) (k : ℕ),
+  0 < X →
+    0 < Y →
+      0 < δ →
+        0 < B →
+          0 < C →
+            X ≤ B →
+              δ ≤ X + B →
+                N = X * Y * C →
+                  1000 ≤ N / B →
+                    N - X ≤ U →
+                      U ≤ N + X →
+                        r = 2 * min X δ / 5 →
+                          1 ≤ k →
+                            (4 * X * Y * δ ^ 2) ^ k * ((U + r) / U) * ((U + r) / (r * (X - r) * (δ - r))) ^ k <
+                              (42 * Y ^ 2 * B * C) ^ k
+D1Bound5.bennettTwoClearedEntry_height_bounds : ∀ (a b c : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        a ≠ b →
+          ‖a‖ ≤ ‖b‖ →
+            1000 ≤ ‖a‖ * ‖c‖ →
+              ∀ (k : ℕ),
+                1 ≤ k →
+                  ∀ (i : Fin 3),
+                    ‖D1Bound5.bennettTwoClearedEntry a b c k i 1‖ < (42 * ‖a‖ ^ 2 * ‖b‖ * ‖c‖) ^ k ∧
+                      ‖D1Bound5.bennettTwoClearedEntry a b c k i 2‖ < (42 * ‖b‖ ^ 3 * ‖c‖) ^ k

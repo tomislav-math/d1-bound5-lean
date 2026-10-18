@@ -1,0 +1,13 @@
+--- trial02
++++ repaired
+@@ -71,6 +71,9 @@
+     have hswap : 4 * B * A * δ^2 = 4 * A * B * δ^2 := by ring
+     rw [hswap] at hnormal1
+     exact hnormal1
+-  · exact hlocal2.trans_lt hnormal2
++  · apply hlocal2.trans_lt
++    have hcube : 42 * B^2 * B * C = 42 * B^3 * C := by ring
++    rw [hcube] at hnormal2
++    exact hnormal2
+ 
+ end D1Bound5

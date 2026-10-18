@@ -1,0 +1,20 @@
+--- prepared
++++ repaired
+@@ -16,7 +16,7 @@
+             (r * (‖b‖ - r) * (‖a - b‖ - r))) ^ k := by
+   have hrow : (if i = 1 then 1 else 0) + (if i = 0 then 1 else 0) +
+       (if i = 2 then 1 else 0) = (1 : ℕ) := by
+-    simpa only [Nat.add_comm, Nat.add_left_comm] using bennett_delta_sum_three i
++    simpa only [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using bennett_delta_sum_three i
+   have h := bennettClearedTaylor_two_poles_norm_le b (a * b * c) b (b - a) k
+     (if i = 1 then 1 else 0) (if i = 0 then 1 else 0) (if i = 2 then 1 else 0)
+     hk hrow r hr hU hb (by simpa only [norm_sub_rev] using hab)
+@@ -42,7 +42,7 @@
+             (r * (‖a‖ - r) * (‖a - b‖ - r))) ^ k := by
+   have hrow : (if i = 2 then 1 else 0) + (if i = 0 then 1 else 0) +
+       (if i = 1 then 1 else 0) = (1 : ℕ) := by
+-    simpa only [Nat.add_comm, Nat.add_left_comm] using bennett_delta_sum_three i
++    simpa only [Nat.add_assoc, Nat.add_comm, Nat.add_left_comm] using bennett_delta_sum_three i
+   have h := bennettClearedTaylor_two_poles_norm_le a (a * b * c) a (a - b) k
+     (if i = 2 then 1 else 0) (if i = 0 then 1 else 0) (if i = 1 then 1 else 0)
+     hk hrow r hr hU ha hab

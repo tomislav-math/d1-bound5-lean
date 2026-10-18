@@ -1,0 +1,73 @@
+⚠ [1503/1576] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1504/1576] Replayed D1Bound5.BennettBinomialTransfer
+warning: D1Bound5/BennettBinomialTransfer.lean:11:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettSeries_coeff_C_add_X_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1946/1983] Replayed D1Bound5.BennettCoefficientMajorant
+warning: D1Bound5/BennettCoefficientMajorant.lean:74:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettCoefficientMajorant.lean:74:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2763/2765] Replayed D1Bound5.BennettPositiveSeries
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [2765/2765] Built D1Bound5.BennettLocalCoefficientBound (125s)
+Build completed successfully (2765 jobs).

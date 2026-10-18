@@ -1,0 +1,14 @@
+--- prepared
++++ repaired
+@@ -135,7 +135,10 @@
+     have hk0 : k ≠ 0 := by omega
+     exact pow_lt_pow_left₀ hfinalbase (by positivity) hk0
+   calc
+-    _ = ((U+r)/U)*V^k := by dsimp [V]; rw [mul_pow]; ring
++    _ = ((U+r)/U)*V^k := by
++      dsimp only [V]
++      rw [mul_pow (4*X*Y*δ^2) ((U+r)/(r*(X-r)*(δ-r))) k]
++      ring
+     _ ≤ M*(H*L)^k := mul_le_mul hpref
+       (pow_le_pow_left₀ hV.le hbase k) (pow_nonneg hV.le _) hM0.le
+     _ ≤ (M*(H*L))^k := bennett_prefactor_absorb M (H*L) hM

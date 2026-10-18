@@ -1,0 +1,7 @@
+# FINISH — 2026-10-18T23:02:33.057141+02:00
+
+Outcome: COMPLETED_UNIT for six separately verified working modules and seventeen original public theorems (plus one original private helper). All guarded pinned builds, exact-type/transitive-axiom audit and six targeted installed SAME-kernel replays passed. Only propext, Classical.choice and Quot.sound occur. All original headers are unchanged. Meaningful failed proof attempts and the corrected auxiliary source-scan issue are preserved. No source-pins, frozen manuscript, accepted-root imports or automations were changed.
+
+The strongest endpoints are the actual two-column height bounds with bases 42|a|^2|b||c| and 42|b|^3|c| at every k>=1, and a signed source-ring root product with the strict3/2 approximation error. The explicit nonzero and size conditions remain in the theorem types. The remaining weighted/residual/full-ring bridges and finite exclusions are not assumed away. MainStatement remains UNPROVED.
+
+Next ready work is BennettWeightedHeight and the residual dependencies in NEXT_DEPENDENCIES.json. Sources and complete receipts are preserved in research/continuations/20261018T222403CEST-coeff-root/. The local queue is paused between jobs, no owned compiler/checker remains, and the inherited staged receipt is unchanged. The following private Git publication requires separate actual calls and a later post-push receipt; this FINISH does not invent publication.

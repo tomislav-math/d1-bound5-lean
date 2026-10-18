@@ -1,0 +1,79 @@
+{
+  "time": "2026-10-18T23:02:33.057141+02:00",
+  "unknown": [],
+  "targets": {
+    "BennettWeightedHeight": {
+      "accepted_current_build": false,
+      "eligible": true,
+      "unaccepted_dependencies": [],
+      "ready_prerequisites": []
+    },
+    "BennettRootTransfer": {
+      "accepted_current_build": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "BennettWeightedHeight",
+        "BennettTwoResidualRate",
+        "BennettTwoResidualBound",
+        "BennettResidualBound",
+        "BennettResidualEvaluation",
+        "BennettRepeatedHsymm",
+        "BennettResiduesAtInfinity",
+        "BennettChooseGamma"
+      ],
+      "ready_prerequisites": [
+        "BennettWeightedHeight",
+        "BennettResidualEvaluation",
+        "BennettResiduesAtInfinity",
+        "BennettChooseGamma"
+      ]
+    },
+    "FullRingOrdinaryHeight": {
+      "accepted_current_build": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "BennettRootTransfer",
+        "BennettWeightedHeight",
+        "BennettTwoResidualRate",
+        "BennettTwoResidualBound",
+        "BennettResidualBound",
+        "BennettResidualEvaluation",
+        "BennettRepeatedHsymm",
+        "BennettResiduesAtInfinity",
+        "BennettChooseGamma"
+      ],
+      "ready_prerequisites": [
+        "BennettWeightedHeight",
+        "BennettResidualEvaluation",
+        "BennettResiduesAtInfinity",
+        "BennettChooseGamma"
+      ]
+    },
+    "UnitPairFirstExtensionBound": {
+      "accepted_current_build": false,
+      "eligible": false,
+      "unaccepted_dependencies": [
+        "FullRingOrdinaryHeight",
+        "BennettRootTransfer",
+        "BennettWeightedHeight",
+        "BennettTwoResidualRate",
+        "BennettTwoResidualBound",
+        "BennettResidualBound",
+        "BennettResidualEvaluation",
+        "BennettRepeatedHsymm",
+        "BennettResiduesAtInfinity",
+        "BennettChooseGamma",
+        "UnitPairCubicIteration",
+        "UnitPairCubic",
+        "UnitPairCubicNumeric"
+      ],
+      "ready_prerequisites": [
+        "BennettWeightedHeight",
+        "BennettResidualEvaluation",
+        "BennettResiduesAtInfinity",
+        "BennettChooseGamma",
+        "UnitPairCubicNumeric"
+      ]
+    }
+  }
+}

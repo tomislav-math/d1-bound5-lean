@@ -1,0 +1,17 @@
+# Statement and mathematical review (same assistant, not independent review)
+
+The existing public statements were read before compilation. No field/ring typeclass, nonzero condition, strict comparison, natural-order restriction or branch choice has been weakened.
+
+For the root identity, put t=rv/(az) and theta^2=(ac+1)/(ac). Substituting the three square equations gives t^2-theta^2=theta^2(c-a)/(az^2). The assumptions a,c,z nonzero are precisely those used in division. Choosing w=t or -t with Re(w/theta)>=0 yields |w+theta|>=|theta| and hence |theta-w|<=|t^2-theta^2|/|theta|. Lifting the sign to s=rv or -rv uses only ring operations, not an unproved integrality of an analytically chosen root. This sign depends on the actual tuple roots and theta, not on k or the eventual matrix row. In the large regime |a||c|>=1000, 4|a|<=|c|, the factors |theta|<6/5 and |c-a|<=5|c|/4 yield the strict 3/2 error constant. This does not discharge z nonzero for every later tuple branch.
+
+The coefficient proof's basic input is the explicit cleared Taylor polynomial and two formal pole factors, not a hypothetical majorant of the unknown coefficient. Its positive polynomial and pole series have proved analytic HasSum statements at the actual radius. Multiplication is justified by the proved positive-series Cauchy theorem. Nonnegative summands are bounded by that sum. In the unweighted bound, k>=1 and d0+d1+d2=1 ensure t=k+d0-1<=k and ensure all natural subtractions have the intended values. A strictly positive r and 2r<=both pole distances make every denominator positive. Final entry specialization uses the exact nodes (0,b,a), directed pole differences, and clearing factor (4ab(a-b)^2)^k.
+
+The scalar distance-ratio hypotheses include both min/max ordering and the triangle restriction, so they must be supplied from actual geometry later. The base-42 rounding theorem uses T>=1000 and exact rational comparisons. Checking that scalar inequality alone does not prove the full uniform entry bound. All claimed proof acceptance still requires recorded successful compilation, exact elaborated types, allowed transitive axioms, dependency/source/artifact guards and installed same-kernel target replay. No final cardinality result, clean checkout, independent review or whole-root fresh replay is claimed in this review.
+
+## Uniform-height extension reviewed before its compilation
+
+For the first column use X=|b|, Y=|a|, delta=|a-b|, B=|b|, N=|a||b||c| and radius 2 min(X,delta)/5. For the second use X=|a|, Y=|b|. The shared scale N/B=|a||c| is at least 1000. The triangle inequality and |a|<=|b| supply all distance hypotheses. The numerator |abc+b| (respectively |abc+a|) lies between N-X and N+X, so it is positive. Thus the scalar normalization, if its exact proof compiles, converts the already proved local column bounds into bases 42|a|^2|b||c| and 42|b|^3|c|. There is no distinct-modulus assumption; a!=b is needed solely to keep the pole difference nonzero. No assumption that the coefficients are bounded by these conclusions is present.
+
+## Final evidence
+
+All six planned module builds, the exact seventeen-public-theorem type/transitive-axiom audit and six installed SAME-kernel target replays have now passed. Every original public and private header remains unchanged. The final corrected source/import review is FINAL_SOURCE_REVIEW.json. No fresh whole-root replay, independent review, clean checkout or accepted-root integration was performed.

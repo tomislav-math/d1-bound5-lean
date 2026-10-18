@@ -1,0 +1,83 @@
+✖ [2011/2011] Building D1Bound5.BennettHeightNormalization (51s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettHeightNormalization.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettHeightNormalization.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettHeightNormalization.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettHeightNormalization.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettHeightNormalization.setup.json --json
+warning: D1Bound5/BennettHeightNormalization.lean:22:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettHeightNormalization.lean:36:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: D1Bound5/BennettHeightNormalization.lean:138:53: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/BennettHeightNormalization.lean:138:25: unsolved goals
+X Y δ B C N U r : ℝ
+k : ℕ
+hX : 0 < X
+hY : 0 < Y
+hδ : 0 < δ
+hB : 0 < B
+hC : 0 < C
+hXB : X ≤ B
+hδB : δ ≤ X + B
+hN : N = X * Y * C
+hscale : 1000 ≤ N / B
+hUlo : N - X ≤ U
+hUhi : U ≤ N + X
+hradius : r = 2 * min X δ / 5
+hk : 1 ≤ k
+T : ℝ := N / B
+F : ℝ := 1 + 7 / (5 * T)
+η : ℝ := 1 - 1 / T
+M : ℝ := F / η
+H : ℝ := 125 / 3 * F
+L : ℝ := Y ^ 2 * B * C
+hN0 : 0 < N
+hT1000 : 1000 ≤ T
+hT : 0 < T
+hF : 0 < F
+hη : 0 < η
+hη1 : η ≤ 1
+hF1 : 1 ≤ F
+hM : 1 ≤ M
+hM0 : 0 < M
+hH : 0 < H
+hL : 0 < L
+hr : 0 < r
+hrX : r ≤ 2 * X / 5
+hrδ : r ≤ 2 * δ / 5
+hDX : 0 < X - r
+hDδ : 0 < δ - r
+hden : 0 < r * (X - r) * (δ - r)
+hNF : N * F = N + 7 * B / 5
+hNη : N * η = N - B
+hnum : U + r ≤ N * F
+hdenU : N * η ≤ U
+hU : 0 < U
+hUr : 0 < U + r
+hpref : (U + r) / U ≤ M
+hratio : 4 * X * δ ^ 2 / (r * (X - r) * (δ - r)) ≤ 125 / 3 * B / X
+V : ℝ := 4 * X * Y * δ ^ 2 * ((U + r) / (r * (X - r) * (δ - r)))
+hV : 0 < V
+hbase : V ≤ H * L
+hround : M * H < 42
+hfinalbase : M * (H * L) < 42 * L
+hpow : (M * (H * L)) ^ k < (42 * L) ^ k
+⊢ X ^ k * Y ^ k * δ ^ (k * 2) * U * U⁻¹ * 4 ^ k *
+        (U * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹ + r * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹) ^ k +
+      X ^ k * Y ^ k * δ ^ (k * 2) * r * U⁻¹ * 4 ^ k *
+        (U * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹ + r * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹) ^ k =
+    U * U⁻¹ *
+        (X * Y * δ ^ 2 * U * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹ * 4 +
+            X * Y * δ ^ 2 * r * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹ * 4) ^
+          k +
+      r * U⁻¹ *
+        (X * Y * δ ^ 2 * U * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹ * 4 +
+            X * Y * δ ^ 2 * r * (X * δ * r - X * r ^ 2 - δ * r ^ 2 + r ^ 3)⁻¹ * 4) ^
+          k
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettHeightNormalization
+error: build failed
