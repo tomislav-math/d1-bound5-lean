@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T19:21:16.209373+02:00
+
+All sixteen declaration type/axiom checks passed with only the three permitted logical axioms. The combined `leanchecker --fresh --verbose D1Bound5.BennettPositiveSeries` run did not finish within its 240-second wall budget and was terminated by its owning bounded checker, actual exit -15. Source, compiled artifact and immutable-input guards remained unchanged. No fresh closure-replay success is claimed. A separate narrower check will replay each of the two changed modules using the ordinary installed checker and legitimate pinned imports. This is not a retry of the unchanged fresh job with a longer timeout, and it does not replace the final whole-root fresh/clean-checkout gates.

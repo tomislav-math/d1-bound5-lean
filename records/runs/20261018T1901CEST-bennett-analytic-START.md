@@ -1,0 +1,3 @@
+# START — 2026-10-18T19:02:05.176374+02:00
+
+Interactive proof-development invocation explicitly authorized while the scheduled read-only diagnostic is pending. No automation changes. Scope: check and, if necessary, repair the current wave119 BennettResidualMajorant and connected BennettPositiveSeries modules. Preserve exact theorem types, source/dependency guards, the frozen manuscript, pins, all other writers and private Git policy. Starting HEAD 418a2c8, branch main, clean index and tracked working tree. The existing queue is paused, max_parallel=1, locks were free and active/protected closures empty. MainStatement remains UNPROVED.

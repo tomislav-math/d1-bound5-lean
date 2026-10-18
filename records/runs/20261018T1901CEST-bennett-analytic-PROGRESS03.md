@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T19:14:28.735775+02:00
+
+Both prepared original target modules now pass the guarded pinned build. BennettPositiveSeries passed in 58.62 seconds after separating the finite weighted coefficient identity and abbreviating its coefficient sequences; the default heartbeat and wall-clock budgets were not raised. Every original declaration header is unchanged. Six original residual theorems and eight original positive-series theorems are now compiled; the finite identity is one additional helper, not an additional original target. All source and compiled dependency artifact guards passed. Exact type/axiom audits and combined fresh same-kernel replay follow under both locks. No scheduler modification.

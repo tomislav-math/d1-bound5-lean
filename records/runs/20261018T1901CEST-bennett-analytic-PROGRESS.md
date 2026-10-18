@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T19:07:18.218852+02:00
+
+The corrected BennettResidualMajorant module passed the guarded pinned build in 51.62 seconds, exit 0, with unchanged source/dependency/artifact guards. Two real Lean failures in the last proof are retained. The final patch rewrites the real exponent before normalizing the complex casts. All six original theorem types are unchanged. Type/axiom audit and fresh targeted kernel replay are still pending. Next compile the already prepared connected BennettPositiveSeries module, then audit both. This is interactive work, not the scheduled diagnostic; no automation is modified.

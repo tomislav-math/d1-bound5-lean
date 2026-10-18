@@ -1,0 +1,18 @@
+✖ [2760/2760] Building D1Bound5.BennettPositiveSeries (50s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettPositiveSeries.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettPositiveSeries.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettPositiveSeries.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettPositiveSeries.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettPositiveSeries.setup.json --json
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: D1Bound5/BennettPositiveSeries.lean:90:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/BennettPositiveSeries.lean:132:8: (kernel) unknown constant 'D1Bound5.bennett_positive_series_mul_hasSum'
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettPositiveSeries
+error: build failed

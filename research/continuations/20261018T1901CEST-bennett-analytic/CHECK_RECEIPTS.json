@@ -1,0 +1,52 @@
+[
+  {
+    "label": "BennettResidualMajorant-type-axioms",
+    "pid": 58806,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "lean",
+      "/Users/tp/Lean/D1Bound5/research/continuations/20261018T1901CEST-bennett-analytic/BennettResidualMajorantAudit.lean"
+    ],
+    "time": "2026-10-18T19:14:31.771851+02:00",
+    "exit": 0,
+    "seconds": 47.898305874783546,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "BennettResidualMajorant-type-axioms.log"
+  },
+  {
+    "label": "BennettPositiveSeries-type-axioms",
+    "pid": 58827,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "lean",
+      "/Users/tp/Lean/D1Bound5/research/continuations/20261018T1901CEST-bennett-analytic/BennettPositiveSeriesAudit.lean"
+    ],
+    "time": "2026-10-18T19:15:19.699130+02:00",
+    "exit": 0,
+    "seconds": 42.7754782079719,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "BennettPositiveSeries-type-axioms.log"
+  },
+  {
+    "label": "combined-fresh-kernel",
+    "pid": 58854,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--fresh",
+      "--verbose",
+      "D1Bound5.BennettPositiveSeries"
+    ],
+    "time": "2026-10-18T19:16:02.504018+02:00",
+    "exit": -15,
+    "seconds": 240.04173391591758,
+    "timed_out": true,
+    "guards_unchanged": true,
+    "log": "combined-fresh-kernel.log"
+  }
+]

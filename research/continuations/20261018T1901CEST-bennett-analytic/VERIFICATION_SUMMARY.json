@@ -1,0 +1,135 @@
+{
+  "time": "2026-10-18T19:25:00.997342+02:00",
+  "outcome": "COMPLETED_UNIT",
+  "original_modules_closed": 2,
+  "original_theorems_verified": 14,
+  "additional_helper_theorems": 1,
+  "definitions_verified": 1,
+  "source_sha256": {
+    "BennettResidualMajorant": "b75484763e5bdb67dae9e19c0cad718baf723c8291fc2f17c55a13171ba3db40",
+    "BennettPositiveSeries": "97c8e1703cfe77445d9777396cd5b2920aa185f7c75649ef58d66b03bb6b026f"
+  },
+  "builds": {
+    "BennettResidualMajorant": {
+      "exit": 0,
+      "seconds": 51.62021404225379,
+      "fingerprint": "e237f7c68575f8b9435a4ed654e5a7ea570bc54365d4eb351f096bcb2cef05ca",
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    },
+    "BennettPositiveSeries": {
+      "exit": 0,
+      "seconds": 58.61667362507433,
+      "fingerprint": "6fb20f9349cad580e3b3ce8c977809bb22fd9409fa122ec971c694aad4d82be7",
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    }
+  },
+  "type_axiom_checks": [
+    {
+      "label": "BennettResidualMajorant-type-axioms",
+      "pid": 58806,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261018T1901CEST-bennett-analytic/BennettResidualMajorantAudit.lean"
+      ],
+      "time": "2026-10-18T19:14:31.771851+02:00",
+      "exit": 0,
+      "seconds": 47.898305874783546,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettResidualMajorant-type-axioms.log"
+    },
+    {
+      "label": "BennettPositiveSeries-type-axioms",
+      "pid": 58827,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261018T1901CEST-bennett-analytic/BennettPositiveSeriesAudit.lean"
+      ],
+      "time": "2026-10-18T19:15:19.699130+02:00",
+      "exit": 0,
+      "seconds": 42.7754782079719,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettPositiveSeries-type-axioms.log"
+    }
+  ],
+  "targeted_replays": [
+    {
+      "label": "BennettResidualMajorant-targeted-replay",
+      "pid": 59022,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettResidualMajorant"
+      ],
+      "time": "2026-10-18T19:21:19.443515+02:00",
+      "exit": 0,
+      "seconds": 40.65801341691986,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettResidualMajorant-targeted-replay.log"
+    },
+    {
+      "label": "BennettPositiveSeries-targeted-replay",
+      "pid": 59045,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettPositiveSeries"
+      ],
+      "time": "2026-10-18T19:22:00.133673+02:00",
+      "exit": 0,
+      "seconds": 38.61851620813832,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettPositiveSeries-targeted-replay.log"
+    }
+  ],
+  "fresh_closure_replay": {
+    "label": "combined-fresh-kernel",
+    "pid": 58854,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--fresh",
+      "--verbose",
+      "D1Bound5.BennettPositiveSeries"
+    ],
+    "time": "2026-10-18T19:16:02.504018+02:00",
+    "exit": -15,
+    "seconds": 240.04173391591758,
+    "timed_out": true,
+    "guards_unchanged": true,
+    "log": "combined-fresh-kernel.log"
+  },
+  "root_integrated": false,
+  "independent_review": false,
+  "clean_checkout": false,
+  "main_statement_proved": false,
+  "remaining_wave119": [
+    "CoherentRetainedMixedGap",
+    "OrdinaryHeightEnvelope",
+    "RetainedMixedFourScalar",
+    "RetainedMixedScalar"
+  ],
+  "ready_wave119": [
+    "RetainedMixedFourScalar",
+    "RetainedMixedScalar"
+  ],
+  "unknown_dependencies": [],
+  "queue_paused": true,
+  "active_jobs": [],
+  "automation_modified": false,
+  "verification_scope": "TARGETED_MODULE_REPLAY; fresh transitive closure replay unconfirmed"
+}

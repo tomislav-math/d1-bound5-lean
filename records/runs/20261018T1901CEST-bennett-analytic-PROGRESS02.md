@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T19:13:33.981911+02:00
+
+BennettResidualMajorant is guarded-build verified. BennettPositiveSeries initially exposed a real-to-complex choose-coefficient cast error and the default 200000-heartbeat elaboration limit in the Cauchy multiplication theorem. The cast error was corrected; two failed compiler receipts are retained. A new exact finite coefficient lemma and explicit sequence abbreviations now split the analytic proof without raising either heartbeat or wall-clock limits. All nine original public declaration headers (eight theorems and a definition) are byte-identical. One additional helper theorem is not counted as closure of an additional original target. The new source is under actual guarded compilation.

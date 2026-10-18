@@ -1,5 +1,9 @@
 # Open mathematical obligations
 
+## 18 October 2026 — two Bennett analytic working modules verified
+
+`BennettResidualMajorant` and `BennettPositiveSeries` now have repaired guarded pinned builds, exact audits of fourteen original theorems plus one helper and one definition, and successful installed SAME-kernel targeted replays. The combined fresh closure replay exceeded its 240-second budget and is unconfirmed. No original theorem headers or budgets were weakened. These modules are not root-integrated and MainStatement remains UNPROVED. Evidence: `research/continuations/20261018T1901CEST-bennett-analytic/VERIFICATION_SUMMARY.json`. Next ready reviewed repairs: RetainedMixedFourScalar, RetainedMixedScalar. Automation/diagnostic settings were not changed.
+
 ## 18 October 2026 — two-anchor Bennett denominator clearing separately verified
 
 Six wave119 Bennett denominator identities in `D1Bound5/BennettTwoDenominatorClearing.lean` compiled with the guarded pinned driver, exact type/axiom-audited and targeted SAME-kernel replayed. All checks passed; root integration remains pending. Evidence and byte-identical source: `research/continuations/20261018T124800CEST-bennett-clearing/`. The full arbitrary-order Bennett determinant, finite exhaustive certificates/descent, final sextuple exclusions and MainStatement remain UNPROVED. No whole-root clean-checkout or independent final audit is claimed.

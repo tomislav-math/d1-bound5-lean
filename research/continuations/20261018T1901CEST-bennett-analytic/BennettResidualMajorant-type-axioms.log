@@ -1,0 +1,37 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_multichoose_pos: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_choose_negative_abs: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_choose_tail_identity: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_negative_binomial_abs_hasSum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_homogeneous_tail_summable_and_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_two_homogeneous_tail_summable_and_norm_le: [propext, Classical.choice, Quot.sound]
+D1Bound5.bennett_multichoose_pos : ∀ (q : ℝ), 0 < q → ∀ (t : ℕ), 0 < Ring.multichoose q t
+D1Bound5.bennett_choose_negative_abs : ∀ (q : ℝ), 0 < q → ∀ (t : ℕ), |Ring.choose (-q) t| = Ring.choose (q + ↑t - 1) t
+D1Bound5.bennett_choose_tail_identity : ∀ (s : ℝ) (n t : ℕ),
+  |Ring.choose s (n + t)| * ↑((n + t).choose t) = |Ring.choose s n| * |Ring.choose (s - ↑n) t|
+D1Bound5.bennett_negative_binomial_abs_hasSum : ∀ (q r : ℝ),
+  0 < q → 0 ≤ r → r < 1 → HasSum (fun t => |Ring.choose (-q) t| * r ^ t) (1 / (1 - r) ^ q)
+@D1Bound5.bennett_homogeneous_tail_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι] [inst_1 : DecidableEq ι]
+  [Nonempty ι] (a : ι → ℂ) (n : ℕ) (s ρ : ℝ) (x : ℂ),
+  Fintype.card ι = n + 1 →
+    s < ↑n →
+      0 ≤ ρ →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * ‖x‖ < 1 →
+            (Summable fun t =>
+                Ring.choose (↑s) (n + t) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ t) * x ^ (n + t)) ∧
+              ‖∑' (t : ℕ), Ring.choose (↑s) (n + t) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ t) * x ^ (n + t)‖ ≤
+                |Ring.choose s n| * ‖x‖ ^ n / (1 - ρ * ‖x‖) ^ (↑n - s)
+@D1Bound5.bennett_two_homogeneous_tail_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (k : ℕ) (ρ : ℝ) (x : ℂ),
+  1 ≤ k →
+    Fintype.card ι = 3 * k + 1 →
+      0 ≤ ρ →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * ‖x‖ < 1 →
+            (Summable fun t =>
+                Ring.choose (↑↑k + 1 / 2) (3 * k + t) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ t) *
+                  x ^ (3 * k + t)) ∧
+              ‖∑' (t : ℕ),
+                    Ring.choose (↑↑k + 1 / 2) (3 * k + t) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ t) *
+                      x ^ (3 * k + t)‖ ≤
+                |Ring.choose (↑k + 1 / 2) (3 * k)| * ‖x‖ ^ (3 * k) / (1 - ρ * ‖x‖) ^ (2 * ↑k - 1 / 2)

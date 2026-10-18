@@ -1,0 +1,45 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.bennettPoleMajorant: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennettPoleMajorant_coeff: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennettPoleMajorant_coeff_nonneg: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennettPoleSeries_coeff_norm_eq_majorant: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennettPoleMajorant_hasSum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_positive_coeff_mul: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_positive_weighted_coeff_mul: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_positive_series_mul_hasSum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_positive_series_coeff_le_sum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.bennett_two_pole_majorant_coeff_le: [propext, Classical.choice, Quot.sound]
+D1Bound5.bennettPoleMajorant : ℝ → ℕ → PowerSeries ℝ
+D1Bound5.bennettPoleMajorant_coeff : ∀ (d : ℝ) (p n : ℕ),
+  (PowerSeries.coeff n) (D1Bound5.bennettPoleMajorant d p) = |Ring.choose (-↑p) n| * d⁻¹ ^ (p + n)
+D1Bound5.bennettPoleMajorant_coeff_nonneg : ∀ (d : ℝ),
+  0 ≤ d → ∀ (p n : ℕ), 0 ≤ (PowerSeries.coeff n) (D1Bound5.bennettPoleMajorant d p)
+D1Bound5.bennettPoleSeries_coeff_norm_eq_majorant : ∀ (z : ℂ) (p n : ℕ),
+  ‖(PowerSeries.coeff n) (D1Bound5.bennettPoleSeries z p)‖ = (PowerSeries.coeff n) (D1Bound5.bennettPoleMajorant ‖z‖ p)
+D1Bound5.bennettPoleMajorant_hasSum : ∀ (d r : ℝ) (p : ℕ),
+  0 < d →
+    0 ≤ r → r < d → HasSum (fun n => (PowerSeries.coeff n) (D1Bound5.bennettPoleMajorant d p) * r ^ n) ((d - r)⁻¹ ^ p)
+D1Bound5.bennett_positive_coeff_mul : ∀ (P Q : PowerSeries ℝ),
+  (∀ (n : ℕ), 0 ≤ (PowerSeries.coeff n) P) →
+    (∀ (n : ℕ), 0 ≤ (PowerSeries.coeff n) Q) → ∀ (n : ℕ), 0 ≤ (PowerSeries.coeff n) (P * Q)
+D1Bound5.bennett_positive_weighted_coeff_mul : ∀ (P Q : PowerSeries ℝ) (r : ℝ) (n : ℕ),
+  ∑ ij ∈ Finset.antidiagonal n, (PowerSeries.coeff ij.1) P * r ^ ij.1 * ((PowerSeries.coeff ij.2) Q * r ^ ij.2) =
+    (PowerSeries.coeff n) (P * Q) * r ^ n
+D1Bound5.bennett_positive_series_mul_hasSum : ∀ (P Q : PowerSeries ℝ) (r s t : ℝ),
+  0 ≤ r →
+    (∀ (n : ℕ), 0 ≤ (PowerSeries.coeff n) P) →
+      (∀ (n : ℕ), 0 ≤ (PowerSeries.coeff n) Q) →
+        HasSum (fun n => (PowerSeries.coeff n) P * r ^ n) s →
+          HasSum (fun n => (PowerSeries.coeff n) Q * r ^ n) t →
+            HasSum (fun n => (PowerSeries.coeff n) (P * Q) * r ^ n) (s * t)
+D1Bound5.bennett_positive_series_coeff_le_sum : ∀ (P : PowerSeries ℝ) (r s : ℝ),
+  0 ≤ r →
+    (∀ (n : ℕ), 0 ≤ (PowerSeries.coeff n) P) →
+      HasSum (fun n => (PowerSeries.coeff n) P * r ^ n) s → ∀ (n : ℕ), (PowerSeries.coeff n) P * r ^ n ≤ s
+D1Bound5.bennett_two_pole_majorant_coeff_le : ∀ (d e r : ℝ) (p q n : ℕ),
+  0 < d →
+    0 < e →
+      0 ≤ r →
+        r < d →
+          r < e →
+            (PowerSeries.coeff n) (D1Bound5.bennettPoleMajorant d p * D1Bound5.bennettPoleMajorant e q) * r ^ n ≤
+              (d - r)⁻¹ ^ p * (e - r)⁻¹ ^ q

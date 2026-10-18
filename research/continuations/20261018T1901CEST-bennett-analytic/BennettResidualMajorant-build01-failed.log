@@ -1,0 +1,20 @@
+✖ [2753/2753] Building D1Bound5.BennettResidualMajorant (47s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettResidualMajorant.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettResidualMajorant.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettResidualMajorant.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettResidualMajorant.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettResidualMajorant.setup.json --json
+error: D1Bound5/BennettResidualMajorant.lean:159:2: Type mismatch: After simplification, term
+  bennett_homogeneous_tail_summable_and_norm_le a (3 * k) (↑k + 1 / 2) ρ x hcard hs hρ0 ha hradius
+ has type
+  (Summable fun t =>
+      Ring.choose (↑k + 2⁻¹) (3 * k + t) * (MvPolynomial.eval a) (MvPolynomial.hsymm ι ℂ t) * x ^ (3 * k + t)) ∧
+    ‖∑' (t : ℕ),
+          Ring.choose (↑k + 2⁻¹) (3 * k + t) * (MvPolynomial.eval a) (MvPolynomial.hsymm ι ℂ t) * x ^ (3 * k + t)‖ ≤
+      |Ring.choose (↑k + 2⁻¹) (3 * k)| * ‖x‖ ^ (3 * k) / (1 - ρ * ‖x‖) ^ (3 * ↑k - (↑k + 2⁻¹))
+but is expected to have type
+  (Summable fun t =>
+      Ring.choose (↑k + 2⁻¹) (3 * k + t) * (MvPolynomial.eval a) (MvPolynomial.hsymm ι ℂ t) * x ^ (3 * k + t)) ∧
+    ‖∑' (t : ℕ),
+          Ring.choose (↑k + 2⁻¹) (3 * k + t) * (MvPolynomial.eval a) (MvPolynomial.hsymm ι ℂ t) * x ^ (3 * k + t)‖ ≤
+      |Ring.choose (↑k + 2⁻¹) (3 * k)| * ‖x‖ ^ (3 * k) / (1 - ρ * ‖x‖) ^ (2 * ↑k - 2⁻¹)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettResidualMajorant
+error: build failed

@@ -1,5 +1,9 @@
 # Status
 
+## 18 October 2026 — two Bennett analytic working modules verified
+
+`BennettResidualMajorant` and `BennettPositiveSeries` now have repaired guarded pinned builds, exact audits of fourteen original theorems plus one helper and one definition, and successful installed SAME-kernel targeted replays. The combined fresh closure replay exceeded its 240-second budget and is unconfirmed. No original theorem headers or budgets were weakened. These modules are not root-integrated and MainStatement remains UNPROVED. Evidence: `research/continuations/20261018T1901CEST-bennett-analytic/VERIFICATION_SUMMARY.json`. Next ready reviewed repairs: RetainedMixedFourScalar, RetainedMixedScalar. Automation/diagnostic settings were not changed.
+
 ## 18 October 2026 — hourly scheduling recovered and Bennett coefficient proof repaired
 
 The existing hourly task was found disabled at 14:21 and re-enabled at 14:22 with its schedule unchanged; cause and actor are UNKNOWN. No 13:15 or 14:15 proof runs are supported by saved evidence. The live recovery repaired and separately verified `BennettCoefficientMajorant`: corrected pinned build, all public theorem/definition type and transitive axiom checks, and installed same-kernel targeted replay passed. It is not root-integrated and MainStatement remains UNPROVED. Read the schedule-recovery FINISH and AUTOMATION_OBSERVATION records; local driver pause must not be confused with the scheduler enable flag.
