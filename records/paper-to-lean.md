@@ -530,3 +530,7 @@ The three previously isolated units are now integrated as ComplexHalfBinomial, H
 
 The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
 
+
+## 18 October 2026 — scalar height steps (wave119 validation)
+
+`OrdinaryHeightScalar` is now separately build/type/axiom/kernel verified. `ordinary_integer_orders_log_bound` selects k=floor(log Z/log R)+1 from an all-positive-integer-order approximation inequality; `ordinary_height_scalar_envelope` derives the exact rational logarithmic envelope; `unit_pair_height_cutoff_scalar` excludes the two scalar height bounds for s>=4. The all-order input and the full-ring branch specialization remain separate dependencies. No original theorem was weakened; accepted root imports are unchanged.

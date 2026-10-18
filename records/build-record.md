@@ -731,3 +731,7 @@ The three previously isolated units are now integrated as ComplexHalfBinomial, H
 
 The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
 
+
+## 18 October 2026, 11:04–11:09 CEST — guarded scalar verification before hourly start
+
+Target `D1Bound5.OrdinaryHeightScalar` (unchanged wave119 source) built with pinned Lake, exit 0, 60.38 s driver / 50 s target compilation. A single-target wrapper used the existing driver owner and intake locks without resuming the broad queue. Exact three-theorem type/axiom audit exit 0, 67.74 s; targeted `lake env leanchecker --verbose D1Bound5.OrdinaryHeightScalar` exit 0, 51.98 s. Only propext/Classical.choice/Quot.sound; no project imports beyond the selected source. Both final process outputs collected. Scoped source/import scan, archive source-byte match and frozen manuscript/pin checks passed. No new root build, independent reviewer or clean-checkout claim. Full receipts and source map: research/continuations/20261018T110401CEST-scalar-before-hourly/.
