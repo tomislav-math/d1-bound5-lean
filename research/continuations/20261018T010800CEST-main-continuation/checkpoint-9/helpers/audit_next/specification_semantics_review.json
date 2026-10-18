@@ -1,0 +1,65 @@
+{
+  "status": "Read-only specification sanity audit PASS; no concrete semantic issue found; no compilation or new theorem asserted",
+  "actual_remote_sources": {
+    "Basic.lean": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+    "Specification.lean": "60d7ff20e6ffc449c6452bceb3b22f98c1db628f9ed34831c674a58bbcf40b50",
+    "FullRingBasis.lean": "7a7a55f350ab7d5224275914efa11b126ec34a9ae9cc9e505c2669503411924c",
+    "FullRingBridge.lean": "dc7878b5987408dc5ad74248ad83af5608a906791f27df468ed3d05ac252ac2f",
+    "FullRingClassification.lean": "e53f31704f6ab515c54419ab5c745dab013cec5002a43430a644fe0477662aea",
+    "Sextuple.lean": "6c1f5ac664f7bb81799f2455c537b967b2cfb9335a5a58979be80cc275c0f766"
+  },
+  "precise_target": "For every universe u, field K:Type u that is a characteristic-zero finite-dimensional number field, is totally complex, and has rational dimension2: every finite set A of full ring-of-integers elements satisfying IsD1 has card<=5.",
+  "D1": "Finite-set entries are inherently distinct and explicitly nonzero. All pairs of distinct values require an actual square root in the same ring. Indexed tuples explicitly require injectivity. No diagonal square condition, no nonzero-root assumption, no positivity or realness of entries.",
+  "full_ring": "Read pinned mathlib NumberField.Basic: RingOfIntegers is integralClosure Z K, not a suborder. FullRingBasis constructs a bijection from ZxZ onto every algebraic integer and upgrades it to an actual ring equivalence. Trace0/1 and positive discriminant are derived, not assumed. FullRingClassification includes the half-integral model when d mod4=3.",
+  "field_scope": "Read pinned IsTotallyComplex definition: every infinite place complex; for degree2 number fields this is exactly imaginary quadratic. FullRingBridge derives a nonreal generator for every complex embedding. No fixed field, selected basis or selected embedding occurs in MainStatement.",
+  "root_equivalence": "square_integers_iff_field explicitly proves that a field square root of an algebraic integer is integral by integrality of its square; zero is permitted in both directions.",
+  "order_and_universes": "MainStatement has explicit universe u and quantifies K:Type u; bridges use Type*. Sextuple equivalence requires only monotone weights, allowing equal moduli; finset bound and exclusion of6 distinct entries are equivalent.",
+  "nonvacuity_math_examples": {
+    "rational_quartet": [
+      1,
+      3,
+      8,
+      120
+    ],
+    "pair_square_roots": [
+      [
+        1,
+        3,
+        2
+      ],
+      [
+        1,
+        8,
+        3
+      ],
+      [
+        1,
+        120,
+        11
+      ],
+      [
+        3,
+        8,
+        5
+      ],
+      [
+        3,
+        120,
+        19
+      ],
+      [
+        8,
+        120,
+        31
+      ]
+    ],
+    "interpretation": "All six equations hold over the integers, hence under integer casts into every full ring O_K. Characteristic zero preserves distinctness and nonzero values. This is a mathematical semantic witness, not a newly compiled Lean example.",
+    "zero_root_pair": [
+      -1,
+      1,
+      0
+    ],
+    "zero_root_equation": "(-1)*1+1=0^2, so {-1,1} is allowed in characteristic-zero full rings."
+  },
+  "limitations": "Does not assert final MainStatement implementation has passed its full import/axiom gates; assembly audit deliberately not repeated."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "Independent mathematical and source review PASS; coordinator sole compiler; no source edits or build claim",
+  "sources": {
+    "floor_next/QuadSquareFloorObstruction.lean": "681d029399e948749766bc59da39f9c99fd35022e8c1582a1085c068b6abec83",
+    "pair_witness_next/PairCachedFloorWitnesses.lean": "344ed1b90b84f82b59da3776e3d6e5f30a12a3e268e2e655e2aac504ca085b06"
+  },
+  "floor_math": "Strict consecutive nonnegative integer square inequalities exclude every signed integer square; positive real radicands use accepted rational-square classification; negative real radicands use exact nu or4nu-1 scale; nonreal radicands use multiplicativity of the norm. Zero radicands cannot pass. Unsupported tau negative-real branches return false.",
+  "traversal": "Every head checks its entire original tail. Only actual equal vertices are skipped. Floor is consumed exactly after cached sieve acceptance and failure of proved negative integer divisibility obstruction. Missing or excess floor entries and witness rows reject.",
+  "malformed_signatures": "Row soundness is unconditional on signatures: cached rejection already makes the old cached predicate false, while floor/negative obstructions prove actual nonsquare. The outer certificate retains exact vertex projection and every canonical signature check.",
+  "endpoint": "Exactly the original pairIndependentBool=true is derived, preserving all downstream seed/closure/filter/cutoff/full-ring meaning.",
+  "pinned_api_checks": [
+    "Mathlib.Algebra.Order.GroupWithZero.Basic.lean:712 sq_lt_sq\u2080",
+    "Accepted D1Bound5/RationalSquares.lean:60,71,88 exact negative/positive square interfaces",
+    "Accepted D1Bound5/SquareTest.lean: square_coordinates uses map_mul,pow_two",
+    "Bool.and_eq_true_iff previously verified in pinned Init/Data/Bool.lean:176"
+  ],
+  "source_changes": "none"
+}

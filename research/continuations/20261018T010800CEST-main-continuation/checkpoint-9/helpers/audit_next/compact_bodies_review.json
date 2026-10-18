@@ -1,0 +1,40 @@
+{
+  "status": "Independent source reconstruction PASS; no generator execution or Lean compilation",
+  "compact_generator_sha256": "37cca89c1ee87bb89f9190fc9f07c4ade23c998f6e26e90d7c6935f179c3442b",
+  "compact_manifest_sha256": "5e4fa30616273f3874df5a17316994120fba735e2a8923fb258f63869df29ba3",
+  "frozen_expanded_manifest_sha256": "f545ddfd9ae3dfd75f318f815b229afa74119756b6648b919ff0a986d266b198",
+  "method": "Parse balanced namespace blocks from actual compact Lean files; reconstruct every complete original expanded source using independent original import mapping; require byte-count and SHA equality with frozen expanded manifest. Thus all data, proofs and predicate arguments are preserved.",
+  "scope": "Concrete samples2,8,22 cover cached-integer, sparse-floor and structural backends. Full45 generation is producer-owned; not independently rerun here.",
+  "results": [
+    {
+      "row": 2,
+      "backend": "cached_integer",
+      "compact_modules": 4,
+      "exact_reconstructed_expanded_modules": 9,
+      "every_whole_namespace_body_byte_identical": true,
+      "every_data_proof_and_predicate_argument_byte_identical": true,
+      "original_public_declarations_occurrences": 1,
+      "five_public_types_unchanged": true
+    },
+    {
+      "row": 8,
+      "backend": "sparse_floor",
+      "compact_modules": 4,
+      "exact_reconstructed_expanded_modules": 10,
+      "every_whole_namespace_body_byte_identical": true,
+      "every_data_proof_and_predicate_argument_byte_identical": true,
+      "original_public_declarations_occurrences": 1,
+      "five_public_types_unchanged": true
+    },
+    {
+      "row": 22,
+      "backend": "structural",
+      "compact_modules": 1,
+      "exact_reconstructed_expanded_modules": 6,
+      "every_whole_namespace_body_byte_identical": true,
+      "every_data_proof_and_predicate_argument_byte_identical": true,
+      "original_public_declarations_occurrences": 1,
+      "five_public_types_unchanged": true
+    }
+  ]
+}

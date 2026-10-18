@@ -1,0 +1,2912 @@
+{
+  "status": "Uncompiled optional replacements; no installation or kernel claim",
+  "rows": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "excluded_rows": [
+    41
+  ],
+  "dry_run": true,
+  "expected_manifest_verified": true,
+  "source_only": true,
+  "generator_sha256": "4942337e7b44f4c84ef0ef0b75ef6aeb2c90fd5e17d74df28ba8df8af750ec7a",
+  "source_pins_sha256": "07bcd289cf1e66855f3178c79fd66053518d5657c0e1ae8a55a614e0b7f3d25c",
+  "generic_source_pins": {
+    "pair_witness_next/pair_staging.py": "65cc9c99e14c9be47edfeb3c6199dd57b04719f6b46d32aee7c73ba9820e9332",
+    "sparse_floor_next/generate_floor_witnesses.py": "1f9564b5ac95a26dc7017d7c4dbca1bad0b15eed0aad02817452a97903790f68",
+    "pair_witness_next/PairClosureWitness.lean": "c3e5b89a544885205672d45a9a3cb231a99a79dcff6c62a96059e9f00b860a62",
+    "pair_witness_next/PairClosureIndexedWitness.lean": "396e39b992bc9611aabcfcda13356692e98676409381a756555e84104fe22420",
+    "pair_witness_next/PairCachedResidues.lean": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100",
+    "pair_witness_next/PairNegativeIntegerObstruction.lean": "099be79d73801fcfb76bdc30024dc74b43ab6bdb2e935fcd75d8e115af902e02",
+    "pair_witness_next/PairCachedIntegerObstruction.lean": "7b88d466ebd17d36afddd0cdfa2f271c4c69b7b89fd533ce1008f98608cfc19e",
+    "floor_next/QuadSquareFloorObstruction.lean": "189bc6919f96623fb014a3f2f03e165069f8dce0da25caec94ef0406cc2c9b3e",
+    "pair_witness_next/PairCachedFloorWitnesses.lean": "344ed1b90b84f82b59da3776e3d6e5f30a12a3e268e2e655e2aac504ca085b06",
+    "pair_witness_next/PairTraceZeroNoThree.lean": "05241394baba13ad0c936d0b25bff457bd0afdadbe4186e3e3cfec5b20a4cbe4",
+    "pair_structural_next/PairGraphNoThreeTransfer.lean": "10b2bdca2160b3f93442ff75882d77cb4a22b0c8e74c0b3b0b8565bc741f9adb",
+    "pair_structural_next/PairTraceZeroGraph.lean": "0d64054a8011cced0bc7f67ef2726805eba0ee9f00ed409f60ae1163ef294ee0"
+  },
+  "floor_manifest_sha256": "729158bc68316f922d0572617ea551e25e1aca63ea1c871c69935e5c7d0a12f9",
+  "backend_policy": {
+    "structural": [
+      16,
+      22,
+      27,
+      31,
+      32,
+      37,
+      41
+    ],
+    "cached_integer": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      10,
+      13,
+      14,
+      18,
+      19,
+      20,
+      21,
+      25,
+      26,
+      28,
+      29,
+      35,
+      36,
+      38,
+      39,
+      42,
+      44,
+      45,
+      47
+    ],
+    "sparse_floor": [
+      1,
+      6,
+      8,
+      9,
+      11,
+      12,
+      15,
+      17,
+      23,
+      24,
+      30,
+      33,
+      34,
+      40,
+      43,
+      46,
+      48
+    ]
+  },
+  "file_count": 422,
+  "total_bytes": 71719073,
+  "ownership": "Install as replacements: original public declarations occur once in Inputs; GraphData imports all original public theorem owners",
+  "isolation": "Each color computation imports only Inputs/CachedData and generic checkers, never closure or arithmetic certificates",
+  "results": [
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 2779,
+      "dispositions": {
+        "positive_real": 925,
+        "negative_scaled": 1854
+      },
+      "color_counts": [
+        360,
+        358
+      ],
+      "full_unordered_pairs": 128523,
+      "signature_list_sha256": "3ff10a90ab592613d65e069d35f076bf3855cbb3746adf2ecf1f4913bc039bdc",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "8d47123f3fbd145c94cdbc3faf30149e4c2d7e40e735884851772fd7605720ba",
+      "row": 1,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "86e4b43f49165b52ca9df7ad7b9df10c557a407643b5bff90df55e17026d2b9b",
+      "vertices": 720,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs1.lean": {
+          "sha256": "5cd545bd15a06ecc43d8cfba5534724ca9e4bb3b996df32ac26455f986ee06da",
+          "bytes": 414855
+        },
+        "D1Bound5/SmallPairGraphWitnessData1.lean": {
+          "sha256": "063d9f2152729e1b0ab7730807fc92406c944c3189084df1d046e572be4c6174",
+          "bytes": 432565
+        },
+        "D1Bound5/SmallPairGraphArithmetic1.lean": {
+          "sha256": "4cf70ea7f533f7bcf9c1290bafbe049be2d7c2be79e22d2ce03e1d504275229c",
+          "bytes": 555
+        },
+        "D1Bound5/SmallPairGraphClosure1.lean": {
+          "sha256": "bd41e1f8926b8f039cac203d25868ad0ec5bfaf8a02d14bebbf0f0694d38548f",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairFloorWitnessData1.lean": {
+          "sha256": "1e6ec2fda1f3b8d9de2cecbbf35b21ca8066cba1fada7052ba7e82045ffaa6c2",
+          "bytes": 781070
+        },
+        "D1Bound5/SmallPairGraphCachedData1.lean": {
+          "sha256": "5855be91f2e64c005901beec92d919d40f09811b363f9ff8b92ee6ce1c49c138",
+          "bytes": 156140
+        },
+        "D1Bound5/SmallPairGraphLeft1.lean": {
+          "sha256": "c944863ad547d18d0bbf402e0591b7e50daccfba54e7df7991538c6e917106a5",
+          "bytes": 875
+        },
+        "D1Bound5/SmallPairGraphRight1.lean": {
+          "sha256": "8e3c406625754d089770a85e66b96beb38bef64948c5674c6a6f6435439ad212",
+          "bytes": 880
+        },
+        "D1Bound5/SmallPairGraphTriangle1.lean": {
+          "sha256": "9ee10126c5a6de38cd90cc0284e12b23dc7c829caef8b7ffb1bc93ed91c45ec0",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData1.lean": {
+          "sha256": "c3a89df917ce69a6a97de4d1e310bea197d359c8968e77cffbe5135810c8e559",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        207,
+        207
+      ],
+      "full_unordered_pairs": 42642,
+      "signature_list_sha256": "b8b1868cbf66be2915d0b15b0197242eebe8dcf730666f07d08a1193381f2070",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "5369a0c9ffbe73a9d0e3c74d4ee7ba66cafe9dd6ae184b0342445cc89e4c0853",
+      "row": 2,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "699e5744fddebf3907271b98d8d60256100e4ceac434333636d1c23de9ccfd88",
+      "vertices": 415,
+      "large_vertices": 414,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs2.lean": {
+          "sha256": "05c6eac538f8497cd3a821770526ca8706d00a25abdc81b4c26cfd4d1fb29b57",
+          "bytes": 466363
+        },
+        "D1Bound5/SmallPairGraphWitnessData2.lean": {
+          "sha256": "f319a0bdaefa48f1a9f3ae5ceb65656c94c041b0fa290e14cab6856d8341c7fb",
+          "bytes": 249051
+        },
+        "D1Bound5/SmallPairGraphArithmetic2.lean": {
+          "sha256": "26154516f673902cc1e3bce80054f0c96e08d80a543d1e1f2882f177302acaf7",
+          "bytes": 555
+        },
+        "D1Bound5/SmallPairGraphClosure2.lean": {
+          "sha256": "6c3d39e00759e54ecfe739fe7c0b0c438ed702899f4932797158545d8d3f914b",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairGraphCachedData2.lean": {
+          "sha256": "09194f0d5d6542d4945f04d402c4ef552a6d1b33c039a4e181e00ddb4500252b",
+          "bytes": 96638
+        },
+        "D1Bound5/SmallPairGraphLeft2.lean": {
+          "sha256": "695a28e120d08d94dd3fd7b9510a7a508c42fcb94fa493ca6e1bac67be59dffb",
+          "bytes": 776
+        },
+        "D1Bound5/SmallPairGraphRight2.lean": {
+          "sha256": "f618a3099c2f80922a7bc767350d9efd73ef7e78ce2ec4eb278f4c4b3967d1ef",
+          "bytes": 779
+        },
+        "D1Bound5/SmallPairGraphTriangle2.lean": {
+          "sha256": "633d0ac7a08db7c2f0e14cc4052782ddac64e1879adc0da6b3d800b00a70cb99",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData2.lean": {
+          "sha256": "89e5d1cc4246d5ec20132684b3f2d13a6ac263401e770195eef0c09fa478e927",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        413,
+        414
+      ],
+      "full_unordered_pairs": 170569,
+      "signature_list_sha256": "d9e79391cf1a3fff531d8cfbeab7f47fb32d132041ed86719d08b8c048c301f2",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "bee38e12b55fd4bd26bfb4ac32efad3c22499cefca67e40d0246e537f6dfee81",
+      "row": 3,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "49b94011d3db2f52bd8fd11652a37db65b3bdd59ec6e0172b7f6821f8086bd7a",
+      "vertices": 829,
+      "large_vertices": 827,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs3.lean": {
+          "sha256": "a2060547d6581e20f545c7e19b614ba81c5b621f4b74f09542728f5c0cd6e190",
+          "bytes": 931270
+        },
+        "D1Bound5/SmallPairGraphWitnessData3.lean": {
+          "sha256": "a78b10049617e1d74eafb6271f6262389571a9c140713da149c7b82e0f009eb8",
+          "bytes": 497242
+        },
+        "D1Bound5/SmallPairGraphArithmetic3.lean": {
+          "sha256": "a5595d899d140695b2f8be811778d9ea2f78cc8ff96425eb8c43a4bc305fc489",
+          "bytes": 555
+        },
+        "D1Bound5/SmallPairGraphClosure3.lean": {
+          "sha256": "3db79a70d33b3c18a681859cbedffe29b00c4cb8f3854c82757da5533ebdcb31",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairGraphCachedData3.lean": {
+          "sha256": "d70fc980c6279fc93ddc9b553b71cb37f191144549b13e668fc3c447d0cba08d",
+          "bytes": 191929
+        },
+        "D1Bound5/SmallPairGraphLeft3.lean": {
+          "sha256": "706a9aa48d0becc8ebddf6682f67caf47bafc26cfa94cc72b3cfb7592ebbabe1",
+          "bytes": 776
+        },
+        "D1Bound5/SmallPairGraphRight3.lean": {
+          "sha256": "1cd82d09e67a99efda649864498e88893c10a869655569585d18f6382fdcab20",
+          "bytes": 779
+        },
+        "D1Bound5/SmallPairGraphTriangle3.lean": {
+          "sha256": "98856dfb1146ebe28144599c58830e542539325a09ca661ec0c79f010915fd67",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData3.lean": {
+          "sha256": "590b2dae2c18b31f2621d070caa9854c89763bc29f08e3e47b31a8e0678ee92c",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        596,
+        596
+      ],
+      "full_unordered_pairs": 354620,
+      "signature_list_sha256": "332242e0724fad32d318f9ad4b834e44ebdb6cb78dc6172d8887178fa1020cbb",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "ac0a9103f3f36c5b96b18a51aa52044becc26cdc5cc874b73cf5bda20b77f0ee",
+      "row": 4,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "2caa7298e3d24af37882e464f72f9e27d049437b430419bdf92b03608ad3ec7d",
+      "vertices": 1195,
+      "large_vertices": 1192,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs4.lean": {
+          "sha256": "f0ba0bf315ccceca8bfc59f4c946632f521fc54d774e5c105f913823531538ba",
+          "bytes": 1342509
+        },
+        "D1Bound5/SmallPairGraphWitnessData4.lean": {
+          "sha256": "30bcf510abec53ea3a24e70b0972f58cccadb8a53fb33e2445d6bb86755fef34",
+          "bytes": 716679
+        },
+        "D1Bound5/SmallPairGraphArithmetic4.lean": {
+          "sha256": "26f94cc1e16460b2860a9b8697ad175676e20a8f0446ea9a20e3657aa2bf6817",
+          "bytes": 556
+        },
+        "D1Bound5/SmallPairGraphClosure4.lean": {
+          "sha256": "10e1ead07fedffae78d54146743ed3fd4a1ba97051064d0b56e786ec3cd32e36",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairGraphCachedData4.lean": {
+          "sha256": "890f929c8631c9c2709dcfefecc8eb0e7962abf817a9a43705abc68229d90d81",
+          "bytes": 277597
+        },
+        "D1Bound5/SmallPairGraphLeft4.lean": {
+          "sha256": "d362e9b83b10e42ef03f73250878bacca3938e6a255069225eb7d0ebe0eec928",
+          "bytes": 776
+        },
+        "D1Bound5/SmallPairGraphRight4.lean": {
+          "sha256": "37c19a3f5e459604bca7618e05629d627604c6b6c1eeb84f3c5a84d890942b5e",
+          "bytes": 779
+        },
+        "D1Bound5/SmallPairGraphTriangle4.lean": {
+          "sha256": "0045fcdd29789d293fd9215d7f20002533cc6c5f28557b2b4daef377b6a772ff",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData4.lean": {
+          "sha256": "df56f75f1fee25cd4a3c19bd8419c87be9bc887459878fcb2ea9a3ccc6033109",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        431,
+        430
+      ],
+      "full_unordered_pairs": 184900,
+      "signature_list_sha256": "7784269d3e408a2db1eae05150e240ca3ec0f583b68a3f72c37e038762ed7a60",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "4d764fda0bb153e5d832822a03f753036a519eae0424028062e91862f8cf9743",
+      "row": 5,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "f42b6ade41f2738ac2f639ec8e68512e0f552605a88bbf650d2dae3908801d01",
+      "vertices": 863,
+      "large_vertices": 861,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs5.lean": {
+          "sha256": "4e6175434f08a998da01f33d442f64d85d9b1aac9654c3c0e0129d277e7f396e",
+          "bytes": 970122
+        },
+        "D1Bound5/SmallPairGraphWitnessData5.lean": {
+          "sha256": "24a3ef3ca916bf5ecc5d3454e5900174a948a3ecd8e4b2c32e28f749c2b1d845",
+          "bytes": 517893
+        },
+        "D1Bound5/SmallPairGraphArithmetic5.lean": {
+          "sha256": "434171833d1f92db9663f289cdc33c40502db084fa5474e2917973c641caf744",
+          "bytes": 555
+        },
+        "D1Bound5/SmallPairGraphClosure5.lean": {
+          "sha256": "0241d891662c6c64dcaa8fb6beaf0931840f12e71d43b23b538dd1dc17179b88",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairGraphCachedData5.lean": {
+          "sha256": "770e201774795352065312d365f94b413c10ef623c151991853fa7bb248e6a4e",
+          "bytes": 200836
+        },
+        "D1Bound5/SmallPairGraphLeft5.lean": {
+          "sha256": "e078abb8132e8bfbd1abc3430ac72c683d7358c4d2bf8bed293d7819a467f4d3",
+          "bytes": 776
+        },
+        "D1Bound5/SmallPairGraphRight5.lean": {
+          "sha256": "8f6b839d2124473e08c0a637bc32391e596ea780c4ccb254af62f16b5549c05e",
+          "bytes": 779
+        },
+        "D1Bound5/SmallPairGraphTriangle5.lean": {
+          "sha256": "9a52743a8e01ad6b24d86eab10b6bbbcfcb0a590fa0d469e6cf98c6d32c358ed",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData5.lean": {
+          "sha256": "840a0ba518ef0e7261ef63c52a07bf6cbde403831db9203396e21383dfacf4c5",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 6592,
+      "dispositions": {
+        "negative_scaled": 6592
+      },
+      "color_counts": [
+        658,
+        657
+      ],
+      "full_unordered_pairs": 431649,
+      "signature_list_sha256": "7fc9d15a1edb54e806a6f129dc2de4b98f2550c072816b0af486427ef1e4e12f",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "d82b881d1f95892776590bacb72c0b9e4e373c73e9ab2afbd9a38443a3c32e8e",
+      "row": 6,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "8ae778430e23abfebc23cf251696d6fc37541534f7bd9f0b073dbe792b3ea71a",
+      "vertices": 1318,
+      "large_vertices": 1315,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs6.lean": {
+          "sha256": "205784d8f88a27e68b2b987e7cadb638e43b63edd7fc0990b93e747bf5b55189",
+          "bytes": 759241
+        },
+        "D1Bound5/SmallPairGraphWitnessData6.lean": {
+          "sha256": "876c8c07eff0ab5964b00df1cb7382701fbe66a0e911fcbdc04077c474501dc1",
+          "bytes": 792372
+        },
+        "D1Bound5/SmallPairGraphArithmetic6.lean": {
+          "sha256": "f72c26dd9fe3b5f4b798957c276cd6896ee6c0979dace192675b3a67414a55b6",
+          "bytes": 556
+        },
+        "D1Bound5/SmallPairGraphClosure6.lean": {
+          "sha256": "03c702281a3e57e09d97933f7376f83899e374ee502883dee867063c56778c67",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairFloorWitnessData6.lean": {
+          "sha256": "c1e4fdcb939412144b470fd1063af995e74b5c4c367719a4d284eaf153d91d0e",
+          "bytes": 1861611
+        },
+        "D1Bound5/SmallPairGraphCachedData6.lean": {
+          "sha256": "c3bd92cd4757a7c000fbcc37bfd898b6a8ad29da76987470f0de696abfb89422",
+          "bytes": 287965
+        },
+        "D1Bound5/SmallPairGraphLeft6.lean": {
+          "sha256": "b9d0d1065a298f29b102f3419e43c841dc44fe0f3a8cc5233f3ad41c2ff5bf8a",
+          "bytes": 875
+        },
+        "D1Bound5/SmallPairGraphRight6.lean": {
+          "sha256": "de57d7a74b4b86c12b014e80b6b15c64afdef4f35ae89684b486071072346511",
+          "bytes": 880
+        },
+        "D1Bound5/SmallPairGraphTriangle6.lean": {
+          "sha256": "af11a7b08b6d2a5038e9ff8db14cc9c50d89592003b9308bf0078e8988ab1a27",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData6.lean": {
+          "sha256": "69f3c56a77d22f3aba7fed4abcea42c3cca13ddee71e2150098166ba5e87cf6f",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        432,
+        430
+      ],
+      "full_unordered_pairs": 185331,
+      "signature_list_sha256": "fbc39fdf3af8b031489df27233f10e25b38aa97558e29539746d457fc3250b07",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "244721382a9881f66a39eabbaa6d58dad6145ea76167dde06b3c643b5c340896",
+      "row": 7,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "0ebc155e025e5bdd9130183f8b9dc27a3e3405179c9f19e9f33cc6aac54ae0d9",
+      "vertices": 864,
+      "large_vertices": 862,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs7.lean": {
+          "sha256": "0c6a50693b080eb714e72cba8f1a8cabf6d56ceae0b49770b8a8581c06335097",
+          "bytes": 971649
+        },
+        "D1Bound5/SmallPairGraphWitnessData7.lean": {
+          "sha256": "6df63399d3ee83002db99287e6754e42b3171d28d703f58caae2f87a7ae198b9",
+          "bytes": 518691
+        },
+        "D1Bound5/SmallPairGraphArithmetic7.lean": {
+          "sha256": "0ef8f8f7ef4980a5fe56eb3d4d2cef1633b5b0a5f1a82e3a730cb933da8ef799",
+          "bytes": 555
+        },
+        "D1Bound5/SmallPairGraphClosure7.lean": {
+          "sha256": "fc243ab4da5645f2dc9ad466a9bd60e2636e7f7d7fc15c1c9ed43c751d65e46d",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairGraphCachedData7.lean": {
+          "sha256": "74b472101d6032c52d226392c099833e41d2d329b207fbee9effbde5a3eee3f1",
+          "bytes": 201695
+        },
+        "D1Bound5/SmallPairGraphLeft7.lean": {
+          "sha256": "0347862508b6e753c1c0d8a08435b7d536317603b36de86bc4d9bd9690d65a45",
+          "bytes": 776
+        },
+        "D1Bound5/SmallPairGraphRight7.lean": {
+          "sha256": "c39d2fd575d89a98d1480affe4ded0aa6c59aed37e80948cc97a05ee55436b64",
+          "bytes": 779
+        },
+        "D1Bound5/SmallPairGraphTriangle7.lean": {
+          "sha256": "205201a54023d4e1347acf6ccb7ce6c8373f0cec28e08a7e470beb5de02a6808",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData7.lean": {
+          "sha256": "0b5248e9d769d4b846d8041ffc4d7d27076a8977dc92d73d4c7b03a4e05605be",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 3,
+      "dispositions": {
+        "positive_real": 1,
+        "norm": 2
+      },
+      "color_counts": [
+        716,
+        718
+      ],
+      "full_unordered_pairs": 513373,
+      "signature_list_sha256": "9bf2808791700068e333366cb456e5893f5856c59e22f33e3e54b9151d3c9c7c",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "8867aa9ee4f125bf666dfe434485922ad301758b7adaaa17430c0ef47990b714",
+      "row": 8,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "1353e1b1090ad7fa3bee632ef0b9bd69e60827231da7a19672f9b77a41a01c7b",
+      "vertices": 1437,
+      "large_vertices": 1434,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs8.lean": {
+          "sha256": "3a74e61cafc773de9e14840a01ae4f679c94f3c1d572cd2e4a846382daea6f0d",
+          "bytes": 1615079
+        },
+        "D1Bound5/SmallPairGraphWitnessData8.lean": {
+          "sha256": "890390f6c7a866459877c01c6e8baa21fc2d438b320d73f443ef46978ce4ee8a",
+          "bytes": 863140
+        },
+        "D1Bound5/SmallPairGraphArithmetic8.lean": {
+          "sha256": "73c866b30f2259ad270c62db2a98f7c0eb405570a993e05329f30c99b472202a",
+          "bytes": 556
+        },
+        "D1Bound5/SmallPairGraphClosure8.lean": {
+          "sha256": "1223608b70dc318fcde65b6b4912a9c575086dfe7a3ee1c37adcbee87a2f0a94",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairFloorWitnessData8.lean": {
+          "sha256": "ffdf8e8026fb03da19db830225ebcf99e7e7220e97e9b99ad0b758f6dfc505b1",
+          "bytes": 10133
+        },
+        "D1Bound5/SmallPairGraphCachedData8.lean": {
+          "sha256": "70aa072d266ccb64867c7d77757ee5d2c2fca87ef4952dfcaaf09b257973a1a8",
+          "bytes": 333186
+        },
+        "D1Bound5/SmallPairGraphLeft8.lean": {
+          "sha256": "eb23aa615aedbc03ed1a8489cd88960410853d8f66902aff9adc7dafb3995bbe",
+          "bytes": 875
+        },
+        "D1Bound5/SmallPairGraphRight8.lean": {
+          "sha256": "fce5a11fc7cd8279034cbd847cb29faefa5e98fddb1f925897175c78df22849e",
+          "bytes": 880
+        },
+        "D1Bound5/SmallPairGraphTriangle8.lean": {
+          "sha256": "40f61e27ab156dfb0d1cbc70061fc0074a98c71c68d4503ca9f39a315fa0284d",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData8.lean": {
+          "sha256": "f2e21a36949d6b26008aafaa3fee6e7df8542c424316a67173d08b064fda5379",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1340,
+      "dispositions": {
+        "negative_scaled": 1340
+      },
+      "color_counts": [
+        219,
+        219
+      ],
+      "full_unordered_pairs": 47742,
+      "signature_list_sha256": "de52b4f47db7325720cddcee2c92fccdc125351fb3effa0c280e88db4619c2d3",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "ea116ab253c244ac3b4d65dfe27d430351b0734559dbb9bf778efc1e0fe02ba5",
+      "row": 9,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "8fc8d4959fe85deef40402500a536bca02551a34ae083bcffabd38019040c5cc",
+      "vertices": 439,
+      "large_vertices": 438,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs9.lean": {
+          "sha256": "ca62ac88f6fd92ac6c88d32728f23d50acccc1b3de5275a1968707cf69b7dac7",
+          "bytes": 252694
+        },
+        "D1Bound5/SmallPairGraphWitnessData9.lean": {
+          "sha256": "31c1f2f98508bd3fc8b92151463182de4b1512598a59fc695daddafd280d08b6",
+          "bytes": 263192
+        },
+        "D1Bound5/SmallPairGraphArithmetic9.lean": {
+          "sha256": "fd1d6157d4b4c24fef10d7a2f6237fde1f8cbfff05503e9ebe391e7d05838373",
+          "bytes": 555
+        },
+        "D1Bound5/SmallPairGraphClosure9.lean": {
+          "sha256": "e94a9445b1c122ab641e2de2725cc3f01edac2e0681257f16ef8978a3df72c9f",
+          "bytes": 720
+        },
+        "D1Bound5/SmallPairFloorWitnessData9.lean": {
+          "sha256": "81eb626d7938e6d3fce490586183e88e8de83d333fe57ad19d0c437ceaa52e6a",
+          "bytes": 380995
+        },
+        "D1Bound5/SmallPairGraphCachedData9.lean": {
+          "sha256": "fac43c018cef6dd3080dd47380d048af4af377e720000de0f0607d9083433b7a",
+          "bytes": 95725
+        },
+        "D1Bound5/SmallPairGraphLeft9.lean": {
+          "sha256": "cf5796dac1c54808c8547dc52f0897f693f45e45ea83e1eb2cc70ce35c57c535",
+          "bytes": 875
+        },
+        "D1Bound5/SmallPairGraphRight9.lean": {
+          "sha256": "6867c1ea2bbe4fc9f7dc9cf67057bab66a048c83d56d14aacc8608b5014a00a9",
+          "bytes": 880
+        },
+        "D1Bound5/SmallPairGraphTriangle9.lean": {
+          "sha256": "a38b521c5871bfea9ac826cfa2eb5129b5538975cd9dd3b8cea544281c42bd26",
+          "bytes": 428
+        },
+        "D1Bound5/SmallPairGraphData9.lean": {
+          "sha256": "88b329ddf09044b819e713be36bebaa67a0cb6ecc5714f24b166e8a129e33139",
+          "bytes": 121
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        596,
+        596
+      ],
+      "full_unordered_pairs": 354620,
+      "signature_list_sha256": "15ccdf838752200af9807b6bad3a71d28043597e595b48b5fcda94e930d28d59",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "2ff1e6a24cc6f1484fe7c8d46e0596bac56d08b91f8277f2fd81aa8403b84a3e",
+      "row": 10,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "dcd9fca49fa64a97a5471533d6daa511a170933b8bc84a4737e575e2c3c20044",
+      "vertices": 1194,
+      "large_vertices": 1192,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs10.lean": {
+          "sha256": "d8955bb7b7b5e45d7c96d79450c94c232451dd8fb810b7abbc8dac4b4637f574",
+          "bytes": 1342098
+        },
+        "D1Bound5/SmallPairGraphWitnessData10.lean": {
+          "sha256": "ea5a70b89b48f7f58e3b1c1e5dd109052600a7a17e12d100aa6ce422c84df7ef",
+          "bytes": 716449
+        },
+        "D1Bound5/SmallPairGraphArithmetic10.lean": {
+          "sha256": "94639e4051cc1528a9dc03b51235d900ff4186f053e76c44ae906199a35b19a8",
+          "bytes": 568
+        },
+        "D1Bound5/SmallPairGraphClosure10.lean": {
+          "sha256": "e244d42cc48596a8185962292863aed5bc02fe0b359d2785a1df6e34aee738ce",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData10.lean": {
+          "sha256": "d1eb3e2c159d04b100dddd9a8f4a085ad9db08fd2faa61325ee652307ad12c5b",
+          "bytes": 277275
+        },
+        "D1Bound5/SmallPairGraphLeft10.lean": {
+          "sha256": "c601f07e99b976b4d36e20b373a05fcc7b8a2bf82d6fa190dffa4ce60a33e9d1",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight10.lean": {
+          "sha256": "396222a373c06a29c16a3d315d388cc7dc1a18644de0e0ed72d899c0be3ef076",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle10.lean": {
+          "sha256": "481d75d3c40c27ed2d57b1e555aa481fa8a0141fe5d9a626d4ca42cdebb0ac20",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData10.lean": {
+          "sha256": "62abacff9e1e1dd0dfa27bba8cbde806501efb9a52a5fc303e3c64d5aab42622",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 2789,
+      "dispositions": {
+        "negative_scaled": 2789
+      },
+      "color_counts": [
+        359,
+        359
+      ],
+      "full_unordered_pairs": 128522,
+      "signature_list_sha256": "38f162fe6fc9ca0f38f1b650bea2876a297984ddc62a71a9860e71b2d8647fca",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "62d1ae2a2ef03de7f00c6bbbbeea9d58ee400903fe636727c8ce096cd98a2267",
+      "row": 11,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "7ca55fdfe30990fb1754ba79623a8c657a4a629faf7be23bd99450633b847996",
+      "vertices": 719,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs11.lean": {
+          "sha256": "b499ddc749baceb1300d759c8918a3d970ddfbde887995663c13d3e413715a69",
+          "bytes": 414181
+        },
+        "D1Bound5/SmallPairGraphWitnessData11.lean": {
+          "sha256": "c142d7a8063d6c09c6a5c9423cd9f992bfdbdc5c3052c136f7da5f3d5974ac0f",
+          "bytes": 431420
+        },
+        "D1Bound5/SmallPairGraphArithmetic11.lean": {
+          "sha256": "364875a34ed5bd9637ca968a549dadc1fb5a5e775dc46c04000fe048f6339b2e",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure11.lean": {
+          "sha256": "c15c39d04c7d0fe25aa7e940e5ea38dd2fbccc731e33f5ef7b96a4fd536dc147",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData11.lean": {
+          "sha256": "943f3f6dbc10eef98a329f4315dfb4108fd7807679ba85f4040a4e66c87ca911",
+          "bytes": 785687
+        },
+        "D1Bound5/SmallPairGraphCachedData11.lean": {
+          "sha256": "143a29a5df31213ec9e770b9b83ea984804b4573fdc52b2b0a1c2ddb3c5603f5",
+          "bytes": 157163
+        },
+        "D1Bound5/SmallPairGraphLeft11.lean": {
+          "sha256": "6493354b8aeb6546ba77a3fafe4dc6ed74394a1628faf3a1f03d3f0453cbd858",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight11.lean": {
+          "sha256": "2debe0926077c4327a7f2536b943cf0cde6cce9840f30f90cf0f5fea2f129de9",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle11.lean": {
+          "sha256": "a1c462a3bdd8465de918a0954299eba0b1b1d34038d213d5a8e851cf35f93a37",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData11.lean": {
+          "sha256": "b863c7932bb1f5edd3af3df7a1a006b06aaea8d7b007c52b475ad99185e99797",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 2012,
+      "dispositions": {
+        "negative_scaled": 2012
+      },
+      "color_counts": [
+        359,
+        359
+      ],
+      "full_unordered_pairs": 128522,
+      "signature_list_sha256": "b28aaf6dde62176c8fa202725920644e8fbb4ef8d8ad28549d0b13c996907f41",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "2c6e6245e32dd847f822cc5168b04ada6ce3dcdeda302fdc6a5319ee586f182b",
+      "row": 12,
+      "tau": 0,
+      "nu": 1,
+      "original_source_sha256": "a686826e0ecfdb0ce949e990b76ad16e53938d447419dd23522fd9573684a60f",
+      "vertices": 720,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs12.lean": {
+          "sha256": "f4a07feaecbd9759d73a502405a7b84fc24831c7d2336548e6ffbde2fa30f1b0",
+          "bytes": 414310
+        },
+        "D1Bound5/SmallPairGraphWitnessData12.lean": {
+          "sha256": "b4c14668eb5200cf5e171249f2240243271c678dc26431089cd222d974641dc0",
+          "bytes": 234626
+        },
+        "D1Bound5/SmallPairGraphArithmetic12.lean": {
+          "sha256": "f63837b55c69bdb709897de72e83d4ac38d1ee00669f9ffa16acb6f62232a866",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure12.lean": {
+          "sha256": "e8f1d693fdaacbb0c46e1beb0ce02c647dcb701b59919e27d7072844f4613154",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData12.lean": {
+          "sha256": "bd6afbe553cd313d78609251dfc88067e56fc6845246a07a4ba7f76f2404ccb6",
+          "bytes": 571480
+        },
+        "D1Bound5/SmallPairGraphCachedData12.lean": {
+          "sha256": "ea373736b70d7566cd309ed3521d4891e00173ca0266a985e77216b1b8a98cf8",
+          "bytes": 157401
+        },
+        "D1Bound5/SmallPairGraphLeft12.lean": {
+          "sha256": "078045d1deb29bfc786438ee3236c16020f5c3dff000aba64dd523b8065faa46",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight12.lean": {
+          "sha256": "f38bc3017f76ae4f539a43d7a844074e817ae43ea47b6af6aba3e2e2e871cac8",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle12.lean": {
+          "sha256": "cfec093437aff5cb84e8562a0704be4d9366bfadbb1e6684d6e8f980a0eb2480",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData12.lean": {
+          "sha256": "ad2a46e887c9ca361cf657fa0b33affe672dc9b06ccc9064441889c5aee7fc9f",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        248,
+        248
+      ],
+      "full_unordered_pairs": 61256,
+      "signature_list_sha256": "a36d0d3aa06d8b76300fd87546ba2f39e7c0c8ba28001faaacd70171043eb857",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "79e3af546ae1acfcd3a42dd5ad122b6f7f84ac95405a8964c4bfd8be873296de",
+      "row": 13,
+      "tau": 0,
+      "nu": 2,
+      "original_source_sha256": "b8da7139f388bb5813cda686b26e902ec3b644a6abf8ed43a5033e1d2f64a295",
+      "vertices": 497,
+      "large_vertices": 496,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs13.lean": {
+          "sha256": "c5e162c4bc960250e92b15dd3d783468d049132d96b85979af9506d77a521f61",
+          "bytes": 558860
+        },
+        "D1Bound5/SmallPairGraphWitnessData13.lean": {
+          "sha256": "556060a6b394aa67f85deaa77b5ff08b8016b064b2322a52df284b5ef8ed4787",
+          "bytes": 298246
+        },
+        "D1Bound5/SmallPairGraphArithmetic13.lean": {
+          "sha256": "65049f6bec9c79d86936bd3deea19ec925d693c7048de9fb9e32c5bbcecaaa7e",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure13.lean": {
+          "sha256": "81e59ccaa6115a892462e75edc02ea7716dfe2ceae2a7cdb305c8fad43165cad",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData13.lean": {
+          "sha256": "ec91d54b7bc9501fa65175e8d3813a00d4d7de1c5208847229a7b8c4b1d2580e",
+          "bytes": 115667
+        },
+        "D1Bound5/SmallPairGraphLeft13.lean": {
+          "sha256": "74bd99b802f17bbd79a87190d18989961ec464625da5069fa24c2ff540e3e1c0",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight13.lean": {
+          "sha256": "cf8eddebb09e2aa78c0e90ea4397f723b2265c71fbd37ed5da9d6114ecde8a43",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle13.lean": {
+          "sha256": "a94c77e4f5fca8bb722d43eca570ad0c1343ee04c59e9404f60fd2336220d7df",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData13.lean": {
+          "sha256": "12a849f4683eb3969e097c63c91d9f00719653bc181140cfce7f1a09a576ea58",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        495,
+        496
+      ],
+      "full_unordered_pairs": 245025,
+      "signature_list_sha256": "163cf11e6e7d0a8b94bff435e2561bc2625bb3976bf005ec45b49276d403c12d",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "d3a46b1c002dfd096078b174fe5ad0788217010b132653e235fc613b39932e1e",
+      "row": 14,
+      "tau": 0,
+      "nu": 2,
+      "original_source_sha256": "c7af38e8f1c5dc06b979dacdab221b87df98eef26a28374c7bea8330876338f4",
+      "vertices": 993,
+      "large_vertices": 991,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs14.lean": {
+          "sha256": "913412abc11ab9aa604484441e17ee54b337c51b65dcdf65fc30132ae147e923",
+          "bytes": 1115969
+        },
+        "D1Bound5/SmallPairGraphWitnessData14.lean": {
+          "sha256": "5f707b93ecf4caf9d1004269a0377e2d4e2f24667ef309b6b021d8e82b62c337",
+          "bytes": 595469
+        },
+        "D1Bound5/SmallPairGraphArithmetic14.lean": {
+          "sha256": "ac7f4a5c9cf85b8d8231743af796775688a2c56128969c9064080f6e6520913a",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure14.lean": {
+          "sha256": "0c4ec0d7126460d7686772032027cc8cf7f321c06c69d2568e3223f51d7b491c",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData14.lean": {
+          "sha256": "b67edcf8a6a63733ae858dd2a263b8881a39af33c7ba23da05fc98eadfcc2676",
+          "bytes": 230888
+        },
+        "D1Bound5/SmallPairGraphLeft14.lean": {
+          "sha256": "5b161b35f8da34934042ae985be56e7075bb68460004443bf47bc9a94e6fa3bc",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight14.lean": {
+          "sha256": "623875cfb45a6ee350e64653ec274ab18b2df042a19fdeea6ceed2fc4c3bcf83",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle14.lean": {
+          "sha256": "453d2b2cd0fb7faea057516b88bf2972a2e16bc75265e59983a47c19975d1ee3",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData14.lean": {
+          "sha256": "36cdcb6cdbebf9dc6eb3b7d828844c4431a9ad4b90736131ed4737a305197074",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1063,
+      "dispositions": {
+        "positive_real": 1063,
+        "cheap_integer_guard": 2472
+      },
+      "color_counts": [
+        481,
+        480
+      ],
+      "full_unordered_pairs": 230400,
+      "signature_list_sha256": "06ea3669715083a67f13d53eb5c11d839505a777f3437515a39ed1bed8e33585",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "1d3d780e8b6ef171a266f1848b8d74fb8c1c6910ffa0b294c52658ad2205afeb",
+      "row": 15,
+      "tau": 0,
+      "nu": 2,
+      "original_source_sha256": "51addd17a498dc84e61114b6acb183d43148662b9474e502096728edc4c3616e",
+      "vertices": 963,
+      "large_vertices": 961,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs15.lean": {
+          "sha256": "5cbbeb5290906da99b793e377eadac74f874585dcfa4d7efe019dbb4b21155ec",
+          "bytes": 554881
+        },
+        "D1Bound5/SmallPairGraphWitnessData15.lean": {
+          "sha256": "76dd13e7e77d30009f6b06c86ded4e6dd3276d334d3a482091875ea73d674c72",
+          "bytes": 578000
+        },
+        "D1Bound5/SmallPairGraphArithmetic15.lean": {
+          "sha256": "27956ff83c44edcf021124046f7b22ee8393f7d95ac6d4f44c943afd05ced6a4",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure15.lean": {
+          "sha256": "4b551dcb88749243b4d31c60ada3f4aad593a4ee5d25c21a9793efbd119186e0",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData15.lean": {
+          "sha256": "143a5ba0433cf79c4cac92f1a8b9bcb082a08fcaaaf715beb8ba0a27315d39ba",
+          "bytes": 303233
+        },
+        "D1Bound5/SmallPairGraphCachedData15.lean": {
+          "sha256": "e328b193b901ba2f1dde6add252b72fd24c0a2d7ebae66376c9f4aa1de0b5ce4",
+          "bytes": 208931
+        },
+        "D1Bound5/SmallPairGraphLeft15.lean": {
+          "sha256": "f7b8af7b4551355c38b70d43f938f77c3995fd4119272b80f9492aa045afdd22",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight15.lean": {
+          "sha256": "4073428364db8d7284a352b003c9d6b752b582bc21a8568397261554b9d8ac08",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle15.lean": {
+          "sha256": "5c1d728cf1dada002c14da50e5a901e86928743158c2afc67dfa95772ba62177",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData15.lean": {
+          "sha256": "edc2cf4638e51368e950bb49c54ad8f0b0382315a88ee4c76f05e2f6335cb1d4",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "structural",
+      "linear_trace_checks": 552,
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "9757ca2207a128c8f120c09e866e006805383c555a12810d6d867a4407190168",
+      "row": 16,
+      "tau": 0,
+      "nu": 2,
+      "original_source_sha256": "2d0005677cfaa614bb36f1f919faaa42867521462ffd0063b2411dcc2f1a74d8",
+      "vertices": 553,
+      "large_vertices": 552,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs16.lean": {
+          "sha256": "2770d85b35b65de738d7d3961500f55cab1f2c8390d598b61e3a51703b564fb7",
+          "bytes": 318383
+        },
+        "D1Bound5/SmallPairGraphWitnessData16.lean": {
+          "sha256": "bbf875d01181051a1e0b39ead4ce1e3d8ff956cbc741f40913a42da43019ec7c",
+          "bytes": 331590
+        },
+        "D1Bound5/SmallPairGraphArithmetic16.lean": {
+          "sha256": "bd98f697bcf6d72c3084f4bb93b5d03975a38ffeff8bbcce40f798c8c7e817f6",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure16.lean": {
+          "sha256": "e51e8f3f7dbc61120f11289c75d41b1c8c3e288c304655a307682772ef02795a",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphTriangle16.lean": {
+          "sha256": "1a071f72136db2d9c9d20b8fdb7889fe95a14d4af51bdc59513e3ec8b737e5e9",
+          "bytes": 622
+        },
+        "D1Bound5/SmallPairGraphData16.lean": {
+          "sha256": "f917eca3387027f5175797c419c182404282f688596cf7dfb4c55672558f9751",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1398,
+      "dispositions": {
+        "positive_real": 1398,
+        "cheap_integer_guard": 1291
+      },
+      "color_counts": [
+        360,
+        358
+      ],
+      "full_unordered_pairs": 128523,
+      "signature_list_sha256": "705653de9f64da3f6374dda3b393c1de0c4792d27deb92ecc096291aec495383",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "5bac376a9ec4fc689017be9c2daeaf4086b032a7cc806f25518907e4d4ef38b8",
+      "row": 17,
+      "tau": 0,
+      "nu": 2,
+      "original_source_sha256": "9432b1725e0f7d4f276e6582767e4865769443c52f40bd53beeea84c63a545d0",
+      "vertices": 719,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs17.lean": {
+          "sha256": "14dcee288b5c5034537c21a54909e9c88c45bc02daa4f71ad12e914dcc78eac0",
+          "bytes": 413956
+        },
+        "D1Bound5/SmallPairGraphWitnessData17.lean": {
+          "sha256": "ee4cc0ada864f2edccd3bfbac4878785200bc89becb9c371b8452bd6c376071b",
+          "bytes": 431638
+        },
+        "D1Bound5/SmallPairGraphArithmetic17.lean": {
+          "sha256": "c5ad7a04be55cfcfdd22f3a74ab3f5e3ef667ed0f85cea269e060f25883ed011",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure17.lean": {
+          "sha256": "9f517bc78b093d8fe783fecc7f9cd2c6accaa6814ea09e9126c1b5e3be4ffe53",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData17.lean": {
+          "sha256": "974232e1728aaa7421b1eac6a2704c1d40228a92558153907cb489a2928d28f5",
+          "bytes": 389316
+        },
+        "D1Bound5/SmallPairGraphCachedData17.lean": {
+          "sha256": "095527ff7c29e67efb4341a75b16d9842db88bcc30713b734f838198a0a81357",
+          "bytes": 155735
+        },
+        "D1Bound5/SmallPairGraphLeft17.lean": {
+          "sha256": "b38d9879173f2c69fb4f5764a886441fd49155456373ccce3c7a6a451761b3f7",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight17.lean": {
+          "sha256": "90e11a5d02cd9b8b1b5b1f0652dd401caf83066abbfff7a7035d41c20374200c",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle17.lean": {
+          "sha256": "b080b4e1053b7fbc1698456342f3af969fef504ab3db071aa13a5a31b0394938",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData17.lean": {
+          "sha256": "f778cd9f578f8d61f3b0073f3fb833753b7c2869941bfc8401a6bb806ae2ca72",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        262,
+        262
+      ],
+      "full_unordered_pairs": 68382,
+      "signature_list_sha256": "266437e9dda5048d48ff5cbdf6c1fcd8a65b6217da338aed17ba2109fd3f2c42",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "e489ff8abf0f16583c3f6b5f5f92e06fd9bd7825ebb72c46be7daeb13ce559dd",
+      "row": 18,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "0bc9dcc82edacb475c3597d6f0a8649492e584887e7c9875527b88e1bf22572f",
+      "vertices": 525,
+      "large_vertices": 524,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs18.lean": {
+          "sha256": "4e0725200849e7f0c12ef94e263f2be18996f451cd593d925ec9f29bb2a716a0",
+          "bytes": 590580
+        },
+        "D1Bound5/SmallPairGraphWitnessData18.lean": {
+          "sha256": "1e4150b9590e501b712561d8dd52f7fc7ac226e8120fa232fe7904b8afaea1fd",
+          "bytes": 315431
+        },
+        "D1Bound5/SmallPairGraphArithmetic18.lean": {
+          "sha256": "3d589e3aa318c05e5333e2c45ed6b6cb1c3736cdc9eef27e311f608a7ce46881",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure18.lean": {
+          "sha256": "c3754b82b865e39e2355e8ca10bb7ba465f2279245ad2127a256bbedaa75a42e",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData18.lean": {
+          "sha256": "b5e2d23f4cea3e5176a3d4541c5276d3bc1587b670a6ef0ccade3c40ca3b4193",
+          "bytes": 122329
+        },
+        "D1Bound5/SmallPairGraphLeft18.lean": {
+          "sha256": "2d00abe9b6304970ddfb8d1685dea083baa384314fc6c3fc0490b089cf59ef7b",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight18.lean": {
+          "sha256": "aadf511b137012e2692ac1c041f86a800df48d6423b66ed112a532a7b1f8ce5f",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle18.lean": {
+          "sha256": "7140ff6a4568429ede50d8c0eb9232c3db818f16f17b13fa0821dcb3bf1bb581",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData18.lean": {
+          "sha256": "aff729333a9970d9f0bc4183ef1983b93dab7af2874ec8177adfca29b55a32b4",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        446,
+        446
+      ],
+      "full_unordered_pairs": 198470,
+      "signature_list_sha256": "35b09b5fcdddaf87a5e541bb76e2654e2a0b07b38be7849dec8c608cdd7f61cd",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "1261cbfe784350c70e5461e5554d288fd91528435ad9d5939576742184ee06ac",
+      "row": 19,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "f587ec0db1caf9e5fb1e71af7e925448825e7bc51f300c4d35619dea9f3d1f68",
+      "vertices": 893,
+      "large_vertices": 892,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs19.lean": {
+          "sha256": "30ad07567881482cb51433ba7277178b8be9aa68fbd82129d3335a0c8d9aba0b",
+          "bytes": 1004176
+        },
+        "D1Bound5/SmallPairGraphWitnessData19.lean": {
+          "sha256": "2c37b4db8f89be1239a4dabba14fe7db5fc9f5e13e4196ae0c763b0fec2bfa53",
+          "bytes": 536460
+        },
+        "D1Bound5/SmallPairGraphArithmetic19.lean": {
+          "sha256": "3b56e51ec5eabd27d405632f3d20cd07766a573c3ca28f4252e17239730adc09",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure19.lean": {
+          "sha256": "e5b0bf45400988f9c250f623ec112983121ba94c383ef4ec020b920911e33d1d",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData19.lean": {
+          "sha256": "38ceb7e2d6801ea7315d8cfc9642815fa83ad89d36ca96153216a6af2fd60ba3",
+          "bytes": 207413
+        },
+        "D1Bound5/SmallPairGraphLeft19.lean": {
+          "sha256": "43ea0efd92bdabd780f11dcfc7e4d6884c5169aac4039c3fcc85e443ef380966",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight19.lean": {
+          "sha256": "4654bf80417e427a7c076e74867120a6187dfc9eba563e766f13de44ee28690d",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle19.lean": {
+          "sha256": "49771b068c8b71fe0111f6320f6f90a412b46c0057020758089fb667863651bf",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData19.lean": {
+          "sha256": "769e94b38acd53f76a9a7e4680ad729b0157cb868c4e66fd9e6748124ca933e2",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        223,
+        223
+      ],
+      "full_unordered_pairs": 49506,
+      "signature_list_sha256": "5e3a13199538cc148d411288b59e8ed6f51f0c81c9d257fadbb56b5ce1bc55e8",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "a96cd6eb394ec5ae3706304ad9c2dacbd836d64842c63a2182b286f74eff4589",
+      "row": 20,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "f451b2e7e89872aef1d354fcfe560496cc070a3fde0257fec72524fbbae78cb5",
+      "vertices": 447,
+      "large_vertices": 446,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs20.lean": {
+          "sha256": "bc9ab6842f90c07abbe4d0b2e4e275015a536372ae9d8e3b88ffc4202e0d5aed",
+          "bytes": 502785
+        },
+        "D1Bound5/SmallPairGraphWitnessData20.lean": {
+          "sha256": "bf4a3f7c5bd1636f4f0ad83205e7f4af58a1a3d122aee19363f51b529f2e6e1c",
+          "bytes": 268653
+        },
+        "D1Bound5/SmallPairGraphArithmetic20.lean": {
+          "sha256": "0b6a860926a534df996ddb1796bb9beb2a5c1af462303e1cd6f0bef39ef96aab",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure20.lean": {
+          "sha256": "c15afd21ec15dc8ae435b2b616701248219316938385cffce13b511f22894b58",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData20.lean": {
+          "sha256": "3831b7fed2a83d5c5552389a70d7f961b65db95fac30549153286e5df59367b4",
+          "bytes": 104066
+        },
+        "D1Bound5/SmallPairGraphLeft20.lean": {
+          "sha256": "03b42bd25a709de1d32792d03f1275f2d840d1909424af9e22da2d88f45f303b",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight20.lean": {
+          "sha256": "dacfd1ac8ada5680e67c1206539634ac5ffcefe052a0e28bca0a3b2e6b6edc6c",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle20.lean": {
+          "sha256": "e138c921162360f48a1b6bed0edfc22004bc41c36e33aae08ba138f3b1a866de",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData20.lean": {
+          "sha256": "1119064079b00d9ec80f1ebe6b141ad835f0a002382948c7b7b9b623a9e424ce",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        524,
+        524
+      ],
+      "full_unordered_pairs": 274052,
+      "signature_list_sha256": "277eba8f8eae8fb36f5905f7a05fb2a6ec28b0c67ae5a11896ddfa28a3f94ea3",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "3996ad4f129804446469557cdcce25bae86ba3804ca2b396de44c772e60ab422",
+      "row": 21,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "d5d8cf9898b3b130c2752a067522b8bab6d7355633bc8497ae304b74edffc314",
+      "vertices": 1049,
+      "large_vertices": 1048,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs21.lean": {
+          "sha256": "a825d89608291e2e65b4c0e868604e01c90aeb48a977268554f932e7828d58e3",
+          "bytes": 1179643
+        },
+        "D1Bound5/SmallPairGraphWitnessData21.lean": {
+          "sha256": "317ac632ba025d0cd61ee17307def483c61334a630152ead2b96dd47e2bb1825",
+          "bytes": 630041
+        },
+        "D1Bound5/SmallPairGraphArithmetic21.lean": {
+          "sha256": "2db90986313aafa2d2fe451b16e733098b98d29f7a244880798e89af73c06b33",
+          "bytes": 568
+        },
+        "D1Bound5/SmallPairGraphClosure21.lean": {
+          "sha256": "4d787529e142fada2e1909eccf496e797395be0ea75629c16aee888c1afeb197",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData21.lean": {
+          "sha256": "9a5dac1f7fc7926bdc3e0507e27465ee0a16b421d761620c87b42d8377422c09",
+          "bytes": 244130
+        },
+        "D1Bound5/SmallPairGraphLeft21.lean": {
+          "sha256": "38bec4350c1f72834dd0bc328d9a2ef6c92a7d871cfd549884a96e53385fa6a1",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight21.lean": {
+          "sha256": "81bd68bfc5339ca75ed94d71df04e7ae794cd0e9e03c196253d394221f16f617",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle21.lean": {
+          "sha256": "be0a205fa570c908853ca57a816c11aea86f774ac256aec4d6480acd8cc47d72",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData21.lean": {
+          "sha256": "2fa84a9efa220a47c25a2b63629636c9f43e6c9045e05fe40f0c24456da79836",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "structural",
+      "linear_trace_checks": 962,
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "74f5640152a6848cd8127061f3ad673b4348d3abe80756916748cbf5d4d48900",
+      "row": 22,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "5b9f20f2ac5d845ab7311927c945be3b0d8c46e6962bdcc3c587eceb67f92842",
+      "vertices": 963,
+      "large_vertices": 962,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs22.lean": {
+          "sha256": "6b07e07cf99d284e2effcdbc1c7a0f300a5fae0095f50fb17e318a10c71131f8",
+          "bytes": 1083864
+        },
+        "D1Bound5/SmallPairGraphWitnessData22.lean": {
+          "sha256": "88d86ba1365cc03da254499906a5a491aea78f2aa8e3442586fe18d71098ef11",
+          "bytes": 578577
+        },
+        "D1Bound5/SmallPairGraphArithmetic22.lean": {
+          "sha256": "afc360cdf4b13742948372045698d43fe9716e98df5ce8668e52c4ac4ee37ba3",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure22.lean": {
+          "sha256": "b9f89fd466791aed87b64c4ef892c16d72f86ee34e55c0e951a4608666c7e843",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphTriangle22.lean": {
+          "sha256": "58638067b16baf712fde2bbf74290c3f56092c20baf1439abf609ad558706acb",
+          "bytes": 621
+        },
+        "D1Bound5/SmallPairGraphData22.lean": {
+          "sha256": "085148f916e446e95200d487e090360797aaf1d8f56630fbf9d319a73ca53c8b",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 2086,
+      "dispositions": {
+        "cheap_integer_guard": 2674,
+        "negative_scaled": 1314,
+        "positive_real": 772
+      },
+      "color_counts": [
+        482,
+        480
+      ],
+      "full_unordered_pairs": 230881,
+      "signature_list_sha256": "83ac4ed6a3b83d26b19391d32ab8a846f9c3b2875a7cffdaddcabbd6eeb8b5b2",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "958af97b30df72b411d02e2f189ce6358e40ec90b6e203917b8cb23deaa30573",
+      "row": 23,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "631432d8bb149aaa42dc892c432da618fb1e844a801f75eb6f9706dae3f31f55",
+      "vertices": 964,
+      "large_vertices": 962,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs23.lean": {
+          "sha256": "37be4e50a7c309ed7169f219df043f40ae6d1cbc0256f256dfc9395232b14d8c",
+          "bytes": 555609
+        },
+        "D1Bound5/SmallPairGraphWitnessData23.lean": {
+          "sha256": "ccdfb8a683265bbcd009b4f51bc00ac35ddbe0102b180fd0067b03386959735b",
+          "bytes": 579489
+        },
+        "D1Bound5/SmallPairGraphArithmetic23.lean": {
+          "sha256": "d47f8b0d8d49e0e0787d22d1aed13b248a747a1f313b9f5d1702b98a913fd3fb",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure23.lean": {
+          "sha256": "4822a0a2b7f5d09e2a8e72c3c6e2dcbd8565cf676895153dfdf72d6d89bb857b",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData23.lean": {
+          "sha256": "5e61ca1608c29ab9a100eac891958acf954fb36c508664b0b254bcbe521000d9",
+          "bytes": 593719
+        },
+        "D1Bound5/SmallPairGraphCachedData23.lean": {
+          "sha256": "53579ee9b607d81f794fb4e8ceb05011ef82c00d1e49642b81b9b26a1a2decac",
+          "bytes": 207938
+        },
+        "D1Bound5/SmallPairGraphLeft23.lean": {
+          "sha256": "607228df08a7b56fa3d9a6604259bcab4e3a8e3c1ee818fc93704ee4d9c02dac",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight23.lean": {
+          "sha256": "9123c717322bb299e3f6349da77b60f90cff7e2607c196990bb8e984cab7b02b",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle23.lean": {
+          "sha256": "9ed6e46575bb736d51366ee58f68dc649bd2acb03f203a1e4e6d3e3b515a7146",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData23.lean": {
+          "sha256": "0c9a3da0fc1a515212ed8f4a80217fe1d369fa55aaafd0debb8a2d4fd6719373",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1,
+      "dispositions": {
+        "norm": 1
+      },
+      "color_counts": [
+        446,
+        446
+      ],
+      "full_unordered_pairs": 198470,
+      "signature_list_sha256": "0c737964d290c4ec9d3709c993f26fe2db086fdd514178affda2c1005cf9cbd2",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "363567ca8330a3945855a4cf62f994fd73c72b05e38f6de6105ce6507b763c0e",
+      "row": 24,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "7efc44f4b04a75614412ef3f294a71e4582ac5eb0f5377db8a0d908169c85bea",
+      "vertices": 894,
+      "large_vertices": 892,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs24.lean": {
+          "sha256": "0c23919a4646059158c9a8cacfaafd3c1a79a639601d57f38c3cac30e782c7c9",
+          "bytes": 1005612
+        },
+        "D1Bound5/SmallPairGraphWitnessData24.lean": {
+          "sha256": "fd8fbf65587bce4f5b90f8b2d8d410ac6a68e67ceb761f14efc9d24fe5805453",
+          "bytes": 537193
+        },
+        "D1Bound5/SmallPairGraphArithmetic24.lean": {
+          "sha256": "7455bd6044ae044909b79f11651e5bc1422eca78a814090097ef6fa1c60abaf0",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure24.lean": {
+          "sha256": "0c6805a96c8b599fda9d60ba0db4d3f2f4998ed6491b53c04ee55fb00fab7505",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData24.lean": {
+          "sha256": "395aae63f7b14855cda512e32c58ae459946b8a6641ef1e3638d744ac909438f",
+          "bytes": 6058
+        },
+        "D1Bound5/SmallPairGraphCachedData24.lean": {
+          "sha256": "0c95f6eefd588f0c163f19aacd24dee73e41f51a5a1d2f92875cee273ddaad49",
+          "bytes": 207587
+        },
+        "D1Bound5/SmallPairGraphLeft24.lean": {
+          "sha256": "4769af7b9524a17c67de1223f3710da0d38e7c111c2aaaab4387d3cab1644a08",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight24.lean": {
+          "sha256": "d60d14bf2e75763d57893789bda2ac926111e926ff7a0a28d33bf7f44c962fb4",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle24.lean": {
+          "sha256": "f025743ead22aeb86aced2c81a0e09c3927f15eccc7e054f4057d6e360c7baa7",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData24.lean": {
+          "sha256": "a54f7aafedbf536aa1d98306a92d2d674fc2f308d2158e8c49bcafb18886062e",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        380,
+        381
+      ],
+      "full_unordered_pairs": 144400,
+      "signature_list_sha256": "422eecd8414b8499bd05fdb450ab173a4a9653f9f8ae784d29aac4a4f11f0a96",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "0c55b8de372d945398a76102016743b6f301d833a1bb2596c854f57b6e0cd606",
+      "row": 25,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "d828c182c10e01ac6cfa5a03280e6dbd318ec8cd2f755bd2ece714399617d7b9",
+      "vertices": 762,
+      "large_vertices": 761,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs25.lean": {
+          "sha256": "e21e9c8c3f0ad8438726b3bcb26af38e89411d1090e9304422abee471ce9c18b",
+          "bytes": 856689
+        },
+        "D1Bound5/SmallPairGraphWitnessData25.lean": {
+          "sha256": "aad5db997a1a656ffe11b6d5627d083e2addabe315319a0bfb8ab88b70e20b6a",
+          "bytes": 457369
+        },
+        "D1Bound5/SmallPairGraphArithmetic25.lean": {
+          "sha256": "adbd31c0b9ce182d87399cdbbe96f473c24aa8d054625ec7524511b6667c572d",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure25.lean": {
+          "sha256": "fee51bd2f50af70f54d081386630bc3e88b5b14b2a68c149f1591d3c0cbabff4",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData25.lean": {
+          "sha256": "931daaf8cf9460fc9169ac1478c8d952c7627a1ca9c1f0e0282f03ab30554d65",
+          "bytes": 177283
+        },
+        "D1Bound5/SmallPairGraphLeft25.lean": {
+          "sha256": "7c30a36984a5760ae02e7e0fccb47c30145504e6da4e98b3946933565c9b5d85",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight25.lean": {
+          "sha256": "98e5db3817128272d482a94ed1dab84f89f4efdc4e055f0d61775550c09f3fb6",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle25.lean": {
+          "sha256": "cc2e36ac83c792f80c8c0490de03bbfb069c5590bb337697b01918c72cee37e6",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData25.lean": {
+          "sha256": "cef7208eaaee99bc29dba01a22e8d816599dd69af1f34088426e5cafe74a600a",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        761,
+        761
+      ],
+      "full_unordered_pairs": 578360,
+      "signature_list_sha256": "9c4d5148e924e0044d45b51960c74e506f8575418f2b6c3e91266cda17685e86",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "af9f0e25fc9ea3d447dbcb64719f4159c4e8669c66fdd8ba98014887d6868206",
+      "row": 26,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "34e028cd5de1b66b01f76d3bea5429620a3e56f8711759ee02af9b984cddf4f6",
+      "vertices": 1525,
+      "large_vertices": 1522,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs26.lean": {
+          "sha256": "314e3072379dca08674097b8ea348d25440eeb4a8fd7c468d8e114f35eafb3dd",
+          "bytes": 1715964
+        },
+        "D1Bound5/SmallPairGraphWitnessData26.lean": {
+          "sha256": "5844c4e0cb92be80ad9e7f7b3d7e64783f7f45bc242de6ab048c95a607ea626a",
+          "bytes": 917031
+        },
+        "D1Bound5/SmallPairGraphArithmetic26.lean": {
+          "sha256": "6e194674717bc8a1a8b2e7ee27e51a0129fc945ab9f9e2a5b88006f33fc4f379",
+          "bytes": 568
+        },
+        "D1Bound5/SmallPairGraphClosure26.lean": {
+          "sha256": "05d691c4b2101485f92381446668d8dbcdcf2528aa4638fbdd4b738d775d6ce6",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData26.lean": {
+          "sha256": "8cf28a0ed4003272ec33ebc164b9cd7027054b67117743fb39a69a6591fb2879",
+          "bytes": 355039
+        },
+        "D1Bound5/SmallPairGraphLeft26.lean": {
+          "sha256": "a77d8a7952319d42f069f7a8732d2b79bacceb7c73fbc32152e9641f4ce8352d",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight26.lean": {
+          "sha256": "1dfad315665570f0935f3e991fb5252d206188b1ee6feee80f3246a56744cdf5",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle26.lean": {
+          "sha256": "292f8d7b7f9318b21187a61ca86c1c5920bf5a2237d3d13896c5f8eb0df45c64",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData26.lean": {
+          "sha256": "06ec7af8358e19c9f40ae7e8480b243f9b8b4df56107af11e4348cd75ec12eaf",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "structural",
+      "linear_trace_checks": 481,
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "e5c678f5f9ecb59b03e71e05639941d03432ad11cdf7a67133c2f035ab62c694",
+      "row": 27,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "3946cf515b61bb71d8c89d115f92062a1e8b3b9f80d820648dc72afeac1684ab",
+      "vertices": 482,
+      "large_vertices": 481,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs27.lean": {
+          "sha256": "e423760dfa0bc604d82c0406325e93741498c57bfb5796cb0180b75a5aef4190",
+          "bytes": 542658
+        },
+        "D1Bound5/SmallPairGraphWitnessData27.lean": {
+          "sha256": "951a4ff4c96513cb392f890eb92871ae70a8c57647d5499702a5ebeac74cf4cf",
+          "bytes": 289891
+        },
+        "D1Bound5/SmallPairGraphArithmetic27.lean": {
+          "sha256": "4a9cc9a30701bc3b0fbeadf93340df9e051abb80b4f6811cdcd7eaccb0234130",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure27.lean": {
+          "sha256": "d077587b50fdf4bae44e9ac3733a891d809f3bd20c8ce63e05c8cfa6313203f6",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphTriangle27.lean": {
+          "sha256": "73d4d2e2c7548eb456d501f4040726a2687fee6081981c1fac51f5f0887881f0",
+          "bytes": 621
+        },
+        "D1Bound5/SmallPairGraphData27.lean": {
+          "sha256": "3b213946cf5a3e07877df13b5d15c23c00bb47f8be8da18dab5e16a9e5b1053b",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        524,
+        524
+      ],
+      "full_unordered_pairs": 274052,
+      "signature_list_sha256": "25a7557a97a40534796ccff1da08d41ca4b88306ffa6912c685f6a480c321284",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "43666a8e6d6143d31d7ab3b3394fa6c9fe599b2a42f22f8e46b602c25e6fd009",
+      "row": 28,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "1c0fdf3f577fc99799ada0a5e9c1e4352da150b17991c3cafe2264b56e64e3ff",
+      "vertices": 1050,
+      "large_vertices": 1048,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs28.lean": {
+          "sha256": "2d1f54020040b796f5fa2ce20b0cb5d6e80fdf5c0f3e2eab321bf1c320dd92e1",
+          "bytes": 1181299
+        },
+        "D1Bound5/SmallPairGraphWitnessData28.lean": {
+          "sha256": "481dd588d6f25d8c2284386d98be8da3a3df6b6c229db4a047c0885da0ecc958",
+          "bytes": 630896
+        },
+        "D1Bound5/SmallPairGraphArithmetic28.lean": {
+          "sha256": "01c87e82f43168e122fa7736010207f38a9e04cf7e363c3e4ce8447471fdd890",
+          "bytes": 568
+        },
+        "D1Bound5/SmallPairGraphClosure28.lean": {
+          "sha256": "41b402a7bf8056004adf50f6ac7b37ac83152fb03c45058c5934951b7b973e02",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData28.lean": {
+          "sha256": "0052286a9d10e812902e0124eee094c7fade6f2d95bf89e95834fce702e1fe5e",
+          "bytes": 243978
+        },
+        "D1Bound5/SmallPairGraphLeft28.lean": {
+          "sha256": "d964bc2eb0f98a3e67f0b5183a90a9cc541562559c724a7907a5af918a641d97",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight28.lean": {
+          "sha256": "a4db5b8eb54669f605a3f7c73ff185f19d3025eb4c71edf1014e3c1f5e0d09c5",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle28.lean": {
+          "sha256": "56889ec419427c98e10870e0430c1533fe94364c72d38b4d21e7ef9801b27856",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData28.lean": {
+          "sha256": "a0859680d7b92a8328eadbcfda9cbff5cb7dc35f95689be6a6713568693f0a00",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        380,
+        381
+      ],
+      "full_unordered_pairs": 144400,
+      "signature_list_sha256": "965e3e7ade609dc94277071f8f8864e8f7056ae1e29f73019efba944a376a78f",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "8a5806b8284311fe160e474cb941085ebc1b65d293acd93c0b472151aa3fa2a1",
+      "row": 29,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "453b8f1901a4cc30b944353f73291ac8e49ed54fbf2ea2e0a09efb1ec3de5f78",
+      "vertices": 763,
+      "large_vertices": 761,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs29.lean": {
+          "sha256": "83d8096af5153ef2a46dfecec9766ab37b4c65476c37fc8afb2c5a9bc632bc81",
+          "bytes": 856912
+        },
+        "D1Bound5/SmallPairGraphWitnessData29.lean": {
+          "sha256": "09e65a4c0cc21540226b59bcb924f1bdc8846677018cda9946e19f8ca53fb6e0",
+          "bytes": 457521
+        },
+        "D1Bound5/SmallPairGraphArithmetic29.lean": {
+          "sha256": "9c03dd78331bb1db2c0289b5b4d68f04d20fe5e7fa15fee676c238927f047874",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure29.lean": {
+          "sha256": "bde6faeb3ac993bfddf58720d5745d4ef12e97c385dbbc3ced34c2024e021847",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData29.lean": {
+          "sha256": "9327cfd960cfc4fbd1a0a44a08d0dae0ca00f93cc06f8400b533894b5bbd324f",
+          "bytes": 176927
+        },
+        "D1Bound5/SmallPairGraphLeft29.lean": {
+          "sha256": "0cd625f314b5b28cf4c5ea227d2de6355d9c77eadd62d2cb5c4869e04bbde6aa",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight29.lean": {
+          "sha256": "5e1aeafb6ffb4a6eb6f22fd85de315896ab53d5b509a725cb6f735eb348290ce",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle29.lean": {
+          "sha256": "7952051a9b0fcc4c92f027a6ff48c014200502b24aaeee9393c50be60b23c6de",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData29.lean": {
+          "sha256": "11e0bb29f08bcff1b688adaf7f926c92c8163bd1f3915d0cf4ca37830f29dab5",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1518,
+      "dispositions": {
+        "positive_real": 1518,
+        "cheap_integer_guard": 1542
+      },
+      "color_counts": [
+        482,
+        480
+      ],
+      "full_unordered_pairs": 230881,
+      "signature_list_sha256": "e82c6b8fc5f90653ba9751ae09f4696483056e3f3787e313a0930f101f888e13",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "d009409f902ff2602ad89c87bdac1b4cd8661af46a8fbda5fd1a619f6fea2366",
+      "row": 30,
+      "tau": 1,
+      "nu": 1,
+      "original_source_sha256": "51a879bbdca184216608ac92c799bd335fc87807ba6226126c4be4a24b50ec94",
+      "vertices": 963,
+      "large_vertices": 962,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs30.lean": {
+          "sha256": "2596ea6721a775627e48823bf016d57c8d6352503a30474af080bc62df058875",
+          "bytes": 555071
+        },
+        "D1Bound5/SmallPairGraphWitnessData30.lean": {
+          "sha256": "ca3cfbe701d26ef00391d962c4300553f534ec381a5ff52604cc2c713e54520a",
+          "bytes": 578576
+        },
+        "D1Bound5/SmallPairGraphArithmetic30.lean": {
+          "sha256": "2fd138ebe6b70d105e7a5c6395352b6efb6556641c47c26fd5fbea02b0f5d469",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure30.lean": {
+          "sha256": "156aed3b754e691fa57d7595fd4cdad56b986c436c23349367c425f8f7919545",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData30.lean": {
+          "sha256": "2599fea4823ad244d2f41a50630b11ed123f474a15d805e03ceece63cb46677f",
+          "bytes": 440182
+        },
+        "D1Bound5/SmallPairGraphCachedData30.lean": {
+          "sha256": "c9755e96d4ccf25cce6199e133c26d0eced5ec080bb33afa2b41fa07721b2242",
+          "bytes": 208791
+        },
+        "D1Bound5/SmallPairGraphLeft30.lean": {
+          "sha256": "935695ced3599b4cb6010b85ba94ac459915710c9b6f5101d492782df5c9833c",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight30.lean": {
+          "sha256": "b4c7b8b856f76625ff83deceda9abcdc63ad204d9d65450baa1a910d3a531b15",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle30.lean": {
+          "sha256": "5cb87132301ed4d4f7de48042f49d97b5b03c6c0ff3ae475e4e3d00f3de2e864",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData30.lean": {
+          "sha256": "a5a459c95ca3f62d4e435616c9e40bc6c81baecd0e404a4cdb08607a15bbb916",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "structural",
+      "linear_trace_checks": 410,
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "8cba148f4bda6d96de3b1350c9626b92ec3ba30ffb170b31646606ddc46ebb76",
+      "row": 31,
+      "tau": 0,
+      "nu": 5,
+      "original_source_sha256": "e86ee47918e95b1cb1f035a5c37c3792ac40a7277b834db4471defa10969a0b4",
+      "vertices": 411,
+      "large_vertices": 410,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs31.lean": {
+          "sha256": "bdf94e947064b0ec6b185cd2e65d81dc106dad6b6eee32b6a69c654ce0fdc0ed",
+          "bytes": 236622
+        },
+        "D1Bound5/SmallPairGraphWitnessData31.lean": {
+          "sha256": "b8f7c7e6747eda660d4e5f46d9bec2d34e67f610bc6766f194a20f6534f42be2",
+          "bytes": 246444
+        },
+        "D1Bound5/SmallPairGraphArithmetic31.lean": {
+          "sha256": "15924635c312823fb97cb13ccdc4f8722fcba9c164be51198e0dedddd3c6a3b2",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure31.lean": {
+          "sha256": "158ad2bc2984a2c5ba3dac1285f2ee71d25d8138367e6f04ba67264e3cc71dca",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphTriangle31.lean": {
+          "sha256": "a206463f9ff12debd40c88e6a83a850e9f3b508578f175b748ce63c018e9df0d",
+          "bytes": 622
+        },
+        "D1Bound5/SmallPairGraphData31.lean": {
+          "sha256": "c5419f200698e376a6675d4b56c4f469c766a1ea7cb057a08e1ac8575c057e2f",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "structural",
+      "linear_trace_checks": 389,
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "79cc126c3190a288514514e3574511452fa958bc6d8f525603b6f2a2767862d4",
+      "row": 32,
+      "tau": 0,
+      "nu": 6,
+      "original_source_sha256": "fe9b3a0580925202447717acbef7068474e9690a20314a4f4d7d831384fd495f",
+      "vertices": 390,
+      "large_vertices": 389,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs32.lean": {
+          "sha256": "cedbe1d1273c40b32af03ceb1f1f800a077db1e5dcbb06d1d7f3f0057d2120d8",
+          "bytes": 224558
+        },
+        "D1Bound5/SmallPairGraphWitnessData32.lean": {
+          "sha256": "d940794bf3f594e5b5e02f9ea6a41a85ab8957604250463b46beab15a5eac31a",
+          "bytes": 233877
+        },
+        "D1Bound5/SmallPairGraphArithmetic32.lean": {
+          "sha256": "678962f82129bc8dc08165dd09c85521b5d2e80ddf2467b7a07069e34929db6f",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure32.lean": {
+          "sha256": "d81733301ce0970cad0d6399ce480fe28c4050506f7914c71497601099e30860",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphTriangle32.lean": {
+          "sha256": "690f85bc066eb0817f5e7eac1fdc67eaa4dffaac85c1fea15bfddc8b4808010a",
+          "bytes": 622
+        },
+        "D1Bound5/SmallPairGraphData32.lean": {
+          "sha256": "6452ff239841152c50bee3a164833ba432399f9e91029511ad6075cbce916d33",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1135,
+      "dispositions": {
+        "positive_real": 1135,
+        "cheap_integer_guard": 1830
+      },
+      "color_counts": [
+        360,
+        358
+      ],
+      "full_unordered_pairs": 128523,
+      "signature_list_sha256": "64bb308bbcea0bc29d8454f768b421855c4174e560be56b54fea55cd7f80d5c1",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "d49ca8feaefd044a930f8b89eb6b6413adaf0013256aa38e01261aee66b1f89d",
+      "row": 33,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "6fd52f13eb86b5b81cd301d0fd336e7940b05d2b9c45d8ba7e3cd3760f1019b2",
+      "vertices": 720,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs33.lean": {
+          "sha256": "3776cabb674fedd9bb5a072cc3da97bb5a0de65c6f514d766493a8c11f8654ba",
+          "bytes": 414603
+        },
+        "D1Bound5/SmallPairGraphWitnessData33.lean": {
+          "sha256": "ece8adffba8708800f01d8ccb71d0547c0effd33e633e426324b4ee33d803993",
+          "bytes": 432284
+        },
+        "D1Bound5/SmallPairGraphArithmetic33.lean": {
+          "sha256": "1f432efb2f5cc7658a0f57027b5e82dd3b460a6557e5bfdfdd29431539469159",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure33.lean": {
+          "sha256": "927cecd328c2c5cca32b2fbeeeb71349d1394f980cbbd8d3b76d9ec3c871ef68",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData33.lean": {
+          "sha256": "f713d11a6362c721e2d3beb1c08888b7581d8fe77cc10b4ef23993896c702e04",
+          "bytes": 312700
+        },
+        "D1Bound5/SmallPairGraphCachedData33.lean": {
+          "sha256": "4f86ac1b115956b518e1bf18ac57e50c5665a226a183d89e34bec424980a6ec9",
+          "bytes": 156038
+        },
+        "D1Bound5/SmallPairGraphLeft33.lean": {
+          "sha256": "b6566b0b1bf50b9fc0f673fd5cb5c37065f95867164be75581534f6b5a5417d9",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight33.lean": {
+          "sha256": "2002e3a11b91af72643e89db64aa446f19b06fb6a5f75f98c1f22c7c5e689681",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle33.lean": {
+          "sha256": "bdec76111c335ea5bcf05450988595fa08d9c46f5577f8367e3026695c497781",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData33.lean": {
+          "sha256": "9081d80bfaa58bdcfd65e67ea5836207d44886e1482948d930ae63bc677adec5",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 3,
+      "dispositions": {
+        "norm": 3
+      },
+      "color_counts": [
+        229,
+        228
+      ],
+      "full_unordered_pairs": 51984,
+      "signature_list_sha256": "9aebdfb2ad64553d1451abe8bfc4b9f591878ef41e5fa4c34d4f53f04d183032",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "e2173d3d9de9c11920d03a935f0de58dd367d8d86640a2e5f6c059ffb29dcfe7",
+      "row": 34,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "1e469696e498732377849734e4c3d693c95bc813fde9070fa40208039cb2b565",
+      "vertices": 458,
+      "large_vertices": 457,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs34.lean": {
+          "sha256": "80081fbe80d8267dc85a4c97cf17a7c063a9e61364395f31e58acc93a3d048b9",
+          "bytes": 514824
+        },
+        "D1Bound5/SmallPairGraphWitnessData34.lean": {
+          "sha256": "e58cfc96ec234e5aa25d5402fe923f04ce6d44e4516f93b51289899b0f68b714",
+          "bytes": 274867
+        },
+        "D1Bound5/SmallPairGraphArithmetic34.lean": {
+          "sha256": "4fd515feae97b8be9538890f102e6379da84a749b5ea6b0ffea89e5e7e28cbc9",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure34.lean": {
+          "sha256": "a5f83b9e9c8233fc7e1eafda5a5ecb640388506da389699f4913e630e946b9f2",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData34.lean": {
+          "sha256": "4228760f9ba2009598b01b33ce40c9dcabd2bacaeb3f1cd9c95e2ba31163b073",
+          "bytes": 5597
+        },
+        "D1Bound5/SmallPairGraphCachedData34.lean": {
+          "sha256": "75ece134d8fff706db6a7afacf437fe93d2227ee0cb5e26fb0ae0d10478de03d",
+          "bytes": 106912
+        },
+        "D1Bound5/SmallPairGraphLeft34.lean": {
+          "sha256": "b953a310ff03b546e7ff5b14f2c32e293c87bbdf2dd1eff2c3b5e5aaf661749d",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight34.lean": {
+          "sha256": "3df4eee7aa2909ca9bbbc9abec2f71d5efb505b256cefadeb923fbf204213025",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle34.lean": {
+          "sha256": "ee1d0b12d916ba222e08b4b498244c450e380b6bcb43def23bf02d7d728c5a22",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData34.lean": {
+          "sha256": "d8ad1aa220dcaed2a832293313c73ab7450749353b1a506e9fa01fa978593a38",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        369,
+        368
+      ],
+      "full_unordered_pairs": 135424,
+      "signature_list_sha256": "de3a2cef5c8700f57f3bb6996d379e365324240d7f080e2743da3041af489179",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "c3eb88caba9da0756fdf2ecc2164750e0262a7a67b94f5a760654a1759dd7058",
+      "row": 35,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "b4021d1c6d4daa8aafe0d4359accda5aeacf8a69516e82007e6ad5d9f043a04a",
+      "vertices": 739,
+      "large_vertices": 737,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs35.lean": {
+          "sha256": "b99f4ed9ec14e1019988b04b79e862d326e9d95a222ed037df10eaca78e09176",
+          "bytes": 830314
+        },
+        "D1Bound5/SmallPairGraphWitnessData35.lean": {
+          "sha256": "6ffac9ea77b5fad20f536fa8dc567edef84cb9d99198d9d7c5f570dd47538fb6",
+          "bytes": 443551
+        },
+        "D1Bound5/SmallPairGraphArithmetic35.lean": {
+          "sha256": "d01b9fe55b1372883ffb9a877d397cc0e229add28418a1d693cfb93658e97df3",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure35.lean": {
+          "sha256": "40389096dad0b300c316d0a6c4c54e71b5f62577b6b9916525f1c67e9bdd4d31",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData35.lean": {
+          "sha256": "92e8b04a0ccbd8a3b3823ba19a0281ee216ca7fb1087c553ff46d01e34cea5e3",
+          "bytes": 172366
+        },
+        "D1Bound5/SmallPairGraphLeft35.lean": {
+          "sha256": "e7487ea0c27e89c1f30589133f87ae7159ac6f7367b6026b75aad51273093dd8",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight35.lean": {
+          "sha256": "5e2a3881b692145a725cd302356580920dd4003b8bcb2df7d4845b37d176f1aa",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle35.lean": {
+          "sha256": "f25ac249c680838d9d1778198d014fe774f9b62eb4661556a111daf9cf726db2",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData35.lean": {
+          "sha256": "eb1cb053921e827c3d81cd325fb51dcf8ad77ec414be4cb76a6877ff09cc0d40",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        561,
+        560
+      ],
+      "full_unordered_pairs": 313600,
+      "signature_list_sha256": "c87aacdc2d3d9d3d7f4653e021334d2e5930f08fb45062b5294b6411e883961c",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "89c2d22b881223dc06915dd8a3377dff0acc5d87dea647a2d2655245a813a21c",
+      "row": 36,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "41835dbfee6ee22d90c18bcf9221ffc4c22b0ff992a645fbe4fec83cc29c4005",
+      "vertices": 1123,
+      "large_vertices": 1121,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs36.lean": {
+          "sha256": "a6a4480b74a784398264e480e77831de37730ececbb5a84d976243b025b5b18f",
+          "bytes": 1262223
+        },
+        "D1Bound5/SmallPairGraphWitnessData36.lean": {
+          "sha256": "6872b77fb4a5dc4d0545ccacfd18ba4023a16c59afe82d9166826df207001a3b",
+          "bytes": 673953
+        },
+        "D1Bound5/SmallPairGraphArithmetic36.lean": {
+          "sha256": "87b551b70c8e8e7d320aa0b896d859e9400b9dfe6374efbff8a3e882bde27366",
+          "bytes": 568
+        },
+        "D1Bound5/SmallPairGraphClosure36.lean": {
+          "sha256": "3dbfe7495f1f3f527158c88b2aaa77696187d897375cce52334937ae21c6a92f",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData36.lean": {
+          "sha256": "68d69a3175f228586b400a64ab37be4ecb236dd765c3285381ea447f11b5bdff",
+          "bytes": 261455
+        },
+        "D1Bound5/SmallPairGraphLeft36.lean": {
+          "sha256": "5ba857e0ba8f81de4a0a712ccee1bb37e1eb364b01016d7d85c09a94f0d4cb07",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight36.lean": {
+          "sha256": "c5b4ce1739393cf6ec84f9f20bac457f24546821b2e8374e34bc6976a7f07ad4",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle36.lean": {
+          "sha256": "77c860ef249a0315740164d9c0528226e3181e719f0d418ec2b8eb7c10f84b3b",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData36.lean": {
+          "sha256": "aec9e88d4c960340272057dd4826802a057543ea4015eb8a51fa8d30a2568cd5",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "structural",
+      "linear_trace_checks": 744,
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "9d33c764eddc99a6c077386502184c99b671f0500089215ffce64753a624a798",
+      "row": 37,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "0810e082004bf924250fb6366a84845fa35c334bee3bb6bd659848ea2642a8e7",
+      "vertices": 746,
+      "large_vertices": 744,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs37.lean": {
+          "sha256": "5c416ba0635e8f9ed8fb494eb5036323d22ca527bb8875521b992e9c27ada4b2",
+          "bytes": 838544
+        },
+        "D1Bound5/SmallPairGraphWitnessData37.lean": {
+          "sha256": "b47b83584061be4cf55d863b7571a6b9b6b09314129919a5c17ca542e7b512ed",
+          "bytes": 447896
+        },
+        "D1Bound5/SmallPairGraphArithmetic37.lean": {
+          "sha256": "b0d0dd638976c6ddc015b08b73b120940a3d3f10461f3eefb44d36b441329d4b",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure37.lean": {
+          "sha256": "09b5a4a57f94e87fa296af7e61e22007eb05c3765852d327173a3584374b39e4",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphTriangle37.lean": {
+          "sha256": "83c52ca82dffbb6e620c5ebbfe9a207409c223b81ecc80fd1de8bd0e8709fa5c",
+          "bytes": 621
+        },
+        "D1Bound5/SmallPairGraphData37.lean": {
+          "sha256": "f1b1b7608ba968de465ecbd674e1783d7a345c2c2ad08c0816de0bf6ef25e1ab",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        280,
+        281
+      ],
+      "full_unordered_pairs": 78400,
+      "signature_list_sha256": "1aad9c6ea61142f1dd3ac05f3acec8a9b61de938af727a3d4f7f50f1875309a4",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "728e04ee8088ba6f7866ba04986b21ba29582c39c9c103a9133f19ffa0e6ed8e",
+      "row": 38,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "a28ac86b07ea64386b7d811a326cc32d77332f5b79dc3902a4ce430bebbd5804",
+      "vertices": 562,
+      "large_vertices": 561,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs38.lean": {
+          "sha256": "e84905f2c584eaec762f49ff95cacb67eda33b4f26e2c70c9b7b8b2cce33bac3",
+          "bytes": 631791
+        },
+        "D1Bound5/SmallPairGraphWitnessData38.lean": {
+          "sha256": "c6164df96db4aa1be0a86091c70be1a406e41f83d72c88d46eabb3e7189c3052",
+          "bytes": 337262
+        },
+        "D1Bound5/SmallPairGraphArithmetic38.lean": {
+          "sha256": "dd8dbfa6abf4d50ab024f61aee47d820a823b926c36e406836f87c60656daee7",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure38.lean": {
+          "sha256": "b10bc5b53ff5864b17af0b52e70793fe0d0cc33ca5726ae8e59895847f319d29",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData38.lean": {
+          "sha256": "47c32b36c7f32c555b6579f2426ae3d65b31844de60bdcb12f0930768d573d57",
+          "bytes": 130765
+        },
+        "D1Bound5/SmallPairGraphLeft38.lean": {
+          "sha256": "7f8a66b4daab4999f941149b69e812693756129aa7a61a3e85c66fabdd36ac23",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight38.lean": {
+          "sha256": "48968665d90564c80fe05d777ebabd39423698e76b07d4744aa3d76a42f1f476",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle38.lean": {
+          "sha256": "86c7392775d3683bf91c10ae95d991879f81189a058ba2e771f34336e61a7862",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData38.lean": {
+          "sha256": "83f2c3bd68777968da247a58362b3e2051ce156b248c76a29c29eb55c1278ea0",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        458,
+        456
+      ],
+      "full_unordered_pairs": 208393,
+      "signature_list_sha256": "829b85ac22ee8318eb5a092ee30c8c76697512d53a2a007672f306535a8eb7de",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "8b0edd6ce9a11e3357ffdf21e75c2b26a85b84889ffaf0d1a8fbaa4b6c2eef04",
+      "row": 39,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "39f35dfec44a9832bf1678539f6dffaf348b5c7badcd394fbd4de8efef3ba8f5",
+      "vertices": 915,
+      "large_vertices": 914,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs39.lean": {
+          "sha256": "160ac97a2be982c0553d704358797eadd21a266d2cb5d58956a449f97594fc59",
+          "bytes": 1028038
+        },
+        "D1Bound5/SmallPairGraphWitnessData39.lean": {
+          "sha256": "8279eddba1b02932ce68189214e8f3636fc9c49d76a941c27d8b689054060203",
+          "bytes": 486319
+        },
+        "D1Bound5/SmallPairGraphArithmetic39.lean": {
+          "sha256": "b31dee9314b58b7e1aa4f8295deb3f5469a078126ebe0065fab4650a4c915254",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure39.lean": {
+          "sha256": "613b75c1c896359342f81d172dd4dfb45fb92968e356a7d7d6b60d2847367188",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData39.lean": {
+          "sha256": "8ce1a380767e7b6f037cb9d17bb562a218e9da94232a1d6eb731f29d05983239",
+          "bytes": 212564
+        },
+        "D1Bound5/SmallPairGraphLeft39.lean": {
+          "sha256": "ab349c800281029082c1de19984d1883c4d350717f7053766b2a851103c82311",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight39.lean": {
+          "sha256": "613d79b2b8a2ae1938c56d91aa09f907175914a4b92aec2ff53461fe690f7839",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle39.lean": {
+          "sha256": "bdd943553b4da7a0451273d3c7a133c832f5f9418269a95563dcb947702b8042",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData39.lean": {
+          "sha256": "e1a94c92ff2b512536e523fdabc91d0fe92019ea31c476b47983164906948158",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 751,
+      "dispositions": {
+        "positive_real": 751,
+        "cheap_integer_guard": 773
+      },
+      "color_counts": [
+        360,
+        358
+      ],
+      "full_unordered_pairs": 128523,
+      "signature_list_sha256": "c81315a608dcc9a2f63a065a0446e83b4da9669a32b730e56e44ac29c2aa5d8d",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "5ed449367085574d17f670b79c16bfbc74fcee132a7ffaba87225a625397422f",
+      "row": 40,
+      "tau": 1,
+      "nu": 2,
+      "original_source_sha256": "4ba0459c507d3f79182bb0ab2fbbc7db3ae7c12651b9bfa89695d997feb52ec3",
+      "vertices": 719,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs40.lean": {
+          "sha256": "dd6d9b70d35bee85c7a7d912043c266613dda14c83746c4311b9e3d7afc8afc9",
+          "bytes": 413921
+        },
+        "D1Bound5/SmallPairGraphWitnessData40.lean": {
+          "sha256": "c312c47e8601793085d809d0ca4822df4b4520162126b656c8b231e24dd44821",
+          "bytes": 431528
+        },
+        "D1Bound5/SmallPairGraphArithmetic40.lean": {
+          "sha256": "3788dca3b4c8112730c195370cf0cf2fa35d87fc4dcb8d8c7333fa24d76ad539",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure40.lean": {
+          "sha256": "b640261ab3468983df3951205ad3089bbd38a759bb14f5e2a91aff97beac4a4e",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData40.lean": {
+          "sha256": "832a523d0b767854b5dff7b9ab2486948945e4575d7040c9039313f84830f66f",
+          "bytes": 215436
+        },
+        "D1Bound5/SmallPairGraphCachedData40.lean": {
+          "sha256": "ff356d6a591de4144904709c43fa66d4a72d12eb9922ad83bff86c20bfbadf2c",
+          "bytes": 156263
+        },
+        "D1Bound5/SmallPairGraphLeft40.lean": {
+          "sha256": "ee0d05943562022377b70bdc6107d8ad8486388da95f87eec05ac54b734d1942",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight40.lean": {
+          "sha256": "c1a7bf33ce3d671e57b105e84f83605c01f89a2eab44879342225f25edd74dd6",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle40.lean": {
+          "sha256": "56ce68f093a6eb38da1a06f1a27f09baa054c798e2ce09a77e8991b7f913073e",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData40.lean": {
+          "sha256": "3fe8e92440251f6fbbdd97bfbeb2a533d844ee0cea9d23f7876d62d812f1c5ca",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        242,
+        242
+      ],
+      "full_unordered_pairs": 58322,
+      "signature_list_sha256": "f83acee36b62fac2dbd5ef24591ef3ac6bd1256e1aae9805d20cffaac9537f67",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "ded878a3509456d07e23e26890a04be25414b6b2e33b17ce2716f9edb7df94d8",
+      "row": 42,
+      "tau": 1,
+      "nu": 3,
+      "original_source_sha256": "1d835a5bfbbda0f0f1300e8832c0be7be55aab811df21c9032401eb2723d446a",
+      "vertices": 485,
+      "large_vertices": 484,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs42.lean": {
+          "sha256": "e751a5007e71d6837bdcdd3b8c93aacd9a20b359f3364e1165d9ae650d464a20",
+          "bytes": 545020
+        },
+        "D1Bound5/SmallPairGraphWitnessData42.lean": {
+          "sha256": "709c0bd6914ee1c1181f151840da49be63f2fae2e4de4d163170b17c5dc72c11",
+          "bytes": 290961
+        },
+        "D1Bound5/SmallPairGraphArithmetic42.lean": {
+          "sha256": "11d316a549a5c95b93a9ed98fc580dafac8bfeae3a40c435639662a2c047d64e",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure42.lean": {
+          "sha256": "2f7911b205f189a4b5a1cc26fedf3608921021ba95e39dc0344768ee9a21263e",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData42.lean": {
+          "sha256": "f609efbb466c581a1ac45aedfda3feda9323c00e9acb45c31f95fea74bab3635",
+          "bytes": 112396
+        },
+        "D1Bound5/SmallPairGraphLeft42.lean": {
+          "sha256": "739feb4a9cfc18bd103f81826d504f5e0b0f0aeccb84b7feda2d75dced9da024",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight42.lean": {
+          "sha256": "18ad52185c43bc406e6afe673ceb65ee8a3c4c0b9216d3dfabb5828ecf3f9c13",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle42.lean": {
+          "sha256": "e83f670d4e500ea89cff6cd5cda1e39fb33a434bbefaa534961794aff4d9df19",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData42.lean": {
+          "sha256": "fe2f13df896894ce55ebbe0d8a39f9ac40b2578d241debfd77f1b8603357b039",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 754,
+      "dispositions": {
+        "positive_real": 706,
+        "cheap_integer_guard": 660,
+        "negative_scaled": 48
+      },
+      "color_counts": [
+        482,
+        480
+      ],
+      "full_unordered_pairs": 230881,
+      "signature_list_sha256": "4cc07f5f1425224422464ab69b8eeb3a5734d9bc780dac90d18cc85eef13177d",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "54756e1ca74cac95b29d9c78d3f1012577834cc403b7b3912e92ea091c76d328",
+      "row": 43,
+      "tau": 1,
+      "nu": 3,
+      "original_source_sha256": "3355a6e9da9c2152498cd5726cae801a8c8873fb985af0b654686ef9d58081e2",
+      "vertices": 963,
+      "large_vertices": 962,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs43.lean": {
+          "sha256": "4f8fe115d6404e1d98e2072adad71686b983e444069ed6e86739c4ba59ead417",
+          "bytes": 555035
+        },
+        "D1Bound5/SmallPairGraphWitnessData43.lean": {
+          "sha256": "9dedcb1381b8d96deb7061067833410f8e6c6541ff04be6c3d57d380c7f29cd8",
+          "bytes": 578095
+        },
+        "D1Bound5/SmallPairGraphArithmetic43.lean": {
+          "sha256": "e5f34b379ce5169c43ac116b737d74c40f2d6c8e9799f87b666db23e5ef5c3f2",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure43.lean": {
+          "sha256": "d73ec88844775660cbbcbe575180e6aaf2bd2865d9392acaecd7f4d36b13fdb2",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData43.lean": {
+          "sha256": "817997bf4e7a1f317f2c91dfbc2ee4b1fbea58bf896acb4e1377301ff89eee2a",
+          "bytes": 222174
+        },
+        "D1Bound5/SmallPairGraphCachedData43.lean": {
+          "sha256": "8604ddb6fd9108e72e47d5b59e07551c78353d6eeb1dff6a6b752e54485fd12d",
+          "bytes": 208922
+        },
+        "D1Bound5/SmallPairGraphLeft43.lean": {
+          "sha256": "0d74a71c1f371dd62205812d1ea09ac9bd1985c421f8172c46b521f773945938",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight43.lean": {
+          "sha256": "9c515ae4936f754f9d1ab27f70f4cbca222474a7ddb40f677f633ef8a47a183d",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle43.lean": {
+          "sha256": "569b869dd88f0b68908126b1d203f4ff9495af50f9af4d3daaa7995b443b8ea3",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData43.lean": {
+          "sha256": "2d3c77d61e5d29b44efddfd3692b2666c7300f104de89a8dd27cb3839201bc1a",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        220,
+        220
+      ],
+      "full_unordered_pairs": 48180,
+      "signature_list_sha256": "7f3bf6b738902bc796e6b59d5fc4881cfff17487c18431bc026bac4e34fa368d",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "a9b6be5921385fbb59a140a24cd4fe1af786147447189e6ec6d8f4fea0d4c6f8",
+      "row": 44,
+      "tau": 1,
+      "nu": 4,
+      "original_source_sha256": "20da6ee3346708823501e59be66c0db8fb67f70270fe8c4aa66dcf171fe3f19c",
+      "vertices": 441,
+      "large_vertices": 440,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs44.lean": {
+          "sha256": "b443d2cf11af364c9d9082712786db2cf3a153851a5eaea7bdbb30c84d99fec0",
+          "bytes": 495297
+        },
+        "D1Bound5/SmallPairGraphWitnessData44.lean": {
+          "sha256": "f3c4a787d1e9f9d4f74a295674b17167e04ca7bbd68b05e1aafe83388608421d",
+          "bytes": 264428
+        },
+        "D1Bound5/SmallPairGraphArithmetic44.lean": {
+          "sha256": "f6bdb5a40012c0b78d1ce6330b64244084b8e6a6e3c41c9a3690017b0eb6f558",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure44.lean": {
+          "sha256": "4dfcf91b3104c4a07c5f9491b4956fa7d08ee63ada7f4c55131fc45e109a31eb",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData44.lean": {
+          "sha256": "10866b7e81ee6f3fbb87153d11688ba73cd09d918fe444b463ed820712768404",
+          "bytes": 102425
+        },
+        "D1Bound5/SmallPairGraphLeft44.lean": {
+          "sha256": "0a43ae2f6237e91cf29dde5bcedbb060fe6e47e0355005bd9cc18f5a96d0816b",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight44.lean": {
+          "sha256": "d9da443f7a0c05ea6f1b2718faf0e4428d98ae0335388c82be2b25960b7fff30",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle44.lean": {
+          "sha256": "fdc759093f55434df6b7b7f20823d901e0b13531fee53bf357786f7c661e87fb",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData44.lean": {
+          "sha256": "71cc4347dc31ae756ab45cd633715fbc8dd66b09ec47b721c35b4874848ddc7a",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        205,
+        206
+      ],
+      "full_unordered_pairs": 42025,
+      "signature_list_sha256": "285309735caf5af8fe2bcf7d846b5af2b9e46411e0159b5b1e42f57beaa40163",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "fbd7515b093beec7e1226c6fd22eb91c654ce2a9cfbf94022e435f9157be8180",
+      "row": 45,
+      "tau": 1,
+      "nu": 5,
+      "original_source_sha256": "3963ed3dea9aea688dbe318fae9ca0f7cb117f784b4913857615092f7547a39c",
+      "vertices": 412,
+      "large_vertices": 411,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs45.lean": {
+          "sha256": "e005e2e8cd75649429508b44f8449f6119b1af70789808e26eb05b3deea835d1",
+          "bytes": 462962
+        },
+        "D1Bound5/SmallPairGraphWitnessData45.lean": {
+          "sha256": "5f07a239e6e5d926162b0a89c88c4e5e19bf9ed2c077da34499a3eaf01573086",
+          "bytes": 247189
+        },
+        "D1Bound5/SmallPairGraphArithmetic45.lean": {
+          "sha256": "3a94fa935fa21ad5943c323eba44b6f35df957553b7d8649176809e361d51776",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure45.lean": {
+          "sha256": "a8e126e0ea71de1ea4fb613714cd6df1bb0f1f365d315068cb7ca1965805c4b5",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData45.lean": {
+          "sha256": "f71c20abaf157f7f9aad52298e630d48d353028b186c620d76ed92f732463657",
+          "bytes": 96185
+        },
+        "D1Bound5/SmallPairGraphLeft45.lean": {
+          "sha256": "0ce1188ad5714548be83a084231bb6d3f0b5e754d765c568d00d2030b51e4516",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight45.lean": {
+          "sha256": "e66cd62af0bd1b13a1ec4cf5502248383dc5b349b07ccba3c9e1b34f1557f09a",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle45.lean": {
+          "sha256": "22995976a41d5b647e22cfa9f4151e20e46b0ef466517af389bf98ec1c91e397",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData45.lean": {
+          "sha256": "0932d1428f25bf1fbddb795e60ed173381edd6d1ae54456d0fbf29b9282010db",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 2765,
+      "dispositions": {
+        "positive_real": 2549,
+        "cheap_integer_guard": 2363,
+        "negative_scaled": 216
+      },
+      "color_counts": [
+        360,
+        358
+      ],
+      "full_unordered_pairs": 128523,
+      "signature_list_sha256": "f7b6f57dd3e11a0ed1315c8ff2854836e536607679b8c37c02e92df17bf75e28",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "959886d4c9d63a4c887a595dd4f24b6949821211711cf31203115d5838933e95",
+      "row": 46,
+      "tau": 1,
+      "nu": 6,
+      "original_source_sha256": "bc07645eb77d4df0e34956226386709c7009f4aa023978087996830ad1107165",
+      "vertices": 719,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs46.lean": {
+          "sha256": "6333b204dd3536bbffa2ef809a533bc9064ac2358a86f4c3b384d25e4845bf29",
+          "bytes": 413862
+        },
+        "D1Bound5/SmallPairGraphWitnessData46.lean": {
+          "sha256": "3841afc95893ed26ac8e5c9ad4bf6731084ca03aafa55c9acf04ebf8bcf99989",
+          "bytes": 431078
+        },
+        "D1Bound5/SmallPairGraphArithmetic46.lean": {
+          "sha256": "f9a32640a9b051fd190da9bbb41a14d597818d62631e660bf974bcf2f782f93c",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure46.lean": {
+          "sha256": "8cc3f88cd6dfbaabd0b7f1a56e28f8e00098fa11519f9c612ea82df4bcfbf41c",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData46.lean": {
+          "sha256": "30b9f72a9d35d5676fcdbddd702cb6ed4bf6b9ae5b436e47be0ccff85e201e58",
+          "bytes": 773026
+        },
+        "D1Bound5/SmallPairGraphCachedData46.lean": {
+          "sha256": "4707fe85361fd7df579da8ea96dbddc19801043936c06d10259259e069d91692",
+          "bytes": 156204
+        },
+        "D1Bound5/SmallPairGraphLeft46.lean": {
+          "sha256": "264311f1a89c209059d4ddc295b5b396ed3a26421c51832bba24a663c4729239",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight46.lean": {
+          "sha256": "d308cc3c4f0844f8473c68c2940fdabd66f1c2ccc24d43b613e1005ad325d157",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle46.lean": {
+          "sha256": "5fed219eaa2d44c6cd08fa969ed9e8ae8d1342c5dbf7209a31b3bf2986cdc59f",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData46.lean": {
+          "sha256": "f552150b39fb7f4c65bc718d1ecc68fa3fcd70343e8c3d734861c1d523266d4a",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "cached_integer",
+      "floor_witness_count": 0,
+      "dispositions": {},
+      "color_counts": [
+        195,
+        194
+      ],
+      "full_unordered_pairs": 37636,
+      "signature_list_sha256": "00c573f4e875cf174da714fc4aff9786b44f036f7ad41aae5721bcb09fd7503c",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "3544f53faeb7765211924779b01c927bb19be718963938bd2d85bbea30aa9230",
+      "row": 47,
+      "tau": 1,
+      "nu": 6,
+      "original_source_sha256": "2674008d5736a7840d5b2cc2c34f0258c9029c9e49412ec329b2f6ad949e11b8",
+      "vertices": 390,
+      "large_vertices": 389,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs47.lean": {
+          "sha256": "f501c9534e027510c4689ea6afae0efbfa1eebe21b7a5bb741e80e06359fea20",
+          "bytes": 437607
+        },
+        "D1Bound5/SmallPairGraphWitnessData47.lean": {
+          "sha256": "ec7574bd0dd92e0ed2fbb3e470b67a51820bcfd972cbd2daf9edb2f2e144d1df",
+          "bytes": 233668
+        },
+        "D1Bound5/SmallPairGraphArithmetic47.lean": {
+          "sha256": "33d28d1cdc773c8feaf8f5fa9085c4d1ab9e83a9f52e395db9c66a0df6c6682e",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure47.lean": {
+          "sha256": "f5845bcbddbf3ce55102aeb16e2ffd1e5b4683d4a47756516936f9f5eaf11de0",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairGraphCachedData47.lean": {
+          "sha256": "047657bfa8111665055cf1950f3a68b21d304338a648e158f18565235c67abed",
+          "bytes": 90722
+        },
+        "D1Bound5/SmallPairGraphLeft47.lean": {
+          "sha256": "727d1fc7d54704ef436b05809cc9f654e878dee32828fe8a09e15703b67eb31e",
+          "bytes": 782
+        },
+        "D1Bound5/SmallPairGraphRight47.lean": {
+          "sha256": "5406b7f8172e22758ff4d3aac8dfa59405e81285d85d296a79b0c50a69e79213",
+          "bytes": 785
+        },
+        "D1Bound5/SmallPairGraphTriangle47.lean": {
+          "sha256": "a5c7d180deaa85fccba5fb937b83f529ee08aea3e05e1a2f98227e4268993796",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData47.lean": {
+          "sha256": "879a89751861ba90c45e9a8e119d516c8d3d45039542ce95c409bd3dc3a12fc0",
+          "bytes": 124
+        }
+      }
+    },
+    {
+      "backend": "sparse_floor",
+      "floor_witness_count": 1625,
+      "dispositions": {
+        "positive_real": 1625,
+        "cheap_integer_guard": 1639
+      },
+      "color_counts": [
+        360,
+        358
+      ],
+      "full_unordered_pairs": 128523,
+      "signature_list_sha256": "4c84e5f1e1e86fad0558ec8ddb5fe04d2d3ed1c4b42c7525bbfbb14e222da290",
+      "public_statements_preserved": true,
+      "arithmetic_blocks_preserved": true,
+      "declaration_block_occurrences": 1,
+      "original_declarations_sha256": "0149df17f9e25637c27970b6c020b4e4ebbd9adfc136a3eb9f6b7029cfede511",
+      "row": 48,
+      "tau": 1,
+      "nu": 8,
+      "original_source_sha256": "d7a93676476979399981aae9e86af3fbee4ea215a058f2a7982a97d2291d31a6",
+      "vertices": 719,
+      "large_vertices": 718,
+      "files": {
+        "D1Bound5/SmallPairGraphInputs48.lean": {
+          "sha256": "b5a04c7b1aa5d377ec08e976ebcefd4f1729f0e3ae979bcb64fddd41b60c793a",
+          "bytes": 413949
+        },
+        "D1Bound5/SmallPairGraphWitnessData48.lean": {
+          "sha256": "abe44b11257879f82ce8180c0b3eec5ec07fe33413020aa84ae0863a631ef53b",
+          "bytes": 431188
+        },
+        "D1Bound5/SmallPairGraphArithmetic48.lean": {
+          "sha256": "e6244101e338a3e2941a187afc7d87015a68a1d81020bdd3e34df785c575e237",
+          "bytes": 567
+        },
+        "D1Bound5/SmallPairGraphClosure48.lean": {
+          "sha256": "6ac6e7fac242d6f990ac662bb8e36be9c566a74797c0dad84a793523e27837de",
+          "bytes": 734
+        },
+        "D1Bound5/SmallPairFloorWitnessData48.lean": {
+          "sha256": "c53e475a7d70212bad937bd8da80dd342a2e0a9668a6d137df9482366c16a67d",
+          "bytes": 454234
+        },
+        "D1Bound5/SmallPairGraphCachedData48.lean": {
+          "sha256": "df7ccf22d8bc5c8e1dd58a4ac490d098df685c31e8c4cbbefc7622b188e7aa8f",
+          "bytes": 156650
+        },
+        "D1Bound5/SmallPairGraphLeft48.lean": {
+          "sha256": "77b63a946b081f1048975a0b29bdbb32d0c3b1a4f535e2fc5dee9321293edf6d",
+          "bytes": 884
+        },
+        "D1Bound5/SmallPairGraphRight48.lean": {
+          "sha256": "df2536c00645a6ce9aaa949343eebfba7364b8efbf88f3eafe5c449e8e953bb5",
+          "bytes": 889
+        },
+        "D1Bound5/SmallPairGraphTriangle48.lean": {
+          "sha256": "efe6d21c9f540125bb7fe1d174ed1bf44c3333dddbd1e2395a5c7162ac2b7eec",
+          "bytes": 436
+        },
+        "D1Bound5/SmallPairGraphData48.lean": {
+          "sha256": "67117dadd435e7aefd827e1b26d6d38f784f8dbe813c3ee40ae5bd5d1f6da2eb",
+          "bytes": 124
+        }
+      }
+    }
+  ]
+}

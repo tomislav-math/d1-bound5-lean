@@ -1,0 +1,51 @@
+{
+  "status": "Independent source/data replay PASS; no Lean compilation",
+  "generator_sha256": "4942337e7b44f4c84ef0ef0b75ef6aeb2c90fd5e17d74df28ba8df8af750ec7a",
+  "manifest_sha256": "ee32f75fe78942558e6ec1d705d40420344ee467c9004707b5ef7b9625756111",
+  "results": [
+    {
+      "row": 16,
+      "backend": "structural",
+      "original_declarations_preserved": true,
+      "five_public_types_preserved": true,
+      "three_arithmetic_proofs_preserved": true,
+      "exact_roots": 553,
+      "indexed_destinations": 1105,
+      "outside": 1,
+      "trace_checks": 552
+    },
+    {
+      "row": 34,
+      "backend": "sparse_floor",
+      "original_declarations_preserved": true,
+      "five_public_types_preserved": true,
+      "three_arithmetic_proofs_preserved": true,
+      "exact_roots": 458,
+      "indexed_destinations": 915,
+      "outside": 1,
+      "independent_sparse_replay": {
+        "pairs": 51984,
+        "cached_survivors": 3,
+        "cheap_guard": 0,
+        "positive": 0,
+        "negative": 0,
+        "norm": 3
+      },
+      "signature_pairs": 11425
+    }
+  ],
+  "analytic_repairs": {
+    "CoherentThreeParameters": {
+      "pre_sha256": "b1621ecf7cdabeda90310867f529f2de8afe5a0dbb62ba29793235428dceb839",
+      "post_sha256": "88d0f3478d9a5f94a18494039736afc19aa2e351a051a8f59d9d3f440eac6643",
+      "change": "insert noncomputable section before namespace; all existing bytes retained",
+      "review": "PASS: exactly one noncomputable section inserted"
+    },
+    "CoherentFourParameters": {
+      "pre_sha256": "b8e74cec0039e185068d5e982c4a01e1b84c6b18a19a5dcd0440b2c911637c19",
+      "post_sha256": "e9ab65ff199c0533d38a19b63584cef713b9127fa326f226a6670542aa584944",
+      "change": "insert noncomputable section before namespace; all existing bytes retained",
+      "review": "PASS: exactly one noncomputable section inserted"
+    }
+  }
+}

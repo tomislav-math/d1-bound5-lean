@@ -1,0 +1,20 @@
+✖ [1539/1539] Building D1Bound5.QuadSquareFloorObstruction (30s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/QuadSquareFloorObstruction.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/QuadSquareFloorObstruction.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/QuadSquareFloorObstruction.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/QuadSquareFloorObstruction.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/QuadSquareFloorObstruction.setup.json --json
+error: D1Bound5/QuadSquareFloorObstruction.lean:130:10: Type mismatch: After simplification, term
+  h
+ has type
+  (if True then decide (nu * ↑k ^ 2 < -z.re ∧ -z.re < nu * (↑k + 1) ^ 2)
+    else if 0 = 1 then decide ((4 * nu - 1) * ↑k ^ 2 < -z.re ∧ -z.re < (4 * nu - 1) * (↑k + 1) ^ 2) else false) =
+    true
+but is expected to have type
+  nu * ↑k ^ 2 < -z.re ∧ -z.re < nu * (↑k + 1) ^ 2
+error: D1Bound5/QuadSquareFloorObstruction.lean:140:12: Type mismatch: After simplification, term
+  h
+ has type
+  (if True then decide ((4 * nu - 1) * ↑k ^ 2 < -z.re ∧ -z.re < (4 * nu - 1) * (↑k + 1) ^ 2) else false) = true
+but is expected to have type
+  (4 * nu - 1) * ↑k ^ 2 < -z.re ∧ -z.re < (4 * nu - 1) * (↑k + 1) ^ 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.QuadSquareFloorObstruction
+error: build failed

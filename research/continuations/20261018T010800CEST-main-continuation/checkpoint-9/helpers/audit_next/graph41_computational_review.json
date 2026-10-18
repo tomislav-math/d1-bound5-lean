@@ -1,0 +1,19 @@
+{
+  "scope": "Read-only computational risk analysis, without modifying or compiling any Lean source. Edge counts are diagnostic data, not kernel acceptance.",
+  "closure_vertices": 373,
+  "large_vertices": 372,
+  "coordinate_max_digits": 549,
+  "exact_edges": 371,
+  "degree_histogram": {
+    "1": 2,
+    "2": 370
+  },
+  "unordered_pairs": 69006,
+  "modular_pass_pairs": 3689,
+  "current_fast_square_calls": 413292,
+  "current_full_square_calls": 21385,
+  "source_sha256": "2fb18d40fa756d1fe49844454f5ddeff9c85122a82d47bf5c418699a95b879b1",
+  "potential_triangle_optimization": "Certify an overgraph on unordered vertex pairs with one rejection witness per omitted edge, then prove triangle-freeness of the finite adjacency. Included edges need not be proved actual squares. Keep exact-square rejection only for modular survivors.",
+  "potential_closure_optimization": "If the closure certificate is the timed-out theorem, explicit checked roots and indexed mutation targets could avoid repeated rootCandidate computations and linear list membership. Requires a generic soundness bridge before concrete use.",
+  "changes_made": false
+}
