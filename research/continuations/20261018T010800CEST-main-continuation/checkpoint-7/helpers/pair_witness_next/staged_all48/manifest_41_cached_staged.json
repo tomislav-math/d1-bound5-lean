@@ -1,0 +1,83 @@
+{
+  "status": "Uncompiled replacement sources; no remote install and no build queue",
+  "dry_run": false,
+  "rows": [
+    41
+  ],
+  "plain_color_assembly_included": false,
+  "cached_color_assembly_included": true,
+  "generic_source_pins": {
+    "PairClosureWitness.lean": "c3e5b89a544885205672d45a9a3cb231a99a79dcff6c62a96059e9f00b860a62",
+    "PairClosureIndexedWitness.lean": "396e39b992bc9611aabcfcda13356692e98676409381a756555e84104fe22420",
+    "PairCachedResidues.lean": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100"
+  },
+  "supported_closure_backend": "indexed; Graph41 pilot passed standalone kernel compilation",
+  "backend_rule": "Install common plus exactly one of membership/indexed, then the selected color assembly",
+  "namespace_rule": "These replace original GraphData definitions; do not import old and new data owners together",
+  "data_duplication": "Original declarations occur once per row; both closure alternatives share all root data",
+  "file_count_including_alternatives": 5,
+  "bytes_including_alternatives": 731740,
+  "results": [
+    {
+      "row": 41,
+      "original_source_sha256": "2fb18d40fa756d1fe49844454f5ddeff9c85122a82d47bf5c418699a95b879b1",
+      "original_declarations_sha256": "ee9bef182df41201c4f28e6d10ba37f5fdd6a03a2e3b1b78047cfddac1a61e3f",
+      "vertices": 373,
+      "files": {
+        "common/D1Bound5/SmallPairGraphInputs41.lean": {
+          "sha256": "61dd3a9f973e7b5eef72a42c94d33fa98b2b9c460a258a94a498318406aebcda",
+          "bytes": 642686
+        },
+        "common/D1Bound5/SmallPairGraphArithmetic41.lean": {
+          "sha256": "6fe3fd705bd32b5138768063721099b87b8ea8ca066c09c0b5c9a2ba7d113fd5",
+          "bytes": 603
+        },
+        "membership/D1Bound5/SmallPairGraphClosure41.lean": {
+          "sha256": "13474dd7c84d96c3373941d13a02c595b710190ad8727ed29a9503b13e7d4769",
+          "bytes": 651
+        },
+        "indexed/D1Bound5/SmallPairGraphClosure41.lean": {
+          "sha256": "ea349a4637cdd5bdc86d066a461d887e3112e0d229dfcd4ad197faf76ecc26dc",
+          "bytes": 728
+        },
+        "cached/D1Bound5/SmallPairGraphData41.lean": {
+          "sha256": "5c6e644cc0373fe7406eaf2a35cbe0fc9de8f3745845f8c67aba65e09dac4b6f",
+          "bytes": 87072
+        }
+      },
+      "cached": {
+        "sieve_source": "finite_fast_next/sieves/SmallPairSieve_1_2.lean",
+        "sieve_sha256": "0e06eb108afce10f63dd87b8402973d477820e1a7d76cfa29f8e0be3d77d5235",
+        "moduli": [
+          2,
+          3,
+          5,
+          7,
+          11,
+          13,
+          17,
+          19,
+          23,
+          29,
+          31,
+          37,
+          41,
+          43,
+          47,
+          53,
+          59,
+          61,
+          67,
+          71,
+          73,
+          79,
+          83,
+          89,
+          97
+        ],
+        "signature_list_sha256": "adc49d0f5083ae46273677b28edfa091c5c74e8727538b3baabc1a9fbf94ee2b",
+        "coordinate_residues": 18600
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "scope": "Two required independent sieve certificates, one bounded concurrency trial",
+  "before": {
+    "utc": "2026-10-18T01:53:09.201631+00:00",
+    "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                3470.\nPages active:                             59433.\nPages inactive:                           53780.\nPages speculative:                         4564.\nPages throttled:                              0.\nPages wired down:                        188221.\nPages purgeable:                              0.\n\"Translation faults\":               38605023200.\nPages copy-on-write:                  206827057.\nPages zero filled:                   6657078105.\nPages reactivated:                  12686072637.\nPages purged:                         427240989.\nFile-backed pages:                        43407.\nAnonymous pages:                          74370.\nPages stored in compressor:             2047131.\nPages occupied by compressor:            178931.\nDecompressions:                     17242207112.\nCompressions:                       18432405260.\nPageins:                             3439695721.\nPageouts:                              11631035.\nSwapins:                            14303534292.\nSwapouts:                           14404532474.\n",
+    "swap": "vm.swapusage: total = 13312.00M  used = 12288.25M  free = 1023.75M  (encrypted)\n"
+  },
+  "initial": "SmallPairSieve_1_6",
+  "two_jobs": [
+    {
+      "name": "SmallPairSieve_1_6",
+      "fingerprint": "60e735104e1eb445d50e1eef23980b8a77e669ecc2b7e5acf4e07ce6e26d904c",
+      "started_utc": "2026-10-18T01:52:27.586696+00:00"
+    },
+    {
+      "name": "SmallPairSieve_1_8",
+      "fingerprint": "0d858a5d13aef7a9eadbfcd7017db4b1b8582453b50324de2c98abfd22591f3d",
+      "started_utc": "2026-10-18T01:53:09.838672+00:00"
+    }
+  ],
+  "after_launch": {
+    "utc": "2026-10-18T01:53:10.002239+00:00",
+    "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                4493.\nPages active:                             58576.\nPages inactive:                           52200.\nPages speculative:                         5208.\nPages throttled:                              0.\nPages wired down:                        188296.\nPages purgeable:                              2.\n\"Translation faults\":               38605045431.\nPages copy-on-write:                  206827722.\nPages zero filled:                   6657080182.\nPages reactivated:                  12686083121.\nPages purged:                         427241013.\nFile-backed pages:                        44298.\nAnonymous pages:                          71686.\nPages stored in compressor:             2051087.\nPages occupied by compressor:            179772.\nDecompressions:                     17242215757.\nCompressions:                       18432418491.\nPageins:                             3439699331.\nPageouts:                              11631035.\nSwapins:                            14303543462.\nSwapouts:                           14404542455.\n",
+    "swap": "vm.swapusage: total = 13312.00M  used = 12316.00M  free = 996.00M  (encrypted)\n"
+  },
+  "results": [
+    {
+      "name": "SmallPairSieve_1_6",
+      "seconds": 46.380714249797165,
+      "accepted_build": true,
+      "utc": "2026-10-18T01:53:13.966442+00:00",
+      "timed_out": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairSieve_1_6-20261018T015227580643Z.log"
+    },
+    {
+      "name": "SmallPairSieve_1_8",
+      "seconds": 49.01598987495527,
+      "accepted_build": true,
+      "utc": "2026-10-18T01:53:58.853651+00:00",
+      "timed_out": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairSieve_1_8-20261018T015309835933Z.log"
+    }
+  ],
+  "after": {
+    "utc": "2026-10-18T01:54:00.284349+00:00",
+    "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                2816.\nPages active:                             71866.\nPages inactive:                           52214.\nPages speculative:                        18982.\nPages throttled:                              0.\nPages wired down:                        187776.\nPages purgeable:                            530.\n\"Translation faults\":               38607057965.\nPages copy-on-write:                  206841953.\nPages zero filled:                   6657294115.\nPages reactivated:                  12686627235.\nPages purged:                         427252285.\nFile-backed pages:                        75725.\nAnonymous pages:                          67337.\nPages stored in compressor:             1957943.\nPages occupied by compressor:            154705.\nDecompressions:                     17243042984.\nCompressions:                       18433323608.\nPageins:                             3439998829.\nPageouts:                              11631187.\nSwapins:                            14303813210.\nSwapouts:                           14404829254.\n",
+    "swap": "vm.swapusage: total = 13312.00M  used = 12512.75M  free = 799.25M  (encrypted)\n"
+  },
+  "seconds_from_request": 51.075231042224914
+}
