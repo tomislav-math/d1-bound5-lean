@@ -1,0 +1,130 @@
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoResidualRate: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoResidualGammaBound: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoResidualRate_pos: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoResidualGammaBound_mul_rate: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoResidualGammaBound_lt_half_rate: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_residual_norm_lt_half_rate: [propext,
+ Classical.choice,
+ Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoRowForm_norm_le: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.bennettTwoRowForm_norm_lt: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.full_ring_bennett_two_integer_k: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.complex_terminal_root_height: [propext, Classical.choice, Quot.sound]
+RESIDUAL_RATE_AXIOMS_PASS D1Bound5.IsD1Tuple.ordinary_height_envelope: [propext, Classical.choice, Quot.sound]
+D1Bound5.bennettTwoResidualRate : ℝ → ℝ → ℝ → ℝ → ℝ
+D1Bound5.bennettTwoResidualGammaBound : ℝ → ℝ → ℝ → ℝ → ℕ → ℝ
+D1Bound5.bennettTwoResidualRate_pos : ∀ (A B C δ : ℝ),
+  0 < A → 0 < B → 0 < δ → 1 < A * C → 0 < D1Bound5.bennettTwoResidualRate A B C δ
+D1Bound5.bennettTwoResidualGammaBound_mul_rate : ∀ (A B C δ : ℝ),
+  0 < A →
+    0 < B →
+      0 < C →
+        0 < δ →
+          1 < A * C →
+            ∀ (k : ℕ),
+              D1Bound5.bennettTwoResidualGammaBound A B C δ k * D1Bound5.bennettTwoResidualRate A B C δ ^ k =
+                √(1 - 1 / (A * C)) * D1Bound5.bennettTwoBetaFactor k
+D1Bound5.bennettTwoResidualGammaBound_lt_half_rate : ∀ (A B C δ : ℝ),
+  0 < A →
+    0 < B →
+      0 < C →
+        0 < δ →
+          1 < A * C →
+            ∀ (k : ℕ),
+              1 ≤ k →
+                D1Bound5.bennettTwoResidualGammaBound A B C δ k < 1 / (2 * D1Bound5.bennettTwoResidualRate A B C δ ^ k)
+D1Bound5.bennettTwoClearedEntry_residual_norm_lt_half_rate : ∀ (a b c : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        a ≠ b →
+          ‖a‖ ≤ ‖b‖ →
+            1 < ‖a‖ * ‖c‖ →
+              ∀ (k : ℕ),
+                1 ≤ k →
+                  ∀ (i : Fin 3),
+                    ‖∑ j,
+                          D1Bound5.bennettTwoClearedEntry a b c k i j *
+                            (1 + D1Bound5.bennettTwoNodes a b j * (a * b * c)⁻¹) ^ (1 / 2)‖ <
+                      1 / (2 * D1Bound5.bennettTwoResidualRate ‖a‖ ‖b‖ ‖c‖ ‖a - b‖ ^ k)
+D1Bound5.bennettTwoRowForm_norm_le : ∀ (a b c z sA sB : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        z ≠ 0 →
+          ∀ (k : ℕ) (i : Fin 3),
+            ‖D1Bound5.bennettTwoRowForm a b c z sA sB k i‖ ≤
+              ‖z‖ *
+                  ‖∑ j,
+                      D1Bound5.bennettTwoClearedEntry a b c k i j *
+                        (1 + D1Bound5.bennettTwoNodes a b j * (a * b * c)⁻¹) ^ (1 / 2)‖ +
+                ‖z‖ *
+                  (‖D1Bound5.bennettTwoClearedEntry a b c k i 1‖ * ‖(1 + 1 / (a * c)) ^ (1 / 2) - sA / (a * z)‖ +
+                    ‖D1Bound5.bennettTwoClearedEntry a b c k i 2‖ * ‖(1 + 1 / (b * c)) ^ (1 / 2) - sB / (b * z)‖)
+D1Bound5.bennettTwoRowForm_norm_lt : ∀ (a b c z sA sB : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        a ≠ b →
+          z ≠ 0 →
+            ‖a‖ ≤ ‖b‖ →
+              1000 ≤ ‖a‖ * ‖c‖ →
+                ‖(1 + 1 / (a * c)) ^ (1 / 2) - sA / (a * z)‖ < 3 / 2 * ‖c‖ / (‖a‖ * ‖z‖ ^ 2) →
+                  ‖(1 + 1 / (b * c)) ^ (1 / 2) - sB / (b * z)‖ < 3 / 2 * ‖c‖ / (‖b‖ * ‖z‖ ^ 2) →
+                    ∀ (k : ℕ),
+                      1 ≤ k →
+                        ∀ (i : Fin 3),
+                          ‖D1Bound5.bennettTwoRowForm a b c z sA sB k i‖ <
+                            3 * ‖c‖ * (42 * ‖b‖ ^ 3 * ‖c‖) ^ k / (‖b‖ * ‖z‖) +
+                              ‖z‖ / (2 * D1Bound5.bennettTwoResidualRate ‖a‖ ‖b‖ ‖c‖ ‖a - b‖ ^ k)
+@D1Bound5.full_ring_bennett_two_integer_k : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a b c d rA rB vA vB z : NumberField.RingOfIntegers K),
+      a ≠ 0 →
+        b ≠ 0 →
+          c ≠ 0 →
+            d ≠ 0 →
+              a ≠ b →
+                rA ^ 2 = a * c + 1 →
+                  rB ^ 2 = b * c + 1 →
+                    vA ^ 2 = a * d + 1 →
+                      vB ^ 2 = b * d + 1 →
+                        z ^ 2 = c * d + 1 →
+                          ‖phi ↑a‖ ≤ ‖phi ↑b‖ →
+                            1000 ≤ ‖phi ↑a‖ * ‖phi ↑c‖ →
+                              4 * ‖phi ↑b‖ < ‖phi ↑c‖ →
+                                ∀ (k : ℕ),
+                                  1 ≤ k →
+                                    1 <
+                                      3 * ‖phi ↑c‖ * (42 * ‖phi ↑b‖ ^ 3 * ‖phi ↑c‖) ^ k / (‖phi ↑b‖ * ‖phi ↑z‖) +
+                                        ‖phi ↑z‖ /
+                                          (2 *
+                                            D1Bound5.bennettTwoResidualRate ‖phi ↑a‖ ‖phi ↑b‖ ‖phi ↑c‖
+                                                ‖phi ↑a - phi ↑b‖ ^
+                                              k)
+D1Bound5.complex_terminal_root_height : ∀ (c d z : ℂ),
+  2 ≤ ‖c‖ → ‖c‖ ≤ ‖d‖ → z ^ 2 = c * d + 1 → 1 ≤ ‖z‖ ∧ ‖c‖ * ‖d‖ < 2 * ‖z‖ ^ 2
+@D1Bound5.IsD1Tuple.ordinary_height_envelope : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 4 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          1000 ≤ ‖phi ↑(a 0)‖ * ‖phi ↑(a 2)‖ →
+            4 * ‖phi ↑(a 1)‖ < ‖phi ↑(a 2)‖ →
+              ∀ (h r u : ℝ),
+                D1Bound5.ordinaryLog10 (42 * ‖phi ↑(a 1)‖ ^ 3 * ‖phi ↑(a 2)‖) <
+                    D1Bound5.ordinaryLog10 ‖phi ↑(a 2)‖ + h →
+                  2 * D1Bound5.ordinaryLog10 ‖phi ↑(a 2)‖ + r <
+                      D1Bound5.ordinaryLog10
+                        (D1Bound5.bennettTwoResidualRate ‖phi ↑(a 0)‖ ‖phi ↑(a 1)‖ ‖phi ↑(a 2)‖
+                          ‖phi ↑(a 0) - phi ↑(a 1)‖) →
+                    D1Bound5.ordinaryLog10 (253 * ‖phi ↑(a 1)‖ ^ 2) < u →
+                      h - r < D1Bound5.ordinaryLog10 ‖phi ↑(a 2)‖ →
+                        0 < 2 * D1Bound5.ordinaryLog10 ‖phi ↑(a 2)‖ + r →
+                          D1Bound5.ordinaryLog10 ‖phi ↑(a 3)‖ <
+                            7 * D1Bound5.ordinaryLog10 ‖phi ↑(a 2)‖ + (4 * u + 8 * h - 4 * r) +
+                                (2 * u * r + (4 * u + 8 * h - 4 * r) * (h - r)) /
+                                  (D1Bound5.ordinaryLog10 ‖phi ↑(a 2)‖ - (h - r)) +
+                              2 / 5

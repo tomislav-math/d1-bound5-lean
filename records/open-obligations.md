@@ -1,5 +1,9 @@
 # Open mathematical obligations
 
+## 19 October 2026 — full-ring all-positive-order Bennett inequality verified
+
+Three working modules now prove the exact half-rate residual, the full-ring two-anchor inequality for every positive integer order, and the ordinary height envelope for an actual ordered D(1)-quadruple. The terminal root nonzero, signed integral approximations, nonzero integral row, and all coefficient/residual estimates are derived internally. The parameterized height envelope retains its explicit logarithmic h,r,u premises. Nine original theorems and two definitions passed pinned builds, exact type/transitive-axiom checks and three targeted installed SAME-kernel replays; only propext, Classical.choice and Quot.sound. No root integration, final finite exclusion, independent final review, whole-root clean checkout or MainStatement proof. Evidence: research/continuations/20261019T001143CEST-residual-rate/VERIFICATION_SUMMARY.json.
+
 ## 18 October 2026 — weighted height and actual Bennett residual verified
 
 Six working modules now prove the combined weighted column height, exact analytic residue evaluation, the inverse-denominator/repeated-node coefficient identity, and the actual arbitrary-order residual bound including its exact Gamma specialization. All original theorem headers are unchanged. The guarded pinned builds, exact public type/transitive-axiom audit and targeted installed SAME-kernel replays of the weighted-height, infinity and residual-bound endpoints passed with only propext, Classical.choice and Quot.sound. Applying the integral clearing factor and residual rate, the full-ring all-order inequalities, root integration, exhaustive finite checks and MainStatement remain open. Evidence: research/continuations/20261018T231100CEST-weighted-residual/VERIFICATION_SUMMARY.json.

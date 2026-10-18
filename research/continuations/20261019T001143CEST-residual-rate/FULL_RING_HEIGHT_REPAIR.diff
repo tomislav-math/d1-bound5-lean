@@ -1,0 +1,11 @@
+--- FullRingOrdinaryHeight.before.lean
++++ FullRingOrdinaryHeight.lean
+@@ -50,6 +50,8 @@
+       (4*u+8*h-4*r)+(2*u*r+(4*u+8*h-4*r)*(h-r))/
+         (ordinaryLog10 ‖phi (a 2 : K)‖-(h-r))+(2/5 : ℝ) := by
+   let f : 𝓞 K →+* ℂ := phi.comp (algebraMap (𝓞 K) K)
++  change 4 * ‖f (a 1)‖ < ‖f (a 2)‖ at hC
++  change 1000 ≤ ‖f (a 0)‖ * ‖f (a 2)‖ at hAC
+   have hA1 : 1 ≤ ‖f (a 0)‖ := one_le_norm_integer hK phi (ha.2.1 0)
+   have hB1 : 1 ≤ ‖f (a 1)‖ := one_le_norm_integer hK phi (ha.2.1 1)
+   have hD1 : 1 ≤ ‖f (a 3)‖ := one_le_norm_integer hK phi (ha.2.1 3)

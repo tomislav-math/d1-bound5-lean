@@ -1,0 +1,5 @@
+import D1Bound5.BennettTwoResidualBound
+#print D1Bound5.bennett_two_residual_scale
+#print axioms D1Bound5.bennett_two_residual_scale
+#print D1Bound5.bennettTwoClearedEntry_residual_norm_le
+#print axioms D1Bound5.bennettTwoClearedEntry_residual_norm_le

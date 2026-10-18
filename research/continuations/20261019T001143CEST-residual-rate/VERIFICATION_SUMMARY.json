@@ -1,0 +1,116 @@
+{
+  "time": "2026-10-19T00:28:50.134310+02:00",
+  "outcome": "COMPLETED_UNIT",
+  "newly_verified_modules": [
+    "BennettTwoResidualRate",
+    "BennettRootTransfer",
+    "FullRingOrdinaryHeight"
+  ],
+  "newly_verified_public_theorems": 9,
+  "definitions": 2,
+  "builds": {
+    "BennettTwoResidualRate": {
+      "source_sha256": "a959de125fdeac3f4cd04800acc29e3af47d9b0e2de609a39d3e257a4ba1c377",
+      "fingerprint": "a6c13b404277946850525386b7ca96c65e052974c74109b7f4257bce275a857e",
+      "exit": 0,
+      "seconds": 66.87290770793334,
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    },
+    "BennettRootTransfer": {
+      "source_sha256": "a38bf0ffc8b2ba8c102ba5867c75b61a824a8d23c6fce61a35bfcc498b7a884a",
+      "fingerprint": "ba45abde6f9d417e45804523034da2fda9869ccc59ce02255d3655a47904f7e7",
+      "exit": 0,
+      "seconds": 59.82563954172656,
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    },
+    "FullRingOrdinaryHeight": {
+      "source_sha256": "8899269e1cc08e9d24a38236bc862c59ba7f8badc869787d9bb0f0e08c91243a",
+      "fingerprint": "1c01ca677e2a1e2d726aa294ece26dfccda37f10ddb8fe4ad7a76686b9424183",
+      "exit": 0,
+      "seconds": 71.9628183748573,
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    }
+  },
+  "checks": [
+    {
+      "label": "residual-rate-type-axioms",
+      "pid": 75706,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261019T001143CEST-residual-rate/ResidualRateAudit.lean"
+      ],
+      "time": "2026-10-19T00:23:47.126668+02:00",
+      "exit": 0,
+      "seconds": 74.20029674982652,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "residual-rate-type-axioms.log"
+    },
+    {
+      "label": "BennettTwoResidualRate-targeted-replay",
+      "pid": 75736,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettTwoResidualRate"
+      ],
+      "time": "2026-10-19T00:25:01.598418+02:00",
+      "exit": 0,
+      "seconds": 55.0313114579767,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettTwoResidualRate-targeted-replay.log"
+    },
+    {
+      "label": "BennettRootTransfer-targeted-replay",
+      "pid": 75784,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettRootTransfer"
+      ],
+      "time": "2026-10-19T00:25:56.915489+02:00",
+      "exit": 0,
+      "seconds": 64.31526145897806,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettRootTransfer-targeted-replay.log"
+    },
+    {
+      "label": "FullRingOrdinaryHeight-targeted-replay",
+      "pid": 75876,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.FullRingOrdinaryHeight"
+      ],
+      "time": "2026-10-19T00:27:01.605156+02:00",
+      "exit": 0,
+      "seconds": 86.13281241618097,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "FullRingOrdinaryHeight-targeted-replay.log"
+    }
+  ],
+  "source_closure_count": 67,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "root_integrated": false,
+  "main_statement_proved": false,
+  "independent_review": false,
+  "whole_root_clean_checkout": false
+}

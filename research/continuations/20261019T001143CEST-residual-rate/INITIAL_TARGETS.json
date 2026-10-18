@@ -1,0 +1,31 @@
+{
+  "BennettTwoResidualBound": {
+    "accepted": true,
+    "eligible": false,
+    "missing": [],
+    "source_sha256": "ca93022505dbc1c4d74fe949e488db6dcf4bf0f1cbebbd1635b2a6e0bdfce03a"
+  },
+  "BennettTwoResidualRate": {
+    "accepted": false,
+    "eligible": true,
+    "missing": [],
+    "source_sha256": "a959de125fdeac3f4cd04800acc29e3af47d9b0e2de609a39d3e257a4ba1c377"
+  },
+  "BennettRootTransfer": {
+    "accepted": false,
+    "eligible": false,
+    "missing": [
+      "BennettTwoResidualRate"
+    ],
+    "source_sha256": "5c64458c0ea917a7540bf4cc89a1d4131c4ce0e298dff2ba0472b4c9b702ba5a"
+  },
+  "FullRingOrdinaryHeight": {
+    "accepted": false,
+    "eligible": false,
+    "missing": [
+      "BennettRootTransfer",
+      "BennettTwoResidualRate"
+    ],
+    "source_sha256": "481e024980f4ae5d5d9ad20984876e12cd660af5c858bf2acfda48951027a21c"
+  }
+}

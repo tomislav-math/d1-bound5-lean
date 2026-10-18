@@ -1,0 +1,20 @@
+--- BennettRootTransfer.before.lean
++++ BennettRootTransfer.lean
+@@ -53,7 +53,7 @@
+         Q 2 * (sB / (b * z) - θB)‖ := by rw [norm_mul, norm_mul]
+     _ ≤ ‖z‖ * ‖R‖ + ‖z‖ * (‖Q 1 * (sA / (a * z) - θA)‖ +
+         ‖Q 2 * (sB / (b * z) - θB)‖) :=
+-      add_le_add_left (mul_le_mul_of_nonneg_left (norm_add_le _ _) (norm_nonneg z)) _
++      add_le_add le_rfl (mul_le_mul_of_nonneg_left (norm_add_le _ _) (norm_nonneg z))
+     _ = _ := by rw [norm_mul, norm_mul, hnormA, hnormB]
+ 
+ /-- The actual determinant row, coefficient bounds, and residual bound
+@@ -112,7 +112,7 @@
+       _ < ((3 / 2 : ℝ) * ‖c‖ / ‖z‖) *
+           (2 * (42 * ‖b‖ ^ 3 * ‖c‖) ^ k / ‖b‖) :=
+         mul_lt_mul_of_pos_left hheight (by positivity)
+-      _ = _ := by field_simp [hB.ne', hZ.ne']; ring
++      _ = _ := by field_simp [hB.ne', hZ.ne']
+   calc
+     _ ≤ ‖z‖ * ‖R‖ + ‖z‖ * (‖Q 1‖ * ‖θA - sA / (a * z)‖ +
+         ‖Q 2‖ * ‖θB - sB / (b * z)‖) :=

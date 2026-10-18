@@ -1,0 +1,49 @@
+{
+  "time": "2026-10-19T00:28:50.134310+02:00",
+  "unknown": [],
+  "targets": {
+    "UnitPairFirstExtensionBound": {
+      "accepted_current_build": false,
+      "eligible": false,
+      "missing_count": 3,
+      "unaccepted_dependencies": [
+        "UnitPairCubicIteration",
+        "UnitPairCubic",
+        "UnitPairCubicNumeric"
+      ],
+      "ready_prerequisites": [
+        "UnitPairCubicNumeric"
+      ]
+    },
+    "UnitPairCubic": {
+      "accepted_current_build": false,
+      "eligible": false,
+      "missing_count": 1,
+      "unaccepted_dependencies": [
+        "UnitPairCubicNumeric"
+      ],
+      "ready_prerequisites": [
+        "UnitPairCubicNumeric"
+      ]
+    },
+    "UnitPairCubicIteration": {
+      "accepted_current_build": false,
+      "eligible": false,
+      "missing_count": 2,
+      "unaccepted_dependencies": [
+        "UnitPairCubic",
+        "UnitPairCubicNumeric"
+      ],
+      "ready_prerequisites": [
+        "UnitPairCubicNumeric"
+      ]
+    },
+    "UnitPairCubicNumeric": {
+      "accepted_current_build": false,
+      "eligible": true,
+      "missing_count": 0,
+      "unaccepted_dependencies": [],
+      "ready_prerequisites": []
+    }
+  }
+}
