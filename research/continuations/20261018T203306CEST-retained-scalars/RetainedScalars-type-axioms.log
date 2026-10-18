@@ -1,0 +1,46 @@
+RETAINED_SCALAR_AXIOMS_PASS D1Bound5.retained_mixed_four_first_term_lt: [propext, Classical.choice, Quot.sound]
+RETAINED_SCALAR_AXIOMS_PASS D1Bound5.retained_mixed_four_start_scalar_gap: [propext, Classical.choice, Quot.sound]
+RETAINED_SCALAR_AXIOMS_PASS D1Bound5.retained_three_mixed_scalar_gap: [propext, Classical.choice, Quot.sound]
+D1Bound5.retained_mixed_four_first_term_lt : ∀ (A B S T C D Z : ℝ),
+  1 ≤ A →
+    3 ≤ B →
+      0 < S →
+        0 < T →
+          0 < Z →
+            16 * B * S * T < C →
+              A ^ 2 * C ^ 5 / S ^ 2 < D → 3999 / 4000 * C * D < Z ^ 2 → 13 * B * S ^ 2 * T ^ 3 / Z < 1 / 100
+D1Bound5.retained_mixed_four_start_scalar_gap : ∀ (A B S T C D Z L : ℝ),
+  1 ≤ A →
+    3 ≤ B →
+      0 < S →
+        0 < T →
+          S ≤ C →
+            T ≤ C →
+              1000 < C →
+                0 < Z →
+                  16 * B * S * T < C →
+                    A ^ 2 * C ^ 5 / S ^ 2 < D →
+                      3999 / 4000 * C * D < Z ^ 2 →
+                        Z ^ 2 ≤ C * D + 1 →
+                          1 ≤ L →
+                            L < 13 * B * S ^ 2 * T ^ 3 / Z + 49 / 50 * S * T ^ 2 * Z / (A * C ^ 4) →
+                              A ^ 2 * C ^ 7 / (S ^ 2 * T ^ 4) < D
+D1Bound5.retained_three_mixed_scalar_gap : ∀ (A B S T C W Q L lam : ℝ),
+  1 ≤ A →
+    3 ≤ B →
+      3 ≤ S →
+        S ≤ T →
+          0 < W →
+            0 < Q →
+              Q ≤ 8 →
+                0 < lam →
+                  lam ≤ 1 / 10 →
+                    2 * A * B * S < T →
+                      B ^ 2 * T ^ 3 < 10001 / 10000 * C →
+                        3999 / 4000 * T * C < W ^ 2 →
+                          W ^ 2 ≤ T * C + 1 →
+                            1 ≤ L →
+                              L < 51 * (Q * B * S ^ 2) / (100 * W) + lam * (Q * B * S ^ 2) * W / (A * B * S * T ^ 3) →
+                                9999 / 10000 / lam ^ 2 * (1 / Q - 51051 / 400000 / (A ^ 2 * B ^ 2)) ^ 2 *
+                                    (A ^ 2 * T ^ 5 / S ^ 2) <
+                                  C

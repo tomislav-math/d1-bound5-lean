@@ -337,3 +337,8 @@ The three previously isolated units are now integrated as ComplexHalfBinomial, H
 
 The public manuscript and frozen v4 have identical document bodies: only PDF metadata and the printed date differ. Both hourly formalization automations were paused at the author request. Current new interpolation, cross-block and Bennett drafts are excluded from accepted imports until their tests succeed.
 
+
+## 18 October 2026 — retained mixed scalar growth verified
+
+RetainedMixedFourScalar (two theorems) and the repaired RetainedMixedScalar (one theorem) passed pinned guarded builds, exact type/transitive-axiom audits and installed SAME-kernel targeted replays. Original theorem headers and limits are unchanged. These are separately verified working dependencies, not accepted-root integration. CoherentRetainedMixedGap still requires CoherentRetainedMixedSizes and CoherentRetainedMixedForms. Evidence: research/continuations/20261018T203306CEST-retained-scalars/. MainStatement remains UNPROVED.
+

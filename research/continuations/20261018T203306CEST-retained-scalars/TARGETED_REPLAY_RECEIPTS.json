@@ -1,0 +1,52 @@
+[
+  {
+    "label": "RetainedScalars-type-axioms",
+    "pid": 60710,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "lean",
+      "/Users/tp/Lean/D1Bound5/research/continuations/20261018T203306CEST-retained-scalars/RetainedScalarsAudit.lean"
+    ],
+    "time": "2026-10-18T20:39:11.085331+02:00",
+    "exit": 0,
+    "seconds": 12.184963000006974,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "RetainedScalars-type-axioms.log"
+  },
+  {
+    "label": "RetainedMixedFourScalar-targeted-replay",
+    "pid": 60730,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--verbose",
+      "D1Bound5.RetainedMixedFourScalar"
+    ],
+    "time": "2026-10-18T20:39:23.287495+02:00",
+    "exit": 0,
+    "seconds": 10.352367292158306,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "RetainedMixedFourScalar-targeted-replay.log"
+  },
+  {
+    "label": "RetainedMixedScalar-targeted-replay",
+    "pid": 60754,
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "env",
+      "leanchecker",
+      "--verbose",
+      "D1Bound5.RetainedMixedScalar"
+    ],
+    "time": "2026-10-18T20:39:33.654977+02:00",
+    "exit": 0,
+    "seconds": 9.964865417219698,
+    "timed_out": false,
+    "guards_unchanged": true,
+    "log": "RetainedMixedScalar-targeted-replay.log"
+  }
+]

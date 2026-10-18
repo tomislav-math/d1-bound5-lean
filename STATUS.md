@@ -1,5 +1,9 @@
 # Status
 
+## 18 October 2026 — retained mixed scalar growth verified
+
+RetainedMixedFourScalar (two theorems) and the repaired RetainedMixedScalar (one theorem) passed pinned guarded builds, exact type/transitive-axiom audits and installed SAME-kernel targeted replays. Original theorem headers and limits are unchanged. These are separately verified working dependencies, not accepted-root integration. CoherentRetainedMixedGap still requires CoherentRetainedMixedSizes and CoherentRetainedMixedForms. Evidence: research/continuations/20261018T203306CEST-retained-scalars/. MainStatement remains UNPROVED.
+
 ## 18 October 2026 — two Bennett analytic working modules verified
 
 `BennettResidualMajorant` and `BennettPositiveSeries` now have repaired guarded pinned builds, exact audits of fourteen original theorems plus one helper and one definition, and successful installed SAME-kernel targeted replays. The combined fresh closure replay exceeded its 240-second budget and is unconfirmed. No original theorem headers or budgets were weakened. These modules are not root-integrated and MainStatement remains UNPROVED. Evidence: `research/continuations/20261018T1901CEST-bennett-analytic/VERIFICATION_SUMMARY.json`. Next ready reviewed repairs: RetainedMixedFourScalar, RetainedMixedScalar. Automation/diagnostic settings were not changed.

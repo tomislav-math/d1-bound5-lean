@@ -1,0 +1,22 @@
+--- wave119
++++ repaired
+@@ -58,8 +58,8 @@
+   have hWlower : alpha*A*T^3/S < W := by
+     have hden : 0 < A^2*B^2*(A*T^3) := by positivity
+     have h := mul_lt_mul_of_pos_right hwindow hden
+-    have hclean : A^3*B^2*T^3 <
+-        (51051/400000 : ℝ)*Q*A*T^3 + lam*Q*S*W*A^2*B^2 := by
++    have hclean : A^2*B^2*T^3 <
++        (51051/400000 : ℝ)*Q*T^3 + lam*Q*S*W*A*B^2 := by
+       field_simp [hAn, hBn, hTn] at h
+       nlinarith only [h]
+     apply (div_lt_iff₀ hS0).2
+@@ -85,7 +85,7 @@
+   have hYbase : T^2 < Y := by
+     have hmul := mul_lt_mul_of_pos_right halpha (by positivity : 0 < A*T^3/S)
+     dsimp [Y]
+-    nlinarith only [hbase, hmul]
++    exact hbase.trans_lt (by simpa only [one_mul, mul_div_assoc, mul_assoc] using hmul)
+   have hT4 : (10000 : ℝ) < T^4 := by
+     have ht2 : (324 : ℝ) < T^2 := by nlinarith only [hT18, sq_nonneg (T-18)]
+     nlinarith only [ht2, sq_nonneg (T^2-324)]
