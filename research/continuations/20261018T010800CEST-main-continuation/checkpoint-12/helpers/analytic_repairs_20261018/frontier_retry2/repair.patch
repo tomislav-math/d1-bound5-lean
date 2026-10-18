@@ -1,0 +1,18 @@
+--- remotebc43
++++ FrontierScalarReduction.lean
+@@ -71,10 +71,11 @@
+     simpa only [heq] using h
+   have hnormal : tau ≤
+       (2*K*(A^2+B^2+C^2+T^2)+L*(A*B+A*C+A*T+B*C+B*T+C*T)+Q)/(A^2*B^2*C^2) := by
+-    have h := div_le_div_of_nonneg_right hupper (by positivity : 0 ≤ A^2*B^2*C^2)
+-    convert h using 1
+-    field_simp [hAn, hBn, hCn]
+-    ring
++    calc
++      tau = (A*B*C*T)/(A^2*B^2*C^2) := by
++        change T/(A*B*C) = (A*B*C*T)/(A^2*B^2*C^2)
++        field_simp [hAn, hBn, hCn] <;> ring
++      _ ≤ _ := div_le_div_of_nonneg_right hupper (by positivity : 0 ≤ A^2*B^2*C^2)
+   change tau ≤ _
+   calc
+     tau ≤ _ := hnormal

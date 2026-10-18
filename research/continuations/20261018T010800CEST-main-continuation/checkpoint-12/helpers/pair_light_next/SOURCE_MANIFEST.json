@@ -1,0 +1,55 @@
+{
+  "status": "Definition module kernel PASS reported by coordinator; bridge and concrete pilot remain separately gated",
+  "source": "pair_light_next/PairLightArithmetic.lean",
+  "source_sha256": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb",
+  "source_bytes": 5794,
+  "imports": [
+    "Init"
+  ],
+  "external_package_import_count": 0,
+  "d1bound5_import_count": 0,
+  "mathlib_import_count": 0,
+  "lean_core_transitive_count": "not enumerated",
+  "definitions": [
+    "PairLightCoordinate",
+    "PairLightSignature",
+    "PairLightCachedVertex",
+    "pairLightProductPlusOne",
+    "pairLightNorm",
+    "pairLightCoordinateResidues",
+    "pairLightCoordinateSignature",
+    "pairLightResidueMaskNatBool",
+    "pairLightSelectedMaskRejectBool",
+    "pairLightNegativeIntegerObstructionBool",
+    "pairLightFloorObstructionBool",
+    "pairLightSelectedFloorRowBool",
+    "pairLightSelectedFloorIndependentBool",
+    "pairLightSelectedFloorIndependentCertificateBool"
+  ],
+  "reference_sha256": {
+    "pair_witness_next/PairRawSelectedFloorWitnesses.lean": "16663ee7ed18799dce07207a0b374d05787f04c1c37fca43ad73b4907ad0a013",
+    "pair_witness_next/PairResidueMaskNat.lean": "f838a6119a4b84b5889032242bf1d0b6ceb9a78264fea0197c14bf45d2cae39f",
+    "pair_witness_next/PairCachedResidues.lean": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100",
+    "pair_witness_next/PairNegativeIntegerObstruction.lean": "099be79d73801fcfb76bdc30024dc74b43ab6bdb2e935fcd75d8e115af902e02",
+    "floor_next/QuadSquareFloorObstruction.lean": "189bc6919f96623fb014a3f2f03e165069f8dce0da25caec94ef0406cc2c9b3e"
+  },
+  "mandatory_next_step": "Exact Boolean equality bridge for arbitrary inputs to accepted raw checker, followed by unchanged accepted soundness.",
+  "bridge_source": "pair_light_next/PairLightArithmeticBridge.lean",
+  "bridge_source_sha256": "74989ea9779fa4da2831c156377a44908c388871054e7832fd443986758442a6",
+  "definition_source_review": "audit_next/pair_light_arithmetic_review.json",
+  "bridge_source_review": "audit_next/pair_light_bridge_74989ea_review.json",
+  "coordinator_reported_definition_pass": {
+    "utc": "2026-10-18T04:41:42Z",
+    "seconds": 6.33,
+    "source_sha256": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb",
+    "receipt_not_independently_read_by_this_agent": true
+  },
+  "data_assembly_source_review": "audit_next/light34_data_assembly_review.json",
+  "bridge_original_reviewed_sha256": "35ced62467e1e2a03eb4def796ac4065fa092677e5d5759cf25c970faaf479f9",
+  "bridge_original_source_review": "audit_next/pair_light_bridge_review.json",
+  "data_retry_source": "pair_light_next/left34_v2/SmallPairLightData34.lean",
+  "data_retry_sha256": "6eb18ec1ec46c6b05910af2bed24ce3e93897cf152ae676aa67eb92e8f49689c",
+  "data_retry_source_review": "audit_next/LIGHT34_DATA_REPAIR.json",
+  "bridge_previous_reviewed_sha256": "91befed7666b5e9d6c03683a36ae4afcd0bfdf3a649140e1eb549d6ff230f0c0",
+  "bridge_previous_source_review": "audit_next/pair_light_bridge_91befed_review.json"
+}

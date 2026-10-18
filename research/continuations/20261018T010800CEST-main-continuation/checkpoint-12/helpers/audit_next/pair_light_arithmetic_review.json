@@ -1,0 +1,27 @@
+{
+  "status": "Independent mathematical/source correspondence PASS; definitions only, no compilation or soundness theorem claimed",
+  "source": "pair_light_next/PairLightArithmetic.lean",
+  "source_sha256": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb",
+  "source_bytes": 5794,
+  "reference_sources": {
+    "pair_witness_next/PairRawSelectedFloorWitnesses.lean": "16663ee7ed18799dce07207a0b374d05787f04c1c37fca43ad73b4907ad0a013",
+    "pair_witness_next/PairResidueMaskNat.lean": "f838a6119a4b84b5889032242bf1d0b6ceb9a78264fea0197c14bf45d2cae39f",
+    "pair_witness_next/PairCachedResidues.lean": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100",
+    "pair_witness_next/PairNegativeIntegerObstruction.lean": "099be79d73801fcfb76bdc30024dc74b43ab6bdb2e935fcd75d8e115af902e02",
+    "floor_next/QuadSquareFloorObstruction.lean": "189bc6919f96623fb014a3f2f03e165069f8dce0da25caec94ef0406cc2c9b3e"
+  },
+  "scope": "Full source read against accepted raw selected checker and its actual residue, negative-integer and floor definitions. No remote tool call or source edit. Pinned Init export/API check is Bennett-owned, not independently reproduced here.",
+  "findings": [
+    "Product coordinates are exactly (xu\u2212nu*yv+1, xv+yu+tau*yv); quadratic norm is re\u00b2+tau*re*im+nu*im\u00b2 with correct signs.",
+    "At positive modulus k+1, integer Euclidean remainder followed by toNat equals the ZMod integer-cast value. The same applies to \u2212nu and tau; modulus1 is included. Arbitrary supplied Nat residue values still enter the identical raw polynomial, with no hidden reducedness or mask-validity hypothesis.",
+    "Negative integer guard matches strict im=0,re<0 and the tau0/tau1 divisibility branches exactly, including unsupported tau, zero radicand and nonpositive scale behavior.",
+    "Floor checker has identical branch order and strict inequalities for positive real, trace0-scaled negative, trace1-scaled negative and nonreal norm cases. Its replacement norm is an exact coordinate identity.",
+    "Packed row traversal is driven by full tail length. Digits0..24 use aligned optional lookup, any missing mask/signature rejects;25..29 reject;30 compares coordinates;31 preserves guard-first order and consumes one floor only if guard fails. A zero word never ends a nonempty tail. Final code and remaining floors must both vanish.",
+    "Outer traversal ends only on matching empty lists. Certificate still checks exact original ordered vertex coverage and every canonical signature before independence. Coordinate projection injectivity transfers both vertex equality and list equality, without narrowing inputs.",
+    "Only definitions/aliases are added. No original checker/data/import is changed, and no theorem asserts soundness yet."
+  ],
+  "blocking_obligation": "Before transporting concrete lightweight certificates, a separate kernel-checked exact Boolean equality bridge must cover arbitrary parameters, malformed signatures/tags/lengths/floors and whole ordered coverage. Then reuse accepted raw soundness with its original positive-discriminant hypothesis. Source review alone does not discharge this.",
+  "issues": [],
+  "compiler_claim": false,
+  "runtime_claim": false
+}

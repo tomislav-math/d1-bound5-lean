@@ -1,0 +1,32 @@
+{
+  "status": "Independent static dependency and copier safety review PASS; no Lean/remote/production-copy action",
+  "materializer_sha256": "303299e125503841fa9fe651186d9b10e44faaefaefefacd2f049ade6130f1b0",
+  "requirements_sha256": "5a15034bf8bad9a11647231e683f1006f5b4512c3f715a21269555273b6a85fb",
+  "generator_sha256": "ec862156543e3f4304b253e54591adfbcdc32acfd4f459f6fd8c16547bf32174",
+  "expected_files": 134,
+  "total_bytes": 48660960,
+  "groups": {
+    "literal_generator_pins": 14,
+    "backend_pins": 12,
+    "original_sources": 48,
+    "sieves": 11,
+    "floor_rows": 48,
+    "exact_root_routine": 1,
+    "generator": 1
+  },
+  "exact_required_path_union": true,
+  "all_local_sizes_and_sha256_rechecked": true,
+  "dependency_method": "Full selected generator and transitive source-only read paths inspected. Independently reconstructed actual input union via ast.literal_eval and pinned JSON maps; did not import or execute generator/materializer for this reconstruction.",
+  "scope": "Complete fixed workspace inputs for all48 diagnostics and any permitted nonstructural staged row. Optional --expected-manifest is an explicitly supplied external argument, not silently claimed bundled. Historical closure/graph JSON are not read in source_only mode; floor Lean strings are reconstructed.",
+  "safety": [
+    "Default main only inventories after checking destination absent; missing files return2 before materialization.",
+    "All candidates require basename+exact size+SHA; same-name historical files cannot substitute wrong bytes.",
+    "Descriptor traversal rejects symlink ancestors and nonregular leaf files; stable size/mtime/ctime/inode checks surround reads.",
+    "All selected inputs are freshly reread and rehashed before destination mkdir; output must be absent.",
+    "Exclusive no-follow writes remain beneath new destination descriptor; no overwrite/delete/Git/network/compiler operation.",
+    "Requirements hash pinned; duplicate JSON keys/paths, file-directory conflicts, traversal, reserved manifest path rejected.",
+    "Manifest written after all payloads; interruption may leave a new partial bundle, as documented. No atomic-completion claim."
+  ],
+  "dummy_test_result": "Independently reran provided ten local tempfile tests with python -B:10 PASS. Only dummy temporary files were written and cleaned.",
+  "limitations": "Source audit and local filesystem tests are not kernel acceptance and do not execute the production copy. Root remains sole remote writer/compiler."
+}

@@ -1,0 +1,111 @@
+--- prepare_checkpoint11.py
++++ prepare_checkpoint12.py
+@@ -1,4 +1,4 @@
+-"""Prepare the eleventh unaccepted research delta; never commit or push.
++"""Prepare the twelfth unaccepted research delta; never commit or push.
+ 
+ The coordinator must review this script before running it on the authorized
+ Mac. Runtime state and source bytes are captured under the intake lock. The
+@@ -19,13 +19,13 @@
+ 
+ ROOT = Path('/Users/tp/Lean/D1Bound5')
+ RUN = ROOT / 'research/continuations/20261018T010800CEST-main-continuation'
+-DEST = RUN / 'checkpoint-11'
+-WORK = RUN / ('checkpoint-11-preparing-' + str(os.getpid()))
+-HEAD = 'c12aaebc684e6c012d982e31c29ca9925d38d8ec'
+-FIRST_WAVE = 78
+-MINIMUM_LATEST_WAVE = 83
+-RECORD = ROOT / 'records/runs/20261018T010800CEST-main-continuation-CHECKPOINT-11.md'
+-REVIEWED = RUN / 'checkpoint-11-reviewed-paths.json'
++DEST = RUN / 'checkpoint-12'
++WORK = RUN / ('checkpoint-12-preparing-' + str(os.getpid()))
++HEAD = 'e9b65ba5dd026a300b90815f2fb2969ace7fdeda'
++FIRST_WAVE = 84
++MINIMUM_LATEST_WAVE = 86
++RECORD = ROOT / 'records/runs/20261018T010800CEST-main-continuation-CHECKPOINT-12.md'
++REVIEWED = RUN / 'checkpoint-12-reviewed-paths.json'
+ FROZEN_PAPER = Path('/Users/tp/Lean/D1Bound5Handoff/verification/output/D1_bound5-v4.tex')
+ PAPER_SHA = '776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3'
+ 
+@@ -68,11 +68,16 @@
+     'continuation_driver_parallel.py', 'continuation_driver_parallel_REVIEW.md',
+     'continuation_driver_parallel_dummy_test.py', 'continuation-builds.json',
+     'continuation-active.json', 'continuation-queue.json',
+-    'continuation-trusted-baseline.json', 'prepare_checkpoint11.py', 'stage_checkpoint11.py',
+-    'checkpoint-10-push-receipt.json', 'checkpoint-10-index-review.json',
+-    'expanded22-review.json', 'narrow22-preparation.json',
+-    'selected34-pass-and-raw-priority.json',
++    'continuation-trusted-baseline.json', 'prepare_checkpoint12.py', 'stage_checkpoint12.py',
++    'checkpoint-11-push-receipt.json', 'checkpoint-11-index-review.json',
++    'checkpoint-11-first-push-interruption.json',
++    'selected-floor-regeneration.log', 'selected-scale47-reproduction.log',
++    'selected-scale-materialization.log',
++    'selected-scale-inputs/materialization_manifest.json',
++    'regenerated-selected-floor-rows/regeneration_manifest.json',
++    'prepared-selected47/manifest.json', 'prepared-light34/manifest.json',
+ ]
++
+ 
+ 
+ def discover_runtime_names():
+@@ -113,8 +118,8 @@
+         # Capture all local Lean modules for exact closure fingerprints, including
+         # tracked accepted prerequisites; only untracked drafts enter SOURCE_MAP.
+         source_bytes = {p.stem: stable_read(p) for p in sorted((ROOT / 'D1Bound5').glob('*.lean'))}
+-        old_map_bytes = stable_read(RUN / 'checkpoint-10/SOURCE_MAP.json')
+-        helpers_packet = stable_read(RUN / 'checkpoint11-helpers.json')
++        old_map_bytes = stable_read(RUN / 'checkpoint-11/SOURCE_MAP.json')
++        helpers_packet = stable_read(RUN / 'checkpoint12-helpers.json')
+         wave_files = {}
+         for path in RUN.glob('wave*.json'):
+             match = re.fullmatch(r'wave(\d+)-(intake|receipt)\.json', path.name)
+@@ -214,7 +219,9 @@
+     'PairSelectedCachedMask', 'PairSelectedFloorWitnesses', 'PairCachedFloorChunks',
+     'PairSelectedFloorChunks', 'SmallPairSelectedData34',
+     'SmallPairSelectedLeft34', 'SmallPairSelectedRight34', 'SmallPairGraphTriangle34',
+-    'PairResidueMaskNat', 'PairRawSelectedFloorWitnesses',
++    'PairResidueMaskNat', 'PairRawSelectedFloorWitnesses', 'SmallPairRawSelectedLeft34',
++    'PairLightArithmetic', 'PairLightArithmeticBridge',
++    'SmallPairLightData34', 'SmallPairLightLeft34', 'SmallPairLightAssembly34',
+     'QuadSquareFloorObstruction', 'PairCachedFloorWitnesses',
+     'UnitPairAxes', 'UnitPairSymmetric', 'EisensteinPellDescent',
+     'FiniteClosedWindow', 'FrontierScalarReduction', 'PellMatchingData10',
+@@ -287,7 +294,7 @@
+ 
+ # Every log copied below belongs to a terminal ledger row captured above. Never
+ # copy a live compiler stream merely because it is present in the log directory.
+-parents = [RUN / f'checkpoint-{n}/verification/continuation-builds' for n in (10, 9, 8, 7, 6, 5)]
++parents = [RUN / f'checkpoint-{n}/verification/continuation-builds' for n in (11, 10, 9, 8, 7, 6, 5)]
+ parents += [RUN / 'checkpoint-4/addendum/verification/continuation-builds',
+             RUN / 'checkpoint-4/verification/continuation-builds',
+             RUN / 'checkpoint-3/verification/continuation-builds']
+@@ -312,7 +319,7 @@
+     assert not forbidden.search(scope['remove_comments'](source_bytes[Path(row['source']).stem].decode())), row['source']
+ 
+ table = '\n'.join('| ' + row['module'] + ' | ' + row['status'] + ' |' for row in statuses)
+-record_bytes = f'''# Main-theorem continuation: eleventh research checkpoint
++record_bytes = f'''# Main-theorem continuation: twelfth research checkpoint
+ 
+ Captured {stamp}. **MainStatement remains UNPROVED.** The complete assembly is a research source artifact; its full dependency closure has not passed the required acceptance gates. The accepted root/configuration and historical 107-module verification baseline remain unchanged. This is a private research backup, with the manuscript hash pinned to the same frozen source.
+ 
+@@ -324,11 +331,15 @@
+ 
+ This snapshot includes every completed intake/receipt pair from wave {FIRST_WAVE} through the latest observed wave {latest_wave}, with no missing or unpaired wave. The exact packet source hashes are checked against their intake receipts. These are source-intake receipts, not compilation receipts. Status targets include every module from these waves as well as the main assembly and selected earlier milestones.
+ 
+-The new source material includes the expanded row-22 import reduction, raw selected-mask checker work and selected row-34 triangle integration, and scalar/compiler repairs. Statuses for the selected left/right row-34 certificates, finite closed window, Eisenstein descent and every later intake are derived individually from the captured ledger; pending work and prior timeouts remain explicit. A lightweight import or checker replacement has no acceptance claim until its current closure has a matching successful terminal receipt.
+-
+-Current runtime JSON, newly paired intake packets, preparation/review/priority records, and prepared artifact manifests are captured automatically. INTAKE_CAPTURE.json enumerates their exact bytes and hashes and the helper-packet hash. The checkpoint11-helpers.json packet supplies reproducible local preparation and independent audit material; it is decoded into helpers without executing its contents. Generation and source review do not prove Lean certificates.
+-
+-The source map references unchanged exact drafts already stored in checkpoint 10 or earlier. Only terminal-ledger logs are considered, and byte-identical logs already stored in checkpoints 10, 9, 8, 7, 6, 5, 4/addendum, 4 and 3 are not duplicated. Active compiler logs are excluded. Queue and active receipts are point-in-time snapshots, not completion receipts.
++The current source and ledger capture includes the selected-right and raw-selected-left row-34 attempts, the lightweight arithmetic definitions, their exact checker bridge, and the new lightweight data, isolated left computation and assembly. Their current statuses are derived from matching terminal receipts; a historical timeout does not describe a changed source, and a reviewed or queued lightweight assembly is not called accepted. PellMatchingData10 remains a separate recorded target. No right-class, triangle or main-theorem conclusion is inferred from a successful left-only checker.
++
++The selected-floor regeneration, selected-scale materialization and row-47 reproduction logs are coordinator-identified terminal preparation logs. They and the exact materialization/regeneration/prepared manifests preserve reproducibility evidence only; Python reproduction or a prepared row-47 source set is not a Lean acceptance or intake claim. No prepared source is inserted into the project by these checkpoint scripts.
++
++The checkpoint-11 push history is recorded by its first-push interruption and final push receipts. The first HTTPS attempt stalled for approximately 530 seconds, its owned transport was terminated while the remote still named the old commit, and the per-command HTTP/1.1 retry completed in approximately 7.6 seconds. This transport history is separate from theorem verification; no global Git configuration change is made here.
++
++Current runtime JSON, newly paired intake packets, preparation/review/priority records, and prepared artifact manifests are captured automatically. INTAKE_CAPTURE.json enumerates their exact bytes and hashes and the helper-packet hash. The checkpoint12-helpers.json packet supplies reproducible local preparation and independent audit material; it is decoded into helpers without executing its contents. Generation and source review do not prove Lean certificates.
++
++The source map references unchanged exact drafts already stored in checkpoint 11 or earlier. Only terminal-ledger logs are considered, and byte-identical logs already stored in checkpoints 11, 10, 9, 8, 7, 6, 5, 4/addendum, 4 and 3 are not duplicated. Active compiler logs are excluded. Queue and active receipts are point-in-time snapshots, not completion receipts.
+ 
+ Every required concrete certificate, branch endpoint, full main closure, axiom audit and final same-kernel replay must still pass the coordinator's gates. No root integration or whole-root replay claim is made. Both scheduled tasks remain paused. This record is not a push receipt.
+ '''.encode()

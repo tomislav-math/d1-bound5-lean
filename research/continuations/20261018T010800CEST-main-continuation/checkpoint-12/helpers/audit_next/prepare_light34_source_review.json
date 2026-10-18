@@ -1,0 +1,29 @@
+{
+  "status": "Independent source review PASS; converter not executed and no generated output reviewed",
+  "source": "pair_light_next/prepare_light34.py",
+  "source_sha256": "f9f9b1d858a7ccfc8e25bc9bd7315e39ea1b7a1ea7bee648780d34d4b647be59",
+  "source_review_pass": true,
+  "reviewer": "/root/source_audit",
+  "frozen_input_hashes_rechecked": {
+    "pair_backend_next/staged_pilots_floor_fix/D1Bound5/SmallPairGraphInputs34.lean": "80081fbe80d8267dc85a4c97cf17a7c063a9e61364395f31e58acc93a3d048b9",
+    "pair_literal_next/generated/SmallPairLiteralCachedData34.lean": "2b14c33742c58890230b20e7b3ee455905f4ac50c88dc86a4da3bd7719777af1",
+    "pair_selected_next/generated/SmallPairSelectedData34.lean": "9a05216afd22493a58f74a21dd802492e7d8d57e0e80180cb8c7e7bd0d6e06c6",
+    "finite_fast_next/sieves/SmallPairSieve_1_2.lean": "0e06eb108afce10f63dd87b8402973d477820e1a7d76cfa29f8e0be3d77d5235",
+    "pair_light_next/PairLightArithmetic.lean": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb"
+  },
+  "method": "Full source inspection, syntax-only ast.parse and static extraction/hash verification of five pinned inputs; no import/execution of converter, no data generation, no Lean/remote action.",
+  "findings": [
+    "Bridge gate reads exact bridge bytes and requires matching source_sha256, literal true source_review_pass and nonempty named reviewer before parsing/generating. This is a source-review gate only; kernel acceptance is explicitly not asserted.",
+    "Original457 vertices are parsed with exhaustive unmatched-text rejection and uniqueness check. Actual color bit0 indices supply229 ordered left vertices; high color bits reject. Literal cached projection must equal exactly that ordered split.",
+    "All25 original masks remain in original sieve order with k-index, so modulus is k+1. Every signature is checked against exact signed-coordinate residues; no mask/signature value is recomputed into a different sequence.",
+    "Packed rows and floor lists are copied from frozen selected source via literal parsing. Counts, nonnegative words/floors, final(0,[]) and excess digit bounds are checked; exactly2floors retained. Full-tail26106pair semantics remains delegated to reviewed checker.",
+    "Emits only new lightweight data and isolated arithmetic decide+kernel theorem. It does not assert any original full-ring/class theorem. Manifest explicitly leaves four data equalities and generic bridge as mandatory assembly obligations.",
+    "Output must be new and cannot contain workspace; mkdir refuses preexisting destination. All parsing/pin/gate checks occur before writes. No installation, compiler, network or Git operation. Original pinned files are reread unchanged afterward."
+  ],
+  "limitations": [
+    "No actual bridge review receipt issued by this converter review; bridge source review and root authorization must precede generation.",
+    "Generated output remains uncompiled and must be independently compared plus kernel checked; exact sieve/vertices/cache/rows equality to original data is not replaced by Python checks.",
+    "As with other optional generators, interrupted output can leave a new incomplete directory; no atomic-completion claim."
+  ],
+  "issues": []
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "name": "SmallQuadruple",
+    "exit": 0,
+    "seconds": 112.41174645908177,
+    "source_sha256": "711961f35418258108807ffc2f351fdfe390fbcae78fcb16809267ab419a0806",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:28:11.578446+00:00"
+  },
+  {
+    "name": "SmallSextupleReduction",
+    "exit": 1,
+    "seconds": 90.92466420773417,
+    "source_sha256": "4789e37bc7be370dca7760f7e8701eb6626196e753fc3782652d88cf791c3d64",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:29:42.517771+00:00"
+  },
+  {
+    "name": "BennettPartialFractions",
+    "exit": 1,
+    "seconds": 36.05696470756084,
+    "source_sha256": "f7f7e7b0037fe6f4456a3f7f6adc6b834dc1d709eba87e7a15ecc386ed2aa010",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:30:18.580747+00:00"
+  },
+  {
+    "name": "BennettBinomialTransfer",
+    "exit": 0,
+    "seconds": 29.12052150024101,
+    "source_sha256": "7c8a669a4f1cc287328c81f5b671e332dd23a6d5cc77c366017077852274896c",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:30:47.704123+00:00"
+  },
+  {
+    "name": "BennettClearedResidues",
+    "exit": 0,
+    "seconds": 27.447023707907647,
+    "source_sha256": "ec76df5d4e2c4d6b07d0919f3d7f1eca9b85a57c220d930e6ae87c93827d8f29",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:31:15.152618+00:00"
+  },
+  {
+    "name": "BennettLocalResidues",
+    "status": "BLOCKED",
+    "dependencies": [
+      "BennettPartialFractions"
+    ]
+  },
+  {
+    "name": "BennettResiduePolynomials",
+    "exit": 1,
+    "seconds": 47.07641041697934,
+    "source_sha256": "841427398b3accc0992da179718a3298a8303809d161ed6857733241991f1a4a",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:32:02.231875+00:00"
+  },
+  {
+    "name": "BennettResidualCancellation",
+    "status": "BLOCKED",
+    "dependencies": [
+      "BennettResiduePolynomials",
+      "BennettLocalResidues"
+    ]
+  },
+  {
+    "name": "BennettDeterminantConstant",
+    "status": "BLOCKED",
+    "dependencies": [
+      "BennettResidualCancellation"
+    ]
+  },
+  {
+    "name": "BennettNodeRemoval",
+    "status": "BLOCKED",
+    "dependencies": [
+      "BennettDeterminantConstant"
+    ]
+  },
+  {
+    "name": "BennettChooseNonzero",
+    "exit": 0,
+    "seconds": 39.95589670818299,
+    "source_sha256": "242284e834a07d1f10f92c6ff0dc397a65048f9ca805d58c05766b00a9bc4ab5",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:32:42.198831+00:00"
+  },
+  {
+    "name": "BennettDeterminantFormula",
+    "status": "BLOCKED",
+    "dependencies": [
+      "BennettNodeRemoval"
+    ]
+  },
+  {
+    "name": "BennettDeterminantNonzero",
+    "status": "BLOCKED",
+    "dependencies": [
+      "BennettDeterminantFormula"
+    ]
+  },
+  {
+    "name": "CrossBlockUpper",
+    "exit": 1,
+    "seconds": 88.21939995791763,
+    "source_sha256": "89edc282b9e6d017f860d77d81a59b3a9936f149f2c9011e8ecaf1e5b68c6b06",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:34:10.427987+00:00"
+  },
+  {
+    "name": "CrossBlockGrowth",
+    "status": "BLOCKED",
+    "dependencies": [
+      "CrossBlockUpper"
+    ]
+  },
+  {
+    "name": "CrossBlockTuple",
+    "status": "BLOCKED",
+    "dependencies": [
+      "CrossBlockGrowth"
+    ]
+  },
+  {
+    "name": "CoherentPolynomialWeights",
+    "exit": 0,
+    "seconds": 132.78282529162243,
+    "source_sha256": "f098961571ae9eda9b1aeb7c0bb7cf7d0b039a9b7e5f64da44f922daabe473a5",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:36:23.226063+00:00"
+  },
+  {
+    "name": "CoherentQuotientForms",
+    "exit": 1,
+    "seconds": 163.11128516728058,
+    "source_sha256": "a7b3f3bf738c57da4d05b345b53c762189bb821fd2270b25bb0d38649a32371d",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:39:06.352775+00:00"
+  },
+  {
+    "name": "CoherentTwoVanishing",
+    "exit": 0,
+    "seconds": 143.80264991614968,
+    "source_sha256": "3b9611037cfb35deff1d19449ec5b783d2b2588efa17cbfa510be1c3878acd11",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:41:30.172157+00:00"
+  },
+  {
+    "name": "CoherentTwoSize",
+    "status": "BLOCKED",
+    "dependencies": [
+      "CoherentQuotientForms"
+    ]
+  },
+  {
+    "name": "CoherentNearOne",
+    "exit": 0,
+    "seconds": 94.31956337485462,
+    "source_sha256": "2bc9cb36fbc13ebd4a45c12aad522c318dab7df9ff1f0b30190b7ecf486f48dd",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:43:04.519338+00:00"
+  },
+  {
+    "name": "OneThreeNegative",
+    "exit": 1,
+    "seconds": 155.5324249160476,
+    "source_sha256": "6113e5b0e06c9632adba4c7515d0d7f4769e533064fe1459c5c642cf4405d042",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:45:40.090440+00:00"
+  },
+  {
+    "name": "DescentDenominator",
+    "exit": 1,
+    "seconds": 124.42184616671875,
+    "source_sha256": "d9fa2684f7c94f979c01131a2ead16e5d2881f927dc6936b4ef4f47e97848c23",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:47:44.525982+00:00"
+  },
+  {
+    "name": "DescentNorm",
+    "exit": 1,
+    "seconds": 84.80413341615349,
+    "source_sha256": "6309c62fcd4903a569e0c578e60929253cc2e264cce8dd0d660799342a26291f",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:49:09.344218+00:00"
+  },
+  {
+    "name": "FullRingDescent",
+    "status": "BLOCKED",
+    "dependencies": [
+      "DescentNorm",
+      "DescentDenominator"
+    ]
+  },
+  {
+    "name": "SmallTripleCheck",
+    "exit": 0,
+    "seconds": 30.53555929241702,
+    "source_sha256": "1f75bcdaa9e326145897ef273ea3989447fff478e71849b1db21c3aa9abd5c19",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:49:39.884290+00:00"
+  },
+  {
+    "name": "SmallTripleData",
+    "exit": 0,
+    "seconds": 42.116786167025566,
+    "source_sha256": "d79644481c842f2a40b2f5554666f54fa185f12915c38d31e4f1b24ec16844da",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:50:22.006045+00:00"
+  },
+  {
+    "name": "SmallTripleClassification",
+    "exit": 1,
+    "seconds": 60.07403741683811,
+    "source_sha256": "f17b68a2328d7502a8849af67ca8e41b634ad73bffd5c752e8764303e3aa18bb",
+    "source_unchanged": true,
+    "utc": "2026-10-17T23:51:22.173694+00:00"
+  }
+]

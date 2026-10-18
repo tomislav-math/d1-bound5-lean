@@ -1,0 +1,49 @@
+{
+  "status": "Independent actual-data replay and assembly source review PASS; no Lean compilation",
+  "files": {
+    "SmallPairLightAssembly34.lean": {
+      "sha256": "6a0195e9356ce602881ba23270aeac451918eed77e30e3bdb8e3b35be0fb5140",
+      "bytes": 1773
+    },
+    "SmallPairLightData34.lean": {
+      "sha256": "49cf35338156ecb1931249f486271e229055efff5ae4e02760660236fac3c46a",
+      "bytes": 373049
+    },
+    "SmallPairLightLeft34.lean": {
+      "sha256": "734d15677639f0fedfc48da6132ef1e0408a7c506f8c499f9b3f9d1a045be66e",
+      "bytes": 478
+    }
+  },
+  "data_manifest_sha256": "917b25378fc82cb0db5b9094f149fd68a88f98afbf82f6aa5982a214ce937c5d",
+  "reference_sources": {
+    "pair_backend_next/staged_pilots_floor_fix/D1Bound5/SmallPairGraphInputs34.lean": "80081fbe80d8267dc85a4c97cf17a7c063a9e61364395f31e58acc93a3d048b9",
+    "pair_literal_next/generated/SmallPairLiteralCachedData34.lean": "2b14c33742c58890230b20e7b3ee455905f4ac50c88dc86a4da3bd7719777af1",
+    "pair_selected_next/generated/SmallPairSelectedData34.lean": "9a05216afd22493a58f74a21dd802492e7d8d57e0e80180cb8c7e7bd0d6e06c6",
+    "finite_fast_next/sieves/SmallPairSieve_1_2.lean": "0e06eb108afce10f63dd87b8402973d477820e1a7d76cfa29f8e0be3d77d5235",
+    "pair_light_next/PairLightArithmetic.lean": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb"
+  },
+  "generic_bridge_sha256": "35ced62467e1e2a03eb4def796ac4065fa092677e5d5759cf25c970faaf479f9",
+  "exact_original_sieve": true,
+  "exact_original_left_split_order_and_coverage": true,
+  "exact_original_cached_coordinates_and_signatures": true,
+  "exact_original_packed_words_and_floors": true,
+  "canonical_signature_pairs_checked": 5725,
+  "full_tail_replay": {
+    "pairs": 26106,
+    "mask_rejections": 26104,
+    "duplicate_tags": 0,
+    "integer_guards": 0,
+    "norm_floors": 2,
+    "positive_floors": 0,
+    "negative_floors": 0
+  },
+  "source_review": [
+    "Arithmetic-only data imports PairLightArithmetic; isolated check imports only its data. Heavy old data/bridge appear only in later assembly.",
+    "Assembly checks the four concrete equalities against actual original data, then applies the reviewed unconditional bridge with discriminant7>0.",
+    "Endpoint is exactly original left pairIndependentBool for the original split. It does not claim right independence, the triangle certificate, a full-ring endpoint or MainStatement.",
+    "Three rfl equalities reflect identical literal values; ordered split equality remains explicitly kernel-computed. Their actual elaboration and certificate computation still require root compilation."
+  ],
+  "actions": "Parsed every emitted literal independently, compared against original source lists and replayed all26106 selected tail tags and exact two floor inequalities. No converter import/execution, remote action or compiler.",
+  "kernel_claim": false,
+  "issues": []
+}

@@ -1,0 +1,23 @@
+{
+  "source": "pair_light_next/PairLightArithmeticBridge.lean",
+  "source_sha256": "91befed7666b5e9d6c03683a36ae4afcd0bfdf3a649140e1eb549d6ff230f0c0",
+  "source_review_pass": true,
+  "reviewer": "/root/source_audit",
+  "status": "Independent proof-only compiler-repair review PASS; no new compilation claim",
+  "prior_source_sha256": "35ced62467e1e2a03eb4def796ac4065fa092677e5d5759cf25c970faaf479f9",
+  "prior_review": "audit_next/pair_light_bridge_review.json",
+  "prior_review_sha256": "17c82648c402241479b3ffca3ad7dfbfed8fd1cba1695f3d37c24d9dc010a47c",
+  "exact_change_count": 4,
+  "all_declaration_types_identical": true,
+  "imports_unchanged": true,
+  "findings": [
+    "Eta-expanding the injectivity implication only makes the existing equality argument explicit.",
+    "Adding Int.ofNat_eq_natCast to two simp lists aligns two presentations of the same natural-to-integer cast; no arithmetic or sign change occurs.",
+    "Unfolding pairLightCachedCoordinates in the row induction hypothesis preserves its exact quantified statement and makes it match the already-unfolded recursive goal. Code/floor generalization and all induction branches remain intact.",
+    "Reapplying exactly these four edits to archived35ced reproduces every byte of91befed; nothing else changed. Prior full unconditional-identity/soundness scope audit remains applicable."
+  ],
+  "kernel_acceptance": false,
+  "generator_permission_scope": "Fresh exact-source review receipt for the optional converter source gate only; kernel compilation and actual-data assembly remain separate root gates.",
+  "actions_performed": "Local diff/source/type-prefix/hash review only; no converter execution, Lean build, Git or remote call.",
+  "issues": []
+}

@@ -1,0 +1,32 @@
+{
+  "reviewer": "analytic_bridge",
+  "result": "PASS \u2014 independent source review; scripts not executed",
+  "files": [
+    {
+      "path": "prepare_checkpoint12.py",
+      "sha256": "481b96aa453fba73186b9850970854e5a2cc78746b4ea16757c5133e7597db6c",
+      "bytes": 21446
+    },
+    {
+      "path": "stage_checkpoint12.py",
+      "sha256": "8c4a74e5b2588dc8fa1f404bf72679b05f42998153efe746fef5a8078b490ece",
+      "bytes": 3432
+    }
+  ],
+  "baseline": "Reviewed checkpoint11 scripts; exact supplied cp11-to-cp12 patches independently regenerated and matched.",
+  "checks": [
+    "Read both complete script sources, all changes and final mandatory prepared-manifest additions.",
+    "In-memory Python syntax compilation only; no script body execution.",
+    "Expected private HEAD/source-map/helper names and checkpoint12-only publication paths updated consistently.",
+    "Canonical paired waves84..latest>=86, receipt payload hashes and all-wave current-closure statuses retain fail-closed checks.",
+    "Terminal compiler-log selection remains ledger-derived and excludes active streams; three explicitly named preparation logs are separately coordinator-identified as terminal.",
+    "Final required prepared-selected47/manifest.json and prepared-light34/manifest.json additions exactly reconstruct the initial aad9c237 hash when removed.",
+    "Point-in-time status text distinguishes prepared/reviewed/left-only computations from accepted complete certificates and main proof.",
+    "Stage changes only checkpoint/HEAD names plus per-command HTTP/1.1 and low-speed fetch settings; no persistent Git configuration mutation.",
+    "Private repository checks, source hash checks, literal pathspecs, exact indexed file set and every indexed blob SHA unchanged."
+  ],
+  "limitations": [
+    "Transport-history durations and terminal preparation-log designation are coordinator-provided facts; this review did not query remote state."
+  ],
+  "execution": "No script execution, Git commands, RDC access, or remote mutation."
+}

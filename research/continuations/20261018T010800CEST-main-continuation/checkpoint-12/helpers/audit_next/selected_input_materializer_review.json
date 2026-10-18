@@ -1,0 +1,22 @@
+{
+  "reviewer": "bennett",
+  "result": "PASS, independent full source and requirements review; no remote execution",
+  "materializer_sha256": "303299e125503841fa9fe651186d9b10e44faaefaefefacd2f049ade6130f1b0",
+  "requirements_sha256": "5a15034bf8bad9a11647231e683f1006f5b4512c3f715a21269555273b6a85fb",
+  "requirements_count": 134,
+  "requirements_total_bytes": 48660960,
+  "independent_requirements_derivation": "Statically parsed ec862156 generator PINS, frozen backend pins,48original source entries,11sieve pins,48floor JSON entries, exact selected34 reference, and pair_staging ROUTINE_SHA; union matches requirements exactly. Every local file size and SHA checked.",
+  "findings": [
+    "Default mode performs reads and prints an inventory; it never calls materialize.",
+    "Missing requirements return exit2 before any destination creation.",
+    "Requirements reject traversal, noncanonical paths, duplicate keys/destinations, file-directory conflicts and reserved manifest ancestors.",
+    "Candidates require exact basename, size and SHA; stale same-name files cannot substitute.",
+    "Source reads use no-follow traversal for all ancestors and verify regular type, size and before/after file metadata.",
+    "All selected payloads are freshly read and hash-checked before mkdir or any file write.",
+    "Every existing destination, including an empty directory or symlink, is rejected.",
+    "Writes use exclusive creation through no-follow descriptors beneath the new destination, so accepted existing paths are not overwritten.",
+    "An I/O failure after creation may leave the new bundle partial, as accurately documented; no automatic deletion or rollback touches inputs.",
+    "No generator, compiler, Git operation, network client, or credential operation is invoked."
+  ],
+  "limits": "This is a source/requirements audit; author-reported ten dummy tests were not rerun. Root alone chooses and executes the Mac destination."
+}

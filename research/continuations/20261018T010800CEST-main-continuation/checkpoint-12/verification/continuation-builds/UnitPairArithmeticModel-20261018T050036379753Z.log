@@ -1,0 +1,61 @@
+⚠ [2957/2965] Replayed D1Bound5.FullRingUnitPairPell
+warning: D1Bound5/FullRingUnitPairPell.lean:65:60: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FullRingUnitPairPell.lean:84:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2963/2965] Replayed D1Bound5.OneThreeNegative
+warning: D1Bound5/OneThreeNegative.lean:141:35: Try `simp at hz` instead of `simpa using hz`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✖ [2965/2965] Building D1Bound5.UnitPairArithmeticModel (56s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/UnitPairArithmeticModel.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairArithmeticModel.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/UnitPairArithmeticModel.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairArithmeticModel.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/UnitPairArithmeticModel.setup.json --json
+error: D1Bound5/UnitPairArithmeticModel.lean:46:4: Type mismatch: After simplification, term
+  UnitPairPellDescription.map e.toRingHom M.d M.w (e.symm z) h
+ has type
+  UnitPairPellDescription M.d (e.toRingHom M.w) (e.toRingHom (e.symm z))
+but is expected to have type
+  UnitPairPellDescription M.d (e M.w) z
+error: D1Bound5/UnitPairArithmeticModel.lean:56:15: Type mismatch
+  starRingEnd
+has type
+  (R : Type ?u.13) → [inst : CommSemiring R] → [StarRing R] → R →+* R
+of sort `Type (?u.13 + 1)` but is expected to have type
+  QuadInt 0 d →+* QuadInt 0 d
+of sort `Type`
+error: D1Bound5/UnitPairArithmeticModel.lean:57:17: unsolved goals
+case re
+d : ℤ
+hd : 0 < d
+hsq : Squarefree d
+⊢ ((sorry ()) { re := 0, im := 1 }).re = 0
+
+case im
+d : ℤ
+hd : 0 < d
+hsq : Squarefree d
+⊢ ((sorry ()) { re := 0, im := 1 }).im = -1
+error: D1Bound5/UnitPairArithmeticModel.lean:77:15: Type mismatch
+  starRingEnd
+has type
+  (R : Type ?u.38) → [inst : CommSemiring R] → [StarRing R] → R →+* R
+of sort `Type (?u.38 + 1)` but is expected to have type
+  QuadInt 1 nu →+* QuadInt 1 nu
+of sort `Type`
+error: D1Bound5/UnitPairArithmeticModel.lean:78:17: unsolved goals
+case re
+nu : ℤ
+hd : 0 < QuadInt.discriminant 1 nu
+hsq : Squarefree (4 * nu - 1)
+⊢ ((sorry ()) { re := -1, im := 2 }).re = 1
+
+case im
+nu : ℤ
+hd : 0 < QuadInt.discriminant 1 nu
+hsq : Squarefree (4 * nu - 1)
+⊢ ((sorry ()) { re := -1, im := 2 }).im = -2
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.UnitPairArithmeticModel
+error: build failed

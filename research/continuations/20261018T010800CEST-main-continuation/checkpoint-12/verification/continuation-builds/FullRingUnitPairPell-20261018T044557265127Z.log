@@ -1,0 +1,18 @@
+✖ [2957/2957] Building D1Bound5.FullRingUnitPairPell (83s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FullRingUnitPairPell.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FullRingUnitPairPell.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FullRingUnitPairPell.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FullRingUnitPairPell.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FullRingUnitPairPell.setup.json --json
+error: D1Bound5/FullRingUnitPairPell.lean:78:39: Type mismatch: After simplification, term
+  congrArg (⇑e) hplus
+ has type
+  z = (e 4 * ↑nu - 1) * ↑v ^ 2 + 1
+but is expected to have type
+  z = (4 * ↑nu - 1) * ↑v ^ 2 + 1
+error: D1Bound5/FullRingUnitPairPell.lean:79:39: Type mismatch: After simplification, term
+  congrArg (⇑e) hminus
+ has type
+  z = -1 + -((e 4 * ↑nu - 1) * ↑v ^ 2)
+but is expected to have type
+  z = -1 + -((4 * ↑nu - 1) * ↑v ^ 2)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FullRingUnitPairPell
+error: build failed

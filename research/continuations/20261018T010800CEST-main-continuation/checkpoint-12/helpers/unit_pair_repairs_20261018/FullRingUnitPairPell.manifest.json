@@ -1,0 +1,17 @@
+{
+  "module": "D1Bound5.FullRingUnitPairPell",
+  "pre_sha256": "acf5fd1a1e92192060d5a61d38f1baec77bc13af3dbc3770ebd76174375951b8",
+  "post_sha256": "2e87573896d81e7a78ce82726dbf3857615c804b12c146f1724403786fcb9e55",
+  "change": "Restrict the two failing half-basis simpa calls to apply_symm_apply, map_intCast, and map_neg; preserve the complete integer cast instead of broad simp expanding it to an unnormalized e 4.",
+  "statements_unchanged": true,
+  "no_remote_mutation": true,
+  "compiled": false,
+  "actual_failure_log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/FullRingUnitPairPell-20261018T044557265127Z.log",
+  "grounding": "The source conclusion of unit_pair_half_basis_pell is explicitly an entire integer cast in both signs. All three restricted simp lemmas already elaborate elsewhere in this same compiled module.",
+  "independent_source_review": {
+    "reviewer": "/root/analytic_bridge",
+    "result": "PASS",
+    "post_sha256": "2e87573896d81e7a78ce82726dbf3857615c804b12c146f1724403786fcb9e55",
+    "scope": "Read entire source, exact two-line diff, actual log, and whole integer-cast form of half-basis source theorem; no compilation."
+  }
+}

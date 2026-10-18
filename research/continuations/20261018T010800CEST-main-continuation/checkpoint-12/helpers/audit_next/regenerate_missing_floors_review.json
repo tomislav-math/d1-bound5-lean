@@ -1,0 +1,23 @@
+{
+  "status": "Independent source safety/pin-flow review PASS; regeneration not executed by reviewer",
+  "source": "pair_selected_scale_next/regenerate_missing_floors.py",
+  "source_sha256": "bb1c045c6426bf56ebcda015a52c88785dfe6544237ca76c65315f92d812a5c1",
+  "reviewer": "/root/source_audit",
+  "references": {
+    "pair_selected_scale_next/materialize_inputs.py": "303299e125503841fa9fe651186d9b10e44faaefaefefacd2f049ade6130f1b0",
+    "pair_selected_scale_next/input_requirements.json": "5a15034bf8bad9a11647231e683f1006f5b4512c3f715a21269555273b6a85fb",
+    "sparse_floor_next/generate_floor_witnesses.py": "1f9564b5ac95a26dc7017d7c4dbca1bad0b15eed0aad02817452a97903790f68",
+    "sparse_floor_next/generated/manifest.json": "729158bc68316f922d0572617ea551e25e1aca63ea1c871c69935e5c7d0a12f9"
+  },
+  "method": "Full helper and called frozen parser/build_row source read; syntax-only ast.parse and source-pin checks. No helper execution, output generation, remote action or compiler. Earlier independent134-input audit reused.",
+  "findings": [
+    "Bootstrap traverses materializer path with no-follow directory/file descriptors, rejects nonregular files, hashes exact loaded bytes before executing under non-main module name. Frozen materializer has no import-time output action.",
+    "Only the48 precisely enumerated floor JSON requirements may be missing. Any other missing requirement aborts before computation/writes. Existing requirements manifest itself must match fixed SHA.",
+    "Every used input receives a fresh safe read and exact required SHA/size verification into immutable bytes. FrozenInput supplies those bytes to existing full-coverage parsers; source and sieve pins must also agree with existing fingerprint maps.",
+    "Pinned floor generator is executed under a non-main module name with frozen bytes, then only its existing parse_source/parse_sieve/build_row functions are called. Those functions perform no I/O writes, network or Lean operations. Their same-color full-tail/floor logic is unchanged.",
+    "Every regenerated row uses the exact compact JSON serialization plus newline and must match both original floor-manifest bytes/SHA and independent requirements entries. All48 are collected and validated before any destination creation.",
+    "Default computes/checks only. --apply uses reviewed no-follow/exclusive new-directory writer; original sources and manifests are never modified. Manifest is written after all48 payloads. An I/O interruption may leave only the new partial directory, which is documented."
+  ],
+  "issues": [],
+  "scope_limit": "No all48 reproduction was run by this reviewer; crossblock author owns that independent execution result. This review proves no Lean certificate and predicts no compilation runtime."
+}

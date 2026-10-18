@@ -1,0 +1,21 @@
+{
+  "source": "pair_light_next/PairLightArithmeticBridge.lean",
+  "source_sha256": "74989ea9779fa4da2831c156377a44908c388871054e7832fd443986758442a6",
+  "source_review_pass": true,
+  "reviewer": "/root/source_audit",
+  "status": "Independent one-line proof-only source repair PASS; no compilation claim",
+  "prior_source_sha256": "91befed7666b5e9d6c03683a36ae4afcd0bfdf3a649140e1eb549d6ff230f0c0",
+  "prior_review": "audit_next/pair_light_bridge_91befed_review.json",
+  "prior_review_sha256": "630c94d060f86661bbef7624f377573ac61bb05d57f4fe1969ad0cc600e1589b",
+  "all_declaration_types_identical": true,
+  "all_other_source_bytes_identical": true,
+  "findings": [
+    "Exactly one tactic line is appended in the existing floor-obstruction equality proof. Removing it reproduces all prior91befed bytes.",
+    "split_ifs exhaustively separates existing conditional branches; it adds no hypotheses to the theorem. The subsequent decide equality normalization addresses proof/Decidable-instance presentation, then reflexivity closes each unchanged equality.",
+    "No Boolean definition, radicand/norm formula, branch condition, hypothesis, source data or final soundness statement changes. Full arbitrary-input equality scope is preserved."
+  ],
+  "kernel_acceptance": false,
+  "generator_permission_scope": "Fresh source-review receipt only, suitable for exact-hash converter gate. Root compilation and concrete assembly remain required.",
+  "actions": "Local byte/diff/type-prefix comparison and mathematical review only; no Lean build, converter execution, Git or remote call.",
+  "issues": []
+}

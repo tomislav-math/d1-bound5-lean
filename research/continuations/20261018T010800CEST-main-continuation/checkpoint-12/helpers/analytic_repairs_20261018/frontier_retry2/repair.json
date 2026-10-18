@@ -1,0 +1,9 @@
+{
+  "before_sha256": "bc43b3e3d2a7ba6ddc1c73300027d54a3b8f59616478c222e0040fbf13e505e9",
+  "after_sha256": "33d96b980c678c7382e88430524a158d0567c03ec5b878d5a113f1495c5b0528",
+  "actual_log": "FrontierScalarReduction-20261018T044429555321Z.log",
+  "change": "Replace convert-based normalization by typed calc: direct scalar quotient equality proved with field_simp/ring, then exactly the already-used monotonicity theorem.",
+  "reason": "After removing dsimp, actual compiler reports field_simp made no progress at same convert-generated goal. Typed calc removes convert entirely and exposes the intended scalar equality rather than relying on its generated goals.",
+  "mathematics": "T/(ABC) = ABCT/(A\u00b2B\u00b2C\u00b2), valid since all three factors are proved nonzero. No statement, definition or assumption changes.",
+  "validation": "Full actual remote body matches local pinned source; no build or remote mutation."
+}

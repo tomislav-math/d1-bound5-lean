@@ -1,0 +1,13 @@
+--- FullRingUnitPairPell.before.lean
++++ FullRingUnitPairPell.lean
+@@ -75,8 +75,8 @@
+       hz' hr' hs' with hreal | himag
+     · left
+       obtain ⟨u,v,hv,hPell,hplus | hminus⟩ := hreal
+-      · exact ⟨u,v,hv,hPell,Or.inl (by simpa using congrArg e hplus)⟩
+-      · exact ⟨u,v,hv,hPell,Or.inr (by simpa using congrArg e hminus)⟩
++      · exact ⟨u,v,hv,hPell,Or.inl (by simpa only [RingEquiv.apply_symm_apply,map_intCast] using congrArg e hplus)⟩
++      · exact ⟨u,v,hv,hPell,Or.inr (by simpa only [RingEquiv.apply_symm_apply,map_neg,map_intCast] using congrArg e hminus)⟩
+     · right
+       obtain ⟨u,v,hv,hPell,hcoord⟩ := himag
+       refine ⟨u,v,hv,hPell,?_⟩
