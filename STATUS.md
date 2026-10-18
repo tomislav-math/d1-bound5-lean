@@ -449,3 +449,7 @@ was corrected without changing any Lean source. Strict source/tool fingerprint
 checks pass. This supersedes the prior fingerprint-gate failure, not the
 historical denial record. See records/github-sync-20261017T094740CEST.md.
 The global bound-five theorem and final verification gates remain open.
+
+## 18 October 2026 — hourly wave119 retained-gap verification
+
+`CoherentRetainedGap` is now an accepted-build working module at source SHA256 `5374758cbafe23ef4c1439e82acf3ae6083ddbae04f6692091ae5c447ee08b87`. Its two theorems, `full_ring_retained_three_h48_gap` and `full_ring_all_large_retained_monomial`, compiled with unchanged dependency/artifact guards, passed exact type and transitive axiom audit, and passed installed same-kernel leanchecker replay. Only `propext`, `Classical.choice`, and `Quot.sound` occur transitively. This is a verified working dependency, not accepted-root integration or a proof of `MainStatement`.

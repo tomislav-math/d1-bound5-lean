@@ -1,0 +1,6 @@
+import D1Bound5.CoherentRetainedGap
+
+#print D1Bound5.full_ring_retained_three_h48_gap
+#print axioms D1Bound5.full_ring_retained_three_h48_gap
+#print D1Bound5.full_ring_all_large_retained_monomial
+#print axioms D1Bound5.full_ring_all_large_retained_monomial

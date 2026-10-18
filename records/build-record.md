@@ -735,3 +735,7 @@ The public manuscript and frozen v4 have identical document bodies: only PDF met
 ## 18 October 2026, 11:04–11:09 CEST — guarded scalar verification before hourly start
 
 Target `D1Bound5.OrdinaryHeightScalar` (unchanged wave119 source) built with pinned Lake, exit 0, 60.38 s driver / 50 s target compilation. A single-target wrapper used the existing driver owner and intake locks without resuming the broad queue. Exact three-theorem type/axiom audit exit 0, 67.74 s; targeted `lake env leanchecker --verbose D1Bound5.OrdinaryHeightScalar` exit 0, 51.98 s. Only propext/Classical.choice/Quot.sound; no project imports beyond the selected source. Both final process outputs collected. Scoped source/import scan, archive source-byte match and frozen manuscript/pin checks passed. No new root build, independent reviewer or clean-checkout claim. Full receipts and source map: research/continuations/20261018T110401CEST-scalar-before-hourly/.
+
+## 2026-10-18 11:13 CEST — CoherentRetainedGap
+
+Pinned driver build succeeded with 3017 jobs, exit 0, 68.60 seconds, fingerprint `ced79cddbc15736407f29d768324a59534e5304b39959f6a347d0b874e25979b`, and source SHA256 `5374758cbafe23ef4c1439e82acf3ae6083ddbae04f6692091ae5c447ee08b87`. Closure and shared artifacts were unchanged. Exact type/axiom audit exited 0 in 57.72 seconds and installed leanchecker replay exited 0 in 54.87 seconds. Evidence: `research/continuations/20261018T111300CEST-hourly-wave119-gap/`.
