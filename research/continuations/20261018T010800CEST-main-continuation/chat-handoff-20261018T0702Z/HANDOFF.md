@@ -32,3 +32,8 @@ Mac projekt: `/Users/tp/Lean/D1Bound5`. Radni direktorij: `/Users/tp/Lean/D1Boun
 Zamrznuti članak `/Users/tp/Lean/D1Bound5Handoff/verification/output/D1_bound5-v4.tex`, SHA776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3. MainTheorem SHA0d4652828c5f48475a6e80d8d00fa209e39c0638a58ebd99fd719e271c2670f6. Neovisni pregled potvrđuje bezuvjetni cilj u punom prstenu cijelih brojeva svakog imaginarnog kvadratnog polja, s polucijelim bazama, različitim nenultim članovima, dopuštenim nultim korijenima i jednakim normama. To je provjera formulacije, ne kernel završetka.
 
 Radni scratch u Work Modeu nije bio dostupan; trajni izvori su na Macu i privatnom Gitu. Desktop Commander je prijavljivao99% mjesečne potrošnje; ne pretpostaviti da će isti pristup biti raspoloživ u drugom chatu.
+
+
+## Završna dopuna nakon dovršetka zadnje provjere
+
+U07:04:59 UTC (09:04:59 u Zagrebu) driver se uredno zaustavio, exit0. Nema aktivnih provjera i pause_after_current ostaje true. SmallPairLightAdaptiveLeft26_000 istekao je nakon602,64 sekunde (ograničenje600); dokaz nije prihvaćen. SmallPairLightData26 uspješno je prošao za116,87 sekundi, a pripadne podatkovne i validacijske leme također su prošle. Sljedeći razgovor treba razmotriti manji točno provjereni blok parova od sadašnjih40000, bez ponavljanja istog neuspjelog fingerprinta s duljim timeoutom. Nove provjere nisu pokrenute. FINAL_STOP_STATUS.json i ažurirani runtime zapisi imaju prednost pred ranijim poljem active_at_snapshot; MAIN_STATUS je povijesna snimka nekoliko trenutaka prije zaustavljanja. Deset popravaka iz vala119 ostaje nekompilirano.
