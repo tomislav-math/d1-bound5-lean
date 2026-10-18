@@ -1,0 +1,7 @@
+# Verified two-anchor Bennett integral matrix and row form
+
+Status: separately verified working dependencies, NOT accepted-root integration or MainStatement completion. All four prepared sources compiled without modification under pinned Lean 4.33.1 and mathlib 0df444a360eaa60ab8c11dca51a86af692955474. The 21 original theorems and four definitions passed exact elaborated-type/transitive-axiom audits. All four installed SAME-kernel targeted module replays passed. No fresh whole-root replay, clean checkout or independent final review was performed.
+
+The exact final scope and check receipts are in VERIFICATION_SUMMARY.json, mathematical meaning in MATHEMATICS.md and STATEMENT_REVIEW.md, working-source provenance in SOURCE_MAP.json, and next executable dependencies in NEXT_DEPENDENCIES.json. The .before.lean files preserve the unchanged prepared source; they are not alternative accepted imports. Canonical working sources remain in D1Bound5 and byte-identical preservation copies are provided here.
+
+The strongest endpoint constructs a nonzero integral Bennett row form with modulus at least one in every full imaginary quadratic integer ring, for nonzero distinct anchors a,b and nonzero z, any c,sA,sB, and every positive integer order. Integrality and the nonzero determinant are derived, not passed as assumptions. Actual tuple root approximation and analytic upper bounds remain separate downstream obligations.

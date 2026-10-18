@@ -1,0 +1,179 @@
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennett_two_integral_summand_zero: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennett_two_integral_summand_one: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennett_two_integral_summand_two: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoNodes: [propext, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoNodes_zero: [propext, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoNodes_one: [propext, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoNodes_two: [propext, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennett_delta_sum_three: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoOtherPoles_zero: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoOtherPoles_one: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoOtherPoles_two: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettClearedTaylor_two_poles_scaled_eval: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_zero_integral: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_one_integral_divisible: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_two_integral_divisible: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_eq_scaled_residue: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedEntry_row_lift: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoNodes_injective: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedMatrix: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoClearedMatrix_det_ne_zero: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoRowForm: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoRowForm_exists_ne_zero: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.bennettTwoRowForm_lift: [propext, Classical.choice, Quot.sound]
+INTEGRALITY_AXIOMS_PASS D1Bound5.full_ring_bennettTwoRowForm_exists_one_le_norm: [propext, Classical.choice, Quot.sound]
+@D1Bound5.bennett_two_integral_summand_zero : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (S : Subring F)
+  (a b c : F),
+  a ∈ S →
+    b ∈ S →
+      c ∈ S →
+        a ≠ 0 →
+          b ≠ 0 →
+            ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+              1 ≤ k →
+                d0 + d1 + d2 = 1 →
+                  h0 + h1 + h2 + 1 = k + d0 →
+                    ∃ q ∈ S,
+                      4 ^ k * Ring.choose (↑k + 1 / 2) h0 * Ring.choose (-↑(k + d1)) h1 * Ring.choose (-↑(k + d2)) h2 *
+                          ((a * b * (a - b) ^ 2) ^ k * (a * b * c) ^ (k - h0) * (-b)⁻¹ ^ (k + d1 + h1) *
+                            (-a)⁻¹ ^ (k + d2 + h2)) =
+                        1 * q
+@D1Bound5.bennett_two_integral_summand_one : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (S : Subring F)
+  (a b c : F),
+  a ∈ S →
+    b ∈ S →
+      c ∈ S →
+        b ≠ 0 →
+          a ≠ b →
+            ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+              1 ≤ k →
+                d0 + d1 + d2 = 1 →
+                  h0 + h1 + h2 + 1 = k + d1 →
+                    ∃ q ∈ S,
+                      4 ^ k * Ring.choose (↑k + 1 / 2) h1 * Ring.choose (-↑(k + d0)) h0 * Ring.choose (-↑(k + d2)) h2 *
+                          ((a * b * (a - b) ^ 2) ^ k * (a * b * c + b) ^ (k - h1) * b⁻¹ ^ (k + d0 + h0) *
+                            (b - a)⁻¹ ^ (k + d2 + h2)) =
+                        a ^ k * q
+@D1Bound5.bennett_two_integral_summand_two : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (S : Subring F)
+  (a b c : F),
+  a ∈ S →
+    b ∈ S →
+      c ∈ S →
+        a ≠ 0 →
+          a ≠ b →
+            ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+              1 ≤ k →
+                d0 + d1 + d2 = 1 →
+                  h0 + h1 + h2 + 1 = k + d2 →
+                    ∃ q ∈ S,
+                      4 ^ k * Ring.choose (↑k + 1 / 2) h2 * Ring.choose (-↑(k + d0)) h0 * Ring.choose (-↑(k + d1)) h1 *
+                          ((a * b * (a - b) ^ 2) ^ k * (a * b * c + a) ^ (k - h2) * a⁻¹ ^ (k + d0 + h0) *
+                            (a - b)⁻¹ ^ (k + d1 + h1)) =
+                        b ^ k * q
+@D1Bound5.bennettTwoNodes : {F : Type u_1} → [Field F] → F → F → Fin 3 → F
+@D1Bound5.bennettTwoNodes_zero : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b : F),
+  D1Bound5.bennettTwoNodes a b 0 = 0
+@D1Bound5.bennettTwoNodes_one : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b : F),
+  D1Bound5.bennettTwoNodes a b 1 = b
+@D1Bound5.bennettTwoNodes_two : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b : F),
+  D1Bound5.bennettTwoNodes a b 2 = a
+D1Bound5.bennett_delta_sum_three : ∀ (i : Fin 3),
+  (((if i = 0 then 1 else 0) + if i = 1 then 1 else 0) + if i = 2 then 1 else 0) = 1
+@D1Bound5.bennettTwoOtherPoles_zero : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (a b : F) (k : ℕ)
+  (i : Fin 3),
+  D1Bound5.bennettOtherPoles Finset.univ (D1Bound5.bennettTwoNodes a b) k i 0 =
+    D1Bound5.bennettPoleSeries (-b) (k + if i = 1 then 1 else 0) *
+      D1Bound5.bennettPoleSeries (-a) (k + if i = 2 then 1 else 0)
+@D1Bound5.bennettTwoOtherPoles_one : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (a b : F) (k : ℕ)
+  (i : Fin 3),
+  D1Bound5.bennettOtherPoles Finset.univ (D1Bound5.bennettTwoNodes a b) k i 1 =
+    D1Bound5.bennettPoleSeries b (k + if i = 0 then 1 else 0) *
+      D1Bound5.bennettPoleSeries (b - a) (k + if i = 2 then 1 else 0)
+@D1Bound5.bennettTwoOtherPoles_two : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (a b : F) (k : ℕ)
+  (i : Fin 3),
+  D1Bound5.bennettOtherPoles Finset.univ (D1Bound5.bennettTwoNodes a b) k i 2 =
+    D1Bound5.bennettPoleSeries a (k + if i = 0 then 1 else 0) *
+      D1Bound5.bennettPoleSeries (a - b) (k + if i = 1 then 1 else 0)
+@D1Bound5.bennettClearedTaylor_two_poles_scaled_eval : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F]
+  (s ν a N d e : F) (k r p q : ℕ),
+  s *
+      Polynomial.eval N
+        (D1Bound5.bennettClearedTaylor k r ν a (D1Bound5.bennettPoleSeries d p * D1Bound5.bennettPoleSeries e q)) =
+    ∑ ht ∈ Finset.antidiagonal r,
+      ∑ uv ∈ Finset.antidiagonal ht.2,
+        s *
+          (Ring.choose (↑k + ν) ht.1 *
+              (Ring.choose (-↑p) uv.1 * d⁻¹ ^ (p + uv.1) * (Ring.choose (-↑q) uv.2 * e⁻¹ ^ (q + uv.2))) *
+            (N + a) ^ (k - ht.1))
+@D1Bound5.bennettTwoClearedEntry : {F : Type u_1} → [inst : Field F] → [CharZero F] → F → F → F → ℕ → Fin 3 → Fin 3 → F
+@D1Bound5.bennettTwoClearedEntry_zero_integral : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (S : Subring F)
+  (a b c : F),
+  a ∈ S →
+    b ∈ S →
+      c ∈ S →
+        a ≠ 0 → b ≠ 0 → ∀ (k : ℕ), 1 ≤ k → ∀ (i : Fin 3), ∃ q ∈ S, D1Bound5.bennettTwoClearedEntry a b c k i 0 = 1 * q
+@D1Bound5.bennettTwoClearedEntry_one_integral_divisible : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F]
+  (S : Subring F) (a b c : F),
+  a ∈ S →
+    b ∈ S →
+      c ∈ S →
+        b ≠ 0 →
+          a ≠ b → ∀ (k : ℕ), 1 ≤ k → ∀ (i : Fin 3), ∃ q ∈ S, D1Bound5.bennettTwoClearedEntry a b c k i 1 = a ^ k * q
+@D1Bound5.bennettTwoClearedEntry_two_integral_divisible : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F]
+  (S : Subring F) (a b c : F),
+  a ∈ S →
+    b ∈ S →
+      c ∈ S →
+        a ≠ 0 →
+          a ≠ b → ∀ (k : ℕ), 1 ≤ k → ∀ (i : Fin 3), ∃ q ∈ S, D1Bound5.bennettTwoClearedEntry a b c k i 2 = b ^ k * q
+@D1Bound5.bennettTwoClearedEntry_eq_scaled_residue : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F]
+  (a b c : F),
+  a ≠ 0 →
+    b ≠ 0 →
+      c ≠ 0 →
+        ∀ (k : ℕ) (i j : Fin 3),
+          D1Bound5.bennettTwoClearedEntry a b c k i j =
+            (4 * (a * b) ^ 2 * c * (a - b) ^ 2) ^ k *
+              Polynomial.eval (a * b * c)⁻¹
+                (D1Bound5.bennettPolynomialResidue Finset.univ (D1Bound5.bennettTwoNodes a b) k (1 / 2) i j)
+@D1Bound5.bennettTwoClearedEntry_row_lift : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] {R : Type u_2}
+  [inst_2 : CommRing R] (f : R →+* F) (a b c : R),
+  f a ≠ 0 →
+    f b ≠ 0 →
+      f a ≠ f b →
+        ∀ (k : ℕ),
+          1 ≤ k →
+            ∀ (i : Fin 3),
+              ∃ q0 q1 q2,
+                f q0 = D1Bound5.bennettTwoClearedEntry (f a) (f b) (f c) k i 0 ∧
+                  f (a ^ k * q1) = D1Bound5.bennettTwoClearedEntry (f a) (f b) (f c) k i 1 ∧
+                    f (b ^ k * q2) = D1Bound5.bennettTwoClearedEntry (f a) (f b) (f c) k i 2
+@D1Bound5.bennettTwoNodes_injective : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b : F),
+  a ≠ 0 → b ≠ 0 → a ≠ b → Function.Injective (D1Bound5.bennettTwoNodes a b)
+@D1Bound5.bennettTwoClearedMatrix : {F : Type u_1} →
+  [inst : Field F] → [CharZero F] → F → F → F → ℕ → Matrix (Fin 3) (Fin 3) F
+@D1Bound5.bennettTwoClearedMatrix_det_ne_zero : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F] (a b c : F),
+  a ≠ 0 → b ≠ 0 → a ≠ b → ∀ (k : ℕ), 1 ≤ k → (D1Bound5.bennettTwoClearedMatrix a b c k).det ≠ 0
+@D1Bound5.bennettTwoRowForm : {F : Type u_1} → [inst : Field F] → [CharZero F] → F → F → F → F → F → F → ℕ → Fin 3 → F
+@D1Bound5.bennettTwoRowForm_exists_ne_zero : ∀ {F : Type u_1} [inst : Field F] [inst_1 : CharZero F]
+  (a b c z sA sB : F),
+  a ≠ 0 → b ≠ 0 → a ≠ b → z ≠ 0 → ∀ (k : ℕ), 1 ≤ k → ∃ i, D1Bound5.bennettTwoRowForm a b c z sA sB k i ≠ 0
+@D1Bound5.bennettTwoRowForm_lift : ∀ {R : Type u_1} {F : Type u_2} [inst : CommRing R] [inst_1 : Field F]
+  [inst_2 : CharZero F] (f : R →+* F) (a b c z sA sB : R),
+  f a ≠ 0 →
+    f b ≠ 0 →
+      f a ≠ f b →
+        ∀ (k : ℕ),
+          1 ≤ k → ∀ (i : Fin 3), ∃ L, f L = D1Bound5.bennettTwoRowForm (f a) (f b) (f c) (f z) (f sA) (f sB) k i
+@D1Bound5.full_ring_bennettTwoRowForm_exists_one_le_norm : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a b c z sA sB : NumberField.RingOfIntegers K),
+      a ≠ 0 →
+        b ≠ 0 →
+          a ≠ b →
+            z ≠ 0 →
+              ∀ (k : ℕ),
+                1 ≤ k →
+                  ∃ i, 1 ≤ ‖D1Bound5.bennettTwoRowForm (phi ↑a) (phi ↑b) (phi ↑c) (phi ↑z) (phi ↑sA) (phi ↑sB) k i‖

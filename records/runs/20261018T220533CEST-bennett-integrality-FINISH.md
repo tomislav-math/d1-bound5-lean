@@ -1,0 +1,7 @@
+# FINISH — 2026-10-18T22:17:09.057364+02:00
+
+Outcome: COMPLETED_UNIT. Four prepared modules (BennettTwoIntegralSummands, BennettTwoIntegralEntries, BennettTwoIntegralMatrix, BennettIntegralRowSelection) compiled unchanged. Exact type/transitive-axiom checks passed for 21 original theorems and four definitions; only propext, Classical.choice and Quot.sound. All four targeted installed SAME-kernel module replays passed. The canonical import source scan covers 29 project modules. No new axioms, proof shortcuts, statement changes, pin changes, root integration, whole-root fresh replay, clean-checkout build or independent final review.
+
+The arithmetic endpoint derives an actual nonzero full-ring linear form of modulus at least one for each k>=1, with a,b,z nonzero and a!=b. The constructed matrix has nonzero determinant and column powers a^k,b^k; no integrality or determinant certificate is supplied as an unproved hypothesis. Tuple-specific analytic upper bounds and root transfer remain open. MainStatement is UNPROVED.
+
+The next priority is BennettTwoCoefficientConstants, followed by currently ready residual dependencies recorded in NEXT_DEPENDENCIES.json. All owned process results were collected, both locks are released after finalization, and the queue remains paused between jobs. Inherited staged receipt is preserved. Private Git publication must be confirmed by subsequent separate calls and a post-push receipt. No automation was modified. Evidence: research/continuations/20261018T220533CEST-bennett-integrality/

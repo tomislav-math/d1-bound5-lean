@@ -1,0 +1,141 @@
+{
+  "outcome": "COMPLETED_UNIT",
+  "time": "2026-10-18T22:17:09.057364+02:00",
+  "targets": {
+    "BennettTwoIntegralSummands": {
+      "source_sha256": "cf848c27c1e7b66b43f1bb2e9f008252599e35de774adedcbacb56ab48e836d3",
+      "exit": 0,
+      "seconds": 57.35176200000569,
+      "fingerprint": "ef4f63e6a4920a8aadcfd3692f2c0b010a7e4def4f62c5d26b518eacf63ef386"
+    },
+    "BennettTwoIntegralEntries": {
+      "source_sha256": "07d63d84699ae294fc3d395f046972fa36aa179a18de306e5f612beceaaf5f1b",
+      "exit": 0,
+      "seconds": 35.24719450017437,
+      "fingerprint": "f2af526e8cd92ff46418a1e69bd8ad2b55733cb8f9457780f9daf772698f0aaf"
+    },
+    "BennettTwoIntegralMatrix": {
+      "source_sha256": "136894d1b4f549edd11ad783443c9dfcdff9dc56c2e0bd789e83020f9f2279d2",
+      "exit": 0,
+      "seconds": 73.60148350009695,
+      "fingerprint": "b5ed39517144fec4dc2f123ef43a978d4da78ca6748b0dc095f527ff2f39e709"
+    },
+    "BennettIntegralRowSelection": {
+      "source_sha256": "9c3c5f22bb6cb848bdf27168f61bbb1b8947f740ff7556d2698f7ee50542b384",
+      "exit": 0,
+      "seconds": 66.56018687505275,
+      "fingerprint": "03a417e166aa43debe82351a3b75169f0e5c5f0b37fb348374b22cfec427dc71"
+    }
+  },
+  "original_theorems": 21,
+  "definitions": 4,
+  "prepared_verification_batch": true,
+  "source_changes": false,
+  "all_public_types_and_axioms_pass": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "checks": [
+    {
+      "label": "integrality-type-axioms",
+      "pid": 66916,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261018T220533CEST-bennett-integrality/IntegralityAudit.lean"
+      ],
+      "time": "2026-10-18T22:12:18.681769+02:00",
+      "exit": 0,
+      "seconds": 71.54723641695455,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "integrality-type-axioms.log"
+    },
+    {
+      "label": "BennettTwoIntegralSummands-targeted-replay",
+      "pid": 66958,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettTwoIntegralSummands"
+      ],
+      "time": "2026-10-18T22:13:30.351276+02:00",
+      "exit": 0,
+      "seconds": 25.822926042135805,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettTwoIntegralSummands-targeted-replay.log"
+    },
+    {
+      "label": "BennettTwoIntegralEntries-targeted-replay",
+      "pid": 66985,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettTwoIntegralEntries"
+      ],
+      "time": "2026-10-18T22:13:56.284543+02:00",
+      "exit": 0,
+      "seconds": 26.061738207936287,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettTwoIntegralEntries-targeted-replay.log"
+    },
+    {
+      "label": "BennettTwoIntegralMatrix-targeted-replay",
+      "pid": 67031,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettTwoIntegralMatrix"
+      ],
+      "time": "2026-10-18T22:14:22.452665+02:00",
+      "exit": 0,
+      "seconds": 28.733049707952887,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettTwoIntegralMatrix-targeted-replay.log"
+    },
+    {
+      "label": "BennettIntegralRowSelection-targeted-replay",
+      "pid": 67056,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.BennettIntegralRowSelection"
+      ],
+      "time": "2026-10-18T22:14:51.310568+02:00",
+      "exit": 0,
+      "seconds": 64.53406583284959,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "BennettIntegralRowSelection-targeted-replay.log"
+    }
+  ],
+  "targeted_source_closure_modules": 29,
+  "unknown_dependencies": [],
+  "accepted_root_integration": false,
+  "fresh_whole_root_replay": false,
+  "clean_checkout_build": false,
+  "independent_final_review": false,
+  "main_statement_proved": false,
+  "owned_process_results_collected": [
+    66510,
+    66600,
+    66665,
+    66821,
+    66902
+  ],
+  "queue_paused_between_jobs": true
+}
