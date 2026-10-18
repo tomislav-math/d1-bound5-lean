@@ -1,5 +1,9 @@
 # Status
 
+## 18 October 2026 — two-anchor Bennett denominator clearing separately verified
+
+Six wave119 Bennett denominator identities in `D1Bound5/BennettTwoDenominatorClearing.lean` compiled with the guarded pinned driver, exact type/axiom-audited and targeted SAME-kernel replayed. All checks passed; root integration remains pending. Evidence and byte-identical source: `research/continuations/20261018T124800CEST-bennett-clearing/`. The full arbitrary-order Bennett determinant, finite exhaustive certificates/descent, final sextuple exclusions and MainStatement remain UNPROVED. No whole-root clean-checkout or independent final audit is claimed.
+
 ## 18 October 2026 — OrdinaryHeightScalar wave119 source verified
 
 The unchanged OrdinaryHeightScalar wave119 source now has a passing guarded target build, exact three-theorem type/axiom audit and targeted installed same-kernel replay. Theorems: ordinary_integer_orders_log_bound, ordinary_height_scalar_envelope and unit_pair_height_cutoff_scalar. The actual runtime driver records the accepted source fingerprint. This is a separately verified working module, not new root integration or MainStatement completion. See records/runs/20261018T110401CEST-scalar-before-hourly-FINISH.md and its research directory. The remaining wave119 work should reuse this result.

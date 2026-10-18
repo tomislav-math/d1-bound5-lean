@@ -1,5 +1,9 @@
 # Open mathematical obligations
 
+## 18 October 2026 — two-anchor Bennett denominator clearing separately verified
+
+Six wave119 Bennett denominator identities in `D1Bound5/BennettTwoDenominatorClearing.lean` compiled with the guarded pinned driver, exact type/axiom-audited and targeted SAME-kernel replayed. All checks passed; root integration remains pending. Evidence and byte-identical source: `research/continuations/20261018T124800CEST-bennett-clearing/`. The full arbitrary-order Bennett determinant, finite exhaustive certificates/descent, final sextuple exclusions and MainStatement remain UNPROVED. No whole-root clean-checkout or independent final audit is claimed.
+
 ## 17 October 2026 — cross-block, coherent interpolation and first-order Bennett verified
 
 Seven new root-imported modules prove 45 exported theorems (plus 3 private cross-block helpers) and add 8 public definitions. The new results are the full-ring cross-block determinant lower bound; exact convergent coherent interpolation, manuscript tail estimate and coherent-root compatibility; the arbitrary-size k=1 Bennett determinant with explicit entries and nonvanishing; the conditional all-order determinant/degree and simple-residue coefficient principles; and the local inverse-power binomial expansion.

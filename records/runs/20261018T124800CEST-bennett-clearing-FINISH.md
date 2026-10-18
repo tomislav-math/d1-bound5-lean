@@ -1,0 +1,5 @@
+# FINISH — 2026-10-18T12:51:45.666056+02:00
+
+Outcome: COMPLETED_UNIT for a separately verified prepared proof module. `BennettTwoDenominatorClearing` provides six proved denominator-cancellation/orientation identities for the two-anchor Bennett row construction. Pinned target Lake build exit 0; all six exact elaborated types and transitive axioms checked, only the three permitted logical axioms; installed same-kernel targeted replay exit 0. These identities require the explicit combinatorial exponent relations in their types. They do not establish the arbitrary-order determinant or MainStatement.
+
+Durable local copy and verification records: `research/continuations/20261018T124800CEST-bennett-clearing/`. The module is NOT root-imported. Next priority: the reviewed `BennettCoefficientMajorant` repair and the subsequent analytic/residual row lemmas. The driver is paused, single writer only; the 40000-pair row26 timeout was not retried. Git commit/push must be reported from actual separate tool calls.

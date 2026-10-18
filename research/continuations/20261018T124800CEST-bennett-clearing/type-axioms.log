@@ -1,0 +1,54 @@
+BENNETT_TWO_CLEAR_AXIOMS_PASS D1Bound5.bennett_cancel_power_denominator: [propext, Classical.choice, Quot.sound]
+BENNETT_TWO_CLEAR_AXIOMS_PASS D1Bound5.bennett_two_clear_column_zero: [propext, Classical.choice, Quot.sound]
+BENNETT_TWO_CLEAR_AXIOMS_PASS D1Bound5.bennett_two_clear_column_one: [propext, Classical.choice, Quot.sound]
+BENNETT_TWO_CLEAR_AXIOMS_PASS D1Bound5.bennett_two_clear_column_two: [propext, Classical.choice, Quot.sound]
+BENNETT_TWO_CLEAR_AXIOMS_PASS D1Bound5.bennett_two_clear_column_zero_signed: [propext, Classical.choice, Quot.sound]
+BENNETT_TWO_CLEAR_AXIOMS_PASS D1Bound5.bennett_two_clear_column_one_signed: [propext, Classical.choice, Quot.sound]
+@D1Bound5.bennett_cancel_power_denominator : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (x : F),
+  x ≠ 0 → ∀ (u v t : ℕ), u = v + t → x ^ u * x⁻¹ ^ v = x ^ t
+@D1Bound5.bennett_two_clear_column_zero : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b c : F),
+  a ≠ 0 →
+    b ≠ 0 →
+      ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+        1 ≤ k →
+          d0 + d1 + d2 = 1 →
+            h0 + h1 + h2 + 1 = k + d0 →
+              (a * b * (a - b) ^ 2) ^ k * (a * b * c) ^ (k - h0) * b⁻¹ ^ (k + d1 + h1) * a⁻¹ ^ (k + d2 + h2) =
+                a ^ (d1 + h1) * b ^ (d2 + h2) * c ^ (k - h0) * (a - b) ^ (2 * k)
+@D1Bound5.bennett_two_clear_column_one : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b c : F),
+  b ≠ 0 →
+    a ≠ b →
+      ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+        1 ≤ k →
+          d0 + d1 + d2 = 1 →
+            h0 + h1 + h2 + 1 = k + d1 →
+              (a * b * (a - b) ^ 2) ^ k * (a * b * c + b) ^ (k - h1) * b⁻¹ ^ (k + d0 + h0) * (a - b)⁻¹ ^ (k + d2 + h2) =
+                a ^ k * (a * c + 1) ^ (k - h1) * b ^ (d2 + h2) * (a - b) ^ (k - (d2 + h2))
+@D1Bound5.bennett_two_clear_column_two : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b c : F),
+  a ≠ 0 →
+    a ≠ b →
+      ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+        1 ≤ k →
+          d0 + d1 + d2 = 1 →
+            h0 + h1 + h2 + 1 = k + d2 →
+              (a * b * (a - b) ^ 2) ^ k * (a * b * c + a) ^ (k - h2) * a⁻¹ ^ (k + d0 + h0) * (a - b)⁻¹ ^ (k + d1 + h1) =
+                b ^ k * (b * c + 1) ^ (k - h2) * a ^ (d1 + h1) * (a - b) ^ (k - (d1 + h1))
+@D1Bound5.bennett_two_clear_column_zero_signed : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b c : F),
+  a ≠ 0 →
+    b ≠ 0 →
+      ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+        1 ≤ k →
+          d0 + d1 + d2 = 1 →
+            h0 + h1 + h2 + 1 = k + d0 →
+              (a * b * (a - b) ^ 2) ^ k * (a * b * c) ^ (k - h0) * (-b)⁻¹ ^ (k + d1 + h1) * (-a)⁻¹ ^ (k + d2 + h2) =
+                (-1) ^ (k + d1 + h1 + (k + d2 + h2)) *
+                  (a ^ (d1 + h1) * b ^ (d2 + h2) * c ^ (k - h0) * (a - b) ^ (2 * k))
+@D1Bound5.bennett_two_clear_column_one_signed : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b c : F),
+  b ≠ 0 →
+    a ≠ b →
+      ∀ (k d0 d1 d2 h0 h1 h2 : ℕ),
+        1 ≤ k →
+          d0 + d1 + d2 = 1 →
+            h0 + h1 + h2 + 1 = k + d1 →
+              (a * b * (a - b) ^ 2) ^ k * (a * b * c + b) ^ (k - h1) * b⁻¹ ^ (k + d0 + h0) * (b - a)⁻¹ ^ (k + d2 + h2) =
+                (-1) ^ (k + d2 + h2) * (a ^ k * (a * c + 1) ^ (k - h1) * b ^ (d2 + h2) * (a - b) ^ (k - (d2 + h2)))

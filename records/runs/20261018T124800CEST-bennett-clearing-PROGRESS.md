@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T12:51:45.666056+02:00
+
+The guarded existing driver compiled `BennettTwoDenominatorClearing` under pinned Lean 4.33.1, exit 0, 1505 build jobs, with unchanged source closure and recorded artifact hashes. Six exact Lean statements passed a dedicated transitive-axiom audit: only propext, Classical.choice, Quot.sound. The installed SAME-kernel targeted `leanchecker --verbose` exited 0. Source is preserved as a byte-identical research copy. No whole-root build, new root import or independent review is claimed. Git publication is pending ordinary explicit reviewed staging and push.
