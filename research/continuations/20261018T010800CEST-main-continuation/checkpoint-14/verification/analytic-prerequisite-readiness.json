@@ -1,0 +1,42 @@
+{
+  "pending_direct_dependencies": {
+    "CoherentTwoGap": [],
+    "CoherentTwoMainGap": [
+      "CoherentTwoGap"
+    ],
+    "CoherentThreeGeneral": [],
+    "CoherentThreeSimultaneous": [],
+    "CoherentThreeNonvanishing": [
+      "CoherentThreeSimultaneous"
+    ],
+    "CoherentThreeParameters": [],
+    "CoherentParameterForms": [
+      "CoherentThreeParameters"
+    ],
+    "CoherentVandermondeFourNorm": [
+      "CoherentPolynomialWeights"
+    ],
+    "CoherentFourParameters": [
+      "CoherentParameterForms"
+    ],
+    "CoherentDirectFour": [
+      "CoherentFourParameters",
+      "CoherentVandermondeFourNorm"
+    ],
+    "CoherentThreeZeroBootstrap": [
+      "CoherentThreeGeneral",
+      "CoherentParameterForms"
+    ]
+  },
+  "eligible_pending_leaves": [
+    "CoherentNearOne",
+    "CoherentPolynomialWeights",
+    "CoherentThreeGeneral",
+    "CoherentThreeParameters",
+    "CoherentThreeSimultaneous",
+    "CoherentTwoGap",
+    "CoherentTwoVanishing"
+  ],
+  "not_queued": [],
+  "pending_count": 14
+}

@@ -1,0 +1,107 @@
+{
+  "status": "Independent selected-output source/data review PASS; no compilation or installation",
+  "reviewer": "article_audit",
+  "scope": "Seven row2 pure/composition modules plus five row26 pure stress modules; row2 eight heavy modules are outside the intake selection.",
+  "base_manifest_sha256": "0091cf518b0bdac90510d96a318241dc5b170065e4787fba789385492a3f1f62",
+  "delta_manifest_sha256": "3cfaff9aeff48634d1b4ea1ca9ceeb5b9f89a55d98c10fa92c80d0b3076d350f",
+  "generator_sha256": "7ddd49e70f8c85a0fe247ef5d7cf5ebd864ae526add106aca3b9dcc0adc72508",
+  "selected_count": 12,
+  "selected_bytes": 3624583,
+  "files": {
+    "D1Bound5/SmallPairLightData2.lean": {
+      "sha256": "31a27a4f3eb426faaa8a228f6636249c426224041fcae4c0676af4e79894a13e",
+      "bytes": 648255,
+      "origin": "prepared-light-remaining39"
+    },
+    "D1Bound5/SmallPairLightAdaptiveData2.lean": {
+      "sha256": "6681d4c424e9771baf7a799da4dd847dca8cff853a1b251ca91cc50e2a161d75",
+      "bytes": 816,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightAdaptiveValidation2.lean": {
+      "sha256": "04bf4c30b9c0b2afddd9e99485e3b9e53f0e18a8d150d4e1feb36f669d89a30c",
+      "bytes": 887,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightAdaptiveLeft2_000.lean": {
+      "sha256": "2bf0a4eca5587a66b16da42b9c86d960f10981345817c0796392ed4b6cce4bb9",
+      "bytes": 420,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightAdaptiveRight2_000.lean": {
+      "sha256": "21461a85cc0732c28c1c0ea7b1365c041b6bed7c206b106448a3c933baee712b",
+      "bytes": 423,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightLeft2.lean": {
+      "sha256": "b5ea84ddb52599fdfc8dbb7719cf7e80e00ce0c40e3846734618ea548292148f",
+      "bytes": 1638,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightRight2.lean": {
+      "sha256": "f4b0f0f0a2b74ff525bec0c9295dc1229667aba2f8874dbdec629ace98406946",
+      "bytes": 1663,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightData26.lean": {
+      "sha256": "f1afef5f55d10e629ae132a1e88eda79e07a69b6990e7a7a128ce69ac7a77cad",
+      "bytes": 2965959,
+      "origin": "prepared-light-remaining39"
+    },
+    "D1Bound5/SmallPairLightAdaptiveData26.lean": {
+      "sha256": "8fcbf5018c5c1dbac57bbba6f0cec8a92e2243d8ef255c12bbada752b611c969",
+      "bytes": 2777,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightAdaptiveValidation26.lean": {
+      "sha256": "f8e807493d78b3f2016aaa35d14e995c04fc70c7bf95801200d5f9e138ffd24f",
+      "bytes": 898,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightAdaptiveLeft26_000.lean": {
+      "sha256": "cb0b6eb7efdf86f1aca0d7e619e11b37aac65bcd66451c39bd364940382f8224",
+      "bytes": 422,
+      "origin": "prepared-adaptive-remaining38-40k"
+    },
+    "D1Bound5/SmallPairLightAdaptiveRight26_000.lean": {
+      "sha256": "b3bc6710040612ffd158b30f89926c8794274d8363e259bc8755acd59cc03156",
+      "bytes": 425,
+      "origin": "prepared-adaptive-remaining38-40k"
+    }
+  },
+  "actual_helper_pins_checked": {
+    "PairLightArithmeticChunks.lean": "f6567fcbc7792894e8607b67148594c393fe089550470cc632f4beffbdcfaca7",
+    "PairLightArithmeticChunkProofs.lean": "658b9d78aa5789e1a26cdcfc58f5960c552bb3ae7fdeda34961f362a081828a4"
+  },
+  "independent_checks": [
+    "All12 selected actual files match SHA256 and byte counts from the two pinned manifests.",
+    "Parsed actual row2 and row26 literal vertex, cached-record and packed-witness lists; each side has207 and761 entries respectively, and cached coordinates match vertices in order.",
+    "Each original row2 side has exactly four theorem names/types; whitespace-normalized types equal the four replacement types exactly.",
+    "Row2 prefix width207 consumes the entire actual207-record class, including the terminal empty row; both terminal drop207 lists are empty.",
+    "Each row26 first prefix checks54 heads against the original761-record cached list and witness list; aliases000 refer directly to frozen data.",
+    "Read actual prefix definition and exact factorization theorem: each head is checked against the entire xs tail; both lists drop together.",
+    "Coverage and all canonical-signature checks remain separate decide+kernel declarations over the full original classes; certificate composition retains both.",
+    "Existing row2 four-equality assembly and triangle sources were read: they consume the same four public side theorem types."
+  ],
+  "counts": {
+    "row2_per_side": {
+      "vertices": 207,
+      "heads": 207,
+      "full_pairs": 21321
+    },
+    "row26_first_per_side": {
+      "vertices": 761,
+      "heads": 54,
+      "pairs": 39609,
+      "internal_pairs": 1431,
+      "cross_boundary_pairs": 38178,
+      "remaining_heads": 707
+    }
+  },
+  "limits": [
+    "Row26 selected first chunks alone do not establish full row26 independence or its graph endpoint.",
+    "This review did not replay selected-mask arithmetic or execute Lean; kernel acceptance remains the coordinator gate.",
+    "No generator, project-source write, intake, queue operation or Git action was performed.",
+    "A larger combined read/write command was rejected before execution; this receipt uses the successful scoped read-only checks and source inspection."
+  ]
+}

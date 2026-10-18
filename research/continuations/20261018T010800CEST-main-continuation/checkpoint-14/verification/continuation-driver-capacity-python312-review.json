@@ -1,0 +1,114 @@
+{
+  "utc": "2026-10-18T05:58:51.121645+00:00",
+  "scope": "Isolated dummy-process tests under the exact production Python interpreter; no production driver invocation",
+  "interpreter": {
+    "requested": "/Users/tp/.local/bin/python3.12",
+    "executable": "/Users/tp/.local/bin/python3.12",
+    "resolved": "/Users/tp/.local/share/uv/python/cpython-3.12.15-macos-aarch64-none/bin/python3.12",
+    "version": "3.12.15 (main, Oct 14 2026, 00:55:37) [Clang 23.1.3 ]",
+    "parent_monotonic": 3008985.223405375,
+    "clock_info": {
+      "implementation": "mach_absolute_time()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 4.166666666666667e-08
+    }
+  },
+  "fresh_child_clock_probe": {
+    "executable": "/Users/tp/.local/bin/python3.12",
+    "version": "3.12.15 (main, Oct 14 2026, 00:55:37) [Clang 23.1.3 ]",
+    "monotonic": 3008985.221327916,
+    "clock_gettime": 8294297.466984,
+    "clock_info": {
+      "implementation": "mach_absolute_time()",
+      "monotonic": true,
+      "adjustable": false,
+      "resolution": 4.166666666666667e-08
+    }
+  },
+  "pins": {
+    "continuation_driver_parallel.py": "5e2ba86e07e28d0febbe3a811019fbf46197acc7367799b3598fa9077b6f0081",
+    "continuation_driver_parallel_dummy_test.py": "5a980fa857a7e9319d0a4d4eb3941027ef1275e364a88f0531c0ad15afb4dd18",
+    "continuation_driver_capacity.py": "df17ea85c25eb77c7413f339d7ac673f28d63ca93a761317312ebef8876068db",
+    "continuation_driver_capacity_dummy_test.py": "78de23f378f799f262ec640fa52080a2a22fbcaed7cc9014e7cf54da413bf4c9",
+    "continuation_driver_capacity_dummy_test_v2.py": "9564e55f8e666212d4da36b5bf762b1f26d96936a7c4f56c9517d9372e460e86"
+  },
+  "results": [
+    {
+      "suite": "v1_original_timestamp",
+      "file": "continuation_driver_capacity_dummy_test.py",
+      "test_ids": [
+        "capacity_python312_v1_original_timestamp.Checks.test_cache_invalidation_even_when_size_and_mtime_restored",
+        "capacity_python312_v1_original_timestamp.Checks.test_cache_skips_only_metadata_unchanged_scheduling_reads",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_default_off_keeps_busy_snapshots",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_dry_run_always_takes_complete_snapshot",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_new_unknown_blocks_all_launches_when_capacity_frees",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_pause_change_while_full_prevents_next_launch",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_skips_full_ticks_and_resnapshots_freed_capacity",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_slot_increase_triggers_fresh_snapshot_before_launch",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_static_change_is_checked_while_full",
+        "capacity_python312_v1_original_timestamp.Checks.test_capacity_stop_while_full_reaps_owned_dummy_and_rejects",
+        "capacity_python312_v1_original_timestamp.Checks.test_completion_source_checks_do_not_reuse_snapshot_cache",
+        "capacity_python312_v1_original_timestamp.Checks.test_failed_fingerprint_not_retried_even_with_larger_timeout",
+        "capacity_python312_v1_original_timestamp.Checks.test_launch_rejects_dependency_changed_after_scheduling",
+        "capacity_python312_v1_original_timestamp.Checks.test_launch_rejects_new_unaccepted_dependency_artifact",
+        "capacity_python312_v1_original_timestamp.Checks.test_launch_source_checks_do_not_reuse_snapshot_cache",
+        "capacity_python312_v1_original_timestamp.Checks.test_shared_artifact_change_rejects_and_stops",
+        "capacity_python312_v1_original_timestamp.Checks.test_snapshot_reads_each_source_once_and_refreshes_next_snapshot",
+        "capacity_python312_v1_original_timestamp.Checks.test_timeout_kills_owned_process_group",
+        "capacity_python312_v1_original_timestamp.Checks.test_two_slots_dependency_order_and_active_union",
+        "capacity_python312_v1_original_timestamp.Checks.test_untracked_dependency_blocks_without_launch"
+      ],
+      "test_count": 20,
+      "passed": true,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.4003883749246597,
+      "test_output": "test_cache_invalidation_even_when_size_and_mtime_restored (capacity_python312_v1_original_timestamp.Checks.test_cache_invalidation_even_when_size_and_mtime_restored) ... ok\ntest_cache_skips_only_metadata_unchanged_scheduling_reads (capacity_python312_v1_original_timestamp.Checks.test_cache_skips_only_metadata_unchanged_scheduling_reads) ... ok\ntest_capacity_default_off_keeps_busy_snapshots (capacity_python312_v1_original_timestamp.Checks.test_capacity_default_off_keeps_busy_snapshots) ... ok\ntest_capacity_dry_run_always_takes_complete_snapshot (capacity_python312_v1_original_timestamp.Checks.test_capacity_dry_run_always_takes_complete_snapshot) ... ok\ntest_capacity_new_unknown_blocks_all_launches_when_capacity_frees (capacity_python312_v1_original_timestamp.Checks.test_capacity_new_unknown_blocks_all_launches_when_capacity_frees) ... ok\ntest_capacity_pause_change_while_full_prevents_next_launch (capacity_python312_v1_original_timestamp.Checks.test_capacity_pause_change_while_full_prevents_next_launch) ... ok\ntest_capacity_skips_full_ticks_and_resnapshots_freed_capacity (capacity_python312_v1_original_timestamp.Checks.test_capacity_skips_full_ticks_and_resnapshots_freed_capacity) ... ok\ntest_capacity_slot_increase_triggers_fresh_snapshot_before_launch (capacity_python312_v1_original_timestamp.Checks.test_capacity_slot_increase_triggers_fresh_snapshot_before_launch) ... ok\ntest_capacity_static_change_is_checked_while_full (capacity_python312_v1_original_timestamp.Checks.test_capacity_static_change_is_checked_while_full) ... ok\ntest_capacity_stop_while_full_reaps_owned_dummy_and_rejects (capacity_python312_v1_original_timestamp.Checks.test_capacity_stop_while_full_reaps_owned_dummy_and_rejects) ... ok\ntest_completion_source_checks_do_not_reuse_snapshot_cache (capacity_python312_v1_original_timestamp.Checks.test_completion_source_checks_do_not_reuse_snapshot_cache) ... ok\ntest_failed_fingerprint_not_retried_even_with_larger_timeout (capacity_python312_v1_original_timestamp.Checks.test_failed_fingerprint_not_retried_even_with_larger_timeout) ... ok\ntest_launch_rejects_dependency_changed_after_scheduling (capacity_python312_v1_original_timestamp.Checks.test_launch_rejects_dependency_changed_after_scheduling) ... ok\ntest_launch_rejects_new_unaccepted_dependency_artifact (capacity_python312_v1_original_timestamp.Checks.test_launch_rejects_new_unaccepted_dependency_artifact) ... ok\ntest_launch_source_checks_do_not_reuse_snapshot_cache (capacity_python312_v1_original_timestamp.Checks.test_launch_source_checks_do_not_reuse_snapshot_cache) ... ok\ntest_shared_artifact_change_rejects_and_stops (capacity_python312_v1_original_timestamp.Checks.test_shared_artifact_change_rejects_and_stops) ... ok\ntest_snapshot_reads_each_source_once_and_refreshes_next_snapshot (capacity_python312_v1_original_timestamp.Checks.test_snapshot_reads_each_source_once_and_refreshes_next_snapshot) ... ok\ntest_timeout_kills_owned_process_group (capacity_python312_v1_original_timestamp.Checks.test_timeout_kills_owned_process_group) ... ok\ntest_two_slots_dependency_order_and_active_union (capacity_python312_v1_original_timestamp.Checks.test_two_slots_dependency_order_and_active_union) ... ok\ntest_untracked_dependency_blocks_without_launch (capacity_python312_v1_original_timestamp.Checks.test_untracked_dependency_blocks_without_launch) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 3.400s\n\nOK\n"
+    },
+    {
+      "suite": "v2_shared_event_order",
+      "file": "continuation_driver_capacity_dummy_test_v2.py",
+      "test_ids": [
+        "capacity_python312_v2_shared_event_order.Checks.test_cache_invalidation_even_when_size_and_mtime_restored",
+        "capacity_python312_v2_shared_event_order.Checks.test_cache_skips_only_metadata_unchanged_scheduling_reads",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_default_off_keeps_busy_snapshots",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_dry_run_always_takes_complete_snapshot",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_new_unknown_blocks_all_launches_when_capacity_frees",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_pause_change_while_full_prevents_next_launch",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_skips_full_ticks_and_resnapshots_freed_capacity",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_slot_increase_triggers_fresh_snapshot_before_launch",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_static_change_is_checked_while_full",
+        "capacity_python312_v2_shared_event_order.Checks.test_capacity_stop_while_full_reaps_owned_dummy_and_rejects",
+        "capacity_python312_v2_shared_event_order.Checks.test_completion_source_checks_do_not_reuse_snapshot_cache",
+        "capacity_python312_v2_shared_event_order.Checks.test_failed_fingerprint_not_retried_even_with_larger_timeout",
+        "capacity_python312_v2_shared_event_order.Checks.test_launch_rejects_dependency_changed_after_scheduling",
+        "capacity_python312_v2_shared_event_order.Checks.test_launch_rejects_new_unaccepted_dependency_artifact",
+        "capacity_python312_v2_shared_event_order.Checks.test_launch_source_checks_do_not_reuse_snapshot_cache",
+        "capacity_python312_v2_shared_event_order.Checks.test_shared_artifact_change_rejects_and_stops",
+        "capacity_python312_v2_shared_event_order.Checks.test_snapshot_reads_each_source_once_and_refreshes_next_snapshot",
+        "capacity_python312_v2_shared_event_order.Checks.test_timeout_kills_owned_process_group",
+        "capacity_python312_v2_shared_event_order.Checks.test_two_slots_dependency_order_and_active_union",
+        "capacity_python312_v2_shared_event_order.Checks.test_untracked_dependency_blocks_without_launch"
+      ],
+      "test_count": 20,
+      "passed": true,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 3.684382750187069,
+      "test_output": "test_cache_invalidation_even_when_size_and_mtime_restored (capacity_python312_v2_shared_event_order.Checks.test_cache_invalidation_even_when_size_and_mtime_restored) ... ok\ntest_cache_skips_only_metadata_unchanged_scheduling_reads (capacity_python312_v2_shared_event_order.Checks.test_cache_skips_only_metadata_unchanged_scheduling_reads) ... ok\ntest_capacity_default_off_keeps_busy_snapshots (capacity_python312_v2_shared_event_order.Checks.test_capacity_default_off_keeps_busy_snapshots) ... ok\ntest_capacity_dry_run_always_takes_complete_snapshot (capacity_python312_v2_shared_event_order.Checks.test_capacity_dry_run_always_takes_complete_snapshot) ... ok\ntest_capacity_new_unknown_blocks_all_launches_when_capacity_frees (capacity_python312_v2_shared_event_order.Checks.test_capacity_new_unknown_blocks_all_launches_when_capacity_frees) ... ok\ntest_capacity_pause_change_while_full_prevents_next_launch (capacity_python312_v2_shared_event_order.Checks.test_capacity_pause_change_while_full_prevents_next_launch) ... ok\ntest_capacity_skips_full_ticks_and_resnapshots_freed_capacity (capacity_python312_v2_shared_event_order.Checks.test_capacity_skips_full_ticks_and_resnapshots_freed_capacity) ... ok\ntest_capacity_slot_increase_triggers_fresh_snapshot_before_launch (capacity_python312_v2_shared_event_order.Checks.test_capacity_slot_increase_triggers_fresh_snapshot_before_launch) ... ok\ntest_capacity_static_change_is_checked_while_full (capacity_python312_v2_shared_event_order.Checks.test_capacity_static_change_is_checked_while_full) ... ok\ntest_capacity_stop_while_full_reaps_owned_dummy_and_rejects (capacity_python312_v2_shared_event_order.Checks.test_capacity_stop_while_full_reaps_owned_dummy_and_rejects) ... ok\ntest_completion_source_checks_do_not_reuse_snapshot_cache (capacity_python312_v2_shared_event_order.Checks.test_completion_source_checks_do_not_reuse_snapshot_cache) ... ok\ntest_failed_fingerprint_not_retried_even_with_larger_timeout (capacity_python312_v2_shared_event_order.Checks.test_failed_fingerprint_not_retried_even_with_larger_timeout) ... ok\ntest_launch_rejects_dependency_changed_after_scheduling (capacity_python312_v2_shared_event_order.Checks.test_launch_rejects_dependency_changed_after_scheduling) ... ok\ntest_launch_rejects_new_unaccepted_dependency_artifact (capacity_python312_v2_shared_event_order.Checks.test_launch_rejects_new_unaccepted_dependency_artifact) ... ok\ntest_launch_source_checks_do_not_reuse_snapshot_cache (capacity_python312_v2_shared_event_order.Checks.test_launch_source_checks_do_not_reuse_snapshot_cache) ... ok\ntest_shared_artifact_change_rejects_and_stops (capacity_python312_v2_shared_event_order.Checks.test_shared_artifact_change_rejects_and_stops) ... ok\ntest_snapshot_reads_each_source_once_and_refreshes_next_snapshot (capacity_python312_v2_shared_event_order.Checks.test_snapshot_reads_each_source_once_and_refreshes_next_snapshot) ... ok\ntest_timeout_kills_owned_process_group (capacity_python312_v2_shared_event_order.Checks.test_timeout_kills_owned_process_group) ... ok\ntest_two_slots_dependency_order_and_active_union (capacity_python312_v2_shared_event_order.Checks.test_two_slots_dependency_order_and_active_union) ... ok\ntest_untracked_dependency_blocks_without_launch (capacity_python312_v2_shared_event_order.Checks.test_untracked_dependency_blocks_without_launch) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 3.684s\n\nOK\n"
+    }
+  ],
+  "passed": true,
+  "total_tests": 40,
+  "production_driver_executed": false,
+  "actual_project_lean_or_lake_executed": false,
+  "actual_queue_or_active_state_changed": false,
+  "prior_evidence": [
+    "continuation-driver-capacity-review.json",
+    "continuation-driver-capacity-review-v2.json"
+  ],
+  "interpretation": "Earlier v1 failure occurred under Apple CLT Python3.8.9 selected by bare python3. Both exact suites are now tested once under explicit production Python3.12; all earlier files/receipts preserved."
+}

@@ -1,0 +1,126 @@
+✖ [976/976] Building D1Bound5.RetainedGapScalar (10s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/RetainedGapScalar.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/RetainedGapScalar.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/RetainedGapScalar.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/RetainedGapScalar.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/RetainedGapScalar.setup.json --json
+error: D1Bound5/RetainedGapScalar.lean:100:6: No goals to be solved
+error: D1Bound5/RetainedGapScalar.lean:109:6: linarith failed to find a contradiction
+A B S T C W Q L : ℝ
+hA : 3 ≤ A
+hB : 3 ≤ B
+hS : 3 ≤ S
+hST : S ≤ T
+hW : 0 < W
+hQ : 0 < Q
+hQ8 : Q ≤ 8
+hfront : 2 * A * B * S < T
+hstrong : B ^ 2 * T ^ 3 < 10001 / 10000 * C
+hrootlo : 3999 / 4000 * T * C < W ^ 2
+hroothi : W ^ 2 ≤ T * C + 1
+hL : 1 ≤ L
+hupper : L < 51 * (Q * B * S ^ 2) / (100 * W) + 19 / 200 * (Q * B * S ^ 2) * W / (A * B * S * T ^ 3)
+hA0 : 0 < A
+hB0 : 0 < B
+hS0 : 0 < S
+hT0 : 0 < T
+hAn : A ≠ 0
+hBn : B ≠ 0
+hSn : S ≠ 0
+hTn : T ≠ 0
+hQn : Q ≠ 0
+hAB : 81 ≤ A ^ 2 * B ^ 2
+hinv : 1 / 8 ≤ 1 / Q
+herr : 51051 / 400000 / (A ^ 2 * B ^ 2) ≤ 51051 / 400000 / 81
+alpha : ℝ := 200 / 19 * (1 / Q - 51051 / 400000 / (A ^ 2 * B ^ 2))
+halpha : 1 < alpha
+halpha0 : 0 < alpha
+hfirst : 51 * (Q * B * S ^ 2) / (100 * W) < 51051 / 400000 * Q / (A ^ 2 * B ^ 2)
+hwindow : 1 < 51051 / 400000 * Q / (A ^ 2 * B ^ 2) + 19 / 200 * Q * S * W / (A * T ^ 3)
+hden : 0 < A ^ 2 * B ^ 2 * (A * T ^ 3)
+h : A ^ 2 * B ^ 2 * T ^ 3 * 400000 * 200 < Q * (T ^ 3 * 51051 * 200 + A * B ^ 2 * 400000 * 19 * S * W)
+a✝ : 51051 / 400000 * Q * A * T ^ 3 + 19 / 200 * Q * S * W * A ^ 2 * B ^ 2 ≤ A ^ 3 * B ^ 2 * T ^ 3
+⊢ False
+failed
+error: D1Bound5/RetainedGapScalar.lean:114:4: linarith failed to find a contradiction
+A B S T C W Q L : ℝ
+hA : 3 ≤ A
+hB : 3 ≤ B
+hS : 3 ≤ S
+hST : S ≤ T
+hW : 0 < W
+hQ : 0 < Q
+hQ8 : Q ≤ 8
+hfront : 2 * A * B * S < T
+hstrong : B ^ 2 * T ^ 3 < 10001 / 10000 * C
+hrootlo : 3999 / 4000 * T * C < W ^ 2
+hroothi : W ^ 2 ≤ T * C + 1
+hL : 1 ≤ L
+hupper : L < 51 * (Q * B * S ^ 2) / (100 * W) + 19 / 200 * (Q * B * S ^ 2) * W / (A * B * S * T ^ 3)
+hA0 : 0 < A
+hB0 : 0 < B
+hS0 : 0 < S
+hT0 : 0 < T
+hAn : A ≠ 0
+hBn : B ≠ 0
+hSn : S ≠ 0
+hTn : T ≠ 0
+hQn : Q ≠ 0
+hAB : 81 ≤ A ^ 2 * B ^ 2
+hinv : 1 / 8 ≤ 1 / Q
+herr : 51051 / 400000 / (A ^ 2 * B ^ 2) ≤ 51051 / 400000 / 81
+alpha : ℝ := 200 / 19 * (1 / Q - 51051 / 400000 / (A ^ 2 * B ^ 2))
+halpha : 1 < alpha
+halpha0 : 0 < alpha
+hfirst : 51 * (Q * B * S ^ 2) / (100 * W) < 51051 / 400000 * Q / (A ^ 2 * B ^ 2)
+hwindow : 1 < 51051 / 400000 * Q / (A ^ 2 * B ^ 2) + 19 / 200 * Q * S * W / (A * T ^ 3)
+hden : 0 < A ^ 2 * B ^ 2 * (A * T ^ 3)
+h :
+  1 * (A ^ 2 * B ^ 2 * (A * T ^ 3)) <
+    (51051 / 400000 * Q / (A ^ 2 * B ^ 2) + 19 / 200 * Q * S * W / (A * T ^ 3)) * (A ^ 2 * B ^ 2 * (A * T ^ 3))
+hclean : A ^ 3 * B ^ 2 * T ^ 3 < 51051 / 400000 * Q * A * T ^ 3 + 19 / 200 * Q * S * W * A ^ 2 * B ^ 2
+a✝ : 19 * Q * A * B ^ 2 * 400000 * W * S ≤ 200 * (A ^ 2 * B ^ 2 * 400000 - Q * 51051) * T ^ 3
+⊢ False
+failed
+error: D1Bound5/RetainedGapScalar.lean:133:4: linarith failed to find a contradiction
+A B S T C W Q L : ℝ
+hA : 3 ≤ A
+hB : 3 ≤ B
+hS : 3 ≤ S
+hST : S ≤ T
+hW : 0 < W
+hQ : 0 < Q
+hQ8 : Q ≤ 8
+hfront : 2 * A * B * S < T
+hstrong : B ^ 2 * T ^ 3 < 10001 / 10000 * C
+hrootlo : 3999 / 4000 * T * C < W ^ 2
+hroothi : W ^ 2 ≤ T * C + 1
+hL : 1 ≤ L
+hupper : L < 51 * (Q * B * S ^ 2) / (100 * W) + 19 / 200 * (Q * B * S ^ 2) * W / (A * B * S * T ^ 3)
+hA0 : 0 < A
+hB0 : 0 < B
+hS0 : 0 < S
+hT0 : 0 < T
+hAn : A ≠ 0
+hBn : B ≠ 0
+hSn : S ≠ 0
+hTn : T ≠ 0
+hQn : Q ≠ 0
+hAB : 81 ≤ A ^ 2 * B ^ 2
+hinv : 1 / 8 ≤ 1 / Q
+herr : 51051 / 400000 / (A ^ 2 * B ^ 2) ≤ 51051 / 400000 / 81
+alpha : ℝ := 200 / 19 * (1 / Q - 51051 / 400000 / (A ^ 2 * B ^ 2))
+halpha : 1 < alpha
+halpha0 : 0 < alpha
+hfirst : 51 * (Q * B * S ^ 2) / (100 * W) < 51051 / 400000 * Q / (A ^ 2 * B ^ 2)
+hwindow : 1 < 51051 / 400000 * Q / (A ^ 2 * B ^ 2) + 19 / 200 * Q * S * W / (A * T ^ 3)
+hT18 : 18 < T
+hbase : T ^ 2 ≤ A * T ^ 3 / S
+Y : ℝ := alpha * A * T ^ 3 / S
+hWlower : Y < W
+hY : 0 < Y
+hmul : 1 * (A * T ^ 3 / S) < alpha * (A * T ^ 3 / S)
+a✝ : alpha * A * T ^ 3 / S ≤ T ^ 2
+⊢ False
+failed
+error: D1Bound5/RetainedGapScalar.lean:151:4: No goals to be solved
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.RetainedGapScalar
+error: build failed
