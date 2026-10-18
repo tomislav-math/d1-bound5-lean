@@ -538,3 +538,7 @@ The public manuscript and frozen v4 have identical document bodies: only PDF met
 ## 2026-10-18 — retained H48 gap and monomial consequence
 
 The working module `CoherentRetainedGap` now has a verified build and audit for the retained H48 analytic inequality on five actual full-ring tuple entries and its explicit consequence `400*(A^7*B^5*S^3) < C` under the sharpened frontier. The module is not yet imported into the accepted root, and this entry does not close the all-large branch or the final theorem.
+
+## 18 October 2026 — live schedule-recovery Bennett coefficient unit
+
+`BennettCoefficientMajorant` had one actual Lean rewrite failure through explicit lambda application. Added `dsimp only at hmono`, preserving every statement. Corrected guarded pinned build EXIT 0; seven public declarations (six theorems, one definition) passed exact-type/transitive-axiom audit with only propext/Classical.choice/Quot.sound; installed same-kernel target replay EXIT 0. The final lemma bounds the evaluated complex cleared Taylor expression by an explicit positive numerator/pole coefficient majorant, under its stated pole-series envelope. Source and complete project import hashes are in `research/continuations/20261018T1423CEST-schedule-recovery/`. This is separately verified work, not root integration or global MainStatement closure.

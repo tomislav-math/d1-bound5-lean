@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-18T14:27:06.702941+02:00
+
+The reviewed wave119 source failed with a concrete rewrite-pattern mismatch through an explicit lambda application. A one-line beta-reduction repair (`dsimp only at hmono`) preserved all six public theorem statements. The corrected pinned guarded build succeeded, exit 0, in 39.48 seconds. Source/dependency/artifact guards passed. Failed and corrected source snapshots are preserved. Exact type/axiom audit and targeted installed same-kernel replay are next. This is recovery work performed in this live conversation, not proof of a missed scheduled execution.

@@ -739,3 +739,7 @@ Target `D1Bound5.OrdinaryHeightScalar` (unchanged wave119 source) built with pin
 ## 2026-10-18 11:13 CEST — CoherentRetainedGap
 
 Pinned driver build succeeded with 3017 jobs, exit 0, 68.60 seconds, fingerprint `ced79cddbc15736407f29d768324a59534e5304b39959f6a347d0b874e25979b`, and source SHA256 `5374758cbafe23ef4c1439e82acf3ae6083ddbae04f6692091ae5c447ee08b87`. Closure and shared artifacts were unchanged. Exact type/axiom audit exited 0 in 57.72 seconds and installed leanchecker replay exited 0 in 54.87 seconds. Evidence: `research/continuations/20261018T111300CEST-hourly-wave119-gap/`.
+
+## 18 October 2026 — live schedule-recovery Bennett coefficient unit
+
+`BennettCoefficientMajorant` had one actual Lean rewrite failure through explicit lambda application. Added `dsimp only at hmono`, preserving every statement. Corrected guarded pinned build EXIT 0; seven public declarations (six theorems, one definition) passed exact-type/transitive-axiom audit with only propext/Classical.choice/Quot.sound; installed same-kernel target replay EXIT 0. The final lemma bounds the evaluated complex cleared Taylor expression by an explicit positive numerator/pole coefficient majorant, under its stated pole-series envelope. Source and complete project import hashes are in `research/continuations/20261018T1423CEST-schedule-recovery/`. This is separately verified work, not root integration or global MainStatement closure.

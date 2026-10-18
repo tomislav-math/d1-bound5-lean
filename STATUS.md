@@ -1,5 +1,9 @@
 # Status
 
+## 18 October 2026 — hourly scheduling recovered and Bennett coefficient proof repaired
+
+The existing hourly task was found disabled at 14:21 and re-enabled at 14:22 with its schedule unchanged; cause and actor are UNKNOWN. No 13:15 or 14:15 proof runs are supported by saved evidence. The live recovery repaired and separately verified `BennettCoefficientMajorant`: corrected pinned build, all public theorem/definition type and transitive axiom checks, and installed same-kernel targeted replay passed. It is not root-integrated and MainStatement remains UNPROVED. Read the schedule-recovery FINISH and AUTOMATION_OBSERVATION records; local driver pause must not be confused with the scheduler enable flag.
+
 ## 18 October 2026 — two-anchor Bennett denominator clearing separately verified
 
 Six wave119 Bennett denominator identities in `D1Bound5/BennettTwoDenominatorClearing.lean` compiled with the guarded pinned driver, exact type/axiom-audited and targeted SAME-kernel replayed. All checks passed; root integration remains pending. Evidence and byte-identical source: `research/continuations/20261018T124800CEST-bennett-clearing/`. The full arbitrary-order Bennett determinant, finite exhaustive certificates/descent, final sextuple exclusions and MainStatement remain UNPROVED. No whole-root clean-checkout or independent final audit is claimed.

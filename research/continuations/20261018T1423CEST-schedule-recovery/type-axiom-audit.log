@@ -1,0 +1,28 @@
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennett_shifted_half_choose_abs_le: [propext, Classical.choice, Quot.sound]
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennett_coeff_mul_norm_le: [propext, Classical.choice, Quot.sound]
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennettNumeratorMajorant: [propext, Classical.choice, Quot.sound]
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennettNumeratorMajorant_coeff: [propext, Classical.choice, Quot.sound]
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennettNumeratorMajorant_coeff_nonneg: [propext, Classical.choice, Quot.sound]
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennettNumeratorMajorant_hasSum: [propext, Classical.choice, Quot.sound]
+BENNETT_MAJORANT_AXIOMS_PASS D1Bound5.bennettClearedTaylor_eval_norm_le_coeff: [propext, Classical.choice, Quot.sound]
+D1Bound5.bennett_shifted_half_choose_abs_le : ∀ (k h : ℕ), h ≤ k → |Ring.choose (↑k + 1 / 2) h| ≤ ↑((k + 1).choose h)
+D1Bound5.bennett_coeff_mul_norm_le : ∀ (B C : PowerSeries ℂ) (D E : PowerSeries ℝ),
+  (∀ (h : ℕ), ‖(PowerSeries.coeff h) B‖ ≤ (PowerSeries.coeff h) D) →
+    (∀ (h : ℕ), ‖(PowerSeries.coeff h) C‖ ≤ (PowerSeries.coeff h) E) →
+      ∀ (t : ℕ), ‖(PowerSeries.coeff t) (B * C)‖ ≤ (PowerSeries.coeff t) (D * E)
+D1Bound5.bennettNumeratorMajorant : ℝ → ℕ → PowerSeries ℝ
+D1Bound5.bennettNumeratorMajorant_coeff : ∀ (U : ℝ),
+  U ≠ 0 →
+    ∀ (k h : ℕ),
+      h ≤ k → (PowerSeries.coeff h) (D1Bound5.bennettNumeratorMajorant U k) = ↑((k + 1).choose h) * U ^ (k - h)
+D1Bound5.bennettNumeratorMajorant_coeff_nonneg : ∀ (U : ℝ),
+  0 < U → ∀ (k h : ℕ), 0 ≤ (PowerSeries.coeff h) (D1Bound5.bennettNumeratorMajorant U k)
+D1Bound5.bennettNumeratorMajorant_hasSum : ∀ (U r : ℝ) (k : ℕ),
+  HasSum (fun h => (PowerSeries.coeff h) (D1Bound5.bennettNumeratorMajorant U k) * r ^ h) ((U + r) ^ (k + 1) / U)
+D1Bound5.bennettClearedTaylor_eval_norm_le_coeff : ∀ (k t : ℕ),
+  t ≤ k →
+    ∀ (a N : ℂ) (B : PowerSeries ℂ) (D : PowerSeries ℝ),
+      0 < ‖N + a‖ →
+        (∀ (h : ℕ), ‖(PowerSeries.coeff h) B‖ ≤ (PowerSeries.coeff h) D) →
+          ‖Polynomial.eval N (D1Bound5.bennettClearedTaylor k t (1 / 2) a B)‖ ≤
+            (PowerSeries.coeff t) (D1Bound5.bennettNumeratorMajorant ‖N + a‖ k * D)

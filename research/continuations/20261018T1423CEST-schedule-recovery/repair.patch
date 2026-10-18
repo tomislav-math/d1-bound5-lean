@@ -1,0 +1,10 @@
+--- before/BennettCoefficientMajorant.lean
++++ after/BennettCoefficientMajorant.lean
+@@ -35,6 +35,7 @@
+   rw [← bennett_real_factorial_mul_choose] at hnonneg
+   have hc : 0 ≤ Ring.choose ((k : ℝ) + 1 / 2) h := by nlinarith
+   have hmono := (monotoneOn_descPochhammer_eval h) hlow hhigh hupper
++  dsimp only at hmono
+   rw [← bennett_real_factorial_mul_choose, ← bennett_real_factorial_mul_choose,
+     Ring.choose_natCast] at hmono
+   rw [abs_of_nonneg hc]
