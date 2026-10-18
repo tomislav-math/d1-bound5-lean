@@ -1,0 +1,45 @@
+✖ [1539/1539] Building D1Bound5.FastDiskList (20s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FastDiskList.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FastDiskList.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FastDiskList.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FastDiskList.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FastDiskList.setup.json --json
+error: D1Bound5/FastDiskList.lean:21:56: unsolved goals
+tau nu M : ℤ
+z : QuadInt tau nu
+⊢ (∃ a,
+      (a ∈
+            ((Finset.Icc (-Int.sqrt (4 * M)) (Int.sqrt (4 * M))).sort fun x1 x2 => x1 ≤ x2).product
+              ((Finset.Icc (-Int.sqrt (4 * M)) (Int.sqrt (4 * M))).sort fun x1 x2 => x1 ≤ x2) ∧
+          a.1 % 2 = tau * a.2 % 2 ∧ a.1 ^ 2 + discriminant tau nu * a.2 ^ 2 ≤ 4 * M) ∧
+        { re := (a.1 - tau * a.2) / 2, im := a.2 } = z) ↔
+    ∃ a,
+      (a ∈
+            (Finset.Icc (-Int.sqrt (4 * M)) (Int.sqrt (4 * M))).product
+              (Finset.Icc (-Int.sqrt (4 * M)) (Int.sqrt (4 * M))) ∧
+          a.1 % 2 = tau * a.2 % 2 ∧ a.1 ^ 2 + discriminant tau nu * a.2 ^ 2 ≤ 4 * M) ∧
+        { re := (a.1 - tau * a.2) / 2, im := a.2 } = z
+warning: D1Bound5/FastDiskList.lean:24:21: This simp argument is unused:
+  List.mem_product
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fastDiskList, disk, List.mem_toFinset, List.mem_map, List.mem_filter, Finset.mem_sort,
+    decide_eq_true_eq, Finset.mem_image, Finset.mem_filter, Finset.mem_product]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FastDiskList.lean:24:39: This simp argument is unused:
+  Finset.mem_sort
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fastDiskList, disk, List.mem_toFinset, List.mem_map, List.mem_filter, List.mem_product,
+    decide_eq_true_eq, Finset.mem_image, Finset.mem_filter, Finset.mem_product]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FastDiskList.lean:25:41: This simp argument is unused:
+  Finset.mem_product
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fastDiskList, disk, List.mem_toFinset, List.mem_map, List.mem_filter, List.mem_product,
+    Finset.mem_sort, decide_eq_true_eq, Finset.mem_image, Finset.mem_filter]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FastDiskList
+error: build failed

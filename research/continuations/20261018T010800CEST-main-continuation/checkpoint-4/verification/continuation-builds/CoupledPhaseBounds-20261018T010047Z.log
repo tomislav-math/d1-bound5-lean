@@ -1,0 +1,77 @@
+⚠ [3006/3081] Replayed D1Bound5.CoupledPhaseGeometry
+warning: D1Bound5/CoupledPhaseGeometry.lean:90:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoupledPhaseGeometry.lean:84:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CoupledPhaseGeometry.lean:90:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✖ [3081/3081] Building D1Bound5.CoupledPhaseBounds (58s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CoupledPhaseBounds.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoupledPhaseBounds.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoupledPhaseBounds.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoupledPhaseBounds.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoupledPhaseBounds.setup.json --json
+error: D1Bound5/CoupledPhaseBounds.lean:11:66: Invalid field `pow`: The environment does not contain `HasFDerivAtFilter.pow`, so it is not possible to project the field `pow` from an expression
+  hasDerivAt_id x
+of type
+  HasFDerivAtFilter id (ContinuousLinearMap.toSpanSingleton ℝ 1) (nhds x ×ˢ pure x)
+error: D1Bound5/CoupledPhaseBounds.lean:10:73: unsolved goals
+q x : ℝ
+⊢ HasDerivAt (phaseHalfPolynomial q) (-(4 - x ^ 2) * phaseCritical q x) x
+error: D1Bound5/CoupledPhaseBounds.lean:70:19: unsolved goals
+case ha
+q l r F : ℝ
+hq : 1 ≤ q
+hl : 0 ≤ l
+hlr : l ≤ r
+hr : r ≤ 2
+hleft : phaseCritical q l ≤ 0
+hright : 0 ≤ phaseCritical q r
+henvelope : (4 - l ^ 2) ^ 4 * (1 + (1 / q) ^ 2 + r / q) ^ 2 < F
+x : ℝ
+hx : 0 ≤ x
+hx2 : x ≤ 2
+hq0 : 0 < q
+hl2 : l ≤ 2
+hr0 : 0 ≤ r
+hbase : ∀ (t : ℝ), 0 ≤ t → t ≤ 2 → 0 ≤ 4 - t ^ 2
+hpos : ∀ (t : ℝ), 0 ≤ t → 0 ≤ 1 + (1 / q) ^ 2 + t / q
+hmono : MonotoneOn (phaseHalfPolynomial q) (Set.Icc 0 l)
+hanti : AntitoneOn (phaseHalfPolynomial q) (Set.Icc r 2)
+G : ℝ := ⋯
+hG0 : 0 ≤ G
+hg0 : 0 ≤ phaseHalfPolynomial q x
+hxl : ¬x ≤ l
+hrx : r ≤ x
+⊢ 0 ≤ 4 - r ^ 2
+error: D1Bound5/CoupledPhaseBounds.lean:74:6: unsolved goals
+case ha
+q l r F : ℝ
+hq : 1 ≤ q
+hl : 0 ≤ l
+hlr : l ≤ r
+hr : r ≤ 2
+hleft : phaseCritical q l ≤ 0
+hright : 0 ≤ phaseCritical q r
+henvelope : (4 - l ^ 2) ^ 4 * (1 + (1 / q) ^ 2 + r / q) ^ 2 < F
+x : ℝ
+hx : 0 ≤ x
+hx2 : x ≤ 2
+hq0 : 0 < q
+hl2 : l ≤ 2
+hr0 : 0 ≤ r
+hbase : ∀ (t : ℝ), 0 ≤ t → t ≤ 2 → 0 ≤ 4 - t ^ 2
+hpos : ∀ (t : ℝ), 0 ≤ t → 0 ≤ 1 + (1 / q) ^ 2 + t / q
+hmono : MonotoneOn (phaseHalfPolynomial q) (Set.Icc 0 l)
+hanti : AntitoneOn (phaseHalfPolynomial q) (Set.Icc r 2)
+G : ℝ := ⋯
+hG0 : 0 ≤ G
+hg0 : 0 ≤ phaseHalfPolynomial q x
+hxl : ¬x ≤ l
+hrx : ¬r ≤ x
+hlx : l ≤ x
+hxr : x ≤ r
+⊢ 0 ≤ 4 - x ^ 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CoupledPhaseBounds
+error: build failed

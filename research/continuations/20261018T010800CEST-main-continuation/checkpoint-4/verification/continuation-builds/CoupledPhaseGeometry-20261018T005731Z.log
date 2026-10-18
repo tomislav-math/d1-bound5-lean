@@ -1,0 +1,18 @@
+✖ [3006/3006] Building D1Bound5.CoupledPhaseGeometry (59s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CoupledPhaseGeometry.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoupledPhaseGeometry.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoupledPhaseGeometry.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoupledPhaseGeometry.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoupledPhaseGeometry.setup.json --json
+error: D1Bound5/CoupledPhaseGeometry.lean:7:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: D1Bound5/CoupledPhaseGeometry.lean:10:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+error: D1Bound5/CoupledPhaseGeometry.lean:13:4: failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+warning: D1Bound5/CoupledPhaseGeometry.lean:90:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoupledPhaseGeometry.lean:84:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CoupledPhaseGeometry.lean:90:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CoupledPhaseGeometry
+error: build failed

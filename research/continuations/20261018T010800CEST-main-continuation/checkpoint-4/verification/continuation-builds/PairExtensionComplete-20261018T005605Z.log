@@ -1,0 +1,79 @@
+⚠ [2892/2962] Replayed D1Bound5.DescentNorm
+warning: D1Bound5/DescentNorm.lean:46:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:46:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2960/2962] Replayed D1Bound5.DescentDenominator
+warning: D1Bound5/DescentDenominator.lean:19:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentDenominator.lean:22:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentDenominator.lean:27:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [2962/2962] Building D1Bound5.PairExtensionComplete (53s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PairExtensionComplete.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PairExtensionComplete.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PairExtensionComplete.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PairExtensionComplete.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PairExtensionComplete.setup.json --json
+error: D1Bound5/PairExtensionComplete.lean:34:79: unsolved goals
+K : Type u_1
+inst✝² : Field K
+inst✝¹ : NumberField K
+inst✝ : NumberField.IsTotallyComplex K
+hK : finrank ℚ K = 2
+phi : K →+* ℂ
+tau nu : ℤ
+hd : 0 < discriminant tau nu
+e : QuadInt tau nu ≃+* 𝓞 K
+a b : QuadInt tau nu
+ha : a ≠ 0
+hb : b ≠ 0
+hab : a * b + 1 ≠ 0
+hroot : ∃ r0, r0 * r0 = a * b + 1
+hNa : QuadraticAlgebra.norm a ≤ 8
+hNb : QuadraticAlgebra.norm b ≤ 8
+bound : ℤ
+vertices : List (QuadInt tau nu)
+hseeds : ∀ (z : QuadInt tau nu), PairExtension a b z → QuadraticAlgebra.norm z ≤ 1089 → z ∈ vertices
+hclosed :
+  ∀ z ∈ vertices,
+    ∀ (w : QuadInt tau nu),
+      w = pairMutationPlus a b z ∨ w = pairMutationMinus a b z → QuadraticAlgebra.norm w ≤ bound → w ∈ vertices
+z : QuadInt tau nu
+hz : PairExtension a b z
+hNz : QuadraticAlgebra.norm z ≤ bound
+hnorm : ∀ (x : QuadInt tau nu), ‖phi ↑(e x)‖ ^ 2 = ↑(QuadraticAlgebra.norm x)
+hsmall : ∀ (x : QuadInt tau nu), QuadraticAlgebra.norm x ≤ 8 → ‖phi ↑(e x)‖ < 3
+x r0 r s : QuadInt tau nu
+⊢ e a + e b + (e 2 * e a * e b + 1) * e x + e 2 * e r0 * e r * e s =
+    e a + e b + (2 * e a * e b + 1) * e x + 2 * e r0 * e r * e s
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PairExtensionComplete
+error: build failed

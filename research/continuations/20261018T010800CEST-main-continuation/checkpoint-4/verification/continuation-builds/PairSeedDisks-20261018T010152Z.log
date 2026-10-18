@@ -1,0 +1,94 @@
+✖ [1547/1547] Building D1Bound5.PairSeedDisks (22s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PairSeedDisks.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PairSeedDisks.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PairSeedDisks.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PairSeedDisks.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PairSeedDisks.setup.json --json
+error: D1Bound5/PairSeedDisks.lean:433:57: Tactic `decide` failed for proposition
+  fastDiskList 0 1 132 = seedRootDisk_0_1
+because its `Decidable` instance
+  instDecidableEqList (fastDiskList 0 1 132) seedRootDisk_0_1
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match fastDiskList 0 1 132 with
+  | [] =>
+    match seedRootDisk_0_1 with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match seedRootDisk_0_1 with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+error: D1Bound5/PairSeedDisks.lean:738:57: Tactic `decide` failed for proposition
+  fastDiskList 0 2 132 = seedRootDisk_0_2
+because its `Decidable` instance
+  instDecidableEqList (fastDiskList 0 2 132) seedRootDisk_0_2
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match fastDiskList 0 2 132 with
+  | [] =>
+    match seedRootDisk_0_2 with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match seedRootDisk_0_2 with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+error: D1Bound5/PairSeedDisks.lean:1219:57: Tactic `decide` failed for proposition
+  fastDiskList 1 1 132 = seedRootDisk_1_1
+because its `Decidable` instance
+  instDecidableEqList (fastDiskList 1 1 132) seedRootDisk_1_1
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match fastDiskList 1 1 132 with
+  | [] =>
+    match seedRootDisk_1_1 with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match seedRootDisk_1_1 with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+error: D1Bound5/PairSeedDisks.lean:1540:57: Tactic `decide` failed for proposition
+  fastDiskList 1 2 132 = seedRootDisk_1_2
+because its `Decidable` instance
+  instDecidableEqList (fastDiskList 1 2 132) seedRootDisk_1_2
+did not reduce to `isTrue` or `isFalse`.
+
+Reduction got stuck at the `Decidable` instance
+  match fastDiskList 1 2 132 with
+  | [] =>
+    match seedRootDisk_1_2 with
+    | [] => isTrue ⋯
+    | head :: tail => isFalse ⋯
+  | a :: as =>
+    match seedRootDisk_1_2 with
+    | [] => isFalse ⋯
+    | b :: bs =>
+      match decEq a b with
+      | isTrue hab =>
+        match as.hasDecEq bs with
+        | isTrue habs => isTrue ⋯
+        | isFalse nabs => isFalse ⋯
+      | isFalse nab => isFalse ⋯
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PairSeedDisks
+error: build failed

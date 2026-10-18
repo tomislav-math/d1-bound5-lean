@@ -1,0 +1,19 @@
+⚠ [3006/3007] Replayed D1Bound5.PellMatchingCheck
+warning: D1Bound5/PellMatchingCheck.lean:36:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✖ [3007/3007] Building D1Bound5.PellMatchingPilot (63s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PellMatchingPilot.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellMatchingPilot.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellMatchingPilot.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellMatchingPilot.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellMatchingPilot.setup.json --json
+error: D1Bound5/PellMatchingPilot.lean:17:2: failed to synthesize
+  Decidable (∀ m ∈ pellMasks_4519, PellSquareMasks.Valid 4519 m)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PellMatchingPilot
+error: build failed
