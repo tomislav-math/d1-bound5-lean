@@ -1,0 +1,19 @@
+⚠ [1454/1455] Replayed D1Bound5.BennettBinomialIntegrality
+warning: D1Bound5/BennettBinomialIntegrality.lean:52:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [1455/1455] Building D1Bound5.BennettSubringSums (21s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/BennettSubringSums.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettSubringSums.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/BennettSubringSums.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettSubringSums.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/BennettSubringSums.setup.json --json
+error: D1Bound5/BennettSubringSums.lean:38:32: Invalid field `intCast_mem`: The environment does not contain `Subring.intCast_mem`, so it is not possible to project the field `intCast_mem` from an expression
+  S
+of type `Subring F`
+error: D1Bound5/BennettSubringSums.lean:38:50: Invalid field `intCast_mem`: The environment does not contain `Subring.intCast_mem`, so it is not possible to project the field `intCast_mem` from an expression
+  S
+of type `Subring F`
+error: D1Bound5/BennettSubringSums.lean:38:70: Invalid field `intCast_mem`: The environment does not contain `Subring.intCast_mem`, so it is not possible to project the field `intCast_mem` from an expression
+  S
+of type `Subring F`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.BennettSubringSums
+error: build failed

@@ -1,0 +1,84 @@
+⚠ [3007/3008] Replayed D1Bound5.PellConvergentCompleteness
+warning: D1Bound5/PellConvergentCompleteness.lean:70:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/PellConvergentCompleteness.lean:70:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✖ [3008/3008] Building D1Bound5.PellCFPrefixCheck (59s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PellCFPrefixCheck.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellCFPrefixCheck.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellCFPrefixCheck.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellCFPrefixCheck.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellCFPrefixCheck.setup.json --json
+error: D1Bound5/PellCFPrefixCheck.lean:69:40: No goals to be solved
+error: D1Bound5/PellCFPrefixCheck.lean:69:9: unsolved goals
+case zero
+d a0 : ℤ
+s : PellCFState
+n : ℕ
+hn : n ≤ 0
+hn0 : n = 0
+⊢ pellCFAt d a0 s n ∈ pellCFTrace d a0 s 0
+error: D1Bound5/PellCFPrefixCheck.lean:83:52: No goals to be solved
+error: D1Bound5/PellCFPrefixCheck.lean:83:25: unsolved goals
+d a0 : ℤ
+s : PellCFState
+h : pellCFCheckFrom d a0 s 0 = true
+hs : PellCFStateGood a0 s
+i : ℕ
+hi : i ≤ 0
+this : i = 0
+⊢ PellCFStateGood a0 (pellCFAt d a0 s i)
+warning: D1Bound5/PellCFPrefixCheck.lean:133:25: This simp argument is unused:
+  Prod.fst
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.snd]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/PellCFPrefixCheck.lean:133:34: This simp argument is unused:
+  Prod.snd
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Prod.fst]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/PellCFPrefixCheck.lean:133:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: D1Bound5/PellCFPrefixCheck.lean:159:53: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  a + b - c ≥ 0
+where
+ a := a0
+ b := s.m
+ c := (s.a + 1) * s.Q
+warning: D1Bound5/PellCFPrefixCheck.lean:187:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: D1Bound5/PellCFPrefixCheck.lean:247:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ⌊pellRealTail (√↑d) 0⌋
+in the target expression
+  (⌊√↑d⌋ * ⌊pellRealTail (√↑d) 1⌋ + 1, ⌊pellRealTail (√↑d) 1⌋) = ((s 1).p, (s 1).q)
+
+case h.succ.zero
+d a0 : ℤ
+N : ℕ
+h : pellCFPrefixCheck d a0 N = true
+hh : (0 ≤ a0 ∧ a0 ^ 2 < d ∧ d < (a0 + 1) ^ 2) ∧ pellCFCheckFrom d a0 (pellCFInit a0) N = true
+hr : ↑a0 < √↑d ∧ √↑d < ↑a0 + 1
+hd0 : 0 ≤ ↑d
+hg : ∀ i ≤ N, PellCFStateGood a0 (pellCFAt d a0 (pellCFInit a0) i)
+ht : ∀ i < N, PellCFTransitionGood d a0 (pellCFAt d a0 (pellCFInit a0) i)
+s : ℕ → PellCFState := fun i => pellCFAt d a0 (pellCFInit a0) i
+hs : ∀ (i : ℕ), s (i + 1) = pellCFStep d a0 (s i)
+htail : ∀ i ≤ N, pellRealTail (√↑d) i = (√↑d + ↑(s i).m) / ↑(s i).Q
+hf : ∀ i ≤ N, ⌊pellRealTail (√↑d) i⌋ = (s i).a
+ih :
+  ∀ m < 0 + 1,
+    m ≤ N → pellConvergentPair (√↑d) m = ((pellCFAt d a0 (pellCFInit a0) m).p, (pellCFAt d a0 (pellCFInit a0) m).q)
+hi : 0 + 1 ≤ N
+hf0 : ⌊pellRealTail (√↑d) 0⌋ = (s 0).a
+hf1 : ⌊pellRealTail (√↑d) 1⌋ = (s 1).a
+⊢ (⌊√↑d⌋ * ⌊pellRealTail (√↑d) 1⌋ + 1, ⌊pellRealTail (√↑d) 1⌋) = ((s 1).p, (s 1).q)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PellCFPrefixCheck
+error: build failed

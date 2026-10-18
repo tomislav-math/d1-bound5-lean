@@ -1,0 +1,62 @@
+⚠ [1907/2190] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2958/2961] Replayed D1Bound5.CrossBlockUpper
+warning: D1Bound5/CrossBlockUpper.lean:81:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CrossBlockUpper.lean:127:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2959/2961] Replayed D1Bound5.RootMatrixSigns
+warning: D1Bound5/RootMatrixSigns.lean:55:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2960/2961] Replayed D1Bound5.CrossBlockGrowth
+warning: D1Bound5/CrossBlockGrowth.lean:101:22: Variable name `hW0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hW0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✖ [2961/2961] Building D1Bound5.CrossBlockTuple (52s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CrossBlockTuple.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CrossBlockTuple.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CrossBlockTuple.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CrossBlockTuple.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CrossBlockTuple.setup.json --json
+info: D1Bound5/CrossBlockTuple.lean:85:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/CrossBlockTuple.lean:50:69: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+f : R →+* ℂ
+a b : Fin 3 → R
+u v : Fin 3 → ℂ
+S : Fin 3 → Fin 3 → R
+hu : ∀ (i : Fin 3), u i ^ 2 = f (a i)
+hv : ∀ (j : Fin 3), v j ^ 2 = f (b j)
+T : Fin 3 → Fin 3 → ℂ := fun i j => f (a i) * u i * f (S i j) * (f (b j) * v j)
+hT :
+  Matrix.of T = (Matrix.diagonal fun i => f (a i) * u i) * (Matrix.of S).map ⇑f * Matrix.diagonal fun j => f (b j) * v j
+hmap : f (Matrix.of S).det = ((Matrix.of S).map ⇑f).det
+hdet : (Matrix.of T).det = (∏ i, f (a i) * u i) * f (Matrix.of S).det * ∏ j, f (b j) * v j
+hleft : (∏ i, f (a i) * u i) ^ 2 = (∏ i, f (a i)) ^ 3
+hright : (∏ j, f (b j) * v j) ^ 2 = (∏ j, f (b j)) ^ 3
+hsquare : (Matrix.of T).det ^ 2 = ((∏ i, f (a i)) * ∏ j, f (b j)) ^ 3 * f (Matrix.of S).det ^ 2
+hnorm : ‖(Matrix.of T).det‖ ^ 2 = ((∏ b, ‖f (a b)‖) * ∏ b_1, ‖f (b b_1)‖) ^ 3 * ‖f (Matrix.of S).det‖ ^ 2
+⊢ True ∨ f (Matrix.of S).det = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CrossBlockTuple
+error: build failed

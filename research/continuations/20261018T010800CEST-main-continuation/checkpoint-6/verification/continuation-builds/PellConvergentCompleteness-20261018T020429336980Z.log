@@ -1,0 +1,42 @@
+✔ [3006/3007] Built Mathlib.NumberTheory.DiophantineApproximation.Basic (7.2s)
+✖ [3007/3007] Building D1Bound5.PellConvergentCompleteness (63s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PellConvergentCompleteness.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellConvergentCompleteness.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PellConvergentCompleteness.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellConvergentCompleteness.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PellConvergentCompleteness.setup.json --json
+error: D1Bound5/PellConvergentCompleteness.lean:47:9: unsolved goals
+case zero
+x : ℝ
+⊢ IsCoprime ⌊x⌋ 1
+warning: D1Bound5/PellConvergentCompleteness.lean:68:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/PellConvergentCompleteness.lean:68:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: D1Bound5/PellConvergentCompleteness.lean:114:2: mod_cast has type
+  g = 1
+but is expected to have type
+  x.gcd y = 1
+error: D1Bound5/PellConvergentCompleteness.lean:178:4: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  i - j ≥ 0
+  h ≥ 0
+  g ≥ 0
+  g - h ≥ 0
+  f ≥ 1
+  e ≥ 1
+  b - c ≤ -1
+  b - e ≥ 0
+  a ≥ 7
+where
+ a := d
+ b := X
+ c := (pellConvergentPair (√↑d) N).1
+ e := (pellConvergentPair (√↑d) n).1
+ f := (pellConvergentPair (√↑d) n).2
+ g := ↑n
+ h := ↑N
+ i := (fun n => (pellConvergentPair (√↑d) n).1) n
+ j := (fun n => (pellConvergentPair (√↑d) n).1) N
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PellConvergentCompleteness
+error: build failed

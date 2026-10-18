@@ -1,0 +1,21 @@
+✖ [1546/1546] Building D1Bound5.EisensteinPellDescent (22s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/EisensteinPellDescent.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/EisensteinPellDescent.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/EisensteinPellDescent.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/EisensteinPellDescent.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/EisensteinPellDescent.setup.json --json
+error: D1Bound5/EisensteinPellDescent.lean:48:3: unknown tactic
+error: D1Bound5/EisensteinPellDescent.lean:41:43: unsolved goals
+x y u v : ℤ
+hR : x ^ 2 - y ^ 2 + u ^ 2 - v ^ 2 = 0
+hI : 2 * x * y + y ^ 2 + 2 * u * v + v ^ 2 = 1
+hM : eisensteinCoordinateNorm x y + eisensteinCoordinateNorm u v ≤ 2
+hxl : -1 ≤ x
+hxu : x ≤ 1
+hyl : -1 ≤ y
+hyu : y ≤ 1
+hul : -1 ≤ u
+huu : u ≤ 1
+hvl : -1 ≤ v
+hvu : v ≤ 1
+⊢ u = y ∧ v = x ∨ u = -y ∧ v = -x
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.EisensteinPellDescent
+error: build failed
