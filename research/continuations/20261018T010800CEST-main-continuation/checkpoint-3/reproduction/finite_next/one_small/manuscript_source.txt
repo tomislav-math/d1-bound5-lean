@@ -1,0 +1,883 @@
+whose modulus is $T<85$, together with two other entries of moduli
+$R<V\le W$.
+Lemma~\ref{lem:four-anchor-nonvanishing} applies because
+\[
+ V^2>R^2>32\cdot3\cdot3\cdot85\ge\frac{32BST}{A^3}.
+\]
+At least one coherent form on $(a,b,s)$ or $(a,b,t)$ is therefore
+nonzero. Lemma~\ref{lem:general-three} gives
+\[
+ 1<\frac{108375}{Z}+\frac{255Z}{V^3},\qquad Z^2=|vw+1|.
+\]
+Since $Z>V/2$ and $216750/V<1/2$, we obtain $Z>V^3/510$.
+Consequently
+\[
+ W>\frac{V^5}{260100}-\frac1V
+   >\frac{V^5}{10^6}>10^{38}V^3.
+\]
+The intervals~\eqref{sm:five-four-fixed-window} and
+\eqref{sm:five-three-small-window} overlap because $V^2>10^{69}$.
+Their union forbids every value from $10^{38}V^3$ to
+$10^{-22}V^{11}$. But~\eqref{sm:five-small-upper} gives
+$W<10^{60}V^7<10^{-22}V^{11}$, since $V^4>10^{82}$.
+This is the final contradiction.
+\end{proof}
+
+
+\begin{proof}[Proof of Proposition~\ref{sm:main}]
+Choose six distinct entries, including two of the small entries.
+Lemma~\ref{sm:six-small-triple-classification} shows that at most three
+are small. If exactly two are small, Proposition~\ref{sm:five-two-small-four-large}
+excludes the four large entries. If three are small,
+Proposition~\ref{sm:five-three-small} excludes the three remaining entries.
+\end{proof}
+
+\section{Reduction of the first three entries}
+\label{sec:pair-reduction}
+
+We now treat an ordered sextuple with
+\[
+ 1\le A<3\le B\le S\le T\le C\le D.
+\]
+The preceding small-entry and all-large arguments reduce the proof to this
+case. All norms below are the field norms, so \(N(z)=|z|^2\) is a
+nonnegative rational integer.
+
+We use the interval calculation of Section~\ref{sec:common-intervals}.
+For the gap and the residual of $N_3$ on $b,s$, put
+\[
+ \mu=\frac{51051}{400000},\qquad \kappa=\frac{3535}{409600},\qquad
+ v=B/S,\qquad d_0=|b-s|/S,
+\]
+\[
+ \Phi=\max(d_0^6,vd_0^5),\qquad R_{bs}=\kappa\Phi.
+\]
+The coefficient $M_{bs}=4143$ is sufficient in both applications below.
+
+\subsection{The five regions with an unbounded second entry}
+
+The following elementary phase estimate keeps the two distances in the
+gap and in the relabeled residual coupled. Put
+\[
+ \mathcal Q=\frac{|(a-b)(a-s)(b-s)|}{BS^2}.
+\]
+If \(B\ge qA\), \(q\ge1\), then
+\begin{equation}\label{eq:pr-phase}
+ \mathcal Q^2\Phi\le
+ F(q):=\max_{0\le x\le2}(4-x^2)^4(1+q^{-2}+x/q)^2.
+\end{equation}
+Indeed, writing \(u=A/B\), \(v=B/S\), \(d_0=|b-s|/S\), the identity
+\((a-b)(a-s)=a^2-a(b+s)+bs\) and the parallelogram identity give
+\[
+ \mathcal Q\le d_0\{1+u^2v+u\sqrt{2+2v^2-d_0^2}\}
+ \le d_0\{1+q^{-2}+q^{-1}\sqrt{4-d_0^2}\}.
+\]
+For \(d_0\ge v\), substitute \(x=\sqrt{4-d_0^2}\).
+For \(d_0<v\le1\), the same expression gives
+\(\mathcal Q^2\Phi\le(1+1/q)^4\le16<F(q)\).
+The unique maximizing interior point in \eqref{eq:pr-phase} is the
+positive zero of
+\begin{equation}\label{eq:pr-phase-critical}
+ 5x^2/q+4(1+q^{-2})x-4/q=0.
+\end{equation}
+The derivative changes sign there from positive to negative.
+
+\begin{proposition}\label{prop:pr-H2}
+In the one-small-entry branch, every hypothetical sextuple satisfies
+\[
+ N(a)=1,\ B<8,\qquad\hbox{or}\qquad N(a)=2,\ B<4.
+\]
+\end{proposition}
+\begin{proof}
+Since \(N(a)\) is an integer between one and eight, it is enough to
+exclude the five rows of Table~\ref{tab:pr-five-regions}. In each row
+\(B\ge m\), \(A^2\ge n\), \(A\le U\), and \(q=m/U\).
+Lemma~\ref{lem:five-frontier-gaps} gives \(T>tABS\).
+Consequently
+\[
+ AT>tnm^2\ge54,
+\]
+so Lemma~\ref{lem:retained-gap} applies with \(\lambda=19/200\).
+In particular it supplies the size assumptions for all approximation
+estimates and the starting lower bound. Put \(c_*=(9999/10000)(200/19)^2\),
+\[
+ Q_0=2(1+1/q)^2,\quad
+ H=c_*t^5(1-\mu Q_0/m^2)^2.
+\]
+The triangle inequalities give \(\mathcal Q\le Q_0\).
+Weakening \(\mu/(A^2B^2)\) to \(\mu/m^2\) therefore gives
+\[
+ C>\frac{H}{\mathcal Q^2}A^7B^5S^3.
+\]
+For every row of Table~\ref{tab:pr-five-regions}, exact substitution
+shows \(H/Q_0^2>G\) and \(H/(\kappa F_p)>\rho\), where
+\(F(q)<F_p\). This establishes both bounds in
+\eqref{eq:pr-coarse-gap}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Five excluded regions and their gap bounds.}
+\label{tab:pr-five-regions}
+\begin{tabular}{c|rrrrrrrrr}
+\(N(a)\)&\(m\)&\(n\)&\(U\)&\(t\)&\(q\)&\(F_p\)&\(G\)&\(\rho\)&\(R_p\)\\\hline
+1&8&1&1&27/8&8&269&7495&20687&7/50\\
+2&4&2&3/2&3&8/3&368&1771&7973&7/20\\
+3&3&3&7/4&11/4&12/7&540&598&3226&18/25\\
+4&3&4&2&29/10&3/2&637&624&3507&47/50\\
+5--8&3&5&17/6&3&18/17&1121&375&2217&201/100
+\end{tabular}
+\end{table}
+The finite-family residuals are
+\begin{equation*}
+ R_k=R_*\frac{101}{200}
+             \left(\frac{1+1/q}{2}\right)^{2k}.
+\end{equation*}
+The coefficient bounds and overlap margins are given in
+Table~\ref{tab:pr-five-coefficients}. If a root-column monomial after division by its
+anchor is \(n a^r b^s c^\ell\), then
+\[
+ r,s\ge0,\quad0\le\ell\le k,\quad r+s=\ell+P-k-2,
+ \qquad
+ \frac{|n a^r b^s c^\ell|}{B^{P-2}C^k}
+ \le |n|q^{-r}1000^{\ell-k}.
+\]
+Thus a strict upper bound for
+\begin{equation}\label{eq:pr-Mq}
+ \frac{101}{100g}\max_{\text{rows}}
+       \sum_{\text{two root columns}}\sum_{r,s,\ell}
+                    |n|q^{-r}1000^{\ell-k}
+\end{equation}
+is a valid \(M_k\). The explicit polynomial rows constructed earlier,
+applied to \eqref{eq:pr-Mq}, give the displayed integers.
+The adaptive residual is the maximum of its four explicit positive
+polynomials at $x=1/q$. Their maximum is strictly below the displayed
+\(R_p\).
+\begin{table}[htbp]
+\centering\small
+\caption{Coefficient bounds for the five regions. The last column is a
+strict lower bound for every overlap quotient.}
+\label{tab:pr-five-coefficients}
+\begin{tabular}{c|rrrrrr}
+\(N(a)\)&\(M_2\)&\(M_n\)&\(M_3\)&\(M_4\)&\(M_5\)&margin\\\hline
+1&36&282&145&4605&38390&1.260\\
+2&69&697&326&14771&171856&2.329\\
+3&109&1306&663&34919&482131&1.166\\
+4&130&1652&863&48019&701908&5.459\\
+5--8&220&3553&1944&134712&2400382&1.321
+\end{tabular}
+\end{table}
+
+Here and below terminating decimals denote the corresponding exact
+rational numbers. All the numerical verifications in these two tables
+can be performed as follows. For \(F_p\), bisect \([0,2]\) thirty times
+using the sign of \eqref{eq:pr-phase-critical}, obtaining \([l,r]\).
+Then evaluate
+\((4-l^2)^4(1+q^{-2}+r/q)^2<F_p\).
+Evaluate \eqref{eq:pr-Mq}, the four residual polynomials, and the two
+bounds for \(G,\rho\) by rational arithmetic. In each row of
+Table~\ref{tab:pr-overlaps}, substitute \(A^2=n\) and \(B=S=m\).
+All remaining exponents are nonnegative and every exponent of \(A\)
+is even, so this gives a lower bound throughout the region. The
+resulting fifteen quotients are all larger than the last column of
+Table~\ref{tab:pr-five-coefficients}. Finally
+\((G/105)n^4m^4>1\), proving the infinite-tail condition. The common
+interval calculation gives a contradiction in every region.
+\end{proof}
+
+\subsection{The field and the finite first-pair list}
+
+\begin{lemma}\label{lem:pr-one-three}
+Every common extension of $\{1,3\}$ in the full integer ring of an
+imaginary quadratic field is rational. A $D(1)$-tuple containing
+$1,3$ and a negative entry has at most four elements.
+\end{lemma}
+\begin{proof}
+First every common extension is rational. Otherwise choose roots
+\(r=(e+f\sqrt{-\Delta_K})/2\) and
+\(u=(g+h\sqrt{-\Delta_K})/2\) of \(c+1\) and \(3c+1\), respectively.
+Nonreality makes \(e,f,g,h\) nonzero. From \(3r^2-u^2=2\), put
+\[
+ X=3e^2-g^2,\quad V=h^2-3f^2,\quad k=(eh-fg)/2.
+\]
+If $\Delta_K$ is odd, then $e\equiv f$ and $g\equiv h\pmod2$.
+If $\Delta_K$ is even, then $e$ and $g$ are even.
+In either case $k$ is an integer. The imaginary and real parts
+give $3ef=gh$ and $X+\Delta_K V=8$. Multiplication gives
+\(XV=12k^2\). Moreover $V=3f^2X/g^2$, so $X,V>0$. Also $k\ne0$, since $k=0$ would give $g^2=3e^2$, which is impossible for nonzero integers. Hence
+\[
+ 64=(X+\Delta_K V)^2\ge4\Delta_K XV=48\Delta_K k^2\ge144,
+\]
+a contradiction.
+
+Write a negative rational extension as \(-x\), where \(x\) is a
+positive integer. Purely imaginary integral roots in
+\(\mathbb Q(\sqrt{-d})\) are integer multiples of \(\sqrt{-d}\),
+including in the half-integral full rings. Thus
+\(x-1=du^2\) and \(3x-1=dv^2\), where \(u=0\) is allowed,
+and \(d\mid2\).
+The case \(d=1\) is impossible modulo three, so \(d=2\) and \(x\)
+is odd. A positive extra entry \(p\) satisfies
+\(p+1=r^2\), \(3p+1=s^2\) with integer roots. Reduction modulo four
+forces \(r\) odd, hence \(8\mid p\). Such a positive entry cannot coexist with $-x$, because the equation $px-1=2w^2$ has an odd left side. If negative entries occur, all extra entries are therefore
+negative odd integers. At most two can coexist, since among three
+odd absolute values two have the same residue modulo four and their
+product plus one is congruent to two.
+\end{proof}
+
+\begin{lemma}\label{lem:pr-field}
+Under Proposition~\ref{prop:pr-H2}, either the first pair is
+$(1,3)$ up to simultaneous negation, or the field has absolute
+discriminant $\Delta_K\le24$.
+\end{lemma}
+\begin{proof}
+For a nonreal algebraic integer, \(N(z)\ge\Delta_K/4\).
+If \(\Delta_K\ge25\), the condition \(N(a)\le2\) therefore makes
+\(a\) rational. Simultaneous negation allows \(a=1\), and then
+\(B<8\). For \(r^2=b+1\),
+\(N(r)=|b+1|<9\). If \(\Delta_K\ge36\), this forces \(r\) rational.
+The only absolute negative fundamental discriminants between 25 and 35
+are 31 and 35. At 35 a nonreal integer has integral norm at least nine.
+At 31 the only nonreal roots of norm below nine are
+$(\pm1\pm\sqrt{-31})/2$. They give \(N(r^2-1)=80\), contrary to
+\(N(b)<64\). Thus \(r\) is rational in every case. Now
+$b=r^2-1$, $r\in\mathbb Z$, and $3\le|b|<8$ force $b=3$,
+which is the stated alternative.
+\end{proof}
+
+We enumerate the remaining pairs in the fields allowed by
+Lemma~\ref{lem:pr-field}. For squarefree
+\[
+ d\in\{1,2,3,5,6,7,11,15,19,23\},
+\]
+write \(\omega=(1+\sqrt{-d})/2\) when \(d\equiv3\pmod4\), and
+\(\omega=\sqrt{-d}\) otherwise. Put
+\(\omega^2=\tau_K\omega-\nu_K\), \(\Delta_K=4\nu_K-\tau_K^2\).
+The exact arithmetic is
+\begin{equation}\label{eq:pr-ring-arithmetic}
+\begin{aligned}
+ (x,y)(v,w)&=(xv-\nu_Kyw,xw+yv+\tau_Kyw),\\
+ N(x,y)&=x^2+\tau_Kxy+\nu_Ky^2,\qquad
+ \overline{(x,y)}=(x+\tau_Ky,-y).
+\end{aligned}
+\end{equation}
+All elements of norm at most \(L\) are given by
+\begin{equation}\label{eq:pr-disk}
+\begin{aligned}
+ |y|&\le\left\lfloor\sqrt{4L/\Delta_K}\right\rfloor,&
+ |e|&\le\left\lfloor\sqrt{4L-\Delta_Ky^2}\right\rfloor,\\
+ e&\equiv\tau_Ky\pmod2,&x&=(e-\tau_Ky)/2.
+\end{aligned}
+\end{equation}
+This follows from \(4N(x,y)=(2x+\tau_Ky)^2+\Delta_Ky^2\), and is both
+necessary and sufficient.
+
+Enumerate every \(a\) of norm one or two and every \(r\) of norm at
+most eight. Form
+\[
+ b=\overline a(r^2-1)/N(a),
+\]
+retaining it only when both coordinates are integers and
+\[
+ 9\le N(b)\le63\quad(N(a)=1),\qquad
+ 9\le N(b)\le15\quad(N(a)=2).
+\]
+The root range is exhaustive because $N(r)=|ab+1|\le AB+1<9$ in the first case and $AB+1\le\sqrt{30}+1<7$ in the second.
+Set aside $(a,b)=(1,3),(-1,-3)$, which will be treated separately. Quotient only by simultaneous
+negation and conjugation of both coordinates. For an explicit
+representative rule, minimize lexicographically
+\[
+ \bigl(2a_x+\tau_Ka_y<0,\ a_y<0,\ 2b_x+\tau_Kb_y<0,\ b_y<0,\ a_x,a_y,b_x,b_y\bigr)
+\]
+in each orbit, with false preceding true. The result is exactly the
+forty pairs in Table~\ref{tab:pr-forty-pairs}. The number of orbits
+and the number before these symmetries, respectively, are
+\[
+\begin{array}{c|rrrrrrrrrr}
+ d&1&2&3&5&6&7&11&15&19&23\\\hline
+ \text{orbits}&9&3&15&2&2&2&2&2&2&1\\
+ \text{pairs}&30&10&58&6&6&8&8&8&8&4.
+\end{array}
+\]
+Their totals are forty and 146. The symmetries preserve every square
+condition. No arbitrary unit multiplication is used.
+
+\begingroup\small
+\setlength{\tabcolsep}{5pt}
+\begin{longtable}{r|r|c|c|r|r}
+\caption{The forty first-pair representatives. Coordinates mean $x+y\omega$.}\label{tab:pr-forty-pairs}\\
+$i$&$d$&$a$&$b$&$N(a)$&$N(b)$\\\hline\endfirsthead
+$i$&$d$&$a$&$b$&$N(a)$&$N(b)$\\\hline\endhead
+0&1&$(0,1)$&$(0,-3)$&1&9\\
+1&1&$(0,1)$&$(0,5)$&1&25\\
+2&1&$(0,1)$&$(4,-2)$&1&20\\
+3&1&$(0,1)$&$(4,4)$&1&32\\
+4&1&$(1,0)$&$(-5,0)$&1&25\\
+5&1&$(1,0)$&$(-4,4)$&1&32\\
+6&1&$(1,0)$&$(2,4)$&1&20\\
+7&2&$(1,0)$&$(-3,0)$&1&9\\
+8&2&$(1,0)$&$(-2,2)$&1&12\\
+9&2&$(1,0)$&$(1,4)$&1&33\\
+10&3&$(0,1)$&$(-9,6)$&1&63\\
+11&3&$(0,1)$&$(-6,9)$&1&63\\
+12&3&$(0,1)$&$(-5,1)$&1&21\\
+13&3&$(0,1)$&$(-4,-4)$&1&48\\
+14&3&$(0,1)$&$(-4,4)$&1&16\\
+15&3&$(0,1)$&$(-1,5)$&1&21\\
+16&3&$(0,1)$&$(2,-7)$&1&39\\
+17&3&$(0,1)$&$(3,-3)$&1&9\\
+18&3&$(0,1)$&$(4,4)$&1&48\\
+19&3&$(0,1)$&$(7,-2)$&1&39\\
+20&3&$(1,0)$&$(-9,3)$&1&63\\
+21&3&$(1,0)$&$(-5,4)$&1&21\\
+22&3&$(1,0)$&$(-4,0)$&1&16\\
+23&3&$(1,0)$&$(-4,8)$&1&48\\
+24&3&$(1,0)$&$(2,5)$&1&39\\
+25&5&$(1,0)$&$(-6,0)$&1&36\\
+26&5&$(1,0)$&$(-5,2)$&1&45\\
+27&6&$(1,0)$&$(-7,0)$&1&49\\
+28&6&$(1,0)$&$(-6,2)$&1&60\\
+29&7&$(1,0)$&$(-2,3)$&1&16\\
+30&7&$(1,0)$&$(1,5)$&1&56\\
+31&11&$(1,0)$&$(-4,1)$&1&15\\
+32&11&$(1,0)$&$(-3,3)$&1&27\\
+33&15&$(1,0)$&$(-5,1)$&1&24\\
+34&15&$(1,0)$&$(-4,3)$&1&40\\
+35&19&$(1,0)$&$(-6,1)$&1&35\\
+36&19&$(1,0)$&$(-5,3)$&1&55\\
+37&23&$(1,0)$&$(-7,1)$&1&48\\
+38&1&$(1,1)$&$(-1,-3)$&2&10\\
+39&1&$(1,1)$&$(3,1)$&2&10\\
+\end{longtable}
+\endgroup
+\begingroup\small
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{r|rrrrr}
+\caption{Coefficient bounds for the forty fixed pairs.}\label{tab:pr-forty-coefficients}\\
+$i$&$M_2$&$M_n$&$M_3$&$M_4$&$M_5$\\\hline\endfirsthead
+$i$&$M_2$&$M_n$&$M_3$&$M_4$&$M_5$\\\hline\endhead
+0&62&608&280&12222&136530\\
+1&17&77&44&808&4011\\
+2&37&281&147&4610&38256\\
+3&21&110&64&1402&8160\\
+4&44&379&180&6340&61370\\
+5&37&293&150&4791&40361\\
+6&23&129&77&1798&11204\\
+7&62&608&280&12222&136530\\
+8&45&377&183&6284&60438\\
+9&25&158&95&2471&16976\\
+10&24&156&94&2424&16601\\
+11&21&119&70&1599&9691\\
+12&34&252&136&4117&32986\\
+13&37&286&147&4661&38983\\
+14&22&121&72&1618&9751\\
+15&17&73&41&741&3580\\
+16&39&318&159&5209&45613\\
+17&48&401&193&6835&66703\\
+18&20&106&62&1336&7678\\
+19&24&152&91&2326&15710\\
+20&36&276&143&4502&37275\\
+21&40&323&162&5308&46658\\
+22&51&456&205&8194&83910\\
+23&26&173&103&2780&19826\\
+24&21&113&66&1460&8607\\
+25&41&333&164&5461&49340\\
+26&35&273&142&4450&36676\\
+27&38&303&153&4954&42245\\
+28&34&259&137&4205&34076\\
+29&32&224&127&3666&28238\\
+30&23&137&81&1973&12709\\
+31&50&440&201&7791&78839\\
+32&32&230&127&3748&29208\\
+33&44&367&176&6049&57935\\
+34&32&229&126&3718&28965\\
+35&40&324&161&5305&46974\\
+36&31&226&124&3660&28401\\
+37&37&296&151&4834&40902\\
+38&77&803&387&17946&216405\\
+39&19&38&41&370&985\\
+\end{longtable}
+\endgroup
+
+For the rational pair $(a,b)=(1,3)$, the same coefficient calculation gives
+\[
+ (M_2,M_n,M_3,M_4,M_5)=(12,41,25,300,1100).
+\]
+These constants are independent of the imaginary quadratic field.
+
+
+\subsection{A common bound \texorpdfstring{$S<15$}{S<15}}
+
+\begin{proposition}\label{prop:pr-S15}
+No ordered sextuple whose first pair is $(1,3)$ or one of the pairs in
+Table~\ref{tab:pr-forty-pairs} has $S\ge15$.
+\end{proposition}
+\begin{proof}
+Suppose that $S\ge15$. Lemma~\ref{lem:tail-irregular} gives
+$T>2BS\ge90$. We first prove the common estimate
+\begin{equation}\label{eq:pr-fixed-fourth-gap}
+ T>\tau ABS,\qquad \tau=\frac{59}{20}.
+\end{equation}
+For the edges $12,13,14,23,24,34$ of $(a,b,s,t)$, use the bounds
+\[
+ r=\left(\frac13,\frac1{15},\frac1{90},
+          \frac1{45},\frac1{270},\frac1{1350}\right),\qquad
+ k=\frac1{10000}(5506,5087,5014,5029,5005,5001).
+\]
+For every corresponding pair $r_e,k_e$, we have
+$1/2<k_e<1$ and $r_ek_e^2<2k_e-1$.
+Hence, for $z_e=1/(a_i a_j)$ and
+$\delta_e=\sqrt{1+z_e}-1$ on the branch with positive real part,
+\[
+ |\delta_e|\le k_e|z_e|,\qquad
+ |\delta_e-z_e/2|\le(k_e-1/2)|z_e|.
+\]
+The first inequality follows by rationalization and the second from
+$\delta-z/2=-\delta^2/2$.
+
+Let $M$ be the integral matrix of order four defined in the proof of
+Lemma~\ref{lem:five-frontier-gaps}, with $(a_1,a_2,a_3,a_4)=(a,b,s,t)$.
+It is nonsingular by the even-dimensional congruence used there.
+Apply the determinant expansion
+\eqref{eq:integrated-7}--\eqref{eq:integrated-8}. The coefficient
+bounding the term $T/(ABS)$ is
+$\alpha=2k_{12}k_{13}k_{23}$. For complementary pairs $\{i,j\}$
+and $\{k,l\}$, the coefficient bounding $1/(A_iA_j)$ is
+\begin{equation*}
+ c_{ij}=2\{k_{ij}(k_{ik}k_{jl}+k_{il}k_{jk})
+                  +k_{ij}^2k_{kl}\}-\frac12.
+\end{equation*}
+Indeed, retain the signed leading cubic in
+\eqref{eq:integrated-8} and bound each cubic remainder by the
+product of its three $k$'s minus $1/8$, counting repeated edges
+with their multiplicities. Put
+\[
+ Q_4=(k_{12}k_{34}+k_{13}k_{24}+k_{14}k_{23})^2,\qquad
+ W=\frac1{4050}.
+\]
+Since $A<3$, $B\ge3$, $S\ge15$ and $T>2BS$, the three remaining
+cubic terms $A/(BST)$, $B/(AST)$ and $S/(ABT)$ are at most
+$3W$, $1/450$ and $1/18$, respectively. The quartic factor
+$1/(ABST)$ is at most $W$. Consequently
+\[
+ 1\le|\det M|\le\alpha\frac{T}{ABS}+\beta,
+\]
+where
+\[
+ \beta=6k_{23}k_{24}k_{34}W
+       +\frac{2k_{13}k_{14}k_{34}}{450}
+       +\frac{2k_{12}k_{14}k_{24}}{18}
+       +\sum_{i<j}c_{ij}r_{ij}+Q_4W.
+\]
+Substitution of the six rational $k_e$ gives
+$\alpha<141/500$ and $\beta<21/125$. If $T\le(59/20)ABS$,
+these inequalities would give
+\[
+ 1<\frac{141}{500}\frac{59}{20}+\frac{21}{125}
+   =\frac{9999}{10000},
+\]
+a contradiction. This proves~\eqref{eq:pr-fixed-fourth-gap}.
+Since $AT>90$, Lemma~\ref{lem:retained-gap} applies with
+$\lambda=1/10$.
+
+Write $n_a=N(a)$, $n_b=N(b)$ and $n_{ab}=N(a-b)$. For a nonnegative
+rational $x$, define
+\[
+ \lfloor\sqrt{x}\rfloor_j=10^{-j}\lfloor10^j\sqrt{x}\rfloor,
+ \qquad
+ \lceil\sqrt{x}\rceil_j=10^{-j}\lceil10^j\sqrt{x}\rceil.
+\]
+These bounds use only integer square roots and comparisons. Put
+\[
+ A_1=\lceil\sqrt{n_a}\rceil_8,\quad
+ B_0=\lfloor\sqrt{n_b}\rfloor_8,\quad
+ B_1=\lceil\sqrt{n_b}\rceil_8,\quad c_0=\frac{9999}{100},
+\]
+and define
+\begin{align*}
+ d_1&=\lceil\sqrt{n_{ab}/n_b}\rceil_8,&
+ Q_0&=d_1(1+A_1/15)(1+B_1/15),\\
+ K&=c_0n_a(1/Q_0-\mu/n_b)^2,&G&=K\tau^5,\\
+ H&=c_0n_a\tau^5(1-\mu Q_0/n_b)^2,&
+ F_0&=(n_{ab}/n_b)(1+A_1/15)^2(1+B_1/15)^8,\\
+ \rho&=H/(\kappa F_0).&&
+\end{align*}
+For all forty-one pairs, $1/Q_0>\mu/n_b$ and $K>7/4$.
+The retained gap, after replacing $\mu/(A^2B^2)$ by $\mu/B^2$, gives
+\[
+ C>K T^5/S^2>\frac74T^5/S^2,\qquad C>GB^5S^3.
+\]
+Moreover, $\mathcal Q\le Q_0$ and $\mathcal Q^2\Phi\le F_0$.
+For the second inequality, use $|a-s|/S\le1+A/S$,
+$|b-s|/S\le1+B/S$ and $\Phi\le(1+B/S)^6$.
+Thus the pointwise coefficient of $B^5S^3$, divided by $R_{bs}$,
+is at least $\rho$. All other positive powers of $A$ in the
+interval endpoints may be replaced by one.
+
+We evaluate the finite-family coefficients at $a,b$ before taking
+absolute values. If the two root columns after division by their
+anchors are $\sum_{\ell=0}^k p_{j,\ell}(a,b)c^\ell$, put
+$C_0=\max(1000,200B)$. Any integer strictly larger than
+\begin{equation*}
+ \frac{101}{100g}\max_{\mathrm{rows}}
+ \sum_{j=1}^2\sum_{\ell=0}^k
+ \frac{|p_{j,\ell}(a,b)|}{B^{P-2}C_0^{k-\ell}}
+\end{equation*}
+is a valid coefficient bound, since $C\ge C_0$.
+To reproduce the displayed integers, write
+$n_p=N(p_{j,\ell}(a,b))$ and $r=k-\ell$, and replace each summand
+before $101/(100g)$ by
+\[
+ \begin{cases}
+ \lceil\sqrt{n_p/n_b^{P-2}}\rceil_{10}/1000^r,&n_b\le25,\\
+ \lceil\sqrt{n_p/n_b^{P-2+r}}\rceil_{10}/200^r,&n_b>25.
+ \end{cases}
+\]
+Take the integer part of the largest rational row sum, plus one.
+Every polynomial evaluation uses~\eqref{eq:pr-ring-arithmetic}.
+
+For every pair, $|a-b|\ge B-A>A$. This also holds for the two
+norm-two pairs, since $B\ge3>2\sqrt2$. Hence the residual constants are
+\begin{equation*}
+ R_k=R_*\frac{101}{200}
+                 \left(\frac{n_{ab}}{4n_b}\right)^k.
+\end{equation*}
+For the adaptive residual use $q=B_0/A_1>2$ and $x=1/q$.
+Its largest residual bound is
+\begin{equation*}
+ R_p=\frac{15+80x+150x^2+280x^3+35x^4}{256}
+ +\frac{21(885+1144x+435x^2+2634x^3+170x^4)}{1024\cdot999}.
+\end{equation*}
+The comparison with the other three residual polynomials follows
+directly from $0\le x\le1$ and $x^5\le x^4\le x^3$.
+
+Use Table~\ref{tab:pr-overlaps} with every $A$ replaced by one.
+The first two numerators improve from $1024,256$ to $9604,784$,
+respectively, because $C>(7/4)T^5/S^2$.
+Substitute $B^2=n_b$ and $S^2=225$ in the remaining nonnegative
+powers. For each of the forty-one pairs, all fifteen rational
+quotients are strictly larger than $59/50$.
+These checks use only the displayed formulas and family polynomials.
+The infinite-tail condition holds as well, since the same constants give
+\[
+ \frac{R_0}{H_0}\ge\frac{C}{105B^4}
+ >\frac{GBS^3}{105}\ge\frac{GB_0\,15^3}{105}>1.
+\]
+The common interval argument gives the contradiction.
+\end{proof}
+
+\subsection{The remaining third entries}
+
+The remaining third entries are found by a bounded enumeration.
+For each pair of
+Table~\ref{tab:pr-forty-pairs}, enumerate \(s\) by
+\eqref{eq:pr-disk} with \(L=224\), retain \(N(s)\ge N(b)\) and
+\(s\ne a,b\), and test \(as+1\) and \(bs+1\) for being squares.
+The norm cutoff is exact because Proposition~\ref{prop:pr-S15}
+gives \(S<15\) and the norm is integral.
+An exact full-ring square test, including zero, is as follows.
+For \(z=(z_x,z_y)\), put \(p=2z_x+\tau_Kz_y\), \(q=z_y\).
+Require \(N(z)=n^2\) with \(n\ge0\) integral, then require integers
+\(e\ge0,f\) satisfying
+\[
+ e^2=2n+p,\quad \Delta_Kf^2=2n-p,\quad ef=q,
+ \quad e\equiv\tau_Kf\pmod2.
+\]
+If they exist, \(((e-\tau_Kf)/2,f)\) is an integral root, and conversely
+every root gives these equations after changing its sign if necessary.
+When \(e=0\), either sign of \(f\) gives the same square. A final
+multiplication verifies every retained witness.
+
+This calculation gives 57 triples. One is
+\((1,-3,3)\), already excluded by Lemma~\ref{lem:pr-one-three}.
+There remain exactly 56 triples, retaining all equal-modulus cases and
+without any additional symmetry on the third entry. They are listed, together with their cutoffs $N_0$, in
+Table~\ref{tab:fixed56}.
+It remains to exclude these fifty-six triples and the pair $(1,3)$.
+
+\section{Completion for one small entry}
+\label{sec:one-small-completion}
+
+Proposition~\ref{prop:pr-S15} gives $S<15$. For the forty pairs in
+Table~\ref{tab:pr-forty-pairs}, it leaves fifty-six triples.
+By Lemma~\ref{lem:pr-one-three}, any sextuple containing the
+additional pair $(1,3)$ consists of positive rational integers.
+The conditions $3<s<15$, $s+1$ square and $3s+1$ square give $s=8$.
+For each of these fifty-six triples and for $(1,3,8)$, the forbidden intervals
+give a bound $N(t)<N_0$. We then contradict this bound using the growth of an
+irregular triple, with a separate square calculation for the last two cases.
+
+\subsection{A common fourth-entry cutoff}
+
+Fix one of these triples $(a,b,s)$ and put
+\[
+ a_0=N(a),\quad b_0=N(b),\quad s_0=N(s),\qquad
+ d_{xy}=N(x-y),\quad L=10^{10}.
+\]
+For a nonnegative rational number $v$ define rational enclosures
+\[
+ [v]_- =\frac{\lfloor L\sqrt v\rfloor}{L},\qquad
+ [v]_+ =\frac{\lceil L\sqrt v\rceil}{L}.
+\]
+These definitions require only integer square comparisons. The lower
+integer $n$ is characterized by $n^2\le L^2v<(n+1)^2$.
+No floating-point comparison is used below. Define
+\begin{align*}
+ q_1&=\left[\frac{d_{ab}d_{as}d_{bs}}{b_0s_0^2}\right]_+,
+ &K&=\frac{9999}{100}\,a_0
+       \left(\frac1{q_1}-\frac{\mu}{b_0}\right)^2,\\
+ \phi_1&=\left[\max\left\{\frac{d_{bs}^6}{s_0^6},
+                  \frac{b_0d_{bs}^5}{s_0^6}\right\}\right]_+,
+ &R_{bs}&=\frac{3535}{409600}\phi_1,
+ \qquad \mu=\frac{51051}{400000}.
+\end{align*}
+In every row $1/q_1>\mu/b_0$ and $K>1$.
+For $a_0=1$, Lemma~\ref{lem:tail-irregular} gives $T>2BS=2ABS$.
+For $a_0=2$ we will impose $N(t)\ge4a_0b_0s_0+1$.
+Thus, whenever $N(t)\ge1024$ and this additional condition holds,
+the row $H=32$, $\lambda=1/10$ of Lemma~\ref{lem:retained-gap}
+implies
+\begin{equation}\label{eq:fixed56-gap}
+ C>K\frac{T^5}{S^2},\qquad
+ D>\frac{C^7}{S^2T^4}.
+\end{equation}
+Indeed, $\mathcal Q\le q_1$ and $\mu/(a_0b_0)\le\mu/b_0$,
+so the coefficient of $T^5/S^2$ in Lemma~\ref{lem:retained-gap}
+is at least $K$. The other enclosure satisfies $\Phi\le\phi_1$, so the
+displayed $R_{bs}$ is a valid residual constant for $N_{3,bs}$.
+The same lemma gives $C>\max(1000,200S,4T)$ and $D>1000C$,
+which supply all approximation hypotheses in this section.
+
+Use the constants $M_2,M_n,M_3,M_4,M_5$ in
+Table~\ref{tab:pr-forty-coefficients}. For $(a,b)=(1,3)$, take
+$12,41,25,300,1100$, respectively. Their normalizations are those of
+$N_2,N_3,A_3,A_4,A_5$.
+For $N_{3,bs}$ evaluate the same $N_3$ polynomials at $b,s$ and use
+\eqref{eq:ff-fixedM} with $C_0=\max(1000,200S)$.
+More explicitly, in the notation of that formula, replace every
+summand $|p_{ij\ell}|C_0^{\ell-3}/S^7$ by
+\[
+ \begin{cases}
+ [N(p_{ij\ell})/s_0^7]_+/1000^{3-\ell},&s_0\le25,\\
+ [N(p_{ij\ell})/s_0^{10-\ell}]_+/200^{3-\ell},&s_0>25.
+ \end{cases}
+\]
+Multiply the largest row sum by $101/400$ and take its floor plus one.
+Denote this integer by $M_{bs}$.
+This is the integer printed below. Evaluation precedes taking norms,
+so cancellation between monomials of the same $c$-degree is preserved.
+
+Since $|a-b|\ge B-A>A$ for all these pairs, the distance-sensitive
+residual constants in the first five families are
+\begin{equation*}
+ R_k=R_*\frac{101}{200}\left(\frac{d_{ab}}{4b_0}\right)^k,
+ \qquad (R_*,k)=
+ (5/4,2),(35/32,3),(35/16,3),(63/8,4),(495/64,5).
+\end{equation*}
+They will be denoted by $R_2,R_n,R_3,R_4,R_5$, respectively.
+For $P$ take $R_p$ from \eqref{eq:ff-adaptiveres} with
+$q=[b_0/a_0]_-$, and take its coefficient bound $2400$.
+Finally put $M_m=(8/9)608^2$ and $R_m=3920/81$.
+
+Use the endpoints in Table~\ref{tab:pr-windows}, replacing $A$ by
+one only in the upper endpoints. This discards positive powers of
+$A\ge1$, so each resulting closed interval remains forbidden for
+both possible values of $a_0$. The constants $M_{bs}$ and $R_{bs}$
+are the specialized ones just defined.
+
+Put $h=4001/3999$ and $x=N(t)$.
+The next table gives a strict lower bound $c_ex^{p_e}$ for each
+ratio of endpoints, using only \eqref{eq:fixed56-gap}.
+For the first row the ratio is $(1-\varepsilon)C^7/(S^2T^4l_Q)$.
+For every other row it is $u_{\mathrm{left}}/(hl_{\mathrm{right}})$.
+Both terms in the maximum defining $P$ are checked separately.
+\begin{center}\small
+\begin{tabular}{c|c}
+junction&$c_ex^{p_e}$\\\hline
+start--$Q$&$(1-\varepsilon)K^4x^5/(12100s_0^5)$\\
+$Q$--$N_2$&$K^2x^4/(36M_2^2b_0^4s_0^2h)$\\
+$N_2$--$P$, first term&$K^2x^5/(16R_2^2\cdot2400^2b_0^3s_0^5h)$\\
+$N_2$--$P$, second term&$K^2x^5/(16R_2^2\cdot2400^2b_0^5s_0^4h)$\\
+$P$--$A_3$&$K^2x^5/(16R_p^2M_3^2b_0^6s_0^4h)$\\
+$A_3$--$M$&$K^4x^{10}/(16R_3^2M_m^2b_0^6s_0^{12}h)$\\
+$M$--$N_3$&$K^4x^{10}/(16R_m^2M_n^2b_0^9s_0^9h)$\\
+$N_3$--$N_{3,bs}$&$K^4x^{10}/(16R_n^2M_{bs}^2b_0^3s_0^{11}h)$\\
+$N_{3,bs}$--$A_4$&$K^2x^5/(16R_{bs}^2M_4^2b_0^5s_0^5h)$\\
+$A_4$--$O_4$&$K^4x^{10}/(144R_4^2\cdot42^8b_0^{15}s_0^4h)$\\
+$O_4$--$A_5$&$(2/5)^8K^4x^{10}/(4M_5^2b_0^{16}s_0^4h)$\\
+$A_5$--$O_5$&$K^6x^{15}/(144R_5^2\cdot42^{10}b_0^{19}s_0^6h)$\\
+$O_5$--$O_6$&$(2/5)^{10}K^6x^{15}/(36\cdot42^{12}b_0^{22}s_0^6h)$
+\end{tabular}
+\end{center}
+For each row let $n_e$ be the least positive integer with $c_en_e^{p_e}>1$.
+Doubling gives an upper bound, after which integer binary search
+determines $n_e$. The final checks are $c_en_e^{p_e}>1$ and
+$c_e(n_e-1)^{p_e}\le1$.
+Let $n_\infty$ be defined in the same way by
+\[
+ \frac{K^2x^5}{105^2b_0^4s_0^2}>1,
+\]
+and define
+\begin{equation*}
+ N_0=\max\bigl(1024,n_\infty,\{n_e\}_e,\eta\bigr),\qquad
+ \eta=\begin{cases}1,&a_0=1,\\4a_0b_0s_0+1,&a_0=2.\end{cases}
+\end{equation*}
+All numbers and exponents in this prescription are rational or integral.
+The values in Table~\ref{tab:fixed56} result directly from these formulas.
+
+If $N(t)\ge N_0$, every overlap is strict. The starting lower bound
+and successive forbidden intervals force $D$ beyond the upper endpoint
+of each of
+\[
+ Q,N_2,P,A_3,M,N_3,N_{3,bs},A_4,O_4,A_5,O_5,O_6,\ldots.
+\]
+With $A$ replaced by one, the squared ratio of the ordinary bases
+is greater than $K^2x^5/(105^2b_0^4s_0^2)>1$.
+The ordinary-tail argument of Section~\ref{sec:common-intervals}
+therefore gives a contradiction and proves $N(t)<N_0$.
+
+For $(a,b,s)=(1,3,8)$ the formulas give
+\[
+ q_1=\frac{1822916667}{5000000000},\qquad K>744,\qquad
+ M_{bs}=34,\qquad N_0=1024.
+\]
+For clarity, the thirteen integers $n_e$, in the order of the overlap
+table, are
+\[
+ 3,23,96,101,108,179,131,9,34,76,123,29,438,
+\]
+and $n_\infty=14$. Thus $T<32$, whereas
+Lemma~\ref{lem:tail-irregular} gives $T>2\cdot3\cdot8=48$.
+This contradiction excludes the rational pair.
+
+\subsection{The finite complement}
+
+The fifty-six triples in Table~\ref{tab:fixed56} were enumerated at the
+end of Section~\ref{sec:pair-reduction}. We now exclude $N(t)<N_0$.
+Lemma~\ref{lem:tail-irregular} gives $T>2BS$. In thirty-eight rows,
+$4b_0s_0\ge N_0$, so this already contradicts $N(t)<N_0$.
+
+For the other rows, put
+\[
+ q=b+s,\qquad h=1+2bs,\qquad \delta=(b-s)^2-4,
+\]
+and define
+\[
+ f(X)=X^2-2(|h|-|q|)X+|\delta|+2|q|+1.
+\]
+The triple $(b,s,t)$ is irregular by Lemma~\ref{lem:tail-irregular},
+so \eqref{eq:irregular-quadratic} gives $f(T)\ge0$.
+This quadratic is convex. For $X\ge0$, the bounds
+$|h|\ge2BS-1$, $|q|\le B+S$ and
+$|\delta|\le(B+S)^2+4$ give
+\[
+ f(X)\le(B+S+X+1)^2+4-4BSX.
+\]
+The endpoint calculation in the proof of
+Lemma~\ref{lem:irregular-growth} therefore gives $f(2BS)<0$.
+
+For sixteen of the remaining rows, substitution of the displayed
+entries and $N_0$ gives $f(\sqrt{N_0})<-100$. These are exact checks
+using the rational enclosures defined above. Explicitly,
+$[N(h)]_--[N(q)]_+>0$, and
+\[
+ \begin{split}
+ f(\sqrt{N_0})\le{}&N_0
+ -2\bigl([N(h)]_--[N(q)]_+\bigr)[N_0]_-\\
+ &+[N(\delta)]_++2[N(q)]_++1<-100.
+ \end{split}
+\]
+Convexity excludes $2BS<T<\sqrt{N_0}$ in each of these rows.
+
+The two remaining triples are
+$(a,b,s)=(1,-3,-2\pm2\sqrt{-2})$, both with $N_0=1024$.
+Here $N(q)=33$, $N(h)=457$ and $N(\delta)=153$, so
+\[
+ f(30)=901-60\sqrt{457}+62\sqrt{33}+\sqrt{153}<-5.
+\]
+Use $\sqrt{457}>213/10$, $\sqrt{33}<29/5$ and
+$\sqrt{153}<62/5$. Convexity gives $T>30$.
+Write $t+1=(u+v\sqrt{-2})^2$ with $u,v\in\mathbb Z$.
+If $30<T<32$, then
+\[
+ 29<|t+1|=u^2+2v^2<33.
+\]
+The values $30$ and $31$ are impossible modulo $16$.
+For $u^2+2v^2=32$, reduction modulo $16$ forces $4\mid u,v$,
+and then $u=0$, $v=\pm4$. This gives $t=-33$, contrary to $T<32$.
+Thus $N(t)<N_0$ is impossible in the last two rows as well.
+
+\begin{longtable}{r|r r|r|r|r}
+\caption{All remaining triples and the common cutoff procedure. Pair indices refer to Table~\ref{tab:pr-forty-pairs}. Coordinates mean $u+v\omega$.}\label{tab:fixed56}\\
+Pair&$u$&$v$&$N(s)$&$M_{bs}$&$N_0$\\\hline
+\endfirsthead
+Pair&$u$&$v$&$N(s)$&$M_{bs}$&$N_0$\\\hline
+\endhead
+0 & -4 & -2 & 20 & 285 & 1024 \\
+0 & 4 & -2 & 20 & 285 & 1024 \\
+0 & 0 & 5 & 25 & 1368 & 1934 \\
+1 & 0 & 10 & 100 & 42 & 2311 \\
+2 & -4 & 4 & 32 & 2238 & 4770 \\
+2 & 8 & 1 & 65 & 72 & 2359 \\
+3 & 6 & 9 & 117 & 44 & 3896 \\
+4 & -4 & -4 & 32 & 396 & 3299 \\
+4 & -4 & 4 & 32 & 396 & 3299 \\
+5 & -1 & 8 & 65 & 172 & 4857 \\
+6 & 7 & 6 & 85 & 29 & 2018 \\
+7 & -2 & -2 & 12 & 474 & 1024 \\
+7 & -2 & 2 & 12 & 474 & 1024 \\
+8 & 1 & 4 & 33 & 133 & 1024 \\
+9 & 6 & 6 & 108 & 56 & 4775 \\
+10 & -13 & 13 & 169 & 77 & 13059 \\
+11 & -8 & 16 & 192 & 60 & 12244 \\
+12 & -9 & 6 & 63 & 74 & 2301 \\
+13 & -10 & 1 & 91 & 180 & 9744 \\
+14 & -6 & 9 & 63 & 35 & 1195 \\
+15 & -1 & 10 & 91 & 37 & 1760 \\
+16 & -4 & -4 & 48 & 430 & 7354 \\
+16 & 8 & -8 & 64 & 271 & 7441 \\
+17 & 7 & -2 & 39 & 78 & 1024 \\
+18 & 6 & 9 & 171 & 48 & 7943 \\
+19 & 11 & 1 & 133 & 48 & 6361 \\
+20 & -6 & -3 & 63 & 473 & 14404 \\
+20 & -10 & 9 & 91 & 272 & 14608 \\
+21 & -4 & 8 & 48 & 155 & 2461 \\
+22 & -5 & 4 & 21 & 422 & 1622 \\
+22 & -1 & -4 & 21 & 422 & 1622 \\
+23 & 4 & -8 & 48 & 4138 & 21270 \\
+23 & -1 & 12 & 133 & 78 & 8968 \\
+24 & 7 & 7 & 147 & 41 & 5928 \\
+25 & -5 & -2 & 45 & 381 & 5913 \\
+25 & -5 & 2 & 45 & 381 & 5913 \\
+26 & -2 & 4 & 84 & 186 & 8435 \\
+27 & -6 & -2 & 60 & 370 & 9706 \\
+27 & -6 & 2 & 60 & 370 & 9706 \\
+28 & -3 & 4 & 105 & 197 & 13453 \\
+29 & 1 & 5 & 56 & 67 & 1517 \\
+30 & 6 & 7 & 176 & 57 & 11143 \\
+31 & -3 & -1 & 15 & 646 & 1451 \\
+31 & -3 & 3 & 27 & 261 & 1460 \\
+32 & 0 & 5 & 75 & 94 & 3590 \\
+33 & -4 & -1 & 24 & 579 & 3059 \\
+33 & -4 & 3 & 40 & 263 & 3090 \\
+34 & -1 & 5 & 96 & 115 & 6843 \\
+35 & -5 & -1 & 35 & 532 & 5592 \\
+35 & -5 & 3 & 55 & 266 & 5661 \\
+36 & -2 & 5 & 119 & 133 & 11532 \\
+37 & -6 & -1 & 48 & 499 & 9289 \\
+37 & -6 & 3 & 72 & 269 & 9415 \\
+38 & -4 & 0 & 16 & 540 & 1281 \\
+38 & 4 & -4 & 32 & 182 & 2561 \\
+39 & 8 & 4 & 80 & 38 & 6401 \\
+\end{longtable}
+\begin{proposition}\label{prop:one-small}
+A $D(1)$-tuple with exactly one entry of modulus less than three has
+at most five elements.
+\end{proposition}
+\begin{proof}
+The pair $(1,3)$ has just been excluded. Every other sextuple would
+yield one of the forty pairs in Table~\ref{tab:pr-forty-pairs}, then
+one of the fifty-six triples in Table~\ref{tab:fixed56}. The common
+analytic argument excludes $N(t)\ge N_0$, and the preceding argument
+excludes $N(t)<N_0$. This contradiction proves the assertion.
+\end{proof}
+

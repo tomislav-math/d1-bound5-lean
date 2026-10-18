@@ -1,0 +1,102 @@
+✖ [1545/1545] Building D1Bound5.PairExtensionCore (29s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/PairExtensionCore.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PairExtensionCore.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/PairExtensionCore.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PairExtensionCore.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/PairExtensionCore.setup.json --json
+info: D1Bound5/PairExtensionCore.lean:130:26: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/PairExtensionCore.lean:130:26: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/PairExtensionCore.lean:130:26: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/PairExtensionCore.lean:130:26: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/PairExtensionCore.lean:124:53: unsolved goals
+case inl.inl.inr
+tau nu : ℤ
+hd : 0 < discriminant tau nu
+a b z r0 r s : QuadInt tau nu
+h0✝ : r0 * r0 = a * b + 1
+hr✝ : r * r = a * z + 1
+hs✝ : s * s = b * z + 1
+h0 : r0 = (a * b + 1).rootCandidate
+hr : r = (a * z + 1).rootCandidate
+hs : s = -(b * z + 1).rootCandidate
+⊢ a + a * b * z * 2 + b + z - (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2 =
+    a + a * b * z * 2 + b + z + (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2
+
+case inl.inr.inl
+tau nu : ℤ
+hd : 0 < discriminant tau nu
+a b z r0 r s : QuadInt tau nu
+h0✝ : r0 * r0 = a * b + 1
+hr✝ : r * r = a * z + 1
+hs✝ : s * s = b * z + 1
+h0 : r0 = (a * b + 1).rootCandidate
+hr : r = -(a * z + 1).rootCandidate
+hs : s = (b * z + 1).rootCandidate
+⊢ a + a * b * z * 2 + b + z - (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2 =
+    a + a * b * z * 2 + b + z + (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2
+
+case inr.inl.inl
+tau nu : ℤ
+hd : 0 < discriminant tau nu
+a b z r0 r s : QuadInt tau nu
+h0✝ : r0 * r0 = a * b + 1
+hr✝ : r * r = a * z + 1
+hs✝ : s * s = b * z + 1
+h0 : r0 = -(a * b + 1).rootCandidate
+hr : r = (a * z + 1).rootCandidate
+hs : s = (b * z + 1).rootCandidate
+⊢ a + a * b * z * 2 + b + z - (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2 =
+    a + a * b * z * 2 + b + z + (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2
+
+case inr.inr.inr
+tau nu : ℤ
+hd : 0 < discriminant tau nu
+a b z r0 r s : QuadInt tau nu
+h0✝ : r0 * r0 = a * b + 1
+hr✝ : r * r = a * z + 1
+hs✝ : s * s = b * z + 1
+h0 : r0 = -(a * b + 1).rootCandidate
+hr : r = -(a * z + 1).rootCandidate
+hs : s = -(b * z + 1).rootCandidate
+⊢ a + a * b * z * 2 + b + z - (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2 =
+    a + a * b * z * 2 + b + z + (1 + a * b).rootCandidate * (1 + a * z).rootCandidate * (1 + b * z).rootCandidate * 2
+error: D1Bound5/PairExtensionCore.lean:172:14: Unknown constant `Bool.and_eq_true.mp`
+error: D1Bound5/PairExtensionCore.lean:170:48: unsolved goals
+tau nu : ℤ
+a b : QuadInt tau nu
+bound : ℤ
+vertices : List (QuadInt tau nu)
+hcheck : pairClosureBool a b bound vertices = true
+z w : QuadInt tau nu
+hz : z ∈ vertices
+hw : w = pairMutationPlus a b z ∨ w = pairMutationMinus a b z
+hbound : QuadraticAlgebra.norm w ≤ bound
+hc :
+  ((if decide (QuadraticAlgebra.norm (pairMutationPlus a b z) ≤ bound) = true then
+        decide (pairMutationPlus a b z ∈ vertices)
+      else true) &&
+      if decide (QuadraticAlgebra.norm (pairMutationMinus a b z) ≤ bound) = true then
+        decide (pairMutationMinus a b z ∈ vertices)
+      else true) =
+    true
+⊢ w ∈ vertices
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.PairExtensionCore
+error: build failed

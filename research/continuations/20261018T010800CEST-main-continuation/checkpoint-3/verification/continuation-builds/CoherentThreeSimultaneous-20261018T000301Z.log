@@ -1,0 +1,370 @@
+ℹ [1974/2076] Replayed D1Bound5.CoherentWeightedRemainder
+info: D1Bound5/CoherentWeightedRemainder.lean:88:0: @D1Bound5.coherent_weighted_remainder_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ) (C ρ t : ℝ),
+  0 ≤ C →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * t < 1 →
+            (∀ (j : ℕ), ‖f (m + (j + 1))‖ ≤ C * t ^ (m + (j + 1))) →
+              (Summable fun j => f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                ‖∑' (j : ℕ), f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                  C * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+info: D1Bound5/CoherentWeightedRemainder.lean:89:0: 'D1Bound5.coherent_weighted_remainder_summable_and_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1975/2076] Replayed D1Bound5.HalfBinomialCoefficients
+warning: D1Bound5/HalfBinomialCoefficients.lean:34:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2797/3003] Replayed D1Bound5.CoherentAnalyticInterpolation
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:16:32: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:310:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:362:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2994/3003] Replayed D1Bound5.CoherentPolynomialWeights
+warning: D1Bound5/CoherentPolynomialWeights.lean:44:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [3001/3003] Replayed D1Bound5.CoherentIntegralForms
+info: D1Bound5/CoherentIntegralForms.lean:133:0: 'D1Bound5.IsD1.coherent_terminal_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:134:0: 'D1Bound5.IsD1.coherent_anchor_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:135:0: 'D1Bound5.IsD1.coherent_linear_form_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:136:0: 'D1Bound5.full_ring_coherent_linear_form_one_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+✖ [3003/3003] Building D1Bound5.CoherentThreeSimultaneous (66s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CoherentThreeSimultaneous.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoherentThreeSimultaneous.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CoherentThreeSimultaneous.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoherentThreeSimultaneous.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CoherentThreeSimultaneous.setup.json --json
+info: D1Bound5/CoherentThreeSimultaneous.lean:75:22: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/CoherentThreeSimultaneous.lean:75:22: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/CoherentThreeSimultaneous.lean:75:22: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/CoherentThreeSimultaneous.lean:75:22: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/CoherentThreeSimultaneous.lean:74:64: unsolved goals
+case «0»
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := a 0 + a 1 + a 2 + a 3
+e2 : F := coherentElementary2 a
+e3 : F := coherentElementary3 a
+e4 : F := coherentElementary4 a
+G : F[X] :=
+  C (2 * z * v - (p + q) + e1) * X ^ 3 + C (v ^ 2 + 2 * z * w - 1 - e2) * X ^ 2 + C (2 * v * w + e3) * X +
+    C (w ^ 2 - e4)
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+⊢ -(a ⟨0, ⋯⟩ * a 0 * a 1 * a 2) - a ⟨0, ⋯⟩ * a 0 * a 1 * a 3 - a ⟨0, ⋯⟩ * a 0 * a 2 * a 3 - a ⟨0, ⋯⟩ * a 1 * a 2 * a 3 +
+                            a ⟨0, ⋯⟩ ^ 2 * a 0 * a 1 +
+                          a ⟨0, ⋯⟩ ^ 2 * a 0 * a 2 +
+                        a ⟨0, ⋯⟩ ^ 2 * a 0 * a 3 +
+                      a ⟨0, ⋯⟩ ^ 2 * a 1 * a 2 +
+                    a ⟨0, ⋯⟩ ^ 2 * a 1 * a 3 +
+                  a ⟨0, ⋯⟩ ^ 2 * a 2 * a 3 -
+                a ⟨0, ⋯⟩ ^ 3 * a 0 -
+              a ⟨0, ⋯⟩ ^ 3 * a 1 -
+            a ⟨0, ⋯⟩ ^ 3 * a 2 -
+          a ⟨0, ⋯⟩ ^ 3 * a 3 +
+        a ⟨0, ⋯⟩ ^ 4 +
+      a 0 * a 1 * a 2 * a 3 =
+    0
+
+case «1»
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := a 0 + a 1 + a 2 + a 3
+e2 : F := coherentElementary2 a
+e3 : F := coherentElementary3 a
+e4 : F := coherentElementary4 a
+G : F[X] :=
+  C (2 * z * v - (p + q) + e1) * X ^ 3 + C (v ^ 2 + 2 * z * w - 1 - e2) * X ^ 2 + C (2 * v * w + e3) * X +
+    C (w ^ 2 - e4)
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+⊢ -(a ⟨1, ⋯⟩ * a 0 * a 1 * a 2) - a ⟨1, ⋯⟩ * a 0 * a 1 * a 3 - a ⟨1, ⋯⟩ * a 0 * a 2 * a 3 - a ⟨1, ⋯⟩ * a 1 * a 2 * a 3 +
+                            a ⟨1, ⋯⟩ ^ 2 * a 0 * a 1 +
+                          a ⟨1, ⋯⟩ ^ 2 * a 0 * a 2 +
+                        a ⟨1, ⋯⟩ ^ 2 * a 0 * a 3 +
+                      a ⟨1, ⋯⟩ ^ 2 * a 1 * a 2 +
+                    a ⟨1, ⋯⟩ ^ 2 * a 1 * a 3 +
+                  a ⟨1, ⋯⟩ ^ 2 * a 2 * a 3 -
+                a ⟨1, ⋯⟩ ^ 3 * a 0 -
+              a ⟨1, ⋯⟩ ^ 3 * a 1 -
+            a ⟨1, ⋯⟩ ^ 3 * a 2 -
+          a ⟨1, ⋯⟩ ^ 3 * a 3 +
+        a ⟨1, ⋯⟩ ^ 4 +
+      a 0 * a 1 * a 2 * a 3 =
+    0
+
+case «2»
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := a 0 + a 1 + a 2 + a 3
+e2 : F := coherentElementary2 a
+e3 : F := coherentElementary3 a
+e4 : F := coherentElementary4 a
+G : F[X] :=
+  C (2 * z * v - (p + q) + e1) * X ^ 3 + C (v ^ 2 + 2 * z * w - 1 - e2) * X ^ 2 + C (2 * v * w + e3) * X +
+    C (w ^ 2 - e4)
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+⊢ -(a ⟨2, ⋯⟩ * a 0 * a 1 * a 2) - a ⟨2, ⋯⟩ * a 0 * a 1 * a 3 - a ⟨2, ⋯⟩ * a 0 * a 2 * a 3 - a ⟨2, ⋯⟩ * a 1 * a 2 * a 3 +
+                            a ⟨2, ⋯⟩ ^ 2 * a 0 * a 1 +
+                          a ⟨2, ⋯⟩ ^ 2 * a 0 * a 2 +
+                        a ⟨2, ⋯⟩ ^ 2 * a 0 * a 3 +
+                      a ⟨2, ⋯⟩ ^ 2 * a 1 * a 2 +
+                    a ⟨2, ⋯⟩ ^ 2 * a 1 * a 3 +
+                  a ⟨2, ⋯⟩ ^ 2 * a 2 * a 3 -
+                a ⟨2, ⋯⟩ ^ 3 * a 0 -
+              a ⟨2, ⋯⟩ ^ 3 * a 1 -
+            a ⟨2, ⋯⟩ ^ 3 * a 2 -
+          a ⟨2, ⋯⟩ ^ 3 * a 3 +
+        a ⟨2, ⋯⟩ ^ 4 +
+      a 0 * a 1 * a 2 * a 3 =
+    0
+
+case «3»
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := a 0 + a 1 + a 2 + a 3
+e2 : F := coherentElementary2 a
+e3 : F := coherentElementary3 a
+e4 : F := coherentElementary4 a
+G : F[X] :=
+  C (2 * z * v - (p + q) + e1) * X ^ 3 + C (v ^ 2 + 2 * z * w - 1 - e2) * X ^ 2 + C (2 * v * w + e3) * X +
+    C (w ^ 2 - e4)
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+⊢ -(a ⟨3, ⋯⟩ * a 0 * a 1 * a 2) - a ⟨3, ⋯⟩ * a 0 * a 1 * a 3 - a ⟨3, ⋯⟩ * a 0 * a 2 * a 3 - a ⟨3, ⋯⟩ * a 1 * a 2 * a 3 +
+                            a ⟨3, ⋯⟩ ^ 2 * a 0 * a 1 +
+                          a ⟨3, ⋯⟩ ^ 2 * a 0 * a 2 +
+                        a ⟨3, ⋯⟩ ^ 2 * a 0 * a 3 +
+                      a ⟨3, ⋯⟩ ^ 2 * a 1 * a 2 +
+                    a ⟨3, ⋯⟩ ^ 2 * a 1 * a 3 +
+                  a ⟨3, ⋯⟩ ^ 2 * a 2 * a 3 -
+                a ⟨3, ⋯⟩ ^ 3 * a 0 -
+              a ⟨3, ⋯⟩ ^ 3 * a 1 -
+            a ⟨3, ⋯⟩ ^ 3 * a 2 -
+          a ⟨3, ⋯⟩ ^ 3 * a 3 +
+        a ⟨3, ⋯⟩ ^ 4 +
+      a 0 * a 1 * a 2 * a 3 =
+    0
+error: D1Bound5/CoherentThreeSimultaneous.lean:78:81: unsolved goals
+case hbc
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := a 0 + a 1 + a 2 + a 3
+e2 : F := coherentElementary2 a
+e3 : F := coherentElementary3 a
+e4 : F := coherentElementary4 a
+G : F[X] :=
+  C (2 * z * v - (p + q) + e1) * X ^ 3 + C (v ^ 2 + 2 * z * w - 1 - e2) * X ^ 2 + C (2 * v * w + e3) * X +
+    C (w ^ 2 - e4)
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+heval : ∀ (i : Fin 4), eval (a i) G = 0
+⊢ 3 < 4
+error: D1Bound5/CoherentThreeSimultaneous.lean:89:12: ring failed, ring expressions not equal
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := ⋯
+e2 : F := ⋯
+e3 : F := ⋯
+e4 : F := ⋯
+G : F[X] := ⋯
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+heval : ∀ (i : Fin 4), eval (a i) G = 0
+hdegree : G.degree < ↑(#univ)
+hzero : G = 0
+h0 : (C w ^ 2).coeff 0 - coherentElementary4 a = 0
+h1 :
+  ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 1 +
+          ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 1 +
+        (2 * v * w + coherentElementary3 a) +
+      (C w ^ 2).coeff 1 =
+    0
+h2 :
+  ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 2 +
+        ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 2 +
+      (C w ^ 2).coeff 2 =
+    0
+⊢ w ^ 2 - (C w ^ 2).coeff 0 = 0
+error: D1Bound5/CoherentThreeSimultaneous.lean:89:38: ring failed, ring expressions not equal
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := ⋯
+e2 : F := ⋯
+e3 : F := ⋯
+e4 : F := ⋯
+G : F[X] := ⋯
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+heval : ∀ (i : Fin 4), eval (a i) G = 0
+hdegree : G.degree < ↑(#univ)
+hzero : G = 0
+h0 : (C w ^ 2).coeff 0 - coherentElementary4 a = 0
+h1 :
+  ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 1 +
+          ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 1 +
+        (2 * v * w + coherentElementary3 a) +
+      (C w ^ 2).coeff 1 =
+    0
+h2 :
+  ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 2 +
+        ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 2 +
+      (C w ^ 2).coeff 2 =
+    0
+⊢ -((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 1 -
+        ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 1 -
+      (C w ^ 2).coeff 1 =
+    0
+error: D1Bound5/CoherentThreeSimultaneous.lean:89:64: ring failed, ring expressions not equal
+F : Type u_1
+inst✝ : Field F
+a R : Fin 4 → F
+hinj : Function.Injective a
+p q z v w : F
+hz : z ^ 2 = p * q + 1
+hR : ∀ (i : Fin 4), R i ^ 2 = (a i * p + 1) * (a i * q + 1)
+hJ : ∀ (i : Fin 4), z * a i ^ 2 + v * a i + w = a i * R i
+e1 : F := ⋯
+e2 : F := ⋯
+e3 : F := ⋯
+e4 : F := ⋯
+G : F[X] := ⋯
+hexpand :
+  ∀ (x : F),
+    eval x G =
+      (z * x ^ 2 + v * x + w) ^ 2 - x ^ 2 * (p * x + 1) * (q * x + 1) - (x - a 0) * (x - a 1) * (x - a 2) * (x - a 3)
+heval : ∀ (i : Fin 4), eval (a i) G = 0
+hdegree : G.degree < ↑(#univ)
+hzero : G = 0
+h0 : (C w ^ 2).coeff 0 - coherentElementary4 a = 0
+h1 :
+  ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 1 +
+          ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 1 +
+        (2 * v * w + coherentElementary3 a) +
+      (C w ^ 2).coeff 1 =
+    0
+h2 :
+  ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 2 +
+        ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 2 +
+      (C w ^ 2).coeff 2 =
+    0
+⊢ -1 + v ^ 2 + z * w * 2 - coherentElementary2 a - ((C 2 * C z * C v - (C p + C q) + C e1) * X ^ 3).coeff 2 -
+        ((C v ^ 2 + C 2 * C z * C w - 1 - C (coherentElementary2 a)) * X ^ 2).coeff 2 -
+      (C w ^ 2).coeff 2 =
+    0
+warning: D1Bound5/CoherentThreeSimultaneous.lean:88:23: This simp argument is unused:
+  Polynomial.coeff_C_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [G, e2, e3, e4] at h0 h1 h2
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CoherentThreeSimultaneous
+error: build failed

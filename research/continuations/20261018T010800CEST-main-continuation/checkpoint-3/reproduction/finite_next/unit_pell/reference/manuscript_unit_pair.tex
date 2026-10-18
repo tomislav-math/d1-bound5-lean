@@ -1,0 +1,156 @@
+31 & $(-1,-1)$ & $(-1,1)$ & 718 & 716 \\
+\midrule
+\multicolumn{3}{r}{Total} & 36931 & 36854\\
+\end{longtable}
+
+\begin{samepage}
+\begin{lemma}\label{sm:bs7-unit-axes}
+Let $d$ be positive and squarefree, and put $t=\sqrt{-d}$. Every nonzero common extension of $\{-1,1\}$ has one of the forms
+\begin{align*}
+ z&=\pm(dv^2+1),& u^2-dv^2&=2,\\
+ z&=\pm2uvt,& u^2-dv^2&=1,
+\end{align*}
+where $u,v\in\mathbb Z$ and $v\ne0$. In particular $|z|\ge d+1$.
+\end{lemma}
+\end{samepage}
+\begin{proof}
+Choose integral roots $r^2=z+1$ and $s^2=1-z$, and write $2r=U+Vt$, $2s=X+Yt$. The equation $r^2+s^2=2$ gives
+\begin{equation*}
+ U^2+X^2-d(V^2+Y^2)=8,\qquad UV+XY=0\,.
+\end{equation*}
+The real coordinate vector is nonzero, since otherwise the left side of the first equation would be nonpositive. If the imaginary coordinate vector vanished, both roots would be rational integers, forcing $r^2=s^2=1$ and $z=0$. Write $(U,X)=g(p,q)$ with $g>0$ and $\gcd(p,q)=1$. Orthogonality gives $(V,Y)=h(q,-p)$ for a nonzero integer~$h$, so
+\begin{equation*}
+ (p^2+q^2)(g^2-dh^2)=8\,.
+\end{equation*}
+Primitivity excludes $p^2+q^2=4,8$. Thus this sum is one or two. If it is one, one root is rational and the other purely imaginary. Integrality forces $g,h$ even, including in the half-integral basis. Setting $u=g/2$, $v=h/2$ gives the first alternative.
+
+If $p^2+q^2=2$, then $p,q\in\{-1,1\}$ and $g^2-dh^2=4$. Outside the half-integral basis, $g,h$ are even. In that basis they have matching parity. If both were odd, then $g^2-dh^2\equiv2\pmod4$, contrary to its value four. Thus $g,h$ are again even, and expansion gives the second alternative. The first has modulus at least~$d+1$, while in the second
+\begin{equation*}
+ |z|^2=4du^2v^2\ge4d(d+1)>(d+1)^2\,.
+\end{equation*}
+\end{proof}
+
+\begin{lemma}\label{sm:five-unit-cubic}
+Suppose $\{-1,1,c,d\}$ is a $D(1)$-quadruple, with
+$9\le C=|c|\le D=|d|$ and $d\ne-c$. Then $D>C^3/2$.
+\end{lemma}
+\begin{proof}
+Choose $z\in\OK$ with $z^2=cd+1$, and put $w=c+d$, $h=w/z^2$.
+Then $|h|\le2C/(C^2-1)\le9/40<1/4$.
+With the analytic square-root branches at zero, define
+$u=z\sqrt{1+h}$, $v=z\sqrt{1-h}$ and $L=u+v-2z$.
+We have $u^2=(c+1)(d+1)$ and $v^2=(1-c)(1-d)$.
+Both products are squares in $\OK$, so $u,v$, and hence $L$, lie in $\OK$.
+If $L=0$, squaring $u+v=2z$ gives $uv=z^2$, and squaring again gives
+$w^2=0$. This contradicts $d\ne-c$, so $|L|\ge1$.
+The even binomial coefficients have modulus at most $1/8$ after the
+constant term. Therefore
+\[
+ |L|\le\frac{|z||h|^2}{4(1-|h|^2)}
+ <\frac4{15}\frac{|w|^2}{|z|^3}
+ \le\frac{16}{15}\left(\frac{81}{80}\right)^{3/2}
+       \frac{\sqrt D}{C^{3/2}}
+ <\sqrt{\frac{2D}{C^3}}.
+\]
+Here $|w|\le2D$, $|z|^2\ge(80/81)CD$, and
+$(16/15)^2(81/80)^3<2$. The conclusion follows.
+\end{proof}
+
+\begin{lemma}\label{sm:bs7-unit-pair}
+No $D(1)$-tuple in an imaginary quadratic integer ring contains $\{-1,1\}$ and four further entries.
+\end{lemma}
+\begin{proof}
+We first restrict the axes and field parameters. A negative rational integer which is an integral square in $\mathbb Q(\sqrt{-d})$ is $-dm^2$ for an integer~$m$. Indeed, the square of a rational linear combination of $1,t$ is rational only when one coordinate vanishes. Integrality of a purely imaginary root forces its coefficient of~$t$ to be an integer, also in the half-integral basis. A positive rational integer that is a square in $\OK$ is therefore an ordinary integer square.
+
+There are no nonzero common extensions when $d=1$, since neither $u^2-v^2=2$ nor $u^2-v^2=1$ has a solution with $v\ne0$. For $d>1$, at most one extension can lie on each imaginary half-axis. Two with coefficients of the same sign would have product plus one equal to $1-dkl<0$, which is one modulo~$d$ and cannot be $-dm^2$.
+
+Real and imaginary extensions cannot coexist in one tuple.
+
+Suppose first that $\{-1,1,a,-a,b\}$ is a $D(1)$-tuple with $|a|,|b|\ge3$. The element $-b$ may also be adjoined. Indeed, $1-b^2=(1-b)(1+b)$ is a square, and its other compatibility conditions follow by changing signs. We may therefore interchange~$a,b$ and assume $A=|a|\le B=|b|$. Choose roots $x^2=1-b$, $y^2=1+b$, $v^2=1-ab$, $w^2=1+ab$, and put
+\begin{equation*}
+ G=2a^2b^2-a^2-1,\qquad J=2axyvw\,.
+\end{equation*}
+Expansion gives $(G-J)(G+J)=(a^2-1)^2$. Both factors are nonzero algebraic integers. Since $|G-J|,|G+J|\ge1$, we have
+\[
+ |G-J|+|G+J|\le|G-J||G+J|+1.
+\] Consequently
+\begin{equation*}
+ 2|G|\le(A^2+1)^2+1,\qquad |G|\ge2A^4-A^2-1\,.
+\end{equation*}
+These imply $3A^4-4A^2-4\le0$, impossible for $A\ge3$. Now if a real extension~$a$ and an imaginary extension~$b$ coexisted, conjugation would make $1-ab$ a square, while $(1-a)(1+a)$ would make $1-a^2$ a square. Adjoining~$-a$ would give the forbidden five entries. Lemma~\ref{sm:bs7-unit-axes} ensures that all these extensions have modulus at least three.
+
+If $d$ is even, a real extension has positive magnitude $u^2-1$ with $u$ even. In $u^2-dv^2=2$, an even~$v$ is impossible modulo four, and an odd~$v$ forces~$u$ even. Thus every positive magnitude is three modulo four. Two real extensions of the same sign would have a positive product plus one congruent to two modulo four. There are therefore at most two real extensions. If $d$ is odd, an even~$v$ in the same Pell equation gives $u^2\equiv2$ or~$6\pmod8$, which is impossible. An odd~$v$ gives $u^2\equiv d+2\pmod8$, forcing $d\equiv7\pmod8$. We need only consider real extensions for odd squarefree~$d\equiv7\pmod8$.
+
+The argument excluding $\{-1,1,a,-a,b\}$ shows that the four real extensions have distinct absolute values. Write these as $S<T<C<D$. If $S\ge10^4$, Lemma~\ref{sm:five-unit-cubic}, applied three times, gives $D>S^{27}/2^{13}>S^{27}/10^4$. On the other hand, Corollary~\ref{cor:ordinary-height-envelope} with parameters
+\[
+ (h,r,u)=\left(\frac{163}{100},-\frac25,\frac{241}{100}\right)
+\]
+gives, for $s=\log_{10}S$,
+\[
+ \log_{10}D<7s+\frac{617}{25}
+       +\frac{118401/2500}{s-203/100}.
+\]
+The parameters follow from $42^{100}<10^{163}$, $(5/2)^5<10^2$ and $253^{100}<10^{241}$. The difference from the lower bound $27s-4$ is increasing for $s\ge4$ and positive at $4$, since
+$80-717/25-118401/4925>0$. Hence $S<10^4$.
+Lemma~\ref{sm:bs7-unit-axes} gives $d<S$, so it remains to consider squarefree $7\le d<10^4$ with $d\equiv7\pmod8$.
+
+Put $R=10^{550}$. We enumerate all real common extensions in the closed radius-$R$ disk by ordinary continued fractions. By Lemma~\ref{sm:bs7-unit-axes}, their positive magnitudes are $u^2-1$, where
+\begin{equation*}
+ u^2-dv^2=2,\qquad
+ 1\le u\le\lfloor\sqrt{R+1}\rfloor,\qquad v\ge1.
+\end{equation*}
+Every such pair $u,v$ is coprime, and
+$u/v+\sqrt d>2\sqrt d>4$, since $d\ge7$. Hence
+\begin{equation*}
+ \left|\frac uv-\sqrt d\right|
+ =\frac{2}{v^2(u/v+\sqrt d)}<\frac1{2v^2}.
+\end{equation*}
+We recall a short proof of the criterion used here. If $p/q$ is reduced
+and $|\alpha-p/q|<1/(2q^2)$, choose consecutive convergents
+$p_n/q_n,p_{n+1}/q_{n+1}$ with $q_n\le q<q_{n+1}$.
+Their determinant is $\pm1$, and the errors
+$e_j=q_j\alpha-p_j$ alternate in sign. Indeed, the recurrence gives
+$p_nq_{n-1}-p_{n-1}q_n=(-1)^{n-1}$ and, if
+$\alpha_{n+1}>0$ is the next complete quotient,
+\[
+ \alpha=\frac{p_n\alpha_{n+1}+p_{n-1}}
+ {q_n\alpha_{n+1}+q_{n-1}}.
+\]
+These identities give the two assertions directly. If $p/q$ is not a convergent, express
+$(p,q)=h(p_n,q_n)+k(p_{n+1},q_{n+1})$ with integers $h,k$.
+The denominator bounds and reducedness force $h,k$ to be nonzero
+and of opposite signs. Hence
+$|q\alpha-p|=|h e_n+k e_{n+1}|\ge|e_n|$. But then
+\[
+ 1\le|p q_n-q p_n|
+ \le(q_n+q)|q\alpha-p|\le2q|q\alpha-p|<1,
+\]
+a contradiction. Applying this criterion with $\alpha=\sqrt d$
+shows that every fraction $u/v$ above is a convergent.
+
+For completeness, the entire computation uses the following integer recurrences. For each admissible $d$, set $m_0=0$, $q_0=1$, and $a_0=\lfloor\sqrt d\rfloor$, and iterate
+\begin{equation*}
+ m_{n+1}=q_na_n-m_n,\qquad
+ q_{n+1}=\frac{d-m_{n+1}^2}{q_n},\qquad
+ a_{n+1}=\left\lfloor\frac{a_0+m_{n+1}}{q_{n+1}}\right\rfloor.
+\end{equation*}
+The convergent numerators and denominators satisfy
+\begin{equation*}
+ u_n=a_nu_{n-1}+u_{n-2},\qquad
+ v_n=a_nv_{n-1}+v_{n-2},
+\end{equation*}
+with $(u_{-2},u_{-1})=(0,1)$ and $(v_{-2},v_{-1})=(1,0)$.
+Stop at the first numerator exceeding $\lfloor\sqrt{R+1}\rfloor$, and retain precisely the convergents for which $v_n>0$ and $u_n^2-dv_n^2=2$. Add both vertices $\pm(u_n^2-1)$. The increasing numerators and Legendre's criterion prove that no extension in the disk is omitted.
+
+Test every pair of distinct vertices by the rational square criterion at the start of this proof. As before, detect triangles by intersecting the neighbor sets at each edge. The complete computation gives the following counts.
+\begin{center}
+\begin{tabular}{rrrrr}
+\toprule
+Fields & Nonempty graphs & Vertices & Edges & Triangles\\
+\midrule
+1016 &409 &19612 &9806 &0\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each vertex $x$ is adjacent to $-x$, since
+$1-x^2=(1-x)(1+x)$ is a square. The total number of edges is half

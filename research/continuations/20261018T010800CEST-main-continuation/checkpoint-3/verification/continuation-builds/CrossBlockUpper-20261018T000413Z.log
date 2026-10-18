@@ -1,0 +1,111 @@
+⚠ [1907/2079] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✖ [2958/2958] Building D1Bound5.CrossBlockUpper (69s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/CrossBlockUpper.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CrossBlockUpper.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/CrossBlockUpper.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CrossBlockUpper.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/CrossBlockUpper.setup.json --json
+warning: D1Bound5/CrossBlockUpper.lean:81:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: D1Bound5/CrossBlockUpper.lean:128:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/CrossBlockUpper.lean:126:46: unsolved goals
+a b : Fin 3 → ℂ
+E : Matrix (Fin 3) (Fin 3) ℂ
+M P c : ℝ
+hM : 0 ≤ M
+hP : 0 ≤ P
+hc : 0 ≤ c
+hentry : ∀ (i j : Fin 3), ‖a i * b j‖ ≤ M
+hpair : ∀ (i j k l : Fin 3), i ≠ j → k ≠ l → ‖(a i * b k) ^ 2 * (a j * b l)‖ ≤ P
+hE : ∀ (i j : Fin 3), ‖E i j‖ ≤ c
+t : (Fin 3 → Fin 3) → ℂ := fun p => crossBlock_keptProduct (fun i => a i * b (p i)) fun i => E i (p i)
+C : ℝ := c ^ 3 + 3 * M ^ 2 * c ^ 2 + 3 / 2 * M * c ^ 2 + 3 * P * c
+ht : ∀ (p : Fin 3 → Fin 3), Function.Injective p → ‖t p‖ ≤ C
+⊢ (Matrix.det fun i j => a i * b j * (1 / 2) + a i ^ 2 * b j ^ 2 + E i j) =
+    ⋯ + ⋯ + ⋯ * (1 / 2) - E 2 2 * a 0 ^ 2 * b 1 ^ 2 * E 1 0 + E 2 2 * b 0 * a 1 * E 0 1 * (-1 / 2) -
+                                                                                                E 2 2 * b 0 ^ 2 *
+                                                                                                    a 1 ^ 2 *
+                                                                                                  E 0 1 -
+                                                                                              E 2 2 * E 0 1 * E 1 0 +
+                                                                                            a 0 * b 0 * a 1 ^ 2 *
+                                                                                                  b 2 ^ 2 *
+                                                                                                E 2 1 *
+                                                                                              (-1 / 2) +
+                                                                                          a 0 * b 0 * b 1 ^ 2 *
+                                                                                                a 2 ^ 2 *
+                                                                                              E 1 2 *
+                                                                                            (-1 / 2) +
+                                                                                        a 0 * b 0 * E 1 2 * E 2 1 *
+                                                                                          (-1 / 2) +
+                                                                                      a 0 * b 0 ^ 2 * a 1 ^ 2 * b 2 *
+                                                                                          E 2 1 *
+                                                                                        (1 / 2) +
+                                                                                    a 0 * b 0 ^ 2 * b 1 * a 2 ^ 2 *
+                                                                                        E 1 2 *
+                                                                                      (1 / 2) +
+                                                                                  a 0 * a 1 ^ 2 * b 1 * b 2 ^ 2 *
+                                                                                      E 2 0 *
+                                                                                    (1 / 2) +
+                                                                                a 0 * a 1 ^ 2 * b 1 ^ 2 * b 2 * E 2 0 *
+                                                                                  (-1 / 2) +
+                                                                              a 0 * b 1 * a 2 ^ 2 * b 2 ^ 2 * E 1 0 *
+                                                                                (-1 / 2) +
+                                                                            a 0 * b 1 * E 1 2 * E 2 0 * (1 / 2) +
+                                                                          a 0 * b 1 ^ 2 * a 2 ^ 2 * b 2 * E 1 0 *
+                                                                            (1 / 2) +
+                                                                        a 0 * b 2 * E 1 0 * E 2 1 * (1 / 2) +
+                                                                      a 0 ^ 2 * b 0 * a 1 * b 2 ^ 2 * E 2 1 * (1 / 2) +
+                                                                    a 0 ^ 2 * b 0 * b 1 ^ 2 * a 2 * E 1 2 * (1 / 2) +
+                                                                  a 0 ^ 2 * b 0 ^ 2 * a 1 * b 2 * E 2 1 * (-1 / 2) +
+                                                                a 0 ^ 2 * b 0 ^ 2 * b 1 * a 2 * E 1 2 * (-1 / 2) -
+                                                              a 0 ^ 2 * b 0 ^ 2 * E 1 2 * E 2 1 +
+                                                            a 0 ^ 2 * a 1 * b 1 * b 2 ^ 2 * E 2 0 * (-1 / 2) +
+                                                          a 0 ^ 2 * a 1 * b 1 ^ 2 * b 2 * E 2 0 * (1 / 2) +
+                                                        a 0 ^ 2 * b 1 * a 2 * b 2 ^ 2 * E 1 0 * (1 / 2) +
+                                                      a 0 ^ 2 * b 1 ^ 2 * a 2 * b 2 * E 1 0 * (-1 / 2) +
+                                                    a 0 ^ 2 * b 1 ^ 2 * E 1 2 * E 2 0 +
+                                                  a 0 ^ 2 * b 2 ^ 2 * E 1 0 * E 2 1 +
+                                                b 0 * a 1 * b 1 ^ 2 * a 2 ^ 2 * E 0 2 * (1 / 2) +
+                                              b 0 * a 1 * a 2 ^ 2 * b 2 ^ 2 * E 0 1 * (-1 / 2) +
+                                            b 0 * a 1 * E 0 2 * E 2 1 * (1 / 2) +
+                                          b 0 * a 1 ^ 2 * b 1 ^ 2 * a 2 * E 0 2 * (-1 / 2) +
+                                        b 0 * a 1 ^ 2 * a 2 * b 2 ^ 2 * E 0 1 * (1 / 2) +
+                                      b 0 * a 2 * E 0 1 * E 1 2 * (1 / 2) +
+                                    b 0 ^ 2 * a 1 * b 1 * a 2 ^ 2 * E 0 2 * (-1 / 2) +
+                                  b 0 ^ 2 * a 1 * a 2 ^ 2 * b 2 * E 0 1 * (1 / 2) +
+                                b 0 ^ 2 * a 1 ^ 2 * b 1 * a 2 * E 0 2 * (1 / 2) +
+                              b 0 ^ 2 * a 1 ^ 2 * a 2 * b 2 * E 0 1 * (-1 / 2) +
+                            b 0 ^ 2 * a 1 ^ 2 * E 0 2 * E 2 1 +
+                          b 0 ^ 2 * a 2 ^ 2 * E 0 1 * E 1 2 +
+                        a 1 * b 1 * E 2 0 * E 0 2 * (-1 / 2) +
+                      a 1 * b 2 * E 0 1 * E 2 0 * (1 / 2) -
+                    a 1 ^ 2 * b 1 ^ 2 * E 2 0 * E 0 2 +
+                  a 1 ^ 2 * b 2 ^ 2 * E 0 1 * E 2 0 +
+                b 1 * a 2 * E 0 2 * E 1 0 * (1 / 2) +
+              b 1 ^ 2 * a 2 ^ 2 * E 0 2 * E 1 0 +
+            a 2 * b 2 * E 0 1 * E 1 0 * (-1 / 2) -
+          a 2 ^ 2 * b 2 ^ 2 * E 0 1 * E 1 0 +
+        E 0 1 * E 1 2 * E 2 0 +
+      E 0 2 * E 1 0 * E 2 1
+warning: D1Bound5/CrossBlockUpper.lean:127:10: This simp argument is unused:
+  Matrix.det_fin_three
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [t, crossBlock_keptProduct]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.CrossBlockUpper
+error: build failed
