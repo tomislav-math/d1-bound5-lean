@@ -1,0 +1,189 @@
+{
+  "import_roots": {
+    "Basic": {
+      "sha256": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+      "imports": [
+        "import Mathlib.Algebra.Ring.Equiv",
+        "import Mathlib.Data.Finset.Card",
+        "import Mathlib.Algebra.Ring.Basic"
+      ]
+    },
+    "RationalSquares": {
+      "sha256": "4cd56ab129029a6551801f8c22878c2598ef5298b732a909ebb1ad48e70f5e58",
+      "imports": [
+        "import D1Bound5.SquareTest"
+      ]
+    },
+    "FullRingBridge": {
+      "sha256": "dc7878b5987408dc5ad74248ad83af5608a906791f27df468ed3d05ac252ac2f",
+      "imports": [
+        "import D1Bound5.FullRingBasis",
+        "import D1Bound5.ComplexCoordinates",
+        "import D1Bound5.Specification",
+        "import D1Bound5.OneThree"
+      ]
+    },
+    "CoherentAnalyticInterpolation": {
+      "sha256": "289b0bd79153d270dd2b679ca68b0d95c46f0054669b3b58cbc13d328e8ce08c",
+      "imports": [
+        "import D1Bound5.ComplexHalfBinomial",
+        "import D1Bound5.HalfBinomialAnalytic",
+        "import D1Bound5.InterpolationWeights",
+        "import Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    "CoherentIntegralForms": {
+      "sha256": "81e6a044e834ea1f7a20cfce931dfefd9cdd8cbc6a1dc7467c69328d64c38e4c",
+      "imports": [
+        "import D1Bound5.CoherentAnalyticInterpolation",
+        "import D1Bound5.FullRingBridge"
+      ]
+    },
+    "CoherentPolynomialWeights": {
+      "sha256": "f098961571ae9eda9b1aeb7c0bb7cf7d0b039a9b7e5f64da44f922daabe473a5",
+      "imports": [
+        "import D1Bound5.CoherentAnalyticInterpolation",
+        "import Mathlib.Data.Fin.VecNotation"
+      ]
+    },
+    "CoherentTwoUpper": {
+      "sha256": "48f29479abf4d160e2b566ed3b872b4c44625f1795d166a6ef4424ed0069adec",
+      "imports": [
+        "import D1Bound5.CoherentFormBounds",
+        "import D1Bound5.HalfBinomialLowDegree"
+      ]
+    },
+    "CoherentThreeGeneral": {
+      "sha256": "737d3e739af7cc17fbcf0191f405a2ff200da893dce212857d11547fd8c8096c",
+      "imports": [
+        "import D1Bound5.CoherentFormBounds"
+      ]
+    },
+    "CoherentThreeParameters": {
+      "sha256": "88d0f3478d9a5f94a18494039736afc19aa2e351a051a8f59d9d3f440eac6643",
+      "imports": [
+        "import D1Bound5.CoherentFormBounds",
+        "import D1Bound5.HalfBinomialLowDegree"
+      ]
+    },
+    "CoherentParameterForms": {
+      "sha256": "d643a3af3dd01df8dfd80ece8c0ba72fab82231c9bdbd4f7f0a0571fd0d2e013",
+      "imports": [
+        "import D1Bound5.CoherentThreeParameters"
+      ]
+    },
+    "PairSeedDisks": {
+      "sha256": "78505b817d0fd58b324eb977c7c891cc24704cb83dce618764d353027caf26bb",
+      "imports": [
+        "import D1Bound5.PairExtensionCore",
+        "import D1Bound5.FastDiskList"
+      ]
+    },
+    "SmallPairGraphCheck": {
+      "sha256": "a1fd39ac1e63a1a407d5fbedb3ad3d7599b1489a8857fc7d2c2d3c2c9b4396e6",
+      "imports": [
+        "import D1Bound5.FastSquareTest",
+        "import D1Bound5.PairExtensionComplete"
+      ]
+    },
+    "PairCachedResidues": {
+      "sha256": "8d30539028d401e948637a33f705cb33707d8ad4e1fe939eafd5ed7c690a9100",
+      "imports": [
+        "import D1Bound5.PairBipartiteCheck"
+      ]
+    }
+  },
+  "setups": {
+    "PairNegativeIntegerObstruction": {
+      "imports_count": 1523,
+      "example": [
+        [
+          "Qq.Typ",
+          [
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.server",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.private"
+            ],
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir.sig",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir"
+            ]
+          ]
+        ]
+      ],
+      "mathlib_umbrella": false,
+      "tactic_umbrella": false
+    },
+    "PairCachedFloorWitnesses": {
+      "imports_count": 2955,
+      "example": [
+        [
+          "Qq.Typ",
+          [
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.server",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.private"
+            ],
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir.sig",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir"
+            ]
+          ]
+        ]
+      ],
+      "mathlib_umbrella": false,
+      "tactic_umbrella": false
+    },
+    "SmallPairFloorWitnessData34": {
+      "imports_count": 462,
+      "example": [
+        [
+          "Qq.Typ",
+          [
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.server",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.private"
+            ],
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir.sig",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir"
+            ]
+          ]
+        ]
+      ],
+      "mathlib_umbrella": false,
+      "tactic_umbrella": false
+    },
+    "CoherentIntegralForms": {
+      "imports_count": 2984,
+      "example": [
+        [
+          "Qq.Typ",
+          [
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.server",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.olean.private"
+            ],
+            [
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir.sig",
+              "/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean/Qq/Typ.ir"
+            ]
+          ]
+        ]
+      ],
+      "mathlib_umbrella": false,
+      "tactic_umbrella": false
+    }
+  },
+  "pinned": {
+    "lake/Lake/Build/Module.lean:968-1003": "968: \n969: def Module.buildLean\n970:   (mod : Module) (presetup : ModulePreSetup)\n971: : JobM ModuleOutputArtifacts := do buildAction (← getTrace) mod.traceFile do\n972:   let args := mod.weakLeanArgs ++ mod.leanArgs\n973:   let relSrcFile := relPathFrom mod.pkg.dir presetup.srcFile\n974:   let setup ← mkModuleSetup mod presetup\n975:   let arts := mod.mkArtifacts presetup.srcFile presetup.isModule\n976:   mod.clearOutputArtifacts\n977:   compileLeanModule presetup.srcFile relSrcFile setup mod.setupFile arts args\n978:     (← getLeanPath) (← getLean) (← getLeanir)\n979:   mod.clearOutputHashes\n980:   mod.computeArtifacts setup.isModule\n981: \n982: /--\n983: Recursively build a Lean module.\n984: Fetch its dependencies and then elaborate the Lean source file, producing\n985: all possible artifacts (e.g., `.olean`, `.ilean`, `.c`, `.bc`).\n986: -/\n987: def Module.recBuildLean (mod : Module) : FetchM (Job ModuleOutputArtifacts) := do\n988:   /-\n989:   Remark: `withRegisterJob` must register `presetupJob` to display module builds\n990:   in the job monitor. However, it must also include the fetching of the job to\n991:   ensure all logs end up under its caption in the job monitor.\n992:   -/\n993:   withRegisterJob mod.name.toString do\n994:   let presetupJob ← mod.presetup.fetch\n995:   presetupJob.mapM fun presetup => do\n996:     setTrace presetup.trace\n997:     let arts ← fetchCore presetup\n998:     let arts ← trackOutputsIfEnabled arts\n999:     let arts ← adjustMTime arts\n1000:     return arts\n1001: where\n1002:   fetchFromCache? presetup savedTrace restoreAll : JobM (ModuleOutputArtifacts ⊕ SavedTrace) := do\n1003:     let inputHash := (← getTrace).hash",
+    "lake/Lake/Build/Module.lean:1120-1150": "1120: @[inline] def Module.fetchOLeanCore\n1121:   (facet : String) (f : ModuleOutputArtifacts → Option Artifact) (errMsg : String) (mod : Module)\n1122: : FetchM (Job FilePath) := do\n1123:   (← mod.leanArts.fetch).mapM (sync := true) fun arts => do\n1124:       let some art := f arts\n1125:         | error errMsg\n1126:       /-\n1127:       Avoid recompiling unchanged OLean files.\n1128:       OLean files transitively include their imports.\n1129:       However, imports are pre-resolved by Lake, so they are not included in their trace.\n1130:       -/\n1131:       newTrace s!\"{mod.name.toString}:{facet}\"\n1132:       addTrace art.trace\n1133:       return art.path\n1134: \n1135: /-- The `ModuleFacetConfig` for the builtin `oleanFacet`. -/\n1136: public def Module.oleanFacetConfig : ModuleFacetConfig oleanFacet :=\n1137:   mkFacetJobConfig <| fetchOLeanCore \"olean\" (·.olean)\n1138:     \"No olean generated. This is likely an error in Lean or Lake.\"\n1139: \n1140: /-- The `ModuleFacetConfig` for the builtin `oleanServerFacet`. -/\n1141: public def Module.oleanServerFacetConfig : ModuleFacetConfig oleanServerFacet :=\n1142:   mkFacetJobConfig <| fetchOLeanCore \"olean.server\" (·.oleanServer?) noServerOLeanError\n1143: \n1144: /-- The `ModuleFacetConfig` for the builtin `oleanPrivateFacet`. -/\n1145: public def Module.oleanPrivateFacetConfig : ModuleFacetConfig oleanPrivateFacet :=\n1146:   mkFacetJobConfig <| fetchOLeanCore \"olean.private\" (·.oleanPrivate?) noPrivateOLeanError\n1147: \n1148: /-- The `ModuleFacetConfig` for the builtin `ileanFacet`. -/\n1149: public def Module.ileanFacetConfig : ModuleFacetConfig ileanFacet :=\n1150:   mkFacetJobConfig fun mod => do",
+    "lake/Lake/CLI/Build.lean:300-420": "",
+    "/Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/src/lean/lake/Lake/Build/Run.lean:305": "301:       let numJobs := result.numJobs\n302:       if numJobs == 0 then\n303:         print! out \"Nothing to build.\\n\"\n304:       else\n305:         let jobs := if numJobs == 1 then \"1 job\" else s!\"{numJobs} jobs\"\n306:         if cfg.noBuild then\n307:           print! out s!\"All targets up-to-date ({jobs}).\\n\"\n308:         else\n309:           print! out s!\"Build completed successfully ({jobs}).\\n\"\n310:   else\n311:     print! out \"Some required targets logged failures:\\n\"\n312:     result.failures.forM (print! out s!\"- {·}\\n\")\n313:     flush out\n314: \n315: structure BuildResult (α : Type u) extends MonitorResult where\n316:   out : Except String α\n317: \n318: instance : CoeOut (BuildResult α) MonitorResult := ⟨BuildResult.toMonitorResult⟩\n319: \n320: @[inline] def BuildResult.isOk (self : BuildResult α) : Bool :=\n321:   self.out.isOk\n322: \n323: def monitorJob (ctx : MonitorContext) (job : Job α) : BaseIO (BuildResult α) := do\n324:   let result ← monitorJobs' ctx #[job]\n325:   if result.isOk then\n326:     if let some a ← job.wait? then\n327:       return {toMonitorResult := result, out := .ok a}\n328:     else\n329:       -- Computation job failed but was unreported in the monitor. This should be impossible.\n330:       return {toMonitorResult := result, out := .error <|\n331:         \"uncaught top-level build failure (this is likely a bug in Lake)\"}\n332:   else\n333:     return {toMonitorResult := result, out := .error \"build failed\"}\n334: \n335: def mkBuildContext'\n336:   (ws : Workspace) (cfg : BuildConfig) (jobs : JobQueue)\n337: : BaseIO BuildContext := return {\n338:   opaqueWs := ws\n339:   toBuildConfig := cfg\n340:   outputsRef? := ← id do\n341:     if cfg.outputsFile?.isSome then\n342:       some <$> CacheRef.mk\n343:     else\n344:       return none\n345:   registeredJobs := jobs\n346:   leanTrace := .ofHash (pureHash ws.lakeEnv.leanGithash)\n347:     s!\"Lean {Lean.versionStringCore}, commit {ws.lakeEnv.leanGithash}\"\n348: }\n349: \n350: def Workspace.startBuild\n351:   (bctx : BuildContext) (build : FetchM α) (caption := \"job computation\")\n352: : BaseIO (Job α) := do\n353:   let compute := Job.async build (caption := caption)\n354:   compute.run.run'.run bctx |>.run nilTrace\n355: \n356: def finalizeBuild\n357:   (cfg : BuildConfig) (bctx : BuildContext ) (mctx : MonitorContext) (result : BuildResult α)\n358: : IO α := do\n359:   reportResult cfg mctx.out result\n360:   if let some outputsFile := cfg.outputsFile? then\n361:     bctx.workspace.saveOutputs (logger := mctx.logger)\n362:       bctx.outputsRef? mctx.out outputsFile (cfg.verbosity matches .verbose)\n363:   match result.out with\n364:   | .ok a =>",
+    "/Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/src/lean/lake/Lake/Build/Actions.lean:28": "24: open Lean hiding SearchPath\n25: \n26: namespace Lake\n27: \n28: public def compileLeanModule\n29:   (leanFile relLeanFile : FilePath)\n30:   (setup : ModuleSetup) (setupFile : FilePath)\n31:   (arts : ModuleArtifacts)\n32:   (leanArgs : Array String := #[])\n33:   (leanPath : SearchPath := [])\n34:   (lean : FilePath := \"lean\")\n35:   (leanir : FilePath := \"leanir\")\n36: : LogIO Unit := do\n37:   let mut args := leanArgs.push leanFile.toString\n38:   if let some oleanFile := arts.olean? then\n39:     createParentDirs oleanFile\n40:     args := args ++ #[\"-o\", oleanFile.toString]\n41:   if let some ileanFile := arts.ilean? then\n42:     createParentDirs ileanFile\n43:     args := args ++ #[\"-i\", ileanFile.toString]\n44:   let opts := setup.options.toOptions\n45:   let postponeCompile := setup.isModule && Compiler.compiler.postponeCompile.get opts\n46:   if !postponeCompile then\n47:     if let some cFile := arts.c? then\n48:       createParentDirs cFile\n49:       args := args ++ #[\"-c\", cFile.toString]\n50:   if let some bcFile := arts.bc? then\n51:     createParentDirs bcFile\n52:     args := args ++ #[\"-b\", bcFile.toString]\n53:   createParentDirs setupFile\n54:   IO.FS.writeFile setupFile (toJson setup).pretty\n55:   args := args ++ #[\"--setup\", setupFile.toString]\n56:   args := args.push \"--json\"\n57:   withLogErrorPos do\n58:   let out ← rawProc {\n59:     args\n60:     cmd := lean.toString\n61:     env := #[\n62:       (\"LEAN_PATH\", leanPath.toString)\n63:     ]\n64:   }\n65:   unless out.stdout.isEmpty do\n66:     let txt ← out.stdout.split '\\n' |>.foldM (init := \"\") fun (txt : String) ln => do\n67:       let ln := ln.copy\n68:       if let .ok (msg : SerialMessage) := Json.parse ln >>= fromJson? then\n69:         unless txt.isEmpty do\n70:           logInfo s!\"stdout:\\n{txt}\"\n71:         let msg := {msg with fileName := mkRelPathString relLeanFile}\n72:         logSerialMessage msg\n73:         return txt\n74:       else if txt.isEmpty && ln.isEmpty then\n75:         return txt\n76:       else\n77:         return txt ++ ln ++ \"\\n\"\n78:     unless txt.isEmpty do\n79:       logInfo s!\"stdout:\\n{txt}\"\n80:   unless out.stderr.isEmpty do\n81:     logInfo s!\"stderr:\\n{out.stderr.trimAscii}\"\n82:   if out.exitCode ≠ 0 then\n83:     error s!\"Lean exited with code {out.exitCode}\"\n84:   if postponeCompile then\n85:     if let (some irFile, some cFile) := (arts.ir?, arts.c?) then\n86:       createParentDirs irFile\n87:       createParentDirs cFile"
+  }
+}

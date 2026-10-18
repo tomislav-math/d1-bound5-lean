@@ -1,0 +1,16 @@
+{
+  "status": "Independent full-source mathematical/interface review PASS; no Lean compilation",
+  "sources": {
+    "pair_witness_next/PairSelectedCachedMask.lean": "842d5e0cce863d3301c8c65c34a04d2d07c08d156761bf506cdbbebcdd0db1f4",
+    "pair_witness_next/PairSelectedFloorWitnesses.lean": "5627d261d76c8200c3ce7a8601856a8cef8aa9e7be044b0ebf81c7f060ce8b74"
+  },
+  "findings": [
+    "A selected index is looked up in the actual sieve and both signature lists at the same index; absent entries reject. The helper proves the precise existing cached sieve is false, including malformed signatures.",
+    "Every actual tail vertex drives exactly one base32 digit check; exhaustion of the numerical word does not terminate the vertex recursion. Implicit high zero digits are still actual mask-zero checks.",
+    "Tags0..24 require an actual rejecting mask, tag30 actual vertex equality, tag31 a proved actual negative-integer obstruction or exact floor nonsquare. Tags25..29 reject.",
+    "Residual code and floor list must both be empty at each row end. The outer traversal requires exactly one packed row per actual head, rejecting missing or extra rows.",
+    "Original exact vertex-list projection and every canonical signature validation remain in the full certificate. Inner proofs need no hidden validity premise because they target the identical cached predicate.",
+    "The final assertion is exactly pairIndependentBool=true, with unchanged downstream graph/full-ring meaning. No nonzero-root or additional field restriction is introduced."
+  ],
+  "pending": "Independent emitted row34 data decoding is separate and must be completed before concrete intake."
+}

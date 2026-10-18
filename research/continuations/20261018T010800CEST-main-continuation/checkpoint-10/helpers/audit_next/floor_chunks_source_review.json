@@ -1,0 +1,17 @@
+{
+  "source": "pair_witness_next/PairCachedFloorChunks.lean",
+  "source_sha256": "099e32f6b7dd3ea477d70f9baf9c1dff01758d78f3338eea6e760dd5763e90b5",
+  "reviewer": "bennett",
+  "scope": "Independent full mathematical and source-structure review, no compilation",
+  "result": "PASS",
+  "findings": [
+    "Each checked prefix head uses its complete actual tail, preserving pairs crossing a cut.",
+    "The exact Boolean factorization drops vertex and witness lists by the same amount.",
+    "A zero prefix still requires the entire original checker as its tail certificate.",
+    "Mismatched vertex and witness lengths reject once reached, including extra terminal witnesses.",
+    "The cover corollary requires both list lengths at most the prefix budget.",
+    "Complete vertex projection and all canonical signature validations are unchanged.",
+    "The final assertion is exactly the accepted original independent-class Boolean.",
+    "Author separately grounded List.drop_eq_nil_of_le in pinned Lean4.33.1 Init/Data/List/Basic.lean:945."
+  ]
+}

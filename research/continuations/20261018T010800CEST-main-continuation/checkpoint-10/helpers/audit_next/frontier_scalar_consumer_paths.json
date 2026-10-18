@@ -1,0 +1,191 @@
+{
+  "direct": [
+    {
+      "name": "FrontierTableNumeric",
+      "imports": [
+        "FrontierScalarReduction"
+      ],
+      "independent_cubic_errors_path": null,
+      "source_sha256": "fdb5110fd7c01a02f52f2b7aca40f48eff76285798bc764522ee4ed8858163e4",
+      "text": "import D1Bound5.FrontierScalarReduction\n\nnamespace D1Bound5\n\n/-- The five rational parameter rows of the manuscript frontier table. -/\ndef FrontierTableRow (alpha beta target : ℝ) : Prop :=\n  (alpha = 1 ∧ beta = 8 ∧ target = 27/8) ∨\n  (alpha = 140/99 ∧ beta = 4 ∧ target = 3) ∨\n  (alpha = 12/7 ∧ beta = 3 ∧ target = 11/4) ∨\n  (alpha = 2 ∧ beta = 3 ∧ target = 29/10) ∨\n  (alpha = 20/9 ∧ beta = 3 ∧ target = 3)\n\n/-- All listed parameter rows satisfy the positivity and ordering\nconditions needed by the determinant estimate. -/\ntheorem FrontierTableRow.parameters {alpha beta target : ℝ}\n    (h : FrontierTableRow alpha beta target) :\n    0 < alpha ∧ 3 ≤ beta ∧ alpha ≤ beta ∧ 5 < alpha*beta ∧\n      0 ≤ frontierK alpha beta ∧ 0 ≤ frontierL alpha beta ∧\n      0 ≤ frontierQ alpha beta := by\n  rcases h with ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ |\n    ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ <;>\n    norm_num [frontierK, frontierL, frontierQ]\n\n/-- All five frontier constants pass the exact rational endpoint check.\nThis is only the scalar closing step; the determinant inequality is\nexplicitly displayed here and supplied by the tuple assembly. -/\ntheorem frontier_table_numeric (alpha beta target tau : ℝ)\n    (hrow : FrontierTableRow alpha beta target) (htau : (2/3 : ℝ) < tau)\n    (hscalar : tau ≤ 2*frontierK alpha beta*tau^2+\n      frontierL alpha beta*frontierP alpha beta*tau+frontierJ alpha beta) :\n    target < tau := by\n  rcases hrow with ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ |\n    ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (1) (8))\n      (frontierL (1) (8)*frontierP (1) (8)-1)\n      (frontierJ (1) (8)) (2/3) (27/8) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (140/99) (4))\n      (frontierL (140/99) (4)*frontierP (140/99) (4)-1)\n      (frontierJ (140/99) (4)) (2/3) (3) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (12/7) (3))\n      (frontierL (12/7) (3)*frontierP (12/7) (3)-1)\n      (frontierJ (12/7) (3)) (2/3) (11/4) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (2) (3))\n      (frontierL (2) (3)*frontierP (2) (3)-1)\n      (frontierJ (2) (3)) (2/3) (29/10) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (20/9) (3))\n      (frontierL (20/9) (3)*frontierP (20/9) (3)-1)\n      (frontierJ (20/9) (3)) (2/3) (3) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n\nend D1Bound5\n"
+    }
+  ],
+  "downstream": [
+    {
+      "name": "CoherentRetainedMixedStart",
+      "imports": [
+        "CoherentRetainedMixedFourSizes",
+        "CoherentRetainedMixedTuple",
+        "CoherentDirectFour",
+        "RetainedMixedFourScalar"
+      ],
+      "independent_cubic_errors_path": [
+        "CoherentRetainedMixedStart",
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "CoherentRetainedMixedTuple",
+      "imports": [
+        "CoherentRetainedMixedGap",
+        "FrontierNormRows",
+        "ProductFiveTupleGrowth"
+      ],
+      "independent_cubic_errors_path": [
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "FiveRegionImpossible",
+      "imports": [
+        "FiveRegionTupleGap",
+        "FiveRegionOverlapBounds",
+        "CommonIntervalOverlaps",
+        "FiveRegionN2Interval",
+        "FiveRegionN3Interval",
+        "FiveRegionA3Interval",
+        "FiveRegionA4Interval",
+        "FiveRegionA5Interval",
+        "FiveRegionPInterval",
+        "FirstPairRelabeledN3",
+        "CoherentRetainedMixedStart",
+        "FiniteQInterval",
+        "FiniteMInterval"
+      ],
+      "independent_cubic_errors_path": [
+        "FiveRegionImpossible",
+        "FiveRegionTupleGap",
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "FiveRegionTupleGap",
+      "imports": [
+        "FiveRegionRetainedScalar",
+        "CoherentRetainedMixedTuple"
+      ],
+      "independent_cubic_errors_path": [
+        "FiveRegionTupleGap",
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "FrontierNormRows",
+      "imports": [
+        "FrontierTableTuple"
+      ],
+      "independent_cubic_errors_path": [
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "FrontierTableNumeric",
+      "imports": [
+        "FrontierScalarReduction"
+      ],
+      "independent_cubic_errors_path": null,
+      "source_sha256": "fdb5110fd7c01a02f52f2b7aca40f48eff76285798bc764522ee4ed8858163e4",
+      "text": "import D1Bound5.FrontierScalarReduction\n\nnamespace D1Bound5\n\n/-- The five rational parameter rows of the manuscript frontier table. -/\ndef FrontierTableRow (alpha beta target : ℝ) : Prop :=\n  (alpha = 1 ∧ beta = 8 ∧ target = 27/8) ∨\n  (alpha = 140/99 ∧ beta = 4 ∧ target = 3) ∨\n  (alpha = 12/7 ∧ beta = 3 ∧ target = 11/4) ∨\n  (alpha = 2 ∧ beta = 3 ∧ target = 29/10) ∨\n  (alpha = 20/9 ∧ beta = 3 ∧ target = 3)\n\n/-- All listed parameter rows satisfy the positivity and ordering\nconditions needed by the determinant estimate. -/\ntheorem FrontierTableRow.parameters {alpha beta target : ℝ}\n    (h : FrontierTableRow alpha beta target) :\n    0 < alpha ∧ 3 ≤ beta ∧ alpha ≤ beta ∧ 5 < alpha*beta ∧\n      0 ≤ frontierK alpha beta ∧ 0 ≤ frontierL alpha beta ∧\n      0 ≤ frontierQ alpha beta := by\n  rcases h with ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ |\n    ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ <;>\n    norm_num [frontierK, frontierL, frontierQ]\n\n/-- All five frontier constants pass the exact rational endpoint check.\nThis is only the scalar closing step; the determinant inequality is\nexplicitly displayed here and supplied by the tuple assembly. -/\ntheorem frontier_table_numeric (alpha beta target tau : ℝ)\n    (hrow : FrontierTableRow alpha beta target) (htau : (2/3 : ℝ) < tau)\n    (hscalar : tau ≤ 2*frontierK alpha beta*tau^2+\n      frontierL alpha beta*frontierP alpha beta*tau+frontierJ alpha beta) :\n    target < tau := by\n  rcases hrow with ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩ |\n    ⟨rfl,rfl,rfl⟩ | ⟨rfl,rfl,rfl⟩\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (1) (8))\n      (frontierL (1) (8)*frontierP (1) (8)-1)\n      (frontierJ (1) (8)) (2/3) (27/8) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (140/99) (4))\n      (frontierL (140/99) (4)*frontierP (140/99) (4)-1)\n      (frontierJ (140/99) (4)) (2/3) (3) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (12/7) (3))\n      (frontierL (12/7) (3)*frontierP (12/7) (3)-1)\n      (frontierJ (12/7) (3)) (2/3) (11/4) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (2) (3))\n      (frontierL (2) (3)*frontierP (2) (3)-1)\n      (frontierJ (2) (3)) (2/3) (29/10) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n  · by_contra hbad\n    apply frontier_quadratic_interval_exclusion\n      (2*frontierK (20/9) (3))\n      (frontierL (20/9) (3)*frontierP (20/9) (3)-1)\n      (frontierJ (20/9) (3)) (2/3) (3) tau\n      (by norm_num [frontierK]) htau (le_of_not_gt hbad)\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · norm_num [frontierK, frontierL, frontierP, frontierJ, frontierQ]\n    · nlinarith only [hscalar]\n\nend D1Bound5\n"
+    },
+    {
+      "name": "FrontierTableTuple",
+      "imports": [
+        "FrontierRootBounds",
+        "FrontierMixedDeterminant",
+        "FrontierTableNumeric"
+      ],
+      "independent_cubic_errors_path": [
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "MainTheorem",
+      "imports": [
+        "MainCaseReduction",
+        "AllLargeImpossible",
+        "OneSmallImpossible",
+        "ThreeSmallExclusion",
+        "TwoSmallNondegenerateImpossible",
+        "DegeneratePairImpossible"
+      ],
+      "independent_cubic_errors_path": [
+        "MainTheorem",
+        "OneSmallImpossible",
+        "OneSmallFirstPairReduction",
+        "FiveRegionImpossible",
+        "FiveRegionTupleGap",
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "OneSmallFirstPairReduction",
+      "imports": [
+        "FiveRegionImpossible",
+        "NormCompatibility"
+      ],
+      "independent_cubic_errors_path": [
+        "OneSmallFirstPairReduction",
+        "FiveRegionImpossible",
+        "FiveRegionTupleGap",
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    },
+    {
+      "name": "OneSmallImpossible",
+      "imports": [
+        "OneSmallFirstPairReduction",
+        "OneSmallReducedImpossible"
+      ],
+      "independent_cubic_errors_path": [
+        "OneSmallImpossible",
+        "OneSmallFirstPairReduction",
+        "FiveRegionImpossible",
+        "FiveRegionTupleGap",
+        "CoherentRetainedMixedTuple",
+        "FrontierNormRows",
+        "FrontierTableTuple",
+        "FrontierMixedDeterminant",
+        "FrontierMixedCofactors",
+        "FrontierCubicErrors"
+      ]
+    }
+  ],
+  "changed_source_build_rows": []
+}

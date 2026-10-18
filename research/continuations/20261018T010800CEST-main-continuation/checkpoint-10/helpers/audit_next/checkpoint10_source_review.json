@@ -1,0 +1,24 @@
+{
+  "status": "Independent full-source review PASS; scripts not executed",
+  "sources": {
+    "prepare_checkpoint10.py": "bb260f82f2aa26b7c5f6c258ea97819b5137c6ed13f985eb797f9950458046a5",
+    "stage_checkpoint10.py": "4d95c5b8c6d4c2baebe89cc37d4d2eddd60056bde7cbe212db380631b54c3227"
+  },
+  "expected_head": "0d107611364a193651e5e895d2675d31766eee3a",
+  "checks": [
+    "Preparation requires the exact previous HEAD, clean tracked worktree/index and frozen manuscript hash. Source bytes and runtime ledger/active/queue are read under the existing intake lock, with per-file stable-read checks.",
+    "Status recomputes the same exact D1 source-closure fingerprint as the driver. Only a matching terminal accepted receipt is called PASS, with exit/source/closure/timeout/interruption consistency checks; matching active jobs take RUNNING precedence. Main PASS explicitly aborts to prevent stale unproved wording. Status is explicitly a dated ledger view, not a fresh replay.",
+    "Source delta references only identical prior research snapshots within the continuation path or writes new draft bytes. Relative helper/output names reject absolute paths, traversal and control characters. The new destination/work/record/reviewed list must not preexist.",
+    "Only captured terminal-ledger logs are copied; captured active log paths are excluded. Reviewed authorization paths are published after complete directory publication and record writing, so partial preparation cannot authorize staging.",
+    "Staging requires exact HEAD/branch/private origin/push permission and synchronized origin/main, plus initially clean tracked worktree/index. Its reviewed list is unique and restricted to checkpoint10 plus one exact checkpoint record. Symlinks/escape paths and hash mismatches reject.",
+    "Git add now uses --literal-pathspecs with a NUL-delimited reviewed list. The exact resulting index path set, stage0 regular-file mode and every indexed blob SHA256 are checked before producing the index-review receipt. No commit or push is performed by either script."
+  ],
+  "suggestion_resolved": "The sole requested change was Git literal pathspec handling. Removing that added global flag reproduces the entire previously reviewed stage script byte-for-byte.",
+  "not_claimed": [
+    "No checkpoint preparation or staging was executed by this reviewer.",
+    "No Git command, remote write, Lean compilation, source acceptance or fresh kernel replay was performed.",
+    "MainStatement remains unproved under the intended checkpoint wording."
+  ],
+  "scope_update_review": "PASS: exact verified31d4\u2192bb260 diff only adds four required runtime artifacts, requires intake/receipt pairs through77, adds seven status targets and updates two descriptive paragraphs. All snapshot, closure-fingerprint, path, publication, index and staging algorithms are unchanged. Stage4d95 remains identical.",
+  "scope_delta_sha256": "147afe20c00932e5ee8229970a1de4fc8edc42eebbada2b57c41b6dc299084d0"
+}

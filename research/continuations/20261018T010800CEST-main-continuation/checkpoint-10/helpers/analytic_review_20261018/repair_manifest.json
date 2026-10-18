@@ -1,0 +1,41 @@
+{
+  "status": "frozen-uncompiled",
+  "source_basis": "exact-current-remote-bytes or exact matching remote/local SHA",
+  "repairs": [
+    {
+      "module": "CoherentParameterForms",
+      "before_sha256": "d643a3af3dd01df8dfd80ece8c0ba72fab82231c9bdbd4f7f0a0571fd0d2e013",
+      "after_sha256": "5e5c9b3da5452efd2e2d6fd0420aa7be9400aae7c56e798af8556d4d09ddd9ea",
+      "path": "analytic_review_20261018/CoherentParameterForms.lean",
+      "reason": "Reassociate199*P*Q before rewriting P*Q=E^2; previous failed identical rewrite shape in CoherentTwoUpper. No mathematical change."
+    },
+    {
+      "module": "CoherentThreeZeroBootstrap",
+      "before_sha256": "c270301446cffc3c4364e3916c86e21c76fc384ef44c17d9627da797005f3f54",
+      "after_sha256": "b54246d0d1c9cfd8828a4478b051dd30ad348a9516f72094e48c67fab1b6cf30",
+      "path": "analytic_review_20261018/CoherentThreeZeroBootstrap.lean",
+      "reason": "Pinned add_le_add_right adds the fixed value on the left. hn needs the ht inequality on the left and coefficient on the right; use add_le_add ht le_rfl."
+    },
+    {
+      "module": "CoherentRetainedMixedSizes",
+      "before_sha256": "4a5e584dffd7911c9ee847f40533f172284101dbb8bc3ae687905a5a7f45c73b",
+      "after_sha256": "4052953496a6dda73eb03810524dfb628d86696644b05029e09eaad381eb4055",
+      "path": "analytic_review_20261018/CoherentRetainedMixedSizes.lean",
+      "reason": "Pinned mul_lt_mul requires its second order premise non-strict; hC864 is strict, so pass hC864.le. Independently found by article_audit and verified against actual remote hash and pinned definition."
+    },
+    {
+      "module": "CoherentThreeParameters",
+      "before_sha256": "88d0f3478d9a5f94a18494039736afc19aa2e351a051a8f59d9d3f440eac6643",
+      "after_sha256": "54195b46b4970c1765707556154f983d3bdf6fa764964673f37e29b3cce49f5b",
+      "path": "analytic_review_20261018/CoherentThreeParameters.lean",
+      "reason": "Pinned add_le_add_left puts the fixed summand on the right; these goals fix the first summand and bound the second. Replace only by add_le_add le_rfl hy or hy2. Existing noncomputable declaration retained. Also type the norm_add_le hypothesis explicitly and use concrete Complex.norm_pow in its subsequent rewrite, matching the source-instance shape that actually failed in UnitPairSymmetric."
+    },
+    {
+      "module": "CoherentFourParameters",
+      "before_sha256": "e9ab65ff199c0533d38a19b63584cef713b9127fa326f226a6670542aa584944",
+      "after_sha256": "430a95e42e9cf97b79b623dc7f4b460ee0499719cd3318c9cc749ee53a137957",
+      "path": "analytic_review_20261018/CoherentFourParameters.lean",
+      "reason": "Pinned add_le_add_left puts the fixed summand on the right; these goals fix the first summand and bound the second. Replace only by add_le_add le_rfl hy or hy2. Existing noncomputable declaration retained."
+    }
+  ]
+}

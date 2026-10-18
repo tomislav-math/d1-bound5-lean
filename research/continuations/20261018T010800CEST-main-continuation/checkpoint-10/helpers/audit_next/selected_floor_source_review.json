@@ -1,0 +1,18 @@
+{
+  "status": "Independent mathematical/interface source review PASS; no compiler or performance claim",
+  "source": "pair_witness_next/PairSelectedFloorWitnesses.lean",
+  "sha256": "5627d261d76c8200c3ce7a8601856a8cef8aa9e7be044b0ebf81c7f060ce8b74",
+  "reviewer": "bennett",
+  "checks": [
+    "Every actual tail element consumes one base32 tag; recursion is driven by the full tail even when code=0",
+    "Tags0..24 check one aligned rejecting entry using exact old cached mask predicate; missing lookups reject",
+    "Tags25..29 reject; tag30 checks actual vertex equality; tag31 checks actual negative-integer obstruction or actual floor witness",
+    "Fallback need not prove full-sieve acceptance: an actual nonsquare suffices to make original cached pair false",
+    "Floor witnesses are consumed only by actual floor branch; missing/trailing floors reject",
+    "Terminal code must be0 and floors empty; an implicit leading zero digit does not omit a pair because every tail element is still checked",
+    "One row per actual head, including finalempty tail; missing/trailing rows reject",
+    "Original exact vertex projection/signature validation retained and final conclusion is old independent-class Boolean",
+    "No original generic source or old certificate changed"
+  ],
+  "scope": "Read full source, checked branch semantics and proof interface to accepted helpers; no Lean compilation."
+}
