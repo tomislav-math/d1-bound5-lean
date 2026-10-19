@@ -1,0 +1,3 @@
+# Full-ring endpoint proof repair
+
+The first endpoint compilation failed with exit 1 after 82.12 seconds. Exact log evidence is retained under final-join. Repairs are limited to proof bodies: prove 1 <= 10^275 structurally with one_le_pow₀ instead of attempting evaluation beyond norm_num's exponent threshold; remove two rfl calls after rw had already closed their goals; normalize Fin.castSucc with the installed Fin.val_castSucc lemma. Both original theorem headers and every assumption are unchanged. No tactic limits are increased. The log warning about the unchanged later large exponent is not treated as a proof failure or hidden by changing limits.

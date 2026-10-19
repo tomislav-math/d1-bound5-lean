@@ -1,0 +1,25 @@
+Elaborated endpoint types from the successful pinned audit.
+
+D1Bound5.pellFiniteCertificate_exists (d : ℤ) (hd : 7 ≤ d) (hupper : d < 10000) (hmod : d % 8 = 7)
+  (hsq : Squarefree d) : Nonempty (D1Bound5.PellFiniteCertificate d (10 ^ 275))
+D1Bound5.full_ring_unit_pair_pell_no_three_bounded.{u_1} {K : Type u_1} [Field K] [NumberField K]
+  [NumberField.IsTotallyComplex K] (hK : finrank ℚ K = 2) (phi : K →+* ℂ) (M : D1Bound5.UnitPairArithmeticModel (𝓞 K))
+  (hd : 7 ≤ M.d) (hupper : M.d < 10000) (hmod : M.d % 8 = 7) (t : Fin 3 → 𝓞 K) (ht : D1Bound5.IsD1Tuple t)
+  (hreal : ∀ (i : Fin 3), D1Bound5.UnitPairRealDescription M.d (t i))
+  (hbound : ∀ (i : Fin 3), ‖phi ↑(t i)‖ ^ 2 ≤ 10 ^ 1100) : False
+D1Bound5.IsD1Tuple.unit_pair_fifth_large.{u_1} {K : Type u_1} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]
+  (hK : finrank ℚ K = 2) (phi : K →+* ℂ) (t : Fin 6 → 𝓞 K) (ht : D1Bound5.IsD1Tuple t) (hm : t 0 = -1) (hp : t 1 = 1)
+  (hmon : Monotone fun i => ‖phi ↑(t i)‖) : 10 ^ 550 < ‖phi ↑(t 4)‖
+
+D1Bound5.full_ring_unit_pair_pell_no_three_bounded.{u_1} {K : Type u_1} [Field K] [NumberField K]
+  [NumberField.IsTotallyComplex K] (hK : finrank ℚ K = 2) (phi : K →+* ℂ) (M : D1Bound5.UnitPairArithmeticModel (𝓞 K))
+  (hd : 7 ≤ M.d) (hupper : M.d < 10000) (hmod : M.d % 8 = 7) (t : Fin 3 → 𝓞 K) (ht : D1Bound5.IsD1Tuple t)
+  (hreal : ∀ (i : Fin 3), D1Bound5.UnitPairRealDescription M.d (t i))
+  (hbound : ∀ (i : Fin 3), ‖phi ↑(t i)‖ ^ 2 ≤ 10 ^ 1100) : False
+D1Bound5.IsD1Tuple.unit_pair_fifth_large.{u_1} {K : Type u_1} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]
+  (hK : finrank ℚ K = 2) (phi : K →+* ℂ) (t : Fin 6 → 𝓞 K) (ht : D1Bound5.IsD1Tuple t) (hm : t 0 = -1) (hp : t 1 = 1)
+  (hmon : Monotone fun i => ‖phi ↑(t i)‖) : 10 ^ 550 < ‖phi ↑(t 4)‖
+
+D1Bound5.IsD1Tuple.unit_pair_fifth_large.{u_1} {K : Type u_1} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]
+  (hK : finrank ℚ K = 2) (phi : K →+* ℂ) (t : Fin 6 → 𝓞 K) (ht : D1Bound5.IsD1Tuple t) (hm : t 0 = -1) (hp : t 1 = 1)
+  (hmon : Monotone fun i => ‖phi ↑(t i)‖) : 10 ^ 550 < ‖phi ↑(t 4)‖

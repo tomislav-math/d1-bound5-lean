@@ -1,0 +1,3 @@
+# Coercion normalization repair
+
+At 2026-10-19T11:28:30.402861+02:00 the partitioned parent had a real Lean elaboration failure (exit 1, 64.80 seconds). All 25 exact numerical blocks had passed. The sole unsolved goal compared the natural-number cast to Int.ofNat in the two definitionally corresponding arithmetic predicates. The private bridge proof now uses the existing Int.ofNat_eq_natCast lemma. Public theorem headers, data lists, range, hypotheses and the certificate-existence proof are unchanged. The failed source and build log are preserved. This is a source-changing repair, not a timeout extension.

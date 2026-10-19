@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-19T09:04:41.365398+00:00",
+  "unknown": [],
+  "targets": {
+    "PellLightAllMatchingCertificates": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "PellLightAllFiniteCertificates": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "PellLightAllMatchingCertificates"
+      ]
+    },
+    "PellFiniteFields": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "PellLightAllFiniteCertificates",
+        "PellLightAllMatchingCertificates"
+      ]
+    },
+    "PellUnitPairBounded": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "PellFiniteFields",
+        "PellLightAllFiniteCertificates",
+        "PellLightAllMatchingCertificates"
+      ]
+    }
+  }
+}
