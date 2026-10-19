@@ -1,0 +1,3 @@
+# START — 2026-10-19T08:59:47.575944+02:00
+
+Continue the frozen v4 unit-pair finite certificate proof. Review and check one bounded serial batch of four matching fields and eight next prefix blocks. Use the existing unchanged guarded driver and ownership locks, max_parallel=1. The queue stays paused between owned targets. Initial HEAD 3b10d348bccd7c929e16d232337bac11420b3a1b on main; no live proof compiler; inherited staged receipt preserved exactly. No new proof worker, automation change, external service or root-integration claim. All compilation, exact types, transitive axioms, and targeted installed SAME-kernel checks must be collected before acceptance. MainStatement remains UNPROVED.
