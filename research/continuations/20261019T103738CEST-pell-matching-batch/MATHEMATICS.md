@@ -1,0 +1,3 @@
+# Exact Pell matching certificate batch
+
+This batch tests every unordered pair of distinct positive magnitudes in 149 prepared field lists, 85241 pairs in total. Validated residue masks certify that xy+1 is not an ordinary integer square and xy-1 is not d times an integer square. The two signs are handled separately and no opposite pair of a single magnitude is removed. Complete witness row lengths are part of the recursive Lean checker. The source uses the frozen-v4 enumeration range and unchanged lists. Structural Python checks are corroboration only. This batch is not the aggregate field coverage or full-ring exclusion theorem.
