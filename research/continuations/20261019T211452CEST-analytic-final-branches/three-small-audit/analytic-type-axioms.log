@@ -1,0 +1,46 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_fixed_V_parameters: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_fixed_V_growth: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_fixed_upper_and_overlap: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_fixed_M_window_contains: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_fixed_Q_window_contains: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.three_small_not_fixed_and_two_large: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.not_three_small: [propext, Classical.choice, Quot.sound]
+D1Bound5.three_small_fixed_V_parameters : ∀ (A B S T C D : ℝ),
+  1 ≤ A →
+    0 < B →
+      B < 3 →
+        0 < S →
+          S < 3 →
+            0 < T →
+              T < 85 →
+                10 ^ 40 ≤ C →
+                  5 * C ^ 2 < D →
+                    1000 ≤ C ∧ 4 * T ≤ C ∧ 4 * C ≤ D ∧ 32 * B * S * T / A ^ 3 ≤ C ^ 2 ∧ 101 * B ^ 2 * T ^ 4 / C < D
+D1Bound5.three_small_fixed_V_growth : ∀ (A T C D : ℝ),
+  1 ≤ A → 0 < T → T < 85 → 10 ^ 40 ≤ C → 2 / 5 * A ^ 2 * C ^ 5 / T ^ 2 < D → 10 ^ 38 * C ^ 3 < D
+D1Bound5.three_small_fixed_upper_and_overlap : ∀ (C D : ℝ),
+  10 ^ 40 ≤ C → D < 10 ^ 60 * C ^ 7 → D < C ^ 11 / 10 ^ 22 ∧ 10 ^ 40 * C ^ 5 ≤ C ^ 7 / 10 ^ 29
+D1Bound5.three_small_fixed_M_window_contains : ∀ (A B S C : ℝ),
+  1 ≤ A →
+    0 < B →
+      B < 3 →
+        0 < S →
+          S < 3 →
+            0 < C →
+              4 * (8 / 9 * 608 ^ 2) ^ 2 * B ^ 6 * S ^ 16 * C ^ 5 / (1 - 1 / 4000) ≤ 10 ^ 40 * C ^ 5 ∧
+                C ^ 11 / 10 ^ 22 ≤ A ^ 6 * C ^ 11 / (4 * (3920 / 81) ^ 2 * B ^ 4 * S ^ 10 * (1 + 1 / 4000))
+D1Bound5.three_small_fixed_Q_window_contains : ∀ (C : ℝ),
+  0 < C →
+    4 * 55 ^ 2 * 85 ^ 6 * C ^ 3 / (1 - 1 / 4000) ≤ 10 ^ 38 * C ^ 3 ∧
+      C ^ 7 / 10 ^ 29 ≤ C ^ 7 / (9 * 85 ^ 2 * (1 + 1 / 4000))
+@D1Bound5.IsD1Tuple.three_small_not_fixed_and_two_large : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) → ‖phi ↑(a 2)‖ < 3 → ‖phi ↑(a 3)‖ < 85 → 10 ^ 40 ≤ ‖phi ↑(a 4)‖ → False
+@D1Bound5.IsD1Tuple.not_three_small : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a → (Monotone fun i => ‖phi ↑(a i)‖) → ‖phi ↑(a 2)‖ < 3 → False

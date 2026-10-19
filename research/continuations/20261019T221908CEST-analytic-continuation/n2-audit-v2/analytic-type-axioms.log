@@ -1,0 +1,147 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.finite_eta_power_lower: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finite_eta_reciprocal_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2Residual: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2_residual_identity: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2_choose_abs: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2_Gamma_beta: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2_bennett_residual_norm_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2_residual_norm_lt_point: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2_residual_norm_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2RowForm_eq_root_sum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2RowForm_norm_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2RowForm_norm_lt_point: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteN2_inequalities: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteN2_closed_interval_excluded: [propext, Classical.choice, Quot.sound]
+D1Bound5.finite_eta_power_lower : ∀ (T e : ℝ), 1000 ≤ T → e ≤ 9 → 100 / 101 < (1 - 1 / T) ^ e
+D1Bound5.finite_eta_reciprocal_lt : ∀ (T e : ℝ), 1000 ≤ T → e ≤ 9 → 1 / (1 - 1 / T) ^ e < 101 / 100
+D1Bound5.finiteN2Residual : ℂ → ℂ → ℂ → Fin 3 → ℂ
+D1Bound5.finiteN2_residual_identity : ∀ (x y c : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          ∀ (i : Fin 3),
+            ∑ j,
+                D1Bound5.bennettTwoClearedEntry x y c 2 i j *
+                  (1 + D1Bound5.bennettTwoNodes x y j * (x * y * c)⁻¹) ^ (1 / 2) =
+              2 * D1Bound5.finiteN2RowFactor x y i * D1Bound5.finiteN2Residual x y c i
+D1Bound5.finiteN2_choose_abs : |Ring.choose (5 / 2) 6| = 5 / 1024
+D1Bound5.finiteN2_Gamma_beta : Real.Gamma (7 / 2) * Real.Gamma (7 / 2) / (Real.pi * Real.Gamma 7) = 5 / 1024
+D1Bound5.finiteN2_bennett_residual_norm_lt : ∀ (x y c : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          ‖x‖ ≤ ‖y‖ →
+            1000 ≤ ‖x‖ * ‖c‖ →
+              ∀ (i : Fin 3),
+                ‖∑ j,
+                      D1Bound5.bennettTwoClearedEntry x y c 2 i j *
+                        (1 + D1Bound5.bennettTwoNodes x y j * (x * y * c)⁻¹) ^ (1 / 2)‖ <
+                  101 / 1280 * ‖x - y‖ ^ 4 / (‖x‖ ^ 2 * ‖y‖ ^ 2 * ‖c‖ ^ 4)
+D1Bound5.finiteN2_residual_norm_lt_point : ∀ (x y c : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          ‖x‖ ≤ ‖y‖ →
+            1000 ≤ ‖x‖ * ‖c‖ →
+              ∀ (i : Fin 3),
+                ‖D1Bound5.finiteN2Residual x y c i‖ <
+                  101 / 2560 * max (‖x - y‖ ^ 4) (‖x‖ * ‖x - y‖ ^ 3) / (‖x‖ ^ 3 * ‖y‖ ^ 2 * ‖c‖ ^ 4)
+D1Bound5.finiteN2_residual_norm_lt : ∀ (x y c : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          ‖x‖ ≤ ‖y‖ →
+            1000 ≤ ‖x‖ * ‖c‖ →
+              ∀ (i : Fin 3), ‖D1Bound5.finiteN2Residual x y c i‖ < 5 / 4 * ‖y‖ ^ 2 / (‖x‖ ^ 3 * ‖c‖ ^ 4)
+D1Bound5.finiteN2RowForm_eq_root_sum : ∀ (x y c z sX sY : ℂ) (i : Fin 3),
+  D1Bound5.finiteN2RowForm x y c z sX sY i =
+    D1Bound5.finiteN2Constant x y c i * z +
+      ∑ j, ![D1Bound5.finiteN2Left x y c i, D1Bound5.finiteN2Right x y c i] j * ![sX, sY] j
+D1Bound5.finiteN2RowForm_norm_lt : ∀ (x y c z sX sY : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          z ≠ 0 →
+            ‖x‖ ≤ ‖y‖ →
+              1000 ≤ ‖x‖ * ‖c‖ →
+                (∀ (j : Fin 2),
+                    ‖(1 + 1 / (![x, y] j * c)) ^ (1 / 2) - ![sX, sY] j / (![x, y] j * z)‖ ≤
+                      101 / 100 * ‖c‖ / (‖![x, y] j‖ * ‖z‖ ^ 2)) →
+                  ∀ (i : Fin 3),
+                    ‖D1Bound5.finiteN2RowForm x y c z sX sY i‖ <
+                      243 * ‖y‖ ^ 4 * ‖c‖ ^ 3 / ‖z‖ + 5 / 4 * ‖y‖ ^ 2 * ‖z‖ / (‖x‖ ^ 3 * ‖c‖ ^ 4)
+D1Bound5.finiteN2RowForm_norm_lt_point : ∀ (x y c z sX sY : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          z ≠ 0 →
+            ‖x‖ ≤ ‖y‖ →
+              1000 ≤ ‖x‖ * ‖c‖ →
+                (∀ (j : Fin 2),
+                    ‖(1 + 1 / (![x, y] j * c)) ^ (1 / 2) - ![sX, sY] j / (![x, y] j * z)‖ ≤
+                      101 / 100 * ‖c‖ / (‖![x, y] j‖ * ‖z‖ ^ 2)) →
+                  ∀ (i : Fin 3),
+                    ‖D1Bound5.finiteN2RowForm x y c z sX sY i‖ <
+                      243 * ‖y‖ ^ 4 * ‖c‖ ^ 3 / ‖z‖ +
+                        101 / 2560 * max (‖x - y‖ ^ 4) (‖x‖ * ‖x - y‖ ^ 3) * ‖z‖ / (‖x‖ ^ 3 * ‖y‖ ^ 2 * ‖c‖ ^ 4)
+@D1Bound5.full_ring_finiteN2_inequalities : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {S : Finset (𝓞 K)},
+      D1Bound5.IsD1 S →
+        ∀ (x y c d : 𝓞 K),
+          x ∈ S →
+            y ∈ S →
+              c ∈ S →
+                d ∈ S →
+                  x ≠ y →
+                    x ≠ c →
+                      y ≠ c →
+                        x ≠ d →
+                          y ≠ d →
+                            c ≠ d →
+                              ‖phi ↑x‖ ≤ ‖phi ↑y‖ →
+                                1000 ≤ ‖phi ↑x‖ * ‖phi ↑c‖ →
+                                  200 * ‖phi ↑y‖ ≤ ‖phi ↑c‖ →
+                                    ‖phi ↑c‖ ≤ ‖phi ↑d‖ →
+                                      ∃ z,
+                                        z ^ 2 = c * d + 1 ∧
+                                          1 <
+                                              243 * ‖phi ↑y‖ ^ 4 * ‖phi ↑c‖ ^ 3 / ‖phi ↑z‖ +
+                                                5 / 4 * ‖phi ↑y‖ ^ 2 * ‖phi ↑z‖ / (‖phi ↑x‖ ^ 3 * ‖phi ↑c‖ ^ 4) ∧
+                                            1 <
+                                              243 * ‖phi ↑y‖ ^ 4 * ‖phi ↑c‖ ^ 3 / ‖phi ↑z‖ +
+                                                101 / 2560 *
+                                                      max (‖phi ↑x - phi ↑y‖ ^ 4) (‖phi ↑x‖ * ‖phi ↑x - phi ↑y‖ ^ 3) *
+                                                    ‖phi ↑z‖ /
+                                                  (‖phi ↑x‖ ^ 3 * ‖phi ↑y‖ ^ 2 * ‖phi ↑c‖ ^ 4)
+@D1Bound5.full_ring_finiteN2_closed_interval_excluded : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {S : Finset (𝓞 K)},
+      D1Bound5.IsD1 S →
+        ∀ (x y c d : 𝓞 K),
+          x ∈ S →
+            y ∈ S →
+              c ∈ S →
+                d ∈ S →
+                  x ≠ y →
+                    x ≠ c →
+                      y ≠ c →
+                        x ≠ d →
+                          y ≠ d →
+                            c ≠ d →
+                              ‖phi ↑x‖ ≤ ‖phi ↑y‖ →
+                                1000 ≤ ‖phi ↑x‖ * ‖phi ↑c‖ →
+                                  200 * ‖phi ↑y‖ ≤ ‖phi ↑c‖ →
+                                    ‖phi ↑c‖ ≤ ‖phi ↑d‖ →
+                                      4 * 243 ^ 2 * ‖phi ↑y‖ ^ 8 * ‖phi ↑c‖ ^ 5 / (1 - 1 / 4000) ≤ ‖phi ↑d‖ →
+                                        ‖phi ↑d‖ ≤
+                                            4 * ‖phi ↑x‖ ^ 6 * ‖phi ↑c‖ ^ 7 / (25 * ‖phi ↑y‖ ^ 4 * (1 + 1 / 4000)) →
+                                          False

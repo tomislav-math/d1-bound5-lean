@@ -1,0 +1,63 @@
+{
+  "utc": "2026-10-19T20:12:12.675935+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteHomogeneousTwo": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2Height": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteHomogeneousTwo"
+      ]
+    },
+    "FiniteN2BennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2RowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Height",
+        "FiniteHomogeneousTwo",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2FullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2RowBound",
+        "FiniteN2Height",
+        "FiniteHomogeneousTwo",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2FullRing",
+        "FiniteN2RowBound",
+        "FiniteN2Height",
+        "FiniteHomogeneousTwo",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    }
+  }
+}

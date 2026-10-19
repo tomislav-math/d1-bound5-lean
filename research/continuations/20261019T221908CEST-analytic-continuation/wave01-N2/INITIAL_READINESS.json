@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-19T20:20:19.119426+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteN2BennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2RowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2FullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2RowBound",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2FullRing",
+        "FiniteN2RowBound",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    }
+  }
+}

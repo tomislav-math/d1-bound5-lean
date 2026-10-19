@@ -1,0 +1,80 @@
+[
+  {
+    "module": "CoherentRetainedTuple",
+    "name": "D1Bound5.IsD1Tuple.all_large_retained_growth",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 5 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016) :\n    400*(\u2016phi (a 0 : K)\u2016^7*\u2016phi (a 1 : K)\u2016^5*\u2016phi (a 2 : K)\u2016^3) <\n      \u2016phi (a 4 : K)\u2016",
+    "explicit_arguments": "hK phi a ha hmon hA"
+  },
+  {
+    "module": "RetainedFourScalar",
+    "name": "D1Bound5.retained_four_first_term_lt",
+    "original_signature": "\n    (A B S T C D Z : \u211d) (hA : 3 \u2264 A) (hB : 3 \u2264 B)\n    (hS : 0 < S) (hT : 0 < T) (hZ : 0 < Z)\n    (hC : 16*B*S*T < C)\n    (hD : A^2*C^5/S^2 < D)\n    (hroot : (3999/4000 : \u211d)*C*D < Z^2) :\n    13*B*S^2*T^3/Z < (1/100 : \u211d)",
+    "explicit_arguments": "A B S T C D Z hA hB hS hT hZ hC hD hroot"
+  },
+  {
+    "module": "RetainedFourScalar",
+    "name": "D1Bound5.retained_four_start_scalar_gap",
+    "original_signature": "\n    (A B S T C D Z L : \u211d) (hA : 3 \u2264 A) (hB : 3 \u2264 B)\n    (hS : 0 < S) (hT : 0 < T) (hSC : S \u2264 C) (hTC : T \u2264 C)\n    (hC1000 : 1000 < C) (hZ : 0 < Z)\n    (hC : 16*B*S*T < C)\n    (hD : A^2*C^5/S^2 < D)\n    (hrootlo : (3999/4000 : \u211d)*C*D < Z^2)\n    (hroothi : Z^2 \u2264 C*D+1)\n    (hL : 1 \u2264 L)\n    (hupper : L < 13*B*S^2*T^3/Z + (49/50 : \u211d)*S*T^2*Z/(A*C^4)) :\n    A^2*C^7/(S^2*T^4) < D",
+    "explicit_arguments": "A B S T C D Z L hA hB hS hT hSC hTC hC1000 hZ hC hD hrootlo hroothi hL hupper"
+  },
+  {
+    "module": "CoherentRetainedBasicGap",
+    "name": "D1Bound5.coherent_retained_h48_coefficient_gt_one",
+    "original_signature": "\n    (A B R : \u211d) (hA : 3 \u2264 A) (hB : 3 \u2264 B) (hR : 0 < R) (hR8 : R \u2264 8) :\n    1 < ((9999/10000 : \u211d)*(200/19)^2)*\n      (1/R-(51051/400000 : \u211d)/(A^2*B^2))^2",
+    "explicit_arguments": "A B R hA hB hR hR8"
+  },
+  {
+    "module": "CoherentRetainedBasicGap",
+    "name": "D1Bound5.full_ring_retained_three_basic_gap",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {Tup : Finset (\ud835\udcde K)} (hTup : IsD1 Tup)\n    (a : Fin 5 \u2192 \ud835\udcde K) (hinj : Function.Injective a) (hmem : \u2200 i, a i \u2208 Tup)\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016)\n    (hAB : \u2016phi (a 0 : K)\u2016 \u2264 \u2016phi (a 1 : K)\u2016)\n    (hBS : \u2016phi (a 1 : K)\u2016 \u2264 \u2016phi (a 2 : K)\u2016)\n    (hfrontier : 2*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016 < \u2016phi (a 3 : K)\u2016)\n    (hproduct : 3*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016 < \u2016phi (a 4 : K)\u2016) :\n    \u2016phi (a 0 : K)\u2016^2*\u2016phi (a 3 : K)\u2016^5/\u2016phi (a 2 : K)\u2016^2 <\n      \u2016phi (a 4 : K)\u2016",
+    "explicit_arguments": "hK phi hTup a hinj hmem hA hAB hBS hfrontier hproduct"
+  },
+  {
+    "module": "CoherentRetainedBasicGap",
+    "name": "D1Bound5.IsD1Tuple.all_large_retained_power_gap",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 5 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016) :\n    \u2016phi (a 0 : K)\u2016^2*\u2016phi (a 3 : K)\u2016^5/\u2016phi (a 2 : K)\u2016^2 <\n      \u2016phi (a 4 : K)\u2016",
+    "explicit_arguments": "hK phi a ha hmon hA"
+  },
+  {
+    "module": "CoherentRetainedFourSizes",
+    "name": "D1Bound5.coherent_retained_first_terminal_large",
+    "original_signature": "\n    (A B S T C : \u211d) (hA : 3 \u2264 A) (hB : 3 \u2264 B) (hS : 0 < S)\n    (hBS : B \u2264 S) (hST : S \u2264 T)\n    (hfront : 2*A*B*S < T) (hgap : A^2*T^5/S^2 < C) :\n    16*B*S*T < C",
+    "explicit_arguments": "A B S T C hA hB hS hBS hST hfront hgap"
+  },
+  {
+    "module": "CoherentRetainedFourSizes",
+    "name": "D1Bound5.coherent_retained_four_terminal_sizes",
+    "original_signature": "\n    (A B S T C D : \u211d) (hA : 3 \u2264 A) (hB : 3 \u2264 B)\n    (hS : 0 < S) (hT : 0 < T) (hST : S \u2264 T) (hSC : S \u2264 C)\n    (hC1000 : 1000 < C) (hC : 16*B*S*T < C)\n    (hD : A^2*C^5/S^2 < D) :\n    1000*C < D \u2227 17*A*B*S*T*C^3 < D",
+    "explicit_arguments": "A B S T C D hA hB hS hT hST hSC hC1000 hC hD"
+  },
+  {
+    "module": "CoherentRetainedStart",
+    "name": "D1Bound5.IsD1Tuple.all_large_retained_start",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016) :\n    let A := \u2016phi (a 0 : K)\u2016\n    let B := \u2016phi (a 1 : K)\u2016\n    let S := \u2016phi (a 2 : K)\u2016\n    let T := \u2016phi (a 3 : K)\u2016\n    let C := \u2016phi (a 4 : K)\u2016\n    let D := \u2016phi (a 5 : K)\u2016\n    A^2*T^5/S^2 < C \u2227 A^2*C^5/S^2 < D \u2227 A^2*C^7/(S^2*T^4) < D \u2227\n      1000 < C \u2227 16*B*S*T < C \u2227 1000*C < D",
+    "explicit_arguments": "hK phi a ha hmon hA"
+  },
+  {
+    "module": "OrdinaryClosedIntervals",
+    "name": "D1Bound5.IsD1Tuple.ordinary_closed_interval_excluded",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hAB : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hAC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 4*\u2016phi (t 1 : K)\u2016 < \u2016phi (t 2 : K)\u2016)\n    (hCD : \u2016phi (t 2 : K)\u2016 \u2264 \u2016phi (t 3 : K)\u2016)\n    (k : \u2115) (hk : 1 \u2264 k)\n    (hleft : ordinaryWindowLower \u2016phi (t 1 : K)\u2016 \u2016phi (t 2 : K)\u2016 k \u2264\n      \u2016phi (t 3 : K)\u2016)\n    (hright : \u2016phi (t 3 : K)\u2016 \u2264\n      ordinaryWindowUpper \u2016phi (t 0 : K)\u2016 \u2016phi (t 1 : K)\u2016 \u2016phi (t 2 : K)\u2016 k) :\n    False",
+    "explicit_arguments": "hK phi t ht hAB hAC hC hCD k hk hleft hright"
+  },
+  {
+    "module": "OrdinaryClosedIntervals",
+    "name": "D1Bound5.ordinaryWindowLower_succ",
+    "original_signature": " (B C : \u211d) (k : \u2115) :\n    ordinaryWindowLower B C (k+1) = ordinaryWindowLower B C k*(42*B^3*C)^2",
+    "explicit_arguments": "B C k"
+  },
+  {
+    "module": "OrdinaryClosedIntervals",
+    "name": "D1Bound5.ordinaryWindowUpper_succ",
+    "original_signature": " (A B C : \u211d) (k : \u2115) :\n    ordinaryWindowUpper A B C (k+1) =\n      ordinaryWindowUpper A B C k*(2*A*C^2/(5*B))^2",
+    "explicit_arguments": "A B C k"
+  },
+  {
+    "module": "OrdinaryClosedIntervals",
+    "name": "D1Bound5.IsD1Tuple.ordinary_tail_incompatible",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hAB : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hAC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 4*\u2016phi (t 1 : K)\u2016 < \u2016phi (t 2 : K)\u2016)\n    (hCD : \u2016phi (t 2 : K)\u2016 \u2264 \u2016phi (t 3 : K)\u2016)\n    (hrate : 42*\u2016phi (t 1 : K)\u2016^3*\u2016phi (t 2 : K)\u2016 <\n      2*\u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016^2/(5*\u2016phi (t 1 : K)\u2016))\n    (hoverlap : ordinaryWindowLower \u2016phi (t 1 : K)\u2016 \u2016phi (t 2 : K)\u2016 6 \u2264\n      ordinaryWindowUpper \u2016phi (t 0 : K)\u2016 \u2016phi (t 1 : K)\u2016 \u2016phi (t 2 : K)\u2016 5)\n    (hstart : ordinaryWindowLower \u2016phi (t 1 : K)\u2016 \u2016phi (t 2 : K)\u2016 5 \u2264\n      \u2016phi (t 3 : K)\u2016) : False",
+    "explicit_arguments": "hK phi t ht hAB hAC hC hCD hrate hoverlap hstart"
+  }
+]

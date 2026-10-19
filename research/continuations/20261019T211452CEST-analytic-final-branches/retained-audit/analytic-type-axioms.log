@@ -1,0 +1,127 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.all_large_retained_growth: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.retained_four_first_term_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.retained_four_start_scalar_gap: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.coherent_retained_h48_coefficient_gt_one: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_retained_three_basic_gap: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.all_large_retained_power_gap: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.coherent_retained_first_terminal_large: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.coherent_retained_four_terminal_sizes: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.all_large_retained_start: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.ordinaryWindowLower: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.ordinaryWindowUpper: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.ordinary_closed_interval_excluded: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.ordinaryWindowLower_succ: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.ordinaryWindowUpper_succ: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.ordinary_tail_incompatible: [propext, Classical.choice, Quot.sound]
+@D1Bound5.IsD1Tuple.all_large_retained_growth : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → 𝓞 K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          3 ≤ ‖phi ↑(a 0)‖ → 400 * (‖phi ↑(a 0)‖ ^ 7 * ‖phi ↑(a 1)‖ ^ 5 * ‖phi ↑(a 2)‖ ^ 3) < ‖phi ↑(a 4)‖
+D1Bound5.retained_four_first_term_lt : ∀ (A B S T C D Z : ℝ),
+  3 ≤ A →
+    3 ≤ B →
+      0 < S →
+        0 < T →
+          0 < Z →
+            16 * B * S * T < C →
+              A ^ 2 * C ^ 5 / S ^ 2 < D → 3999 / 4000 * C * D < Z ^ 2 → 13 * B * S ^ 2 * T ^ 3 / Z < 1 / 100
+D1Bound5.retained_four_start_scalar_gap : ∀ (A B S T C D Z L : ℝ),
+  3 ≤ A →
+    3 ≤ B →
+      0 < S →
+        0 < T →
+          S ≤ C →
+            T ≤ C →
+              1000 < C →
+                0 < Z →
+                  16 * B * S * T < C →
+                    A ^ 2 * C ^ 5 / S ^ 2 < D →
+                      3999 / 4000 * C * D < Z ^ 2 →
+                        Z ^ 2 ≤ C * D + 1 →
+                          1 ≤ L →
+                            L < 13 * B * S ^ 2 * T ^ 3 / Z + 49 / 50 * S * T ^ 2 * Z / (A * C ^ 4) →
+                              A ^ 2 * C ^ 7 / (S ^ 2 * T ^ 4) < D
+D1Bound5.coherent_retained_h48_coefficient_gt_one : ∀ (A B R : ℝ),
+  3 ≤ A → 3 ≤ B → 0 < R → R ≤ 8 → 1 < 9999 / 10000 * (200 / 19) ^ 2 * (1 / R - 51051 / 400000 / (A ^ 2 * B ^ 2)) ^ 2
+@D1Bound5.full_ring_retained_three_basic_gap : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {Tup : Finset (𝓞 K)},
+      D1Bound5.IsD1 Tup →
+        ∀ (a : Fin 5 → 𝓞 K),
+          Function.Injective a →
+            (∀ (i : Fin 5), a i ∈ Tup) →
+              3 ≤ ‖phi ↑(a 0)‖ →
+                ‖phi ↑(a 0)‖ ≤ ‖phi ↑(a 1)‖ →
+                  ‖phi ↑(a 1)‖ ≤ ‖phi ↑(a 2)‖ →
+                    2 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ < ‖phi ↑(a 3)‖ →
+                      3 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ * ‖phi ↑(a 3)‖ < ‖phi ↑(a 4)‖ →
+                        ‖phi ↑(a 0)‖ ^ 2 * ‖phi ↑(a 3)‖ ^ 5 / ‖phi ↑(a 2)‖ ^ 2 < ‖phi ↑(a 4)‖
+@D1Bound5.IsD1Tuple.all_large_retained_power_gap : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → 𝓞 K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          3 ≤ ‖phi ↑(a 0)‖ → ‖phi ↑(a 0)‖ ^ 2 * ‖phi ↑(a 3)‖ ^ 5 / ‖phi ↑(a 2)‖ ^ 2 < ‖phi ↑(a 4)‖
+D1Bound5.coherent_retained_first_terminal_large : ∀ (A B S T C : ℝ),
+  3 ≤ A → 3 ≤ B → 0 < S → B ≤ S → S ≤ T → 2 * A * B * S < T → A ^ 2 * T ^ 5 / S ^ 2 < C → 16 * B * S * T < C
+D1Bound5.coherent_retained_four_terminal_sizes : ∀ (A B S T C D : ℝ),
+  3 ≤ A →
+    3 ≤ B →
+      0 < S →
+        0 < T →
+          S ≤ T →
+            S ≤ C →
+              1000 < C → 16 * B * S * T < C → A ^ 2 * C ^ 5 / S ^ 2 < D → 1000 * C < D ∧ 17 * A * B * S * T * C ^ 3 < D
+@D1Bound5.IsD1Tuple.all_large_retained_start : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          3 ≤ ‖phi ↑(a 0)‖ →
+            have A := ‖phi ↑(a 0)‖;
+            have B := ‖phi ↑(a 1)‖;
+            have S := ‖phi ↑(a 2)‖;
+            have T := ‖phi ↑(a 3)‖;
+            have C := ‖phi ↑(a 4)‖;
+            have D := ‖phi ↑(a 5)‖;
+            A ^ 2 * T ^ 5 / S ^ 2 < C ∧
+              A ^ 2 * C ^ 5 / S ^ 2 < D ∧
+                A ^ 2 * C ^ 7 / (S ^ 2 * T ^ 4) < D ∧ 1000 < C ∧ 16 * B * S * T < C ∧ 1000 * C < D
+D1Bound5.ordinaryWindowLower : ℝ → ℝ → ℕ → ℝ
+D1Bound5.ordinaryWindowUpper : ℝ → ℝ → ℝ → ℕ → ℝ
+@D1Bound5.IsD1Tuple.ordinary_closed_interval_excluded : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (t : Fin 4 → 𝓞 K),
+      D1Bound5.IsD1Tuple t →
+        ‖phi ↑(t 0)‖ ≤ ‖phi ↑(t 1)‖ →
+          1000 ≤ ‖phi ↑(t 0)‖ * ‖phi ↑(t 2)‖ →
+            4 * ‖phi ↑(t 1)‖ < ‖phi ↑(t 2)‖ →
+              ‖phi ↑(t 2)‖ ≤ ‖phi ↑(t 3)‖ →
+                ∀ (k : ℕ),
+                  1 ≤ k →
+                    D1Bound5.ordinaryWindowLower ‖phi ↑(t 1)‖ ‖phi ↑(t 2)‖ k ≤ ‖phi ↑(t 3)‖ →
+                      ‖phi ↑(t 3)‖ ≤ D1Bound5.ordinaryWindowUpper ‖phi ↑(t 0)‖ ‖phi ↑(t 1)‖ ‖phi ↑(t 2)‖ k → False
+D1Bound5.ordinaryWindowLower_succ : ∀ (B C : ℝ) (k : ℕ),
+  D1Bound5.ordinaryWindowLower B C (k + 1) = D1Bound5.ordinaryWindowLower B C k * (42 * B ^ 3 * C) ^ 2
+D1Bound5.ordinaryWindowUpper_succ : ∀ (A B C : ℝ) (k : ℕ),
+  D1Bound5.ordinaryWindowUpper A B C (k + 1) = D1Bound5.ordinaryWindowUpper A B C k * (2 * A * C ^ 2 / (5 * B)) ^ 2
+@D1Bound5.IsD1Tuple.ordinary_tail_incompatible : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (t : Fin 4 → 𝓞 K),
+      D1Bound5.IsD1Tuple t →
+        ‖phi ↑(t 0)‖ ≤ ‖phi ↑(t 1)‖ →
+          1000 ≤ ‖phi ↑(t 0)‖ * ‖phi ↑(t 2)‖ →
+            4 * ‖phi ↑(t 1)‖ < ‖phi ↑(t 2)‖ →
+              ‖phi ↑(t 2)‖ ≤ ‖phi ↑(t 3)‖ →
+                42 * ‖phi ↑(t 1)‖ ^ 3 * ‖phi ↑(t 2)‖ < 2 * ‖phi ↑(t 0)‖ * ‖phi ↑(t 2)‖ ^ 2 / (5 * ‖phi ↑(t 1)‖) →
+                  D1Bound5.ordinaryWindowLower ‖phi ↑(t 1)‖ ‖phi ↑(t 2)‖ 6 ≤
+                      D1Bound5.ordinaryWindowUpper ‖phi ↑(t 0)‖ ‖phi ↑(t 1)‖ ‖phi ↑(t 2)‖ 5 →
+                    D1Bound5.ordinaryWindowLower ‖phi ↑(t 1)‖ ‖phi ↑(t 2)‖ 5 ≤ ‖phi ↑(t 3)‖ → False

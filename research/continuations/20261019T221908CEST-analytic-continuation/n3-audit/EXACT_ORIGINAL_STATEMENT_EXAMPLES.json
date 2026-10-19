@@ -1,0 +1,86 @@
+[
+  {
+    "module": "FiniteN3BennettIdentity",
+    "name": "D1Bound5.finiteN3_choose_two",
+    "original_signature": " (r : F) : Ring.choose r 2 = r*(r-1)/2",
+    "explicit_arguments": "r"
+  },
+  {
+    "module": "FiniteN3BennettIdentity",
+    "name": "D1Bound5.finiteN3_choose_three",
+    "original_signature": " (r : F) : Ring.choose r 3 = r*(r-1)*(r-2)/6",
+    "explicit_arguments": "r"
+  },
+  {
+    "module": "FiniteN3BennettIdentity",
+    "name": "D1Bound5.finiteN3_bennett_identity",
+    "original_signature": " (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i j : Fin 3) :\n    bennettTwoClearedEntry x y c 3 i j =\n      4 * finiteN3RowFactor x y i * finiteN3Matrix x y c i j",
+    "explicit_arguments": "x y c hx hy hxy i j"
+  },
+  {
+    "module": "FiniteN3Residual",
+    "name": "D1Bound5.finiteN3_beta",
+    "original_signature": " :\n    Real.Gamma (9/2 : \u211d)*Real.Gamma (11/2 : \u211d)/\n      (Real.pi*Real.Gamma (10 : \u211d)) = 35/65536",
+    "explicit_arguments": ""
+  },
+  {
+    "module": "FiniteN3Residual",
+    "name": "D1Bound5.finiteN3_residual_identity",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i : Fin 3) :\n    4*finiteN3RowFactor x y i*finiteN3Residual x y c i =\n      \u2211 j, bennettTwoClearedEntry x y c 3 i j *\n        (1+bennettTwoNodes x y j*(x*y*c)\u207b\u00b9)^(1/2 : \u2102)",
+    "explicit_arguments": "x y c hx hy hxy i"
+  },
+  {
+    "module": "FiniteN3Residual",
+    "name": "D1Bound5.finiteN3RowFactor_ne_zero",
+    "original_signature": " (x y : \u2102) (hx : x \u2260 0) (hy : y \u2260 0)\n    (hxy : x \u2260 y) (i : Fin 3) : finiteN3RowFactor x y i \u2260 0",
+    "explicit_arguments": "x y hx hy hxy i"
+  },
+  {
+    "module": "FiniteN3Residual",
+    "name": "D1Bound5.finiteN3_residual_norm_lt_point",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteN3Residual x y c i\u2016 <\n      (101/100 : \u211d)*(35/65536)*(4*\u2016x-y\u2016^2/(\u2016x\u2016*\u2016y\u2016*\u2016c\u2016^2))^3 /\n        (4*\u2016finiteN3RowFactor x y i\u2016)",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC i"
+  },
+  {
+    "module": "FiniteN3Residual",
+    "name": "D1Bound5.finiteN3_residual_norm_lt",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteN3Residual x y c i\u2016 <\n      (35/32 : \u211d)*\u2016y\u2016^3/(\u2016x\u2016^4*\u2016c\u2016^6)",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC i"
+  },
+  {
+    "module": "FiniteN3Approximation",
+    "name": "D1Bound5.finiteN3Residual_explicit",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (i : Fin 3) :\n    finiteN3Residual x y c i = finiteN3Constant x y c i +\n      x*finiteN3Left x y c i*(1+1/(x*c))^(1/2 : \u2102) +\n      y*finiteN3Right x y c i*(1+1/(y*c))^(1/2 : \u2102)",
+    "explicit_arguments": "x y c hx hy hc i"
+  },
+  {
+    "module": "FiniteN3Approximation",
+    "name": "D1Bound5.finiteN3RowForm_explicit",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c z sX sY : R) (i : Fin 3) :\n    finiteN3RowForm x y c z sX sY i =\n      finiteN3Constant x y c i*z+finiteN3Left x y c i*sX+\n        finiteN3Right x y c i*sY",
+    "explicit_arguments": "x y c z sX sY i"
+  },
+  {
+    "module": "FiniteN3Approximation",
+    "name": "D1Bound5.finiteN3RowForm_norm_lt",
+    "original_signature": " (x y c z sX sY : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hz : z \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016)\n    (herrorX : \u2016(1+1/(x*c))^(1/2 : \u2102)-sX/(x*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016x\u2016*\u2016z\u2016^2))\n    (herrorY : \u2016(1+1/(y*c))^(1/2 : \u2102)-sY/(y*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016y\u2016*\u2016z\u2016^2)) (i : Fin 3) :\n    \u2016finiteN3RowForm x y c z sX sY i\u2016 <\n      4143*\u2016y\u2016^7*\u2016c\u2016^4/\u2016z\u2016 + (35/32 : \u211d)*\u2016y\u2016^3*\u2016z\u2016/(\u2016x\u2016^4*\u2016c\u2016^6)",
+    "explicit_arguments": "x y c z sX sY hx hy hc hz hxy hXY hXC herrorX herrorY i"
+  },
+  {
+    "module": "FiniteN3Approximation",
+    "name": "D1Bound5.full_ring_finiteN3_integer",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c d rX rY vX vY z : \ud835\udcde K)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hd : d \u2260 0) (hxy : x \u2260 y)\n    (hrX : rX^2=x*c+1) (hrY : rY^2=y*c+1)\n    (hvX : vX^2=x*d+1) (hvY : vY^2=y*d+1) (hzsq : z^2=c*d+1)\n    (hXY : \u2016phi (x : K)\u2016 \u2264 \u2016phi (y : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (x : K)\u2016*\u2016phi (c : K)\u2016)\n    (hC : 200*\u2016phi (y : K)\u2016 \u2264 \u2016phi (c : K)\u2016) :\n    1 < 4143*\u2016phi (y : K)\u2016^7*\u2016phi (c : K)\u2016^4/\u2016phi (z : K)\u2016 +\n      (35/32 : \u211d)*\u2016phi (y : K)\u2016^3*\u2016phi (z : K)\u2016/\n        (\u2016phi (x : K)\u2016^4*\u2016phi (c : K)\u2016^6)",
+    "explicit_arguments": "hK phi x y c d rX rY vX vY z hx hy hc hd hxy hrX hrY hvX hvY hzsq hXY hXC hC"
+  },
+  {
+    "module": "FiniteN3Interval",
+    "name": "D1Bound5.IsD1Tuple.finiteN3_inequality",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hXY : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 200*\u2016phi (t 1 : K)\u2016 \u2264 \u2016phi (t 2 : K)\u2016) :\n    \u2203 z : \ud835\udcde K, z^2=t 2*t 3+1 \u2227\n      1 < 4143*\u2016phi (t 1 : K)\u2016^7*\u2016phi (t 2 : K)\u2016^4/\u2016phi (z : K)\u2016 +\n        (35/32 : \u211d)*\u2016phi (t 1 : K)\u2016^3*\u2016phi (z : K)\u2016/\n          (\u2016phi (t 0 : K)\u2016^4*\u2016phi (t 2 : K)\u2016^6)",
+    "explicit_arguments": "hK phi t ht hXY hXC hC"
+  },
+  {
+    "module": "FiniteN3Interval",
+    "name": "D1Bound5.IsD1Tuple.finiteN3_closed_interval_excluded",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hXY : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 200*\u2016phi (t 1 : K)\u2016 \u2264 \u2016phi (t 2 : K)\u2016)\n    (hCD : \u2016phi (t 2 : K)\u2016 \u2264 \u2016phi (t 3 : K)\u2016)\n    (hleft : 4*4143^2*\u2016phi (t 1 : K)\u2016^14*\u2016phi (t 2 : K)\u2016^7 /\n      (1-1/4000 : \u211d) \u2264 \u2016phi (t 3 : K)\u2016)\n    (hright : \u2016phi (t 3 : K)\u2016 \u2264\n      256*\u2016phi (t 0 : K)\u2016^8*\u2016phi (t 2 : K)\u2016^11 /\n        (1225*\u2016phi (t 1 : K)\u2016^6*(1+1/4000 : \u211d))) : False",
+    "explicit_arguments": "hK phi t ht hXY hXC hC hCD hleft hright"
+  }
+]

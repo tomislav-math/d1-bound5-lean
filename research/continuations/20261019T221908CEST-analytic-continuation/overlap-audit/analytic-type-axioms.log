@@ -1,0 +1,43 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowQ: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowN2: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowP: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowA3: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowM: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowN3: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowA4: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.allLargeWindowA5: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.window_upper_lt_of_excluded: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.window_overlap_of_ratio: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.all_large_window_overlaps: [propext, Classical.choice, Quot.sound]
+D1Bound5.allLargeWindowQ : ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowN2 : ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowP : ℝ → ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowA3 : ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowM : ℝ → ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowN3 : ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowA4 : ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.allLargeWindowA5 : ℝ → ℝ → ℝ → ℝ × ℝ
+D1Bound5.window_upper_lt_of_excluded : ∀ (w : ℝ × ℝ) (D : ℝ), ¬(w.1 ≤ D ∧ D ≤ w.2) → w.1 ≤ D → w.2 < D
+D1Bound5.window_overlap_of_ratio : ∀ (l u q : ℝ), 0 < l → u / l = q → 1 < q → l < u
+D1Bound5.all_large_window_overlaps : ∀ (A B S T C : ℝ),
+  3 ≤ A →
+    A ≤ B →
+      B ≤ S →
+        2 * B * S < T →
+          A ^ 2 * T ^ 5 / S ^ 2 < C →
+            400 * (A ^ 7 * B ^ 5 * S ^ 3) < C →
+              (D1Bound5.allLargeWindowQ A T C).1 < A ^ 2 * C ^ 7 / (S ^ 2 * T ^ 4) ∧
+                (D1Bound5.allLargeWindowN2 A B C).1 < (D1Bound5.allLargeWindowQ A T C).2 ∧
+                  (D1Bound5.allLargeWindowP A B S C).1 < (D1Bound5.allLargeWindowN2 A B C).2 ∧
+                    (B ^ 2 ≤ S → (D1Bound5.allLargeWindowN3 A B C).1 < (D1Bound5.allLargeWindowP A B S C).2) ∧
+                      (D1Bound5.allLargeWindowA3 A B C).1 < (D1Bound5.allLargeWindowP A B S C).2 ∧
+                        (S ≤ B ^ 2 → (D1Bound5.allLargeWindowM A B S C).1 < (D1Bound5.allLargeWindowA3 A B C).2) ∧
+                          (D1Bound5.allLargeWindowN3 A B C).1 < (D1Bound5.allLargeWindowM A B S C).2 ∧
+                            (B ^ 3 ≤ S → (D1Bound5.allLargeWindowA4 A B C).1 < (D1Bound5.allLargeWindowN3 A B C).2) ∧
+                              (S ≤ B ^ 3 → (D1Bound5.allLargeWindowN3 B S C).1 < (D1Bound5.allLargeWindowN3 A B C).2) ∧
+                                (D1Bound5.allLargeWindowA4 A B C).1 < (D1Bound5.allLargeWindowN3 B S C).2 ∧
+                                  D1Bound5.ordinaryWindowLower B C 4 < (D1Bound5.allLargeWindowA4 A B C).2 ∧
+                                    (D1Bound5.allLargeWindowA5 A B C).1 < D1Bound5.ordinaryWindowUpper A B C 4 ∧
+                                      D1Bound5.ordinaryWindowLower B C 5 < (D1Bound5.allLargeWindowA5 A B C).2 ∧
+                                        D1Bound5.ordinaryWindowLower B C 6 < D1Bound5.ordinaryWindowUpper A B C 5 ∧
+                                          42 * B ^ 3 * C < 2 * A * C ^ 2 / (5 * B)

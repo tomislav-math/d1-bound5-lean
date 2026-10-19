@@ -1,0 +1,447 @@
+⚠ [1694/1735] Replayed D1Bound5.FiniteN2Matrix
+warning: D1Bound5/FiniteN2Matrix.lean:64:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Matrix.lean:70:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1722/1735] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1723/1735] Replayed D1Bound5.BennettTwoDenominatorClearing
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:21:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:49:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:78:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1730/1735] Replayed D1Bound5.BennettBinomialIntegrality
+warning: D1Bound5/BennettBinomialIntegrality.lean:52:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1734/1735] Replayed D1Bound5.BennettTwoIntegralEntries
+warning: D1Bound5/BennettTwoIntegralEntries.lean:14:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_zero`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:15:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_one`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:16:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_two`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:151:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [1735/1735] Building D1Bound5.FiniteN2BennettIdentity (36s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteN2BennettIdentity.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN2BennettIdentity.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN2BennettIdentity.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN2BennettIdentity.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN2BennettIdentity.setup.json --json
+info: D1Bound5/FiniteN2BennettIdentity.lean:54:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/FiniteN2BennettIdentity.lean:54:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/FiniteN2BennettIdentity.lean:54:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/FiniteN2BennettIdentity.lean:54:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: D1Bound5/FiniteN2BennettIdentity.lean:54:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:25:64: unsolved goals
+case inl.inr.inr
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hfin01 : 0 ≠ 1
+hfin02 : 0 ≠ 2
+hfin10 : 1 ≠ 0
+hfin12 : 1 ≠ 2
+hfin20 : 2 ≠ 0
+hfin21 : 2 ≠ 1
+hanti0 : Finset.antidiagonal 0 = {(0, 0)}
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -(y ^ 2 * x * 80) + y ^ 3 * 16 - y ^ 3 * c * x * 240 + y ^ 4 * c * 112 - y ^ 4 * c ^ 2 * x * 160 +
+      y ^ 5 * c ^ 2 * 96 =
+    ![-(y * c * x ^ 3 * 80) - y * c ^ 2 * x ^ 4 * 40 - y * x ^ 2 * 45 + y ^ 2 * x * 45 - y ^ 3 * 15 +
+                          y ^ 3 * c * x * 80 -
+                        y ^ 4 * c * 40 +
+                      y ^ 4 * c ^ 2 * x * 40 -
+                    y ^ 5 * c ^ 2 * 24 +
+                  c * x ^ 4 * 40 +
+                c ^ 2 * x ^ 5 * 24 +
+              x ^ 3 * 15,
+            y * c * x ^ 2 * 60 + y * c ^ 2 * x ^ 3 * 40 + y * x * 20 - c * x ^ 3 * 28 - c ^ 2 * x ^ 4 * 24 - x ^ 2 * 4,
+            -(y * x * 20) + y ^ 2 * 4 - y ^ 2 * c * x * 60 + y ^ 3 * c * 28 - y ^ 3 * c ^ 2 * x * 40 +
+              y ^ 4 * c ^ 2 * 24]
+          2 *
+        ![1, x, y] 2 *
+      4
+
+case inr.inl.inr.inr
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hfin01 : 0 ≠ 1
+hfin02 : 0 ≠ 2
+hfin10 : 1 ≠ 0
+hfin12 : 1 ≠ 2
+hfin20 : 2 ≠ 0
+hfin21 : 2 ≠ 1
+hanti0 : Finset.antidiagonal 0 = {(0, 0)}
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -(y ^ 2 * x * 80) - y ^ 3 * 16 - y ^ 3 * c * x * 240 + y ^ 4 * c * 48 - y ^ 4 * c ^ 2 * x * 160 + y ^ 5 * c ^ 2 * 64 =
+    ![y * c * x ^ 3 * 80 + y * c ^ 2 * x ^ 4 * 80 - y ^ 2 * c * x ^ 2 * 120 - y ^ 2 * c ^ 2 * x ^ 3 * 80 +
+                        y ^ 3 * c * x * 80 -
+                      y ^ 4 * c * 20 +
+                    y ^ 4 * c ^ 2 * x * 40 -
+                  y ^ 5 * c ^ 2 * 16 -
+                c * x ^ 4 * 20 -
+              c ^ 2 * x ^ 5 * 24,
+            -(y * c * x ^ 2 * 40) - y * c ^ 2 * x ^ 3 * 80 + y * x * 10 + y ^ 2 * 15 + y ^ 2 * c * x * 80 +
+                    y ^ 2 * c ^ 2 * x ^ 2 * 80 +
+                  c * x ^ 3 * 8 +
+                c ^ 2 * x ^ 4 * 24 -
+              x ^ 2,
+            -(y * x * 20) - y ^ 2 * 4 - y ^ 2 * c * x * 60 + y ^ 3 * c * 12 - y ^ 3 * c ^ 2 * x * 40 +
+              y ^ 4 * c ^ 2 * 16]
+          2 *
+        ![1, x, y] 2 *
+      4
+
+case inr.inr.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hfin01 : 0 ≠ 1
+hfin02 : 0 ≠ 2
+hfin10 : 1 ≠ 0
+hfin12 : 1 ≠ 2
+hfin20 : 2 ≠ 0
+hfin21 : 2 ≠ 1
+hanti0 : Finset.antidiagonal 0 = {(0, 0)}
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -(y * x ^ 4 * c * 80) - y * x ^ 5 * c ^ 2 * 64 + y ^ 2 * x ^ 3 * c * 320 + y ^ 2 * x ^ 4 * c ^ 2 * 160 -
+                y ^ 3 * x ^ 2 * c * 480 +
+              y ^ 4 * x * c * 320 -
+            y ^ 4 * x ^ 2 * c ^ 2 * 320 +
+          y ^ 5 * x * c ^ 2 * 320 -
+        y ^ 5 * c * 80 -
+      y ^ 6 * c ^ 2 * 96 =
+    ![-y + x, x, y] 2 *
+        ![-(y * x ^ 2 * 45) - y * x ^ 3 * c * 80 - y * x ^ 4 * c ^ 2 * 40 + y ^ 2 * x * 45 - y ^ 3 * 15 +
+                          y ^ 3 * x * c * 80 +
+                        y ^ 4 * x * c ^ 2 * 40 -
+                      y ^ 4 * c * 40 -
+                    y ^ 5 * c ^ 2 * 24 +
+                  x ^ 3 * 15 +
+                x ^ 4 * c * 40 +
+              x ^ 5 * c ^ 2 * 24,
+            y * x ^ 3 * c * 80 + y * x ^ 4 * c ^ 2 * 80 - y ^ 2 * x ^ 2 * c * 120 - y ^ 2 * x ^ 3 * c ^ 2 * 80 +
+                        y ^ 3 * x * c * 80 +
+                      y ^ 4 * x * c ^ 2 * 40 -
+                    y ^ 4 * c * 20 -
+                  y ^ 5 * c ^ 2 * 16 -
+                x ^ 4 * c * 20 -
+              x ^ 5 * c ^ 2 * 24,
+            y * x ^ 3 * c * 80 + y * x ^ 4 * c ^ 2 * 40 - y ^ 2 * x ^ 2 * c * 120 + y ^ 3 * x * c * 80 -
+                        y ^ 3 * x ^ 2 * c ^ 2 * 80 +
+                      y ^ 4 * x * c ^ 2 * 80 -
+                    y ^ 4 * c * 20 -
+                  y ^ 5 * c ^ 2 * 24 -
+                x ^ 4 * c * 20 -
+              x ^ 5 * c ^ 2 * 16]
+          2 *
+      4
+
+case inr.inr.inr.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hfin01 : 0 ≠ 1
+hfin02 : 0 ≠ 2
+hfin10 : 1 ≠ 0
+hfin12 : 1 ≠ 2
+hfin20 : 2 ≠ 0
+hfin21 : 2 ≠ 1
+hanti0 : Finset.antidiagonal 0 = {(0, 0)}
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -(x * y ^ 6 * 80) + x ^ 2 * y ^ 5 * 304 - x ^ 2 * y ^ 6 * c * 240 - x ^ 3 * y ^ 4 * 416 + x ^ 3 * y ^ 5 * c * 1008 -
+                              x ^ 3 * y ^ 6 * c ^ 2 * 160 +
+                            x ^ 4 * y ^ 3 * 224 -
+                          x ^ 4 * y ^ 4 * c * 1632 +
+                        x ^ 4 * y ^ 5 * c ^ 2 * 704 -
+                      x ^ 5 * y ^ 2 * 16 +
+                    x ^ 5 * y ^ 3 * c * 1248 -
+                  x ^ 5 * y ^ 4 * c ^ 2 * 1216 -
+                x ^ 6 * y * 16 -
+              x ^ 6 * y ^ 2 * c * 432 +
+            x ^ 6 * y ^ 3 * c ^ 2 * 1024 +
+          x ^ 7 * y * c * 48 -
+        x ^ 7 * y ^ 2 * c ^ 2 * 416 +
+      x ^ 8 * y * c ^ 2 * 64 =
+    -(x * y ^ 3 * ![x - y, x, y] 2 *
+                  ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                        x ^ 4 * c ^ 2 * 24,
+                      x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                              x ^ 3 * y * c ^ 2 * 80 +
+                            x ^ 3 * c * 8 +
+                          x ^ 4 * c ^ 2 * 24 +
+                        y ^ 2 * 15,
+                      -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 + x ^ 3 * c * 12 +
+                        x ^ 4 * c ^ 2 * 16]
+                    2 *
+                16) +
+            x ^ 2 * y ^ 2 * ![x - y, x, y] 2 *
+                ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                      x ^ 4 * c ^ 2 * 24,
+                    x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                            x ^ 3 * y * c ^ 2 * 80 +
+                          x ^ 3 * c * 8 +
+                        x ^ 4 * c ^ 2 * 24 +
+                      y ^ 2 * 15,
+                    -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 + x ^ 3 * c * 12 +
+                      x ^ 4 * c ^ 2 * 16]
+                  2 *
+              24 -
+          x ^ 3 * y * ![x - y, x, y] 2 *
+              ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                    x ^ 4 * c ^ 2 * 24,
+                  x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                          x ^ 3 * y * c ^ 2 * 80 +
+                        x ^ 3 * c * 8 +
+                      x ^ 4 * c ^ 2 * 24 +
+                    y ^ 2 * 15,
+                  -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 + x ^ 3 * c * 12 +
+                    x ^ 4 * c ^ 2 * 16]
+                2 *
+            16 +
+        x ^ 4 * ![x - y, x, y] 2 *
+            ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                  x ^ 4 * c ^ 2 * 24,
+                x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                        x ^ 3 * y * c ^ 2 * 80 +
+                      x ^ 3 * c * 8 +
+                    x ^ 4 * c ^ 2 * 24 +
+                  y ^ 2 * 15,
+                -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 + x ^ 3 * c * 12 +
+                  x ^ 4 * c ^ 2 * 16]
+              2 *
+          4 +
+      y ^ 4 * ![x - y, x, y] 2 *
+          ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 - x ^ 4 * c ^ 2 * 24,
+              x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                      x ^ 3 * y * c ^ 2 * 80 +
+                    x ^ 3 * c * 8 +
+                  x ^ 4 * c ^ 2 * 24 +
+                y ^ 2 * 15,
+              -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 + x ^ 3 * c * 12 +
+                x ^ 4 * c ^ 2 * 16]
+            2 *
+        4
+
+case inr.inr.inr.inr
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hfin01 : 0 ≠ 1
+hfin02 : 0 ≠ 2
+hfin10 : 1 ≠ 0
+hfin12 : 1 ≠ 2
+hfin20 : 2 ≠ 0
+hfin21 : 2 ≠ 1
+hanti0 : Finset.antidiagonal 0 = {(0, 0)}
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ y ^ 2 * x ^ 2 * 240 + y ^ 3 * c * x ^ 2 * 1280 + y ^ 3 * x * 160 - y ^ 4 * 16 - y ^ 4 * c * x * 640 +
+            y ^ 4 * c ^ 2 * x ^ 2 * 1280 +
+          y ^ 5 * c * 128 -
+        y ^ 5 * c ^ 2 * x * 1280 +
+      y ^ 6 * c ^ 2 * 384 =
+    ![-y + x, x, y] 2 *
+          ![![-(y * c * x ^ 3 * 80) - y * c ^ 2 * x ^ 4 * 40 - y * x ^ 2 * 45 + y ^ 2 * x * 45 - y ^ 3 * 15 +
+                                y ^ 3 * c * x * 80 -
+                              y ^ 4 * c * 40 +
+                            y ^ 4 * c ^ 2 * x * 40 -
+                          y ^ 5 * c ^ 2 * 24 +
+                        c * x ^ 4 * 40 +
+                      c ^ 2 * x ^ 5 * 24 +
+                    x ^ 3 * 15,
+                  y * c * x ^ 3 * 80 + y * c ^ 2 * x ^ 4 * 80 - y ^ 2 * c * x ^ 2 * 120 - y ^ 2 * c ^ 2 * x ^ 3 * 80 +
+                              y ^ 3 * c * x * 80 -
+                            y ^ 4 * c * 20 +
+                          y ^ 4 * c ^ 2 * x * 40 -
+                        y ^ 5 * c ^ 2 * 16 -
+                      c * x ^ 4 * 20 -
+                    c ^ 2 * x ^ 5 * 24,
+                  y * c * x ^ 3 * 80 + y * c ^ 2 * x ^ 4 * 40 - y ^ 2 * c * x ^ 2 * 120 + y ^ 3 * c * x * 80 -
+                              y ^ 3 * c ^ 2 * x ^ 2 * 80 -
+                            y ^ 4 * c * 20 +
+                          y ^ 4 * c ^ 2 * x * 80 -
+                        y ^ 5 * c ^ 2 * 24 -
+                      c * x ^ 4 * 20 -
+                    c ^ 2 * x ^ 5 * 16]
+                2,
+              ![y * c * x ^ 2 * 60 + y * c ^ 2 * x ^ 3 * 40 + y * x * 20 - c * x ^ 3 * 28 - c ^ 2 * x ^ 4 * 24 -
+                    x ^ 2 * 4,
+                  -(y * c * x ^ 2 * 40) - y * c ^ 2 * x ^ 3 * 80 + y * x * 10 + y ^ 2 * 15 + y ^ 2 * c * x * 80 +
+                          y ^ 2 * c ^ 2 * x ^ 2 * 80 +
+                        c * x ^ 3 * 8 +
+                      c ^ 2 * x ^ 4 * 24 -
+                    x ^ 2,
+                  -(y * c * x ^ 2 * 60) - y * c ^ 2 * x ^ 3 * 40 - y * x * 20 + c * x ^ 3 * 12 + c ^ 2 * x ^ 4 * 16 -
+                    x ^ 2 * 4]
+                2,
+              ![-(y * x * 20) + y ^ 2 * 4 - y ^ 2 * c * x * 60 + y ^ 3 * c * 28 - y ^ 3 * c ^ 2 * x * 40 +
+                    y ^ 4 * c ^ 2 * 24,
+                  -(y * x * 20) - y ^ 2 * 4 - y ^ 2 * c * x * 60 + y ^ 3 * c * 12 - y ^ 3 * c ^ 2 * x * 40 +
+                    y ^ 4 * c ^ 2 * 16,
+                  y * c * x ^ 2 * 80 + y * x * 10 - y ^ 2 - y ^ 2 * c * x * 40 + y ^ 2 * c ^ 2 * x ^ 2 * 80 +
+                          y ^ 3 * c * 8 -
+                        y ^ 3 * c ^ 2 * x * 80 +
+                      y ^ 4 * c ^ 2 * 24 +
+                    x ^ 2 * 15]
+                2]
+            2 *
+        ![1, x, y] 2 *
+      16
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteN2BennettIdentity
+error: build failed

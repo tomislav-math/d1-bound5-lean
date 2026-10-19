@@ -1,0 +1,23 @@
+⚠ [1693/1717] Replayed D1Bound5.FiniteN3Matrix
+warning: D1Bound5/FiniteN3Matrix.lean:85:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN3Matrix.lean:91:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [2034/2034] Building D1Bound5.FiniteN3Height (65s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteN3Height.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN3Height.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN3Height.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN3Height.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN3Height.setup.json --json
+error: D1Bound5/FiniteN3Height.lean:35:6: Type mismatch
+  add_le_add_right (finite_norm_quadratic_le ?m.218 ?m.219 ?m.220 ?m.221) ?m.222
+has type
+  ?m.222 + ‖?m.218 + ?m.219 * ?m.221 + ?m.220 * ?m.221 ^ 2‖ ≤
+    ?m.222 + (‖?m.218‖ + ‖?m.219‖ * ‖?m.221‖ + ‖?m.220‖ * ‖?m.221‖ ^ 2)
+but is expected to have type
+  ‖u + v * c + w * c ^ 2‖ + ‖t * c ^ 3‖ ≤ ‖u‖ + ‖v‖ * ‖c‖ + ‖w‖ * ‖c‖ ^ 2 + ‖t * c ^ 3‖
+warning: D1Bound5/FiniteN3Height.lean:50:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteN3Height
+error: build failed

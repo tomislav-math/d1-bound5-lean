@@ -1,0 +1,123 @@
+⚠ [1693/1754] Replayed D1Bound5.FiniteN2Matrix
+warning: D1Bound5/FiniteN2Matrix.lean:64:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Matrix.lean:70:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [2955/2955] Building D1Bound5.FiniteN2IntegralRows (151s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteN2IntegralRows.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN2IntegralRows.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN2IntegralRows.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN2IntegralRows.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN2IntegralRows.setup.json --json
+error: D1Bound5/FiniteN2IntegralRows.lean:12:75: unsolved goals
+case «0»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ (f x - f y) ^ 3 *
+      (f 15 + f 40 * (f x + f y) * f c + f 8 * (f 3 * f x ^ 2 + f 4 * f x * f y + f 3 * f y ^ 2) * f c ^ 2) =
+    (f x - f y) ^ 3 * (15 + 40 * (f x + f y) * f c + 8 * (3 * f x ^ 2 + 4 * f x * f y + 3 * f y ^ 2) * f c ^ 2)
+
+case «1»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ f 4 * f c * (f x - f y) ^ 4 * (f 5 + (f 6 * f x + f 4 * f y) * f c) =
+    4 * f c * (f x - f y) ^ 4 * (5 + (6 * f x + 4 * f y) * f c)
+
+case «2»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ f 4 * f c * (f x - f y) ^ 4 * (f 5 + (f 4 * f x + f 6 * f y) * f c) =
+    4 * f c * (f x - f y) ^ 4 * (5 + (4 * f x + 6 * f y) * f c)
+error: D1Bound5/FiniteN2IntegralRows.lean:16:67: unsolved goals
+case «0»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ -(f 4 * f x ^ 2) + f 20 * f x * f y + (-(f 28 * f x ^ 3) + f 60 * f x ^ 2 * f y) * f c +
+      (-(f 24 * f x ^ 4) + f 40 * f x ^ 3 * f y) * f c ^ 2 =
+    -(4 * f x ^ 2) + 20 * f x * f y + (-(28 * f x ^ 3) + 60 * f x ^ 2 * f y) * f c +
+      (-(24 * f x ^ 4) + 40 * f x ^ 3 * f y) * f c ^ 2
+
+case «1»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ -f x ^ 2 + f 10 * f x * f y + f 15 * f y ^ 2 + (f 8 * f x ^ 3 - f 40 * f x ^ 2 * f y + f 80 * f x * f y ^ 2) * f c +
+      (f 24 * f x ^ 4 - f 80 * f x ^ 3 * f y + f 80 * f x ^ 2 * f y ^ 2) * f c ^ 2 =
+    -f x ^ 2 + 10 * f x * f y + 15 * f y ^ 2 + (8 * f x ^ 3 - 40 * f x ^ 2 * f y + 80 * f x * f y ^ 2) * f c +
+      (24 * f x ^ 4 - 80 * f x ^ 3 * f y + 80 * f x ^ 2 * f y ^ 2) * f c ^ 2
+
+case «2»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ -(f 4 * f x ^ 2) - f 20 * f x * f y + (f 12 * f x ^ 3 - f 60 * f x ^ 2 * f y) * f c +
+      (f 16 * f x ^ 4 - f 40 * f x ^ 3 * f y) * f c ^ 2 =
+    -(4 * f x ^ 2) - 20 * f x * f y + (12 * f x ^ 3 - 60 * f x ^ 2 * f y) * f c +
+      (16 * f x ^ 4 - 40 * f x ^ 3 * f y) * f c ^ 2
+error: D1Bound5/FiniteN2IntegralRows.lean:20:69: unsolved goals
+case «0»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ -(f 20 * f x * f y) + f 4 * f y ^ 2 + (-(f 60 * f x * f y ^ 2) + f 28 * f y ^ 3) * f c +
+      (-(f 40 * f x * f y ^ 3) + f 24 * f y ^ 4) * f c ^ 2 =
+    -(20 * f x * f y) + 4 * f y ^ 2 + (-(60 * f x * f y ^ 2) + 28 * f y ^ 3) * f c +
+      (-(40 * f x * f y ^ 3) + 24 * f y ^ 4) * f c ^ 2
+
+case «1»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ -(f 20 * f x * f y) - f 4 * f y ^ 2 + (-(f 60 * f x * f y ^ 2) + f 12 * f y ^ 3) * f c +
+      (-(f 40 * f x * f y ^ 3) + f 16 * f y ^ 4) * f c ^ 2 =
+    -(20 * f x * f y) - 4 * f y ^ 2 + (-(60 * f x * f y ^ 2) + 12 * f y ^ 3) * f c +
+      (-(40 * f x * f y ^ 3) + 16 * f y ^ 4) * f c ^ 2
+
+case «2»
+R : Type u_1
+S : Type u_2
+inst✝¹ : CommRing R
+inst✝ : CommRing S
+f : R →+* S
+x y c : R
+⊢ f 15 * f x ^ 2 + f 10 * f x * f y - f y ^ 2 + (f 80 * f x ^ 2 * f y - f 40 * f x * f y ^ 2 + f 8 * f y ^ 3) * f c +
+      (f 80 * f x ^ 2 * f y ^ 2 - f 80 * f x * f y ^ 3 + f 24 * f y ^ 4) * f c ^ 2 =
+    15 * f x ^ 2 + 10 * f x * f y - f y ^ 2 + (80 * f x ^ 2 * f y - 40 * f x * f y ^ 2 + 8 * f y ^ 3) * f c +
+      (80 * f x ^ 2 * f y ^ 2 - 80 * f x * f y ^ 3 + 24 * f y ^ 4) * f c ^ 2
+warning: D1Bound5/FiniteN2IntegralRows.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteN2IntegralRows
+error: build failed

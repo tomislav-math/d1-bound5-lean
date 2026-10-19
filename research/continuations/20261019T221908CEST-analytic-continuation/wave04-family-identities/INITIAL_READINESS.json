@@ -1,0 +1,86 @@
+{
+  "utc": "2026-10-19T20:38:12.741410+00:00",
+  "unknown": [],
+  "targets": {
+    "AllLargeWindowOverlaps": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN3Height": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2BennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2RowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2FullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2RowBound",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2FullRing",
+        "FiniteN2RowBound",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN3BennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN3Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3BennettIdentity"
+      ]
+    },
+    "FiniteN3Approximation": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3Height",
+        "FiniteN3Residual",
+        "FiniteN3BennettIdentity"
+      ]
+    },
+    "FiniteN3Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3Approximation",
+        "FiniteN3Height",
+        "FiniteN3Residual",
+        "FiniteN3BennettIdentity"
+      ]
+    }
+  }
+}

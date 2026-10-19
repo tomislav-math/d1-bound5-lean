@@ -1,0 +1,85 @@
+{
+  "utc": "2026-10-19T19:51:23.696062+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteN2Matrix": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteHomogeneousTwo": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2IntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Matrix"
+      ]
+    },
+    "FiniteN2Height": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Matrix",
+        "FiniteHomogeneousTwo"
+      ]
+    },
+    "FiniteN2BennettIdentity": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Matrix"
+      ]
+    },
+    "FiniteN2Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2BennettIdentity",
+        "FiniteN2Matrix"
+      ]
+    },
+    "FiniteN2RowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2IntegralRows",
+        "FiniteN2Matrix",
+        "FiniteN2Height",
+        "FiniteHomogeneousTwo",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2FullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2RowBound",
+        "FiniteN2IntegralRows",
+        "FiniteN2Matrix",
+        "FiniteN2Height",
+        "FiniteHomogeneousTwo",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2FullRing",
+        "FiniteN2RowBound",
+        "FiniteN2IntegralRows",
+        "FiniteN2Matrix",
+        "FiniteN2Height",
+        "FiniteHomogeneousTwo",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    }
+  }
+}

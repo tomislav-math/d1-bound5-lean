@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-19T21:00:36.724170+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteN3BennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN3Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3BennettIdentity"
+      ]
+    },
+    "FiniteN3Approximation": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3Residual",
+        "FiniteN3BennettIdentity"
+      ]
+    },
+    "FiniteN3Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3Approximation",
+        "FiniteN3Residual",
+        "FiniteN3BennettIdentity"
+      ]
+    }
+  }
+}

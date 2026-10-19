@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-19T20:25:06.806692+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteN2BennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN2Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2RowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2FullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2RowBound",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "FiniteN2Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN2FullRing",
+        "FiniteN2RowBound",
+        "FiniteN2Residual",
+        "FiniteN2BennettIdentity"
+      ]
+    },
+    "AllLargeWindows": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "AllLargeWindowOverlaps": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "AllLargeWindows"
+      ]
+    },
+    "FiniteN3Matrix": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteN3IntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3Matrix"
+      ]
+    },
+    "FiniteN3Height": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteN3Matrix"
+      ]
+    }
+  }
+}

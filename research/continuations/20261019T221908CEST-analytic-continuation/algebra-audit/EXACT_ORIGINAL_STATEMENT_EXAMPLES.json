@@ -1,0 +1,248 @@
+[
+  {
+    "module": "FiniteHomogeneousTwo",
+    "name": "D1Bound5.finiteHomogeneousTwo_norm_le",
+    "original_signature": " (n : \u2115) (v : Fin (n+1) \u2192 \u2124)\n    (x y : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) :\n    \u2016finiteHomogeneousTwo n v x y\u2016 \u2264\n      (\u2211 j, |(v j : \u211d)|)*\u2016y\u2016^n",
+    "explicit_arguments": "n v x y hxy"
+  },
+  {
+    "module": "FiniteHomogeneousTwo",
+    "name": "D1Bound5.finite_norm_quadratic_le",
+    "original_signature": " (u v w c : \u2102) :\n    \u2016u+v*c+w*c^2\u2016 \u2264 \u2016u\u2016+\u2016v\u2016*\u2016c\u2016+\u2016w\u2016*\u2016c\u2016^2",
+    "explicit_arguments": "u v w c"
+  },
+  {
+    "module": "FiniteN2Matrix",
+    "name": "D1Bound5.finiteN2Matrix_zero",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteN2Matrix x y c i 0 = finiteN2Constant x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteN2Matrix",
+    "name": "D1Bound5.finiteN2Matrix_one",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteN2Matrix x y c i 1 = x * finiteN2Left x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteN2Matrix",
+    "name": "D1Bound5.finiteN2Matrix_two",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteN2Matrix x y c i 2 = y * finiteN2Right x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteN2Matrix",
+    "name": "D1Bound5.finiteN2DividedMatrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteN2DividedMatrix x y c).det = -225*(x-y)^7",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteN2Matrix",
+    "name": "D1Bound5.finiteN2Matrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteN2Matrix x y c).det = -225*x*y*(x-y)^7",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteN2Matrix",
+    "name": "D1Bound5.finiteN2DividedMatrix_det_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F] (x y c : F) (hxy : x \u2260 y) :\n    (finiteN2DividedMatrix x y c).det \u2260 0",
+    "explicit_arguments": "x y c hxy"
+  },
+  {
+    "module": "FiniteN2Height",
+    "name": "D1Bound5.finiteN2_root_coeff_decomposition",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c : R) (i : Fin 3) (j : Fin 2) :\n    ![finiteN2Left x y c i, finiteN2Right x y c i] j =\n      finiteHomogeneousTwo 2 (finiteN2Coeff0 i j) x y +\n      finiteHomogeneousTwo 3 (finiteN2Coeff1 i j) x y*c +\n      finiteHomogeneousTwo 4 (finiteN2Coeff2 i j) x y*c^2",
+    "explicit_arguments": "x y c i j"
+  },
+  {
+    "module": "FiniteN2Height",
+    "name": "D1Bound5.finiteN2_coefficient_sums",
+    "original_signature": " (i : Fin 3) :\n    ((\u2211 j, |(finiteN2Coeff0 i 0 j : \u211d)|) +\n      (\u2211 j, |(finiteN2Coeff0 i 1 j : \u211d)|) \u2264 50) \u2227\n    ((\u2211 j, |(finiteN2Coeff1 i 0 j : \u211d)|) +\n      (\u2211 j, |(finiteN2Coeff1 i 1 j : \u211d)|) \u2264 200) \u2227\n    ((\u2211 j, |(finiteN2Coeff2 i 0 j : \u211d)|) +\n      (\u2211 j, |(finiteN2Coeff2 i 1 j : \u211d)|) \u2264 240)",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteN2Height",
+    "name": "D1Bound5.finiteN2_root_columns_norm_le",
+    "original_signature": " (x y c : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (i : Fin 3) :\n    \u2016finiteN2Left x y c i\u2016+\u2016finiteN2Right x y c i\u2016 \u2264\n      50*\u2016y\u2016^2+200*\u2016y\u2016^3*\u2016c\u2016+240*\u2016y\u2016^4*\u2016c\u2016^2",
+    "explicit_arguments": "x y c hxy i"
+  },
+  {
+    "module": "FiniteN2Height",
+    "name": "D1Bound5.finiteN2_height_scalar",
+    "original_signature": " (T : \u211d) (hT : 1000 \u2264 T) :\n    (101/100 : \u211d)*(50+200*T+240*T^2) < 243*T^2",
+    "explicit_arguments": "T hT"
+  },
+  {
+    "module": "FiniteN2Height",
+    "name": "D1Bound5.finiteN2_height_scaled",
+    "original_signature": " (x y c : \u2102) (hy : y \u2260 0)\n    (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (hYC : 1000 \u2264 \u2016y\u2016*\u2016c\u2016) (i : Fin 3) :\n    (101/100 : \u211d)*(\u2016finiteN2Left x y c i\u2016+\u2016finiteN2Right x y c i\u2016) <\n      243*\u2016y\u2016^4*\u2016c\u2016^2",
+    "explicit_arguments": "x y c hy hxy hYC i"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.map_finiteN2Constant",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteN2Constant x y c i) = finiteN2Constant (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.map_finiteN2Left",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteN2Left x y c i) = finiteN2Left (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.map_finiteN2Right",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteN2Right x y c i) = finiteN2Right (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.map_finiteN2DividedMatrix",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c : R) (i j : Fin 3) :\n    f (finiteN2DividedMatrix x y c i j) =\n      finiteN2DividedMatrix (f x) (f y) (f c) i j",
+    "explicit_arguments": "f x y c i j"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.map_finiteN2RowForm",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c z sX sY : R) (i : Fin 3) :\n    f (finiteN2RowForm x y c z sX sY i) =\n      finiteN2RowForm (f x) (f y) (f c) (f z) (f sX) (f sY) i",
+    "explicit_arguments": "f x y c z sX sY i"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.finiteN2RowForm_exists_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F]\n    (x y c z sX sY : F) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, finiteN2RowForm x y c z sX sY i \u2260 0",
+    "explicit_arguments": "x y c z sX sY hxy hz"
+  },
+  {
+    "module": "FiniteN2IntegralRows",
+    "name": "D1Bound5.full_ring_finiteN2RowForm_exists_one_le_norm",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c z sX sY : \ud835\udcde K) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, 1 \u2264 \u2016finiteN2RowForm (phi (x : K)) (phi (y : K))\n      (phi (c : K)) (phi (z : K)) (phi (sX : K)) (phi (sY : K)) i\u2016",
+    "explicit_arguments": "hK phi x y c z sX sY hxy hz"
+  },
+  {
+    "module": "FiniteN2BennettIdentity",
+    "name": "D1Bound5.finite_choose_two",
+    "original_signature": " (r : F) : Ring.choose r 2 = r*(r-1)/2",
+    "explicit_arguments": "r"
+  },
+  {
+    "module": "FiniteN2BennettIdentity",
+    "name": "D1Bound5.finiteN2_bennett_identity",
+    "original_signature": " (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i j : Fin 3) :\n    bennettTwoClearedEntry x y c 2 i j =\n      2 * finiteN2RowFactor x y i * finiteN2Matrix x y c i j",
+    "explicit_arguments": "x y c hx hy hxy i j"
+  },
+  {
+    "module": "FiniteN3Matrix",
+    "name": "D1Bound5.finiteN3Matrix_zero",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteN3Matrix x y c i 0 = finiteN3Constant x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteN3Matrix",
+    "name": "D1Bound5.finiteN3Matrix_one",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteN3Matrix x y c i 1 = x * finiteN3Left x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteN3Matrix",
+    "name": "D1Bound5.finiteN3Matrix_two",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteN3Matrix x y c i 2 = y * finiteN3Right x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteN3Matrix",
+    "name": "D1Bound5.finiteN3DividedMatrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteN3DividedMatrix x y c).det = 3675*x*y*(x-y)^11",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteN3Matrix",
+    "name": "D1Bound5.finiteN3Matrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteN3Matrix x y c).det = 3675*x^2*y^2*(x-y)^11",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteN3Matrix",
+    "name": "D1Bound5.finiteN3DividedMatrix_det_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F] (x y c : F) (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) :\n    (finiteN3DividedMatrix x y c).det \u2260 0",
+    "explicit_arguments": "x y c hx hy hxy"
+  },
+  {
+    "module": "FiniteN3Height",
+    "name": "D1Bound5.finite_norm_cubic_le",
+    "original_signature": " (u v w t c : \u2102) :\n    \u2016u+v*c+w*c^2+t*c^3\u2016 \u2264\n      \u2016u\u2016+\u2016v\u2016*\u2016c\u2016+\u2016w\u2016*\u2016c\u2016^2+\u2016t\u2016*\u2016c\u2016^3",
+    "explicit_arguments": "u v w t c"
+  },
+  {
+    "module": "FiniteN3Height",
+    "name": "D1Bound5.finiteN3_root_coeff_decomposition",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c : R) (i : Fin 3) (j : Fin 2) :\n    ![finiteN3Left x y c i,finiteN3Right x y c i] j =\n      finiteHomogeneousTwo 4 (finiteN3Coeff0 i j) x y +\n      finiteHomogeneousTwo 5 (finiteN3Coeff1 i j) x y*c +\n      finiteHomogeneousTwo 6 (finiteN3Coeff2 i j) x y*c^2 +\n      finiteHomogeneousTwo 7 (finiteN3Coeff3 i j) x y*c^3",
+    "explicit_arguments": "x y c i j"
+  },
+  {
+    "module": "FiniteN3Height",
+    "name": "D1Bound5.finiteN3_coefficient_sums",
+    "original_signature": " (i : Fin 3) :\n    ((\u2211 j, |(finiteN3Coeff0 i 0 j : \u211d)|)+\n      (\u2211 j, |(finiteN3Coeff0 i 1 j : \u211d)|) \u2264 342) \u2227\n    ((\u2211 j, |(finiteN3Coeff1 i 0 j : \u211d)|)+\n      (\u2211 j, |(finiteN3Coeff1 i 1 j : \u211d)|) \u2264 2352) \u2227\n    ((\u2211 j, |(finiteN3Coeff2 i 0 j : \u211d)|)+\n      (\u2211 j, |(finiteN3Coeff2 i 1 j : \u211d)|) \u2264 5792) \u2227\n    ((\u2211 j, |(finiteN3Coeff3 i 0 j : \u211d)|)+\n      (\u2211 j, |(finiteN3Coeff3 i 1 j : \u211d)|) \u2264 4096)",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteN3Height",
+    "name": "D1Bound5.finiteN3_root_columns_norm_le",
+    "original_signature": " (x y c : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (i : Fin 3) :\n    \u2016finiteN3Left x y c i\u2016+\u2016finiteN3Right x y c i\u2016 \u2264\n      342*\u2016y\u2016^4+2352*\u2016y\u2016^5*\u2016c\u2016+5792*\u2016y\u2016^6*\u2016c\u2016^2+4096*\u2016y\u2016^7*\u2016c\u2016^3",
+    "explicit_arguments": "x y c hxy i"
+  },
+  {
+    "module": "FiniteN3Height",
+    "name": "D1Bound5.finiteN3_height_scalar",
+    "original_signature": " (T : \u211d) (hT : 1000 \u2264 T) :\n    (101/100 : \u211d)*(342+2352*T+5792*T^2+4096*T^3) < 4143*T^3",
+    "explicit_arguments": "T hT"
+  },
+  {
+    "module": "FiniteN3Height",
+    "name": "D1Bound5.finiteN3_height_scaled",
+    "original_signature": " (x y c : \u2102) (hy : y \u2260 0)\n    (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (hYC : 1000 \u2264 \u2016y\u2016*\u2016c\u2016) (i : Fin 3) :\n    (101/100 : \u211d)*(\u2016finiteN3Left x y c i\u2016+\u2016finiteN3Right x y c i\u2016) <\n      4143*\u2016y\u2016^7*\u2016c\u2016^3",
+    "explicit_arguments": "x y c hy hxy hYC i"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.map_finiteN3Constant",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteN3Constant x y c i) = finiteN3Constant (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.map_finiteN3Left",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteN3Left x y c i) = finiteN3Left (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.map_finiteN3Right",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteN3Right x y c i) = finiteN3Right (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.map_finiteN3DividedMatrix",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c : R) (i j : Fin 3) :\n    f (finiteN3DividedMatrix x y c i j) =\n      finiteN3DividedMatrix (f x) (f y) (f c) i j",
+    "explicit_arguments": "f x y c i j"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.map_finiteN3RowForm",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c z sX sY : R) (i : Fin 3) :\n    f (finiteN3RowForm x y c z sX sY i) =\n      finiteN3RowForm (f x) (f y) (f c) (f z) (f sX) (f sY) i",
+    "explicit_arguments": "f x y c z sX sY i"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.finiteN3RowForm_exists_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F]\n    (x y c z sX sY : F) (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, finiteN3RowForm x y c z sX sY i \u2260 0",
+    "explicit_arguments": "x y c z sX sY hx hy hxy hz"
+  },
+  {
+    "module": "FiniteN3IntegralRows",
+    "name": "D1Bound5.full_ring_finiteN3RowForm_exists_one_le_norm",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c z sX sY : \ud835\udcde K) (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, 1 \u2264 \u2016finiteN3RowForm (phi (x : K)) (phi (y : K))\n      (phi (c : K)) (phi (z : K)) (phi (sX : K)) (phi (sY : K)) i\u2016",
+    "explicit_arguments": "hK phi x y c z sX sY hx hy hxy hz"
+  }
+]

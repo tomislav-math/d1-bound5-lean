@@ -1,0 +1,49 @@
+{
+  "time": "2026-10-19T21:41:38.493152+02:00",
+  "completed": [
+    {
+      "pid": 45415,
+      "stage": "three-small exact-type/axiom audit and 3 targeted replays",
+      "exit": 0,
+      "terminal_collected": true
+    },
+    {
+      "pid": 46281,
+      "stage": "initial retained and ordinary compilation wave",
+      "exit": 1,
+      "terminal_collected": true
+    },
+    {
+      "pid": 46984,
+      "stage": "retained/ordinary repair wave01",
+      "exit": 1,
+      "terminal_collected": true
+    },
+    {
+      "pid": 47601,
+      "stage": "retained-join and first N2 bounded waves",
+      "exit": 1,
+      "terminal_collected": true
+    },
+    {
+      "pid": 48719,
+      "stage": "retained-start and N2 small repairs",
+      "exit": 1,
+      "terminal_collected": true
+    }
+  ],
+  "active_owned_outer_process": {
+    "pid": 48897,
+    "stage": "retained audit then N2 repair batch, serial",
+    "max_parallel": 1,
+    "terminal_collected": false
+  },
+  "lock_observation": {
+    "pid": 46639,
+    "status": "BLOCKING_IO_ERROR_BEFORE_SOURCE_WRITE",
+    "message": "BlockingIOError: [Errno 35] Resource temporarily unavailable",
+    "recovered": "Repaired after the previous owner batch drained; no lock bypass"
+  },
+  "no_automations_modified": true,
+  "updated": "2026-10-19T22:07:58.704918+02:00"
+}

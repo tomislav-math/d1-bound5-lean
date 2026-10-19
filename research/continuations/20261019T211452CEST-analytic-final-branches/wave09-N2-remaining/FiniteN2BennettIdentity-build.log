@@ -1,0 +1,1113 @@
+⚠ [1693/1701] Replayed D1Bound5.FiniteN2Matrix
+warning: D1Bound5/FiniteN2Matrix.lean:64:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Matrix.lean:70:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1722/1735] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1723/1735] Replayed D1Bound5.BennettTwoDenominatorClearing
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:21:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:49:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:78:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [1730/1735] Replayed D1Bound5.BennettBinomialIntegrality
+warning: D1Bound5/BennettBinomialIntegrality.lean:52:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [1734/1735] Replayed D1Bound5.BennettTwoIntegralEntries
+warning: D1Bound5/BennettTwoIntegralEntries.lean:14:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_zero`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:15:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_one`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:16:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_two`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:151:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [1735/1735] Building D1Bound5.FiniteN2BennettIdentity (34s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteN2BennettIdentity.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN2BennettIdentity.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteN2BennettIdentity.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN2BennettIdentity.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteN2BennettIdentity.setup.json --json
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:42:30: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteN2BennettIdentity.lean:47:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteN2BennettIdentity.lean:25:64: unsolved goals
+case inl.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ ((x ^ 2 * x⁻¹ ^ 2 * x⁻¹ ^ if 0 = 2 then 1 else 0) * (-1) ^ if 0 = 2 then 1 else 0) * 240 +
+              ((x ^ 3 * c * y * x⁻¹ ^ 3 * x⁻¹ ^ if 0 = 2 then 1 else 0) * (-1) ^ if 0 = 2 then 1 else 0) * 640 +
+            ((x ^ 3 * c * x⁻¹ ^ 2 * x⁻¹ ^ if 0 = 2 then 1 else 0) * (-1) ^ if 0 = 2 then 1 else 0) * 640 +
+          ((x ^ 4 * c ^ 2 * y * x⁻¹ ^ 3 * x⁻¹ ^ if 0 = 2 then 1 else 0) * (-1) ^ if 0 = 2 then 1 else 0) * 512 +
+        ((x ^ 4 * c ^ 2 * y ^ 2 * x⁻¹ ^ 4 * x⁻¹ ^ if 0 = 2 then 1 else 0) * (-1) ^ if 0 = 2 then 1 else 0) * 384 +
+      ((x ^ 4 * c ^ 2 * x⁻¹ ^ 2 * x⁻¹ ^ if 0 = 2 then 1 else 0) * (-1) ^ if 0 = 2 then 1 else 0) * 384 =
+    240 + x * c * 640 + x * c ^ 2 * y * 512 + x ^ 2 * c ^ 2 * 384 + c * y * 640 + c ^ 2 * y ^ 2 * 384
+
+case inl.inr.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -((x * y ^ 5 * (-x + y) ^ if 0 = 2 then 1 else 0) * 416) + (x * y ^ 6 * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 240 +
+                                          (x ^ 2 * y ^ 4 * (-x + y) ^ if 0 = 2 then 1 else 0) * 880 -
+                                        (x ^ 2 * y ^ 5 * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 1312 +
+                                      (x ^ 2 * y ^ 6 * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 160 -
+                                    (x ^ 3 * y ^ 3 * (-x + y) ^ if 0 = 2 then 1 else 0) * 960 +
+                                  (x ^ 3 * y ^ 4 * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 2960 -
+                                (x ^ 3 * y ^ 5 * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 896 +
+                              (x ^ 4 * y ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 560 -
+                            (x ^ 4 * y ^ 3 * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 3520 +
+                          (x ^ 4 * y ^ 4 * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 2080 -
+                        (x ^ 5 * y * (-x + y) ^ if 0 = 2 then 1 else 0) * 160 +
+                      (x ^ 5 * y ^ 2 * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 2320 -
+                    (x ^ 5 * y ^ 3 * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 2560 -
+                  (x ^ 6 * y * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 800 +
+                (x ^ 6 * y ^ 2 * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 1760 +
+              (x ^ 6 * (-x + y) ^ if 0 = 2 then 1 else 0) * 16 -
+            (x ^ 7 * y * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 640 +
+          (x ^ 7 * c * (-x + y) ^ if 0 = 2 then 1 else 0) * 112 +
+        (x ^ 8 * c ^ 2 * (-x + y) ^ if 0 = 2 then 1 else 0) * 96 +
+      (y ^ 6 * (-x + y) ^ if 0 = 2 then 1 else 0) * 80 =
+    -(x * y ^ 5 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 416) +
+                                            x * y ^ 6 * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 240 +
+                                          x ^ 2 * y ^ 4 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 880 -
+                                        x ^ 2 * y ^ 5 * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 1312 +
+                                      x ^ 2 * y ^ 6 * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 160 -
+                                    x ^ 3 * y ^ 3 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 960 +
+                                  x ^ 3 * y ^ 4 * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 2960 -
+                                x ^ 3 * y ^ 5 * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 896 +
+                              x ^ 4 * y ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 560 -
+                            x ^ 4 * y ^ 3 * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 3520 +
+                          x ^ 4 * y ^ 4 * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 2080 -
+                        x ^ 5 * y * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 160 +
+                      x ^ 5 * y ^ 2 * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 2320 -
+                    x ^ 5 * y ^ 3 * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 2560 -
+                  x ^ 6 * y * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 800 +
+                x ^ 6 * y ^ 2 * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 1760 +
+              x ^ 6 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 16 -
+            x ^ 7 * y * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 640 +
+          x ^ 7 * c * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 112 +
+        x ^ 8 * c ^ 2 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 96 +
+      y ^ 6 * (-x + y) ^ ((if 0 = 2 then 1 else 0) * 2) * 80
+
+case inl.inr.inr
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ ∑ x_1 ∈ Finset.antidiagonal (1 + if 0 = 2 then 1 else 0),
+      ∑ x_2 ∈ Finset.antidiagonal x_1.2,
+        (x ^ 2 * y ^ 6 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-3) x_2.1 * Ring.choose (-2) x_2.2 *
+                      (x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 - x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 2 +
+                          x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                    (x + x * y * c) ^ (2 - x_1.1) *
+                  16 -
+                x ^ 3 * y ^ 5 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-3) x_2.1 * Ring.choose (-2) x_2.2 *
+                      (x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 - x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 2 +
+                          x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                    (x + x * y * c) ^ (2 - x_1.1) *
+                  64 +
+              x ^ 4 * y ^ 4 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-3) x_2.1 * Ring.choose (-2) x_2.2 *
+                    (x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 - x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 2 +
+                        x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                  (x + x * y * c) ^ (2 - x_1.1) *
+                96 -
+            x ^ 5 * y ^ 3 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-3) x_2.1 * Ring.choose (-2) x_2.2 *
+                  (x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 - x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 2 +
+                      x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                (x + x * y * c) ^ (2 - x_1.1) *
+              64 +
+          x ^ 6 * y ^ 2 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-3) x_2.1 * Ring.choose (-2) x_2.2 *
+                (x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 - x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 2 +
+                    x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+              (x + x * y * c) ^ (2 - x_1.1) *
+            16) =
+    x *
+            ![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 + x ^ 3 * 15 -
+                              x ^ 3 * y * c * 80 -
+                            x ^ 4 * y * c ^ 2 * 40 +
+                          x ^ 4 * c * 40 +
+                        x ^ 5 * c ^ 2 * 24 -
+                      y ^ 3 * 15 -
+                    y ^ 4 * c * 40 -
+                  y ^ 5 * c ^ 2 * 24,
+                x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                  x ^ 4 * c ^ 2 * 24,
+                -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 + y ^ 3 * c * 28 +
+                  y ^ 4 * c ^ 2 * 24]
+              2 *
+          ![1, x, y] 2 *
+        2 -
+      y *
+            ![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 + x ^ 3 * 15 -
+                              x ^ 3 * y * c * 80 -
+                            x ^ 4 * y * c ^ 2 * 40 +
+                          x ^ 4 * c * 40 +
+                        x ^ 5 * c ^ 2 * 24 -
+                      y ^ 3 * 15 -
+                    y ^ 4 * c * 40 -
+                  y ^ 5 * c ^ 2 * 24,
+                x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                  x ^ 4 * c ^ 2 * 24,
+                -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 + y ^ 3 * c * 28 +
+                  y ^ 4 * c ^ 2 * 24]
+              2 *
+          ![1, x, y] 2 *
+        2
+
+case inr.inl.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -(((x ^ 2 * c * x⁻¹ ^ 2 * x⁻¹ ^ if 1 = 2 then 1 else 0) * (-1) ^ if 1 = 2 then 1 else 0) * 20) -
+        ((x ^ 3 * c ^ 2 * y * x⁻¹ ^ 3 * x⁻¹ ^ if 1 = 2 then 1 else 0) * (-1) ^ if 1 = 2 then 1 else 0) * 16 -
+      ((x ^ 3 * c ^ 2 * x⁻¹ ^ 2 * x⁻¹ ^ if 1 = 2 then 1 else 0) * (-1) ^ if 1 = 2 then 1 else 0) * 24 =
+    -(x * c ^ 2 * 24) - c * 20 - c ^ 2 * y * 16
+
+case inr.inl.inr.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ -(x * y ^ 10 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 2000) +
+                                                                          x * y ^ 11 * c *
+                                                                              (-x + y) ^
+                                                                                ((if 1 = 2 then 1 else 0) * 2) *
+                                                                            1280 +
+                                                                        x ^ 2 * y ^ 9 *
+                                                                            (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                                          7184 -
+                                                                      x ^ 2 * y ^ 10 * c *
+                                                                          (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                                        12160 +
+                                                                    x ^ 2 * y ^ 11 * c ^ 2 *
+                                                                        (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                                      1280 -
+                                                                  x ^ 3 * y ^ 8 *
+                                                                      (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                                    14256 +
+                                                                x ^ 3 * y ^ 9 * c *
+                                                                    (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                                  51968 -
+                                                              x ^ 3 * y ^ 10 * c ^ 2 *
+                                                                  (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                                12800 +
+                                                            x ^ 4 * y ^ 7 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                              16224 -
+                                                          x ^ 4 * y ^ 8 * c *
+                                                              (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                            131712 +
+                                                        x ^ 4 * y ^ 9 * c ^ 2 *
+                                                            (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                          57984 -
+                                                      x ^ 5 * y ^ 6 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 8736 +
+                                                    x ^ 5 * y ^ 7 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                      219648 -
+                                                  x ^ 5 * y ^ 8 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) *
+                                                    157056 -
+                                                x ^ 6 * y ^ 5 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 2016 -
+                                              x ^ 6 * y ^ 6 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 252672 +
+                                            x ^ 6 * y ^ 7 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 282624 +
+                                          x ^ 7 * y ^ 4 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 6816 +
+                                        x ^ 7 * y ^ 5 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 204288 -
+                                      x ^ 7 * y ^ 6 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 354816 -
+                                    x ^ 8 * y ^ 3 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 4944 -
+                                  x ^ 8 * y ^ 4 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 115968 +
+                                x ^ 8 * y ^ 5 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 317184 +
+                              x ^ 9 * y ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 1776 +
+                            x ^ 9 * y ^ 3 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 45312 -
+                          x ^ 9 * y ^ 4 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 201984 -
+                        x ^ 10 * y * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 304 -
+                      x ^ 10 * y ^ 2 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 11648 +
+                    x ^ 10 * y ^ 3 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 89856 +
+                  x ^ 11 * y * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 1792 -
+                x ^ 11 * y ^ 2 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 26624 +
+              x ^ 11 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 16 +
+            x ^ 12 * y * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 4736 -
+          x ^ 12 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 128 -
+        x ^ 13 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 384 +
+      y ^ 11 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 2) * 240 =
+    -(x * y ^ 10 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 2000) +
+                                                                          x * y ^ 11 * c *
+                                                                              (-x + y) ^
+                                                                                ((if 1 = 2 then 1 else 0) * 3) *
+                                                                            1280 +
+                                                                        x ^ 2 * y ^ 9 *
+                                                                            (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                                          7184 -
+                                                                      x ^ 2 * y ^ 10 * c *
+                                                                          (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                                        12160 +
+                                                                    x ^ 2 * y ^ 11 * c ^ 2 *
+                                                                        (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                                      1280 -
+                                                                  x ^ 3 * y ^ 8 *
+                                                                      (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                                    14256 +
+                                                                x ^ 3 * y ^ 9 * c *
+                                                                    (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                                  51968 -
+                                                              x ^ 3 * y ^ 10 * c ^ 2 *
+                                                                  (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                                12800 +
+                                                            x ^ 4 * y ^ 7 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                              16224 -
+                                                          x ^ 4 * y ^ 8 * c *
+                                                              (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                            131712 +
+                                                        x ^ 4 * y ^ 9 * c ^ 2 *
+                                                            (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                          57984 -
+                                                      x ^ 5 * y ^ 6 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 8736 +
+                                                    x ^ 5 * y ^ 7 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                      219648 -
+                                                  x ^ 5 * y ^ 8 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) *
+                                                    157056 -
+                                                x ^ 6 * y ^ 5 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 2016 -
+                                              x ^ 6 * y ^ 6 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 252672 +
+                                            x ^ 6 * y ^ 7 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 282624 +
+                                          x ^ 7 * y ^ 4 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 6816 +
+                                        x ^ 7 * y ^ 5 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 204288 -
+                                      x ^ 7 * y ^ 6 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 354816 -
+                                    x ^ 8 * y ^ 3 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 4944 -
+                                  x ^ 8 * y ^ 4 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 115968 +
+                                x ^ 8 * y ^ 5 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 317184 +
+                              x ^ 9 * y ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 1776 +
+                            x ^ 9 * y ^ 3 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 45312 -
+                          x ^ 9 * y ^ 4 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 201984 -
+                        x ^ 10 * y * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 304 -
+                      x ^ 10 * y ^ 2 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 11648 +
+                    x ^ 10 * y ^ 3 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 89856 +
+                  x ^ 11 * y * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 1792 -
+                x ^ 11 * y ^ 2 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 26624 +
+              x ^ 11 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 16 +
+            x ^ 12 * y * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 4736 -
+          x ^ 12 * c * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 128 -
+        x ^ 13 * c ^ 2 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 384 +
+      y ^ 11 * (-x + y) ^ ((if 1 = 2 then 1 else 0) * 3) * 240
+
+case inr.inl.inr.inr
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ ∑ x_1 ∈ Finset.antidiagonal (1 + if 1 = 2 then 1 else 0),
+      ∑ x_2 ∈ Finset.antidiagonal x_1.2,
+        (x ^ 2 * y ^ 6 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                      (-(x ^ 2 * x ^ x_2.1 * y ^ 3 * (x - y) ^ x_2.2) +
+                              x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 * 3 -
+                            x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 3 +
+                          x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                    (x + x * y * c) ^ (2 - x_1.1) *
+                  16 -
+                x ^ 3 * y ^ 5 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                      (-(x ^ 2 * x ^ x_2.1 * y ^ 3 * (x - y) ^ x_2.2) +
+                              x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 * 3 -
+                            x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 3 +
+                          x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                    (x + x * y * c) ^ (2 - x_1.1) *
+                  64 +
+              x ^ 4 * y ^ 4 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                    (-(x ^ 2 * x ^ x_2.1 * y ^ 3 * (x - y) ^ x_2.2) + x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 * 3 -
+                          x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 3 +
+                        x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                  (x + x * y * c) ^ (2 - x_1.1) *
+                96 -
+            x ^ 5 * y ^ 3 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                  (-(x ^ 2 * x ^ x_2.1 * y ^ 3 * (x - y) ^ x_2.2) + x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 * 3 -
+                        x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 3 +
+                      x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+                (x + x * y * c) ^ (2 - x_1.1) *
+              64 +
+          x ^ 6 * y ^ 2 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                (-(x ^ 2 * x ^ x_2.1 * y ^ 3 * (x - y) ^ x_2.2) + x ^ 3 * x ^ x_2.1 * y ^ 2 * (x - y) ^ x_2.2 * 3 -
+                      x ^ 4 * x ^ x_2.1 * y * (x - y) ^ x_2.2 * 3 +
+                    x ^ 5 * x ^ x_2.1 * (x - y) ^ x_2.2)⁻¹ *
+              (x + x * y * c) ^ (2 - x_1.1) *
+            16) =
+    x *
+          ![x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 + x ^ 3 * y * c * 80 -
+                          x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                        x ^ 4 * y * c ^ 2 * 80 -
+                      x ^ 4 * c * 20 -
+                    x ^ 5 * c ^ 2 * 24 -
+                  y ^ 4 * c * 20 -
+                y ^ 5 * c ^ 2 * 16,
+              x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                      x ^ 3 * y * c ^ 2 * 80 +
+                    x ^ 3 * c * 8 +
+                  x ^ 4 * c ^ 2 * 24 +
+                y ^ 2 * 15,
+              -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 - y ^ 2 * 4 + y ^ 3 * c * 12 +
+                y ^ 4 * c ^ 2 * 16]
+            2 *
+        ![1, x, y] 2 *
+      2
+
+case inr.inr.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ ∑ x_1 ∈ Finset.antidiagonal (1 + if 2 = 0 then 1 else 0),
+      ∑ x_2 ∈ Finset.antidiagonal x_1.2,
+        (-(((x ^ 2 * x ^ (2 - x_1.1) * y ^ 6 * y ^ (2 - x_1.1) * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 *
+                                        y⁻¹ ^ 2 *
+                                      y⁻¹ ^ if 2 = 1 then 1 else 0) *
+                                    y⁻¹ ^ x_2.1 *
+                                  Ring.choose (-3) x_2.2 *
+                                x⁻¹ ^ 3 *
+                              x⁻¹ ^ x_2.2 *
+                            c ^ (2 - x_1.1) *
+                          (-1) ^ if 2 = 1 then 1 else 0) *
+                        (-1) ^ x_2.1 *
+                      (-1) ^ x_2.2 *
+                    16) +
+                ((x ^ 3 * x ^ (2 - x_1.1) * y ^ 5 * y ^ (2 - x_1.1) * Ring.choose (5 / 2) x_1.1 *
+                                        Ring.choose (-2) x_2.1 *
+                                      y⁻¹ ^ 2 *
+                                    y⁻¹ ^ if 2 = 1 then 1 else 0) *
+                                  y⁻¹ ^ x_2.1 *
+                                Ring.choose (-3) x_2.2 *
+                              x⁻¹ ^ 3 *
+                            x⁻¹ ^ x_2.2 *
+                          c ^ (2 - x_1.1) *
+                        (-1) ^ if 2 = 1 then 1 else 0) *
+                      (-1) ^ x_2.1 *
+                    (-1) ^ x_2.2 *
+                  64 -
+              ((x ^ 4 * x ^ (2 - x_1.1) * y ^ 4 * y ^ (2 - x_1.1) * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 *
+                                    y⁻¹ ^ 2 *
+                                  y⁻¹ ^ if 2 = 1 then 1 else 0) *
+                                y⁻¹ ^ x_2.1 *
+                              Ring.choose (-3) x_2.2 *
+                            x⁻¹ ^ 3 *
+                          x⁻¹ ^ x_2.2 *
+                        c ^ (2 - x_1.1) *
+                      (-1) ^ if 2 = 1 then 1 else 0) *
+                    (-1) ^ x_2.1 *
+                  (-1) ^ x_2.2 *
+                96 +
+            ((x ^ 5 * x ^ (2 - x_1.1) * y ^ 3 * y ^ (2 - x_1.1) * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 *
+                                  y⁻¹ ^ 2 *
+                                y⁻¹ ^ if 2 = 1 then 1 else 0) *
+                              y⁻¹ ^ x_2.1 *
+                            Ring.choose (-3) x_2.2 *
+                          x⁻¹ ^ 3 *
+                        x⁻¹ ^ x_2.2 *
+                      c ^ (2 - x_1.1) *
+                    (-1) ^ if 2 = 1 then 1 else 0) *
+                  (-1) ^ x_2.1 *
+                (-1) ^ x_2.2 *
+              64 -
+          ((x ^ 6 * x ^ (2 - x_1.1) * y ^ 2 * y ^ (2 - x_1.1) * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 *
+                                y⁻¹ ^ 2 *
+                              y⁻¹ ^ if 2 = 1 then 1 else 0) *
+                            y⁻¹ ^ x_2.1 *
+                          Ring.choose (-3) x_2.2 *
+                        x⁻¹ ^ 3 *
+                      x⁻¹ ^ x_2.2 *
+                    c ^ (2 - x_1.1) *
+                  (-1) ^ if 2 = 1 then 1 else 0) *
+                (-1) ^ x_2.1 *
+              (-1) ^ x_2.2 *
+            16) =
+    ![x - y, x, y] 2 *
+        ![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 + x ^ 3 * 15 -
+                          x ^ 3 * y * c * 80 -
+                        x ^ 4 * y * c ^ 2 * 40 +
+                      x ^ 4 * c * 40 +
+                    x ^ 5 * c ^ 2 * 24 -
+                  y ^ 3 * 15 -
+                y ^ 4 * c * 40 -
+              y ^ 5 * c ^ 2 * 24,
+            x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 + x ^ 3 * y * c * 80 -
+                        x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                      x ^ 4 * y * c ^ 2 * 80 -
+                    x ^ 4 * c * 20 -
+                  x ^ 5 * c ^ 2 * 24 -
+                y ^ 4 * c * 20 -
+              y ^ 5 * c ^ 2 * 16,
+            x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 80 - x ^ 2 * y ^ 2 * c * 120 - x ^ 2 * y ^ 3 * c ^ 2 * 80 +
+                        x ^ 3 * y * c * 80 +
+                      x ^ 4 * y * c ^ 2 * 40 -
+                    x ^ 4 * c * 20 -
+                  x ^ 5 * c ^ 2 * 16 -
+                y ^ 4 * c * 20 -
+              y ^ 5 * c ^ 2 * 24]
+          2 *
+      2
+
+case inr.inr.inr.inl
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ ∑ x_1 ∈ Finset.antidiagonal (1 + if 2 = 1 then 1 else 0),
+      ∑ x_2 ∈ Finset.antidiagonal x_1.2,
+        (x ^ 2 * y ^ 6 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                      (-((x * y ^ 4 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3) +
+                              (x ^ 2 * y ^ 3 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3 -
+                            (x ^ 3 * y ^ 2 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 +
+                          (y ^ 5 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2)⁻¹ *
+                    (x * y * c + y) ^ (2 - x_1.1) *
+                  16 -
+                x ^ 3 * y ^ 5 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                      (-((x * y ^ 4 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3) +
+                              (x ^ 2 * y ^ 3 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3 -
+                            (x ^ 3 * y ^ 2 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 +
+                          (y ^ 5 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2)⁻¹ *
+                    (x * y * c + y) ^ (2 - x_1.1) *
+                  64 +
+              x ^ 4 * y ^ 4 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                    (-((x * y ^ 4 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3) +
+                            (x ^ 2 * y ^ 3 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3 -
+                          (x ^ 3 * y ^ 2 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 +
+                        (y ^ 5 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2)⁻¹ *
+                  (x * y * c + y) ^ (2 - x_1.1) *
+                96 -
+            x ^ 5 * y ^ 3 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                  (-((x * y ^ 4 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3) +
+                          (x ^ 2 * y ^ 3 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3 -
+                        (x ^ 3 * y ^ 2 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 +
+                      (y ^ 5 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2)⁻¹ *
+                (x * y * c + y) ^ (2 - x_1.1) *
+              64 +
+          x ^ 6 * y ^ 2 * Ring.choose (5 / 2) x_1.1 * Ring.choose (-2) x_2.1 * Ring.choose (-3) x_2.2 *
+                (-((x * y ^ 4 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3) +
+                        (x ^ 2 * y ^ 3 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 * 3 -
+                      (x ^ 3 * y ^ 2 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2 +
+                    (y ^ 5 * y ^ if 2 = 0 then 1 else 0) * y ^ x_2.1 * (-x + y) ^ x_2.2)⁻¹ *
+              (x * y * c + y) ^ (2 - x_1.1) *
+            16) =
+    x * ![x - y, x, y] 2 *
+        ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 - x ^ 4 * c ^ 2 * 24,
+            x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 + x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                    x ^ 3 * y * c ^ 2 * 80 +
+                  x ^ 3 * c * 8 +
+                x ^ 4 * c ^ 2 * 24 +
+              y ^ 2 * 15,
+            -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 + x ^ 3 * c * 12 +
+              x ^ 4 * c ^ 2 * 16]
+          2 *
+      2
+
+case inr.inr.inr.inr
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+x y c : F
+hx : x ≠ 0
+hy : y ≠ 0
+hxy : x ≠ y
+hanti1 : Finset.antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : Finset.antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hd : x - y ≠ 0
+hd' : y - x ≠ 0
+⊢ x ^ 9 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 13 * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) * 16 -
+                                                                          x ^ 9 * x ^ ((if 2 = 0 then 1 else 0) * 2) *
+                                                                                  y ^ 14 *
+                                                                                c *
+                                                                              (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                            128 -
+                                                                        x ^ 9 * x ^ ((if 2 = 0 then 1 else 0) * 2) *
+                                                                                y ^ 15 *
+                                                                              c ^ 2 *
+                                                                            (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                          384 -
+                                                                      x ^ 10 * x ^ ((if 2 = 0 then 1 else 0) * 2) *
+                                                                            y ^ 12 *
+                                                                          (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                        304 +
+                                                                    x ^ 10 * x ^ ((if 2 = 0 then 1 else 0) * 2) *
+                                                                            y ^ 13 *
+                                                                          c *
+                                                                        (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                      1792 +
+                                                                  x ^ 10 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 14 *
+                                                                        c ^ 2 *
+                                                                      (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                    4736 +
+                                                                x ^ 11 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 11 *
+                                                                    (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                  1776 -
+                                                              x ^ 11 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 12 * c *
+                                                                  (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                                11648 -
+                                                            x ^ 11 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 13 *
+                                                                  c ^ 2 *
+                                                                (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                              26624 -
+                                                          x ^ 12 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 10 *
+                                                              (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                            4944 +
+                                                        x ^ 12 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 11 * c *
+                                                            (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                          45312 +
+                                                      x ^ 12 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 12 * c ^ 2 *
+                                                          (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                        89856 +
+                                                    x ^ 13 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 9 *
+                                                        (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                      6816 -
+                                                  x ^ 13 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 10 * c *
+                                                      (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                    115968 -
+                                                x ^ 13 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 11 * c ^ 2 *
+                                                    (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                  201984 -
+                                              x ^ 14 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 8 *
+                                                  (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                                2016 +
+                                            x ^ 14 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 9 * c *
+                                                (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                              204288 +
+                                          x ^ 14 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 10 * c ^ 2 *
+                                              (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                            317184 -
+                                        x ^ 15 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 7 *
+                                            (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                          8736 -
+                                      x ^ 15 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 8 * c *
+                                          (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                        252672 -
+                                    x ^ 15 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 9 * c ^ 2 *
+                                        (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                      354816 +
+                                  x ^ 16 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 6 *
+                                      (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                    16224 +
+                                x ^ 16 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 7 * c *
+                                    (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                  219648 +
+                              x ^ 16 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 8 * c ^ 2 *
+                                  (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                                282624 -
+                            x ^ 17 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 5 *
+                                (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                              14256 -
+                          x ^ 17 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 6 * c *
+                              (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                            131712 -
+                        x ^ 17 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 7 * c ^ 2 *
+                            (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                          157056 +
+                      x ^ 18 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 4 * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                        7184 +
+                    x ^ 18 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 5 * c * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                      51968 +
+                  x ^ 18 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 6 * c ^ 2 *
+                      (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                    57984 -
+                x ^ 19 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 3 * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) * 2000 -
+              x ^ 19 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 4 * c * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+                12160 -
+            x ^ 19 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 5 * c ^ 2 * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) *
+              12800 +
+          x ^ 20 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 2 * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) * 240 +
+        x ^ 20 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 3 * c * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) * 1280 +
+      x ^ 20 * x ^ ((if 2 = 0 then 1 else 0) * 2) * y ^ 4 * c ^ 2 * (x - y) ^ ((if 2 = 1 then 1 else 0) * 2) * 1280 =
+    -(x ^ 9 * x ^ ((if 2 = 0 then 1 else 0) * 3) * y ^ 9 * ![x - y, x, y] 2 *
+                                ![![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 +
+                                                        x ^ 3 * 15 -
+                                                      x ^ 3 * y * c * 80 -
+                                                    x ^ 4 * y * c ^ 2 * 40 +
+                                                  x ^ 4 * c * 40 +
+                                                x ^ 5 * c ^ 2 * 24 -
+                                              y ^ 3 * 15 -
+                                            y ^ 4 * c * 40 -
+                                          y ^ 5 * c ^ 2 * 24,
+                                        x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 +
+                                                      x ^ 3 * y * c * 80 -
+                                                    x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                                                  x ^ 4 * y * c ^ 2 * 80 -
+                                                x ^ 4 * c * 20 -
+                                              x ^ 5 * c ^ 2 * 24 -
+                                            y ^ 4 * c * 20 -
+                                          y ^ 5 * c ^ 2 * 16,
+                                        x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 80 - x ^ 2 * y ^ 2 * c * 120 -
+                                                      x ^ 2 * y ^ 3 * c ^ 2 * 80 +
+                                                    x ^ 3 * y * c * 80 +
+                                                  x ^ 4 * y * c ^ 2 * 40 -
+                                                x ^ 4 * c * 20 -
+                                              x ^ 5 * c ^ 2 * 16 -
+                                            y ^ 4 * c * 20 -
+                                          y ^ 5 * c ^ 2 * 24]
+                                      2,
+                                    ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 -
+                                            x ^ 3 * c * 28 -
+                                          x ^ 4 * c ^ 2 * 24,
+                                        x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 +
+                                                  x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                                x ^ 3 * y * c ^ 2 * 80 +
+                                              x ^ 3 * c * 8 +
+                                            x ^ 4 * c ^ 2 * 24 +
+                                          y ^ 2 * 15,
+                                        -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 +
+                                            x ^ 3 * c * 12 +
+                                          x ^ 4 * c ^ 2 * 16]
+                                      2,
+                                    ![-(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 +
+                                            y ^ 3 * c * 28 +
+                                          y ^ 4 * c ^ 2 * 24,
+                                        -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 - y ^ 2 * 4 +
+                                            y ^ 3 * c * 12 +
+                                          y ^ 4 * c ^ 2 * 16,
+                                        x * y * 10 - x * y ^ 2 * c * 40 - x * y ^ 3 * c ^ 2 * 80 + x ^ 2 * 15 +
+                                                  x ^ 2 * y * c * 80 +
+                                                x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                              y ^ 2 +
+                                            y ^ 3 * c * 8 +
+                                          y ^ 4 * c ^ 2 * 24]
+                                      2]
+                                  2 *
+                              ![1, x, y] 2 *
+                            (x - y) ^ ((if 2 = 1 then 1 else 0) * 3) *
+                          16) +
+                      x ^ 10 * x ^ ((if 2 = 0 then 1 else 0) * 3) * y ^ 8 * ![x - y, x, y] 2 *
+                              ![![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 +
+                                                      x ^ 3 * 15 -
+                                                    x ^ 3 * y * c * 80 -
+                                                  x ^ 4 * y * c ^ 2 * 40 +
+                                                x ^ 4 * c * 40 +
+                                              x ^ 5 * c ^ 2 * 24 -
+                                            y ^ 3 * 15 -
+                                          y ^ 4 * c * 40 -
+                                        y ^ 5 * c ^ 2 * 24,
+                                      x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 +
+                                                    x ^ 3 * y * c * 80 -
+                                                  x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                                                x ^ 4 * y * c ^ 2 * 80 -
+                                              x ^ 4 * c * 20 -
+                                            x ^ 5 * c ^ 2 * 24 -
+                                          y ^ 4 * c * 20 -
+                                        y ^ 5 * c ^ 2 * 16,
+                                      x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 80 - x ^ 2 * y ^ 2 * c * 120 -
+                                                    x ^ 2 * y ^ 3 * c ^ 2 * 80 +
+                                                  x ^ 3 * y * c * 80 +
+                                                x ^ 4 * y * c ^ 2 * 40 -
+                                              x ^ 4 * c * 20 -
+                                            x ^ 5 * c ^ 2 * 16 -
+                                          y ^ 4 * c * 20 -
+                                        y ^ 5 * c ^ 2 * 24]
+                                    2,
+                                  ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 -
+                                          x ^ 3 * c * 28 -
+                                        x ^ 4 * c ^ 2 * 24,
+                                      x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 +
+                                                x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                              x ^ 3 * y * c ^ 2 * 80 +
+                                            x ^ 3 * c * 8 +
+                                          x ^ 4 * c ^ 2 * 24 +
+                                        y ^ 2 * 15,
+                                      -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 +
+                                          x ^ 3 * c * 12 +
+                                        x ^ 4 * c ^ 2 * 16]
+                                    2,
+                                  ![-(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 +
+                                          y ^ 3 * c * 28 +
+                                        y ^ 4 * c ^ 2 * 24,
+                                      -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 - y ^ 2 * 4 +
+                                          y ^ 3 * c * 12 +
+                                        y ^ 4 * c ^ 2 * 16,
+                                      x * y * 10 - x * y ^ 2 * c * 40 - x * y ^ 3 * c ^ 2 * 80 + x ^ 2 * 15 +
+                                                x ^ 2 * y * c * 80 +
+                                              x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                            y ^ 2 +
+                                          y ^ 3 * c * 8 +
+                                        y ^ 4 * c ^ 2 * 24]
+                                    2]
+                                2 *
+                            ![1, x, y] 2 *
+                          (x - y) ^ ((if 2 = 1 then 1 else 0) * 3) *
+                        144 -
+                    x ^ 11 * x ^ ((if 2 = 0 then 1 else 0) * 3) * y ^ 7 * ![x - y, x, y] 2 *
+                            ![![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 +
+                                                    x ^ 3 * 15 -
+                                                  x ^ 3 * y * c * 80 -
+                                                x ^ 4 * y * c ^ 2 * 40 +
+                                              x ^ 4 * c * 40 +
+                                            x ^ 5 * c ^ 2 * 24 -
+                                          y ^ 3 * 15 -
+                                        y ^ 4 * c * 40 -
+                                      y ^ 5 * c ^ 2 * 24,
+                                    x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 +
+                                                  x ^ 3 * y * c * 80 -
+                                                x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                                              x ^ 4 * y * c ^ 2 * 80 -
+                                            x ^ 4 * c * 20 -
+                                          x ^ 5 * c ^ 2 * 24 -
+                                        y ^ 4 * c * 20 -
+                                      y ^ 5 * c ^ 2 * 16,
+                                    x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 80 - x ^ 2 * y ^ 2 * c * 120 -
+                                                  x ^ 2 * y ^ 3 * c ^ 2 * 80 +
+                                                x ^ 3 * y * c * 80 +
+                                              x ^ 4 * y * c ^ 2 * 40 -
+                                            x ^ 4 * c * 20 -
+                                          x ^ 5 * c ^ 2 * 16 -
+                                        y ^ 4 * c * 20 -
+                                      y ^ 5 * c ^ 2 * 24]
+                                  2,
+                                ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 -
+                                        x ^ 3 * c * 28 -
+                                      x ^ 4 * c ^ 2 * 24,
+                                    x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 +
+                                              x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                            x ^ 3 * y * c ^ 2 * 80 +
+                                          x ^ 3 * c * 8 +
+                                        x ^ 4 * c ^ 2 * 24 +
+                                      y ^ 2 * 15,
+                                    -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 +
+                                        x ^ 3 * c * 12 +
+                                      x ^ 4 * c ^ 2 * 16]
+                                  2,
+                                ![-(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 +
+                                        y ^ 3 * c * 28 +
+                                      y ^ 4 * c ^ 2 * 24,
+                                    -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 - y ^ 2 * 4 +
+                                        y ^ 3 * c * 12 +
+                                      y ^ 4 * c ^ 2 * 16,
+                                    x * y * 10 - x * y ^ 2 * c * 40 - x * y ^ 3 * c ^ 2 * 80 + x ^ 2 * 15 +
+                                              x ^ 2 * y * c * 80 +
+                                            x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                          y ^ 2 +
+                                        y ^ 3 * c * 8 +
+                                      y ^ 4 * c ^ 2 * 24]
+                                  2]
+                              2 *
+                          ![1, x, y] 2 *
+                        (x - y) ^ ((if 2 = 1 then 1 else 0) * 3) *
+                      576 +
+                  x ^ 12 * x ^ ((if 2 = 0 then 1 else 0) * 3) * y ^ 6 * ![x - y, x, y] 2 *
+                          ![![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 +
+                                                  x ^ 3 * 15 -
+                                                x ^ 3 * y * c * 80 -
+                                              x ^ 4 * y * c ^ 2 * 40 +
+                                            x ^ 4 * c * 40 +
+                                          x ^ 5 * c ^ 2 * 24 -
+                                        y ^ 3 * 15 -
+                                      y ^ 4 * c * 40 -
+                                    y ^ 5 * c ^ 2 * 24,
+                                  x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 +
+                                                x ^ 3 * y * c * 80 -
+                                              x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                                            x ^ 4 * y * c ^ 2 * 80 -
+                                          x ^ 4 * c * 20 -
+                                        x ^ 5 * c ^ 2 * 24 -
+                                      y ^ 4 * c * 20 -
+                                    y ^ 5 * c ^ 2 * 16,
+                                  x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 80 - x ^ 2 * y ^ 2 * c * 120 -
+                                                x ^ 2 * y ^ 3 * c ^ 2 * 80 +
+                                              x ^ 3 * y * c * 80 +
+                                            x ^ 4 * y * c ^ 2 * 40 -
+                                          x ^ 4 * c * 20 -
+                                        x ^ 5 * c ^ 2 * 16 -
+                                      y ^ 4 * c * 20 -
+                                    y ^ 5 * c ^ 2 * 24]
+                                2,
+                              ![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                                    x ^ 4 * c ^ 2 * 24,
+                                  x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 +
+                                            x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                          x ^ 3 * y * c ^ 2 * 80 +
+                                        x ^ 3 * c * 8 +
+                                      x ^ 4 * c ^ 2 * 24 +
+                                    y ^ 2 * 15,
+                                  -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 +
+                                      x ^ 3 * c * 12 +
+                                    x ^ 4 * c ^ 2 * 16]
+                                2,
+                              ![-(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 +
+                                      y ^ 3 * c * 28 +
+                                    y ^ 4 * c ^ 2 * 24,
+                                  -(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 - y ^ 2 * 4 +
+                                      y ^ 3 * c * 12 +
+                                    y ^ 4 * c ^ 2 * 16,
+                                  x * y * 10 - x * y ^ 2 * c * 40 - x * y ^ 3 * c ^ 2 * 80 + x ^ 2 * 15 +
+                                            x ^ 2 * y * c * 80 +
+                                          x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                        y ^ 2 +
+                                      y ^ 3 * c * 8 +
+                                    y ^ 4 * c ^ 2 * 24]
+                                2]
+                            2 *
+                        ![1, x, y] 2 *
+                      (x - y) ^ ((if 2 = 1 then 1 else 0) * 3) *
+                    1344 -
+                x ^ 13 * x ^ ((if 2 = 0 then 1 else 0) * 3) * y ^ 5 * ![x - y, x, y] 2 *
+                        Matrix.vecCons
+                          (![x * y ^ 2 * 45 + x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y * 45 +
+                                              x ^ 3 * 15 -
+                                            x ^ 3 * y * c * 80 -
+                                          x ^ 4 * y * c ^ 2 * 40 +
+                                        x ^ 4 * c * 40 +
+                                      x ^ 5 * c ^ 2 * 24 -
+                                    y ^ 3 * 15 -
+                                  y ^ 4 * c * 40 -
+                                y ^ 5 * c ^ 2 * 24,
+                              x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 40 - x ^ 2 * y ^ 2 * c * 120 +
+                                            x ^ 3 * y * c * 80 -
+                                          x ^ 3 * y ^ 2 * c ^ 2 * 80 +
+                                        x ^ 4 * y * c ^ 2 * 80 -
+                                      x ^ 4 * c * 20 -
+                                    x ^ 5 * c ^ 2 * 24 -
+                                  y ^ 4 * c * 20 -
+                                y ^ 5 * c ^ 2 * 16,
+                              x * y ^ 3 * c * 80 + x * y ^ 4 * c ^ 2 * 80 - x ^ 2 * y ^ 2 * c * 120 -
+                                            x ^ 2 * y ^ 3 * c ^ 2 * 80 +
+                                          x ^ 3 * y * c * 80 +
+                                        x ^ 4 * y * c ^ 2 * 40 -
+                                      x ^ 4 * c * 20 -
+                                    x ^ 5 * c ^ 2 * 16 -
+                                  y ^ 4 * c * 20 -
+                                y ^ 5 * c ^ 2 * 24]
+                            2)
+                          (Matrix.vecCons
+                            (![x * y * 20 - x ^ 2 * 4 + x ^ 2 * y * c * 60 + x ^ 3 * y * c ^ 2 * 40 - x ^ 3 * c * 28 -
+                                  x ^ 4 * c ^ 2 * 24,
+                                x * y * 10 + x * y ^ 2 * c * 80 - x ^ 2 - x ^ 2 * y * c * 40 +
+                                          x ^ 2 * y ^ 2 * c ^ 2 * 80 -
+                                        x ^ 3 * y * c ^ 2 * 80 +
+                                      x ^ 3 * c * 8 +
+                                    x ^ 4 * c ^ 2 * 24 +
+                                  y ^ 2 * 15,
+                                -(x * y * 20) - x ^ 2 * 4 - x ^ 2 * y * c * 60 - x ^ 3 * y * c ^ 2 * 40 +
+                                    x ^ 3 * c * 12 +
+                                  x ^ 4 * c ^ 2 * 16]
+                              2)
+                            (Matrix.vecCons
+                              (Matrix.vecCons
+                                (-(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 + y ^ 2 * 4 +
+                                    y ^ 3 * c * 28 +
+                                  y ^ 4 * c ^ 2 * 24)
+                                (Matrix.vecCons
+                                  (-(x * y * 20) - x * y ^ 2 * c * 60 - x * y ^ 3 * c ^ 2 * 40 - y ^ 2 * 4 +
+                                      y ^ 3 * c * 12 +
+                                    y ^ 4 * c ^ 2 * 16)
+                                  (Matrix.vecCons (x * y * 10 - x * ⋯ ^ ⋯ * ⋯ * ⋯ - ⋯ + ⋯ + ⋯ + ⋯ - ⋯ + ⋯ + ⋯) ⋯))
+                                ⋯)
+                              ⋯))
+                          ⋯ *
+                      ⋯ *
+                    ⋯ *
+                  ⋯ +
+              ⋯ -
+            ⋯ +
+          ⋯ -
+        ⋯ +
+      ⋯
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteN2BennettIdentity
+error: build failed

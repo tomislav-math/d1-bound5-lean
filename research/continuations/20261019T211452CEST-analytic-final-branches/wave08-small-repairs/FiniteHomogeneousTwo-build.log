@@ -1,0 +1,20 @@
+✖ [1865/1865] Building D1Bound5.FiniteHomogeneousTwo (29s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteHomogeneousTwo.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteHomogeneousTwo.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteHomogeneousTwo.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteHomogeneousTwo.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteHomogeneousTwo.setup.json --json
+error: D1Bound5/FiniteHomogeneousTwo.lean:24:23: unexpected token '|*'; expected '|' or '|ₘ'
+error: D1Bound5/FiniteHomogeneousTwo.lean:20:34: unsolved goals
+case calc.step
+n : ℕ
+v : Fin (n + 1) → ℤ
+x y : ℂ
+hxy : ‖x‖ ≤ ‖y‖
+⊢ ∑ j, |↑(v j)| ≤ (∑ j, |↑(v j)|) * ‖y‖ ^ n
+error: D1Bound5/FiniteHomogeneousTwo.lean:40:31: Type mismatch
+  add_le_add_right (norm_add_le ?m.144 ?m.145) ?m.146
+has type
+  ?m.146 + ‖?m.144 + ?m.145‖ ≤ ?m.146 + (‖?m.144‖ + ‖?m.145‖)
+but is expected to have type
+  ‖u + v * c‖ + ‖w * c ^ 2‖ ≤ ‖u‖ + ‖v * c‖ + ‖w * c ^ 2‖
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteHomogeneousTwo
+error: build failed

@@ -1,0 +1,46 @@
+{
+  "utc": "2026-10-19T19:22:32.215683+00:00",
+  "unknown": [],
+  "targets": {
+    "CoherentRetainedTuple": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "RetainedFourScalar": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "CoherentRetainedBasicGap": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "CoherentRetainedTuple"
+      ]
+    },
+    "CoherentRetainedFourSizes": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "CoherentRetainedBasicGap",
+        "CoherentRetainedTuple"
+      ]
+    },
+    "CoherentRetainedStart": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "CoherentRetainedFourSizes",
+        "CoherentRetainedBasicGap",
+        "CoherentRetainedTuple",
+        "RetainedFourScalar"
+      ]
+    },
+    "OrdinaryClosedIntervals": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    }
+  }
+}

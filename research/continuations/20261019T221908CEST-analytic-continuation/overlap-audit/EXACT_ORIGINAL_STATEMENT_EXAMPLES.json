@@ -1,0 +1,20 @@
+[
+  {
+    "module": "AllLargeWindows",
+    "name": "D1Bound5.window_upper_lt_of_excluded",
+    "original_signature": " (w : \u211d \u00d7 \u211d) (D : \u211d)\n    (hex : \u00ac (w.1 \u2264 D \u2227 D \u2264 w.2)) (hlo : w.1 \u2264 D) : w.2 < D",
+    "explicit_arguments": "w D hex hlo"
+  },
+  {
+    "module": "AllLargeWindows",
+    "name": "D1Bound5.window_overlap_of_ratio",
+    "original_signature": " (l u q : \u211d) (hl : 0 < l)\n    (heq : u/l=q) (hq : 1 < q) : l < u",
+    "explicit_arguments": "l u q hl heq hq"
+  },
+  {
+    "module": "AllLargeWindowOverlaps",
+    "name": "D1Bound5.all_large_window_overlaps",
+    "original_signature": "\n    (A B S T C : \u211d) (hA : 3 \u2264 A) (hAB : A \u2264 B) (hBS : B \u2264 S)\n    (hT : 2*B*S < T) (hC : A^2*T^5/S^2 < C)\n    (hgap : 400*(A^7*B^5*S^3) < C) :\n    (allLargeWindowQ A T C).1 < A^2*C^7/(S^2*T^4) \u2227\n    (allLargeWindowN2 A B C).1 < (allLargeWindowQ A T C).2 \u2227\n    (allLargeWindowP A B S C).1 < (allLargeWindowN2 A B C).2 \u2227\n    (B^2 \u2264 S \u2192 (allLargeWindowN3 A B C).1 < (allLargeWindowP A B S C).2) \u2227\n    (allLargeWindowA3 A B C).1 < (allLargeWindowP A B S C).2 \u2227\n    (S \u2264 B^2 \u2192 (allLargeWindowM A B S C).1 < (allLargeWindowA3 A B C).2) \u2227\n    (allLargeWindowN3 A B C).1 < (allLargeWindowM A B S C).2 \u2227\n    (B^3 \u2264 S \u2192 (allLargeWindowA4 A B C).1 < (allLargeWindowN3 A B C).2) \u2227\n    (S \u2264 B^3 \u2192 (allLargeWindowN3 B S C).1 < (allLargeWindowN3 A B C).2) \u2227\n    (allLargeWindowA4 A B C).1 < (allLargeWindowN3 B S C).2 \u2227\n    ordinaryWindowLower B C 4 < (allLargeWindowA4 A B C).2 \u2227\n    (allLargeWindowA5 A B C).1 < ordinaryWindowUpper A B C 4 \u2227\n    ordinaryWindowLower B C 5 < (allLargeWindowA5 A B C).2 \u2227\n    ordinaryWindowLower B C 6 < ordinaryWindowUpper A B C 5 \u2227\n    42*B^3*C < 2*A*C^2/(5*B)",
+    "explicit_arguments": "A B S T C hA hAB hBS hT hC hgap"
+  }
+]
