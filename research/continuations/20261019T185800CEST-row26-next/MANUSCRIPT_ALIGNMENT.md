@@ -1,0 +1,3 @@
+# Manuscript alignment
+
+This unit changes only the granularity of four existing row26 independence certificates in the finite small-pair graph calculation. Every selected head is tested against its entire original suffix, so all cross-part index comparisons are preserved. The general prefix-add identity joins consecutive parts, including malformed-witness cases. The same original four propositions are proved. No field, vertex, sign, zero-square case, square test, certificate witness or radius is removed or changed. This unit alone does not prove descent completeness or whole graph triangle exclusion; the existing source bridges still remain mandatory.
