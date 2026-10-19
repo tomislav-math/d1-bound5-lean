@@ -1,0 +1,3 @@
+# Audit correction — 2026-10-19T08:30:47.422756+02:00
+
+The first audit script lacked Lean.Elab.Command because these targets import pure Init, not a large Mathlib tree. This script import was corrected without touching the proof sources. The next audit applied an unnecessarily strict empty-axiom expectation. The actual matching mask certificate depends on propext, which is explicitly allowed by the project trust policy. The final audit checks all transitive dependencies against exactly propext, Classical.choice and Quot.sound and prints the actual sets. The two failed audit logs are retained. No mathematical statement, proof, dependency baseline or native-evaluation policy was changed.

@@ -497,3 +497,7 @@ The global bound-five theorem and final verification gates remain open.
 ## 18 October 2026 — hourly wave119 retained-gap verification
 
 `CoherentRetainedGap` is now an accepted-build working module at source SHA256 `5374758cbafe23ef4c1439e82acf3ae6083ddbae04f6692091ae5c447ee08b87`. Its two theorems, `full_ring_retained_three_h48_gap` and `full_ring_all_large_retained_monomial`, compiled with unchanged dependency/artifact guards, passed exact type and transitive axiom audit, and passed installed same-kernel leanchecker replay. Only `propext`, `Classical.choice`, and `Quot.sound` occur transitively. This is a verified working dependency, not accepted-root integration or a proof of `MainStatement`.
+
+## 19 October 2026 — exact Pell matching pilot and next 32 prefixes
+
+Three unchanged pure-Init modules now supply 32 exact Pell prefix/stopping/list certificates (Data4 and Data5) and the complete matching certificate for the four d=4519 magnitudes. All 35 original theorems and 35 data definitions passed exact type/transitive-axiom audit and three targeted installed SAME-kernel replays. Only the two mask/matching theorems use propext; all other declarations have no axioms. Pinned source/dependency/artifact guards cover five project modules. Aggregate/full-ring exclusions, remaining field certificates, root integration and final MainStatement gates remain open. Evidence: research/continuations/20261019T082209CEST-pell-matching/VERIFICATION_SUMMARY.json.

@@ -1,0 +1,116 @@
+{
+  "status": "COMPLETED_UNIT",
+  "time": "2026-10-19T08:33:20.917007+02:00",
+  "targets": [
+    "PellLightMatchingPilot",
+    "PellLightPrefixData4",
+    "PellLightPrefixData5"
+  ],
+  "original_theorems": 35,
+  "data_definitions": 35,
+  "new_prefix_fields": 32,
+  "new_matching_field": 4519,
+  "builds": {
+    "PellLightMatchingPilot": {
+      "source_sha256": "fd6bdb61a62a75e7b9a4af72ac86f459323d2aaf21cd0fb2a902afa854de4091",
+      "seconds": 6.08594987494871,
+      "exit": 0,
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    },
+    "PellLightPrefixData4": {
+      "source_sha256": "a67c67d63b6762537cb727eff3e259f15fd0be77db8a181f55291dbe48284829",
+      "seconds": 17.205889208242297,
+      "exit": 0,
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    },
+    "PellLightPrefixData5": {
+      "source_sha256": "2b08dce258832b5c6b76fab1a0b66f2d2e88511aa6c814c6cafec2d2f8f5d44f",
+      "seconds": 16.19492229213938,
+      "exit": 0,
+      "closure_unchanged": true,
+      "shared_artifacts_unchanged": true
+    }
+  },
+  "checks": [
+    {
+      "label": "pell-certificate-type-axioms",
+      "pid": 83683,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261019T082209CEST-pell-matching/PellCertificateAudit.lean"
+      ],
+      "time": "2026-10-19T08:30:50.790460+02:00",
+      "exit": 0,
+      "seconds": 5.177652291022241,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "pell-certificate-type-axioms.log"
+    },
+    {
+      "label": "PellLightMatchingPilot-targeted-replay",
+      "pid": 83703,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.PellLightMatchingPilot"
+      ],
+      "time": "2026-10-19T08:30:55.979833+02:00",
+      "exit": 0,
+      "seconds": 5.422016499564052,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "PellLightMatchingPilot-targeted-replay.log"
+    },
+    {
+      "label": "PellLightPrefixData4-targeted-replay",
+      "pid": 83724,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.PellLightPrefixData4"
+      ],
+      "time": "2026-10-19T08:31:01.408840+02:00",
+      "exit": 0,
+      "seconds": 15.28791783330962,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "PellLightPrefixData4-targeted-replay.log"
+    },
+    {
+      "label": "PellLightPrefixData5-targeted-replay",
+      "pid": 83744,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.PellLightPrefixData5"
+      ],
+      "time": "2026-10-19T08:31:16.712306+02:00",
+      "exit": 0,
+      "seconds": 14.969627082813531,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "log": "PellLightPrefixData5-targeted-replay.log"
+    }
+  ],
+  "axioms_nonempty": {
+    "D1Bound5.PellMatchingLightProduction.pellMasks_4519_valid": "[propext]",
+    "D1Bound5.PellMatchingLightProduction.pellMatching_4519_checked": "[propext]"
+  },
+  "project_source_closure_count": 5,
+  "mathematical_sources_changed": false,
+  "root_integrated": false,
+  "main_statement_proved": false,
+  "independent_review": false,
+  "whole_root_clean_checkout": false,
+  "automation_modified": false
+}
