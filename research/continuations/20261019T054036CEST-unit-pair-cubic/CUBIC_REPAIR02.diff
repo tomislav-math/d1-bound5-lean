@@ -1,0 +1,13 @@
+--- UnitPairCubic.trial02.lean
++++ UnitPairCubic.lean
+@@ -31,7 +31,9 @@
+   have hn := congrArg norm hid
+   simp only [norm_mul,norm_neg,Complex.norm_two] at hn
+   rw [hn]
+-  simpa only [Complex.norm_pow] using norm_add_le ((u-z)^2) ((v-z)^2)
++  calc
++    _ ≤ ‖(u-z)^(2 : ℕ)‖+‖(v-z)^(2 : ℕ)‖ := norm_add_le _ _
++    _ = _ := by rw [Complex.norm_pow, Complex.norm_pow]
+ 
+ private theorem exists_unit_pair_integral_sign
+     {R : Type*} [CommRing R] (f : R →+* ℂ) (u z : R) (W : ℝ)

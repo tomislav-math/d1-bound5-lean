@@ -1,5 +1,9 @@
 # Open mathematical obligations
 
+## 19 October 2026 — unit-pair cubic growth and first-extension cutoff verified
+
+Four working modules now prove the full-ring cubic gap, its three-step iteration, and |a_2|<10000 for an actual modulus-ordered D(1)-sextuple with a_0=-1 and a_1=1. Opposite-pair exclusions, nonzero integral forms, signed roots and the all-order Bennett input are derived, not supplied as certificates. All ten original public theorems and one private helper compiled with unchanged statements. Public type/transitive-axiom audit and four targeted installed SAME-kernel replays passed with only propext, Classical.choice and Quot.sound. The cutoff does not exclude the remaining small range. Field/axis reduction, finite Pell certificates, global exclusions, root integration and final whole-project gates remain open. Evidence: research/continuations/20261019T054036CEST-unit-pair-cubic/VERIFICATION_SUMMARY.json.
+
 ## 19 October 2026 — full-ring all-positive-order Bennett inequality verified
 
 Three working modules now prove the exact half-rate residual, the full-ring two-anchor inequality for every positive integer order, and the ordinary height envelope for an actual ordered D(1)-quadruple. The terminal root nonzero, signed integral approximations, nonzero integral row, and all coefficient/residual estimates are derived internally. The parameterized height envelope retains its explicit logarithmic h,r,u premises. Nine original theorems and two definitions passed pinned builds, exact type/transitive-axiom checks and three targeted installed SAME-kernel replays; only propext, Classical.choice and Quot.sound. No root integration, final finite exclusion, independent final review, whole-root clean checkout or MainStatement proof. Evidence: research/continuations/20261019T001143CEST-residual-rate/VERIFICATION_SUMMARY.json.

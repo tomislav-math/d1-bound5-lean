@@ -1,0 +1,65 @@
+UNIT_PAIR_AXIOMS_PASS D1Bound5.unit_pair_cubic_root_margin: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.unit_pair_cubic_numeric: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.unit_pair_cancellation_ne_zero: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.unit_pair_cancellation_norm: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.discrete_unit_pair_cubic_growth: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.full_ring_unit_pair_cubic_growth: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.IsD1Tuple.unit_pair_cubic_growth: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.unit_pair_three_cubic_gaps: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.IsD1Tuple.unit_pair_cubic_iteration: [propext, Classical.choice, Quot.sound]
+UNIT_PAIR_AXIOMS_PASS D1Bound5.IsD1Tuple.unit_pair_first_extension_lt: [propext, Classical.choice, Quot.sound]
+D1Bound5.unit_pair_cubic_root_margin : ∀ (C D Z W : ℝ),
+  9 ≤ C → C ≤ D → W ≤ C + D → C * D ≤ Z ^ 2 + 1 → W < (1 - (7 / 8) ^ 2) * Z ^ 2
+D1Bound5.unit_pair_cubic_numeric : ∀ (C D Z W E F L : ℝ),
+  9 ≤ C →
+    C ≤ D →
+      0 < Z →
+        0 < W →
+          0 ≤ E →
+            0 ≤ F →
+              1 ≤ L →
+                W ≤ C + D →
+                  C * D ≤ Z ^ 2 + 1 →
+                    15 / 8 * Z * E < W → 15 / 8 * Z * F < W → 2 * Z * L ≤ E ^ 2 + F ^ 2 → C ^ 3 / 2 < D
+D1Bound5.unit_pair_cancellation_ne_zero : ∀ (u v z w : ℂ),
+  u ^ 2 = z ^ 2 + w → v ^ 2 = z ^ 2 - w → w ≠ 0 → u + v - 2 * z ≠ 0
+D1Bound5.unit_pair_cancellation_norm : ∀ (u v z w : ℂ),
+  u ^ 2 = z ^ 2 + w → v ^ 2 = z ^ 2 - w → 2 * ‖z‖ * ‖u + v - 2 * z‖ ≤ ‖u - z‖ ^ 2 + ‖v - z‖ ^ 2
+@D1Bound5.discrete_unit_pair_cubic_growth : ∀ {R : Type u_1} [inst : CommRing R] (f : R →+* ℂ),
+  (∀ (x : R), x ≠ 0 → 1 ≤ ‖f x‖) →
+    ∀ (c d z u v : R),
+      9 ≤ ‖f c‖ →
+        ‖f c‖ ≤ ‖f d‖ →
+          f c + f d ≠ 0 →
+            z ^ 2 = c * d + 1 → u ^ 2 = (c + 1) * (d + 1) → v ^ 2 = (1 - c) * (1 - d) → ‖f c‖ ^ 3 / 2 < ‖f d‖
+@D1Bound5.full_ring_unit_pair_cubic_growth : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (c d : NumberField.RingOfIntegers K),
+      9 ≤ ‖phi ↑c‖ →
+        ‖phi ↑c‖ ≤ ‖phi ↑d‖ →
+          d ≠ -c →
+            (∃ r, r ^ 2 = c + 1) →
+              (∃ r, r ^ 2 = 1 - c) →
+                (∃ r, r ^ 2 = d + 1) → (∃ r, r ^ 2 = 1 - d) → (∃ r, r ^ 2 = c * d + 1) → ‖phi ↑c‖ ^ 3 / 2 < ‖phi ↑d‖
+@D1Bound5.IsD1Tuple.unit_pair_cubic_growth : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 4 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        a 0 = -1 →
+          a 1 = 1 → 9 ≤ ‖phi ↑(a 2)‖ → ‖phi ↑(a 2)‖ ≤ ‖phi ↑(a 3)‖ → a 3 ≠ -a 2 → ‖phi ↑(a 2)‖ ^ 3 / 2 < ‖phi ↑(a 3)‖
+D1Bound5.unit_pair_three_cubic_gaps : ∀ (S T C D : ℝ),
+  9 ≤ S → S ^ 3 / 2 < T → T ^ 3 / 2 < C → C ^ 3 / 2 < D → S ^ 27 / 8192 < D
+@D1Bound5.IsD1Tuple.unit_pair_cubic_iteration : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        a 0 = -1 →
+          a 1 = 1 → (Monotone fun i => ‖phi ↑(a i)‖) → 9 ≤ ‖phi ↑(a 2)‖ → ‖phi ↑(a 2)‖ ^ 27 / 8192 < ‖phi ↑(a 5)‖
+@D1Bound5.IsD1Tuple.unit_pair_first_extension_lt : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a → a 0 = -1 → a 1 = 1 → (Monotone fun i => ‖phi ↑(a i)‖) → ‖phi ↑(a 2)‖ < 10000

@@ -1,0 +1,22 @@
+--- UnitPairCubic.before.lean
++++ UnitPairCubic.lean
+@@ -31,7 +31,7 @@
+   have hn := congrArg norm hid
+   simp only [norm_mul,norm_neg,Complex.norm_two] at hn
+   rw [hn]
+-  simpa only [norm_pow] using norm_add_le ((u-z)^2) ((v-z)^2)
++  simpa only [Complex.norm_pow] using norm_add_le ((u-z)^2) ((v-z)^2)
+ 
+ private theorem exists_unit_pair_integral_sign
+     {R : Type*} [CommRing R] (f : R →+* ℂ) (u z : R) (W : ℝ)
+@@ -86,7 +86,9 @@
+   have hgap := unit_pair_cubic_root_margin ‖f c‖ ‖f d‖ ‖f z‖ ‖f c+f d‖
+     hC hCD hW hZ
+   have huErr : ‖(f u)^2-(f z)^2‖ ≤ ‖f c+f d‖ := by rw [huC]; simp
+-  have hvErr : ‖(f v)^2-(f z)^2‖ ≤ ‖f c+f d‖ := by rw [hvC]; simp
++  have hvErr : ‖(f v)^2-(f z)^2‖ ≤ ‖f c+f d‖ := by
++    rw [hvC, show (f z)^2-(f c+f d)-(f z)^2 = -(f c+f d) by ring,
++      norm_neg]
+   obtain ⟨U,hU,hUnear⟩ := exists_unit_pair_integral_sign f u z ‖f c+f d‖
+     (norm_pos_iff.mp hZ0) hW0 huErr hgap
+   obtain ⟨V,hV,hVnear⟩ := exists_unit_pair_integral_sign f v z ‖f c+f d‖

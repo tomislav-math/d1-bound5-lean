@@ -1,0 +1,3 @@
+# START — 2026-10-19T05:41:03.094007+02:00
+
+Continue the unit-pair branch from the current verified full-ring Bennett bridge. Inspect, compile and repair the existing UnitPairCubicNumeric, UnitPairCubic, UnitPairCubicIteration and UnitPairFirstExtensionBound modules without changing theorem statements. MainStatement remains UNPROVED. Initial branch main, HEAD 7536cea591f263a14d53a35cc127b1654c1794a3, no live proof processes and both project locks free. Queue remains paused between bounded jobs, max_parallel=1. Preserve the inherited staged record, frozen handoff/manuscript and pinned toolchain. No automation changes.

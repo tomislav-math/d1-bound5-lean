@@ -1,0 +1,35 @@
+{
+  "UnitPairCubicNumeric": {
+    "accepted": false,
+    "eligible": true,
+    "missing": [],
+    "source_sha256": "8c7ff651911ee31cb8b29e22e5594dd428c04a7b2295263089a9dfbaf6358898"
+  },
+  "UnitPairCubic": {
+    "accepted": false,
+    "eligible": false,
+    "missing": [
+      "UnitPairCubicNumeric"
+    ],
+    "source_sha256": "c4d7919a92d82cd87a0dcb74850c68bc85f7a8e1833cf277658e5ce2a0af5966"
+  },
+  "UnitPairCubicIteration": {
+    "accepted": false,
+    "eligible": false,
+    "missing": [
+      "UnitPairCubic",
+      "UnitPairCubicNumeric"
+    ],
+    "source_sha256": "a34fce4fbc0641e3fd4321f40ebb3bba4fb6d40eab6d0dad17f09e677f1ee8f7"
+  },
+  "UnitPairFirstExtensionBound": {
+    "accepted": false,
+    "eligible": false,
+    "missing": [
+      "UnitPairCubicIteration",
+      "UnitPairCubic",
+      "UnitPairCubicNumeric"
+    ],
+    "source_sha256": "24ca4a5d416492e58b9a1ec9e215e79632d8fe431bfd3ffb10e9def847358e8f"
+  }
+}

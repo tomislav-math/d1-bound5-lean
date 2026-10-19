@@ -1,0 +1,10 @@
+--- UnitPairFirstExtensionBound.before.lean
++++ UnitPairFirstExtensionBound.lean
+@@ -22,6 +22,7 @@
+   swap
+   · linarith only [lt_of_not_ge hS]
+   let f : 𝓞 K →+* ℂ := phi.comp (algebraMap (𝓞 K) K)
++  change 9 ≤ ‖f (a 2)‖ at hS
+   have hm : f (a 0) = -1 := by rw [hminus,map_neg,map_one]
+   have hp : f (a 1) = 1 := by rw [hplus,map_one]
+   have hS0 : 0 < ‖f (a 2)‖ := by linarith only [hS]
