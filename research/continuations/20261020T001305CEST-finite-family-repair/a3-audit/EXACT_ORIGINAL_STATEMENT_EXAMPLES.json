@@ -1,0 +1,212 @@
+[
+  {
+    "module": "FiniteA3Matrix",
+    "name": "D1Bound5.finiteA3Matrix_zero",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteA3Matrix x y c i 0 = finiteA3Constant x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteA3Matrix",
+    "name": "D1Bound5.finiteA3Matrix_one",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteA3Matrix x y c i 1 = x*finiteA3Left x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteA3Matrix",
+    "name": "D1Bound5.finiteA3Matrix_two",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteA3Matrix x y c i 2 = y*finiteA3Right x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteA3Matrix",
+    "name": "D1Bound5.finiteA3DividedMatrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteA3DividedMatrix x y c).det = -2450*(x*y)^0*c^1*(x-y)^11",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteA3Matrix",
+    "name": "D1Bound5.finiteA3Matrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteA3Matrix x y c).det = -2450*(x*y)^1*c^1*(x-y)^11",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteA3Matrix",
+    "name": "D1Bound5.finiteA3DividedMatrix_det_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F] (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y) :\n    (finiteA3DividedMatrix x y c).det \u2260 0",
+    "explicit_arguments": "x y c hx hy hc hxy"
+  },
+  {
+    "module": "FiniteA3Coefficients",
+    "name": "D1Bound5.finiteA3_root_coeff_decomposition",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c : R) (i : Fin 3) (j : Fin 2) :\n    ![finiteA3Left x y c i,finiteA3Right x y c i] j =\n      \u2211 ell : Fin 4, finiteA3RootCoeff x y i j ell*c^(ell : \u2115)",
+    "explicit_arguments": "x y c i j"
+  },
+  {
+    "module": "FiniteA3Coefficients",
+    "name": "D1Bound5.finiteA3_coefficient_sums_0",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA3Coeff0 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA3Coeff0 i 1 r : \u211d)|) = finiteA3CoefficientSums i 0",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA3Coefficients",
+    "name": "D1Bound5.finiteA3_coefficient_sums_1",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA3Coeff1 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA3Coeff1 i 1 r : \u211d)|) = finiteA3CoefficientSums i 1",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA3Coefficients",
+    "name": "D1Bound5.finiteA3_coefficient_sums_2",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA3Coeff2 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA3Coeff2 i 1 r : \u211d)|) = finiteA3CoefficientSums i 2",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA3Coefficients",
+    "name": "D1Bound5.finiteA3_coefficient_sums_3",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA3Coeff3 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA3Coeff3 i 1 r : \u211d)|) = finiteA3CoefficientSums i 3",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.map_finiteA3Constant",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteA3Constant x y c i) = finiteA3Constant (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.map_finiteA3Left",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteA3Left x y c i) = finiteA3Left (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.map_finiteA3Right",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteA3Right x y c i) = finiteA3Right (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.map_finiteA3DividedMatrix",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c : R) (i j : Fin 3) :\n    f (finiteA3DividedMatrix x y c i j) =\n      finiteA3DividedMatrix (f x) (f y) (f c) i j",
+    "explicit_arguments": "f x y c i j"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.map_finiteA3RowForm",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c z sX sY : R) (i : Fin 3) :\n    f (finiteA3RowForm x y c z sX sY i) =\n      finiteA3RowForm (f x) (f y) (f c) (f z) (f sX) (f sY) i",
+    "explicit_arguments": "f x y c z sX sY i"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.finiteA3RowForm_exists_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F]\n    (x y c z sX sY : F) (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, finiteA3RowForm x y c z sX sY i \u2260 0",
+    "explicit_arguments": "x y c z sX sY hx hy hc hxy hz"
+  },
+  {
+    "module": "FiniteA3IntegralRows",
+    "name": "D1Bound5.full_ring_finiteA3RowForm_exists_one_le_norm",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c z sX sY : \ud835\udcde K) (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, 1 \u2264 \u2016finiteA3RowForm (phi (x : K)) (phi (y : K))\n      (phi (c : K)) (phi (z : K)) (phi (sX : K)) (phi (sY : K)) i\u2016",
+    "explicit_arguments": "hK phi x y c z sX sY hx hy hc hxy hz"
+  },
+  {
+    "module": "FiniteA3Height",
+    "name": "D1Bound5.finiteA3_root_coefficient_norm_le",
+    "original_signature": " (x y : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016)\n    (i : Fin 3) (ell : Fin 4) :\n    \u2016finiteA3RootCoeff x y i 0 ell\u2016+\u2016finiteA3RootCoeff x y i 1 ell\u2016 \u2264\n      (finiteA3CoefficientSums i ell : \u211d)*\u2016y\u2016^(3+(ell : \u2115))",
+    "explicit_arguments": "x y hxy i ell"
+  },
+  {
+    "module": "FiniteA3Height",
+    "name": "D1Bound5.finiteA3_coefficient_sums_nonneg",
+    "original_signature": " (i : Fin 3) (ell : Fin 4) :\n    0 \u2264 (finiteA3CoefficientSums i ell : \u211d)",
+    "explicit_arguments": "i ell"
+  },
+  {
+    "module": "FiniteA3Height",
+    "name": "D1Bound5.finiteA3_height_slack",
+    "original_signature": " (i : Fin 3) :\n    (101/100 : \u211d)*(\u2211 ell : Fin 4,\n      (finiteA3CoefficientSums i ell : \u211d)/(1000 : \u211d)^(3-(ell : \u2115))) < 2265",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA3Height",
+    "name": "D1Bound5.finiteA3_root_columns_norm_le",
+    "original_signature": " (x y c : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (i : Fin 3) :\n    \u2016finiteA3Left x y c i\u2016+\u2016finiteA3Right x y c i\u2016 \u2264\n      \u2016y\u2016^3*\u2211 ell : Fin 4, (finiteA3CoefficientSums i ell : \u211d)*(\u2016y\u2016*\u2016c\u2016)^(ell : \u2115)",
+    "explicit_arguments": "x y c hxy i"
+  },
+  {
+    "module": "FiniteA3Height",
+    "name": "D1Bound5.finiteA3_height_scaled",
+    "original_signature": " (x y c : \u2102) (hy : y \u2260 0)\n    (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (hYC : 1000 \u2264 \u2016y\u2016*\u2016c\u2016) (i : Fin 3) :\n    (101/100 : \u211d)*(\u2016finiteA3Left x y c i\u2016+\u2016finiteA3Right x y c i\u2016) <\n      2265*\u2016y\u2016^6*\u2016c\u2016^3",
+    "explicit_arguments": "x y c hy hxy hYC i"
+  },
+  {
+    "module": "FiniteA3ResidueIdentity",
+    "name": "D1Bound5.finiteA3_residue_identity",
+    "original_signature": " (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i j : Fin 3) :\n    finiteUnequalClearedEntry x y c 3 2 i j =\n      4*finiteA3RowFactor x y i*finiteA3Matrix x y c i j",
+    "explicit_arguments": "x y c hx hy hxy i j"
+  },
+  {
+    "module": "FiniteA3Residual",
+    "name": "D1Bound5.finiteA3_beta",
+    "original_signature": " : |Ring.choose (7/2 : \u211d) 8| = 35/32768",
+    "explicit_arguments": ""
+  },
+  {
+    "module": "FiniteA3Residual",
+    "name": "D1Bound5.finiteA3_residual_sum_identity",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i : Fin 3) :\n    4*finiteA3RowFactor x y i*finiteA3Residual x y c i =\n      \u2211 j, finiteUnequalClearedEntry x y c 3 2 i j*\n        (1+bennettTwoNodes x y j*(x*y*c)\u207b\u00b9)^(1/2 : \u2102)",
+    "explicit_arguments": "x y c hx hy hxy i"
+  },
+  {
+    "module": "FiniteA3Residual",
+    "name": "D1Bound5.finiteA3RowFactor_ne_zero",
+    "original_signature": " (x y : \u2102) (hx : x \u2260 0) (hy : y \u2260 0)\n    (hxy : x \u2260 y) (i : Fin 3) : finiteA3RowFactor x y i \u2260 0",
+    "explicit_arguments": "x y hx hy hxy i"
+  },
+  {
+    "module": "FiniteA3Residual",
+    "name": "D1Bound5.finiteA3_residual_norm_lt_point",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteA3Residual x y c i\u2016 <\n      (101/100 : \u211d)*(35/32768)*(4^3*\u2016x-y\u2016^6/(\u2016x\u2016^3*\u2016y\u2016^3*\u2016c\u2016^5)) /\n        (4*\u2016finiteA3RowFactor x y i\u2016)",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC i"
+  },
+  {
+    "module": "FiniteA3Residual",
+    "name": "D1Bound5.finiteA3_residual_norm_lt",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteA3Residual x y c i\u2016 < (35/16 : \u211d)*\u2016y\u2016^3/(\u2016x\u2016^4*\u2016c\u2016^5)",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC i"
+  },
+  {
+    "module": "FiniteA3Approximation",
+    "name": "D1Bound5.finiteA3Residual_explicit",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (i : Fin 3) :\n    finiteA3Residual x y c i = finiteA3Constant x y c i +\n      x*finiteA3Left x y c i*(1+1/(x*c))^(1/2 : \u2102) +\n      y*finiteA3Right x y c i*(1+1/(y*c))^(1/2 : \u2102)",
+    "explicit_arguments": "x y c hx hy hc i"
+  },
+  {
+    "module": "FiniteA3Approximation",
+    "name": "D1Bound5.finiteA3RowForm_explicit",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c z sX sY : R) (i : Fin 3) :\n    finiteA3RowForm x y c z sX sY i =\n      finiteA3Constant x y c i*z+finiteA3Left x y c i*sX+\n        finiteA3Right x y c i*sY",
+    "explicit_arguments": "x y c z sX sY i"
+  },
+  {
+    "module": "FiniteA3Approximation",
+    "name": "D1Bound5.finiteA3RowForm_norm_lt",
+    "original_signature": " (x y c z sX sY : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hz : z \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016)\n    (herrorX : \u2016(1+1/(x*c))^(1/2 : \u2102)-sX/(x*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016x\u2016*\u2016z\u2016^2))\n    (herrorY : \u2016(1+1/(y*c))^(1/2 : \u2102)-sY/(y*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016y\u2016*\u2016z\u2016^2)) (i : Fin 3) :\n    \u2016finiteA3RowForm x y c z sX sY i\u2016 <\n      2265*\u2016y\u2016^6*\u2016c\u2016^4/\u2016z\u2016 + (35/16 : \u211d)*\u2016y\u2016^3*\u2016z\u2016/(\u2016x\u2016^4*\u2016c\u2016^5)",
+    "explicit_arguments": "x y c z sX sY hx hy hc hz hxy hXY hXC herrorX herrorY i"
+  },
+  {
+    "module": "FiniteA3Approximation",
+    "name": "D1Bound5.full_ring_finiteA3_integer",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c d rX rY vX vY z : \ud835\udcde K)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hd : d \u2260 0) (hxy : x \u2260 y)\n    (hrX : rX^2=x*c+1) (hrY : rY^2=y*c+1)\n    (hvX : vX^2=x*d+1) (hvY : vY^2=y*d+1) (hzsq : z^2=c*d+1)\n    (hXY : \u2016phi (x : K)\u2016 \u2264 \u2016phi (y : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (x : K)\u2016*\u2016phi (c : K)\u2016)\n    (hC : 200*\u2016phi (y : K)\u2016 \u2264 \u2016phi (c : K)\u2016) :\n    1 < 2265*\u2016phi (y : K)\u2016^6*\u2016phi (c : K)\u2016^4/\u2016phi (z : K)\u2016 +\n      (35/16 : \u211d)*\u2016phi (y : K)\u2016^3*\u2016phi (z : K)\u2016/\n        (\u2016phi (x : K)\u2016^4*\u2016phi (c : K)\u2016^5)",
+    "explicit_arguments": "hK phi x y c d rX rY vX vY z hx hy hc hd hxy hrX hrY hvX hvY hzsq hXY hXC hC"
+  },
+  {
+    "module": "FiniteA3Interval",
+    "name": "D1Bound5.IsD1Tuple.finiteA3_inequality",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hXY : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 200*\u2016phi (t 1 : K)\u2016 \u2264 \u2016phi (t 2 : K)\u2016) :\n    \u2203 z : \ud835\udcde K, z^2=t 2*t 3+1 \u2227\n      1 < 2265*\u2016phi (t 1 : K)\u2016^6*\u2016phi (t 2 : K)\u2016^4/\u2016phi (z : K)\u2016 +\n        (35/16 : \u211d)*\u2016phi (t 1 : K)\u2016^3*\u2016phi (z : K)\u2016/\n          (\u2016phi (t 0 : K)\u2016^4*\u2016phi (t 2 : K)\u2016^5)",
+    "explicit_arguments": "hK phi t ht hXY hXC hC"
+  },
+  {
+    "module": "FiniteA3Interval",
+    "name": "D1Bound5.IsD1Tuple.finiteA3_closed_interval_excluded",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hXY : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 200*\u2016phi (t 1 : K)\u2016 \u2264 \u2016phi (t 2 : K)\u2016)\n    (hCD : \u2016phi (t 2 : K)\u2016 \u2264 \u2016phi (t 3 : K)\u2016)\n    (hleft : 4*2265^2*\u2016phi (t 1 : K)\u2016^12*\u2016phi (t 2 : K)\u2016^7 /\n      (1-1/4000 : \u211d) \u2264 \u2016phi (t 3 : K)\u2016)\n    (hright : \u2016phi (t 3 : K)\u2016 \u2264\n      64*\u2016phi (t 0 : K)\u2016^8*\u2016phi (t 2 : K)\u2016^9 /\n        (1225*\u2016phi (t 1 : K)\u2016^6*(1+1/4000 : \u211d))) : False",
+    "explicit_arguments": "hK phi t ht hXY hXC hC hCD hleft hright"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-19T22:15:50.928046+00:00",
+  "unknown": [],
+  "targets": {
+    "UnequalPoleResidual": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePolynomialHeight": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA3Coefficients": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteUnequalEntry": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "UnequalPoleResidual"
+      ]
+    },
+    "FiniteA3Height": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3Coefficients",
+        "FinitePolynomialHeight"
+      ]
+    }
+  }
+}

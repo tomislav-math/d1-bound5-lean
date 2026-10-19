@@ -1,0 +1,28 @@
+{
+  "time": "2026-10-20T01:00:35.961227+02:00",
+  "failed_check_pid": 65245,
+  "failed_check_exit": 1,
+  "runtime_seconds": 7.11,
+  "cause": "Git diff --check flags the one-space context markers for blank lines inside preserved unified-diff fences. No Lean, source-byte, credential or index-integrity failure occurred.",
+  "exact_allowed_lines": {
+    "research/continuations/20261020T001305CEST-finite-family-repair/REPAIR01-coefficient-vector.md": [
+      16,
+      22
+    ],
+    "research/continuations/20261020T001305CEST-finite-family-repair/REPAIR02-proven-patterns.md": [
+      17,
+      103
+    ],
+    "research/continuations/20261020T001305CEST-finite-family-repair/REPAIR03-sum-factor.md": [
+      18
+    ],
+    "research/continuations/20261020T001305CEST-finite-family-repair/REPAIR04-unequal-node-normalization.md": [
+      57,
+      62
+    ],
+    "research/continuations/20261020T001305CEST-finite-family-repair/REPAIR05-height-scaling.md": [
+      23
+    ]
+  },
+  "policy": "Keep original diff text intact. Only these files, whose every whitespace warning was checked as a blank context marker within a diff fence, are excepted from the cosmetic Git whitespace gate. All blob and credential checks remain mandatory."
+}

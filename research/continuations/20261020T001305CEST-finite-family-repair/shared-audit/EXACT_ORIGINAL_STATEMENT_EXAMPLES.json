@@ -1,0 +1,134 @@
+[
+  {
+    "module": "UnequalPoleResidual",
+    "name": "D1Bound5.unequalPolePolynomial_residual_hasSum",
+    "original_signature": "\n    (a : I \u2192 \u2102) (e : I \u2192 \u2115) (k : \u2115) (\u03bd x : \u2102)\n    (hx : \u2200 j, \u2016a j*x\u2016 < 1) :\n    HasSum (fun r : \u2115 => PowerSeries.coeff r\n      (\u2211 j, (unequalPolePolynomial a e k \u03bd j : PowerSeries \u2102)*\n        PowerSeries.rescale (a j) (PowerSeries.binomialSeries \u2102 \u03bd))*x^r)\n      (\u2211 j, (unequalPolePolynomial a e k \u03bd j).eval x*(1+a j*x)^\u03bd)",
+    "explicit_arguments": "a e k \u03bd x hx"
+  },
+  {
+    "module": "UnequalPoleResidual",
+    "name": "D1Bound5.unequalPolePolynomial_residual_coeff",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F]\n    (a : I \u2192 F) (e : I \u2192 \u2115) (k : \u2115) (he : \u2200 j, e j \u2264 k)\n    (\u03bd : F) (r : \u2115) :\n    PowerSeries.coeff r\n      (\u2211 j, (unequalPolePolynomial a e k \u03bd j : PowerSeries F)*\n        PowerSeries.rescale (a j) (PowerSeries.binomialSeries F \u03bd)) =\n      Ring.choose ((k : F)+\u03bd) r *\n        \u2211 j, bennettLocalResidue a e (Polynomial.X^r) j",
+    "explicit_arguments": "a e k he \u03bd r"
+  },
+  {
+    "module": "UnequalPoleResidual",
+    "name": "D1Bound5.unequalPolePolynomial_residual_coeff_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F]\n    (a : I \u2192 F) (ha : Function.Injective a) (e : I \u2192 \u2115)\n    (k : \u2115) (he : \u2200 j, e j \u2264 k) (\u03bd : F)\n    (r : \u2115) (hr : r < (\u2211 j, (e j+1))-1) :\n    PowerSeries.coeff r\n      (\u2211 j, (unequalPolePolynomial a e k \u03bd j : PowerSeries F)*\n        PowerSeries.rescale (a j) (PowerSeries.binomialSeries F \u03bd)) = 0",
+    "explicit_arguments": "a ha e k he \u03bd r hr"
+  },
+  {
+    "module": "UnequalPoleResidual",
+    "name": "D1Bound5.unequalPolePolynomial_residual_tail_hasSum",
+    "original_signature": "\n    (a : I \u2192 \u2102) (ha : Function.Injective a) (e : I \u2192 \u2115)\n    (k : \u2115) (he : \u2200 j, e j \u2264 k) (\u03bd x : \u2102)\n    (hx : \u2200 j, \u2016a j*x\u2016 < 1) :\n    HasSum (fun t : \u2115 =>\n      (Ring.choose ((k : \u2102)+\u03bd) ((\u2211 j,(e j+1))-1+t) *\n        \u2211 j, bennettLocalResidue a e\n          (Polynomial.X^((\u2211 j,(e j+1))-1+t)) j)*\n            x^((\u2211 j,(e j+1))-1+t))\n      (\u2211 j, (unequalPolePolynomial a e k \u03bd j).eval x*(1+a j*x)^\u03bd)",
+    "explicit_arguments": "a ha e k he \u03bd x hx"
+  },
+  {
+    "module": "UnequalPoleResidual",
+    "name": "D1Bound5.unequalPolePolynomial_residual_norm_le",
+    "original_signature": "\n    (a : I \u2192 \u2102) (ha : Function.Injective a) (e : I \u2192 \u2115)\n    (q : I) (k : \u2115) (he : \u2200 j, e j \u2264 k) (\u03bd \u03c1 : \u211d) (x : \u2102)\n    (hs : (k : \u211d)+\u03bd < ((\u2211 j,(e j+1))-1 : \u2115))\n    (h\u03c10 : 0 \u2264 \u03c1) (h\u03c1 : \u2200 j, \u2016a j\u2016 \u2264 \u03c1) (hradius : \u03c1*\u2016x\u2016 < 1) :\n    \u2016\u2211 j, (unequalPolePolynomial a e k (\u03bd : \u2102) j).eval x*\n      (1+a j*x)^(\u03bd : \u2102)\u2016 \u2264\n      |Ring.choose ((k : \u211d)+\u03bd) ((\u2211 j,(e j+1))-1)| *\n        \u2016x\u2016^((\u2211 j,(e j+1))-1) /\n          (1-\u03c1*\u2016x\u2016)^((((\u2211 j,(e j+1))-1 : \u2115) : \u211d)-((k : \u211d)+\u03bd))",
+    "explicit_arguments": "a ha e q k he \u03bd \u03c1 x hs h\u03c10 h\u03c1 hradius"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalOrders_add_one",
+    "original_signature": " (k m : \u2115) (hk : 1 \u2264 k) (hm : 1 \u2264 m)\n    (i j : Fin 3) : finiteUnequalOrders k m i j+1 = ![m,k,k] j+(if i=j then 1 else 0)",
+    "explicit_arguments": "k m hk hm i j"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalOrders_le",
+    "original_signature": " (k m : \u2115) (hmk : m \u2264 k) (i j : Fin 3) :\n    finiteUnequalOrders k m i j \u2264 k",
+    "explicit_arguments": "k m hmk i j"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalOrders_total",
+    "original_signature": " (k m : \u2115) (hk : 1 \u2264 k) (hm : 1 \u2264 m) (i : Fin 3) :\n    (\u2211 j, (finiteUnequalOrders k m i j+1)) = m+2*k+1",
+    "explicit_arguments": "k m hk hm i"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalOtherPoles_zero",
+    "original_signature": " (x y : F) (k m : \u2115)\n    (hk : 1 \u2264 k) (hm : 1 \u2264 m) (i : Fin 3) :\n    bennettLocalReciprocal (bennettTwoNodes x y) (finiteUnequalOrders k m i) 0 =\n      bennettPoleSeries (-y) (k+if i=1 then 1 else 0)*\n        bennettPoleSeries (-x) (k+if i=2 then 1 else 0)",
+    "explicit_arguments": "x y k m hk hm i"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalOtherPoles_one",
+    "original_signature": " (x y : F) (k m : \u2115)\n    (hk : 1 \u2264 k) (hm : 1 \u2264 m) (i : Fin 3) :\n    bennettLocalReciprocal (bennettTwoNodes x y) (finiteUnequalOrders k m i) 1 =\n      bennettPoleSeries y (m+if i=0 then 1 else 0)*\n        bennettPoleSeries (y-x) (k+if i=2 then 1 else 0)",
+    "explicit_arguments": "x y k m hk hm i"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalOtherPoles_two",
+    "original_signature": " (x y : F) (k m : \u2115)\n    (hk : 1 \u2264 k) (hm : 1 \u2264 m) (i : Fin 3) :\n    bennettLocalReciprocal (bennettTwoNodes x y) (finiteUnequalOrders k m i) 2 =\n      bennettPoleSeries x (m+if i=0 then 1 else 0)*\n        bennettPoleSeries (x-y) (k+if i=1 then 1 else 0)",
+    "explicit_arguments": "x y k m hk hm i"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalClearedEntry_eq_scaled_residue",
+    "original_signature": " (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0)\n    (k m : \u2115) (hmk : m \u2264 k) (i j : Fin 3) :\n    finiteUnequalClearedEntry x y c k m i j =\n      (4^k*x^m*y^m*(x-y)^(2*k)*(x*y*c)^k)*\n        (unequalPolePolynomial (bennettTwoNodes x y) (finiteUnequalOrders k m i)\n          k (1/2 : F) j).eval (x*y*c)\u207b\u00b9",
+    "explicit_arguments": "x y c hx hy hc k m hmk i j"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequal_residual_scale",
+    "original_signature": " (X Y C delta : \u211d)\n    (hX : X \u2260 0) (hY : Y \u2260 0) (hC : C \u2260 0) (k m : \u2115) :\n    (4^k*X^m*Y^m*delta^(2*k)*(X*Y*C)^k)*((X*Y*C)\u207b\u00b9)^(m+2*k) =\n      4^k*delta^(2*k)/(X^k*Y^k*C^(m+k))",
+    "explicit_arguments": "X Y C delta hX hY hC k m"
+  },
+  {
+    "module": "FiniteUnequalEntry",
+    "name": "D1Bound5.finiteUnequalClearedEntry_residual_norm_le",
+    "original_signature": "\n    (x y c : \u2102) (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1 < \u2016x\u2016*\u2016c\u2016)\n    (k m : \u2115) (hk : 1 \u2264 k) (hm : 1 \u2264 m) (hmk : m \u2264 k)\n    (hs : (k : \u211d)+1/2 < (m+2*k : \u2115)) (i : Fin 3) :\n    \u2016\u2211 j, finiteUnequalClearedEntry x y c k m i j*\n        (1+bennettTwoNodes x y j*(x*y*c)\u207b\u00b9)^(1/2 : \u2102)\u2016 \u2264\n      (4^k*\u2016x-y\u2016^(2*k)/(\u2016x\u2016^k*\u2016y\u2016^k*\u2016c\u2016^(m+k)))*\n        |Ring.choose ((k : \u211d)+1/2) (m+2*k)| /\n          (1-1/(\u2016x\u2016*\u2016c\u2016))^(((m+2*k : \u2115) : \u211d)-((k : \u211d)+1/2))",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC k m hk hm hmk hs i"
+  },
+  {
+    "module": "FinitePolynomialHeight",
+    "name": "D1Bound5.finitePolynomial_norm_le",
+    "original_signature": " (k : \u2115) (a : Fin (k+1) \u2192 \u2102) (c : \u2102) :\n    \u2016\u2211 ell, a ell*c^(ell : \u2115)\u2016 \u2264 \u2211 ell, \u2016a ell\u2016*\u2016c\u2016^(ell : \u2115)",
+    "explicit_arguments": "k a c"
+  },
+  {
+    "module": "FinitePolynomialHeight",
+    "name": "D1Bound5.finitePolynomial_two_columns_norm_le",
+    "original_signature": " (k d0 : \u2115)\n    (p : Fin 2 \u2192 Fin (k+1) \u2192 \u2102) (v : Fin (k+1) \u2192 \u211d) (c : \u2102) (Y : \u211d)\n    (hcoeff : \u2200 ell, \u2016p 0 ell\u2016+\u2016p 1 ell\u2016 \u2264 v ell*Y^(d0+(ell : \u2115))) :\n    \u2016\u2211 ell, p 0 ell*c^(ell : \u2115)\u2016+\u2016\u2211 ell, p 1 ell*c^(ell : \u2115)\u2016 \u2264\n      Y^d0*\u2211 ell, v ell*(Y*\u2016c\u2016)^(ell : \u2115)",
+    "explicit_arguments": "k d0 p v c Y hcoeff"
+  },
+  {
+    "module": "FinitePolynomialHeight",
+    "name": "D1Bound5.finitePolynomial_power_majorization",
+    "original_signature": " (T : \u211d) (hT : 1000 \u2264 T)\n    (k ell : \u2115) (hell : ell \u2264 k) : T^ell \u2264 T^k/(1000 : \u211d)^(k-ell)",
+    "explicit_arguments": "T hT k ell hell"
+  },
+  {
+    "module": "FinitePolynomialHeight",
+    "name": "D1Bound5.finitePolynomial_height_scalar",
+    "original_signature": " (k : \u2115) (v : Fin (k+1) \u2192 \u211d)\n    (hv : \u2200 ell, 0 \u2264 v ell) (M T : \u211d) (hT : 1000 \u2264 T)\n    (hslack : (101/100 : \u211d)*(\u2211 ell, v ell/(1000 : \u211d)^(k-(ell : \u2115))) < M) :\n    (101/100 : \u211d)*(\u2211 ell, v ell*T^(ell : \u2115)) < M*T^k",
+    "explicit_arguments": "k v hv M T hT hslack"
+  },
+  {
+    "module": "FiniteChooseFive",
+    "name": "D1Bound5.finiteA_choose_two",
+    "original_signature": " (r : F) : Ring.choose r 2 = r*(r-1)/2",
+    "explicit_arguments": "r"
+  },
+  {
+    "module": "FiniteChooseFive",
+    "name": "D1Bound5.finiteA_choose_three",
+    "original_signature": " (r : F) : Ring.choose r 3 = r*(r-1)*(r-2)/6",
+    "explicit_arguments": "r"
+  },
+  {
+    "module": "FiniteChooseFive",
+    "name": "D1Bound5.finiteA_choose_four",
+    "original_signature": " (r : F) : Ring.choose r 4 = r*(r-1)*(r-2)*(r-3)/24",
+    "explicit_arguments": "r"
+  },
+  {
+    "module": "FiniteChooseFive",
+    "name": "D1Bound5.finiteA_choose_five",
+    "original_signature": " (r : F) : Ring.choose r 5 = r*(r-1)*(r-2)*(r-3)*(r-4)/120",
+    "explicit_arguments": "r"
+  }
+]

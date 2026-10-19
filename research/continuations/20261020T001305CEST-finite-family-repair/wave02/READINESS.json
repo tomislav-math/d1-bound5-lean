@@ -1,0 +1,61 @@
+{
+  "time": "2026-10-20T00:25:22.884098+02:00",
+  "unknown": [],
+  "targets": {
+    "FinitePolynomialHeight": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteUnequalEntry": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA3Height": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePolynomialHeight"
+      ]
+    },
+    "FiniteA3ResidueIdentity": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteUnequalEntry"
+      ]
+    },
+    "FiniteA3Residual": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3ResidueIdentity",
+        "FiniteUnequalEntry"
+      ]
+    },
+    "FiniteA3Approximation": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3Height",
+        "FinitePolynomialHeight",
+        "FiniteA3Residual",
+        "FiniteA3ResidueIdentity",
+        "FiniteUnequalEntry"
+      ]
+    },
+    "FiniteA3Interval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3Approximation",
+        "FiniteA3Height",
+        "FinitePolynomialHeight",
+        "FiniteA3Residual",
+        "FiniteA3ResidueIdentity",
+        "FiniteUnequalEntry"
+      ]
+    }
+  }
+}

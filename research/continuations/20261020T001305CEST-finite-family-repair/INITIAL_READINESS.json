@@ -1,0 +1,95 @@
+{
+  "time": "2026-10-20T00:15:35.912921+02:00",
+  "unknown": [],
+  "targets": {
+    "UnequalPoleResidual": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteUnequalEntry": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "UnequalPoleResidual"
+      ]
+    },
+    "FinitePolynomialHeight": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteChooseFive": {
+      "compiled": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteA3Matrix": {
+      "compiled": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteA3Coefficients": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA3IntegralRows": {
+      "compiled": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteA3Height": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3Coefficients",
+        "FinitePolynomialHeight"
+      ]
+    },
+    "FiniteA3ResidueIdentity": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteUnequalEntry",
+        "UnequalPoleResidual"
+      ]
+    },
+    "FiniteA3Residual": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3ResidueIdentity",
+        "FiniteUnequalEntry",
+        "UnequalPoleResidual"
+      ]
+    },
+    "FiniteA3Approximation": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3Height",
+        "FiniteA3Coefficients",
+        "FinitePolynomialHeight",
+        "FiniteA3Residual",
+        "FiniteA3ResidueIdentity",
+        "FiniteUnequalEntry",
+        "UnequalPoleResidual"
+      ]
+    },
+    "FiniteA3Interval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA3Approximation",
+        "FiniteA3Height",
+        "FiniteA3Coefficients",
+        "FinitePolynomialHeight",
+        "FiniteA3Residual",
+        "FiniteA3ResidueIdentity",
+        "FiniteUnequalEntry",
+        "UnequalPoleResidual"
+      ]
+    }
+  }
+}

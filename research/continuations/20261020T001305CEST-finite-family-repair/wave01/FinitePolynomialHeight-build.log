@@ -1,0 +1,20 @@
+✖ [1868/1868] Building D1Bound5.FinitePolynomialHeight (60s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FinitePolynomialHeight.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FinitePolynomialHeight.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FinitePolynomialHeight.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FinitePolynomialHeight.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FinitePolynomialHeight.setup.json --json
+error: D1Bound5/FinitePolynomialHeight.lean:70:10: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (∑ i ∈ ?s, ?f i) * ?a
+in the target expression
+  101 / 100 * ∑ ell, v ell / 1000 ^ (k - ↑ell) * T ^ k = (101 / 100 * ∑ ell, v ell / 1000 ^ (k - ↑ell)) * T ^ k
+
+k : ℕ
+v : Fin (k + 1) → ℝ
+hv : ∀ (ell : Fin (k + 1)), 0 ≤ v ell
+M T : ℝ
+hT : 1000 ≤ T
+hslack : 101 / 100 * ∑ ell, v ell / 1000 ^ (k - ↑ell) < M
+hT0 : 0 < T
+hsum : ∑ ell, v ell * T ^ ↑ell ≤ ∑ ell, v ell / 1000 ^ (k - ↑ell) * T ^ k
+⊢ 101 / 100 * ∑ ell, v ell / 1000 ^ (k - ↑ell) * T ^ k = (101 / 100 * ∑ ell, v ell / 1000 ^ (k - ↑ell)) * T ^ k
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FinitePolynomialHeight
+error: build failed
