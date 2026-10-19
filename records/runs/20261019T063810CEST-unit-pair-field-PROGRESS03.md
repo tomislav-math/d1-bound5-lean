@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-19T06:46:37.521942+02:00
+
+The original d=4519 finite-prefix pilot passed a guarded pinned build in 7.10s with unchanged source/dependency/artifact guards. This certifies the exact finite recurrence, stopping numerator >10^275 and the four-magnitude list through proof-producing decide +kernel. Graph compatibility and complete 1016-field production remain open. After reviewing all finite-check statements in existing prefix blocks 2 and 3, select those two currently eligible blocks only for a bounded serial batch, with the same 240-second per-module limit. No new generated certificate data.

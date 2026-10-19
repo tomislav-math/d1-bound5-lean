@@ -1,0 +1,5 @@
+# Verified unit-pair field reduction and finite-prefix batch
+
+Status: COMPLETED_UNIT for the four separately checked original targets listed in VERIFICATION_SUMMARY.json. This directory preserves source copies, the sole failed field-bound attempt and its exact repair, actual build receipts, declaration/type/axiom audits and four targeted installed SAME-kernel replays. The working copies under D1Bound5 remain inherited untracked sources; only these reviewed snapshots are submitted in this unit. Do not import research snapshots as accepted dependencies. The .before file for UnitPairFieldBound is the failed original, not an accepted proof. The three finite-prefix .before files are byte-identical to their checked originals. No root integration, full finite exclusion or MainStatement proof is claimed. Read MATHEMATICS.md and NEXT_DEPENDENCIES.json for exact scope and continuation.
+
+PellUnitPairBounded.before.lean is an inspection-only copy of the uncompiled downstream endpoint. It is not one of this unit's accepted targets or imports. Its 135 missing dependencies are recorded honestly in NEXT_DEPENDENCIES.json.

@@ -1,0 +1,3 @@
+# START — 2026-10-19T06:38:33.179059+02:00
+
+Manual continuation authorized in the current ChatGPT conversation. Branch main, HEAD 16cd17d3e3be3f4b81f6daf854781de643bae250. No active project compiler, both ownership locks free on entry, queue paused with max_parallel=1. Preserve the inherited staged receipt recorded in INHERITED_INDEX.json. Read current runbook and the preceding unit-pair cubic FINISH. Next inspect UnitPairFieldBound and its actual prerequisites, then compile and audit a bounded substantive unit. No automation, frozen manuscript, handoff, pins or unrelated project changes. MainStatement remains UNPROVED.

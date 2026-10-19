@@ -1,5 +1,9 @@
 # Status
 
+## 19 October 2026 — unit-pair field range and 33 Pell prefixes verified
+
+The unit-pair sextuple now supplies one squarefree arithmetic model with 7 <= d < 10000, d congruent to 7 modulo 8, and four real norm-two Pell descriptions. The existing theorem was repaired only by normalizing the embedding notation before linarith. Additionally, unchanged pure-Init prefix modules Pilot, Data2 and Data3 passed, giving exact recurrence/stopping/list certificates for 33 field parameters. All four pinned builds, exact type/transitive-axiom checks of 34 public theorems and 33 lists, and four targeted installed SAME-kernel replays passed. The field theorem uses only propext/Classical.choice/Quot.sound; the finite checks use no axioms. Source/dependency/artifact guards cover 126 project modules. Graph matching, remaining finite production, root integration and all final MainStatement gates remain open. Evidence: research/continuations/20261019T063810CEST-unit-pair-field/VERIFICATION_SUMMARY.json.
+
 ## 19 October 2026 — unit-pair cubic growth and first-extension cutoff verified
 
 Four working modules now prove the full-ring cubic gap, its three-step iteration, and |a_2|<10000 for an actual modulus-ordered D(1)-sextuple with a_0=-1 and a_1=1. Opposite-pair exclusions, nonzero integral forms, signed roots and the all-order Bennett input are derived, not supplied as certificates. All ten original public theorems and one private helper compiled with unchanged statements. Public type/transitive-axiom audit and four targeted installed SAME-kernel replays passed with only propext, Classical.choice and Quot.sound. The cutoff does not exclude the remaining small range. Field/axis reduction, finite Pell certificates, global exclusions, root integration and final whole-project gates remain open. Evidence: research/continuations/20261019T054036CEST-unit-pair-cubic/VERIFICATION_SUMMARY.json.
