@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-19T14:49:54.280655+00:00",
+  "unknown": [],
+  "targets": {
+    "SmallExtensionSymmetry": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "SmallTripleRepresentativeProperties": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "SmallExtensionSymmetry"
+      ]
+    },
+    "SmallTripleOrbitProperties": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "SmallTripleRepresentativeProperties",
+        "SmallExtensionSymmetry"
+      ]
+    },
+    "SmallTripleBoundedExtensions": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "SmallTripleOrbitProperties",
+        "SmallTripleRepresentativeProperties",
+        "SmallExtensionSymmetry"
+      ]
+    },
+    "ThreeSmallSextuple": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "SmallTripleBoundedExtensions",
+        "SmallTripleOrbitProperties",
+        "SmallTripleRepresentativeProperties",
+        "SmallExtensionSymmetry"
+      ]
+    }
+  }
+}

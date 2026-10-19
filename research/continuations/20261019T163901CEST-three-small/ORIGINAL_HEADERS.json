@@ -1,0 +1,237 @@
+{
+  "SmallTripleCheck": {
+    "sha256": "1f75bcdaa9e326145897ef273ea3989447fff478e71849b1db21c3aa9abd5c19",
+    "headers": [
+      "smallTripleClassified_of_explicit_list {tau nu : \u2124}\n    (hpos : 0 < discriminant tau nu)\n    (xs : List (QuadInt tau nu)) (rows : List (Finset (\u2124 \u00d7 \u2124)))\n    (cover : \u2200 z \u2208 disk tau nu 8, z \u2208 xs)\n    (checked : smallTripleClassifiedBool xs rows = true)\n    (t : Fin 3 \u2192 QuadInt tau nu) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 rows"
+    ],
+    "imports": [
+      "D1Bound5.SmallQuadrupleCheck"
+    ]
+  },
+  "SmallTripleData": {
+    "sha256": "d79644481c842f2a40b2f5554666f54fa185f12915c38d31e4f1b24ec16844da",
+    "headers": [
+      "smallTripleTable_orbits :\n    smallTriples_0_1.toFinset = smallTripleRepresentatives_0_1.biUnion (smallTripleOrbit 0) \u2227\n    smallTriples_0_2.toFinset = smallTripleRepresentatives_0_2.biUnion (smallTripleOrbit 0) \u2227\n    smallTriples_1_1.toFinset = smallTripleRepresentatives_1_1.biUnion (smallTripleOrbit 1) \u2227\n    smallTriples_1_2.toFinset = smallTripleRepresentatives_1_2.biUnion (smallTripleOrbit 1)",
+      "smallTripleTable_models {tau nu : \u2124} {row : Finset (\u2124 \u00d7 \u2124)}\n    (h : row \u2208 smallTripleTable tau nu) :\n    (tau = 0 \u2227 nu = 1) \u2228 (tau = 0 \u2227 nu = 2) \u2228 (tau = 0 \u2227 nu = 4) \u2228\n    (tau = 1 \u2227 nu = 1) \u2228 (tau = 1 \u2227 nu = 2)",
+      "smallTripleTable_counts :\n    smallTriples_0_1.length = 10 \u2227 smallTriples_0_1.Nodup \u2227\n    smallTriples_0_2.length = 2 \u2227 smallTriples_0_2.Nodup \u2227\n    smallTriples_1_1.length = 8 \u2227 smallTriples_1_1.Nodup \u2227\n    smallTriples_1_2.length = 4 \u2227 smallTriples_1_2.Nodup",
+      "smallTriples_0_1_checked :\n    smallTripleClassifiedBool smallDisk_0_1 (smallTripleTable 0 1) = true",
+      "smallTriple_classified_0_1\n    (t : Fin 3 \u2192 QuadInt 0 1) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 1",
+      "smallTriples_0_2_checked :\n    smallTripleClassifiedBool smallDisk_0_2 (smallTripleTable 0 2) = true",
+      "smallTriple_classified_0_2\n    (t : Fin 3 \u2192 QuadInt 0 2) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 2",
+      "smallTriples_0_3_checked :\n    smallTripleClassifiedBool smallDisk_0_3 (smallTripleTable 0 3) = true",
+      "smallTriple_classified_0_3\n    (t : Fin 3 \u2192 QuadInt 0 3) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 3",
+      "smallTriples_0_4_checked :\n    smallTripleClassifiedBool smallDisk_0_4 (smallTripleTable 0 4) = true",
+      "smallTriple_classified_0_4\n    (t : Fin 3 \u2192 QuadInt 0 4) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 4",
+      "smallTriples_0_5_checked :\n    smallTripleClassifiedBool smallDisk_0_5 (smallTripleTable 0 5) = true",
+      "smallTriple_classified_0_5\n    (t : Fin 3 \u2192 QuadInt 0 5) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 5",
+      "smallTriples_0_6_checked :\n    smallTripleClassifiedBool smallDisk_0_6 (smallTripleTable 0 6) = true",
+      "smallTriple_classified_0_6\n    (t : Fin 3 \u2192 QuadInt 0 6) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 6",
+      "smallTriples_0_7_checked :\n    smallTripleClassifiedBool smallDisk_0_7 (smallTripleTable 0 7) = true",
+      "smallTriple_classified_0_7\n    (t : Fin 3 \u2192 QuadInt 0 7) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 7",
+      "smallTriples_0_8_checked :\n    smallTripleClassifiedBool smallDisk_0_8 (smallTripleTable 0 8) = true",
+      "smallTriple_classified_0_8\n    (t : Fin 3 \u2192 QuadInt 0 8) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 0 8",
+      "smallTriples_1_1_checked :\n    smallTripleClassifiedBool smallDisk_1_1 (smallTripleTable 1 1) = true",
+      "smallTriple_classified_1_1\n    (t : Fin 3 \u2192 QuadInt 1 1) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 1",
+      "smallTriples_1_2_checked :\n    smallTripleClassifiedBool smallDisk_1_2 (smallTripleTable 1 2) = true",
+      "smallTriple_classified_1_2\n    (t : Fin 3 \u2192 QuadInt 1 2) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 2",
+      "smallTriples_1_3_checked :\n    smallTripleClassifiedBool smallDisk_1_3 (smallTripleTable 1 3) = true",
+      "smallTriple_classified_1_3\n    (t : Fin 3 \u2192 QuadInt 1 3) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 3",
+      "smallTriples_1_4_checked :\n    smallTripleClassifiedBool smallDisk_1_4 (smallTripleTable 1 4) = true",
+      "smallTriple_classified_1_4\n    (t : Fin 3 \u2192 QuadInt 1 4) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 4",
+      "smallTriples_1_5_checked :\n    smallTripleClassifiedBool smallDisk_1_5 (smallTripleTable 1 5) = true",
+      "smallTriple_classified_1_5\n    (t : Fin 3 \u2192 QuadInt 1 5) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 5",
+      "smallTriples_1_6_checked :\n    smallTripleClassifiedBool smallDisk_1_6 (smallTripleTable 1 6) = true",
+      "smallTriple_classified_1_6\n    (t : Fin 3 \u2192 QuadInt 1 6) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 6",
+      "smallTriples_1_7_checked :\n    smallTripleClassifiedBool smallDisk_1_7 (smallTripleTable 1 7) = true",
+      "smallTriple_classified_1_7\n    (t : Fin 3 \u2192 QuadInt 1 7) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 7",
+      "smallTriples_1_8_checked :\n    smallTripleClassifiedBool smallDisk_1_8 (smallTripleTable 1 8) = true",
+      "smallTriple_classified_1_8\n    (t : Fin 3 \u2192 QuadInt 1 8) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable 1 8",
+      "smallTriple_classified_rectangular {tau nu : \u2124}\n    (htau : tau = 0 \u2228 tau = 1) (hlo : 1 \u2264 nu) (hhi : nu \u2264 8)\n    (t : Fin 3 \u2192 QuadInt tau nu) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable tau nu"
+    ],
+    "imports": [
+      "D1Bound5.SmallTripleCheck",
+      "D1Bound5.SmallQuadrupleData"
+    ]
+  },
+  "SmallTripleClassification": {
+    "sha256": "29c06a840b00bae4fa8a3417f349d7002808f0195fa16482f0c5528783af6485",
+    "headers": [
+      "noSmallTriple_of_large_discriminant {tau nu : \u2124}\n    (hlarge : 32 < discriminant tau nu) : \u2200 t : Fin 3 \u2192 QuadInt tau nu,\n      IsD1Tuple t \u2192 (\u2200 i, (t i).norm \u2264 8) \u2192 False",
+      "smallTriple_classified_normalized {tau nu : \u2124}\n    (htau : tau = 0 \u2228 tau = 1) (hpos : 0 < discriminant tau nu)\n    (t : Fin 3 \u2192 QuadInt tau nu) (ht : IsD1Tuple t)\n    (hnorm : \u2200 i, (t i).norm \u2264 8) :\n    tripleCoordinates (t 0) (t 1) (t 2) \u2208 smallTripleTable tau nu",
+      "IsD1Tuple.small_triple_classification\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 3 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hsmall : \u2200 i, \u2016phi (t i : K)\u2016 < 3) :\n    \u2203 (tau nu : \u2124) (e : QuadInt tau nu \u2243+* \ud835\udcde K),\n      ((tau = 0 \u2227 nu = 1) \u2228 (tau = 0 \u2227 nu = 2) \u2228\n       (tau = 1 \u2227 nu = 1) \u2228 (tau = 1 \u2227 nu = 2)) \u2227\n      tripleCoordinates (e.symm (t 0)) (e.symm (t 1)) (e.symm (t 2)) \u2208\n        smallTripleTable tau nu"
+    ],
+    "imports": [
+      "D1Bound5.SmallTripleData",
+      "D1Bound5.SmallQuadruple",
+      "D1Bound5.MaximalCoordinates",
+      "Mathlib.Algebra.Group.Int.Units"
+    ]
+  },
+  "SmallTripleExtensionData4": {
+    "sha256": "7b8ce25ff2a1b1bdeba4661beb87f82d9ff11017abd334d7924447d166c581af",
+    "headers": [
+      "smallTripleSeeds_4_checked :\n    pairSeedsCoveredBool smallTripleAnchorA_4 smallTripleAnchorB_4\n      seedRootDisk_0_1 smallTriplePairClosure_4 = true",
+      "smallTripleClosure_4_checked :\n    pairClosureBool smallTripleAnchorA_4 smallTripleAnchorB_4\n      (10^80) smallTriplePairClosure_4 = true",
+      "smallTripleFilter_4_checked :\n    tripleExtensionFilterBool smallTripleAnchorA_4 smallTripleAnchorB_4\n      smallTripleAnchorC_4 smallTriplePairClosure_4 smallTripleAllowed_4 = true",
+      "smallTripleClosure_4_count : smallTriplePairClosure_4.length = 105"
+    ],
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ]
+  },
+  "SmallTripleExtensionData5": {
+    "sha256": "0f52c03dcb1aef0af13ae431869add34d508399252e4add0eccf7dd09dc092de",
+    "headers": [
+      "smallTripleSeeds_5_checked :\n    pairSeedsCoveredBool smallTripleAnchorA_5 smallTripleAnchorB_5\n      seedRootDisk_0_2 smallTriplePairClosure_5 = true",
+      "smallTripleClosure_5_checked :\n    pairClosureBool smallTripleAnchorA_5 smallTripleAnchorB_5\n      (10^80) smallTriplePairClosure_5 = true",
+      "smallTripleFilter_5_checked :\n    tripleExtensionFilterBool smallTripleAnchorA_5 smallTripleAnchorB_5\n      smallTripleAnchorC_5 smallTriplePairClosure_5 smallTripleAllowed_5 = true",
+      "smallTripleClosure_5_count : smallTriplePairClosure_5.length = 71"
+    ],
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ]
+  },
+  "SmallTripleExtensionData6": {
+    "sha256": "36f224d3730e31a0a51a42e087cb11043ed4d384f831a7959f50bfd1ed91e3aa",
+    "headers": [
+      "smallTripleSeeds_6_checked :\n    pairSeedsCoveredBool smallTripleAnchorA_6 smallTripleAnchorB_6\n      seedRootDisk_1_1 smallTriplePairClosure_6 = true",
+      "smallTripleClosure_6_checked :\n    pairClosureBool smallTripleAnchorA_6 smallTripleAnchorB_6\n      (10^80) smallTriplePairClosure_6 = true",
+      "smallTripleFilter_6_checked :\n    tripleExtensionFilterBool smallTripleAnchorA_6 smallTripleAnchorB_6\n      smallTripleAnchorC_6 smallTriplePairClosure_6 smallTripleAllowed_6 = true",
+      "smallTripleClosure_6_count : smallTriplePairClosure_6.length = 112"
+    ],
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ]
+  },
+  "SmallTripleExtensionData7": {
+    "sha256": "784947cee6255504e305aae62572ff2231ec8392139ceb2d3615de8ad4f2c5f3",
+    "headers": [
+      "smallTripleSeeds_7_checked :\n    pairSeedsCoveredBool smallTripleAnchorA_7 smallTripleAnchorB_7\n      seedRootDisk_1_1 smallTriplePairClosure_7 = true",
+      "smallTripleClosure_7_checked :\n    pairClosureBool smallTripleAnchorA_7 smallTripleAnchorB_7\n      (10^80) smallTriplePairClosure_7 = true",
+      "smallTripleFilter_7_checked :\n    tripleExtensionFilterBool smallTripleAnchorA_7 smallTripleAnchorB_7\n      smallTripleAnchorC_7 smallTriplePairClosure_7 smallTripleAllowed_7 = true",
+      "smallTripleClosure_7_count : smallTriplePairClosure_7.length = 112"
+    ],
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ]
+  },
+  "SmallTripleExtensionData8": {
+    "sha256": "89ae5eb015cc06ce9d904be1f305c074eb3cd3fb88b017eb23ad5593272ca11e",
+    "headers": [
+      "smallTripleSeeds_8_checked :\n    pairSeedsCoveredBool smallTripleAnchorA_8 smallTripleAnchorB_8\n      seedRootDisk_1_1 smallTriplePairClosure_8 = true",
+      "smallTripleClosure_8_checked :\n    pairClosureBool smallTripleAnchorA_8 smallTripleAnchorB_8\n      (10^80) smallTriplePairClosure_8 = true",
+      "smallTripleFilter_8_checked :\n    tripleExtensionFilterBool smallTripleAnchorA_8 smallTripleAnchorB_8\n      smallTripleAnchorC_8 smallTriplePairClosure_8 smallTripleAllowed_8 = true",
+      "smallTripleClosure_8_count : smallTriplePairClosure_8.length = 57"
+    ],
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ]
+  },
+  "SmallTripleExtensionData9": {
+    "sha256": "d547b2c59760d0754a4660f0e6f6a2dd995b480c12bf4f53eac6fc574c6b3772",
+    "headers": [
+      "smallTripleSeeds_9_checked :\n    pairSeedsCoveredBool smallTripleAnchorA_9 smallTripleAnchorB_9\n      seedRootDisk_1_2 smallTriplePairClosure_9 = true",
+      "smallTripleClosure_9_checked :\n    pairClosureBool smallTripleAnchorA_9 smallTripleAnchorB_9\n      (10^80) smallTriplePairClosure_9 = true",
+      "smallTripleFilter_9_checked :\n    tripleExtensionFilterBool smallTripleAnchorA_9 smallTripleAnchorB_9\n      smallTripleAnchorC_9 smallTriplePairClosure_9 smallTripleAllowed_9 = true",
+      "smallTripleClosure_9_count : smallTriplePairClosure_9.length = 83"
+    ],
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ]
+  },
+  "SmallTripleExtensions": {
+    "sha256": "4012985a91d9c7e7f8ef52a242c3eb2b671af1516c44413e2d52d177518230c5",
+    "headers": [
+      "smallTripleExtension_1_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) (z : QuadInt 0 1)\n    (hpair : PairExtension smallTripleAnchorA_1 smallTripleAnchorB_1 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_1*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_1)\n    (hb : z \u2260 smallTripleAnchorB_1) (hc : z \u2260 smallTripleAnchorC_1)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_1",
+      "smallTripleExtension_2_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) (z : QuadInt 0 1)\n    (hpair : PairExtension smallTripleAnchorA_2 smallTripleAnchorB_2 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_2*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_2)\n    (hb : z \u2260 smallTripleAnchorB_2) (hc : z \u2260 smallTripleAnchorC_2)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_2",
+      "smallTripleExtension_3_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) (z : QuadInt 0 1)\n    (hpair : PairExtension smallTripleAnchorA_3 smallTripleAnchorB_3 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_3*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_3)\n    (hb : z \u2260 smallTripleAnchorB_3) (hc : z \u2260 smallTripleAnchorC_3)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_3",
+      "smallTripleExtension_4_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) (z : QuadInt 0 1)\n    (hpair : PairExtension smallTripleAnchorA_4 smallTripleAnchorB_4 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_4*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_4)\n    (hb : z \u2260 smallTripleAnchorB_4) (hc : z \u2260 smallTripleAnchorC_4)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_4",
+      "smallTripleExtension_5_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 2 \u2243+* \ud835\udcde K) (z : QuadInt 0 2)\n    (hpair : PairExtension smallTripleAnchorA_5 smallTripleAnchorB_5 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_5*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_5)\n    (hb : z \u2260 smallTripleAnchorB_5) (hc : z \u2260 smallTripleAnchorC_5)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_5",
+      "smallTripleExtension_6_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K) (z : QuadInt 1 1)\n    (hpair : PairExtension smallTripleAnchorA_6 smallTripleAnchorB_6 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_6*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_6)\n    (hb : z \u2260 smallTripleAnchorB_6) (hc : z \u2260 smallTripleAnchorC_6)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_6",
+      "smallTripleExtension_7_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K) (z : QuadInt 1 1)\n    (hpair : PairExtension smallTripleAnchorA_7 smallTripleAnchorB_7 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_7*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_7)\n    (hb : z \u2260 smallTripleAnchorB_7) (hc : z \u2260 smallTripleAnchorC_7)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_7",
+      "smallTripleExtension_8_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K) (z : QuadInt 1 1)\n    (hpair : PairExtension smallTripleAnchorA_8 smallTripleAnchorB_8 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_8*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_8)\n    (hb : z \u2260 smallTripleAnchorB_8) (hc : z \u2260 smallTripleAnchorC_8)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_8",
+      "smallTripleExtension_9_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 2 \u2243+* \ud835\udcde K) (z : QuadInt 1 2)\n    (hpair : PairExtension smallTripleAnchorA_9 smallTripleAnchorB_9 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_9*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_9)\n    (hb : z \u2260 smallTripleAnchorB_9) (hc : z \u2260 smallTripleAnchorC_9)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_9",
+      "smallTripleExtension_10_complete_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 2 \u2243+* \ud835\udcde K) (z : QuadInt 1 2)\n    (hpair : PairExtension smallTripleAnchorA_10 smallTripleAnchorB_10 z)\n    (hthird : \u2203 r, r*r = smallTripleAnchorC_10*z+1)\n    (hz : z \u2260 0) (ha : z \u2260 smallTripleAnchorA_10)\n    (hb : z \u2260 smallTripleAnchorB_10) (hc : z \u2260 smallTripleAnchorC_10)\n    (hNz : z.norm \u2264 10^80) :\n    z \u2208 smallTripleAllowed_10"
+    ],
+    "imports": [
+      "D1Bound5.PairExtensionComplete",
+      "D1Bound5.SmallTripleExtensionData1",
+      "D1Bound5.SmallTripleExtensionData2",
+      "D1Bound5.SmallTripleExtensionData3",
+      "D1Bound5.SmallTripleExtensionData4",
+      "D1Bound5.SmallTripleExtensionData5",
+      "D1Bound5.SmallTripleExtensionData6",
+      "D1Bound5.SmallTripleExtensionData7",
+      "D1Bound5.SmallTripleExtensionData8",
+      "D1Bound5.SmallTripleExtensionData9",
+      "D1Bound5.SmallTripleExtensionData10"
+    ]
+  },
+  "SmallExtensionSymmetry": {
+    "sha256": "b5b6500f05bd18eae4b7fb0224178384206a45604180b7258f0e4cfa00476118",
+    "headers": [
+      "ProperCommonExtension.map_equiv\n    {R S : Type*} [CommRing R] [CommRing S] [DecidableEq R] [DecidableEq S]\n    (e : R \u2243+* S) (A : Finset R) (z : R) (hz : ProperCommonExtension A z) :\n    ProperCommonExtension (A.image e) (e z)",
+      "smallExtensionSymmetry_involutive {tau nu : \u2124} (sgn conj : Bool) :\n    Function.Involutive (smallExtensionSymmetry (tau := tau) (nu := nu) sgn conj)",
+      "smallExtensionSymmetry_zero {tau nu : \u2124} (sgn conj : Bool) :\n    smallExtensionSymmetry (tau := tau) (nu := nu) sgn conj 0 = 0",
+      "smallExtensionSymmetry_norm {tau nu : \u2124} (sgn conj : Bool)\n    (z : QuadInt tau nu) : (smallExtensionSymmetry sgn conj z).norm = z.norm",
+      "SmallTripleExtensionProperty.symmetry {tau nu : \u2124}\n    (A : Finset (QuadInt tau nu)) (hA : SmallTripleExtensionProperty A)\n    (sgn conj : Bool) :\n    SmallTripleExtensionProperty (A.image (smallExtensionSymmetry sgn conj))",
+      "smallCoordinateSet_triple {tau nu : \u2124} (a b c : QuadInt tau nu) :\n    smallCoordinateSet tau nu (tripleCoordinates a b c) = {a,b,c}",
+      "smallTripleExtensionProperty_of_orbit {tau nu : \u2124}\n    (row row' : Finset (\u2124 \u00d7 \u2124))\n    (hrow : SmallTripleExtensionProperty (smallCoordinateSet tau nu row))\n    (horbit : row' \u2208 smallTripleOrbit tau row) :\n    SmallTripleExtensionProperty (smallCoordinateSet tau nu row')"
+    ],
+    "imports": [
+      "D1Bound5.SmallTripleExtensions",
+      "D1Bound5.SmallTripleClassification"
+    ]
+  },
+  "SmallTripleRepresentativeProperties": {
+    "sha256": "a83bbabd2bee324566724658a0b1876696641e481ed94e75fb471c1207165f52",
+    "headers": [
+      "smallTripleRepresentative_1_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_1, smallTripleAnchorB_1, smallTripleAnchorC_1}",
+      "smallTripleRepresentative_2_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_2, smallTripleAnchorB_2, smallTripleAnchorC_2}",
+      "smallTripleRepresentative_3_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_3, smallTripleAnchorB_3, smallTripleAnchorC_3}",
+      "smallTripleRepresentative_4_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_4, smallTripleAnchorB_4, smallTripleAnchorC_4}",
+      "smallTripleRepresentative_5_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 2 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_5, smallTripleAnchorB_5, smallTripleAnchorC_5}",
+      "smallTripleRepresentative_6_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_6, smallTripleAnchorB_6, smallTripleAnchorC_6}",
+      "smallTripleRepresentative_7_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_7, smallTripleAnchorB_7, smallTripleAnchorC_7}",
+      "smallTripleRepresentative_8_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_8, smallTripleAnchorB_8, smallTripleAnchorC_8}",
+      "smallTripleRepresentative_9_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 2 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_9, smallTripleAnchorB_9, smallTripleAnchorC_9}",
+      "smallTripleRepresentative_10_property\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 2 \u2243+* \ud835\udcde K) :\n    SmallTripleExtensionProperty\n      {smallTripleAnchorA_10, smallTripleAnchorB_10, smallTripleAnchorC_10}"
+    ],
+    "imports": [
+      "D1Bound5.SmallExtensionSymmetry"
+    ]
+  },
+  "SmallTripleOrbitProperties": {
+    "sha256": "07ff15f6c03ab8e7ee1a1b77d6f2898bc846565283f65a83ca1bf04790a167ce",
+    "headers": [
+      "smallTripleTable_0_1_extension_property_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 1 \u2243+* \ud835\udcde K)\n    (row : Finset (\u2124 \u00d7 \u2124)) (hrow : row \u2208 smallTripleTable 0 1) :\n    SmallTripleExtensionProperty (smallCoordinateSet 0 1 row)",
+      "smallTripleTable_0_2_extension_property_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 0 2 \u2243+* \ud835\udcde K)\n    (row : Finset (\u2124 \u00d7 \u2124)) (hrow : row \u2208 smallTripleTable 0 2) :\n    SmallTripleExtensionProperty (smallCoordinateSet 0 2 row)",
+      "smallTripleTable_1_1_extension_property_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 1 \u2243+* \ud835\udcde K)\n    (row : Finset (\u2124 \u00d7 \u2124)) (hrow : row \u2208 smallTripleTable 1 1) :\n    SmallTripleExtensionProperty (smallCoordinateSet 1 1 row)",
+      "smallTripleTable_1_2_extension_property_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (e : QuadInt 1 2 \u2243+* \ud835\udcde K)\n    (row : Finset (\u2124 \u00d7 \u2124)) (hrow : row \u2208 smallTripleTable 1 2) :\n    SmallTripleExtensionProperty (smallCoordinateSet 1 2 row)",
+      "smallTripleTable_extension_property_full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {tau nu : \u2124} (e : QuadInt tau nu \u2243+* \ud835\udcde K)\n    (hmodel : (tau = 0 \u2227 nu = 1) \u2228 (tau = 0 \u2227 nu = 2) \u2228\n      (tau = 1 \u2227 nu = 1) \u2228 (tau = 1 \u2227 nu = 2))\n    (row : Finset (\u2124 \u00d7 \u2124)) (hrow : row \u2208 smallTripleTable tau nu) :\n    SmallTripleExtensionProperty (smallCoordinateSet tau nu row)"
+    ],
+    "imports": [
+      "D1Bound5.SmallTripleRepresentativeProperties"
+    ]
+  },
+  "SmallTripleBoundedExtensions": {
+    "sha256": "48c636c065940c264bf5d45a57d236f9488ed0396e76184df898bebb518e4568",
+    "headers": [
+      "SmallTripleExtensionProperty.full_ring\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    {tau nu : \u2124} (e : QuadInt tau nu \u2243+* \ud835\udcde K) (phi : K \u2192+* \u2102)\n    (A : Finset (QuadInt tau nu)) (hA : SmallTripleExtensionProperty A) :\n    (\u2200 z : \ud835\udcde K, ProperCommonExtension (A.image e) z \u2192\n      \u2016phi (z : K)\u2016^2 \u2264 (10 : \u211d)^80 \u2192 \u2016phi (z : K)\u2016 < 85) \u2227\n    (\u2200 z w : \ud835\udcde K, ProperCommonExtension (A.image e) z \u2192\n      ProperCommonExtension (A.image e) w \u2192\n      \u2016phi (z : K)\u2016^2 \u2264 (10 : \u211d)^80 \u2192\n      \u2016phi (w : K)\u2016^2 \u2264 (10 : \u211d)^80 \u2192 z = w)",
+      "IsD1Tuple.small_triple_bounded_extensions\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 3 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hsmall : \u2200 i, \u2016phi (t i : K)\u2016 < 3) :\n    (\u2200 z : \ud835\udcde K, ProperCommonExtension {t 0,t 1,t 2} z \u2192\n      \u2016phi (z : K)\u2016^2 \u2264 (10 : \u211d)^80 \u2192 \u2016phi (z : K)\u2016 < 85) \u2227\n    (\u2200 z w : \ud835\udcde K, ProperCommonExtension {t 0,t 1,t 2} z \u2192\n      ProperCommonExtension {t 0,t 1,t 2} w \u2192\n      \u2016phi (z : K)\u2016^2 \u2264 (10 : \u211d)^80 \u2192\n      \u2016phi (w : K)\u2016^2 \u2264 (10 : \u211d)^80 \u2192 z = w)"
+    ],
+    "imports": [
+      "D1Bound5.SmallTripleOrbitProperties"
+    ]
+  },
+  "ThreeSmallSextuple": {
+    "sha256": "92e6b66ee26fa4969f4ba389855443d9744795188e2160b190dc72e04a9ee52f",
+    "headers": [
+      "IsD1Tuple.properCommonExtension_first_three\n    {R : Type*} [CommRing R] [DecidableEq R]\n    (t : Fin 6 \u2192 R) (ht : IsD1Tuple t) (j : Fin 6) (hj : 3 \u2264 j) :\n    ProperCommonExtension {t 0,t 1,t 2} (t j)",
+      "IsD1Tuple.three_small_fifth_large\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 6 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hmon : Monotone (fun i => \u2016phi (t i : K)\u2016))\n    (hsmall : \u2016phi (t 2 : K)\u2016 < 3) :\n    (10 : \u211d)^40 < \u2016phi (t 4 : K)\u2016 \u2227\n      (\u2016phi (t 3 : K)\u2016 < 85 \u2228 (10 : \u211d)^40 < \u2016phi (t 3 : K)\u2016)"
+    ],
+    "imports": [
+      "D1Bound5.SmallTripleBoundedExtensions"
+    ]
+  }
+}

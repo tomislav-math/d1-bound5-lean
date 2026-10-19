@@ -1,0 +1,3 @@
+# Raw compiler evidence preservation
+
+Raw compiler and checker .log files retain the exact bytes returned by the executed processes, including any trailing whitespace from tactic suggestions. The explicit staging verifier still checks every staged byte against its reviewed source/log snapshot and all accepted artifact guards. It reports any raw-log-only cosmetic whitespace warnings separately and requires the non-log diff whitespace check to pass. Such warnings are not proof failures and are never reported as a successful complete cosmetic check. No mathematical gate, axiom check, statement review, hash check or compiler result is waived.

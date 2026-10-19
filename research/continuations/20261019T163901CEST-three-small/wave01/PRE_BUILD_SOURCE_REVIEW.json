@@ -1,0 +1,122 @@
+{
+  "SmallTripleCheck": {
+    "sha256": "1f75bcdaa9e326145897ef273ea3989447fff478e71849b1db21c3aa9abd5c19",
+    "imports": [
+      "D1Bound5.SmallQuadrupleCheck"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleData": {
+    "sha256": "d79644481c842f2a40b2f5554666f54fa185f12915c38d31e4f1b24ec16844da",
+    "imports": [
+      "D1Bound5.SmallTripleCheck",
+      "D1Bound5.SmallQuadrupleData"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleClassification": {
+    "sha256": "29c06a840b00bae4fa8a3417f349d7002808f0195fa16482f0c5528783af6485",
+    "imports": [
+      "D1Bound5.SmallTripleData",
+      "D1Bound5.SmallQuadruple",
+      "D1Bound5.MaximalCoordinates",
+      "Mathlib.Algebra.Group.Int.Units"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensionData4": {
+    "sha256": "7b8ce25ff2a1b1bdeba4661beb87f82d9ff11017abd334d7924447d166c581af",
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensionData5": {
+    "sha256": "0f52c03dcb1aef0af13ae431869add34d508399252e4add0eccf7dd09dc092de",
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensionData6": {
+    "sha256": "36f224d3730e31a0a51a42e087cb11043ed4d384f831a7959f50bfd1ed91e3aa",
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensionData7": {
+    "sha256": "784947cee6255504e305aae62572ff2231ec8392139ceb2d3615de8ad4f2c5f3",
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensionData8": {
+    "sha256": "89ae5eb015cc06ce9d904be1f305c074eb3cd3fb88b017eb23ad5593272ca11e",
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensionData9": {
+    "sha256": "d547b2c59760d0754a4660f0e6f6a2dd995b480c12bf4f53eac6fc574c6b3772",
+    "imports": [
+      "D1Bound5.PairSeedDisks"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleExtensions": {
+    "sha256": "4012985a91d9c7e7f8ef52a242c3eb2b671af1516c44413e2d52d177518230c5",
+    "imports": [
+      "D1Bound5.PairExtensionComplete",
+      "D1Bound5.SmallTripleExtensionData1",
+      "D1Bound5.SmallTripleExtensionData2",
+      "D1Bound5.SmallTripleExtensionData3",
+      "D1Bound5.SmallTripleExtensionData4",
+      "D1Bound5.SmallTripleExtensionData5",
+      "D1Bound5.SmallTripleExtensionData6",
+      "D1Bound5.SmallTripleExtensionData7",
+      "D1Bound5.SmallTripleExtensionData8",
+      "D1Bound5.SmallTripleExtensionData9",
+      "D1Bound5.SmallTripleExtensionData10"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallExtensionSymmetry": {
+    "sha256": "b5b6500f05bd18eae4b7fb0224178384206a45604180b7258f0e4cfa00476118",
+    "imports": [
+      "D1Bound5.SmallTripleExtensions",
+      "D1Bound5.SmallTripleClassification"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleRepresentativeProperties": {
+    "sha256": "a83bbabd2bee324566724658a0b1876696641e481ed94e75fb471c1207165f52",
+    "imports": [
+      "D1Bound5.SmallExtensionSymmetry"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleOrbitProperties": {
+    "sha256": "07ff15f6c03ab8e7ee1a1b77d6f2898bc846565283f65a83ca1bf04790a167ce",
+    "imports": [
+      "D1Bound5.SmallTripleRepresentativeProperties"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "SmallTripleBoundedExtensions": {
+    "sha256": "48c636c065940c264bf5d45a57d236f9488ed0396e76184df898bebb518e4568",
+    "imports": [
+      "D1Bound5.SmallTripleOrbitProperties"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeSmallSextuple": {
+    "sha256": "92e6b66ee26fa4969f4ba389855443d9744795188e2160b190dc72e04a9ee52f",
+    "imports": [
+      "D1Bound5.SmallTripleBoundedExtensions"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}
