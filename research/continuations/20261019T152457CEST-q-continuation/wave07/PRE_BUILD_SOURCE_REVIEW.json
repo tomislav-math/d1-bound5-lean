@@ -1,0 +1,53 @@
+{
+  "FiniteQResidualIdentity": {
+    "sha256": "74ab040376af9b42e7ee62656f2fd8f3a92a0111248e8b31465d43a74a137c58",
+    "imports": [
+      "D1Bound5.FiniteQMatrix",
+      "D1Bound5.HalfBinomialAnalytic",
+      "Mathlib.Tactic.FieldSimp"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteQIntegralRows": {
+    "sha256": "13dbc71d3f13cc35a26b1a62808a9ec3ba2232668209833fc8f21e0bdba9f6ad",
+    "imports": [
+      "D1Bound5.FiniteQMatrix",
+      "D1Bound5.FullRingBridge",
+      "Mathlib.Tactic.FinCases"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteQResidualBound": {
+    "sha256": "18863f361b351d70f4661feb5fb37b749fdbdd8e341c8f961749b417e6632ed9",
+    "imports": [
+      "D1Bound5.FiniteQResidualIdentity",
+      "Mathlib.Tactic.GCongr"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteQRowBound": {
+    "sha256": "791fbd5ab0485888fc2207407e4522dac5c3ad388f70c392e5ef0228d0e3578f",
+    "imports": [
+      "D1Bound5.FiniteQIntegralRows",
+      "D1Bound5.FiniteQHeight",
+      "D1Bound5.FiniteQResidualBound",
+      "D1Bound5.FiniteRowRootTransfer"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteQFullRing": {
+    "sha256": "450882eae6000422aea36f282ba93b11445c8ac5f900ce8fde4c83fea82aa856",
+    "imports": [
+      "D1Bound5.FiniteQRowBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteQInterval": {
+    "sha256": "93002bc61684705a1dbdf4c53f0dd7e54b963a766cfabd82272bd713d42011b8",
+    "imports": [
+      "D1Bound5.FiniteQFullRing",
+      "D1Bound5.FiniteClosedWindow"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}

@@ -1,0 +1,3 @@
+# Recovery scope
+
+The predecessor directory 20261019T152457CEST-q-continuation is preserved without overwriting its trials. It contains guarded successful exact builds for FiniteQMatrix, FiniteQHeight, FiniteQResidualIdentity and FiniteQIntegralRows, but no finished family-wide audit. Its wave07 ended with a genuine FiniteQResidualBound failure. The present run does not repeat the four successful compilations; it repairs the actual unfinished dependency and audits the complete eight-module Q family only after current successful builds. The 37-module analytic result has already been pushed as e95f549, verified again by the read-only preflight. MainStatement remains UNPROVED.

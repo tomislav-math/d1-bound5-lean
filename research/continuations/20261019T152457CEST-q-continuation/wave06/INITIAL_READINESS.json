@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-19T13:46:47.297387+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteQMatrix": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteQResidualIdentity": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQHeight": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQIntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQResidualBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQResidualIdentity",
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQHeight",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    },
+    "FiniteQFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQRowBound",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQHeight",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    },
+    "FiniteQInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQFullRing",
+        "FiniteQRowBound",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQHeight",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "unknown": [],
+  "targets": {
+    "FiniteQMatrix": {
+      "ready": true,
+      "missing": []
+    },
+    "FiniteQResidualIdentity": {
+      "ready": false,
+      "missing": [
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQHeight": {
+      "ready": false,
+      "missing": [
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQIntegralRows": {
+      "ready": false,
+      "missing": [
+        "FiniteQMatrix"
+      ]
+    },
+    "FiniteQResidualBound": {
+      "ready": false,
+      "missing": [
+        "FiniteQMatrix",
+        "FiniteQResidualIdentity"
+      ]
+    },
+    "FiniteQRowBound": {
+      "ready": false,
+      "missing": [
+        "FiniteQHeight",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    },
+    "FiniteQFullRing": {
+      "ready": false,
+      "missing": [
+        "FiniteQHeight",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity",
+        "FiniteQRowBound"
+      ]
+    },
+    "FiniteQInterval": {
+      "ready": false,
+      "missing": [
+        "FiniteQFullRing",
+        "FiniteQHeight",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity",
+        "FiniteQRowBound"
+      ]
+    }
+  }
+}

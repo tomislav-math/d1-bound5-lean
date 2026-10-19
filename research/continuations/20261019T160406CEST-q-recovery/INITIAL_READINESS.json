@@ -1,0 +1,54 @@
+{
+  "unknown": [],
+  "targets": {
+    "FiniteQMatrix": {
+      "accepted": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteQHeight": {
+      "accepted": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteQResidualIdentity": {
+      "accepted": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteQIntegralRows": {
+      "accepted": true,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteQResidualBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": []
+    },
+    "FiniteQRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQResidualBound"
+      ]
+    },
+    "FiniteQFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQResidualBound",
+        "FiniteQRowBound"
+      ]
+    },
+    "FiniteQInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteQFullRing",
+        "FiniteQResidualBound",
+        "FiniteQRowBound"
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# PROGRESS — 2026-10-19T15:55:46.438364+02:00
+
+The recovered 37-module analytic package is privately synchronized in e95f549. New guarded builds passed for FiniteQMatrix and FiniteQHeight; the initial Q determinant recursion/timeout was repaired by proving the sparse determinant with forty local decide-proved finite-index equalities before polynomial substitution. FiniteQResidualIdentity has now also passed after a lexical spacing repair. Original public statements and frozen v4 are unchanged. The current owned serial wave07 is still compiling the remaining Q family. Public type/axiom audit and four targeted milestone replays are pending. No global proof completion is claimed.

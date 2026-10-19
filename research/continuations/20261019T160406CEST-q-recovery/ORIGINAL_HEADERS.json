@@ -1,0 +1,65 @@
+{
+  "FiniteQMatrix": {
+    "sha256": "2f755e678bd622e56202bc0ee045607d7d27be9db56f9573d2b8ebb7ab8ce87d",
+    "headers": [
+      "finiteQDividedMatrix_det (a b s t c : R) :\n    (finiteQDividedMatrix a b s t c).det =\n      180*a*b*s*t*(a-b)^2*(a-s)*(a-t)*(b-s)*(b-t)*(s-t)",
+      "finiteQMatrix_det (a b s t c : R) :\n    (finiteQMatrix a b s t c).det =\n      180*a^2*b^2*s^2*t^2*(a-b)^2*(a-s)*(a-t)*(b-s)*(b-t)*(s-t)",
+      "finiteQDividedMatrix_det_ne_zero\n    {F : Type*} [Field F] [CharZero F] (a b s t c : F)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (ht : t \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hat : a \u2260 t)\n    (hbs : b \u2260 s) (hbt : b \u2260 t) (hst : s \u2260 t) :\n    (finiteQDividedMatrix a b s t c).det \u2260 0"
+    ]
+  },
+  "FiniteQResidualIdentity": {
+    "sha256": "ef712a3b21eb79597102953d3d15397d316608fdf20344b5f2cdd99000a26b3e",
+    "headers": [
+      "finiteQ_half_coefficients :\n    halfBinomialCoeff 0 = 1 \u2227 halfBinomialCoeff 1 = 1/2 \u2227\n    halfBinomialCoeff 2 = -1/8 \u2227 halfBinomialCoeff 3 = 1/16 \u2227\n    halfBinomialCoeff 4 = -5/128",
+      "finiteQHalfRemainder_norm_le (n : \u2115) (z : \u2102)\n    (hn : 4 \u2264 n) (hz : \u2016z\u2016 < 1) :\n    \u2016finiteQHalfRemainder n z\u2016 \u2264 (5/128 : \u211d)*\u2016z\u2016^n/(1-\u2016z\u2016)",
+      "finiteQResidual_eq_remainders\n    (u v c : \u2102) (hu : u \u2260 0) (hv : v \u2260 0) (hc : c \u2260 0) :\n    finiteQResidual u v c =\n      u*(u^2-5*u*v)*finiteQHalfRemainder 4 (1/(u*c)) +\n      u*(4*u^3-8*u^2*v)*c*finiteQHalfRemainder 5 (1/(u*c)) +\n      v*(5*u*v-v^2)*finiteQHalfRemainder 4 (1/(v*c)) +\n      v*(8*u*v^2-4*v^3)*c*finiteQHalfRemainder 5 (1/(v*c))"
+    ]
+  },
+  "FiniteQHeight": {
+    "sha256": "86865cf236ac82f61de86bc28514d9e3b24a1d93eff23574b7cf2a6d0efa3d7e",
+    "headers": [
+      "finiteQ_pair_height\n    (u v c : \u2102) (T C : \u211d) (hT : 0 \u2264 T) (hC : 0 \u2264 C)\n    (hu : \u2016u\u2016 \u2264 T) (hv : \u2016v\u2016 \u2264 T) (hc : \u2016c\u2016 \u2264 C) (hTC : 1 \u2264 T*C) :\n    \u2016finiteQLeft u v c\u2016 + \u2016finiteQRight u v c\u2016 \u2264 36*T^3*C",
+      "finiteQDividedMatrix_root_height\n    (a b s t c : \u2102) (T C : \u211d) (hT : 0 \u2264 T) (hC : 0 \u2264 C)\n    (ha : \u2016a\u2016 \u2264 T) (hb : \u2016b\u2016 \u2264 T) (hs : \u2016s\u2016 \u2264 T) (ht : \u2016t\u2016 \u2264 T)\n    (hc : \u2016c\u2016 \u2264 C) (hTC : 1 \u2264 T*C) (i : Fin 5) :\n    (\u2211 j : Fin 4, \u2016finiteQDividedMatrix a b s t c i j.succ\u2016) \u2264 36*T^3*C"
+    ]
+  },
+  "FiniteQIntegralRows": {
+    "sha256": "494b4e2f4206799d83d04d47f2bc9d72534308fa8536375e9c1c79ce935ad522",
+    "headers": [
+      "map_finiteQLeft (f : R \u2192+* S) (u v c : R) :\n    f (finiteQLeft u v c) = finiteQLeft (f u) (f v) (f c)",
+      "map_finiteQRight (f : R \u2192+* S) (u v c : R) :\n    f (finiteQRight u v c) = finiteQRight (f u) (f v) (f c)",
+      "map_finiteQConstant (f : R \u2192+* S) (u v c : R) :\n    f (finiteQConstant u v c) = finiteQConstant (f u) (f v) (f c)",
+      "map_finiteQDividedMatrix (f : R \u2192+* S)\n    (a b s t c : R) (i j : Fin 5) :\n    f (finiteQDividedMatrix a b s t c i j) =\n      finiteQDividedMatrix (f a) (f b) (f s) (f t) (f c) i j",
+      "map_finiteQRowForm (f : R \u2192+* S)\n    (a b s t c z rA rB rS rT : R) (i : Fin 5) :\n    f (finiteQRowForm a b s t c z rA rB rS rT i) =\n      finiteQRowForm (f a) (f b) (f s) (f t) (f c)\n        (f z) (f rA) (f rB) (f rS) (f rT) i",
+      "finiteQRowForm_exists_ne_zero\n    {F : Type*} [Field F] [CharZero F]\n    (a b s t c z rA rB rS rT : F)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (ht : t \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hat : a \u2260 t)\n    (hbs : b \u2260 s) (hbt : b \u2260 t) (hst : s \u2260 t) (hz : z \u2260 0) :\n    \u2203 i : Fin 5, finiteQRowForm a b s t c z rA rB rS rT i \u2260 0",
+      "full_ring_finiteQRowForm_exists_one_le_norm\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a b s t c z rA rB rS rT : \ud835\udcde K)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (ht : t \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hat : a \u2260 t)\n    (hbs : b \u2260 s) (hbt : b \u2260 t) (hst : s \u2260 t) (hz : z \u2260 0) :\n    \u2203 i : Fin 5, 1 \u2264 \u2016finiteQRowForm\n      (phi (a : K)) (phi (b : K)) (phi (s : K)) (phi (t : K)) (phi (c : K))\n      (phi (z : K)) (phi (rA : K)) (phi (rB : K)) (phi (rS : K)) (phi (rT : K)) i\u2016"
+    ]
+  },
+  "FiniteQResidualBound": {
+    "sha256": "18863f361b351d70f4661feb5fb37b749fdbdd8e341c8f961749b417e6632ed9",
+    "headers": [
+      "finiteQHalfRemainder_small_norm_le (n : \u2115) (z : \u2102)\n    (hn : 4 \u2264 n) (hz : \u2016z\u2016 \u2264 (1/1000 : \u211d)) :\n    \u2016finiteQHalfRemainder n z\u2016 \u2264 (625/15984 : \u211d)*\u2016z\u2016^n",
+      "finiteQTailSide_norm_le\n    (u v c : \u2102) (A T : \u211d) (hA : 0 < A)\n    (hAu : A \u2264 \u2016u\u2016) (huT : \u2016u\u2016 \u2264 T) (hvT : \u2016v\u2016 \u2264 T)\n    (hAC : 1000 \u2264 A*\u2016c\u2016) :\n    \u2016finiteQTailSide u v c\u2016 \u2264 (625/888 : \u211d)*T/(A^2*\u2016c\u2016^4)",
+      "finiteQResidual_norm_lt\n    (u v c : \u2102) (A T : \u211d) (hA : 0 < A)\n    (hAu : A \u2264 \u2016u\u2016) (hAv : A \u2264 \u2016v\u2016)\n    (huT : \u2016u\u2016 \u2264 T) (hvT : \u2016v\u2016 \u2264 T) (hAC : 1000 \u2264 A*\u2016c\u2016) :\n    \u2016finiteQResidual u v c\u2016 < 3*T/(2*A^2*\u2016c\u2016^4)"
+    ]
+  },
+  "FiniteQRowBound": {
+    "sha256": "791fbd5ab0485888fc2207407e4522dac5c3ad388f70c392e5ef0228d0e3578f",
+    "headers": [
+      "finiteQRowResidual_norm_lt\n    (a b s t c : \u2102) (A T : \u211d) (hA : 0 < A)\n    (hlower : \u2200 j, A \u2264 \u2016finiteQAnchors a b s t j\u2016)\n    (hupper : \u2200 j, \u2016finiteQAnchors a b s t j\u2016 \u2264 T)\n    (hAC : 1000 \u2264 A*\u2016c\u2016) (i : Fin 5) :\n    \u2016finiteQRowResidual a b s t c i\u2016 < 3*T/(2*A^2*\u2016c\u2016^4)",
+      "finiteQRowForm_eq_root_sum\n    (a b s t c z rA rB rS rT : \u2102) (i : Fin 5) :\n    finiteQRowForm a b s t c z rA rB rS rT i =\n      finiteQDividedMatrix a b s t c i 0*z +\n        \u2211 j : Fin 4, finiteQDividedMatrix a b s t c i j.succ * ![rA,rB,rS,rT] j",
+      "finiteQRowForm_norm_lt\n    (a b s t c z rA rB rS rT : \u2102) (A T : \u211d) (hA : 0 < A) (hz : z \u2260 0)\n    (hlower : \u2200 j, A \u2264 \u2016finiteQAnchors a b s t j\u2016)\n    (hupper : \u2200 j, \u2016finiteQAnchors a b s t j\u2016 \u2264 T)\n    (hAC : 1000 \u2264 A*\u2016c\u2016)\n    (herr : \u2200 j : Fin 4,\n      \u2016((1+1/(finiteQAnchors a b s t j*c))^(1/2 : \u2102)) -\n        ![rA,rB,rS,rT] j/(finiteQAnchors a b s t j*z)\u2016 \u2264\n          (3/2 : \u211d)*\u2016c\u2016/(\u2016finiteQAnchors a b s t j\u2016*\u2016z\u2016^2)) (i : Fin 5) :\n    \u2016finiteQRowForm a b s t c z rA rB rS rT i\u2016 <\n      54*T^3*\u2016c\u2016^2/\u2016z\u2016+3*T*\u2016z\u2016/(2*A^2*\u2016c\u2016^4)"
+    ]
+  },
+  "FiniteQFullRing": {
+    "sha256": "450882eae6000422aea36f282ba93b11445c8ac5f900ce8fde4c83fea82aa856",
+    "headers": [
+      "full_ring_finiteQ_inequality\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {S : Finset (\ud835\udcde K)} (hS : IsD1 S) (a : Fin 4 \u2192 \ud835\udcde K) (c d : \ud835\udcde K)\n    (haS : \u2200 j, a j \u2208 S) (hcS : c \u2208 S) (hdS : d \u2208 S)\n    (hinj : Function.Injective a) (hac : \u2200 j, a j \u2260 c)\n    (had : \u2200 j, a j \u2260 d) (hcd : c \u2260 d)\n    (A T : \u211d) (hA : 0 < A)\n    (hlower : \u2200 j, A \u2264 \u2016phi (a j : K)\u2016)\n    (hupper : \u2200 j, \u2016phi (a j : K)\u2016 \u2264 T)\n    (hCT : 4*T \u2264 \u2016phi (c : K)\u2016)\n    (hCD : \u2016phi (c : K)\u2016 \u2264 \u2016phi (d : K)\u2016)\n    (hAC : 1000 \u2264 A*\u2016phi (c : K)\u2016) :\n    \u2203 z : \ud835\udcde K, z^2 = c*d+1 \u2227\n      1 < 55*T^3*\u2016phi (c : K)\u2016^2/\u2016phi (z : K)\u2016 +\n        3*T*\u2016phi (z : K)\u2016/(2*A^2*\u2016phi (c : K)\u2016^4)"
+    ]
+  },
+  "FiniteQInterval": {
+    "sha256": "93002bc61684705a1dbdf4c53f0dd7e54b963a766cfabd82272bd713d42011b8",
+    "headers": [
+      "full_ring_finiteQ_closed_interval_excluded\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {S : Finset (\ud835\udcde K)} (hS : IsD1 S) (a : Fin 4 \u2192 \ud835\udcde K) (c d : \ud835\udcde K)\n    (haS : \u2200 j, a j \u2208 S) (hcS : c \u2208 S) (hdS : d \u2208 S)\n    (hinj : Function.Injective a) (hac : \u2200 j, a j \u2260 c)\n    (had : \u2200 j, a j \u2260 d) (hcd : c \u2260 d)\n    (A T : \u211d) (hA : 0 < A)\n    (hlower : \u2200 j, A \u2264 \u2016phi (a j : K)\u2016)\n    (hupper : \u2200 j, \u2016phi (a j : K)\u2016 \u2264 T)\n    (hCT : 4*T \u2264 \u2016phi (c : K)\u2016)\n    (hCD : \u2016phi (c : K)\u2016 \u2264 \u2016phi (d : K)\u2016)\n    (hAC : 1000 \u2264 A*\u2016phi (c : K)\u2016)\n    (hleft : 4*55^2*T^6*\u2016phi (c : K)\u2016^3/(1-1/4000 : \u211d) \u2264 \u2016phi (d : K)\u2016)\n    (hright : \u2016phi (d : K)\u2016 \u2264\n      A^4*\u2016phi (c : K)\u2016^7/(9*T^2*(1+1/4000 : \u211d))) : False"
+    ]
+  }
+}
