@@ -1,0 +1,706 @@
+⚠ [1722/1772] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1724/1772] Replayed D1Bound5.BennettBinomialTransfer
+warning: D1Bound5/BennettBinomialTransfer.lean:11:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettSeries_coeff_C_add_X_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1730/1772] Replayed D1Bound5.BennettResidueCoefficient
+warning: D1Bound5/BennettResidueCoefficient.lean:22:0: automatically included section variable(s) unused in theorem `D1Bound5.clearedPoleNumerator_monic`:
+  [Nontrivial R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1732/1772] Replayed D1Bound5.BennettPartialFractions
+warning: D1Bound5/BennettPartialFractions.lean:24:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_monic`:
+  [Nontrivial R]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettPartialFractions.lean:29:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_natDegree`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1733/1772] Replayed D1Bound5.BennettLocalResidues
+warning: D1Bound5/BennettLocalResidues.lean:17:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_C`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettLocalResidues.lean:21:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_linear`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1736/1772] Replayed D1Bound5.BennettResidualCancellation
+warning: D1Bound5/BennettResidualCancellation.lean:108:0: automatically included section variable(s) unused in theorem `D1Bound5.bennett_coeff_mul_trunc`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1764/1772] Replayed D1Bound5.BennettDeterminantConstant
+warning: D1Bound5/BennettDeterminantConstant.lean:65:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:65:35: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:72:14: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [1766/1772] Replayed D1Bound5.BennettDeterminantFormula
+warning: D1Bound5/BennettDeterminantFormula.lean:34:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettDirectedProduct_succ`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✖ [1772/1772] Building D1Bound5.FiniteMBennettIdentity (39s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteMBennettIdentity.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteMBennettIdentity.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteMBennettIdentity.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteMBennettIdentity.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteMBennettIdentity.setup.json --json
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+error: D1Bound5/FiniteMBennettIdentity.lean:55:4: `simp` made no progress
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+error: D1Bound5/FiniteMBennettIdentity.lean:55:4: `simp` made no progress
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+error: D1Bound5/FiniteMBennettIdentity.lean:55:4: `simp` made no progress
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+error: D1Bound5/FiniteMBennettIdentity.lean:55:4: `simp` made no progress
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:50:36: Unknown constant `Finset.antidiagonal_zero`
+info: D1Bound5/FiniteMBennettIdentity.lean:62:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMBennettIdentity.lean:33:62: unsolved goals
+case «3».«3»
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+a b s c : F
+ha : a ≠ 0
+hb : b ≠ 0
+hs : s ≠ 0
+hab : a ≠ b
+has : a ≠ s
+hbs : b ≠ s
+hanti1 : antidiagonal 1 = {(0, 1), (1, 0)}
+hanti2 : antidiagonal 2 = {(0, 2), (1, 1), (2, 0)}
+hs0 : univ.erase 0 = {1, 2, 3}
+hs1 : univ.erase 1 = {0, 2, 3}
+hs2 : univ.erase 2 = {0, 1, 3}
+hs3 : univ.erase 3 = {0, 1, 2}
+hab0 : a - b ≠ 0
+has0 : a - s ≠ 0
+hbs0 : b - s ≠ 0
+hba0 : b - a ≠ 0
+hsa0 : s - a ≠ 0
+hsb0 : s - b ≠ 0
+⊢ ⋯ + ⋯ + ⋯ * 480 - ⋯ * ⋯ * 2560 - ⋯ * c * (PowerSeries.coeff 1) ⋯ * 2560 -
+                                                                                                a ^ 8 * b ^ 9 * s ^ 3 *
+                                                                                                    (PowerSeries.coeff
+                                                                                                        2)
+                                                                                                      (∏ x ∈ ⋯, ⋯) *
+                                                                                                  6144 -
+                                                                                              a ^ 8 * b ^ 9 * s ^ 4 *
+                                                                                                    (PowerSeries.coeff
+                                                                                                        2)
+                                                                                                      (∏ x ∈ ⋯, ⋯) *
+                                                                                                  c *
+                                                                                                12288 -
+                                                                                            a ^ 8 * b ^ 9 * s ^ 5 *
+                                                                                                  (PowerSeries.coeff 2)
+                                                                                                    (∏
+                                                                                                      x ∈
+                                                                                                        univ.erase
+                                                                                                          ⟨3, ⋯⟩,
+                                                                                                      bennettPoleSeries
+                                                                                                        ⋯ ⋯) *
+                                                                                                c ^ 2 *
+                                                                                              6144 +
+                                                                                          a ^ 8 * b ^ 10 * s ^ 2 *
+                                                                                              (PowerSeries.coeff 2)
+                                                                                                (∏
+                                                                                                  x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                                  bennettPoleSeries
+                                                                                                    (a * b -
+                                                                                                      Matrix.vecCons 0 ⋯
+                                                                                                        x)
+                                                                                                    (2 +
+                                                                                                      if ⋯ then 1
+                                                                                                      else 0)) *
+                                                                                            1536 +
+                                                                                        a ^ 8 * b ^ 10 * s ^ 3 *
+                                                                                              (PowerSeries.coeff 2)
+                                                                                                (∏
+                                                                                                  x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                                  bennettPoleSeries
+                                                                                                    (a * b -
+                                                                                                      Matrix.vecCons 0 ⋯
+                                                                                                        x)
+                                                                                                    (2 +
+                                                                                                      if ⋯ then 1
+                                                                                                      else 0)) *
+                                                                                            c *
+                                                                                          3072 +
+                                                                                      a ^ 8 * b ^ 10 * s ^ 4 *
+                                                                                            (PowerSeries.coeff 2)
+                                                                                              (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                                bennettPoleSeries
+                                                                                                  (a * b -
+                                                                                                    Matrix.vecCons 0
+                                                                                                      (Matrix.vecCons
+                                                                                                        (b * s) ⋯)
+                                                                                                      x)
+                                                                                                  (2 +
+                                                                                                    if ⟨3, ⋯⟩ = x then 1
+                                                                                                    else 0)) *
+                                                                                          c ^ 2 *
+                                                                                        1536 +
+                                                                                    a ^ 9 * b ^ 5 * s ^ 4 *
+                                                                                        (PowerSeries.coeff 1)
+                                                                                          (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                            bennettPoleSeries
+                                                                                              (a * b -
+                                                                                                ![0, b * s, a * s,
+                                                                                                    a * b]
+                                                                                                  x)
+                                                                                              (2 +
+                                                                                                if ⟨3, ⋯⟩ = x then 1
+                                                                                                else 0)) *
+                                                                                      640 +
+                                                                                  a ^ 9 * b ^ 5 * s ^ 5 * c *
+                                                                                      (PowerSeries.coeff 1)
+                                                                                        (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                          bennettPoleSeries
+                                                                                            (a * b -
+                                                                                              ![0, b * s, a * s, a * b]
+                                                                                                x)
+                                                                                            (2 +
+                                                                                              if ⟨3, ⋯⟩ = x then 1
+                                                                                              else 0)) *
+                                                                                    640 -
+                                                                                a ^ 9 * b ^ 6 * s ^ 3 *
+                                                                                    (PowerSeries.coeff 1)
+                                                                                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                        bennettPoleSeries
+                                                                                          (a * b -
+                                                                                            ![0, b * s, a * s, a * b] x)
+                                                                                          (2 +
+                                                                                            if ⟨3, ⋯⟩ = x then 1
+                                                                                            else 0)) *
+                                                                                  2560 -
+                                                                              a ^ 9 * b ^ 6 * s ^ 4 * c *
+                                                                                  (PowerSeries.coeff 1)
+                                                                                    (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                      bennettPoleSeries
+                                                                                        (a * b -
+                                                                                          ![0, b * s, a * s, a * b] x)
+                                                                                        (2 +
+                                                                                          if ⟨3, ⋯⟩ = x then 1
+                                                                                          else 0)) *
+                                                                                2560 -
+                                                                            a ^ 9 * b ^ 6 * s ^ 5 *
+                                                                                (PowerSeries.coeff 2)
+                                                                                  (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                    bennettPoleSeries
+                                                                                      (a * b -
+                                                                                        ![0, b * s, a * s, a * b] x)
+                                                                                      (2 +
+                                                                                        if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                              1024 -
+                                                                          a ^ 9 * b ^ 6 * s ^ 6 *
+                                                                                (PowerSeries.coeff 2)
+                                                                                  (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                    bennettPoleSeries
+                                                                                      (a * b -
+                                                                                        ![0, b * s, a * s, a * b] x)
+                                                                                      (2 +
+                                                                                        if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                              c *
+                                                                            2048 -
+                                                                        a ^ 9 * b ^ 6 * s ^ 7 *
+                                                                              (PowerSeries.coeff 2)
+                                                                                (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                                  bennettPoleSeries
+                                                                                    (a * b -
+                                                                                      ![0, b * s, a * s, a * b] x)
+                                                                                    (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                            c ^ 2 *
+                                                                          1024 +
+                                                                      a ^ 9 * b ^ 7 * s ^ 2 *
+                                                                          (PowerSeries.coeff 1)
+                                                                            (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                              bennettPoleSeries
+                                                                                (a * b - ![0, b * s, a * s, a * b] x)
+                                                                                (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                        3840 +
+                                                                    a ^ 9 * b ^ 7 * s ^ 3 * c *
+                                                                        (PowerSeries.coeff 1)
+                                                                          (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                            bennettPoleSeries
+                                                                              (a * b - ![0, b * s, a * s, a * b] x)
+                                                                              (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                      3840 +
+                                                                  a ^ 9 * b ^ 7 * s ^ 4 *
+                                                                      (PowerSeries.coeff 2)
+                                                                        (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                          bennettPoleSeries
+                                                                            (a * b - ![0, b * s, a * s, a * b] x)
+                                                                            (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                    4096 +
+                                                                a ^ 9 * b ^ 7 * s ^ 5 *
+                                                                      (PowerSeries.coeff 2)
+                                                                        (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                          bennettPoleSeries
+                                                                            (a * b - ![0, b * s, a * s, a * b] x)
+                                                                            (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                    c *
+                                                                  8192 +
+                                                              a ^ 9 * b ^ 7 * s ^ 6 *
+                                                                    (PowerSeries.coeff 2)
+                                                                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                        bennettPoleSeries
+                                                                          (a * b - ![0, b * s, a * s, a * b] x)
+                                                                          (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                                  c ^ 2 *
+                                                                4096 -
+                                                            a ^ 9 * b ^ 8 * s *
+                                                                (PowerSeries.coeff 1)
+                                                                  (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                    bennettPoleSeries
+                                                                      (a * b - ![0, b * s, a * s, a * b] x)
+                                                                      (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                              2560 -
+                                                          a ^ 9 * b ^ 8 * s ^ 2 * c *
+                                                              (PowerSeries.coeff 1)
+                                                                (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                  bennettPoleSeries
+                                                                    (a * b - ![0, b * s, a * s, a * b] x)
+                                                                    (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                            2560 -
+                                                        a ^ 9 * b ^ 8 * s ^ 3 *
+                                                            (PowerSeries.coeff 2)
+                                                              (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                                  (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                          6144 -
+                                                      a ^ 9 * b ^ 8 * s ^ 4 *
+                                                            (PowerSeries.coeff 2)
+                                                              (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                                bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                                  (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                          c *
+                                                        12288 -
+                                                    a ^ 9 * b ^ 8 * s ^ 5 *
+                                                          (PowerSeries.coeff 2)
+                                                            (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                              bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                                (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                        c ^ 2 *
+                                                      6144 +
+                                                  a ^ 9 * b ^ 9 * s * c *
+                                                      (PowerSeries.coeff 1)
+                                                        (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                          bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                            (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                    640 +
+                                                a ^ 9 * b ^ 9 * s ^ 2 *
+                                                    (PowerSeries.coeff 2)
+                                                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                        bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                          (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                  4096 +
+                                              a ^ 9 * b ^ 9 * s ^ 3 *
+                                                    (PowerSeries.coeff 2)
+                                                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                        bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                          (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                  c *
+                                                8192 +
+                                            a ^ 9 * b ^ 9 * s ^ 4 *
+                                                  (PowerSeries.coeff 2)
+                                                    (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                      bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                        (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                                c ^ 2 *
+                                              4096 +
+                                          a ^ 9 * b ^ 9 *
+                                              (PowerSeries.coeff 1)
+                                                (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                  bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                    (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                            640 -
+                                        a ^ 9 * b ^ 10 * s *
+                                            (PowerSeries.coeff 2)
+                                              (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                  (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                          1024 -
+                                      a ^ 9 * b ^ 10 * s ^ 2 *
+                                            (PowerSeries.coeff 2)
+                                              (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                                bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                  (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                          c *
+                                        2048 -
+                                    a ^ 9 * b ^ 10 * s ^ 3 *
+                                          (PowerSeries.coeff 2)
+                                            (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                              bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                                (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                        c ^ 2 *
+                                      1024 +
+                                  a ^ 10 * b ^ 6 * s ^ 4 *
+                                      (PowerSeries.coeff 2)
+                                        (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                          bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                            (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                    256 +
+                                a ^ 10 * b ^ 6 * s ^ 5 *
+                                      (PowerSeries.coeff 2)
+                                        (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                          bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                            (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                    c *
+                                  512 +
+                              a ^ 10 * b ^ 6 * s ^ 6 *
+                                    (PowerSeries.coeff 2)
+                                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                        bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                          (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                                  c ^ 2 *
+                                256 -
+                            a ^ 10 * b ^ 7 * s ^ 3 *
+                                (PowerSeries.coeff 2)
+                                  (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                    bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                      (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                              1024 -
+                          a ^ 10 * b ^ 7 * s ^ 4 *
+                                (PowerSeries.coeff 2)
+                                  (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                    bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                      (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                              c *
+                            2048 -
+                        a ^ 10 * b ^ 7 * s ^ 5 *
+                              (PowerSeries.coeff 2)
+                                (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                                  bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                    (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                            c ^ 2 *
+                          1024 +
+                      a ^ 10 * b ^ 8 * s ^ 2 *
+                          (PowerSeries.coeff 2)
+                            (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                              bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                        1536 +
+                    a ^ 10 * b ^ 8 * s ^ 3 *
+                          (PowerSeries.coeff 2)
+                            (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                              bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x)
+                                (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                        c *
+                      3072 +
+                  a ^ 10 * b ^ 8 * s ^ 4 *
+                        (PowerSeries.coeff 2)
+                          (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                            bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                      c ^ 2 *
+                    1536 -
+                a ^ 10 * b ^ 9 * s *
+                    (PowerSeries.coeff 2)
+                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                        bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                  1024 -
+              a ^ 10 * b ^ 9 * s ^ 2 *
+                    (PowerSeries.coeff 2)
+                      (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                        bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                  c *
+                2048 -
+            a ^ 10 * b ^ 9 * s ^ 3 *
+                  (PowerSeries.coeff 2)
+                    (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                      bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+                c ^ 2 *
+              1024 +
+          a ^ 10 * b ^ 10 * s *
+                (PowerSeries.coeff 2)
+                  (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                    bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+              c *
+            512 +
+        a ^ 10 * b ^ 10 * s ^ 2 *
+              (PowerSeries.coeff 2)
+                (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+                  bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+            c ^ 2 *
+          256 +
+      a ^ 10 * b ^ 10 *
+          (PowerSeries.coeff 2)
+            (∏ x ∈ univ.erase ⟨3, ⋯⟩,
+              bennettPoleSeries (a * b - ![0, b * s, a * s, a * b] x) (2 + if ⟨3, ⋯⟩ = x then 1 else 0)) *
+        256 =
+    -(a * b * s ^ 2 * 128) + a * b * s ^ 3 * c * 6144 + a * b * s ^ 4 * c ^ 2 * 8192 - a * b ^ 2 * s * 1728 -
+                                                  a * b ^ 2 * s ^ 2 * c * 7936 -
+                                                a * b ^ 2 * s ^ 3 * c ^ 2 * 7168 +
+                                              a * s ^ 3 * 320 -
+                                            a * s ^ 4 * c * 1280 -
+                                          a * s ^ 5 * c ^ 2 * 2560 -
+                                        a ^ 2 * b * s * 1728 -
+                                      a ^ 2 * b * s ^ 2 * c * 7936 -
+                                    a ^ 2 * b * s ^ 3 * c ^ 2 * 7168 +
+                                  a ^ 2 * b ^ 2 * 2016 +
+                                a ^ 2 * b ^ 2 * s * c * 6912 +
+                              a ^ 2 * b ^ 2 * s ^ 2 * c ^ 2 * 5376 +
+                            a ^ 2 * s ^ 2 * 480 +
+                          a ^ 2 * s ^ 3 * c * 2560 +
+                        a ^ 2 * s ^ 4 * c ^ 2 * 2560 +
+                      b * s ^ 3 * 320 -
+                    b * s ^ 4 * c * 1280 -
+                  b * s ^ 5 * c ^ 2 * 2560 +
+                b ^ 2 * s ^ 2 * 480 +
+              b ^ 2 * s ^ 3 * c * 2560 +
+            b ^ 2 * s ^ 4 * c ^ 2 * 2560 -
+          s ^ 4 * 32 +
+        s ^ 5 * c * 256 +
+      s ^ 6 * c ^ 2 * 768
+warning: D1Bound5/FiniteMBennettIdentity.lean:55:15: This simp argument is unused:
+  show b * s - a * s = (b - a) * s by ring
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show b * s - a * b = b * (s - a) by ring, show a * s - b * s = (a - b) * s by ring,
+    show a * s - a * b = a * (s - b) by ring, show a * b - b * s = b * (a - s) by ring,
+    show a * b - a * s = a * (b - s) by ring]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:56:6: This simp argument is unused:
+  show b * s - a * b = b * (s - a) by ring
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show b * s - a * s = (b - a) * s by ring, show a * s - b * s = (a - b) * s by ring,
+    show a * s - a * b = a * (s - b) by ring, show a * b - b * s = b * (a - s) by ring,
+    show a * b - a * s = a * (b - s) by ring]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:57:6: This simp argument is unused:
+  show a * s - b * s = (a - b) * s by ring
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show b * s - a * s = (b - a) * s by ring, show b * s - a * b = b * (s - a) by ring,
+    show a * s - a * b = a * (s - b) by ring, show a * b - b * s = b * (a - s) by ring,
+    show a * b - a * s = a * (b - s) by ring]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:58:6: This simp argument is unused:
+  show a * s - a * b = a * (s - b) by ring
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show b * s - a * s = (b - a) * s by ring, show b * s - a * b = b * (s - a) by ring,
+    show a * s - b * s = (a - b) * s by ring, show a * b - b * s = b * (a - s) by ring,
+    show a * b - a * s = a * (b - s) by ring]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:59:6: This simp argument is unused:
+  show a * b - b * s = b * (a - s) by ring
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show b * s - a * s = (b - a) * s by ring, show b * s - a * b = b * (s - a) by ring,
+    show a * s - b * s = (a - b) * s by ring, show a * s - a * b = a * (s - b) by ring,
+    show a * b - a * s = a * (b - s) by ring]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:60:6: This simp argument is unused:
+  show a * b - a * s = a * (b - s) by ring
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [show b * s - a * s = (b - a) * s by ring, show b * s - a * b = b * (s - a) by ring,
+    show a * s - b * s = (a - b) * s by ring, show a * s - a * b = a * (s - b) by ring,
+    show a * b - b * s = b * (a - s) by ring]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: D1Bound5/FiniteMBennettIdentity.lean:67:47: unsolved goals
+case «1».«3»
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+a b s : F
+ha : ¬a = 0
+hb : ¬b = 0
+hs : ¬s = 0
+hab : ¬a = b
+has : ¬a = s
+hbs : ¬b = s
+hij : b * s = a * b
+⊢ False
+
+case «3».«1»
+F : Type u_1
+inst✝¹ : Field F
+inst✝ : CharZero F
+a b s : F
+ha : ¬a = 0
+hb : ¬b = 0
+hs : ¬s = 0
+hab : ¬a = b
+has : ¬a = s
+hbs : ¬b = s
+hij : a * b = b * s
+⊢ False
+warning: D1Bound5/FiniteMBennettIdentity.lean:70:41: This simp argument is unused:
+  mul_left_inj'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [finiteMNodes, mul_eq_zero, mul_right_inj', mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:70:56: This simp argument is unused:
+  mul_right_inj'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [finiteMNodes, mul_eq_zero, mul_left_inj', mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:70:72: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp_all [finiteMNodes, mul_eq_zero, mul_left_inj', mul_right_inj']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteMBennettIdentity
+error: build failed

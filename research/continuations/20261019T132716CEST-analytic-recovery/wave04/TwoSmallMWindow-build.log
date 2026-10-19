@@ -1,0 +1,17 @@
+⚠ [3006/3009] Replayed D1Bound5.OrdinaryHeightScalar
+warning: D1Bound5/OrdinaryHeightScalar.lean:85:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [3009/3009] Building D1Bound5.TwoSmallMWindow (62s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/TwoSmallMWindow.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/TwoSmallMWindow.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/TwoSmallMWindow.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/TwoSmallMWindow.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/TwoSmallMWindow.setup.json --json
+error: D1Bound5/TwoSmallMWindow.lean:23:29: `ring_nf` made no progress on the goal
+warning: D1Bound5/TwoSmallMWindow.lean:45:5: Variable name `hD` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.TwoSmallMWindow
+error: build failed

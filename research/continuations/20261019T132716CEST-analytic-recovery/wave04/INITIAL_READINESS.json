@@ -1,0 +1,114 @@
+{
+  "utc": "2026-10-19T12:13:14.694819+00:00",
+  "unknown": [],
+  "targets": {
+    "TwoSmallLargeTScalar": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallLargeCScalar": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallMWindow": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FullRingDirectFour": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallLargeTBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTScalar"
+      ]
+    },
+    "FiniteMResidualPoint": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMResidual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "TwoSmallFifthBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallMWindow",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "TwoSmallLargeCScalar",
+        "FullRingDirectFour",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar"
+      ]
+    },
+    "UnitPairFiniteReduction": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar"
+      ]
+    },
+    "UnitPairImpossible": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "UnitPairFiniteReduction",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "TwoSmallFifthBound",
+        "TwoSmallMWindow",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "TwoSmallLargeCScalar",
+        "FullRingDirectFour"
+      ]
+    }
+  }
+}

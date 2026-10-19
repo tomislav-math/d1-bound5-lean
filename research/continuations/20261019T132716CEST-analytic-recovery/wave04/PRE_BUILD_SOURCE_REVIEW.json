@@ -1,0 +1,116 @@
+{
+  "TwoSmallLargeTScalar": {
+    "sha256": "1b6203efdcea0221de771d1a60328cc585980bd3f0ccf1c486409156e649ed47",
+    "imports": [
+      "Mathlib.Data.Real.Basic",
+      "Mathlib.Tactic"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallLargeCScalar": {
+    "sha256": "79e7c173da899ded7ef955300328b22fbd602a68111f5542e6e6d34b91e34399",
+    "imports": [
+      "Mathlib.Data.Real.Basic",
+      "Mathlib.Tactic"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallMWindow": {
+    "sha256": "cf46e48251f6b8f633474c5b7e98d2fa57bfd69ba8f8fc181e3f8286d3921779",
+    "imports": [
+      "D1Bound5.TwoSmallHeightScalar",
+      "Mathlib.Tactic"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FullRingDirectFour": {
+    "sha256": "26f682adf7b364982556911f0c653055c60090d901726c7071aa654e23955b54",
+    "imports": [
+      "D1Bound5.CoherentDirectFour",
+      "D1Bound5.CoherentQuotientForms",
+      "D1Bound5.FiniteClosedWindow",
+      "D1Bound5.FullRingBridge",
+      "D1Bound5.Basic"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallLargeTBound": {
+    "sha256": "85da45e86dfffb4f81e99a1dcd3d25d66731321586375a66fcc4c99c3791876d",
+    "imports": [
+      "D1Bound5.TwoSmallLargeTScalar",
+      "D1Bound5.ThreeAnchorAlternative",
+      "D1Bound5.TwoSmallLargeSBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMResidualPoint": {
+    "sha256": "a973bad60914d5e10263e7a5bfa07ebcee0db2e436763b91bcf17ac9db9aafab",
+    "imports": [
+      "D1Bound5.FiniteMBennettIdentity",
+      "D1Bound5.BennettResidualBound",
+      "D1Bound5.FiniteEtaBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMResidual": {
+    "sha256": "20b5f3f0240599a870b13dc7bce59f4a645e7c3a3e921eff6e6196205ed5b078",
+    "imports": [
+      "D1Bound5.FiniteMResidualPoint",
+      "Mathlib.Tactic.GCongr"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMRowBound": {
+    "sha256": "a08eeb335ec57be15fb0c5dfc1a47eaae4fc44a5d964b5c18b2dca7bf9bb405a",
+    "imports": [
+      "D1Bound5.FiniteMIntegralRows",
+      "D1Bound5.FiniteMHeight",
+      "D1Bound5.FiniteMResidual",
+      "D1Bound5.FiniteRowRootTransfer"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMFullRing": {
+    "sha256": "ccd1c5fe763a7002b65f94178df335b7e0c574ea0b9cf29c56f7a3dc63944b8e",
+    "imports": [
+      "D1Bound5.FiniteMRowBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMInterval": {
+    "sha256": "53a6f39ac9a59fdf8135626fdfab3e56282ebeb2c05e568f1a8a0d4ed24b420f",
+    "imports": [
+      "D1Bound5.FiniteMFullRing",
+      "D1Bound5.FiniteClosedWindow"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallFifthBound": {
+    "sha256": "40729d4ab52d8b38a6cbd40d489450ac0c90b2a0c552b8bbb5039ce2f5583798",
+    "imports": [
+      "D1Bound5.TwoSmallMWindow",
+      "D1Bound5.FiniteMInterval",
+      "D1Bound5.TwoSmallLargeCScalar",
+      "D1Bound5.FullRingDirectFour",
+      "D1Bound5.TwoSmallLargeTBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "UnitPairFiniteReduction": {
+    "sha256": "f60f93f10ad862a7b74e0517aa313ca0c673b7873be2d1cb7e78df45cfabce19",
+    "imports": [
+      "D1Bound5.PellUnitPairBounded",
+      "D1Bound5.TwoSmallLargeSBound",
+      "D1Bound5.TwoSmallLargeTBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "UnitPairImpossible": {
+    "sha256": "4c2c87182eaafedb4e09a0e7ed0a5df2fe634a496242cdfdf9316b2aefde68ea",
+    "imports": [
+      "D1Bound5.UnitPairFiniteReduction",
+      "D1Bound5.TwoSmallFifthBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}

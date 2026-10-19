@@ -1,0 +1,69 @@
+✖ [1548/1548] Building D1Bound5.EisensteinExceptionalPair (21s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/EisensteinExceptionalPair.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/EisensteinExceptionalPair.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/EisensteinExceptionalPair.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/EisensteinExceptionalPair.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/EisensteinExceptionalPair.setup.json --json
+error: D1Bound5/EisensteinExceptionalPair.lean:23:4: linarith failed to find a contradiction
+case h1
+z r : QuadInt 1 1
+hr : r * r = { re := 0, im := -1 } * z + 1
+s : QuadInt 1 1
+hs : s * s = { re := 1, im := -1 } * z + 1
+hrR : r.re * r.re + -(r.im * r.im) = z.im + QuadraticAlgebra.re 1
+hrI : r.re * r.im + r.im * r.re + r.im * r.im = -z.re + -z.im + QuadraticAlgebra.im 1
+hsR : s.re * s.re + -(s.im * s.im) = z.re + z.im + QuadraticAlgebra.re 1
+hsI : s.re * s.im + s.im * s.re + s.im * s.im = -z.re + QuadraticAlgebra.im 1
+a✝ : r.re ^ 2 - r.im ^ 2 + s.im ^ 2 - (-s.re - s.im) ^ 2 < 0
+⊢ False
+failed
+error: D1Bound5/EisensteinExceptionalPair.lean:25:4: linarith failed to find a contradiction
+case h1
+z r : QuadInt 1 1
+hr : r * r = { re := 0, im := -1 } * z + 1
+s : QuadInt 1 1
+hs : s * s = { re := 1, im := -1 } * z + 1
+hrR : r.re * r.re + -(r.im * r.im) = z.im + QuadraticAlgebra.re 1
+hrI : r.re * r.im + r.im * r.re + r.im * r.im = -z.re + -z.im + QuadraticAlgebra.im 1
+hsR : s.re * s.re + -(s.im * s.im) = z.re + z.im + QuadraticAlgebra.re 1
+hsI : s.re * s.im + s.im * s.re + s.im * s.im = -z.re + QuadraticAlgebra.im 1
+hR : r.re ^ 2 - r.im ^ 2 + s.im ^ 2 - (-s.re - s.im) ^ 2 = 0
+a✝ : 2 * r.re * r.im + r.im ^ 2 + 2 * s.im * (-s.re - s.im) + (-s.re - s.im) ^ 2 < 1
+⊢ False
+failed
+error: D1Bound5/EisensteinExceptionalPair.lean:30:4: linarith failed to find a contradiction
+case inl.h1
+z r : QuadInt 1 1
+hr : r * r = { re := 0, im := -1 } * z + 1
+s : QuadInt 1 1
+hs : s * s = { re := 1, im := -1 } * z + 1
+hrR : r.re * r.re + -(r.im * r.im) = z.im + QuadraticAlgebra.re 1
+hrI : r.re * r.im + r.im * r.re + r.im * r.im = -z.re + -z.im + QuadraticAlgebra.im 1
+hsR : s.re * s.re + -(s.im * s.im) = z.re + z.im + QuadraticAlgebra.re 1
+hsI : (-r.re - r.im) * r.im + r.im * (-r.re - r.im) + r.im * r.im = -z.re + QuadraticAlgebra.im 1
+hR : r.re ^ 2 - r.im ^ 2 + s.im ^ 2 - (-s.re - s.im) ^ 2 = 0
+hI : 2 * r.re * r.im + r.im ^ 2 + 2 * s.im * (-s.re - s.im) + (-s.re - s.im) ^ 2 = 1
+h1 : s.im = r.im
+h2 : -s.re - s.im = r.re
+hsre : s.re = -r.re - r.im
+a✝ : 2 * z.re + z.im < 0
+⊢ False
+failed
+error: D1Bound5/EisensteinExceptionalPair.lean:33:4: linarith failed to find a contradiction
+case inr.h1
+z r : QuadInt 1 1
+hr : r * r = { re := 0, im := -1 } * z + 1
+s : QuadInt 1 1
+hs : s * s = { re := 1, im := -1 } * z + 1
+hrR : r.re * r.re + -(r.im * r.im) = z.im + QuadraticAlgebra.re 1
+hrI : r.re * r.im + r.im * r.re + r.im * r.im = -z.re + -z.im + QuadraticAlgebra.im 1
+hsR : s.re * s.re + -(s.im * s.im) = z.re + z.im + QuadraticAlgebra.re 1
+hsI : (r.re + r.im) * -r.im + -r.im * (r.re + r.im) + -r.im * -r.im = -z.re + QuadraticAlgebra.im 1
+hR : r.re ^ 2 - r.im ^ 2 + s.im ^ 2 - (-s.re - s.im) ^ 2 = 0
+hI : 2 * r.re * r.im + r.im ^ 2 + 2 * s.im * (-s.re - s.im) + (-s.re - s.im) ^ 2 = 1
+h1 : s.im = -r.im
+h2 : -s.re - s.im = -r.re
+hsre : s.re = r.re + r.im
+a✝ : 2 * z.re + z.im < 0
+⊢ False
+failed
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.EisensteinExceptionalPair
+error: build failed

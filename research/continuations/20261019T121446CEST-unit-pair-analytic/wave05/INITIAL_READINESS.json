@@ -1,0 +1,105 @@
+{
+  "utc": "2026-10-19T10:41:41.207149+00:00",
+  "unknown": [],
+  "targets": {
+    "FullRingThreeSelection": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FourAnchorVWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FullRingThreeSelection"
+      ]
+    },
+    "TwoSmallTupleInputs": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FourAnchorVWindow",
+        "FullRingThreeSelection"
+      ]
+    },
+    "TwoSmallLargeS": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallTupleInputs",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection"
+      ]
+    },
+    "TwoSmallLargeSBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeS",
+        "TwoSmallTupleInputs",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection"
+      ]
+    },
+    "ThreeGeneralWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FourAnchorVWindow",
+        "FullRingThreeSelection"
+      ]
+    },
+    "ThreeAnchorAlternative": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "TwoSmallTupleInputs"
+      ]
+    },
+    "TwoSmallLargeTScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "TwoSmallTupleInputs",
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS"
+      ]
+    },
+    "TwoSmallLargeTBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "TwoSmallTupleInputs",
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS"
+      ]
+    },
+    "UnitPairFiniteReduction": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS",
+        "TwoSmallTupleInputs",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow"
+      ]
+    }
+  }
+}

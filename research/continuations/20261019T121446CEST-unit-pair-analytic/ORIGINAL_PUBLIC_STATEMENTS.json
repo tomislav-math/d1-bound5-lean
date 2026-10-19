@@ -1,0 +1,466 @@
+{
+  "BennettRateLower": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave01/BennettRateLower.lean",
+    "sha256": "2a05d2a63514f5a778527c82f79a324a012d2e94fcd2c7bd6c3b5978ca22dd1f",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "bennett_two_rate_scalar_lower",
+        "header": "theorem bennett_two_rate_scalar_lower (T : \u211d) (hT : 1000 \u2264 T) :\n    128 * T ^ 2 < 135 * (T - 1) ^ 2"
+      },
+      {
+        "name": "bennettTwoResidualRate_lower",
+        "header": "theorem bennettTwoResidualRate_lower (A B C \u03b4 : \u211d)\n    (hA : 0 < A) (hB : 0 < B) (h\u03b4 : 0 < \u03b4)\n    (hAB : A \u2264 B) (h\u03b4AB : \u03b4 \u2264 A + B) (hAC : 1000 \u2264 A * C) :\n    2 * A * C ^ 2 / (5 * B) < bennettTwoResidualRate A B C \u03b4"
+      }
+    ]
+  },
+  "CoherentThreeSeparated": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave01/CoherentThreeSeparated.lean",
+    "sha256": "3c375b6867b26b2a9cb36c0616643b86a68225f942b1f0079ea6fb2ea6ac32b1",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "coherent_three_parameter_1000",
+        "header": "theorem coherent_three_parameter_1000 :\n    0 < coherentThreeLowerConstant 1000 \u2227\n      0 < coherentThreeUpperConstant 1000 \u2227\n      100*coherentThreeUpperConstant 1000/99 < (3/32 : \u211d) \u2227\n      5 < 100/(201*coherentThreeUpperConstant 1000) \u2227\n      100/(199*coherentThreeLowerConstant 1000) < 15"
+      },
+      {
+        "name": "coherent_three_separated_bounds",
+        "header": "theorem coherent_three_separated_bounds\n    (a : Fin 3 \u2192 \u2102) (p q eta : \u2102) (hinj : Function.Injective a)\n    (hA : 0 < \u2016a 0\u2016) (hAB : \u2016a 0\u2016 \u2264 \u2016a 1\u2016) (hBS : \u2016a 1\u2016 \u2264 \u2016a 2\u2016)\n    (hP : 0 < \u2016p\u2016) (hAP : 1000 \u2264 \u2016a 0\u2016*\u2016p\u2016)\n    (hQ : 4*\u2016p\u2016 \u2264 \u2016q\u2016) (hPQ : 10000 < \u2016p\u2016*\u2016q\u2016)\n    (heta : eta^2 = p*q) :\n    \u2016coherentQuotientForm a (coherentVandermonde3 a) p q eta\u2016 <\n      5*\u2016a 1\u2016*\u2016a 2\u2016^2/\u2016coherentTerminalRoot p q eta\u2016 +\n        3*\u2016a 2\u2016*\u2016coherentTerminalRoot p q eta\u2016/(4*\u2016a 0\u2016*\u2016p\u2016^3) \u2227\n    (coherentQuotientForm a (coherentVandermonde3 a) p q eta = 0 \u2192\n      5*\u2016a 0\u2016*\u2016a 1\u2016*\u2016a 2\u2016*\u2016p\u2016^2 < \u2016q\u2016 \u2227\n        \u2016q\u2016 < 15*\u2016a 0\u2016*\u2016a 1\u2016*\u2016a 2\u2016*\u2016p\u2016^2)"
+      }
+    ]
+  },
+  "FiniteEtaBound": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave02/FiniteEtaBound.lean",
+    "sha256": "bbe0c480ef14e08f89c2bfd31afb3f5e0e4f98178a555879f1db7d5985f98cf6",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finite_eta_power_lower",
+        "header": "theorem finite_eta_power_lower (T e : \u211d) (hT : 1000 \u2264 T) (he : e \u2264 9) :\n    (100/101 : \u211d) < (1-1/T)^e"
+      },
+      {
+        "name": "finite_eta_reciprocal_lt",
+        "header": "theorem finite_eta_reciprocal_lt (T e : \u211d) (hT : 1000 \u2264 T) (he : e \u2264 9) :\n    1/(1-1/T)^e < (101/100 : \u211d)"
+      }
+    ]
+  },
+  "FiniteMBennettIdentity": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave02/FiniteMBennettIdentity.lean",
+    "sha256": "f27f4a41cffafb28570bf5c653ce0b346755899d2391eb2e165fb9f9efe45c33",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteM_bennett_identity",
+        "header": "theorem finiteM_bennett_identity (a b s c : F)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) (i j : Fin 4) :\n    finiteMBennettEntry a b s c i j =\n      finiteMRowFactor a b s i * finiteMMatrix a b s c i j"
+      },
+      {
+        "name": "finiteMNodes_injective",
+        "header": "theorem finiteMNodes_injective (a b s : F)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) :\n    Function.Injective (finiteMNodes a b s)"
+      },
+      {
+        "name": "finiteMDividedMatrix_det_ne_zero",
+        "header": "theorem finiteMDividedMatrix_det_ne_zero (a b s c : F)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) :\n    (finiteMDividedMatrix a b s c).det \u2260 0"
+      }
+    ]
+  },
+  "FiniteMFullRing": {
+    "source_reference": "D1Bound5/FiniteMFullRing.lean",
+    "sha256": "63f42a3fb9df5ccef6f086e8cab32c5ea8836f392e21c8e1df2892a94195b8e2",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "full_ring_finiteM_inequality",
+        "header": "theorem full_ring_finiteM_inequality\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {S : Finset (\ud835\udcde K)} (hS : IsD1 S) (a : Fin 3 \u2192 \ud835\udcde K) (c d : \ud835\udcde K)\n    (haS : \u2200 j, a j \u2208 S) (hcS : c \u2208 S) (hdS : d \u2208 S)\n    (hinj : Function.Injective a) (hac : \u2200 j, a j \u2260 c)\n    (had : \u2200 j, a j \u2260 d) (hcd : c \u2260 d)\n    (hmon : Monotone (fun j => \u2016phi (a j : K)\u2016))\n    (hCT : 4*\u2016phi (a 2 : K)\u2016 \u2264 \u2016phi (c : K)\u2016)\n    (hCD : \u2016phi (c : K)\u2016 \u2264 \u2016phi (d : K)\u2016)\n    (hAC : 1000 \u2264 \u2016phi (a 0 : K)\u2016*\u2016phi (c : K)\u2016) :\n    \u2203 z : \ud835\udcde K, z^2 = c*d+1 \u2227\n      1 < (8/9 : \u211d)*608^2*\u2016phi (a 1 : K)\u2016^3*\u2016phi (a 2 : K)\u2016^8*\u2016phi (c : K)\u2016^3/\n          \u2016phi (z : K)\u2016+\n        (3920/81 : \u211d)*\u2016phi (a 1 : K)\u2016^2*\u2016phi (a 2 : K)\u2016^5*\u2016phi (z : K)\u2016/\n          (\u2016phi (a 0 : K)\u2016^3*\u2016phi (c : K)\u2016^6)"
+      }
+    ]
+  },
+  "FiniteMHeight": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave02/FiniteMHeight.lean",
+    "sha256": "ec0982f7edbd91c3706e88aa5dcd7d18e8ffc261e3a2b342f8b47e572050feb8",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteMTermEval_norm_le",
+        "header": "theorem finiteMTermEval_norm_le (t : FiniteMTerm) (a b s v : \u2102)\n    (B S C : \u211d) (hB : 1 \u2264 B) (hBS : B \u2264 S) (hC : 1 \u2264 C)\n    (ha : \u2016a\u2016 \u2264 B) (hb : \u2016b\u2016 \u2264 B) (hs : \u2016s\u2016 \u2264 S)\n    (hv : \u2016v\u2016 \u2264 2*S*C) (ht : finiteMTermAdmissible t) :\n    \u2016finiteMTermEval t a b s v\u2016 \u2264 (finiteMTermWeight t : \u211d)*B^3*S^8*C^2"
+      },
+      {
+        "name": "finiteMDividedMatrix_root_height",
+        "header": "theorem finiteMDividedMatrix_root_height (a b s c : \u2102)\n    (hB : 1 \u2264 \u2016b\u2016) (hab : \u2016a\u2016 \u2264 \u2016b\u2016) (hbs : \u2016b\u2016 \u2264 \u2016s\u2016)\n    (hC : 1 \u2264 \u2016c\u2016) (i : Fin 4) :\n    (\u2211 j : Fin 3, \u2016finiteMDividedMatrix a b s c i j.succ\u2016) \u2264\n      169728*\u2016b\u2016^3*\u2016s\u2016^8*\u2016c\u2016^2"
+      }
+    ]
+  },
+  "FiniteMIntegralRows": {
+    "source_reference": "D1Bound5/FiniteMIntegralRows.lean",
+    "sha256": "6a41917e374548988e846d67ca045f1fa413585ce5c57ae666d21b73fb0a0713",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteMRowForm_exists_ne_zero",
+        "header": "theorem finiteMRowForm_exists_ne_zero\n    {F : Type*} [Field F] [CharZero F]\n    (a b s c z rA rB rS : F)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) (hz : z \u2260 0) :\n    \u2203 i : Fin 4, finiteMRowForm a b s c z rA rB rS i \u2260 0"
+      },
+      {
+        "name": "full_ring_finiteMRowForm_exists_one_le_norm",
+        "header": "theorem full_ring_finiteMRowForm_exists_one_le_norm\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a b s c z rA rB rS : \ud835\udcde K)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) (hz : z \u2260 0) :\n    \u2203 i : Fin 4, 1 \u2264 \u2016finiteMRowForm (phi (a : K)) (phi (b : K)) (phi (s : K))\n      (phi (c : K)) (phi (z : K)) (phi (rA : K)) (phi (rB : K)) (phi (rS : K)) i\u2016"
+      }
+    ]
+  },
+  "FiniteMInterval": {
+    "source_reference": "D1Bound5/FiniteMInterval.lean",
+    "sha256": "94c63491bc86250f311d615c161c34f10ab72cfbe79b4a079554e76e6c57048f",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "full_ring_finiteM_closed_interval_excluded",
+        "header": "theorem full_ring_finiteM_closed_interval_excluded\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {S : Finset (\ud835\udcde K)} (hS : IsD1 S) (a : Fin 3 \u2192 \ud835\udcde K) (c d : \ud835\udcde K)\n    (haS : \u2200 j, a j \u2208 S) (hcS : c \u2208 S) (hdS : d \u2208 S)\n    (hinj : Function.Injective a) (hac : \u2200 j, a j \u2260 c)\n    (had : \u2200 j, a j \u2260 d) (hcd : c \u2260 d)\n    (hmon : Monotone (fun j => \u2016phi (a j : K)\u2016))\n    (hCT : 4*\u2016phi (a 2 : K)\u2016 \u2264 \u2016phi (c : K)\u2016)\n    (hCD : \u2016phi (c : K)\u2016 \u2264 \u2016phi (d : K)\u2016)\n    (hAC : 1000 \u2264 \u2016phi (a 0 : K)\u2016*\u2016phi (c : K)\u2016)\n    (hleft : 4*((8/9 : \u211d)*608^2)^2*\u2016phi (a 1 : K)\u2016^6*\u2016phi (a 2 : K)\u2016^16*\n      \u2016phi (c : K)\u2016^5/(1-1/4000 : \u211d) \u2264 \u2016phi (d : K)\u2016)\n    (hright : \u2016phi (d : K)\u2016 \u2264 \u2016phi (a 0 : K)\u2016^6*\u2016phi (c : K)\u2016^11/\n      (4*(3920/81 : \u211d)^2*\u2016phi (a 1 : K)\u2016^4*\u2016phi (a 2 : K)\u2016^10*(1+1/4000 : \u211d))) : False"
+      }
+    ]
+  },
+  "FiniteMMatrix": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave02/FiniteMMatrix.lean",
+    "sha256": "8af7f9699b9fc84a48e57a25795d84c9aefe6f4ade8e20a65b9b82216db511c9",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteMTerms_admissible",
+        "header": "theorem finiteMTerms_admissible (i : Fin 4) (j : Fin 3) :\n    \u2200 t \u2208 finiteMTerms i j.succ, finiteMTermAdmissible t"
+      },
+      {
+        "name": "finiteMTerms_weight",
+        "header": "theorem finiteMTerms_weight (i : Fin 4) :\n    (\u2211 j : Fin 3, ((finiteMTerms i j.succ).map finiteMTermWeight).sum) \u2264 169728"
+      }
+    ]
+  },
+  "FiniteMResidual": {
+    "source_reference": "D1Bound5/FiniteMResidual.lean",
+    "sha256": "20b5f3f0240599a870b13dc7bce59f4a645e7c3a3e921eff6e6196205ed5b078",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteM_rowfactor_scalar",
+        "header": "theorem finiteM_rowfactor_scalar (A B S x y z r : \u211d)\n    (hA : 1 \u2264 A) (hAB : A \u2264 B) (hBS : B \u2264 S)\n    (hx : 0 < x) (hy : 0 < y) (hz : 0 < z)\n    (hxB : x \u2264 2*B) (hyS : y \u2264 2*S) (hzS : z \u2264 2*S)\n    (hr : r=x*y*z \u2228 r=A*z \u2228 r=B*y \u2228 r=S*x) :\n    A*(x*y*z)^4 \u2264 2048*B^4*S^7*r"
+      },
+      {
+        "name": "finiteM_residual_norm_lt",
+        "header": "theorem finiteM_residual_norm_lt (a b s c : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (hc : c \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s)\n    (hA1 : 1 \u2264 \u2016a\u2016) (hAB : \u2016a\u2016 \u2264 \u2016b\u2016) (hBS : \u2016b\u2016 \u2264 \u2016s\u2016)\n    (hAC : 1000 \u2264 \u2016a\u2016*\u2016c\u2016) (i : Fin 4) :\n    \u2016finiteMResidual a b s c i\u2016 <\n      (3920/81 : \u211d)*\u2016b\u2016^2*\u2016s\u2016^5/(\u2016a\u2016^3*\u2016c\u2016^6)"
+      }
+    ]
+  },
+  "FiniteMResidualPoint": {
+    "source_reference": "D1Bound5/FiniteMResidualPoint.lean",
+    "sha256": "bb56d3a7e4596d114eafb279a815fbe917386006ca96bd179e7279d203277b01",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteM_choose_abs",
+        "header": "theorem finiteM_choose_abs : |Ring.choose (5/2 : \u211d) 8| = 45/32768"
+      },
+      {
+        "name": "finiteMRowFactor_ne_zero",
+        "header": "theorem finiteMRowFactor_ne_zero (a b s : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) (i : Fin 4) :\n    finiteMRowFactor a b s i \u2260 0"
+      },
+      {
+        "name": "finiteM_residual_identity",
+        "header": "theorem finiteM_residual_identity (a b s c : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) (i : Fin 4) :\n    finiteMRowFactor a b s i * finiteMResidual a b s c i =\n      \u2211 j, finiteMBennettEntry a b s c i j *\n        (1+finiteMNodes a b s j*(a*b*s*c)\u207b\u00b9)^(1/2 : \u2102)"
+      },
+      {
+        "name": "finiteM_residual_norm_lt_point",
+        "header": "theorem finiteM_residual_norm_lt_point (a b s c : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (hc : c \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s)\n    (hAB : \u2016a\u2016 \u2264 \u2016b\u2016) (hBS : \u2016b\u2016 \u2264 \u2016s\u2016)\n    (hAC : 1000 \u2264 \u2016a\u2016*\u2016c\u2016) (i : Fin 4) :\n    \u2016finiteMResidual a b s c i\u2016 <\n      (101/100 : \u211d)*(45/2048)*(\u2016a-b\u2016*\u2016a-s\u2016*\u2016b-s\u2016)^4 /\n        (\u2016a\u2016^2*\u2016b\u2016^2*\u2016s\u2016^2*\u2016c\u2016^6*\u2016finiteMRowFactor a b s i\u2016)"
+      }
+    ]
+  },
+  "FiniteMRowBound": {
+    "source_reference": "D1Bound5/FiniteMRowBound.lean",
+    "sha256": "a08eeb335ec57be15fb0c5dfc1a47eaae4fc44a5d964b5c18b2dca7bf9bb405a",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finiteMResidual_eq_root_sum",
+        "header": "theorem finiteMResidual_eq_root_sum (a b s c : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (hc : c \u2260 0) (i : Fin 4) :\n    finiteMResidual a b s c i = finiteMDividedMatrix a b s c i 0+\n      \u2211 j : Fin 3, finiteMAnchors a b s j*finiteMDividedMatrix a b s c i j.succ*\n        (1+1/(finiteMAnchors a b s j*c))^(1/2 : \u2102)"
+      },
+      {
+        "name": "finiteMRowForm_eq_root_sum",
+        "header": "theorem finiteMRowForm_eq_root_sum (a b s c z rA rB rS : \u2102) (i : Fin 4) :\n    finiteMRowForm a b s c z rA rB rS i =\n      finiteMDividedMatrix a b s c i 0*z+\n        \u2211 j : Fin 3, finiteMDividedMatrix a b s c i j.succ*![rA,rB,rS] j"
+      },
+      {
+        "name": "finiteMRowForm_norm_lt",
+        "header": "theorem finiteMRowForm_norm_lt\n    (a b s c z rA rB rS : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (hc : c \u2260 0) (hz : z \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s)\n    (hA : 1 \u2264 \u2016a\u2016) (hAB : \u2016a\u2016 \u2264 \u2016b\u2016) (hBS : \u2016b\u2016 \u2264 \u2016s\u2016)\n    (hC : 1 \u2264 \u2016c\u2016) (hAC : 1000 \u2264 \u2016a\u2016*\u2016c\u2016)\n    (herr : \u2200 j : Fin 3,\n      \u2016(1+1/(finiteMAnchors a b s j*c))^(1/2 : \u2102)-\n        ![rA,rB,rS] j/(finiteMAnchors a b s j*z)\u2016 \u2264\n          (3/2 : \u211d)*\u2016c\u2016/(\u2016finiteMAnchors a b s j\u2016*\u2016z\u2016^2)) (i : Fin 4) :\n    \u2016finiteMRowForm a b s c z rA rB rS i\u2016 <\n      (8/9 : \u211d)*608^2*\u2016b\u2016^3*\u2016s\u2016^8*\u2016c\u2016^3/\u2016z\u2016+\n        (3920/81 : \u211d)*\u2016b\u2016^2*\u2016s\u2016^5*\u2016z\u2016/(\u2016a\u2016^3*\u2016c\u2016^6)"
+      }
+    ]
+  },
+  "FiniteRootApproximation": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave01/FiniteRootApproximation.lean",
+    "sha256": "3eb0625b1bc5b24d5bf964a4f1ffefb0c9955b498e80c90017d816a9b67d0609",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "bennett_exists_integral_root_ratio_bound_finite",
+        "header": "theorem bennett_exists_integral_root_ratio_bound_finite\n    {R : Type*} [CommRing R] (f : R \u2192+* \u2102)\n    (a c d z r v : R)\n    (ha : f a \u2260 0) (hc : f c \u2260 0) (hz : f z \u2260 0)\n    (hr : r^2 = a*c+1) (hv : v^2 = a*d+1) (hzsq : z^2 = c*d+1)\n    (hAC : 1000 \u2264 \u2016f a\u2016*\u2016f c\u2016) (hC : 200*\u2016f a\u2016 \u2264 \u2016f c\u2016) :\n    \u2203 s : R, (s = r*v \u2228 s = -(r*v)) \u2227\n      \u2016(1+1/(f a*f c))^(1/2 : \u2102)-f s/(f a*f z)\u2016 <\n        (101/100 : \u211d)*\u2016f c\u2016/(\u2016f a\u2016*\u2016f z\u2016^2)"
+      }
+    ]
+  },
+  "FiniteRowRootTransfer": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave02/FiniteRowRootTransfer.lean",
+    "sha256": "46becc96a7c33e650b104610ae9b313c17aa248f9679f52836b1f07f3d3ae855",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "finite_row_root_transfer_norm_lt",
+        "header": "theorem finite_row_root_transfer_norm_lt\n    {I : Type*} [Fintype I] (q0 z : \u2102) (a p theta s : I \u2192 \u2102)\n    (ha : \u2200 j, a j \u2260 0) (hz : z \u2260 0) (E H R : \u211d) (hE : 0 \u2264 E)\n    (herr : \u2200 j, \u2016theta j-s j/(a j*z)\u2016 \u2264 E/(\u2016a j\u2016*\u2016z\u2016^2))\n    (hheight : (\u2211 j, \u2016p j\u2016) \u2264 H)\n    (hres : \u2016q0+\u2211 j, a j*p j*theta j\u2016 < R) :\n    \u2016q0*z+\u2211 j, p j*s j\u2016 < R*\u2016z\u2016+E*H/\u2016z\u2016"
+      }
+    ]
+  },
+  "FourAnchorVWindow": {
+    "source_reference": "D1Bound5/FourAnchorVWindow.lean",
+    "sha256": "57f6fd85494c3adaa33243de7e3b31444c0679418594f7b528e1e94955e5ac3a",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "four_anchor_V_window_scalar",
+        "header": "theorem four_anchor_V_window_scalar\n    (A B T P Q Z : \u211d) (hA : 0 < A) (hB : 0 < B) (hT : 0 < T)\n    (hP : 0 < P) (hZ : 0 < Z)\n    (hlo : (1-1/4000 : \u211d)*P*Q \u2264 Z^2)\n    (hhi : Z^2 \u2264 (1+1/4000 : \u211d)*P*Q)\n    (hform : 1 < 5*B*T^2/Z+3*T*Z/(4*A*P^3)) :\n    Q < 101*B^2*T^4/P \u2228 (2/5 : \u211d)*A^2*P^5/T^2 < Q"
+      },
+      {
+        "name": "IsD1Tuple.four_anchor_V_window",
+        "header": "theorem IsD1Tuple.four_anchor_V_window\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hP : 1000 \u2264 \u2016phi (a 4 : K)\u2016)\n    (hTP : 4*\u2016phi (a 3 : K)\u2016 \u2264 \u2016phi (a 4 : K)\u2016)\n    (hQ : 4*\u2016phi (a 4 : K)\u2016 \u2264 \u2016phi (a 5 : K)\u2016)\n    (hsize : 32*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016/\n      \u2016phi (a 0 : K)\u2016^3 \u2264 \u2016phi (a 4 : K)\u2016^2) :\n    \u2016phi (a 5 : K)\u2016 < 101*\u2016phi (a 1 : K)\u2016^2*\u2016phi (a 3 : K)\u2016^4/\n        \u2016phi (a 4 : K)\u2016 \u2228\n      (2/5 : \u211d)*\u2016phi (a 0 : K)\u2016^2*\u2016phi (a 4 : K)\u2016^5/\n        \u2016phi (a 3 : K)\u2016^2 < \u2016phi (a 5 : K)\u2016"
+      }
+    ]
+  },
+  "FrontierLargeTuple": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave01/FrontierLargeTuple.lean",
+    "sha256": "912fae040f41448c6e6e89b2258d1258b75fe965d3018aff1fad40a66f5764a1",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.frontier_large_growth",
+        "header": "theorem IsD1Tuple.frontier_large_growth\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 4 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016) :\n    3*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016 <\n      \u2016phi (a 3 : K)\u2016"
+      }
+    ]
+  },
+  "FullRingDirectFour": {
+    "source_reference": "D1Bound5/FullRingDirectFour.lean",
+    "sha256": "bb40d5e7f2b22313a706d8966507fe6273c8e0290c5c422b9a1ec02ce97a52b1",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.direct_four_integer_inequality",
+        "header": "theorem IsD1Tuple.direct_four_integer_inequality\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hC : 1000 \u2264 \u2016phi (a 4 : K)\u2016)\n    (hD : 1000*\u2016phi (a 4 : K)\u2016 \u2264 \u2016phi (a 5 : K)\u2016)\n    (hzeroExcluded : 17*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\n      \u2016phi (a 3 : K)\u2016*\u2016phi (a 4 : K)\u2016^3 \u2264 \u2016phi (a 5 : K)\u2016) :\n    \u2203 Z : \u211d, 0 < Z \u2227 \u2016phi (a 4 : K)\u2016/2 < Z \u2227\n      Z^2 \u2264 2*\u2016phi (a 4 : K)\u2016*\u2016phi (a 5 : K)\u2016 \u2227\n      1 < 13*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016^2*\u2016phi (a 3 : K)\u2016^3/Z+\n        49*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016^2*Z/\n          (50*\u2016phi (a 0 : K)\u2016*\u2016phi (a 4 : K)\u2016^4)"
+      }
+    ]
+  },
+  "FullRingThreeSelection": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave04/FullRingThreeSelection.lean",
+    "sha256": "53d0881c06ea45ae114fd98871ea9e945f1b4ac102529643cc4037bf4df0778f",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "full_ring_three_separated_norm_inequality",
+        "header": "theorem full_ring_three_separated_norm_inequality\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {Tup : Finset (\ud835\udcde K)} (hTup : IsD1 Tup) {p q : \ud835\udcde K}\n    (hp : p \u2208 Tup) (hq : q \u2208 Tup) (hpq : p \u2260 q)\n    (a : Fin 3 \u2192 \ud835\udcde K) (hinj : Function.Injective a)\n    (ha : \u2200 i, a i \u2208 Tup) (hap : \u2200 i, a i \u2260 p) (haq : \u2200 i, a i \u2260 q)\n    (hAB : \u2016phi (a 0 : K)\u2016 \u2264 \u2016phi (a 1 : K)\u2016)\n    (hBS : \u2016phi (a 1 : K)\u2016 \u2264 \u2016phi (a 2 : K)\u2016)\n    (hP : 0 < \u2016phi (p : K)\u2016) (hAP : 1000 \u2264 \u2016phi (a 0 : K)\u2016*\u2016phi (p : K)\u2016)\n    (hQ : 4*\u2016phi (p : K)\u2016 \u2264 \u2016phi (q : K)\u2016)\n    (hPQ : 10000 < \u2016phi (p : K)\u2016*\u2016phi (q : K)\u2016)\n    (eta : \u2102) (heta : eta^2 = phi (p : K)*phi (q : K))\n    (hL : coherentQuotientForm (fun i => phi (a i : K))\n      (coherentVandermonde3 (fun i => phi (a i : K)))\n        (phi (p : K)) (phi (q : K)) eta \u2260 0) :\n    1 < 5*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016^2/\n          \u2016coherentTerminalRoot (phi (p : K)) (phi (q : K)) eta\u2016 +\n      3*\u2016phi (a 2 : K)\u2016*\u2016coherentTerminalRoot (phi (p : K)) (phi (q : K)) eta\u2016/\n        (4*\u2016phi (a 0 : K)\u2016*\u2016phi (p : K)\u2016^3)"
+      },
+      {
+        "name": "full_ring_four_anchor_three_separated_inequality",
+        "header": "theorem full_ring_four_anchor_three_separated_inequality\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {Tup : Finset (\ud835\udcde K)} (hTup : IsD1 Tup) {p q : \ud835\udcde K}\n    (hp : p \u2208 Tup) (hq : q \u2208 Tup) (hpq : p \u2260 q)\n    (a : Fin 4 \u2192 \ud835\udcde K) (hinj : Function.Injective a)\n    (ha : \u2200 i, a i \u2208 Tup) (hap : \u2200 i, a i \u2260 p) (haq : \u2200 i, a i \u2260 q)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hP : 1000 \u2264 \u2016phi (p : K)\u2016)\n    (hTP : 4*\u2016phi (a 3 : K)\u2016 \u2264 \u2016phi (p : K)\u2016)\n    (hQ : 4*\u2016phi (p : K)\u2016 \u2264 \u2016phi (q : K)\u2016)\n    (hsize : 32*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016/\n      \u2016phi (a 0 : K)\u2016^3 \u2264 \u2016phi (p : K)\u2016^2)\n    (eta : \u2102) (heta : eta^2 = phi (p : K)*phi (q : K)) :\n    1 < 5*\u2016phi (a 1 : K)\u2016*\u2016phi (a 3 : K)\u2016^2/\n          \u2016coherentTerminalRoot (phi (p : K)) (phi (q : K)) eta\u2016 +\n      3*\u2016phi (a 3 : K)\u2016*\u2016coherentTerminalRoot (phi (p : K)) (phi (q : K)) eta\u2016/\n        (4*\u2016phi (a 0 : K)\u2016*\u2016phi (p : K)\u2016^3)"
+      }
+    ]
+  },
+  "ThreeAnchorAlternative": {
+    "source_reference": "D1Bound5/ThreeAnchorAlternative.lean",
+    "sha256": "27a3fd542bd988f3725d50f5386865d5c88773264f1b21a793247bd5f2b954d8",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.three_anchor_general_alternative",
+        "header": "theorem IsD1Tuple.three_anchor_general_alternative\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 5 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hP : 1000 \u2264 \u2016phi (a 3 : K)\u2016)\n    (hSP : 4*\u2016phi (a 2 : K)\u2016 \u2264 \u2016phi (a 3 : K)\u2016) :\n    5*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016^2 <\n        \u2016phi (a 4 : K)\u2016 \u2228\n    \u2016phi (a 4 : K)\u2016 < 101*\u2016phi (a 1 : K)\u2016^2*\u2016phi (a 2 : K)\u2016^4/\u2016phi (a 3 : K)\u2016 \u2228\n    \u2016phi (a 0 : K)\u2016^2*\u2016phi (a 3 : K)\u2016^5/(37*\u2016phi (a 2 : K)\u2016^2) < \u2016phi (a 4 : K)\u2016"
+      }
+    ]
+  },
+  "ThreeGeneralWindow": {
+    "source_reference": "D1Bound5/ThreeGeneralWindow.lean",
+    "sha256": "452f70157479f568b473e918c270a7d2cbff24e92ca72497ac47078ffc065d77",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "three_general_window_scalar",
+        "header": "theorem three_general_window_scalar\n    (A B S P Q Z : \u211d) (hA : 0 < A) (hB : 0 < B) (hS : 0 < S)\n    (hP : 0 < P) (hZ : 0 < Z)\n    (hlo : (1-1/4000 : \u211d)*P*Q \u2264 Z^2)\n    (hhi : Z^2 \u2264 (1+1/4000 : \u211d)*P*Q)\n    (hform : 1 < 5*B*S^2/Z+3*S*Z/(A*P^3)) :\n    Q < 101*B^2*S^4/P \u2228 A^2*P^5/(37*S^2) < Q"
+      },
+      {
+        "name": "full_ring_three_general_window",
+        "header": "theorem full_ring_three_general_window\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {Tup : Finset (\ud835\udcde K)} (hTup : IsD1 Tup) {p q : \ud835\udcde K}\n    (hp : p \u2208 Tup) (hq : q \u2208 Tup) (hpq : p \u2260 q)\n    (a : Fin 3 \u2192 \ud835\udcde K) (hinj : Function.Injective a)\n    (ha : \u2200 i, a i \u2208 Tup) (hap : \u2200 i, a i \u2260 p) (haq : \u2200 i, a i \u2260 q)\n    (hAB : \u2016phi (a 0 : K)\u2016 \u2264 \u2016phi (a 1 : K)\u2016)\n    (hBS : \u2016phi (a 1 : K)\u2016 \u2264 \u2016phi (a 2 : K)\u2016)\n    (hP : 4*\u2016phi (a 2 : K)\u2016 \u2264 \u2016phi (p : K)\u2016)\n    (hAP : 9 \u2264 \u2016phi (a 0 : K)\u2016*\u2016phi (p : K)\u2016)\n    (hQ : \u2016phi (p : K)\u2016 \u2264 \u2016phi (q : K)\u2016)\n    (hPQ : 4000 \u2264 \u2016phi (p : K)\u2016*\u2016phi (q : K)\u2016)\n    (eta : \u2102) (heta : eta^2 = phi (p : K)*phi (q : K))\n    (hL : coherentQuotientForm (fun i => phi (a i : K))\n      (coherentVandermonde3 (fun i => phi (a i : K)))\n        (phi (p : K)) (phi (q : K)) eta \u2260 0) :\n    \u2016phi (q : K)\u2016 < 101*\u2016phi (a 1 : K)\u2016^2*\u2016phi (a 2 : K)\u2016^4/\u2016phi (p : K)\u2016 \u2228\n      \u2016phi (a 0 : K)\u2016^2*\u2016phi (p : K)\u2016^5/(37*\u2016phi (a 2 : K)\u2016^2) < \u2016phi (q : K)\u2016"
+      }
+    ]
+  },
+  "TwoSmallFifthBound": {
+    "source_reference": "D1Bound5/TwoSmallFifthBound.lean",
+    "sha256": "e9e12d2819d450dc56e90a3efc02242e6f2140adc7e58c6ab1d3fcaee3069ccf",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.two_small_bounded_fourth_fifth_lt",
+        "header": "theorem IsD1Tuple.two_small_bounded_fourth_fifth_lt\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hB3 : \u2016phi (a 1 : K)\u2016 < 3) (hS3 : 3 \u2264 \u2016phi (a 2 : K)\u2016)\n    (hT8 : \u2016phi (a 3 : K)\u2016 < (10 : \u211d)^8) :\n    \u2016phi (a 4 : K)\u2016 < (10 : \u211d)^100"
+      },
+      {
+        "name": "IsD1Tuple.two_small_fifth_lt",
+        "header": "theorem IsD1Tuple.two_small_fifth_lt\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hB3 : \u2016phi (a 1 : K)\u2016 < 3) (hS3 : 3 \u2264 \u2016phi (a 2 : K)\u2016) :\n    \u2016phi (a 4 : K)\u2016 < (10 : \u211d)^550"
+      }
+    ]
+  },
+  "TwoSmallHeightScalar": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave01/TwoSmallHeightScalar.lean",
+    "sha256": "2fc4438e81abf1fb9766cd269fcc8b00c95036ba7e21a2aa00ca22bc65122f73",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "twoSmallHeightEnvelope_lt_389",
+        "header": "theorem twoSmallHeightEnvelope_lt_389 (x : \u211d) (hlo : 8 \u2264 x) (hhi : x \u2264 49) :\n    twoSmallHeightEnvelope x < 389"
+      },
+      {
+        "name": "twoSmallHeightEnvelope_lt_549",
+        "header": "theorem twoSmallHeightEnvelope_lt_549 (x : \u211d) (hlo : 8 \u2264 x) (hhi : x \u2264 72) :\n    twoSmallHeightEnvelope x < 549"
+      },
+      {
+        "name": "twoSmallHeightEnvelope_lt_eight_mul_sub_three",
+        "header": "theorem twoSmallHeightEnvelope_lt_eight_mul_sub_three\n    (x : \u211d) (hx : 49 \u2264 x) : twoSmallHeightEnvelope x < 8*x-3"
+      },
+      {
+        "name": "twoSmallHeightEnvelope_lt_eight_mul_sub_twenty_seven",
+        "header": "theorem twoSmallHeightEnvelope_lt_eight_mul_sub_twenty_seven\n    (x : \u211d) (hx : 72 \u2264 x) : twoSmallHeightEnvelope x < 8*x-27"
+      },
+      {
+        "name": "twoSmallHeightEnvelope_lt_seven_mul_add_sixty",
+        "header": "theorem twoSmallHeightEnvelope_lt_seven_mul_add_sixty\n    (x : \u211d) (hx : 100 \u2264 x) : twoSmallHeightEnvelope x < 7*x+60"
+      },
+      {
+        "name": "ordinaryLog10_two_small_parameters",
+        "header": "theorem ordinaryLog10_two_small_parameters :\n    ordinaryLog10 1134 < (31/10 : \u211d) \u2227\n      -(9/10 : \u211d) < ordinaryLog10 (2/15) \u2227\n      ordinaryLog10 2277 < (17/5 : \u211d)"
+      }
+    ]
+  },
+  "TwoSmallLargeCScalar": {
+    "source_reference": "D1Bound5/TwoSmallLargeCScalar.lean",
+    "sha256": "bf3db6389c4a143be5fa259741bc2f289fd59bfd48017942d5bbc3ec815262cf",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "two_small_large_C_V_parameters",
+        "header": "theorem two_small_large_C_V_parameters\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hB : 1 \u2264 B) (hB3 : B < 3)\n    (hS : 3 \u2264 S) (hST : S \u2264 T) (hS8 : S < (10 : \u211d)^8) (hT8 : T < (10 : \u211d)^8)\n    (hC : (10 : \u211d)^100 \u2264 C) (hD : 2*S*T*C < D) :\n    1000 \u2264 C \u2227 4*T \u2264 C \u2227 4*C \u2264 D \u2227\n      32*B*S*T/A^3 \u2264 C^2 \u2227 101*B^2*T^4/C < D"
+      },
+      {
+        "name": "two_small_large_C_direct_four_parameters",
+        "header": "theorem two_small_large_C_direct_four_parameters\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hAB : A \u2264 B) (hB : 0 < B) (hB3 : B < 3)\n    (hS : 0 < S) (hT : 0 < T) (hS8 : S < (10 : \u211d)^8) (hT8 : T < (10 : \u211d)^8)\n    (hC : (10 : \u211d)^100 \u2264 C) (hV : (2/5 : \u211d)*A^2*C^5/T^2 < D) :\n    1000*C \u2264 D \u2227 17*A*B*S*T*C^3 \u2264 D"
+      },
+      {
+        "name": "two_small_large_C_seventh_power",
+        "header": "theorem two_small_large_C_seventh_power\n    (A B S T C D Z : \u211d) (hA : 1 \u2264 A) (hB : 0 < B) (hB3 : B < 3)\n    (hS : 0 < S) (hT : 0 < T) (hS8 : S < (10 : \u211d)^8) (hT8 : T < (10 : \u211d)^8)\n    (hC : (10 : \u211d)^100 \u2264 C) (hZ : 0 < Z) (hCZ : C/2 < Z)\n    (hroot : Z^2 \u2264 2*C*D)\n    (hform : 1 < 13*B*S^2*T^3/Z+49*S*T^2*Z/(50*A*C^4)) :\n    C^7/(10 : \u211d)^50 < D"
+      }
+    ]
+  },
+  "TwoSmallLargeS": {
+    "source_reference": "D1Bound5/TwoSmallLargeS.lean",
+    "sha256": "20bec0ab315fc8a7782d47069ae2c37f9dfb1ee84ae644f662f9d0a5097e8135",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "two_small_large_S_parameters",
+        "header": "theorem two_small_large_S_parameters\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hB : 1 \u2264 B) (hB3 : B < 3)\n    (hS : (10 : \u211d)^8 \u2264 S) (hST : S \u2264 T)\n    (hC : (3/8 : \u211d)*A*S*T < C) (hD : 2*S*T*C < D)\n    (hcross : A^3*B*T^3*C/(7*S) < D) :\n    1000 \u2264 C \u2227 4*T \u2264 C \u2227 4*C \u2264 D \u2227\n      32*B*S*T/A^3 \u2264 C^2 \u2227 101*B^2*T^4/C < D"
+      },
+      {
+        "name": "two_small_large_S_eighth_power",
+        "header": "theorem two_small_large_S_eighth_power\n    (A S T C D : \u211d) (hA : 1 \u2264 A) (hS : 0 < S) (hST : S \u2264 T)\n    (hC : (3/8 : \u211d)*A*S*T < C)\n    (hV : (2/5 : \u211d)*A^2*C^5/T^2 < D) :\n    S^8/(10 : \u211d)^4 < D"
+      }
+    ]
+  },
+  "TwoSmallLargeSBound": {
+    "source_reference": "D1Bound5/TwoSmallLargeSBound.lean",
+    "sha256": "43c00321a3114de6dffea2643a6acb8fd229e9829c17fd8b27d02efade9e0290",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "ordinaryLog10_div",
+        "header": "theorem ordinaryLog10_div (x y : \u211d) (hx : x \u2260 0) (hy : y \u2260 0) :\n    ordinaryLog10 (x/y) = ordinaryLog10 x-ordinaryLog10 y"
+      },
+      {
+        "name": "ordinaryLog10_lt_nat_iff",
+        "header": "theorem ordinaryLog10_lt_nat_iff (x : \u211d) (hx : 0 < x) (n : \u2115) :\n    ordinaryLog10 x < n \u2194 x < (10 : \u211d)^n"
+      },
+      {
+        "name": "twoSmallHeightEnvelope_lt_396",
+        "header": "theorem twoSmallHeightEnvelope_lt_396 (x : \u211d) (hlo : 8 \u2264 x) (hhi : x \u2264 50) :\n    twoSmallHeightEnvelope x < 396"
+      },
+      {
+        "name": "twoSmallHeightEnvelope_lt_eight_mul_sub_four",
+        "header": "theorem twoSmallHeightEnvelope_lt_eight_mul_sub_four\n    (x : \u211d) (hx : 50 \u2264 x) : twoSmallHeightEnvelope x < 8*x-4"
+      },
+      {
+        "name": "IsD1Tuple.two_small_large_third_bound",
+        "header": "theorem IsD1Tuple.two_small_large_third_bound\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hB3 : \u2016phi (a 1 : K)\u2016 < 3)\n    (hS : (10 : \u211d)^8 \u2264 \u2016phi (a 2 : K)\u2016) :\n    \u2016phi (a 2 : K)\u2016 < (10 : \u211d)^50 \u2227 \u2016phi (a 5 : K)\u2016 < (10 : \u211d)^396"
+      }
+    ]
+  },
+  "TwoSmallLargeTBound": {
+    "source_reference": "D1Bound5/TwoSmallLargeTBound.lean",
+    "sha256": "c59ab656fad895094329e1e8735509dea0a20ecf21cb3424d538ff995e5c5d3e",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.two_small_fourth_bound",
+        "header": "theorem IsD1Tuple.two_small_fourth_bound\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hB3 : \u2016phi (a 1 : K)\u2016 < 3) (hS3 : 3 \u2264 \u2016phi (a 2 : K)\u2016)\n    (hS8 : \u2016phi (a 2 : K)\u2016 < (10 : \u211d)^8) :\n    \u2016phi (a 3 : K)\u2016 < (10 : \u211d)^72 \u2227\n      ((10 : \u211d)^8 \u2264 \u2016phi (a 3 : K)\u2016 \u2192 \u2016phi (a 5 : K)\u2016 < (10 : \u211d)^549)"
+      }
+    ]
+  },
+  "TwoSmallLargeTScalar": {
+    "source_reference": "D1Bound5/TwoSmallLargeTScalar.lean",
+    "sha256": "3466fa45aefe53229b6bb15299050874119b35cd6d343f5d9d424f0fb8eb020d",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "two_small_large_T_lower_window_impossible",
+        "header": "theorem two_small_large_T_lower_window_impossible\n    (B S T C : \u211d) (hB : 0 < B) (hB3 : B < 3) (hS : 0 < S)\n    (hS8 : S < (10 : \u211d)^8) (hT : (10 : \u211d)^72 \u2264 T) (hTC : T \u2264 C) :\n    \u00ac C < 101*B^2*S^4/T"
+      },
+      {
+        "name": "two_small_large_T_quadratic_parameters",
+        "header": "theorem two_small_large_T_quadratic_parameters\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hB : 1 \u2264 B) (hB3 : B < 3)\n    (hS : 3 \u2264 S) (hT : (10 : \u211d)^72 \u2264 T)\n    (hC : 5*A*B*S*T^2 < C) (hD : 2*S*T*C < D) :\n    1000 \u2264 C \u2227 4*T \u2264 C \u2227 4*C \u2264 D \u2227\n      32*B*S*T/A^3 \u2264 C^2 \u2227 101*B^2*T^4/C < D"
+      },
+      {
+        "name": "two_small_large_T_quadratic_eighth",
+        "header": "theorem two_small_large_T_quadratic_eighth\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hB : 1 \u2264 B) (hS : 3 \u2264 S) (hT : 0 < T)\n    (hC : 5*A*B*S*T^2 < C) (hV : (2/5 : \u211d)*A^2*C^5/T^2 < D) :\n    T^8 < D"
+      },
+      {
+        "name": "two_small_large_T_quintic_eighth",
+        "header": "theorem two_small_large_T_quintic_eighth\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hB : 1 \u2264 B) (hS : 0 < S)\n    (hS8 : S < (10 : \u211d)^8) (hT : 0 < T)\n    (hC : A^2*T^5/(37*S^2) < C) (hcross : A^3*B*T^3*C/(7*S) < D) :\n    T^8/(10 : \u211d)^27 < D"
+      }
+    ]
+  },
+  "TwoSmallMWindow": {
+    "source_reference": "D1Bound5/TwoSmallMWindow.lean",
+    "sha256": "e8135f65969435ae22e7e2c87a5d6e741f2b0d8f8201b23ead3d3dc033eea399",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "two_small_M_window_contains",
+        "header": "theorem two_small_M_window_contains\n    (A B S C : \u211d) (hA : 1 \u2264 A) (hB : 0 < B) (hB3 : B < 3)\n    (hS : 0 < S) (hS8 : S < (10 : \u211d)^8) (hC : 0 < C) :\n    4*((8/9 : \u211d)*608^2)^2*B^6*S^16*C^5/(1-1/4000 : \u211d) \u2264 (10 : \u211d)^143*C^5 \u2227\n      C^11/(10 : \u211d)^87 \u2264 A^6*C^11/(4*(3920/81 : \u211d)^2*B^4*S^10*(1+1/4000 : \u211d))"
+      },
+      {
+        "name": "two_small_M_window_brackets",
+        "header": "theorem two_small_M_window_brackets\n    (C D : \u211d) (hC : (10 : \u211d)^100 \u2264 C)\n    (hlow : C^7/(10 : \u211d)^50 < D)\n    (hhigh : ordinaryLog10 D < twoSmallHeightEnvelope (ordinaryLog10 C))\n    (hD : 0 < D) :\n    (10 : \u211d)^143*C^5 \u2264 D \u2227 D \u2264 C^11/(10 : \u211d)^87"
+      }
+    ]
+  },
+  "TwoSmallOrdinaryHeight": {
+    "source_reference": "research/continuations/20261019T121446CEST-unit-pair-analytic/wave01/TwoSmallOrdinaryHeight.lean",
+    "sha256": "4906095f2ae080d587f639c846d9a4aa74c9325582edf3f4ca35e27393a993ee",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.two_small_ordinary_height",
+        "header": "theorem IsD1Tuple.two_small_ordinary_height\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 4 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hB : \u2016phi (a 1 : K)\u2016 < 3)\n    (hP : (10 : \u211d)^8 \u2264 \u2016phi (a 2 : K)\u2016) :\n    ordinaryLog10 \u2016phi (a 3 : K)\u2016 <\n      twoSmallHeightEnvelope (ordinaryLog10 \u2016phi (a 2 : K)\u2016)"
+      }
+    ]
+  },
+  "TwoSmallTupleInputs": {
+    "source_reference": "D1Bound5/TwoSmallTupleInputs.lean",
+    "sha256": "be15cad9c7c6c3ec71e15a158917762b0032a1ee107e5ddaa8208f5e5bac48e0",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.comp_injective_map",
+        "header": "theorem IsD1Tuple.comp_injective_map\n    {R : Type*} [CommRing R] {n m : \u2115} (a : Fin n \u2192 R)\n    (ha : IsD1Tuple a) (e : Fin m \u2192 Fin n) (he : Function.Injective e) :\n    IsD1Tuple (fun i => a (e i)) :=\n  \u27e8ha.1.comp he,fun i => ha.2.1 (e i),fun i j hij => ha.2.2 (e i) (e j) (he.ne hij)\u27e9\n\n/-- The determinant growth inputs for the two-small cutoff, with roots\nand all subtuple restrictions obtained from the sextuple itself. -/\ntheorem IsD1Tuple.two_small_growth_inputs\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hS : 3 \u2264 \u2016phi (a 2 : K)\u2016) :\n    (3/8 : \u211d)*\u2016phi (a 0 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016 < \u2016phi (a 4 : K)\u2016 \u2227\n    2*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016*\u2016phi (a 4 : K)\u2016 < \u2016phi (a 5 : K)\u2016 \u2227\n    (9 \u2264 \u2016phi (a 0 : K)\u2016*\u2016phi (a 3 : K)\u2016 \u2192\n      \u2016phi (a 0 : K)\u2016^3*\u2016phi (a 1 : K)\u2016*\u2016phi (a 3 : K)\u2016^3*\u2016phi (a 4 : K)\u2016/\n        (7*\u2016phi (a 2 : K)\u2016) < \u2016phi (a 5 : K)\u2016)"
+      },
+      {
+        "name": "IsD1Tuple.two_small_ordinary_at",
+        "header": "theorem IsD1Tuple.two_small_ordinary_at\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hB : \u2016phi (a 1 : K)\u2016 < 3) (j : Fin 6) (hjlo : 2 \u2264 j) (hjhi : j \u2264 4)\n    (hP : (10 : \u211d)^8 \u2264 \u2016phi (a j : K)\u2016) :\n    ordinaryLog10 \u2016phi (a 5 : K)\u2016 <\n      twoSmallHeightEnvelope (ordinaryLog10 \u2016phi (a j : K)\u2016)"
+      }
+    ]
+  },
+  "UnitPairFiniteReduction": {
+    "source_reference": "D1Bound5/UnitPairFiniteReduction.lean",
+    "sha256": "4c985f3362a3ffa72266af357f8b21e31a3eb40f6bdc85b15d6a449bfa269acc",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.unit_pair_third_norm_ge_eight",
+        "header": "theorem IsD1Tuple.unit_pair_third_norm_ge_eight\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 6 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hm : t 0 = -1) (hp : t 1 = 1)\n    (hmon : Monotone (fun i => \u2016phi (t i : K)\u2016)) :\n    8 \u2264 \u2016phi (t 2 : K)\u2016"
+      },
+      {
+        "name": "IsD1Tuple.unit_pair_reduced_range",
+        "header": "theorem IsD1Tuple.unit_pair_reduced_range\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 6 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hm : t 0 = -1) (hp : t 1 = 1)\n    (hmon : Monotone (fun i => \u2016phi (t i : K)\u2016)) :\n    8 \u2264 \u2016phi (t 2 : K)\u2016 \u2227 \u2016phi (t 3 : K)\u2016 < (10 : \u211d)^8 \u2227\n      (10 : \u211d)^550 < \u2016phi (t 4 : K)\u2016"
+      }
+    ]
+  },
+  "UnitPairImpossible": {
+    "source_reference": "D1Bound5/UnitPairImpossible.lean",
+    "sha256": "4c2c87182eaafedb4e09a0e7ed0a5df2fe634a496242cdfdf9316b2aefde68ea",
+    "public_tactic_theorem_headers": [
+      {
+        "name": "IsD1Tuple.unit_pair_impossible",
+        "header": "theorem IsD1Tuple.unit_pair_impossible\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 6 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hm : t 0 = -1) (hp : t 1 = 1)\n    (hmon : Monotone (fun i => \u2016phi (t i : K)\u2016)) : False"
+      }
+    ]
+  }
+}

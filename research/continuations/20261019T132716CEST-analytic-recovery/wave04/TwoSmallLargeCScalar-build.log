@@ -1,0 +1,54 @@
+✖ [3006/3006] Building D1Bound5.TwoSmallLargeCScalar (67s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/TwoSmallLargeCScalar.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/TwoSmallLargeCScalar.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/TwoSmallLargeCScalar.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/TwoSmallLargeCScalar.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/TwoSmallLargeCScalar.setup.json --json
+error: D1Bound5/TwoSmallLargeCScalar.lean:21:25: Type mismatch
+  mul_le_mul hS (LE.le.trans hS hST) ?m.365 (LT.lt.le hS0)
+has type
+  3 * 3 ≤ S * T
+but is expected to have type
+  9 ≤ S * T
+error: D1Bound5/TwoSmallLargeCScalar.lean:26:45: unsolved goals
+case h₁
+A B S T C D : ℝ
+hA : 1 ≤ A
+hB : 1 ≤ B
+hB3 : B < 3
+hS : 3 ≤ S
+hST : S ≤ T
+hS8 : S < 10 ^ 8
+hT8 : T < 10 ^ 8
+hC : 10 ^ 100 ≤ C
+hD : 2 * S * T * C < D
+hA0 : 0 < A
+hB0 : 0 < B
+hS0 : 0 < S
+hT0 : 0 < T
+hC0 : 0 < C
+hC2 : 10 ^ 200 ≤ C ^ 2
+hST9 : 9 ≤ S * T
+hCD : 4 * C ≤ D
+⊢ B * S < 3
+
+case h₂
+A B S T C D : ℝ
+hA : 1 ≤ A
+hB : 1 ≤ B
+hB3 : B < 3
+hS : 3 ≤ S
+hST : S ≤ T
+hS8 : S < 10 ^ 8
+hT8 : T < 10 ^ 8
+hC : 10 ^ 100 ≤ C
+hD : 2 * S * T * C < D
+hA0 : 0 < A
+hB0 : 0 < B
+hS0 : 0 < S
+hT0 : 0 < T
+hC0 : 0 < C
+hC2 : 10 ^ 200 ≤ C ^ 2
+hST9 : 9 ≤ S * T
+hCD : 4 * C ≤ D
+⊢ T < (10 ^ 8) ^ 2
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.TwoSmallLargeCScalar
+error: build failed

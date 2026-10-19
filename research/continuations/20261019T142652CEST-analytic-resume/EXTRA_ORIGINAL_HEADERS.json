@@ -1,0 +1,48 @@
+{
+  "SmallQuadruple": {
+    "source_sha256": "711961f35418258108807ffc2f351fdfe390fbcae78fcb16809267ab419a0806",
+    "headers": [
+      "three_small_integers_product_two (x y z : \u2124)\n    (hxlo : -2 \u2264 x) (hxhi : x \u2264 2) (hx0 : x \u2260 0)\n    (hylo : -2 \u2264 y) (hyhi : y \u2264 2) (hy0 : y \u2260 0)\n    (hzlo : -2 \u2264 z) (hzhi : z \u2264 2) (hz0 : z \u2260 0)\n    (hxy : x \u2260 y) (hxz : x \u2260 z) (hyz : y \u2260 z) :\n    x*y = 2 \u2228 x*z = 2 \u2228 y*z = 2",
+      "three_not_square_quadInt {tau nu : \u2124}\n    (hpos : 0 < discriminant tau nu) :\n    \u00ac \u2203 r : QuadInt tau nu, r*r = 3",
+      "noSmallQuadruple_of_large_discriminant {tau nu : \u2124}\n    (hlarge : 32 < discriminant tau nu) : NoSmallQuadruple tau nu",
+      "noSmallQuadruple_normalized {tau nu : \u2124}\n    (htau : tau = 0 \u2228 tau = 1)\n    (hpos : 0 < discriminant tau nu) : NoSmallQuadruple tau nu",
+      "IsD1Tuple.not_four_small\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hsmall : \u2200 i, \u2016phi (t i : K)\u2016 < 3) : False",
+      "IsD1.small_entries_card_le_three\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (A : Finset (\ud835\udcde K)) (hA : IsD1 A) :\n    (A.filter (fun (z : \ud835\udcde K) => \u2016phi (z : K)\u2016 < 3)).card \u2264 3"
+    ]
+  },
+  "SmallPairLargeDiscriminant": {
+    "source_sha256": "c69437fd6732a6665be073a5675405812d333a1b31dbbd565010be6a462d9850",
+    "headers": [
+      "small_integer_pair_radicands (x y : \u2124)\n    (hxlo : -2 \u2264 x) (hxhi : x \u2264 2) (hx0 : x \u2260 0)\n    (hylo : -2 \u2264 y) (hyhi : y \u2264 2) (hy0 : y \u2260 0) (hxy : x \u2260 y) :\n    x*y+1 = 3 \u2228 x*y+1 = -1 \u2228 x*y+1 = -3 \u2228 x*y+1 = 0",
+      "small_integer_pair_zero (x y : \u2124)\n    (hxlo : -2 \u2264 x) (hxhi : x \u2264 2)\n    (hylo : -2 \u2264 y) (hyhi : y \u2264 2) (hxy : x*y+1 = 0) :\n    (x = -1 \u2227 y = 1) \u2228 (x = 1 \u2227 y = -1)",
+      "small_negative_radicand_not_square {tau nu m : \u2124}\n    (hlarge : 32 < discriminant tau nu) (hm : m = -1 \u2228 m = -3) :\n    \u00ac \u2203 r : QuadInt tau nu, r*r = (m : QuadInt tau nu)",
+      "small_pair_of_large_discriminant {tau nu : \u2124}\n    (hlarge : 32 < discriminant tau nu) (a b : QuadInt tau nu)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hab : a \u2260 b)\n    (hNa : a.norm \u2264 8) (hNb : b.norm \u2264 8)\n    (hsquare : \u2203 r, r*r = a*b+1) :\n    (a = -1 \u2227 b = 1) \u2228 (a = 1 \u2227 b = -1)",
+      "nondegenerate_small_pair_parameter_bound {tau nu : \u2124}\n    (htau : tau = 0 \u2228 tau = 1) (hd : 0 < discriminant tau nu)\n    (a b : QuadInt tau nu) (ha : a \u2260 0) (hb : b \u2260 0) (hab : a \u2260 b)\n    (hNa : a.norm \u2264 8) (hNb : b.norm \u2264 8)\n    (hsquare : \u2203 r, r*r = a*b+1) (hnondeg : a*b+1 \u2260 0) :\n    discriminant tau nu \u2264 32 \u2227 1 \u2264 nu \u2227 nu \u2264 8"
+    ]
+  },
+  "DegeneratePairClassification": {
+    "source_sha256": "f0401b5dab82318c60bc3a185c8a978e00d598be587cc3416656786b904a06f4",
+    "headers": [
+      "product_neg_one_norms {tau nu : \u2124}\n    (hd : 0 < discriminant tau nu) (a b : QuadInt tau nu)\n    (hprod : a*b+1=0) : a.norm=1 \u2227 b.norm=1",
+      "gaussian_degenerate_pair (a b : QuadInt 0 1) (hne : a \u2260 b)\n    (hprod : a*b+1=0) : RationalUnitPair a b",
+      "degenerate_pair_model {tau nu : \u2124}\n    (htau : tau=0 \u2228 tau=1) (hd : 0 < discriminant tau nu)\n    (a b : QuadInt tau nu) (hne : a \u2260 b) (hprod : a*b+1=0) :\n    RationalUnitPair a b \u2228 (tau=1 \u2227 nu=1)",
+      "eisenstein_degenerate_pair (a b : QuadInt 1 1) (hne : a \u2260 b)\n    (hprod : a*b+1=0) : RationalUnitPair a b \u2228\n      EisensteinCanonicalPair a b \u2228 EisensteinCanonicalPair (-a) (-b)"
+    ]
+  },
+  "EisensteinExceptionalPair": {
+    "source_sha256": "52c8dba49f5e41a0a42204b4560e020ba6c05facbd97830f86f4fc0348522e6c",
+    "headers": [
+      "eisenstein_exceptional_pair_extension_trace_zero\n    (z : QuadInt 1 1)\n    (hr : \u2203 r : QuadInt 1 1, r*r = (\u27e80,-1\u27e9 : QuadInt 1 1)*z+1)\n    (hs : \u2203 s : QuadInt 1 1, s*s = (\u27e81,-1\u27e9 : QuadInt 1 1)*z+1) :\n    2*z.re+z.im = 0"
+    ]
+  },
+  "DegeneratePairImpossible": {
+    "source_sha256": "449a3a0eb81ab63cbb073585d13a396c6886de6c7e8f6b4565307a657ed38f67",
+    "headers": [
+      "IsD1Tuple.simultaneous_neg {R : Type*} [CommRing R] {n : \u2115}\n    (t : Fin n \u2192 R) (ht : IsD1Tuple t) : IsD1Tuple (fun i => -t i)",
+      "IsD1Tuple.coordinate_equiv {R S : Type*} [CommRing R] [CommRing S]\n    {n : \u2115} (t : Fin n \u2192 R) (ht : IsD1Tuple t) (e : R \u2243+* S) :\n    IsD1Tuple (fun i => e (t i))",
+      "IsD1Tuple.eisenstein_canonical_pair_impossible\n    (t : Fin 6 \u2192 QuadInt 1 1) (ht : IsD1Tuple t)\n    (hpair : EisensteinCanonicalPair (t 0) (t 1)) : False",
+      "IsD1Tuple.rational_unit_pair_impossible\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 6 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hmon : Monotone (fun i => \u2016phi (t i : K)\u2016))\n    (hpair : RationalUnitPair (t 0) (t 1)) : False",
+      "IsD1Tuple.degenerate_first_pair_impossible\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 6 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hmon : Monotone (fun i => \u2016phi (t i : K)\u2016))\n    (hprod : t 0*t 1+1=0) : False"
+    ]
+  }
+}

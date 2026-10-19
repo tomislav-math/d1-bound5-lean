@@ -1,0 +1,73 @@
+{
+  "BennettRateLower": {
+    "sha256": "2a05d2a63514f5a778527c82f79a324a012d2e94fcd2c7bd6c3b5978ca22dd1f",
+    "imports": [
+      "D1Bound5.BennettTwoResidualRate"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "FiniteRootApproximation": {
+    "sha256": "3eb0625b1bc5b24d5bf964a4f1ffefb0c9955b498e80c90017d816a9b67d0609",
+    "imports": [
+      "D1Bound5.BennettRootApproximation"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "TwoSmallHeightScalar": {
+    "sha256": "2fc4438e81abf1fb9766cd269fcc8b00c95036ba7e21a2aa00ca22bc65122f73",
+    "imports": [
+      "D1Bound5.OrdinaryLog10"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "CoherentThreeSeparated": {
+    "sha256": "3c375b6867b26b2a9cb36c0616643b86a68225f942b1f0079ea6fb2ea6ac32b1",
+    "imports": [
+      "D1Bound5.CoherentRetainedAnalyticData",
+      "D1Bound5.CoherentThreeNonvanishing"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "FrontierLargeTuple": {
+    "sha256": "912fae040f41448c6e6e89b2258d1258b75fe965d3018aff1fad40a66f5764a1",
+    "imports": [
+      "D1Bound5.FrontierLargeNumeric"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "TwoSmallOrdinaryHeight": {
+    "sha256": "4906095f2ae080d587f639c846d9a4aa74c9325582edf3f4ca35e27393a993ee",
+    "imports": [
+      "D1Bound5.FullRingOrdinaryHeight",
+      "D1Bound5.BennettRateLower",
+      "D1Bound5.TwoSmallHeightScalar"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "FullRingThreeSelection": {
+    "sha256": "53d0881c06ea45ae114fd98871ea9e945f1b4ac102529643cc4037bf4df0778f",
+    "imports": [
+      "D1Bound5.CoherentThreeSeparated"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "FourAnchorVWindow": {
+    "sha256": "57f6fd85494c3adaa33243de7e3b31444c0679418594f7b528e1e94955e5ac3a",
+    "imports": [
+      "D1Bound5.FullRingThreeSelection",
+      "D1Bound5.FiniteClosedWindow"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  },
+  "TwoSmallTupleInputs": {
+    "sha256": "be15cad9c7c6c3ec71e15a158917762b0032a1ee107e5ddaa8208f5e5bac48e0",
+    "imports": [
+      "D1Bound5.TwoSmallOrdinaryHeight",
+      "D1Bound5.FourAnchorVWindow",
+      "D1Bound5.CrossBlockTuple",
+      "D1Bound5.FrontierLargeTuple",
+      "D1Bound5.MixedProductFourGrowth"
+    ],
+    "status": "Read and reviewed original statement and proof; compilation pending"
+  }
+}

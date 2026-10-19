@@ -1,0 +1,97 @@
+⚠ [1540/1615] Replayed D1Bound5.SmallQuadrupleCheck
+warning: D1Bound5/SmallQuadrupleCheck.lean:74:2: Try `simp at Hd` instead of `simpa using Hd`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [2961/2963] Replayed D1Bound5.SmallQuadruple
+warning: D1Bound5/SmallQuadruple.lean:51:25: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_pow (by decide : 2 ≠ 0), add_zero] at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2962/2963] Replayed D1Bound5.SmallPairLargeDiscriminant
+warning: D1Bound5/SmallPairLargeDiscriminant.lean:54:25: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_pow (by decide : 2 ≠ 0), add_zero] at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✖ [2963/2963] Building D1Bound5.DegeneratePairClassification (57s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/DegeneratePairClassification.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/DegeneratePairClassification.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/DegeneratePairClassification.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/DegeneratePairClassification.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/DegeneratePairClassification.setup.json --json
+error: D1Bound5/DegeneratePairClassification.lean:17:16: Unknown constant `QuadraticAlgebra.norm_mul`
+error: D1Bound5/DegeneratePairClassification.lean:17:4: Type mismatch: After simplification, term
+  hh
+ has type
+  QuadraticAlgebra.norm (a * b) = 1
+but is expected to have type
+  QuadraticAlgebra.norm a * QuadraticAlgebra.norm b = 1
+error: D1Bound5/DegeneratePairClassification.lean:65:25: unsolved goals
+case re
+tau nu : ℤ
+htau : tau = 0 ∨ tau = 1
+hd : 0 < discriminant tau nu
+a b : QuadInt tau nu
+hne : a ≠ b
+hprod : a * b + 1 = 0
+ha : QuadraticAlgebra.norm a = 1
+hb : QuadraticAlgebra.norm b = 1
+hia : a.im = 0
+hib : b.im = 0
+hra : a.re ^ 2 = 1
+hfac : (a.re - 1) * (a.re + 1) = 0
+h : a.re = 1
+⊢ 1 = QuadraticAlgebra.re 1
+
+case im
+tau nu : ℤ
+htau : tau = 0 ∨ tau = 1
+hd : 0 < discriminant tau nu
+a b : QuadInt tau nu
+hne : a ≠ b
+hprod : a * b + 1 = 0
+ha : QuadraticAlgebra.norm a = 1
+hb : QuadraticAlgebra.norm b = 1
+hia : a.im = 0
+hib : b.im = 0
+hra : a.re ^ 2 = 1
+hfac : (a.re - 1) * (a.re + 1) = 0
+h : a.re = 1
+⊢ 0 = QuadraticAlgebra.im 1
+error: D1Bound5/DegeneratePairClassification.lean:70:26: unsolved goals
+case re
+tau nu : ℤ
+htau : tau = 0 ∨ tau = 1
+hd : 0 < discriminant tau nu
+a b : QuadInt tau nu
+hne : a ≠ b
+hprod : a * b + 1 = 0
+ha : QuadraticAlgebra.norm a = 1
+hb : QuadraticAlgebra.norm b = 1
+hia : a.im = 0
+hib : b.im = 0
+hra : a.re ^ 2 = 1
+hfac : (a.re - 1) * (a.re + 1) = 0
+h : a.re = -1
+⊢ 1 = QuadraticAlgebra.re 1
+
+case im
+tau nu : ℤ
+htau : tau = 0 ∨ tau = 1
+hd : 0 < discriminant tau nu
+a b : QuadInt tau nu
+hne : a ≠ b
+hprod : a * b + 1 = 0
+ha : QuadraticAlgebra.norm a = 1
+hb : QuadraticAlgebra.norm b = 1
+hia : a.im = 0
+hib : b.im = 0
+hra : a.re ^ 2 = 1
+hfac : (a.re - 1) * (a.re + 1) = 0
+h : a.re = -1
+⊢ QuadraticAlgebra.im 1 = 0
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.DegeneratePairClassification
+error: build failed

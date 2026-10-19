@@ -1,0 +1,232 @@
+⚠ [1721/1752] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [1723/1752] Replayed D1Bound5.BennettBinomialTransfer
+warning: D1Bound5/BennettBinomialTransfer.lean:11:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettSeries_coeff_C_add_X_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1729/1752] Replayed D1Bound5.BennettResidueCoefficient
+warning: D1Bound5/BennettResidueCoefficient.lean:22:0: automatically included section variable(s) unused in theorem `D1Bound5.clearedPoleNumerator_monic`:
+  [Nontrivial R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1731/1752] Replayed D1Bound5.BennettPartialFractions
+warning: D1Bound5/BennettPartialFractions.lean:24:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_monic`:
+  [Nontrivial R]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettPartialFractions.lean:29:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_natDegree`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1732/1752] Replayed D1Bound5.BennettLocalResidues
+warning: D1Bound5/BennettLocalResidues.lean:17:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_C`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettLocalResidues.lean:21:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_linear`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1735/1752] Replayed D1Bound5.BennettResidualCancellation
+warning: D1Bound5/BennettResidualCancellation.lean:108:0: automatically included section variable(s) unused in theorem `D1Bound5.bennett_coeff_mul_trunc`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1763/1844] Replayed D1Bound5.BennettDeterminantConstant
+warning: D1Bound5/BennettDeterminantConstant.lean:65:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:65:35: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:72:14: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [1765/1844] Replayed D1Bound5.BennettDeterminantFormula
+warning: D1Bound5/BennettDeterminantFormula.lean:34:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettDirectedProduct_succ`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [1771/1844] Replayed D1Bound5.FiniteMBennettIdentity
+warning: D1Bound5/FiniteMBennettIdentity.lean:104:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:106:0: automatically included section variable(s) unused in theorem `D1Bound5.finiteMNodes_injective`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2777/2836] Replayed D1Bound5.BennettResiduesAtInfinity
+warning: D1Bound5/BennettResiduesAtInfinity.lean:158:8: automatically included section variable(s) unused in theorem `_private.D1Bound5.BennettResiduesAtInfinity.0.D1Bound5.bennett_reverse_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2789/2836] Replayed D1Bound5.BennettRepeatedHsymm
+warning: D1Bound5/BennettRepeatedHsymm.lean:28:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/BennettRepeatedHsymm.lean:84:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettRepeatedNodes_card`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettRepeatedHsymm.lean:88:8: automatically included section variable(s) unused in theorem `_private.D1Bound5.BennettRepeatedHsymm.0.D1Bound5.bennettReciprocalInfinity_explicit_mul`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2840/2842] Replayed D1Bound5.BennettResidualBound
+warning: D1Bound5/BennettResidualBound.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✖ [2842/2842] Building D1Bound5.FiniteMResidualPoint (67s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteMResidualPoint.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteMResidualPoint.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteMResidualPoint.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteMResidualPoint.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteMResidualPoint.setup.json --json
+error: D1Bound5/FiniteMResidualPoint.lean:82:4: Type mismatch
+  hp
+has type
+  ‖∑ x,
+        eval (c⁻¹ * (s⁻¹ * (b⁻¹ * a⁻¹))) (bennettPolynomialResidue univ (finiteMNodes a b s) 2 (1 / 2) i x) *
+          (1 + finiteMNodes a b s x * (c⁻¹ * (s⁻¹ * (b⁻¹ * a⁻¹)))) ^ (1 / 2)‖ ≤
+    45 / 32768 * (‖c‖⁻¹ * (‖s‖⁻¹ * (‖b‖⁻¹ * ‖a‖⁻¹))) ^ 8 /
+      (1 - ‖b‖ * ‖s‖ * (‖c‖⁻¹ * (‖s‖⁻¹ * (‖b‖⁻¹ * ‖a‖⁻¹)))) ^ (11 / 2)
+but is expected to have type
+  ‖∑ x,
+        eval (c⁻¹ * (s⁻¹ * (b⁻¹ * a⁻¹))) (bennettPolynomialResidue univ (finiteMNodes a b s) 2 (1 / 2) i x) *
+          (1 + finiteMNodes a b s x * (c⁻¹ * (s⁻¹ * (b⁻¹ * a⁻¹)))) ^ (1 / 2)‖ ≤
+    45 / 32768 * (‖c‖⁻¹ * (‖s‖⁻¹ * (‖b‖⁻¹ * ‖a‖⁻¹))) ^ 8 / (1 - ‖c‖⁻¹ * ‖a‖⁻¹) ^ (11 / 2)
+error: D1Bound5/FiniteMResidualPoint.lean:107:42: Unknown identifier `norm_ofNat`
+info: D1Bound5/FiniteMResidualPoint.lean:109:8: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteMResidualPoint.lean:106:44: unsolved goals
+a b s c : ℂ
+ha : a ≠ 0
+hb : b ≠ 0
+hs : s ≠ 0
+hc : c ≠ 0
+hab : a ≠ b
+has : a ≠ s
+hbs : b ≠ s
+hAB : ‖a‖ ≤ ‖b‖
+hBS : ‖b‖ ≤ ‖s‖
+hAC : 1000 ≤ ‖a‖ * ‖c‖
+i : Fin 4
+hA : 0 < ‖a‖
+hB : 0 < ‖b‖
+hS : 0 < ‖s‖
+hC : 0 < ‖c‖
+hD1 : 0 < ‖a - b‖
+hD2 : 0 < ‖a - s‖
+hD3 : 0 < ‖b - s‖
+hrow : 0 < ‖finiteMRowFactor a b s i‖
+hN : a * b * s * c ≠ 0
+hr : ‖b‖ * ‖s‖ * ‖(a * b * s * c)⁻¹‖ = 1 / (‖a‖ * ‖c‖)
+hradius : ‖b‖ * ‖s‖ * ‖(a * b * s * c)⁻¹‖ < 1
+hnodes : ∀ (j : Fin 4), ‖finiteMNodes a b s j‖ ≤ ‖b‖ * ‖s‖
+hp :
+  ‖∑ j,
+        eval (a * b * s * c)⁻¹ (bennettPolynomialResidue univ (finiteMNodes a b s) 2 (↑(1 / 2)) i j) *
+          (1 + finiteMNodes a b s j * (a * b * s * c)⁻¹) ^ ↑(1 / 2)‖ ≤
+    |Ring.choose (↑2 + 1 / 2) (Fintype.card (Fin 4) * 2)| * ‖(a * b * s * c)⁻¹‖ ^ (Fintype.card (Fin 4) * 2) /
+      (1 - ‖b‖ * ‖s‖ * ‖(a * b * s * c)⁻¹‖) ^ (↑(Fintype.card (Fin 4) * 2) - (↑2 + 1 / 2))
+hpoly :
+  ‖∑ j,
+        eval (a * b * s * c)⁻¹ (bennettPolynomialResidue univ (finiteMNodes a b s) 2 (1 / 2) i j) *
+          (1 + finiteMNodes a b s j * (a * b * s * c)⁻¹) ^ (1 / 2)‖ ≤
+    45 / 32768 * ‖(a * b * s * c)⁻¹‖ ^ 8 / (1 - 1 / (‖a‖ * ‖c‖)) ^ (11 / 2)
+scale : ℂ := (4 * (a * b * s) ^ 2 * ((a - b) * (a - s) * (b - s)) ^ 2) ^ 2 * (a * b * s * c) ^ 2
+hscaleRow :
+  ∑ j, finiteMBennettEntry a b s c i j * (1 + finiteMNodes a b s j * (a * b * s * c)⁻¹) ^ (1 / 2) =
+    scale *
+      ∑ j,
+        eval (a * b * s * c)⁻¹ (bennettPolynomialResidue univ (finiteMNodes a b s) 2 (1 / 2) i j) *
+          (1 + finiteMNodes a b s j * (a * b * s * c)⁻¹) ^ (1 / 2)
+heta0 : 0 < 1 - 1 / (‖a‖ * ‖c‖)
+hepow : 0 < (1 - 1 / (‖a‖ * ‖c‖)) ^ (11 / 2)
+⊢ ‖4‖ ^ 2 * ((‖a‖ * ‖c‖ * ‖a‖⁻¹ * ‖c‖⁻¹ - ‖a‖⁻¹ * ‖c‖⁻¹) ^ (11 / 2))⁻¹ * 2048 =
+    ((‖a‖ * ‖c‖ * ‖a‖⁻¹ * ‖c‖⁻¹ - ‖a‖⁻¹ * ‖c‖⁻¹) ^ (11 / 2))⁻¹ * 32768
+error: D1Bound5/FiniteMResidualPoint.lean:125:2: `field_simp` made no progress on the goal
+warning: D1Bound5/FiniteMResidualPoint.lean:67:26: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteMNodes]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteMResidualPoint
+error: build failed

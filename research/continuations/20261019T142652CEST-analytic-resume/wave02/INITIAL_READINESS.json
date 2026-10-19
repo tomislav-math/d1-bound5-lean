@@ -1,0 +1,62 @@
+{
+  "utc": "2026-10-19T12:35:27.600617+00:00",
+  "unknown": [],
+  "targets": {
+    "UnitPairFiniteReduction": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMResidual": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidual"
+      ]
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound",
+        "FiniteMResidual"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMResidual"
+      ]
+    },
+    "TwoSmallFifthBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMResidual"
+      ]
+    },
+    "UnitPairImpossible": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "UnitPairFiniteReduction",
+        "TwoSmallFifthBound",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMResidual"
+      ]
+    }
+  }
+}

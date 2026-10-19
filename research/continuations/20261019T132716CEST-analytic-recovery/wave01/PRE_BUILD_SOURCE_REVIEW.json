@@ -1,0 +1,45 @@
+{
+  "TwoSmallTupleInputs": {
+    "sha256": "c86ee9706a0079985443dc0486721f1de2b461a315650061cc8ea4e3e0ef5b5b",
+    "imports": [
+      "D1Bound5.TwoSmallOrdinaryHeight",
+      "D1Bound5.FourAnchorVWindow",
+      "D1Bound5.CrossBlockTuple",
+      "D1Bound5.FrontierLargeTuple",
+      "D1Bound5.MixedProductFourGrowth"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeGeneralWindow": {
+    "sha256": "672e1e3d605f06db37de02cec597d627f04713038fc2c51993a56e88102920bc",
+    "imports": [
+      "D1Bound5.CoherentThreeGeneral",
+      "D1Bound5.FourAnchorVWindow"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallLargeS": {
+    "sha256": "20bec0ab315fc8a7782d47069ae2c37f9dfb1ee84ae644f662f9d0a5097e8135",
+    "imports": [
+      "D1Bound5.TwoSmallTupleInputs"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallLargeSBound": {
+    "sha256": "43c00321a3114de6dffea2643a6acb8fd229e9829c17fd8b27d02efade9e0290",
+    "imports": [
+      "D1Bound5.TwoSmallLargeS"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMBennettIdentity": {
+    "sha256": "0af6680cb6cc36d82eded9cdefe4256f152cc77782d31dc3397cd50282c3aa45",
+    "imports": [
+      "D1Bound5.FiniteMMatrix",
+      "D1Bound5.BennettDeterminantNonzero",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.LinearCombination"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "FiniteMRowBound": {
+    "sha256": "8f362cf2cd05cc79c68cd55d4cd481a8f4757c97b8b62b056279ef4736669437",
+    "imports": [
+      "D1Bound5.FiniteMIntegralRows",
+      "D1Bound5.FiniteMHeight",
+      "D1Bound5.FiniteMResidual",
+      "D1Bound5.FiniteRowRootTransfer"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMFullRing": {
+    "sha256": "ccd1c5fe763a7002b65f94178df335b7e0c574ea0b9cf29c56f7a3dc63944b8e",
+    "imports": [
+      "D1Bound5.FiniteMRowBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMInterval": {
+    "sha256": "53a6f39ac9a59fdf8135626fdfab3e56282ebeb2c05e568f1a8a0d4ed24b420f",
+    "imports": [
+      "D1Bound5.FiniteMFullRing",
+      "D1Bound5.FiniteClosedWindow"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "TwoSmallFifthBound": {
+    "sha256": "40729d4ab52d8b38a6cbd40d489450ac0c90b2a0c552b8bbb5039ce2f5583798",
+    "imports": [
+      "D1Bound5.TwoSmallMWindow",
+      "D1Bound5.FiniteMInterval",
+      "D1Bound5.TwoSmallLargeCScalar",
+      "D1Bound5.FullRingDirectFour",
+      "D1Bound5.TwoSmallLargeTBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "UnitPairImpossible": {
+    "sha256": "4c2c87182eaafedb4e09a0e7ed0a5df2fe634a496242cdfdf9316b2aefde68ea",
+    "imports": [
+      "D1Bound5.UnitPairFiniteReduction",
+      "D1Bound5.TwoSmallFifthBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "DegeneratePairImpossible": {
+    "sha256": "449a3a0eb81ab63cbb073585d13a396c6886de6c7e8f6b4565307a657ed38f67",
+    "imports": [
+      "D1Bound5.DegeneratePairClassification",
+      "D1Bound5.UnitPairImpossible",
+      "D1Bound5.EisensteinExceptionalPair",
+      "D1Bound5.EisensteinImaginaryExtensions"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}

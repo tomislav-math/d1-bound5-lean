@@ -1,0 +1,52 @@
+{
+  "FiniteEtaBound": {
+    "sha256": "bbe0c480ef14e08f89c2bfd31afb3f5e0e4f98178a555879f1db7d5985f98cf6",
+    "imports": [
+      "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.NormNum",
+      "Mathlib.Tactic.GCongr"
+    ],
+    "review": "Exact source and original mathematical statement reviewed; not yet compiled"
+  },
+  "FiniteRowRootTransfer": {
+    "sha256": "46becc96a7c33e650b104610ae9b313c17aa248f9679f52836b1f07f3d3ae855",
+    "imports": [
+      "D1Bound5.BennettRootApproximation"
+    ],
+    "review": "Exact source and original mathematical statement reviewed; not yet compiled"
+  },
+  "FiniteMMatrix": {
+    "sha256": "8af7f9699b9fc84a48e57a25795d84c9aefe6f4ade8e20a65b9b82216db511c9",
+    "imports": [
+      "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+      "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+      "Mathlib.Algebra.BigOperators.Fin",
+      "Mathlib.Tactic.FinCases",
+      "Mathlib.Tactic.Ring",
+      "Mathlib.Tactic.NormNum"
+    ],
+    "review": "Exact source and original mathematical statement reviewed; not yet compiled"
+  },
+  "FiniteMBennettIdentity": {
+    "sha256": "f27f4a41cffafb28570bf5c653ce0b346755899d2391eb2e165fb9f9efe45c33",
+    "imports": [
+      "D1Bound5.FiniteMMatrix",
+      "D1Bound5.BennettDeterminantNonzero",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.LinearCombination"
+    ],
+    "review": "Exact source and original mathematical statement reviewed; not yet compiled"
+  },
+  "FiniteMHeight": {
+    "sha256": "ec0982f7edbd91c3706e88aa5dcd7d18e8ffc261e3a2b342f8b47e572050feb8",
+    "imports": [
+      "D1Bound5.FiniteMMatrix",
+      "Mathlib.Analysis.Complex.Basic",
+      "Mathlib.Tactic.GCongr",
+      "Mathlib.Tactic.Linarith",
+      "Lean.Elab.Tactic.Omega"
+    ],
+    "review": "Exact source and original mathematical statement reviewed; not yet compiled"
+  }
+}

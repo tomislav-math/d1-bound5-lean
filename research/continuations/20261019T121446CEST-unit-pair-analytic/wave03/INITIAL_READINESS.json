@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-19T10:33:58.424032+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteRowRootTransfer": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMHeight": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMBennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMIntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidualPoint": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidualPoint",
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMHeight",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "FiniteRowRootTransfer"
+      ]
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMHeight",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "FiniteRowRootTransfer"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMHeight",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "FiniteRowRootTransfer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "utc": "2026-10-19T11:41:39.131717+00:00",
+  "unknown": [],
+  "targets": {
+    "TwoSmallLargeSBound": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "ThreeAnchorAlternative": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FullRingDirectFour": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallLargeTScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorAlternative",
+        "TwoSmallLargeSBound"
+      ]
+    },
+    "TwoSmallLargeTBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "TwoSmallLargeSBound"
+      ]
+    },
+    "FiniteMBennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMIntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidualPoint": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidualPoint",
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    }
+  }
+}

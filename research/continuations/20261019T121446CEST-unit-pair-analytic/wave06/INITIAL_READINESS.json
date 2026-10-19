@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-19T10:47:42.578790+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteMBennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMIntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidualPoint": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidualPoint",
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    }
+  }
+}

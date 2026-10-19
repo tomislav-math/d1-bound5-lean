@@ -1,0 +1,85 @@
+{
+  "utc": "2026-10-19T12:41:25.649724+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound"
+      ]
+    },
+    "TwoSmallFifthBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound"
+      ]
+    },
+    "UnitPairImpossible": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallFifthBound",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound"
+      ]
+    },
+    "SmallQuadruple": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "SmallPairLargeDiscriminant": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "SmallQuadruple"
+      ]
+    },
+    "DegeneratePairClassification": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "SmallPairLargeDiscriminant",
+        "SmallQuadruple"
+      ]
+    },
+    "EisensteinExceptionalPair": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "DegeneratePairImpossible": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "DegeneratePairClassification",
+        "SmallPairLargeDiscriminant",
+        "SmallQuadruple",
+        "UnitPairImpossible",
+        "TwoSmallFifthBound",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "EisensteinExceptionalPair"
+      ]
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "utc": "2026-10-19T11:52:32.386023+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteMBennettIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "ThreeAnchorAlternative": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FullRingDirectFour": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallLargeTScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorAlternative"
+      ]
+    },
+    "TwoSmallLargeTBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative"
+      ]
+    },
+    "FiniteMIntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidualPoint": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMResidual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMResidualPoint",
+        "FiniteMBennettIdentity"
+      ]
+    },
+    "FiniteMRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "FiniteMInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint"
+      ]
+    },
+    "TwoSmallLargeCScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FullRingDirectFour",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative"
+      ]
+    },
+    "TwoSmallMWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "TwoSmallLargeCScalar",
+        "FullRingDirectFour",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative"
+      ]
+    },
+    "TwoSmallFifthBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallMWindow",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "TwoSmallLargeCScalar",
+        "FullRingDirectFour",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative"
+      ]
+    },
+    "UnitPairFiniteReduction": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative"
+      ]
+    },
+    "UnitPairImpossible": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "UnitPairFiniteReduction",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "TwoSmallFifthBound",
+        "TwoSmallMWindow",
+        "FiniteMInterval",
+        "FiniteMFullRing",
+        "FiniteMRowBound",
+        "FiniteMIntegralRows",
+        "FiniteMBennettIdentity",
+        "FiniteMResidual",
+        "FiniteMResidualPoint",
+        "TwoSmallLargeCScalar",
+        "FullRingDirectFour"
+      ]
+    }
+  }
+}

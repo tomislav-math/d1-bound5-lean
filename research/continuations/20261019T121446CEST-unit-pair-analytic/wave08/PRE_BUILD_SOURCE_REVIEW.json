@@ -1,0 +1,62 @@
+{
+  "FiniteMBennettIdentity": {
+    "sha256": "0af6680cb6cc36d82eded9cdefe4256f152cc77782d31dc3397cd50282c3aa45",
+    "imports": [
+      "D1Bound5.FiniteMMatrix",
+      "D1Bound5.BennettDeterminantNonzero",
+      "Mathlib.Tactic.FieldSimp",
+      "Mathlib.Tactic.LinearCombination"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMIntegralRows": {
+    "sha256": "6a41917e374548988e846d67ca045f1fa413585ce5c57ae666d21b73fb0a0713",
+    "imports": [
+      "D1Bound5.FiniteMBennettIdentity",
+      "D1Bound5.FullRingBridge"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMResidualPoint": {
+    "sha256": "bb56d3a7e4596d114eafb279a815fbe917386006ca96bd179e7279d203277b01",
+    "imports": [
+      "D1Bound5.FiniteMBennettIdentity",
+      "D1Bound5.BennettResidualBound",
+      "D1Bound5.FiniteEtaBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMResidual": {
+    "sha256": "20b5f3f0240599a870b13dc7bce59f4a645e7c3a3e921eff6e6196205ed5b078",
+    "imports": [
+      "D1Bound5.FiniteMResidualPoint",
+      "Mathlib.Tactic.GCongr"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMRowBound": {
+    "sha256": "a08eeb335ec57be15fb0c5dfc1a47eaae4fc44a5d964b5c18b2dca7bf9bb405a",
+    "imports": [
+      "D1Bound5.FiniteMIntegralRows",
+      "D1Bound5.FiniteMHeight",
+      "D1Bound5.FiniteMResidual",
+      "D1Bound5.FiniteRowRootTransfer"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMFullRing": {
+    "sha256": "63f42a3fb9df5ccef6f086e8cab32c5ea8836f392e21c8e1df2892a94195b8e2",
+    "imports": [
+      "D1Bound5.FiniteMRowBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "FiniteMInterval": {
+    "sha256": "94c63491bc86250f311d615c161c34f10ab72cfbe79b4a079554e76e6c57048f",
+    "imports": [
+      "D1Bound5.FiniteMFullRing",
+      "D1Bound5.FiniteClosedWindow"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}

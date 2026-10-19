@@ -1,0 +1,67 @@
+{
+  "utc": "2026-10-19T10:16:36.299302+00:00",
+  "unknown": [],
+  "targets": {
+    "BennettRateLower": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteRootApproximation": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallHeightScalar": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "CoherentThreeSeparated": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FrontierLargeTuple": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallOrdinaryHeight": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "BennettRateLower",
+        "TwoSmallHeightScalar"
+      ]
+    },
+    "FullRingThreeSelection": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "CoherentThreeSeparated"
+      ]
+    },
+    "FourAnchorVWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated"
+      ]
+    },
+    "TwoSmallTupleInputs": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallOrdinaryHeight",
+        "BennettRateLower",
+        "TwoSmallHeightScalar",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated",
+        "FrontierLargeTuple"
+      ]
+    }
+  }
+}

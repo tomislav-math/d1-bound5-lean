@@ -1,0 +1,376 @@
+{
+  "BennettRateLower": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "CoherentThreeSeparated": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "FiniteEtaBound": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "FiniteMBennettIdentity": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMMatrix"
+    ]
+  },
+  "FiniteMFullRing": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMRowBound",
+      "FiniteMIntegralRows",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteMHeight",
+      "FiniteMResidual",
+      "FiniteMResidualPoint",
+      "FiniteEtaBound",
+      "FiniteRowRootTransfer"
+    ]
+  },
+  "FiniteMHeight": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMMatrix"
+    ]
+  },
+  "FiniteMIntegralRows": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix"
+    ]
+  },
+  "FiniteMInterval": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMFullRing",
+      "FiniteMRowBound",
+      "FiniteMIntegralRows",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteMHeight",
+      "FiniteMResidual",
+      "FiniteMResidualPoint",
+      "FiniteEtaBound",
+      "FiniteRowRootTransfer"
+    ]
+  },
+  "FiniteMMatrix": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "FiniteMResidual": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMResidualPoint",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteEtaBound"
+    ]
+  },
+  "FiniteMResidualPoint": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteEtaBound"
+    ]
+  },
+  "FiniteMRowBound": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMIntegralRows",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteMHeight",
+      "FiniteMResidual",
+      "FiniteMResidualPoint",
+      "FiniteEtaBound",
+      "FiniteRowRootTransfer"
+    ]
+  },
+  "FiniteRowRootTransfer": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "FourAnchorVWindow": {
+    "eligible": false,
+    "dependencies": [
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated"
+    ]
+  },
+  "FrontierLargeTuple": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "FullRingDirectFour": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple"
+    ]
+  },
+  "FullRingThreeSelection": {
+    "eligible": false,
+    "dependencies": [
+      "CoherentThreeSeparated"
+    ]
+  },
+  "ThreeAnchorAlternative": {
+    "eligible": false,
+    "dependencies": [
+      "ThreeGeneralWindow",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FrontierLargeTuple"
+    ]
+  },
+  "ThreeGeneralWindow": {
+    "eligible": false,
+    "dependencies": [
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated"
+    ]
+  },
+  "TwoSmallFifthBound": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallMWindow",
+      "FiniteMInterval",
+      "FiniteMFullRing",
+      "FiniteMRowBound",
+      "FiniteMIntegralRows",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteMHeight",
+      "FiniteMResidual",
+      "FiniteMResidualPoint",
+      "FiniteEtaBound",
+      "FiniteRowRootTransfer",
+      "TwoSmallLargeCScalar",
+      "FullRingDirectFour",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple",
+      "TwoSmallLargeTBound",
+      "TwoSmallLargeTScalar",
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow",
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS"
+    ]
+  },
+  "TwoSmallHeightScalar": {
+    "eligible": true,
+    "dependencies": []
+  },
+  "TwoSmallLargeCScalar": {
+    "eligible": false,
+    "dependencies": [
+      "FullRingDirectFour",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple",
+      "TwoSmallLargeTBound",
+      "TwoSmallLargeTScalar",
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow",
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS"
+    ]
+  },
+  "TwoSmallLargeS": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple"
+    ]
+  },
+  "TwoSmallLargeSBound": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallLargeS",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple"
+    ]
+  },
+  "TwoSmallLargeTBound": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallLargeTScalar",
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FrontierLargeTuple",
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS"
+    ]
+  },
+  "TwoSmallLargeTScalar": {
+    "eligible": false,
+    "dependencies": [
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FrontierLargeTuple",
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS"
+    ]
+  },
+  "TwoSmallMWindow": {
+    "eligible": false,
+    "dependencies": [
+      "FiniteMInterval",
+      "FiniteMFullRing",
+      "FiniteMRowBound",
+      "FiniteMIntegralRows",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteMHeight",
+      "FiniteMResidual",
+      "FiniteMResidualPoint",
+      "FiniteEtaBound",
+      "FiniteRowRootTransfer",
+      "TwoSmallLargeCScalar",
+      "FullRingDirectFour",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple",
+      "TwoSmallLargeTBound",
+      "TwoSmallLargeTScalar",
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow",
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS"
+    ]
+  },
+  "TwoSmallOrdinaryHeight": {
+    "eligible": false,
+    "dependencies": [
+      "BennettRateLower",
+      "TwoSmallHeightScalar"
+    ]
+  },
+  "TwoSmallTupleInputs": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple"
+    ]
+  },
+  "UnitPairFiniteReduction": {
+    "eligible": false,
+    "dependencies": [
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple",
+      "TwoSmallLargeTBound",
+      "TwoSmallLargeTScalar",
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow"
+    ]
+  },
+  "UnitPairImpossible": {
+    "eligible": false,
+    "dependencies": [
+      "UnitPairFiniteReduction",
+      "TwoSmallLargeSBound",
+      "TwoSmallLargeS",
+      "TwoSmallTupleInputs",
+      "TwoSmallOrdinaryHeight",
+      "BennettRateLower",
+      "TwoSmallHeightScalar",
+      "FourAnchorVWindow",
+      "FullRingThreeSelection",
+      "CoherentThreeSeparated",
+      "FrontierLargeTuple",
+      "TwoSmallLargeTBound",
+      "TwoSmallLargeTScalar",
+      "ThreeAnchorAlternative",
+      "ThreeGeneralWindow",
+      "TwoSmallFifthBound",
+      "TwoSmallMWindow",
+      "FiniteMInterval",
+      "FiniteMFullRing",
+      "FiniteMRowBound",
+      "FiniteMIntegralRows",
+      "FiniteMBennettIdentity",
+      "FiniteMMatrix",
+      "FiniteMHeight",
+      "FiniteMResidual",
+      "FiniteMResidualPoint",
+      "FiniteEtaBound",
+      "FiniteRowRootTransfer",
+      "TwoSmallLargeCScalar",
+      "FullRingDirectFour"
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "utc": "2026-10-19T10:29:05.817394+00:00",
+  "unknown": [],
+  "targets": {
+    "TwoSmallOrdinaryHeight": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "CoherentThreeSeparated": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FullRingThreeSelection": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "CoherentThreeSeparated"
+      ]
+    },
+    "FourAnchorVWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated"
+      ]
+    },
+    "TwoSmallTupleInputs": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallOrdinaryHeight",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated"
+      ]
+    },
+    "TwoSmallLargeS": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallTupleInputs",
+        "TwoSmallOrdinaryHeight",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated"
+      ]
+    },
+    "TwoSmallLargeSBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeS",
+        "TwoSmallTupleInputs",
+        "TwoSmallOrdinaryHeight",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated"
+      ]
+    },
+    "ThreeGeneralWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated"
+      ]
+    },
+    "ThreeAnchorAlternative": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated",
+        "TwoSmallTupleInputs",
+        "TwoSmallOrdinaryHeight"
+      ]
+    },
+    "TwoSmallLargeTScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated",
+        "TwoSmallTupleInputs",
+        "TwoSmallOrdinaryHeight",
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS"
+      ]
+    },
+    "TwoSmallLargeTBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated",
+        "TwoSmallTupleInputs",
+        "TwoSmallOrdinaryHeight",
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS"
+      ]
+    },
+    "UnitPairFiniteReduction": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS",
+        "TwoSmallTupleInputs",
+        "TwoSmallOrdinaryHeight",
+        "FourAnchorVWindow",
+        "FullRingThreeSelection",
+        "CoherentThreeSeparated",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow"
+      ]
+    }
+  }
+}

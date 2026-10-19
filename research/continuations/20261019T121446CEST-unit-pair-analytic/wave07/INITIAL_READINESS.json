@@ -1,0 +1,90 @@
+{
+  "utc": "2026-10-19T10:51:03.079799+00:00",
+  "unknown": [],
+  "targets": {
+    "FourAnchorVWindow": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "TwoSmallTupleInputs": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FourAnchorVWindow"
+      ]
+    },
+    "TwoSmallLargeS": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallTupleInputs",
+        "FourAnchorVWindow"
+      ]
+    },
+    "TwoSmallLargeSBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeS",
+        "TwoSmallTupleInputs",
+        "FourAnchorVWindow"
+      ]
+    },
+    "ThreeGeneralWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FourAnchorVWindow"
+      ]
+    },
+    "ThreeAnchorAlternative": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "TwoSmallTupleInputs"
+      ]
+    },
+    "TwoSmallLargeTScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "TwoSmallTupleInputs",
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS"
+      ]
+    },
+    "TwoSmallLargeTBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow",
+        "FourAnchorVWindow",
+        "TwoSmallTupleInputs",
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS"
+      ]
+    },
+    "UnitPairFiniteReduction": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "TwoSmallLargeSBound",
+        "TwoSmallLargeS",
+        "TwoSmallTupleInputs",
+        "FourAnchorVWindow",
+        "TwoSmallLargeTBound",
+        "TwoSmallLargeTScalar",
+        "ThreeAnchorAlternative",
+        "ThreeGeneralWindow"
+      ]
+    }
+  }
+}
