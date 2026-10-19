@@ -1,0 +1,201 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQLeft: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRight: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQConstant: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQDividedMatrix: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQMatrix: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQDividedMatrix_det: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQMatrix_det: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQDividedMatrix_det_ne_zero: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQ_half_coefficients: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQHalfRemainder: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQHalfRemainder_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQResidual: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQResidual_eq_remainders: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQ_pair_height: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQDividedMatrix_root_height: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finiteQLeft: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finiteQRight: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finiteQConstant: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finiteQDividedMatrix: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRowForm: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finiteQRowForm: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRowForm_exists_ne_zero: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteQRowForm_exists_one_le_norm: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQHalfRemainder_small_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQTailSide: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQTailSide_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQResidual_norm_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQAnchors: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRowResidual: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRowResidual_norm_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRowForm_eq_root_sum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteQRowForm_norm_lt: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteQ_inequality: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteQ_closed_interval_excluded: [propext, Classical.choice, Quot.sound]
+@D1Bound5.finiteQLeft : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finiteQRight : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finiteQConstant : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finiteQDividedMatrix : {R : Type u_1} → [CommRing R] → R → R → R → R → R → Matrix (Fin 5) (Fin 5) R
+@D1Bound5.finiteQMatrix : {R : Type u_1} → [CommRing R] → R → R → R → R → R → Matrix (Fin 5) (Fin 5) R
+@D1Bound5.finiteQDividedMatrix_det : ∀ {R : Type u_1} [inst : CommRing R] (a b s t c : R),
+  (D1Bound5.finiteQDividedMatrix a b s t c).det =
+    180 * a * b * s * t * (a - b) ^ 2 * (a - s) * (a - t) * (b - s) * (b - t) * (s - t)
+@D1Bound5.finiteQMatrix_det : ∀ {R : Type u_1} [inst : CommRing R] (a b s t c : R),
+  (D1Bound5.finiteQMatrix a b s t c).det =
+    180 * a ^ 2 * b ^ 2 * s ^ 2 * t ^ 2 * (a - b) ^ 2 * (a - s) * (a - t) * (b - s) * (b - t) * (s - t)
+@D1Bound5.finiteQDividedMatrix_det_ne_zero : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b s t c : F),
+  a ≠ 0 →
+    b ≠ 0 →
+      s ≠ 0 → t ≠ 0 → a ≠ b → a ≠ s → a ≠ t → b ≠ s → b ≠ t → s ≠ t → (D1Bound5.finiteQDividedMatrix a b s t c).det ≠ 0
+D1Bound5.finiteQ_half_coefficients : D1Bound5.halfBinomialCoeff 0 = 1 ∧
+  D1Bound5.halfBinomialCoeff 1 = 1 / 2 ∧
+    D1Bound5.halfBinomialCoeff 2 = -1 / 8 ∧
+      D1Bound5.halfBinomialCoeff 3 = 1 / 16 ∧ D1Bound5.halfBinomialCoeff 4 = -5 / 128
+D1Bound5.finiteQHalfRemainder : ℕ → ℂ → ℂ
+D1Bound5.finiteQHalfRemainder_norm_le : ∀ (n : ℕ) (z : ℂ),
+  4 ≤ n → ‖z‖ < 1 → ‖D1Bound5.finiteQHalfRemainder n z‖ ≤ 5 / 128 * ‖z‖ ^ n / (1 - ‖z‖)
+D1Bound5.finiteQResidual : ℂ → ℂ → ℂ → ℂ
+D1Bound5.finiteQResidual_eq_remainders : ∀ (u v c : ℂ),
+  u ≠ 0 →
+    v ≠ 0 →
+      c ≠ 0 →
+        D1Bound5.finiteQResidual u v c =
+          u * (u ^ 2 - 5 * u * v) * D1Bound5.finiteQHalfRemainder 4 (1 / (u * c)) +
+                u * (4 * u ^ 3 - 8 * u ^ 2 * v) * c * D1Bound5.finiteQHalfRemainder 5 (1 / (u * c)) +
+              v * (5 * u * v - v ^ 2) * D1Bound5.finiteQHalfRemainder 4 (1 / (v * c)) +
+            v * (8 * u * v ^ 2 - 4 * v ^ 3) * c * D1Bound5.finiteQHalfRemainder 5 (1 / (v * c))
+D1Bound5.finiteQ_pair_height : ∀ (u v c : ℂ) (T C : ℝ),
+  0 ≤ T →
+    0 ≤ C →
+      ‖u‖ ≤ T →
+        ‖v‖ ≤ T → ‖c‖ ≤ C → 1 ≤ T * C → ‖D1Bound5.finiteQLeft u v c‖ + ‖D1Bound5.finiteQRight u v c‖ ≤ 36 * T ^ 3 * C
+D1Bound5.finiteQDividedMatrix_root_height : ∀ (a b s t c : ℂ) (T C : ℝ),
+  0 ≤ T →
+    0 ≤ C →
+      ‖a‖ ≤ T →
+        ‖b‖ ≤ T →
+          ‖s‖ ≤ T →
+            ‖t‖ ≤ T →
+              ‖c‖ ≤ C →
+                1 ≤ T * C → ∀ (i : Fin 5), ∑ j, ‖D1Bound5.finiteQDividedMatrix a b s t c i j.succ‖ ≤ 36 * T ^ 3 * C
+@D1Bound5.map_finiteQLeft : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (f : R →+* S)
+  (u v c : R), f (D1Bound5.finiteQLeft u v c) = D1Bound5.finiteQLeft (f u) (f v) (f c)
+@D1Bound5.map_finiteQRight : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (f : R →+* S)
+  (u v c : R), f (D1Bound5.finiteQRight u v c) = D1Bound5.finiteQRight (f u) (f v) (f c)
+@D1Bound5.map_finiteQConstant : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (f : R →+* S)
+  (u v c : R), f (D1Bound5.finiteQConstant u v c) = D1Bound5.finiteQConstant (f u) (f v) (f c)
+@D1Bound5.map_finiteQDividedMatrix : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S]
+  (f : R →+* S) (a b s t c : R) (i j : Fin 5),
+  f (D1Bound5.finiteQDividedMatrix a b s t c i j) = D1Bound5.finiteQDividedMatrix (f a) (f b) (f s) (f t) (f c) i j
+@D1Bound5.finiteQRowForm : {R : Type u_1} → [CommRing R] → R → R → R → R → R → R → R → R → R → R → Fin 5 → R
+@D1Bound5.map_finiteQRowForm : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (f : R →+* S)
+  (a b s t c z rA rB rS rT : R) (i : Fin 5),
+  f (D1Bound5.finiteQRowForm a b s t c z rA rB rS rT i) =
+    D1Bound5.finiteQRowForm (f a) (f b) (f s) (f t) (f c) (f z) (f rA) (f rB) (f rS) (f rT) i
+@D1Bound5.finiteQRowForm_exists_ne_zero : ∀ {F : Type u_1} [inst : Field F] [CharZero F] (a b s t c z rA rB rS rT : F),
+  a ≠ 0 →
+    b ≠ 0 →
+      s ≠ 0 →
+        t ≠ 0 →
+          a ≠ b →
+            a ≠ s → a ≠ t → b ≠ s → b ≠ t → s ≠ t → z ≠ 0 → ∃ i, D1Bound5.finiteQRowForm a b s t c z rA rB rS rT i ≠ 0
+@D1Bound5.full_ring_finiteQRowForm_exists_one_le_norm : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a b s t c z rA rB rS rT : NumberField.RingOfIntegers K),
+      a ≠ 0 →
+        b ≠ 0 →
+          s ≠ 0 →
+            t ≠ 0 →
+              a ≠ b →
+                a ≠ s →
+                  a ≠ t →
+                    b ≠ s →
+                      b ≠ t →
+                        s ≠ t →
+                          z ≠ 0 →
+                            ∃ i,
+                              1 ≤
+                                ‖D1Bound5.finiteQRowForm (phi ↑a) (phi ↑b) (phi ↑s) (phi ↑t) (phi ↑c) (phi ↑z) (phi ↑rA)
+                                    (phi ↑rB) (phi ↑rS) (phi ↑rT) i‖
+D1Bound5.finiteQHalfRemainder_small_norm_le : ∀ (n : ℕ) (z : ℂ),
+  4 ≤ n → ‖z‖ ≤ 1 / 1000 → ‖D1Bound5.finiteQHalfRemainder n z‖ ≤ 625 / 15984 * ‖z‖ ^ n
+D1Bound5.finiteQTailSide : ℂ → ℂ → ℂ → ℂ
+D1Bound5.finiteQTailSide_norm_le : ∀ (u v c : ℂ) (A T : ℝ),
+  0 < A →
+    A ≤ ‖u‖ → ‖u‖ ≤ T → ‖v‖ ≤ T → 1000 ≤ A * ‖c‖ → ‖D1Bound5.finiteQTailSide u v c‖ ≤ 625 / 888 * T / (A ^ 2 * ‖c‖ ^ 4)
+D1Bound5.finiteQResidual_norm_lt : ∀ (u v c : ℂ) (A T : ℝ),
+  0 < A →
+    A ≤ ‖u‖ →
+      A ≤ ‖v‖ → ‖u‖ ≤ T → ‖v‖ ≤ T → 1000 ≤ A * ‖c‖ → ‖D1Bound5.finiteQResidual u v c‖ < 3 * T / (2 * A ^ 2 * ‖c‖ ^ 4)
+@D1Bound5.finiteQAnchors : {R : Type u_1} → R → R → R → R → Fin 4 → R
+D1Bound5.finiteQRowResidual : ℂ → ℂ → ℂ → ℂ → ℂ → Fin 5 → ℂ
+D1Bound5.finiteQRowResidual_norm_lt : ∀ (a b s t c : ℂ) (A T : ℝ),
+  0 < A →
+    (∀ (j : Fin 4), A ≤ ‖D1Bound5.finiteQAnchors a b s t j‖) →
+      (∀ (j : Fin 4), ‖D1Bound5.finiteQAnchors a b s t j‖ ≤ T) →
+        1000 ≤ A * ‖c‖ → ∀ (i : Fin 5), ‖D1Bound5.finiteQRowResidual a b s t c i‖ < 3 * T / (2 * A ^ 2 * ‖c‖ ^ 4)
+D1Bound5.finiteQRowForm_eq_root_sum : ∀ (a b s t c z rA rB rS rT : ℂ) (i : Fin 5),
+  D1Bound5.finiteQRowForm a b s t c z rA rB rS rT i =
+    D1Bound5.finiteQDividedMatrix a b s t c i 0 * z +
+      ∑ j, D1Bound5.finiteQDividedMatrix a b s t c i j.succ * ![rA, rB, rS, rT] j
+D1Bound5.finiteQRowForm_norm_lt : ∀ (a b s t c z rA rB rS rT : ℂ) (A T : ℝ),
+  0 < A →
+    z ≠ 0 →
+      (∀ (j : Fin 4), A ≤ ‖D1Bound5.finiteQAnchors a b s t j‖) →
+        (∀ (j : Fin 4), ‖D1Bound5.finiteQAnchors a b s t j‖ ≤ T) →
+          1000 ≤ A * ‖c‖ →
+            (∀ (j : Fin 4),
+                ‖(1 + 1 / (D1Bound5.finiteQAnchors a b s t j * c)) ^ (1 / 2) -
+                      ![rA, rB, rS, rT] j / (D1Bound5.finiteQAnchors a b s t j * z)‖ ≤
+                  3 / 2 * ‖c‖ / (‖D1Bound5.finiteQAnchors a b s t j‖ * ‖z‖ ^ 2)) →
+              ∀ (i : Fin 5),
+                ‖D1Bound5.finiteQRowForm a b s t c z rA rB rS rT i‖ <
+                  54 * T ^ 3 * ‖c‖ ^ 2 / ‖z‖ + 3 * T * ‖z‖ / (2 * A ^ 2 * ‖c‖ ^ 4)
+@D1Bound5.full_ring_finiteQ_inequality : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {S : Finset (NumberField.RingOfIntegers K)},
+      D1Bound5.IsD1 S →
+        ∀ (a : Fin 4 → NumberField.RingOfIntegers K) (c d : NumberField.RingOfIntegers K),
+          (∀ (j : Fin 4), a j ∈ S) →
+            c ∈ S →
+              d ∈ S →
+                Function.Injective a →
+                  (∀ (j : Fin 4), a j ≠ c) →
+                    (∀ (j : Fin 4), a j ≠ d) →
+                      c ≠ d →
+                        ∀ (A T : ℝ),
+                          0 < A →
+                            (∀ (j : Fin 4), A ≤ ‖phi ↑(a j)‖) →
+                              (∀ (j : Fin 4), ‖phi ↑(a j)‖ ≤ T) →
+                                4 * T ≤ ‖phi ↑c‖ →
+                                  ‖phi ↑c‖ ≤ ‖phi ↑d‖ →
+                                    1000 ≤ A * ‖phi ↑c‖ →
+                                      ∃ z,
+                                        z ^ 2 = c * d + 1 ∧
+                                          1 <
+                                            55 * T ^ 3 * ‖phi ↑c‖ ^ 2 / ‖phi ↑z‖ +
+                                              3 * T * ‖phi ↑z‖ / (2 * A ^ 2 * ‖phi ↑c‖ ^ 4)
+@D1Bound5.full_ring_finiteQ_closed_interval_excluded : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {S : Finset (NumberField.RingOfIntegers K)},
+      D1Bound5.IsD1 S →
+        ∀ (a : Fin 4 → NumberField.RingOfIntegers K) (c d : NumberField.RingOfIntegers K),
+          (∀ (j : Fin 4), a j ∈ S) →
+            c ∈ S →
+              d ∈ S →
+                Function.Injective a →
+                  (∀ (j : Fin 4), a j ≠ c) →
+                    (∀ (j : Fin 4), a j ≠ d) →
+                      c ≠ d →
+                        ∀ (A T : ℝ),
+                          0 < A →
+                            (∀ (j : Fin 4), A ≤ ‖phi ↑(a j)‖) →
+                              (∀ (j : Fin 4), ‖phi ↑(a j)‖ ≤ T) →
+                                4 * T ≤ ‖phi ↑c‖ →
+                                  ‖phi ↑c‖ ≤ ‖phi ↑d‖ →
+                                    1000 ≤ A * ‖phi ↑c‖ →
+                                      4 * 55 ^ 2 * T ^ 6 * ‖phi ↑c‖ ^ 3 / (1 - 1 / 4000) ≤ ‖phi ↑d‖ →
+                                        ‖phi ↑d‖ ≤ A ^ 4 * ‖phi ↑c‖ ^ 7 / (9 * T ^ 2 * (1 + 1 / 4000)) → False
