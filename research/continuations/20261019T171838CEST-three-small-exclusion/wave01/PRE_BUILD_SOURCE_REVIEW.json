@@ -1,0 +1,49 @@
+{
+  "ThreeAnchorDetailedAlternative": {
+    "sha256": "f9098a9ab0ec6ecdfc603dc143813b16d99036e382112cff2d94c3cbfd82d84a",
+    "imports": [
+      "D1Bound5.ThreeGeneralWindow",
+      "D1Bound5.CoherentThreeZeroBootstrap",
+      "D1Bound5.TwoSmallTupleInputs"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeSmallPairAlternative": {
+    "sha256": "3dc02360d7110c7469529da785f83b480f3aecc6182b6bb58ab6b87d9082a50e",
+    "imports": [
+      "D1Bound5.ThreeAnchorDetailedAlternative"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeSmallLargeExtensions": {
+    "sha256": "8da38b77fe00bb084484fc9ed300dfbd5248e790c9e1443754b3a9ffe31ae0f2",
+    "imports": [
+      "D1Bound5.ThreeSmallPairAlternative",
+      "D1Bound5.TwoSmallFifthBound"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeSmallFixedScalar": {
+    "sha256": "d59d2ffa2f67d68b2084d696be49c307e1d6ca76bebadcdcb67883e86b4bbd55",
+    "imports": [
+      "D1Bound5.ThreeSmallLargeExtensions",
+      "D1Bound5.FiniteQInterval"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeSmallFixedExtension": {
+    "sha256": "999afea207e83c6eb416ab427e85f6488ee25779104fb0c02d8cf1141d92fd6f",
+    "imports": [
+      "D1Bound5.ThreeSmallFixedScalar"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  },
+  "ThreeSmallExclusion": {
+    "sha256": "0dc7dba5727b9d1694bbd794d4a0876ffc8c3e3b74991534d3bd30a3608db3bd",
+    "imports": [
+      "D1Bound5.ThreeSmallFixedExtension",
+      "D1Bound5.ThreeSmallSextuple"
+    ],
+    "review": "Explicitly selected, previously read source. Current hashes must still match at launch."
+  }
+}

@@ -1,0 +1,29 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.pairLightSelectedFloorPrefixBool_add: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairLightSelectedFloorPrefixBool_of_add: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part00_checked: [propext]
+D1Bound5.pairLightSelectedFloorPrefixBool_add : ∀ (tau nu : Int) (sieve : List (ℕ × ℕ)) (m n : ℕ)
+  (cached : List D1Bound5.PairLightCachedVertex) (rows : List (ℕ × List ℕ)),
+  D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve (m + n) cached rows =
+    (D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve m cached rows &&
+      D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve n (List.drop m cached) (List.drop m rows))
+D1Bound5.pairLightSelectedFloorPrefixBool_of_add : ∀ (tau nu : Int) (sieve : List (ℕ × ℕ)) (m n : ℕ)
+  (cached : List D1Bound5.PairLightCachedVertex) (rows : List (ℕ × List ℕ)),
+  D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve m cached rows = true →
+    D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve n (List.drop m cached) (List.drop m rows) = true →
+      D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve (m + n) cached rows = true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part00_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 0 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 0 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/graph-pilot-audit/AnalyticAudit.lean:35:5: warning: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/graph-pilot-audit/AnalyticAudit.lean:36:5: warning: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

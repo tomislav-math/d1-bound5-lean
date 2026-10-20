@@ -1,0 +1,2526 @@
+⚠ [1555/1600] Replayed D1Bound5.SmallQuadrupleCheck
+warning: D1Bound5/SmallQuadrupleCheck.lean:74:2: Try `simp at Hd` instead of `simpa using Hd`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ℹ [1569/1600] Replayed D1Bound5.OneSmallCutoffArithmetic
+info: D1Bound5/OneSmallCutoffArithmetic.lean:587:0: 'D1Bound5.oneSmallCutoffRows_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffArithmetic.lean:588:0: 'D1Bound5.oneSmallCutoffRows_triples' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffArithmetic.lean:589:0: 'D1Bound5.oneSmallFixedRows_cutoff_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1570/1600] Replayed D1Bound5.OneSmallCutoffReal
+warning: D1Bound5/OneSmallCutoffReal.lean:30:30: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/OneSmallCutoffReal.lean:41:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: D1Bound5/OneSmallCutoffReal.lean:78:0: 'D1Bound5.OneSmallCutoffRow.overlaps_at_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffReal.lean:79:0: 'D1Bound5.OneSmallCutoffRow.start_overlap_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffReal.lean:80:0: 'D1Bound5.fixed_cutoff_start_above_Q' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2058/2080] Replayed D1Bound5.CoherentWeightedRemainder
+info: D1Bound5/CoherentWeightedRemainder.lean:88:0: @D1Bound5.coherent_weighted_remainder_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ) (C ρ t : ℝ),
+  0 ≤ C →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * t < 1 →
+            (∀ (j : ℕ), ‖f (m + (j + 1))‖ ≤ C * t ^ (m + (j + 1))) →
+              (Summable fun j => f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                ‖∑' (j : ℕ), f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                  C * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+info: D1Bound5/CoherentWeightedRemainder.lean:89:0: 'D1Bound5.coherent_weighted_remainder_summable_and_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [2059/2080] Replayed D1Bound5.HalfBinomialCoefficients
+warning: D1Bound5/HalfBinomialCoefficients.lean:34:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2794/2848] Replayed D1Bound5.CoherentAnalyticInterpolation
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:16:32: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:310:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:362:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2802/2848] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2803/2848] Replayed D1Bound5.BennettTwoDenominatorClearing
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:21:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:49:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:78:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2805/2848] Replayed D1Bound5.BennettBinomialIntegrality
+warning: D1Bound5/BennettBinomialIntegrality.lean:52:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2809/2848] Replayed D1Bound5.BennettTwoIntegralEntries
+warning: D1Bound5/BennettTwoIntegralEntries.lean:14:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_zero`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:15:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_one`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:16:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_two`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:151:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2810/2848] Replayed D1Bound5.BennettRootApproximation
+warning: D1Bound5/BennettRootApproximation.lean:19:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettRootApproximation.lean:48:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettRootApproximation.lean:76:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:76:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:131:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:135:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:131:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:135:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2811/2848] Replayed D1Bound5.BennettBinomialTransfer
+warning: D1Bound5/BennettBinomialTransfer.lean:11:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettSeries_coeff_C_add_X_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2812/2848] Replayed D1Bound5.BennettResidueCoefficient
+warning: D1Bound5/BennettResidueCoefficient.lean:22:0: automatically included section variable(s) unused in theorem `D1Bound5.clearedPoleNumerator_monic`:
+  [Nontrivial R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2814/2848] Replayed D1Bound5.BennettPartialFractions
+warning: D1Bound5/BennettPartialFractions.lean:24:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_monic`:
+  [Nontrivial R]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettPartialFractions.lean:29:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_natDegree`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2815/2848] Replayed D1Bound5.BennettLocalResidues
+warning: D1Bound5/BennettLocalResidues.lean:17:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_C`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettLocalResidues.lean:21:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_linear`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2818/2848] Replayed D1Bound5.BennettResidualCancellation
+warning: D1Bound5/BennettResidualCancellation.lean:108:0: automatically included section variable(s) unused in theorem `D1Bound5.bennett_coeff_mul_trunc`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2819/2848] Replayed D1Bound5.BennettDeterminantConstant
+warning: D1Bound5/BennettDeterminantConstant.lean:65:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:65:35: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:72:14: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [2821/2848] Replayed D1Bound5.BennettDeterminantFormula
+warning: D1Bound5/BennettDeterminantFormula.lean:34:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettDirectedProduct_succ`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2824/2848] Replayed D1Bound5.BennettTwoIntegralMatrix
+warning: D1Bound5/BennettTwoIntegralMatrix.lean:9:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_injective`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3049/3093] Replayed D1Bound5.BennettIntegralRowSelection
+warning: D1Bound5/BennettIntegralRowSelection.lean:33:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: D1Bound5/BennettIntegralRowSelection.lean:61:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettIntegralRowSelection.lean:61:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3050/3093] Replayed D1Bound5.BennettCoefficientMajorant
+warning: D1Bound5/BennettCoefficientMajorant.lean:74:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettCoefficientMajorant.lean:74:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3052/3093] Replayed D1Bound5.BennettPositiveSeries
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3055/3093] Replayed D1Bound5.BennettTwoEntryBounds
+warning: D1Bound5/BennettTwoEntryBounds.lean:27:46: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettTwoEntryBounds.lean:52:46: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3056/3093] Replayed D1Bound5.BennettHeightNormalization
+warning: D1Bound5/BennettHeightNormalization.lean:22:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettHeightNormalization.lean:36:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettHeightNormalization.lean:99:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:103:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:130:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:99:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:103:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:130:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3058/3093] Replayed D1Bound5.BennettWeightedHeight
+warning: D1Bound5/BennettWeightedHeight.lean:15:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettWeightedHeight.lean:19:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettWeightedHeight.lean:15:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettWeightedHeight.lean:19:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3060/3093] Replayed D1Bound5.BennettResiduesAtInfinity
+warning: D1Bound5/BennettResiduesAtInfinity.lean:158:8: automatically included section variable(s) unused in theorem `_private.D1Bound5.BennettResiduesAtInfinity.0.D1Bound5.bennett_reverse_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3061/3093] Replayed D1Bound5.BennettRepeatedHsymm
+warning: D1Bound5/BennettRepeatedHsymm.lean:28:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/BennettRepeatedHsymm.lean:84:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettRepeatedNodes_card`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettRepeatedHsymm.lean:88:8: automatically included section variable(s) unused in theorem `_private.D1Bound5.BennettRepeatedHsymm.0.D1Bound5.bennettReciprocalInfinity_explicit_mul`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3112/3122] Replayed D1Bound5.BennettResidualBound
+warning: D1Bound5/BennettResidualBound.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3113/3122] Replayed D1Bound5.BennettTwoResidualBound
+warning: D1Bound5/BennettTwoResidualBound.lean:19:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettTwoResidualBound.lean:19:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettTwoResidualBound.lean:68:15: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [S, norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettTwoResidualBound.lean:43:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettTwoResidualBound.lean:43:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3114/3122] Replayed D1Bound5.BennettTwoBetaBound
+warning: D1Bound5/BennettTwoBetaBound.lean:44:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoBetaBound.lean:45:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoBetaBound.lean:46:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoBetaBound.lean:80:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettTwoBetaBound.lean:80:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3115/3122] Replayed D1Bound5.BennettTwoResidualRate
+warning: D1Bound5/BennettTwoResidualRate.lean:44:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3116/3122] Replayed D1Bound5.BennettRootTransfer
+warning: D1Bound5/BennettRootTransfer.lean:39:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettRootTransfer.lean:103:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootTransfer.lean:103:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3120/3122] Replayed D1Bound5.OrdinaryClosedIntervals
+warning: D1Bound5/OrdinaryClosedIntervals.lean:107:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:113:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:42: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:30: Unused tactic linter: `congr 1` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:42: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3122/3122] Built D1Bound5.OneSmallFixedWindows (56s)
+warning: D1Bound5/OneSmallFixedWindows.lean:206:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:206:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:207:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:37: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:64: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:78: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:92: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:108: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:122: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:136: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:152: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:168: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:211:188: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:44: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:58: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:72: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:88: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:102: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:116: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:132: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:148: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:212:168: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, max_eq_right hm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:37: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:64: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:78: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:92: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:108: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:122: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:136: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:152: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:168: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:216:188: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:44: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:58: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:72: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:88: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:102: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:116: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:132: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:148: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:217:168: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, max_eq_left hm']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:220:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:221:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:224:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:225:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:228:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:229:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:232:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:233:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:236:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:237:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:240:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:241:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:166: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:244:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:245:146: This simp argument is unused:
+  ordinaryWindowLower
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:249:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:250:166: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:35: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:49: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:62: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:76: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:90: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:106: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:120: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:134: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:150: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:253:186: This simp argument is unused:
+  ordinaryWindowUpper
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, allLargeWindowM, ordinaryWindowLower]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:15: This simp argument is unused:
+  fixedWindowN2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:29: This simp argument is unused:
+  fixedWindowP
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:42: This simp argument is unused:
+  fixedWindowA3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowN3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:56: This simp argument is unused:
+  fixedWindowN3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3bs, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:70: This simp argument is unused:
+  fixedWindowN3bs
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowA4, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:86: This simp argument is unused:
+  fixedWindowA4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA5,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:100: This simp argument is unused:
+  fixedWindowA5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    allLargeWindowQ, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:114: This simp argument is unused:
+  allLargeWindowQ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowM, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:254:130: This simp argument is unused:
+  allLargeWindowM
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [fixedWindowN2, fixedWindowP, fixedWindowA3, fixedWindowN3, fixedWindowN3bs, fixedWindowA4,
+    fixedWindowA5, allLargeWindowQ, ordinaryWindowLower, ordinaryWindowUpper]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/OneSmallFixedWindows.lean:74:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:76:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:83:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:85:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:92:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:94:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:101:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:103:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:110:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:112:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:119:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:121:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:128:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:130:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:137:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:139:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:146:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:148:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:155:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:157:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:164:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:166:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:173:212: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:175:15: Unused tactic linter: `first
+| exact hgap.le
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:74:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:76:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:83:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:85:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:92:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:94:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:101:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:103:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:110:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:112:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:119:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:121:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:128:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:130:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:137:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:139:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:146:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:148:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:155:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:157:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:164:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:166:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:173:212: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:175:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OneSmallFixedWindows.lean:74:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:83:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:92:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:101:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:110:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:119:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:128:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:137:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:146:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:155:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:164:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:173:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:209:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:214:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:219:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:223:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:227:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:231:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:235:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:239:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:243:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:248:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:252:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OneSmallFixedWindows.lean:257:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Build completed successfully (3122 jobs).

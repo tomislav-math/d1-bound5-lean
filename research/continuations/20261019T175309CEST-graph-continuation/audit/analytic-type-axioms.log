@@ -1,0 +1,215 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.pairLightSelectedFloorPrefixBool_add: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairLightSelectedFloorPrefixBool_of_add: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part00_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part01_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part02_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part03_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part04_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part05_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part06_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part07_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part08_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part09_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part10_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part11_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part12_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part13_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part14_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part15_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part16_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part17_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part00_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part01_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part02_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part03_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part04_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part05_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part06_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part07_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part08_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part09_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part10_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part11_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part12_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part13_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part14_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part15_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part16_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part17_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_checked: [propext]
+D1Bound5.pairLightSelectedFloorPrefixBool_add : ∀ (tau nu : Int) (sieve : List (ℕ × ℕ)) (m n : ℕ)
+  (cached : List D1Bound5.PairLightCachedVertex) (rows : List (ℕ × List ℕ)),
+  D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve (m + n) cached rows =
+    (D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve m cached rows &&
+      D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve n (List.drop m cached) (List.drop m rows))
+D1Bound5.pairLightSelectedFloorPrefixBool_of_add : ∀ (tau nu : Int) (sieve : List (ℕ × ℕ)) (m n : ℕ)
+  (cached : List D1Bound5.PairLightCachedVertex) (rows : List (ℕ × List ℕ)),
+  D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve m cached rows = true →
+    D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve n (List.drop m cached) (List.drop m rows) = true →
+      D1Bound5.pairLightSelectedFloorPrefixBool tau nu sieve (m + n) cached rows = true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part00_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 0 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 0 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part01_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 3 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 3 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part02_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 6 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 6 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part03_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 9 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 9 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part04_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 12 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 12 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part05_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 15 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 15 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part06_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 18 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 18 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part07_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 21 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 21 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part08_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 24 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 24 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part09_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 27 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 27 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part10_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 30 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 30 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part11_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 33 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 33 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part12_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 36 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 36 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part13_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 39 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 39 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part14_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 42 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 42 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part15_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 45 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 45 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part16_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 48 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 48 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_part17_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 51 D1Bound5.PairLightAdaptivePrepared26.leftCached000)
+    (List.drop 51 D1Bound5.PairLightAdaptivePrepared26.leftRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part00_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 0 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 0 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part01_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 3 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 3 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part02_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 6 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 6 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part03_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 9 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 9 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part04_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 12 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 12 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part05_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 15 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 15 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part06_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 18 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 18 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part07_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 21 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 21 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part08_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 24 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 24 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part09_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 27 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 27 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part10_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 30 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 30 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part11_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 33 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 33 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part12_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 36 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 36 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part13_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 39 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 39 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part14_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 42 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 42 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part15_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 45 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 45 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part16_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 48 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 48 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_part17_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 3 (List.drop 51 D1Bound5.PairLightAdaptivePrepared26.rightCached000)
+    (List.drop 51 D1Bound5.PairLightAdaptivePrepared26.rightRows000) =
+  true
+D1Bound5.PairLightAdaptivePrepared26.left_prefix_000_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 54 D1Bound5.PairLightAdaptivePrepared26.leftCached000
+    D1Bound5.PairLightAdaptivePrepared26.leftRows000 =
+  true
+D1Bound5.PairLightAdaptivePrepared26.right_prefix_000_checked : D1Bound5.pairLightSelectedFloorPrefixBool 1 1
+    D1Bound5.PairLightPrepared26.sieve 54 D1Bound5.PairLightAdaptivePrepared26.rightCached000
+    D1Bound5.PairLightAdaptivePrepared26.rightRows000 =
+  true
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T175309CEST-graph-continuation/audit/AnalyticAudit.lean:146:5: warning: Variable name `hm` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hm
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T175309CEST-graph-continuation/audit/AnalyticAudit.lean:147:5: warning: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T175309CEST-graph-continuation/audit/AnalyticAudit.lean:306:11: error: expected token

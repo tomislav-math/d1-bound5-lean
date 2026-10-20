@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-20T21:48:50.766828+00:00",
+  "reason": "User in side chat requests stopping the ongoing Work formalization after stop messages were ineffective.",
+  "owner": {
+    "pid": 52229,
+    "ppid": 98794,
+    "pgid": 98748,
+    "stat": "S+",
+    "command": "/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/wave25/batch_run.py"
+  },
+  "status": "STOPPED",
+  "note": "Preserve sources, Git index, existing build receipts and logs. Any interrupted target is incomplete, not accepted. No automatic restart is authorized by this stop request.",
+  "stopped_groups": [
+    {
+      "pgid": 55161,
+      "members": [
+        {
+          "pid": 55161,
+          "ppid": 52229,
+          "pgid": 55161,
+          "stat": "Ss",
+          "command": "/Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake build D1Bound5.SmallPairGraphClosure33Chunk04"
+        },
+        {
+          "pid": 55182,
+          "ppid": 55161,
+          "pgid": 55161,
+          "stat": "U",
+          "command": "/Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/SmallPairGraphClosure33Chunk04.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/SmallPairGraphClosure33Chunk04.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/SmallPairGraphClosure33Chunk04.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/SmallPairGraphClosure33Chunk04.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/SmallPairGraphClosure33Chunk04.setup.json --json"
+        }
+      ]
+    }
+  ],
+  "remaining_processes": [],
+  "completed_utc": "2026-10-20T21:48:51.395824+00:00"
+}

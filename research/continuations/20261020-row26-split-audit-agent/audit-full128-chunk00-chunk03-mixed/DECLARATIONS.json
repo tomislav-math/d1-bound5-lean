@@ -1,0 +1,488 @@
+[
+  {
+    "module": "PairClosureIndexedChunks",
+    "name": "D1Bound5.pairIndexedWitnessesPrefixBool",
+    "namespace": "D1Bound5",
+    "kind": "def",
+    "binders": "{tau nu : \u2124} (a b r0 : QuadInt tau nu)\n    (bound : \u2124) (vertices : List (QuadInt tau nu))",
+    "statement": "\u2115 \u2192 List (PairRootWitness tau nu) \u2192 List (Option Nat \u00d7 Option Nat) \u2192 Bool",
+    "type_expression": "\u2200 {tau nu : \u2124} (a b r0 : QuadInt tau nu)\n    (bound : \u2124) (vertices : List (QuadInt tau nu)), \u2115 \u2192 List (PairRootWitness tau nu) \u2192 List (Option Nat \u00d7 Option Nat) \u2192 Bool"
+  },
+  {
+    "module": "PairClosureIndexedChunks",
+    "name": "D1Bound5.pairIndexedWitnessesCheckedBool_eq_prefix_drop",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "{tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (n : \u2115) (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat))",
+    "statement": "pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations =\n      (pairIndexedWitnessesPrefixBool a b r0 bound vertices n witnesses destinations &&\n        pairIndexedWitnessesCheckedBool a b r0 bound vertices\n          (witnesses.drop n) (destinations.drop n))",
+    "type_expression": "\u2200 {tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (n : \u2115) (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat)), pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations =\n      (pairIndexedWitnessesPrefixBool a b r0 bound vertices n witnesses destinations &&\n        pairIndexedWitnessesCheckedBool a b r0 bound vertices\n          (witnesses.drop n) (destinations.drop n))"
+  },
+  {
+    "module": "PairClosureIndexedChunks",
+    "name": "D1Bound5.pairIndexedWitnessesCheckedBool_of_prefix_drop",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "{tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (n : \u2115) (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat))\n    (hprefix : pairIndexedWitnessesPrefixBool a b r0 bound vertices n\n      witnesses destinations = true)\n    (htail : pairIndexedWitnessesCheckedBool a b r0 bound vertices\n      (witnesses.drop n) (destinations.drop n) = true)",
+    "statement": "pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations = true",
+    "type_expression": "\u2200 {tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (n : \u2115) (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat))\n    (hprefix : pairIndexedWitnessesPrefixBool a b r0 bound vertices n\n      witnesses destinations = true)\n    (htail : pairIndexedWitnessesCheckedBool a b r0 bound vertices\n      (witnesses.drop n) (destinations.drop n) = true), pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations = true"
+  },
+  {
+    "module": "PairClosureIndexedChunks",
+    "name": "D1Bound5.pairIndexedWitnessesPrefixBool_add",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "{tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (m n : \u2115) (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat))",
+    "statement": "pairIndexedWitnessesPrefixBool a b r0 bound vertices (m + n) witnesses destinations =\n      (pairIndexedWitnessesPrefixBool a b r0 bound vertices m witnesses destinations &&\n        pairIndexedWitnessesPrefixBool a b r0 bound vertices n\n          (witnesses.drop m) (destinations.drop m))",
+    "type_expression": "\u2200 {tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (m n : \u2115) (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat)), pairIndexedWitnessesPrefixBool a b r0 bound vertices (m + n) witnesses destinations =\n      (pairIndexedWitnessesPrefixBool a b r0 bound vertices m witnesses destinations &&\n        pairIndexedWitnessesPrefixBool a b r0 bound vertices n\n          (witnesses.drop m) (destinations.drop m))"
+  },
+  {
+    "module": "PairClosureIndexedChunks",
+    "name": "D1Bound5.pairClosureIndexedWitnessBool_of_checked_parts",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "{tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat))\n    (hcoverage : decide (r0 * r0 = a * b + 1 \u2227\n      witnesses.map PairRootWitness.vertex = vertices) = true)\n    (hwitnesses : pairIndexedWitnessesCheckedBool a b r0 bound vertices\n      witnesses destinations = true)",
+    "statement": "pairClosureIndexedWitnessBool a b r0 bound vertices witnesses destinations = true",
+    "type_expression": "\u2200 {tau nu : \u2124}\n    (a b r0 : QuadInt tau nu) (bound : \u2124) (vertices : List (QuadInt tau nu))\n    (witnesses : List (PairRootWitness tau nu))\n    (destinations : List (Option Nat \u00d7 Option Nat))\n    (hcoverage : decide (r0 * r0 = a * b + 1 \u2227\n      witnesses.map PairRootWitness.vertex = vertices) = true)\n    (hwitnesses : pairIndexedWitnessesCheckedBool a b r0 bound vertices\n      witnesses destinations = true), pairClosureIndexedWitnessBool a b r0 bound vertices witnesses destinations = true"
+  },
+  {
+    "module": "SmallPairGraphInputs26",
+    "name": "D1Bound5.smallPairA_26",
+    "namespace": "D1Bound5",
+    "kind": "def",
+    "binders": "",
+    "statement": "QuadInt 1 1",
+    "type_expression": "QuadInt 1 1"
+  },
+  {
+    "module": "SmallPairGraphInputs26",
+    "name": "D1Bound5.smallPairB_26",
+    "namespace": "D1Bound5",
+    "kind": "def",
+    "binders": "",
+    "statement": "QuadInt 1 1",
+    "type_expression": "QuadInt 1 1"
+  },
+  {
+    "module": "SmallPairGraphInputs26",
+    "name": "D1Bound5.smallPairClosure_26",
+    "namespace": "D1Bound5",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (QuadInt 1 1)",
+    "type_expression": "List (QuadInt 1 1)"
+  },
+  {
+    "module": "SmallPairGraphInputs26",
+    "name": "D1Bound5.smallPairLarge_26",
+    "namespace": "D1Bound5",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (QuadInt 1 1)",
+    "type_expression": "List (QuadInt 1 1)"
+  },
+  {
+    "module": "SmallPairGraphInputs26",
+    "name": "D1Bound5.PairGraphPrepared26.colors",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "\u2115",
+    "type_expression": "\u2115"
+  },
+  {
+    "module": "SmallPairGraphArithmetic26",
+    "name": "D1Bound5.smallPairSeeds_26_checked",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairSeedsCoveredBool smallPairA_26 smallPairB_26\n      seedRootDisk_1_1 smallPairClosure_26 = true",
+    "type_expression": "pairSeedsCoveredBool smallPairA_26 smallPairB_26\n      seedRootDisk_1_1 smallPairClosure_26 = true"
+  },
+  {
+    "module": "SmallPairGraphArithmetic26",
+    "name": "D1Bound5.smallPairFilter_26_checked",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "largePairVertices smallPairA_26 smallPairB_26 smallPairClosure_26 = smallPairLarge_26",
+    "type_expression": "largePairVertices smallPairA_26 smallPairB_26 smallPairClosure_26 = smallPairLarge_26"
+  },
+  {
+    "module": "SmallPairGraphArithmetic26",
+    "name": "D1Bound5.smallPairLarge_26_count",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "smallPairLarge_26.length = 1522",
+    "type_expression": "smallPairLarge_26.length = 1522"
+  },
+  {
+    "module": "SmallPairGraphWitnessData26",
+    "name": "D1Bound5.PairGraphPrepared26.anchorRoot",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "QuadInt 1 1",
+    "type_expression": "QuadInt 1 1"
+  },
+  {
+    "module": "SmallPairGraphWitnessData26",
+    "name": "D1Bound5.PairGraphPrepared26.rootPairs",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (QuadInt 1 1 \u00d7 QuadInt 1 1)",
+    "type_expression": "List (QuadInt 1 1 \u00d7 QuadInt 1 1)"
+  },
+  {
+    "module": "SmallPairGraphWitnessData26",
+    "name": "D1Bound5.PairGraphPrepared26.witnesses",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (PairRootWitness 1 1)",
+    "type_expression": "List (PairRootWitness 1 1)"
+  },
+  {
+    "module": "SmallPairGraphWitnessData26",
+    "name": "D1Bound5.PairGraphPrepared26.destinations",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (Option \u2115 \u00d7 Option \u2115)",
+    "type_expression": "List (Option \u2115 \u00d7 Option \u2115)"
+  },
+  {
+    "module": "SmallPairGraphClosure26",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_checked",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairClosureIndexedWitnessBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 witnesses destinations = true",
+    "type_expression": "pairClosureIndexedWitnessBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 witnesses destinations = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26",
+    "name": "D1Bound5.smallPairClosure_26_checked",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairClosureBool smallPairA_26 smallPairB_26\n      (10^1100) smallPairClosure_26 = true",
+    "type_expression": "pairClosureBool smallPairA_26 smallPairB_26\n      (10^1100) smallPairClosure_26 = true"
+  },
+  {
+    "module": "SmallPairRawSelectedData26",
+    "name": "D1Bound5.PairSelectedPrepared26.leftCached",
+    "namespace": "D1Bound5.PairSelectedPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (PairResidueVertex 1 1)",
+    "type_expression": "List (PairResidueVertex 1 1)"
+  },
+  {
+    "module": "SmallPairRawSelectedData26",
+    "name": "D1Bound5.PairSelectedPrepared26.leftRows",
+    "namespace": "D1Bound5.PairSelectedPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (\u2115 \u00d7 List \u2115)",
+    "type_expression": "List (\u2115 \u00d7 List \u2115)"
+  },
+  {
+    "module": "SmallPairRawSelectedData26",
+    "name": "D1Bound5.PairSelectedPrepared26.rightCached",
+    "namespace": "D1Bound5.PairSelectedPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (PairResidueVertex 1 1)",
+    "type_expression": "List (PairResidueVertex 1 1)"
+  },
+  {
+    "module": "SmallPairRawSelectedData26",
+    "name": "D1Bound5.PairSelectedPrepared26.rightRows",
+    "namespace": "D1Bound5.PairSelectedPrepared26",
+    "kind": "def",
+    "binders": "",
+    "statement": "List (\u2115 \u00d7 List \u2115)",
+    "type_expression": "List (\u2115 \u00d7 List \u2115)"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.sieve_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "sieve = smallPairSieve_1_1",
+    "type_expression": "sieve = smallPairSieve_1_1"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.leftVertices_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "leftVertices = (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).1.map pairLightCoordinates",
+    "type_expression": "leftVertices = (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).1.map pairLightCoordinates"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.leftCached_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "leftCached = PairSelectedPrepared26.leftCached.map pairLightCachedCoordinates",
+    "type_expression": "leftCached = PairSelectedPrepared26.leftCached.map pairLightCachedCoordinates"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.leftRows_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "leftRows = PairSelectedPrepared26.leftRows",
+    "type_expression": "leftRows = PairSelectedPrepared26.leftRows"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.left_checked",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).1 = true",
+    "type_expression": "pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).1 = true"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.rightVertices_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "rightVertices = (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).2.map pairLightCoordinates",
+    "type_expression": "rightVertices = (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).2.map pairLightCoordinates"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.rightCached_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "rightCached = PairSelectedPrepared26.rightCached.map pairLightCachedCoordinates",
+    "type_expression": "rightCached = PairSelectedPrepared26.rightCached.map pairLightCachedCoordinates"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.rightRows_eq",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "rightRows = PairSelectedPrepared26.rightRows",
+    "type_expression": "rightRows = PairSelectedPrepared26.rightRows"
+  },
+  {
+    "module": "SmallPairLightAssembly26",
+    "name": "D1Bound5.PairLightPrepared26.right_checked",
+    "namespace": "D1Bound5.PairLightPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).2 = true",
+    "type_expression": "pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_26 PairGraphPrepared26.colors).2 = true"
+  },
+  {
+    "module": "SmallPairGraphTriangle26",
+    "name": "D1Bound5.smallPairNoTriangle_26_checked",
+    "namespace": "D1Bound5",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_26 = true",
+    "type_expression": "pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_26 = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_00",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_00_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 0) (destinations.drop 0) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 0) (destinations.drop 0) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_01",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_01_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 128) (destinations.drop 128) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 128) (destinations.drop 128) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_02",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_02_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 256) (destinations.drop 256) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 256) (destinations.drop 256) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_03",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_03_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 384) (destinations.drop 384) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 384) (destinations.drop 384) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_04",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_04_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 512) (destinations.drop 512) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 512) (destinations.drop 512) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_05",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_05_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 640) (destinations.drop 640) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 640) (destinations.drop 640) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_06",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_06_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 768) (destinations.drop 768) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 768) (destinations.drop 768) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_07",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_07_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 896) (destinations.drop 896) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 896) (destinations.drop 896) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_08",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_08_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 1024) (destinations.drop 1024) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 1024) (destinations.drop 1024) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_09",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_09_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 1152) (destinations.drop 1152) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 1152) (destinations.drop 1152) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_10",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_10_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 117\n      (witnesses.drop 1280) (destinations.drop 1280) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 117\n      (witnesses.drop 1280) (destinations.drop 1280) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Tail128",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_tail128_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 1397) (destinations.drop 1397) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 128\n      (witnesses.drop 1397) (destinations.drop 1397) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Coverage",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_coverage_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "decide (anchorRoot * anchorRoot = smallPairA_26 * smallPairB_26 + 1 \u2227\n      witnesses.map PairRootWitness.vertex = smallPairClosure_26) = true",
+    "type_expression": "decide (anchorRoot * anchorRoot = smallPairA_26 * smallPairB_26 + 1 \u2227\n      witnesses.map PairRootWitness.vertex = smallPairClosure_26) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_00Part0",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part0_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 0) (destinations.drop 0) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 0) (destinations.drop 0) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_00Part1",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part1_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 32) (destinations.drop 32) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 32) (destinations.drop 32) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_00Part2",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part2_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 64) (destinations.drop 64) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 64) (destinations.drop 64) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_00Part3",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part3_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 96) (destinations.drop 96) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 96) (destinations.drop 96) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_03Part0",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_03_part0_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 384) (destinations.drop 384) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 384) (destinations.drop 384) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_03Part1",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_03_part1_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 416) (destinations.drop 416) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 416) (destinations.drop 416) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_03Part2",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_03_part2_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 448) (destinations.drop 448) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 448) (destinations.drop 448) = true"
+  },
+  {
+    "module": "SmallPairGraphClosure26Chunk128_03Part3",
+    "name": "D1Bound5.PairGraphPrepared26.indexed_chunk128_03_part3_checked",
+    "namespace": "D1Bound5.PairGraphPrepared26",
+    "kind": "theorem",
+    "binders": "",
+    "statement": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 480) (destinations.drop 480) = true",
+    "type_expression": "pairIndexedWitnessesPrefixBool smallPairA_26 smallPairB_26 anchorRoot\n      (10^1100) smallPairClosure_26 32\n      (witnesses.drop 480) (destinations.drop 480) = true"
+  }
+]

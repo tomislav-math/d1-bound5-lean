@@ -1,0 +1,532 @@
+ℹ [1974/2002] Replayed D1Bound5.CoherentWeightedRemainder
+info: D1Bound5/CoherentWeightedRemainder.lean:88:0: @D1Bound5.coherent_weighted_remainder_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ) (C ρ t : ℝ),
+  0 ≤ C →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * t < 1 →
+            (∀ (j : ℕ), ‖f (m + (j + 1))‖ ≤ C * t ^ (m + (j + 1))) →
+              (Summable fun j => f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                ‖∑' (j : ℕ), f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                  C * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+info: D1Bound5/CoherentWeightedRemainder.lean:89:0: 'D1Bound5.coherent_weighted_remainder_summable_and_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1975/2002] Replayed D1Bound5.HalfBinomialCoefficients
+warning: D1Bound5/HalfBinomialCoefficients.lean:34:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2770/2825] Replayed D1Bound5.CoherentAnalyticInterpolation
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:16:32: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:310:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:362:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [2999/3020] Replayed D1Bound5.CoherentIntegralForms
+info: D1Bound5/CoherentIntegralForms.lean:133:0: 'D1Bound5.IsD1.coherent_terminal_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:134:0: 'D1Bound5.IsD1.coherent_anchor_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:135:0: 'D1Bound5.IsD1.coherent_linear_form_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:136:0: 'D1Bound5.full_ring_coherent_linear_form_one_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3000/3020] Replayed D1Bound5.CoherentPolynomialWeights
+warning: D1Bound5/CoherentPolynomialWeights.lean:44:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3003/3020] Replayed D1Bound5.CoherentFormBounds
+warning: D1Bound5/CoherentFormBounds.lean:111:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3006/3020] Replayed D1Bound5.CoherentParameterForms
+warning: D1Bound5/CoherentParameterForms.lean:24:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentParameterForms.lean:47:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentParameterForms.lean:64:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:67:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:64:33: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:67:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:84:31: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentParameterForms.lean:97:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:108:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:97:21: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:108:35: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:168:14: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3007/3020] Replayed D1Bound5.CoherentTwoUpper
+warning: D1Bound5/CoherentTwoUpper.lean:96:70: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:99:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:96:70: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:99:35: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:105:44: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentTwoUpper.lean:106:31: Variable name `hD0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentTwoUpper.lean:117:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CoherentTwoUpper.lean:176:16: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentTwoUpper.lean:227:16: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [A, B, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: D1Bound5/CoherentTwoUpper.lean:247:0: 'D1Bound5.halfBinomialWeightedCoeff_two_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoUpper.lean:248:0: 'D1Bound5.coherentRemainder_two_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoUpper.lean:249:0: 'D1Bound5.coherent_two_upper_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoUpper.lean:250:0: 'D1Bound5.coherent_two_norm_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3010/3020] Replayed D1Bound5.CoherentTwoGap
+info: D1Bound5/CoherentTwoGap.lean:143:0: 'D1Bound5.coherentQuotientForm_two_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoGap.lean:144:0: 'D1Bound5.coherent_two_strong_gap_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoGap.lean:145:0: 'D1Bound5.full_ring_coherent_two_strong_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3011/3020] Replayed D1Bound5.CoherentTwoMainGap
+warning: D1Bound5/CoherentTwoMainGap.lean:12:32: Variable name `hAB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hAB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [3013/3020] Replayed D1Bound5.CoherentRetainedMixedSizes
+info: D1Bound5/CoherentRetainedMixedSizes.lean:74:0: 'D1Bound5.coherent_retained_mixed_size_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3014/3020] Replayed D1Bound5.CoherentRetainedMixedForms
+info: D1Bound5/CoherentRetainedMixedForms.lean:137:0: 'D1Bound5.CoherentRetainedRow.parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedMixedForms.lean:138:0: 'D1Bound5.full_ring_retained_three_mixed_lower_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3017/3020] Replayed D1Bound5.RetainedMixedScalar
+warning: D1Bound5/RetainedMixedScalar.lean:55:42: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/RetainedMixedScalar.lean:105:47: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/RetainedMixedScalar.lean:55:42: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RetainedMixedScalar.lean:105:47: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3018/3020] Replayed D1Bound5.CoherentRetainedMixedGap
+warning: D1Bound5/CoherentRetainedMixedGap.lean:21:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentRetainedMixedGap.lean:21:35: Unused tactic linter: `first
+| assumption
+| norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentRetainedMixedGap.lean:109:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentRetainedMixedGap.lean:109:19: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: D1Bound5/CoherentRetainedMixedGap.lean:129:0: 'D1Bound5.coherent_retained_mixed_coefficient_gt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedMixedGap.lean:130:0: 'D1Bound5.full_ring_retained_three_mixed_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3020/3151] Replayed D1Bound5.CoherentRetainedMixedFourSizes
+info: D1Bound5/CoherentRetainedMixedFourSizes.lean:105:0: 'D1Bound5.coherent_retained_mixed_first_terminal_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedMixedFourSizes.lean:106:0: 'D1Bound5.coherent_retained_mixed_four_terminal_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedMixedFourSizes.lean:107:0: 'D1Bound5.coherent_retained_mixed_common_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3023/3151] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3024/3151] Replayed D1Bound5.RootMatrixSigns
+warning: D1Bound5/RootMatrixSigns.lean:55:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3049/3151] Replayed D1Bound5.MixedRootMatrixSigns
+warning: D1Bound5/MixedRootMatrixSigns.lean:136:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3051/3151] Replayed D1Bound5.ProductFivePrefixDet
+warning: D1Bound5/ProductFivePrefixDet.lean:29:24: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/ProductFivePrefixDet.lean:36:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3053/3151] Replayed D1Bound5.ProductFiveBlockDet
+warning: D1Bound5/ProductFiveBlockDet.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3056/3151] Replayed D1Bound5.EvenDeterminant
+warning: D1Bound5/EvenDeterminant.lean:45:29: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, h00, h01, h10, h11, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3058/3151] Replayed D1Bound5.AdjugateFourBounds
+warning: D1Bound5/AdjugateFourBounds.lean:49:46: This simp argument is unused:
+  Fin.sum_univ_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.updateRow_apply, Pi.single_apply, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateFourBounds.lean:165:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateFourBounds.lean:174:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3059/3151] Replayed D1Bound5.AdjugateOffDiagonal
+info: D1Bound5/AdjugateOffDiagonal.lean:73:28: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: D1Bound5/AdjugateOffDiagonal.lean:54:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateOffDiagonal.lean:111:41: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateOffDiagonal.lean:112:41: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3060/3151] Replayed D1Bound5.AdjugateCoverage
+warning: D1Bound5/AdjugateCoverage.lean:27:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AdjugateCoverage.lean:94:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AdjugateCoverage.lean:94:34: Unused tactic linter: `exact (hsym _ _).symm` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3081/3151] Replayed D1Bound5.WeightedRowCertificate
+warning: D1Bound5/WeightedRowCertificate.lean:40:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:41:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:47:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:48:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3083/3151] Replayed D1Bound5.ProductFiveSignedPrefixInverse
+warning: D1Bound5/ProductFiveSignedPrefixInverse.lean:54:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ℹ [3092/3151] Replayed D1Bound5.CoherentRetainedFrontierTuple
+info: D1Bound5/CoherentRetainedFrontierTuple.lean:62:0: 'D1Bound5.IsD1Tuple.retained_gap_of_frontier' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3093/3151] Replayed D1Bound5.CoherentFourParameters
+warning: D1Bound5/CoherentFourParameters.lean:61:32: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow, hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentFourParameters.lean:65:34: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentFourParameters.lean:70:30: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentFourParameters.lean:62:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentFourParameters.lean:67:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentFourParameters.lean:62:33: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentFourParameters.lean:67:33: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3095/3151] Replayed D1Bound5.CoherentDirectFour
+warning: D1Bound5/CoherentDirectFour.lean:48:14: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentDirectFour.lean:95:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:100:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:116:48: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CoherentDirectFour.lean:95:21: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:100:21: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:143:5: Variable name `hTP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hTP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3096/3151] Replayed D1Bound5.RetainedMixedFourScalar
+warning: D1Bound5/RetainedMixedFourScalar.lean:98:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/RetainedMixedFourScalar.lean:98:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+info: D1Bound5/RetainedMixedFourScalar.lean:104:0: 'D1Bound5.retained_mixed_four_first_term_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/RetainedMixedFourScalar.lean:105:0: 'D1Bound5.retained_mixed_four_start_scalar_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3097/3151] Replayed D1Bound5.CoherentRetainedFrontierStart
+info: D1Bound5/CoherentRetainedFrontierStart.lean:171:0: 'D1Bound5.IsD1Tuple.retained_start_of_frontier' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedFrontierStart.lean:173:0: 'D1Bound5.coherent_retained_h32_common_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3100/3151] Replayed D1Bound5.SmallQuadrupleCheck
+warning: D1Bound5/SmallQuadrupleCheck.lean:74:2: Try `simp at Hd` instead of `simpa using Hd`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [3107/3151] Replayed D1Bound5.SmallQuadruple
+warning: D1Bound5/SmallQuadruple.lean:51:25: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_pow (by decide : 2 ≠ 0), add_zero] at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3108/3151] Replayed D1Bound5.SmallPairLargeDiscriminant
+warning: D1Bound5/SmallPairLargeDiscriminant.lean:54:25: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_pow (by decide : 2 ≠ 0), add_zero] at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3127/3151] Replayed D1Bound5.DescentNorm
+warning: D1Bound5/DescentNorm.lean:46:28: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:46:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:130:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:55: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentNorm.lean:132:67: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3128/3151] Replayed D1Bound5.DescentDenominator
+warning: D1Bound5/DescentDenominator.lean:19:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentDenominator.lean:22:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/DescentDenominator.lean:27:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3143/3151] Replayed D1Bound5.SmallTripleClassification
+warning: D1Bound5/SmallTripleClassification.lean:29:25: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_zero, zero_pow (by decide : 2 ≠ 0), add_zero] at hn
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3144/3151] Replayed D1Bound5.SmallExtensionSymmetry
+warning: D1Bound5/SmallExtensionSymmetry.lean:159:76: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3146/3151] Replayed D1Bound5.OneSmallOrbitRows
+warning: D1Bound5/OneSmallOrbitRows.lean:162:43: This simp argument is unused:
+  Finset.mem_insert
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [firstPairRepresentatives_1_6, Finset.mem_singleton] at hrep
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [3149/3151] Replayed D1Bound5.CoherentFixedTripleStart
+info: D1Bound5/CoherentFixedTripleStart.lean:117:0: 'D1Bound5.oneSmallRow_full_ring_retained_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentFixedTripleStart.lean:118:0: 'D1Bound5.IsD1Tuple.one_small_row_retained_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3150/3151] Replayed D1Bound5.OneSmallCutoffArithmetic
+info: D1Bound5/OneSmallCutoffArithmetic.lean:587:0: 'D1Bound5.oneSmallCutoffRows_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffArithmetic.lean:588:0: 'D1Bound5.oneSmallCutoffRows_triples' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffArithmetic.lean:589:0: 'D1Bound5.oneSmallFixedRows_cutoff_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3151/3151] Built D1Bound5.CoherentFixedCutoffGap (63s)
+warning: D1Bound5/CoherentFixedCutoffGap.lean:183:14: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: D1Bound5/CoherentFixedCutoffGap.lean:225:0: 'D1Bound5.coherent_fixed_retained_coefficient_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentFixedCutoffGap.lean:226:0: 'D1Bound5.IsD1Tuple.fixed_cutoff_retained_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3151 jobs).

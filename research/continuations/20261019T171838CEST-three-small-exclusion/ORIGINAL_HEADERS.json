@@ -1,0 +1,48 @@
+{
+  "ThreeAnchorDetailedAlternative": {
+    "sha256": "f9098a9ab0ec6ecdfc603dc143813b16d99036e382112cff2d94c3cbfd82d84a",
+    "headers": [
+      "IsD1Tuple.three_anchor_general_detailed_alternative\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 5 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hP : 1000 \u2264 \u2016phi (a 3 : K)\u2016)\n    (hSP : 4*\u2016phi (a 2 : K)\u2016 \u2264 \u2016phi (a 3 : K)\u2016) :\n    (5*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016^2 <\n        \u2016phi (a 4 : K)\u2016 \u2227\n      \u2016phi (a 4 : K)\u2016 < 15*\u2016phi (a 0 : K)\u2016*\u2016phi (a 1 : K)\u2016*\u2016phi (a 2 : K)\u2016*\u2016phi (a 3 : K)\u2016^2) \u2228\n    \u2016phi (a 4 : K)\u2016 < 101*\u2016phi (a 1 : K)\u2016^2*\u2016phi (a 2 : K)\u2016^4/\u2016phi (a 3 : K)\u2016 \u2228\n    \u2016phi (a 0 : K)\u2016^2*\u2016phi (a 3 : K)\u2016^5/(37*\u2016phi (a 2 : K)\u2016^2) < \u2016phi (a 4 : K)\u2016"
+    ]
+  },
+  "ThreeSmallPairAlternative": {
+    "sha256": "3dc02360d7110c7469529da785f83b480f3aecc6182b6bb58ab6b87d9082a50e",
+    "headers": [
+      "three_small_pair_alternative_scalar\n    (A B S P Q : \u211d) (hA : 1 \u2264 A) (hAB : A \u2264 B) (hBS : B \u2264 S) (hS : S < 3)\n    (hP : 1000 \u2264 P) (hPQ : P \u2264 Q)\n    (halt : (5*A*B*S*P^2 < Q \u2227 Q < 15*A*B*S*P^2) \u2228\n      Q < 101*B^2*S^4/P \u2228 A^2*P^5/(37*S^2) < Q) :\n    (5*P^2 < Q \u2227 Q < 405*P^2) \u2228 P^5/400 < Q",
+      "IsD1Tuple.three_small_pair_alternative\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 5 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hS : \u2016phi (a 2 : K)\u2016 < 3) (hP : 1000 \u2264 \u2016phi (a 3 : K)\u2016) :\n    (5*\u2016phi (a 3 : K)\u2016^2 < \u2016phi (a 4 : K)\u2016 \u2227\n      \u2016phi (a 4 : K)\u2016 < 405*\u2016phi (a 3 : K)\u2016^2) \u2228\n      \u2016phi (a 3 : K)\u2016^5/400 < \u2016phi (a 4 : K)\u2016",
+      "three_small_pair_growth (P Q : \u211d) (hP : 1000 \u2264 P)\n    (halt : (5*P^2 < Q \u2227 Q < 405*P^2) \u2228 P^5/400 < Q) : 5*P^2 < Q"
+    ]
+  },
+  "ThreeSmallLargeExtensions": {
+    "sha256": "8da38b77fe00bb084484fc9ed300dfbd5248e790c9e1443754b3a9ffe31ae0f2",
+    "headers": [
+      "ordinary_height_power_upper (P Q : \u211d) (hP : (10 : \u211d)^40 \u2264 P) (hQ : 0 < Q)\n    (hh : ordinaryLog10 Q < twoSmallHeightEnvelope (ordinaryLog10 P)) :\n    Q < (10 : \u211d)^60*P^7",
+      "three_small_tenth_growth_impossible (U W : \u211d) (hU : (10 : \u211d)^40 \u2264 U)\n    (hlow : U^10/32000 < W) (hhigh : W < (10 : \u211d)^60*U^7) : False",
+      "three_small_three_large_impossible\n    (U V W : \u211d) (hU : (10 : \u211d)^40 \u2264 U)\n    (hUV : (5*U^2 < V \u2227 V < 405*U^2) \u2228 U^5/400 < V)\n    (hVW : (5*V^2 < W \u2227 W < 405*V^2) \u2228 V^5/400 < W)\n    (hUW : (5*U^2 < W \u2227 W < 405*U^2) \u2228 U^5/400 < W)\n    (hupper : W < (10 : \u211d)^60*U^7) : False",
+      "IsD1Tuple.three_small_pair_at\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hS : \u2016phi (a 2 : K)\u2016 < 3) (i j : Fin 6) (hi : 3 \u2264 i) (hij : i < j)\n    (hP : 1000 \u2264 \u2016phi (a i : K)\u2016) :\n    (5*\u2016phi (a i : K)\u2016^2 < \u2016phi (a j : K)\u2016 \u2227\n      \u2016phi (a j : K)\u2016 < 405*\u2016phi (a i : K)\u2016^2) \u2228\n      \u2016phi (a i : K)\u2016^5/400 < \u2016phi (a j : K)\u2016",
+      "IsD1Tuple.three_small_not_three_large_extensions\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hS : \u2016phi (a 2 : K)\u2016 < 3) (hU : (10 : \u211d)^40 \u2264 \u2016phi (a 3 : K)\u2016) : False"
+    ]
+  },
+  "ThreeSmallFixedScalar": {
+    "sha256": "d59d2ffa2f67d68b2084d696be49c307e1d6ca76bebadcdcb67883e86b4bbd55",
+    "headers": [
+      "three_small_fixed_V_parameters\n    (A B S T C D : \u211d) (hA : 1 \u2264 A) (hB : 0 < B) (hB3 : B < 3)\n    (hS : 0 < S) (hS3 : S < 3) (hT : 0 < T) (hT85 : T < 85)\n    (hC : (10 : \u211d)^40 \u2264 C) (hD : 5*C^2 < D) :\n    1000 \u2264 C \u2227 4*T \u2264 C \u2227 4*C \u2264 D \u2227\n      32*B*S*T/A^3 \u2264 C^2 \u2227 101*B^2*T^4/C < D",
+      "three_small_fixed_V_growth\n    (A T C D : \u211d) (hA : 1 \u2264 A) (hT : 0 < T) (hT85 : T < 85)\n    (hC : (10 : \u211d)^40 \u2264 C) (hV : (2/5 : \u211d)*A^2*C^5/T^2 < D) :\n    (10 : \u211d)^38*C^3 < D",
+      "three_small_fixed_upper_and_overlap (C D : \u211d) (hC : (10 : \u211d)^40 \u2264 C)\n    (hD : D < (10 : \u211d)^60*C^7) :\n    D < C^11/(10 : \u211d)^22 \u2227 (10 : \u211d)^40*C^5 \u2264 C^7/(10 : \u211d)^29",
+      "three_small_fixed_M_window_contains\n    (A B S C : \u211d) (hA : 1 \u2264 A) (hB : 0 < B) (hB3 : B < 3)\n    (hS : 0 < S) (hS3 : S < 3) (hC : 0 < C) :\n    4*((8/9 : \u211d)*608^2)^2*B^6*S^16*C^5/(1-1/4000 : \u211d) \u2264 (10 : \u211d)^40*C^5 \u2227\n      C^11/(10 : \u211d)^22 \u2264 A^6*C^11/(4*(3920/81 : \u211d)^2*B^4*S^10*(1+1/4000 : \u211d))",
+      "three_small_fixed_Q_window_contains (C : \u211d) (hC : 0 < C) :\n    4*55^2*85^6*C^3/(1-1/4000 : \u211d) \u2264 (10 : \u211d)^38*C^3 \u2227\n      C^7/(10 : \u211d)^29 \u2264 C^7/(9*85^2*(1+1/4000 : \u211d))"
+    ]
+  },
+  "ThreeSmallFixedExtension": {
+    "sha256": "999afea207e83c6eb416ab427e85f6488ee25779104fb0c02d8cf1141d92fd6f",
+    "headers": [
+      "IsD1Tuple.three_small_not_fixed_and_two_large\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hS3 : \u2016phi (a 2 : K)\u2016 < 3) (hT85 : \u2016phi (a 3 : K)\u2016 < 85)\n    (hCbig : (10 : \u211d)^40 \u2264 \u2016phi (a 4 : K)\u2016) : False"
+    ]
+  },
+  "ThreeSmallExclusion": {
+    "sha256": "0dc7dba5727b9d1694bbd794d4a0876ffc8c3e3b74991534d3bd30a3608db3bd",
+    "headers": [
+      "IsD1Tuple.not_three_small\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hsmall : \u2016phi (a 2 : K)\u2016 < 3) : False"
+    ]
+  }
+}

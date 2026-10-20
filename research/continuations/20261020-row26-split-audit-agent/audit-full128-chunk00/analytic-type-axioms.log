@@ -1,0 +1,272 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.pairIndexedWitnessesPrefixBool: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairIndexedWitnessesCheckedBool_eq_prefix_drop: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairIndexedWitnessesCheckedBool_of_prefix_drop: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairIndexedWitnessesPrefixBool_add: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairClosureIndexedWitnessBool_of_checked_parts: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairA_26: []
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairB_26: []
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairClosure_26: []
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairLarge_26: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.colors: []
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairSeeds_26_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairFilter_26_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairLarge_26_count: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.anchorRoot: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.rootPairs: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.witnesses: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.destinations: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairClosure_26_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairSelectedPrepared26.leftCached: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairSelectedPrepared26.leftRows: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairSelectedPrepared26.rightCached: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairSelectedPrepared26.rightRows: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.sieve_eq: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.leftVertices_eq: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.leftCached_eq: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.leftRows_eq: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.left_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.rightVertices_eq: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.rightCached_eq: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.rightRows_eq: []
+ANALYTIC_AXIOMS_PASS D1Bound5.PairLightPrepared26.right_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairNoTriangle_26_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_00_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_01_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_02_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_03_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_04_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_05_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_06_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_07_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_08_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_09_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_10_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_tail128_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_coverage_checked: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part0_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part1_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part2_checked: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part3_checked: [propext, Quot.sound]
+@D1Bound5.pairIndexedWitnessesPrefixBool : {tau nu : ℤ} →
+  D1Bound5.QuadInt tau nu →
+    D1Bound5.QuadInt tau nu →
+      D1Bound5.QuadInt tau nu →
+        ℤ →
+          List (D1Bound5.QuadInt tau nu) →
+            ℕ → List (D1Bound5.PairRootWitness tau nu) → List (Option ℕ × Option ℕ) → Bool
+@D1Bound5.pairIndexedWitnessesCheckedBool_eq_prefix_drop : ∀ {tau nu : ℤ} (a b r0 : D1Bound5.QuadInt tau nu) (bound : ℤ)
+  (vertices : List (D1Bound5.QuadInt tau nu)) (n : ℕ) (witnesses : List (D1Bound5.PairRootWitness tau nu))
+  (destinations : List (Option ℕ × Option ℕ)),
+  D1Bound5.pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations =
+    (D1Bound5.pairIndexedWitnessesPrefixBool a b r0 bound vertices n witnesses destinations &&
+      D1Bound5.pairIndexedWitnessesCheckedBool a b r0 bound vertices (List.drop n witnesses) (List.drop n destinations))
+@D1Bound5.pairIndexedWitnessesCheckedBool_of_prefix_drop : ∀ {tau nu : ℤ} (a b r0 : D1Bound5.QuadInt tau nu) (bound : ℤ)
+  (vertices : List (D1Bound5.QuadInt tau nu)) (n : ℕ) (witnesses : List (D1Bound5.PairRootWitness tau nu))
+  (destinations : List (Option ℕ × Option ℕ)),
+  D1Bound5.pairIndexedWitnessesPrefixBool a b r0 bound vertices n witnesses destinations = true →
+    D1Bound5.pairIndexedWitnessesCheckedBool a b r0 bound vertices (List.drop n witnesses) (List.drop n destinations) =
+        true →
+      D1Bound5.pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations = true
+@D1Bound5.pairIndexedWitnessesPrefixBool_add : ∀ {tau nu : ℤ} (a b r0 : D1Bound5.QuadInt tau nu) (bound : ℤ)
+  (vertices : List (D1Bound5.QuadInt tau nu)) (m n : ℕ) (witnesses : List (D1Bound5.PairRootWitness tau nu))
+  (destinations : List (Option ℕ × Option ℕ)),
+  D1Bound5.pairIndexedWitnessesPrefixBool a b r0 bound vertices (m + n) witnesses destinations =
+    (D1Bound5.pairIndexedWitnessesPrefixBool a b r0 bound vertices m witnesses destinations &&
+      D1Bound5.pairIndexedWitnessesPrefixBool a b r0 bound vertices n (List.drop m witnesses)
+        (List.drop m destinations))
+@D1Bound5.pairClosureIndexedWitnessBool_of_checked_parts : ∀ {tau nu : ℤ} (a b r0 : D1Bound5.QuadInt tau nu) (bound : ℤ)
+  (vertices : List (D1Bound5.QuadInt tau nu)) (witnesses : List (D1Bound5.PairRootWitness tau nu))
+  (destinations : List (Option ℕ × Option ℕ)),
+  decide (r0 * r0 = a * b + 1 ∧ List.map D1Bound5.PairRootWitness.vertex witnesses = vertices) = true →
+    D1Bound5.pairIndexedWitnessesCheckedBool a b r0 bound vertices witnesses destinations = true →
+      D1Bound5.pairClosureIndexedWitnessBool a b r0 bound vertices witnesses destinations = true
+D1Bound5.smallPairA_26 : D1Bound5.QuadInt 1 1
+D1Bound5.smallPairB_26 : D1Bound5.QuadInt 1 1
+D1Bound5.smallPairClosure_26 : List (D1Bound5.QuadInt 1 1)
+D1Bound5.smallPairLarge_26 : List (D1Bound5.QuadInt 1 1)
+D1Bound5.PairGraphPrepared26.colors : ℕ
+D1Bound5.smallPairSeeds_26_checked : D1Bound5.pairSeedsCoveredBool D1Bound5.smallPairA_26 D1Bound5.smallPairB_26
+    D1Bound5.seedRootDisk_1_1 D1Bound5.smallPairClosure_26 =
+  true
+D1Bound5.smallPairFilter_26_checked : D1Bound5.largePairVertices D1Bound5.smallPairA_26 D1Bound5.smallPairB_26
+    D1Bound5.smallPairClosure_26 =
+  D1Bound5.smallPairLarge_26
+D1Bound5.smallPairLarge_26_count : D1Bound5.smallPairLarge_26.length = 1522
+D1Bound5.PairGraphPrepared26.anchorRoot : D1Bound5.QuadInt 1 1
+D1Bound5.PairGraphPrepared26.rootPairs : List (D1Bound5.QuadInt 1 1 × D1Bound5.QuadInt 1 1)
+D1Bound5.PairGraphPrepared26.witnesses : List (D1Bound5.PairRootWitness 1 1)
+D1Bound5.PairGraphPrepared26.destinations : List (Option ℕ × Option ℕ)
+D1Bound5.PairGraphPrepared26.indexed_checked : D1Bound5.pairClosureIndexedWitnessBool D1Bound5.smallPairA_26
+    D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_26
+    D1Bound5.PairGraphPrepared26.witnesses D1Bound5.PairGraphPrepared26.destinations =
+  true
+D1Bound5.smallPairClosure_26_checked : D1Bound5.pairClosureBool D1Bound5.smallPairA_26 D1Bound5.smallPairB_26
+    (10 ^ 1100) D1Bound5.smallPairClosure_26 =
+  true
+D1Bound5.PairSelectedPrepared26.leftCached : List (D1Bound5.PairResidueVertex 1 1)
+D1Bound5.PairSelectedPrepared26.leftRows : List (ℕ × List ℕ)
+D1Bound5.PairSelectedPrepared26.rightCached : List (D1Bound5.PairResidueVertex 1 1)
+D1Bound5.PairSelectedPrepared26.rightRows : List (ℕ × List ℕ)
+D1Bound5.PairLightPrepared26.sieve_eq : D1Bound5.PairLightPrepared26.sieve = D1Bound5.smallPairSieve_1_1
+D1Bound5.PairLightPrepared26.leftVertices_eq : D1Bound5.PairLightPrepared26.leftVertices =
+  List.map D1Bound5.pairLightCoordinates
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_26 D1Bound5.PairGraphPrepared26.colors).1
+D1Bound5.PairLightPrepared26.leftCached_eq : D1Bound5.PairLightPrepared26.leftCached =
+  List.map D1Bound5.pairLightCachedCoordinates D1Bound5.PairSelectedPrepared26.leftCached
+D1Bound5.PairLightPrepared26.leftRows_eq : D1Bound5.PairLightPrepared26.leftRows =
+  D1Bound5.PairSelectedPrepared26.leftRows
+D1Bound5.PairLightPrepared26.left_checked : D1Bound5.pairIndependentBool D1Bound5.smallPairSieve_1_1
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_26 D1Bound5.PairGraphPrepared26.colors).1 =
+  true
+D1Bound5.PairLightPrepared26.rightVertices_eq : D1Bound5.PairLightPrepared26.rightVertices =
+  List.map D1Bound5.pairLightCoordinates
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_26 D1Bound5.PairGraphPrepared26.colors).2
+D1Bound5.PairLightPrepared26.rightCached_eq : D1Bound5.PairLightPrepared26.rightCached =
+  List.map D1Bound5.pairLightCachedCoordinates D1Bound5.PairSelectedPrepared26.rightCached
+D1Bound5.PairLightPrepared26.rightRows_eq : D1Bound5.PairLightPrepared26.rightRows =
+  D1Bound5.PairSelectedPrepared26.rightRows
+D1Bound5.PairLightPrepared26.right_checked : D1Bound5.pairIndependentBool D1Bound5.smallPairSieve_1_1
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_26 D1Bound5.PairGraphPrepared26.colors).2 =
+  true
+D1Bound5.smallPairNoTriangle_26_checked : D1Bound5.pairGraphTriangleFreeBool D1Bound5.smallPairSieve_1_1
+    D1Bound5.smallPairLarge_26 =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_00_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 0 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 0 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_01_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 128 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 128 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_02_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 256 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 256 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_03_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 384 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 384 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_04_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 512 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 512 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_05_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 640 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 640 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_06_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 768 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 768 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_07_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 896 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 896 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_08_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 1024 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 1024 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_09_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 128 (List.drop 1152 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 1152 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_10_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 117 (List.drop 1280 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 1280 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_tail128_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_26
+    D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_26 128
+    (List.drop 1397 D1Bound5.PairGraphPrepared26.witnesses) (List.drop 1397 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_coverage_checked : decide
+    (D1Bound5.PairGraphPrepared26.anchorRoot * D1Bound5.PairGraphPrepared26.anchorRoot =
+        D1Bound5.smallPairA_26 * D1Bound5.smallPairB_26 + 1 ∧
+      List.map D1Bound5.PairRootWitness.vertex D1Bound5.PairGraphPrepared26.witnesses = D1Bound5.smallPairClosure_26) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part0_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 32 (List.drop 0 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 0 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part1_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 32 (List.drop 32 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 32 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part2_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 32 (List.drop 64 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 64 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+D1Bound5.PairGraphPrepared26.indexed_chunk128_00_part3_checked : D1Bound5.pairIndexedWitnessesPrefixBool
+    D1Bound5.smallPairA_26 D1Bound5.smallPairB_26 D1Bound5.PairGraphPrepared26.anchorRoot (10 ^ 1100)
+    D1Bound5.smallPairClosure_26 32 (List.drop 96 D1Bound5.PairGraphPrepared26.witnesses)
+    (List.drop 96 D1Bound5.PairGraphPrepared26.destinations) =
+  true
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:121:27: warning: Variable name `a` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _a
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:121:29: warning: Variable name `b` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _b
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:121:31: warning: Variable name `r0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _r0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:122:5: warning: Variable name `bound` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _bound
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:122:17: warning: Variable name `vertices` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _vertices
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:142:5: warning: Variable name `hprefix` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hprefix
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:144:5: warning: Variable name `htail` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _htail
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:165:5: warning: Variable name `hcoverage` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hcoverage
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261020-row26-split-audit-agent/audit-full128-chunk00/AnalyticAudit.lean:167:5: warning: Variable name `hwitnesses` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hwitnesses
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

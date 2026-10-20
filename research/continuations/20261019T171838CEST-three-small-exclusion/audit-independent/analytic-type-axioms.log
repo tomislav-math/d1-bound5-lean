@@ -1,0 +1,325 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.three_anchor_general_detailed_alternative: [propext,
+ Classical.choice,
+ Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_pair_alternative_scalar: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.three_small_pair_alternative: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_pair_growth: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.ordinary_height_power_upper: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_tenth_growth_impossible: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.three_small_three_large_impossible: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.three_small_pair_at: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.three_small_not_three_large_extensions: [propext, Classical.choice, Quot.sound]
+@D1Bound5.IsD1Tuple.three_anchor_general_detailed_alternative : ∀ {K : Type u_1} [inst : Field K]
+  [inst_1 : NumberField K] [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          1000 ≤ ‖phi ↑(a 3)‖ →
+            4 * ‖phi ↑(a 2)‖ ≤ ‖phi ↑(a 3)‖ →
+              5 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ * ‖phi ↑(a 3)‖ ^ 2 < ‖phi ↑(a 4)‖ ∧
+                  ‖phi ↑(a 4)‖ < 15 * ‖phi ↑(a 0)‖ * ‖phi ↑(a 1)‖ * ‖phi ↑(a 2)‖ * ‖phi ↑(a 3)‖ ^ 2 ∨
+                ‖phi ↑(a 4)‖ < 101 * ‖phi ↑(a 1)‖ ^ 2 * ‖phi ↑(a 2)‖ ^ 4 / ‖phi ↑(a 3)‖ ∨
+                  ‖phi ↑(a 0)‖ ^ 2 * ‖phi ↑(a 3)‖ ^ 5 / (37 * ‖phi ↑(a 2)‖ ^ 2) < ‖phi ↑(a 4)‖
+D1Bound5.three_small_pair_alternative_scalar : ∀ (A B S P Q : ℝ),
+  1 ≤ A →
+    A ≤ B →
+      B ≤ S →
+        S < 3 →
+          1000 ≤ P →
+            P ≤ Q →
+              5 * A * B * S * P ^ 2 < Q ∧ Q < 15 * A * B * S * P ^ 2 ∨
+                  Q < 101 * B ^ 2 * S ^ 4 / P ∨ A ^ 2 * P ^ 5 / (37 * S ^ 2) < Q →
+                5 * P ^ 2 < Q ∧ Q < 405 * P ^ 2 ∨ P ^ 5 / 400 < Q
+@D1Bound5.IsD1Tuple.three_small_pair_alternative : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 5 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          ‖phi ↑(a 2)‖ < 3 →
+            1000 ≤ ‖phi ↑(a 3)‖ →
+              5 * ‖phi ↑(a 3)‖ ^ 2 < ‖phi ↑(a 4)‖ ∧ ‖phi ↑(a 4)‖ < 405 * ‖phi ↑(a 3)‖ ^ 2 ∨
+                ‖phi ↑(a 3)‖ ^ 5 / 400 < ‖phi ↑(a 4)‖
+D1Bound5.three_small_pair_growth : ∀ (P Q : ℝ),
+  1000 ≤ P → 5 * P ^ 2 < Q ∧ Q < 405 * P ^ 2 ∨ P ^ 5 / 400 < Q → 5 * P ^ 2 < Q
+D1Bound5.ordinary_height_power_upper : ∀ (P Q : ℝ),
+  10 ^ 40 ≤ P →
+    0 < Q → D1Bound5.ordinaryLog10 Q < D1Bound5.twoSmallHeightEnvelope (D1Bound5.ordinaryLog10 P) → Q < 10 ^ 60 * P ^ 7
+D1Bound5.three_small_tenth_growth_impossible : ∀ (U W : ℝ),
+  10 ^ 40 ≤ U → U ^ 10 / 32000 < W → W < 10 ^ 60 * U ^ 7 → False
+D1Bound5.three_small_three_large_impossible : ∀ (U V W : ℝ),
+  10 ^ 40 ≤ U →
+    5 * U ^ 2 < V ∧ V < 405 * U ^ 2 ∨ U ^ 5 / 400 < V →
+      5 * V ^ 2 < W ∧ W < 405 * V ^ 2 ∨ V ^ 5 / 400 < W →
+        5 * U ^ 2 < W ∧ W < 405 * U ^ 2 ∨ U ^ 5 / 400 < W → W < 10 ^ 60 * U ^ 7 → False
+@D1Bound5.IsD1Tuple.three_small_pair_at : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          ‖phi ↑(a 2)‖ < 3 →
+            ∀ (i j : Fin 6),
+              3 ≤ i →
+                i < j →
+                  1000 ≤ ‖phi ↑(a i)‖ →
+                    5 * ‖phi ↑(a i)‖ ^ 2 < ‖phi ↑(a j)‖ ∧ ‖phi ↑(a j)‖ < 405 * ‖phi ↑(a i)‖ ^ 2 ∨
+                      ‖phi ↑(a i)‖ ^ 5 / 400 < ‖phi ↑(a j)‖
+@D1Bound5.IsD1Tuple.three_small_not_three_large_extensions : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → NumberField.RingOfIntegers K),
+      D1Bound5.IsD1Tuple a → (Monotone fun i => ‖phi ↑(a i)‖) → ‖phi ↑(a 2)‖ < 3 → 10 ^ 40 ≤ ‖phi ↑(a 3)‖ → False
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:44:5: warning: Variable name `hK` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hK
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:45:23: warning: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:46:5: warning: Variable name `hmon` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmon
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:47:5: warning: Variable name `hP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:48:5: warning: Variable name `hSP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hSP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:55:29: warning: Variable name `hA` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hA
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:55:42: warning: Variable name `hAB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hAB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:55:56: warning: Variable name `hBS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hBS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:55:70: warning: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:56:5: warning: Variable name `hP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:56:21: warning: Variable name `hPQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hPQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:57:5: warning: Variable name `halt` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _halt
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:62:5: warning: Variable name `hK` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hK
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:63:23: warning: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:64:5: warning: Variable name `hmon` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmon
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:65:5: warning: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:65:32: warning: Variable name `hP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:70:23: warning: Variable name `hP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:71:5: warning: Variable name `halt` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _halt
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:74:23: warning: Variable name `hP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:74:46: warning: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:75:5: warning: Variable name `hh` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hh
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:78:23: warning: Variable name `hU` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hU
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:79:5: warning: Variable name `hlow` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hlow
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:79:29: warning: Variable name `hhigh` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hhigh
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:82:25: warning: Variable name `hU` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hU
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:83:5: warning: Variable name `hUV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hUV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:84:5: warning: Variable name `hVW` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hVW
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:85:5: warning: Variable name `hUW` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hUW
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:86:5: warning: Variable name `hupper` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hupper
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:90:5: warning: Variable name `hK` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hK
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:91:23: warning: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:92:5: warning: Variable name `hmon` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmon
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:93:5: warning: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:93:46: warning: Variable name `hi` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hi
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:93:59: warning: Variable name `hij` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hij
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:94:5: warning: Variable name `hP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:100:5: warning: Variable name `hK` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hK
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:101:23: warning: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:102:5: warning: Variable name `hmon` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hmon
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:103:5: warning: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/Users/tp/Lean/D1Bound5/research/continuations/20261019T171838CEST-three-small-exclusion/audit-independent/AnalyticAudit.lean:103:32: warning: Variable name `hU` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hU
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

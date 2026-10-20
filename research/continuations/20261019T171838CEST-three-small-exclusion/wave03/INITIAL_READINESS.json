@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-19T15:32:03.411463+00:00",
+  "unknown": [],
+  "targets": {
+    "ThreeSmallLargeExtensions": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "ThreeSmallFixedScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallLargeExtensions"
+      ]
+    },
+    "ThreeSmallFixedExtension": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallFixedScalar",
+        "ThreeSmallLargeExtensions"
+      ]
+    },
+    "ThreeSmallExclusion": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallFixedExtension",
+        "ThreeSmallFixedScalar",
+        "ThreeSmallLargeExtensions"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2347 @@
+ℹ [1974/2021] Replayed D1Bound5.CoherentWeightedRemainder
+info: D1Bound5/CoherentWeightedRemainder.lean:88:0: @D1Bound5.coherent_weighted_remainder_summable_and_norm_le : ∀ {ι : Type u_1} [inst : Fintype ι]
+  [inst_1 : DecidableEq ι] [Nonempty ι] (a : ι → ℂ) (f : ℕ → ℂ) (m : ℕ) (C ρ t : ℝ),
+  0 ≤ C →
+    0 ≤ ρ →
+      0 ≤ t →
+        (∀ (i : ι), ‖a i‖ ≤ ρ) →
+          ρ * t < 1 →
+            (∀ (j : ℕ), ‖f (m + (j + 1))‖ ≤ C * t ^ (m + (j + 1))) →
+              (Summable fun j => f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))) ∧
+                ‖∑' (j : ℕ), f (m + (j + 1)) * (MvPolynomial.aeval a) (MvPolynomial.hsymm ι ℂ (j + 1))‖ ≤
+                  C * t ^ m * (1 / (1 - ρ * t) ^ Fintype.card ι - 1)
+info: D1Bound5/CoherentWeightedRemainder.lean:89:0: 'D1Bound5.coherent_weighted_remainder_summable_and_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1975/2021] Replayed D1Bound5.HalfBinomialCoefficients
+warning: D1Bound5/HalfBinomialCoefficients.lean:34:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2770/2862] Replayed D1Bound5.CoherentAnalyticInterpolation
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:16:32: Variable name `hs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:310:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:362:2: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:363:45: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:372:26: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentAnalyticInterpolation.lean:384:30: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2778/2862] Replayed D1Bound5.BennettClearedResidues
+warning: D1Bound5/BennettClearedResidues.lean:160:36: This simp argument is unused:
+  if_pos rfl
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [bennettClearedResidue, ite_true, Nat.add_sub_cancel, bennettClearedTaylor,
+    Polynomial.eval_finsetSum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:15: This simp argument is unused:
+  Polynomial.eval_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:163:55: This simp argument is unused:
+  Polynomial.eval_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_add, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:6: This simp argument is unused:
+  Polynomial.eval_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_X, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:27: This simp argument is unused:
+  Polynomial.eval_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add, neg_add_cancel,
+    tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles, map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettClearedResidues.lean:164:46: This simp argument is unused:
+  neg_add_cancel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Polynomial.eval_mul, Polynomial.eval_C, Polynomial.eval_pow, Polynomial.eval_add,
+    Polynomial.eval_X, tsub_self, pow_zero, mul_one, PowerSeries.coeff_zero_eq_constantCoeff_apply, bennettOtherPoles,
+    map_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [2779/2862] Replayed D1Bound5.BennettTwoDenominatorClearing
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:21:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:49:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/BennettTwoDenominatorClearing.lean:78:31: Variable name `hk` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hk
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [2781/2862] Replayed D1Bound5.BennettBinomialIntegrality
+warning: D1Bound5/BennettBinomialIntegrality.lean:52:49: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2785/2862] Replayed D1Bound5.BennettTwoIntegralEntries
+warning: D1Bound5/BennettTwoIntegralEntries.lean:14:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_zero`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:15:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_one`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:16:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_two`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:92:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:114:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:136:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoIntegralEntries.lean:151:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2786/2862] Replayed D1Bound5.BennettRootApproximation
+warning: D1Bound5/BennettRootApproximation.lean:19:65: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettRootApproximation.lean:48:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettRootApproximation.lean:76:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:76:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:131:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:135:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:131:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettRootApproximation.lean:135:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [2787/2862] Replayed D1Bound5.BennettBinomialTransfer
+warning: D1Bound5/BennettBinomialTransfer.lean:11:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettSeries_coeff_C_add_X_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2788/2862] Replayed D1Bound5.BennettResidueCoefficient
+warning: D1Bound5/BennettResidueCoefficient.lean:22:0: automatically included section variable(s) unused in theorem `D1Bound5.clearedPoleNumerator_monic`:
+  [Nontrivial R]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2790/2862] Replayed D1Bound5.BennettPartialFractions
+warning: D1Bound5/BennettPartialFractions.lean:24:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_monic`:
+  [Nontrivial R]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Nontrivial R] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettPartialFractions.lean:29:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettPoleDenominator_natDegree`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2791/2862] Replayed D1Bound5.BennettLocalResidues
+warning: D1Bound5/BennettLocalResidues.lean:17:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_C`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettLocalResidues.lean:21:8: automatically included section variable(s) unused in theorem `D1Bound5.bennettShiftToSeries_linear`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2794/2862] Replayed D1Bound5.BennettResidualCancellation
+warning: D1Bound5/BennettResidualCancellation.lean:108:0: automatically included section variable(s) unused in theorem `D1Bound5.bennett_coeff_mul_trunc`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2795/2862] Replayed D1Bound5.BennettDeterminantConstant
+warning: D1Bound5/BennettDeterminantConstant.lean:65:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:65:35: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+warning: D1Bound5/BennettDeterminantConstant.lean:72:14: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+⚠ [2797/2862] Replayed D1Bound5.BennettDeterminantFormula
+warning: D1Bound5/BennettDeterminantFormula.lean:34:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettDirectedProduct_succ`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [2800/2862] Replayed D1Bound5.BennettTwoIntegralMatrix
+warning: D1Bound5/BennettTwoIntegralMatrix.lean:9:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettTwoNodes_injective`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3029/3129] Replayed D1Bound5.BennettIntegralRowSelection
+warning: D1Bound5/BennettIntegralRowSelection.lean:33:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: D1Bound5/BennettIntegralRowSelection.lean:61:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettIntegralRowSelection.lean:61:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3030/3129] Replayed D1Bound5.BennettCoefficientMajorant
+warning: D1Bound5/BennettCoefficientMajorant.lean:74:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettCoefficientMajorant.lean:74:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3032/3129] Replayed D1Bound5.BennettPositiveSeries
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettPositiveSeries.lean:61:53: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3035/3129] Replayed D1Bound5.BennettTwoEntryBounds
+warning: D1Bound5/BennettTwoEntryBounds.lean:27:46: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettTwoEntryBounds.lean:52:46: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3036/3129] Replayed D1Bound5.BennettHeightNormalization
+warning: D1Bound5/BennettHeightNormalization.lean:22:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettHeightNormalization.lean:36:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettHeightNormalization.lean:99:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:103:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:130:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:99:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:103:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettHeightNormalization.lean:130:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3038/3129] Replayed D1Bound5.BennettWeightedHeight
+warning: D1Bound5/BennettWeightedHeight.lean:15:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettWeightedHeight.lean:19:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettWeightedHeight.lean:15:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettWeightedHeight.lean:19:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3040/3129] Replayed D1Bound5.BennettResiduesAtInfinity
+warning: D1Bound5/BennettResiduesAtInfinity.lean:158:8: automatically included section variable(s) unused in theorem `_private.D1Bound5.BennettResiduesAtInfinity.0.D1Bound5.bennett_reverse_pow`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3041/3129] Replayed D1Bound5.BennettRepeatedHsymm
+warning: D1Bound5/BennettRepeatedHsymm.lean:28:8: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: D1Bound5/BennettRepeatedHsymm.lean:84:0: automatically included section variable(s) unused in theorem `D1Bound5.bennettRepeatedNodes_card`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: D1Bound5/BennettRepeatedHsymm.lean:88:8: automatically included section variable(s) unused in theorem `_private.D1Bound5.BennettRepeatedHsymm.0.D1Bound5.bennettReciprocalInfinity_explicit_mul`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3091/3129] Replayed D1Bound5.BennettResidualBound
+warning: D1Bound5/BennettResidualBound.lean:27:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3092/3129] Replayed D1Bound5.BennettTwoResidualBound
+warning: D1Bound5/BennettTwoResidualBound.lean:19:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettTwoResidualBound.lean:19:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettTwoResidualBound.lean:68:15: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [S, norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/BennettTwoResidualBound.lean:43:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettTwoResidualBound.lean:43:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3093/3129] Replayed D1Bound5.BennettTwoBetaBound
+warning: D1Bound5/BennettTwoBetaBound.lean:44:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoBetaBound.lean:45:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoBetaBound.lean:46:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettTwoBetaBound.lean:80:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/BennettTwoBetaBound.lean:80:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3094/3129] Replayed D1Bound5.BennettTwoResidualRate
+warning: D1Bound5/BennettTwoResidualRate.lean:44:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3095/3129] Replayed D1Bound5.BennettRootTransfer
+warning: D1Bound5/BennettRootTransfer.lean:39:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/BennettRootTransfer.lean:103:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/BennettRootTransfer.lean:103:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3099/3129] Replayed D1Bound5.OrdinaryClosedIntervals
+warning: D1Bound5/OrdinaryClosedIntervals.lean:107:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:113:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:42: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:30: Unused tactic linter: `congr 1` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/OrdinaryClosedIntervals.lean:200:42: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3101/3129] Replayed D1Bound5.AllLargeOverlapConstants
+warning: D1Bound5/AllLargeOverlapConstants.lean:14:15: Unused tactic linter: `first
+| assumption
+| norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeOverlapConstants.lean:14:15: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeOverlapConstants.lean:100:19: Unused tactic linter: `first
+| assumption
+| norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeOverlapConstants.lean:100:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3102/3129] Replayed D1Bound5.AllLargeWindowOverlaps
+warning: D1Bound5/AllLargeWindowOverlaps.lean:41:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:50:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:53:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:55:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:58:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:67:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:70:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:72:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:75:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:82:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:84:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:87:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:94:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:96:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:99:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:106:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:108:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:111:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:113:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:116:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:123:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:125:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:128:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:130:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:133:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:140:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:142:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:145:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:147:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:150:30: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:150:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:157:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:159:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:162:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:169:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:171:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:174:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:176:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:179:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:186:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:188:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:191:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:193:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:196:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:203:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:205:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:208:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:215:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:217:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:220:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:222:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:225:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:232:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:234:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:237:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:239:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:242:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:249:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:251:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:254:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:256:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:259:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:266:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:268:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:271:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:273:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:276:44: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:283:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:285:19: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:41:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:48:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:58:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:65:8: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:75:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:87:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:99:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:116:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:133:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:162:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:179:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:196:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:208:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:225:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:242:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:259:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:276:27: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:292:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:300:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:308:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:316:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:324:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:332:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:340:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:348:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:356:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:364:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:372:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:380:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:388:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:396:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:404:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:412:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:41:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:50:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:53:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:55:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:58:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:67:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:70:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:72:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:75:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:82:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:84:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:87:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:94:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:96:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:99:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:106:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:108:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:111:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:113:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:116:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:123:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:125:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:128:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:130:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:133:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:140:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:142:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:145:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:147:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:150:30: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:150:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:157:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:159:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:162:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:169:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:171:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:174:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:176:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:179:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:186:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:188:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:191:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:193:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| exact hextra
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:196:44: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:203:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:205:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:208:44: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:215:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:217:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:220:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:222:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:225:44: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:232:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:234:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:237:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:239:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:242:44: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:249:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:251:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:254:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:256:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:259:44: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:266:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:268:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:271:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:273:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:276:44: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:283:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/AllLargeWindowOverlaps.lean:285:19: Unused tactic linter: `first
+| exact hC.le
+| exact hgap.le
+| exact hT.le
+| exact hBS
+| positivity` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [3103/3129] Replayed D1Bound5.CoherentIntegralForms
+info: D1Bound5/CoherentIntegralForms.lean:133:0: 'D1Bound5.IsD1.coherent_terminal_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:134:0: 'D1Bound5.IsD1.coherent_anchor_root_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:135:0: 'D1Bound5.IsD1.coherent_linear_form_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentIntegralForms.lean:136:0: 'D1Bound5.full_ring_coherent_linear_form_one_le_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3104/3129] Replayed D1Bound5.CoherentPolynomialWeights
+warning: D1Bound5/CoherentPolynomialWeights.lean:44:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3107/3129] Replayed D1Bound5.CoherentFormBounds
+warning: D1Bound5/CoherentFormBounds.lean:111:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3110/3129] Replayed D1Bound5.CoherentParameterForms
+warning: D1Bound5/CoherentParameterForms.lean:24:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentParameterForms.lean:47:13: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [c, norm_pow, norm_inv, norm_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentParameterForms.lean:64:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:67:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:64:33: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:67:43: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:84:31: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentParameterForms.lean:97:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:108:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:97:21: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:108:35: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentParameterForms.lean:168:14: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3111/3129] Replayed D1Bound5.CoherentTwoUpper
+warning: D1Bound5/CoherentTwoUpper.lean:96:70: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:99:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:96:70: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:99:35: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentTwoUpper.lean:105:44: Variable name `hQ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hQ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentTwoUpper.lean:106:31: Variable name `hD0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hD0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/CoherentTwoUpper.lean:117:17: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CoherentTwoUpper.lean:176:16: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentTwoUpper.lean:227:16: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [A, B, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: D1Bound5/CoherentTwoUpper.lean:247:0: 'D1Bound5.halfBinomialWeightedCoeff_two_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoUpper.lean:248:0: 'D1Bound5.coherentRemainder_two_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoUpper.lean:249:0: 'D1Bound5.coherent_two_upper_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoUpper.lean:250:0: 'D1Bound5.coherent_two_norm_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3114/3129] Replayed D1Bound5.CoherentTwoGap
+info: D1Bound5/CoherentTwoGap.lean:143:0: 'D1Bound5.coherentQuotientForm_two_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoGap.lean:144:0: 'D1Bound5.coherent_two_strong_gap_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentTwoGap.lean:145:0: 'D1Bound5.full_ring_coherent_two_strong_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3115/3129] Replayed D1Bound5.CoherentTwoMainGap
+warning: D1Bound5/CoherentTwoMainGap.lean:12:32: Variable name `hAB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hAB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [3119/3129] Replayed D1Bound5.CoherentRetainedGap
+info: D1Bound5/CoherentRetainedGap.lean:138:0: 'D1Bound5.full_ring_retained_three_h48_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedGap.lean:139:0: 'D1Bound5.full_ring_all_large_retained_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3122/3129] Replayed D1Bound5.RootErrorMagnitude
+warning: D1Bound5/RootErrorMagnitude.lean:32:29: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/RootErrorMagnitude.lean:133:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3123/3129] Replayed D1Bound5.RootMatrixSigns
+warning: D1Bound5/RootMatrixSigns.lean:55:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3147/3244] Replayed D1Bound5.AdjugateFourBounds
+warning: D1Bound5/AdjugateFourBounds.lean:49:46: This simp argument is unused:
+  Fin.sum_univ_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp (config := { decide := true }) [Matrix.updateRow_apply, Pi.single_apply, Matrix.det_fin_three,
+    Matrix.submatrix_apply, Matrix.of_apply, Fin.succAbove]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateFourBounds.lean:165:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateFourBounds.lean:174:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3148/3244] Replayed D1Bound5.AdjugateOffDiagonal
+info: D1Bound5/AdjugateOffDiagonal.lean:73:28: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: D1Bound5/AdjugateOffDiagonal.lean:54:12: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateOffDiagonal.lean:111:41: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/AdjugateOffDiagonal.lean:112:41: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3149/3244] Replayed D1Bound5.AdjugateCoverage
+warning: D1Bound5/AdjugateCoverage.lean:27:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/AdjugateCoverage.lean:94:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/AdjugateCoverage.lean:94:34: Unused tactic linter: `exact (hsym _ _).symm` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3150/3244] Replayed D1Bound5.EvenDeterminant
+warning: D1Bound5/EvenDeterminant.lean:45:29: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.add_apply, h00, h01, h10, h11, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/EvenDeterminant.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3171/3244] Replayed D1Bound5.FrontierLargeCofactors
+warning: D1Bound5/FrontierLargeCofactors.lean:60:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FrontierLargeCofactors.lean:60:34: Unused tactic linter: `exact (hsym _ _).symm` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3174/3244] Replayed D1Bound5.MixedRootMatrixSigns
+warning: D1Bound5/MixedRootMatrixSigns.lean:136:5: Variable name `hdiag` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hdiag
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3176/3244] Replayed D1Bound5.ProductFivePrefixDet
+warning: D1Bound5/ProductFivePrefixDet.lean:29:24: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/ProductFivePrefixDet.lean:36:12: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3178/3244] Replayed D1Bound5.ProductFiveBlockDet
+warning: D1Bound5/ProductFiveBlockDet.lean:35:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3183/3244] Replayed D1Bound5.WeightedRowCertificate
+warning: D1Bound5/WeightedRowCertificate.lean:40:74: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:41:11: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:47:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/WeightedRowCertificate.lean:48:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3185/3244] Replayed D1Bound5.ProductFiveSignedPrefixInverse
+warning: D1Bound5/ProductFiveSignedPrefixInverse.lean:54:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ℹ [3194/3244] Replayed D1Bound5.CoherentRetainedTuple
+info: D1Bound5/CoherentRetainedTuple.lean:68:0: 'D1Bound5.IsD1Tuple.all_large_retained_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3195/3244] Replayed D1Bound5.CoherentRetainedBasicGap
+warning: D1Bound5/CoherentRetainedBasicGap.lean:18:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentRetainedBasicGap.lean:18:35: Unused tactic linter: `first
+| assumption
+| norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [3196/3244] Replayed D1Bound5.CoherentRetainedFourSizes
+info: D1Bound5/CoherentRetainedFourSizes.lean:84:0: 'D1Bound5.coherent_retained_first_terminal_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/CoherentRetainedFourSizes.lean:85:0: 'D1Bound5.coherent_retained_four_terminal_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3197/3244] Replayed D1Bound5.CoherentFourParameters
+warning: D1Bound5/CoherentFourParameters.lean:61:32: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow, hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentFourParameters.lean:65:34: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hx]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentFourParameters.lean:70:30: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentFourParameters.lean:62:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentFourParameters.lean:67:33: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentFourParameters.lean:62:33: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentFourParameters.lean:67:33: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3199/3244] Replayed D1Bound5.CoherentDirectFour
+warning: D1Bound5/CoherentDirectFour.lean:48:14: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [P, Q, norm_inv, one_div, mul_inv_rev, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/CoherentDirectFour.lean:95:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:100:21: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:116:48: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/CoherentDirectFour.lean:95:21: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:100:21: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/CoherentDirectFour.lean:143:5: Variable name `hTP` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hTP
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ℹ [3201/3244] Replayed D1Bound5.CoherentRetainedStart
+info: D1Bound5/CoherentRetainedStart.lean:147:0: 'D1Bound5.IsD1Tuple.all_large_retained_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3202/3244] Replayed D1Bound5.FiniteQMatrix
+warning: D1Bound5/FiniteQMatrix.lean:61:13: This simp argument is unused:
+  hs1_1_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs2_0_0, hs2_0_1, hs2_1_0,
+    hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:40: This simp argument is unused:
+  hs2_1_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:49: This simp argument is unused:
+  hs2_1_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:58: This simp argument is unused:
+  hs2_2_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:67: This simp argument is unused:
+  hs2_2_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:103: This simp argument is unused:
+  hs3_1_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:112: This simp argument is unused:
+  hs3_1_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:130: This simp argument is unused:
+  hs3_2_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_1, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:139: This simp argument is unused:
+  hs3_2_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_2, hs3_3_0,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:157: This simp argument is unused:
+  hs3_3_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:166: This simp argument is unused:
+  hs3_3_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:220: This simp argument is unused:
+  hs4_1_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:229: This simp argument is unused:
+  hs4_1_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:256: This simp argument is unused:
+  hs4_2_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_1, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:265: This simp argument is unused:
+  hs4_2_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_2,
+    hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:292: This simp argument is unused:
+  hs4_3_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1,
+    hs4_2_2, hs4_2_3, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:301: This simp argument is unused:
+  hs4_3_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1,
+    hs4_2_2, hs4_2_3, hs4_3_0, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:328: This simp argument is unused:
+  hs4_4_0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1,
+    hs4_2_2, hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_1, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:337: This simp argument is unused:
+  hs4_4_1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1,
+    hs4_2_2, hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_2, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:346: This simp argument is unused:
+  hs4_4_2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1,
+    hs4_2_2, hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_3]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:61:355: This simp argument is unused:
+  hs4_4_3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.det_succ_row_zero, Fin.sum_univ_succ, Matrix.submatrix, hs1_0_0, hs1_1_0, hs2_0_0, hs2_0_1,
+    hs2_1_0, hs2_1_1, hs2_2_0, hs2_2_1, hs3_0_0, hs3_0_1, hs3_0_2, hs3_1_0, hs3_1_1, hs3_1_2, hs3_2_0, hs3_2_1, hs3_2_2,
+    hs3_3_0, hs3_3_1, hs3_3_2, hs4_0_0, hs4_0_1, hs4_0_2, hs4_0_3, hs4_1_0, hs4_1_1, hs4_1_2, hs4_1_3, hs4_2_0, hs4_2_1,
+    hs4_2_2, hs4_2_3, hs4_3_0, hs4_3_1, hs4_3_2, hs4_3_3, hs4_4_0, hs4_4_1, hs4_4_2]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQMatrix.lean:62:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteQMatrix.lean:107:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3203/3244] Replayed D1Bound5.FiniteQIntegralRows
+warning: D1Bound5/FiniteQIntegralRows.lean:66:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3204/3244] Replayed D1Bound5.FiniteQHeight
+warning: D1Bound5/FiniteQHeight.lean:13:40: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3205/3244] Replayed D1Bound5.FiniteQResidualIdentity
+warning: D1Bound5/FiniteQResidualIdentity.lean:97:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3206/3244] Replayed D1Bound5.FiniteQResidualBound
+warning: D1Bound5/FiniteQResidualBound.lean:88:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3207/3244] Replayed D1Bound5.FiniteRowRootTransfer
+warning: D1Bound5/FiniteRowRootTransfer.lean:27:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteRowRootTransfer.lean:43:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteRowRootTransfer.lean:27:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/FiniteRowRootTransfer.lean:43:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3208/3244] Replayed D1Bound5.FiniteQRowBound
+warning: D1Bound5/FiniteQRowBound.lean:50:70: This simp argument is unused:
+  add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteQRowForm, Matrix.mulVec, dotProduct, Fin.sum_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteQRowBound.lean:83:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3210/3244] Replayed D1Bound5.FiniteQInterval
+warning: D1Bound5/FiniteQInterval.lean:62:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteQInterval.lean:57:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteQInterval.lean:57:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteQInterval.lean:67:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteQInterval.lean:62:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3211/3244] Replayed D1Bound5.FiniteN2Matrix
+warning: D1Bound5/FiniteN2Matrix.lean:64:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Matrix.lean:70:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3212/3244] Replayed D1Bound5.FiniteN2IntegralRows
+warning: D1Bound5/FiniteN2IntegralRows.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3214/3244] Replayed D1Bound5.FiniteN2Height
+warning: D1Bound5/FiniteN2Height.lean:34:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3215/3244] Replayed D1Bound5.FiniteN2BennettIdentity
+warning: D1Bound5/FiniteN2BennettIdentity.lean:54:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3217/3244] Replayed D1Bound5.FiniteN2Residual
+warning: D1Bound5/FiniteN2Residual.lean:23:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Residual.lean:58:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Residual.lean:62:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Residual.lean:146:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3218/3244] Replayed D1Bound5.FiniteN2RowBound
+warning: D1Bound5/FiniteN2RowBound.lean:13:23: This simp argument is unused:
+  add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteN2RowForm, finiteN2DividedMatrix, Matrix.mulVec, dotProduct, Fin.sum_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteN2RowBound.lean:41:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2RowBound.lean:55:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2RowBound.lean:71:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3221/3244] Replayed D1Bound5.FiniteN2Interval
+warning: D1Bound5/FiniteN2Interval.lean:66:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteN2Interval.lean:61:56: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Interval.lean:61:72: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Interval.lean:71:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN2Interval.lean:66:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3222/3244] Replayed D1Bound5.FiniteN3Matrix
+warning: D1Bound5/FiniteN3Matrix.lean:85:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN3Matrix.lean:91:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3223/3244] Replayed D1Bound5.FiniteN3IntegralRows
+warning: D1Bound5/FiniteN3IntegralRows.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3224/3244] Replayed D1Bound5.FiniteN3Height
+warning: D1Bound5/FiniteN3Height.lean:50:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3225/3244] Replayed D1Bound5.FiniteN3BennettIdentity
+warning: D1Bound5/FiniteN3BennettIdentity.lean:61:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3226/3244] Replayed D1Bound5.FiniteN3Residual
+warning: D1Bound5/FiniteN3Residual.lean:115:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3227/3244] Replayed D1Bound5.FiniteN3Approximation
+warning: D1Bound5/FiniteN3Approximation.lean:79:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteN3Approximation.lean:51:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN3Approximation.lean:79:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3228/3244] Replayed D1Bound5.FiniteN3Interval
+warning: D1Bound5/FiniteN3Interval.lean:90:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteN3Interval.lean:85:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN3Interval.lean:85:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN3Interval.lean:95:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteN3Interval.lean:90:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3686/3739] Replayed D1Bound5.FiniteA3Matrix
+warning: D1Bound5/FiniteA3Matrix.lean:42:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA3Matrix.lean:48:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA3Matrix.lean:52:5: Variable name `hx` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hx
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/FiniteA3Matrix.lean:52:18: Variable name `hy` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hy
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [3687/3739] Replayed D1Bound5.FiniteA3IntegralRows
+warning: D1Bound5/FiniteA3IntegralRows.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3688/3739] Replayed D1Bound5.FiniteA3Coefficients
+warning: D1Bound5/FiniteA3Coefficients.lean:29:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3689/3739] Replayed D1Bound5.FinitePolynomialHeight
+warning: D1Bound5/FinitePolynomialHeight.lean:65:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3691/3739] Replayed D1Bound5.UnequalPoleResidual
+warning: D1Bound5/UnequalPoleResidual.lean:109:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [3692/3739] Replayed D1Bound5.FiniteUnequalEntry
+warning: D1Bound5/FiniteUnequalEntry.lean:87:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteUnequalEntry.lean:87:6: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/FiniteUnequalEntry.lean:146:14: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [S, norm_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteUnequalEntry.lean:110:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteUnequalEntry.lean:110:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3694/3739] Replayed D1Bound5.FiniteA3ResidueIdentity
+warning: D1Bound5/FiniteA3ResidueIdentity.lean:46:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3695/3739] Replayed D1Bound5.FiniteA3Residual
+warning: D1Bound5/FiniteA3Residual.lean:104:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3696/3739] Replayed D1Bound5.FiniteA3Approximation
+warning: D1Bound5/FiniteA3Approximation.lean:79:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteA3Approximation.lean:51:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA3Approximation.lean:79:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3697/3739] Replayed D1Bound5.FiniteA3Interval
+warning: D1Bound5/FiniteA3Interval.lean:89:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteA3Interval.lean:84:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA3Interval.lean:84:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA3Interval.lean:94:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA3Interval.lean:89:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3698/3739] Replayed D1Bound5.FiniteA4Matrix
+warning: D1Bound5/FiniteA4Matrix.lean:42:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA4Matrix.lean:48:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3699/3739] Replayed D1Bound5.FiniteA4IntegralRows
+warning: D1Bound5/FiniteA4IntegralRows.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3700/3739] Replayed D1Bound5.FiniteA4Coefficients
+warning: D1Bound5/FiniteA4Coefficients.lean:32:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3702/3739] Replayed D1Bound5.FiniteA4ResidueIdentity
+warning: D1Bound5/FiniteA4ResidueIdentity.lean:47:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3703/3739] Replayed D1Bound5.FiniteA4Residual
+warning: D1Bound5/FiniteA4Residual.lean:104:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3704/3739] Replayed D1Bound5.FiniteA4Approximation
+warning: D1Bound5/FiniteA4Approximation.lean:79:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteA4Approximation.lean:51:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA4Approximation.lean:79:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3705/3739] Replayed D1Bound5.FiniteA4Interval
+warning: D1Bound5/FiniteA4Interval.lean:89:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteA4Interval.lean:84:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA4Interval.lean:84:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA4Interval.lean:94:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA4Interval.lean:89:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3706/3739] Replayed D1Bound5.FiniteA5Matrix
+warning: D1Bound5/FiniteA5Matrix.lean:60:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Matrix.lean:66:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3707/3739] Replayed D1Bound5.FiniteA5IntegralRows
+warning: D1Bound5/FiniteA5IntegralRows.lean:56:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3708/3739] Replayed D1Bound5.FiniteA5Coefficients
+warning: D1Bound5/FiniteA5Coefficients.lean:38:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:47:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:56:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:65:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:74:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:83:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3710/3739] Replayed D1Bound5.FiniteA5ResidueRow0
+warning: D1Bound5/FiniteA5ResidueRow0.lean:47:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3711/3739] Replayed D1Bound5.FiniteA5ResidueRow1
+warning: D1Bound5/FiniteA5ResidueRow1.lean:47:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3712/3739] Replayed D1Bound5.FiniteA5ResidueRow2
+warning: D1Bound5/FiniteA5ResidueRow2.lean:47:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3714/3739] Replayed D1Bound5.FiniteA5Residual
+warning: D1Bound5/FiniteA5Residual.lean:104:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3715/3739] Replayed D1Bound5.FiniteA5Approximation
+warning: D1Bound5/FiniteA5Approximation.lean:79:12: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteA5Approximation.lean:51:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Approximation.lean:79:12: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3716/3739] Replayed D1Bound5.FiniteA5Interval
+warning: D1Bound5/FiniteA5Interval.lean:89:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteA5Interval.lean:84:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Interval.lean:84:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Interval.lean:94:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Interval.lean:89:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3718/3739] Replayed D1Bound5.FiniteMBennettIdentity
+warning: D1Bound5/FiniteMBennettIdentity.lean:104:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteMBennettIdentity.lean:106:0: automatically included section variable(s) unused in theorem `D1Bound5.finiteMNodes_injective`:
+  [CharZero F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3719/3739] Replayed D1Bound5.FiniteMIntegralRows
+warning: D1Bound5/FiniteMIntegralRows.lean:36:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3721/3739] Replayed D1Bound5.FiniteMResidualPoint
+warning: D1Bound5/FiniteMResidualPoint.lean:67:26: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteMNodes]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMResidualPoint.lean:60:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteMResidualPoint.lean:111:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteMResidualPoint.lean:60:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3722/3739] Replayed D1Bound5.FiniteMResidual
+warning: D1Bound5/FiniteMResidual.lean:59:44: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteMRowFactor]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FiniteMResidual.lean:75:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3723/3739] Replayed D1Bound5.FiniteMRowBound
+warning: D1Bound5/FiniteMRowBound.lean:21:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteMRowBound.lean:24:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteMRowBound.lean:27:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteMRowBound.lean:21:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/FiniteMRowBound.lean:24:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/FiniteMRowBound.lean:27:10: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/FiniteMRowBound.lean:47:66: This simp argument is unused:
+  add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteMRowForm, Matrix.mulVec, dotProduct, Fin.sum_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3725/3739] Replayed D1Bound5.FiniteMInterval
+warning: D1Bound5/FiniteMInterval.lean:68:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteMInterval.lean:73:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FiniteMInterval.lean:63:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteMInterval.lean:63:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteMInterval.lean:68:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: D1Bound5/FiniteMInterval.lean:73:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [3726/3739] Replayed D1Bound5.AllLargeForcedPWindow
+info: D1Bound5/AllLargeForcedPWindow.lean:206:0: 'D1Bound5.IsD1Tuple.all_large_forced_P_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3727/3739] Replayed D1Bound5.FinitePMatrix
+warning: D1Bound5/FinitePMatrix.lean:97:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3728/3739] Replayed D1Bound5.FinitePIntegralRows
+warning: D1Bound5/FinitePIntegralRows.lean:172:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [3730/3739] Replayed D1Bound5.FinitePResidualIdentity
+warning: D1Bound5/FinitePResidualIdentity.lean:112:25: This simp argument is unused:
+  Finset.sum_range_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_zero, h0, h1, h2, h3, h4, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:112:48: This simp argument is unused:
+  Finset.sum_range_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, h0, h1, h2, h3, h4, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:6: This simp argument is unused:
+  h0
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h1, h2, h3, h4, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:9: This simp argument is unused:
+  h1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h2, h3, h4, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:12: This simp argument is unused:
+  h2
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h1, h3, h4, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:15: This simp argument is unused:
+  h3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h1, h2, h4, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:18: This simp argument is unused:
+  h4
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h1, h2, h3, h5, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:21: This simp argument is unused:
+  h5
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h1, h2, h3, h4, h6, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:24: This simp argument is unused:
+  h6
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h1, h2, h3, h4, h5, h7]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:113:27: This simp argument is unused:
+  h7
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [finitePPairResidual, finitePPairTail, finiteQHalfRemainder, Fin.sum_univ_succ,
+    Finset.sum_range_succ, Finset.sum_range_zero, h0, h1, h2, h3, h4, h5, h6]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePResidualIdentity.lean:123:36: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3731/3739] Replayed D1Bound5.FinitePMonomial
+warning: D1Bound5/FinitePMonomial.lean:42:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3732/3739] Replayed D1Bound5.FinitePLeadingBound
+warning: D1Bound5/FinitePLeadingBound.lean:38:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3734/3739] Replayed D1Bound5.FinitePTailBound
+warning: D1Bound5/FinitePTailBound.lean:26:58: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [U, C, norm_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePTailBound.lean:26:67: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [U, C, norm_div]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePTailBound.lean:42:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FinitePTailBound.lean:126:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3736/3739] Replayed D1Bound5.FinitePRowBound
+warning: D1Bound5/FinitePRowBound.lean:15:22: This simp argument is unused:
+  add_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finitePRowForm, finitePRootColumn, Matrix.mulVec, dotProduct, Fin.sum_univ_succ]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: D1Bound5/FinitePRowBound.lean:42:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3738/3739] Replayed D1Bound5.FinitePInterval
+warning: D1Bound5/FinitePInterval.lean:72:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: D1Bound5/FinitePInterval.lean:67:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FinitePInterval.lean:67:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FinitePInterval.lean:77:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FinitePInterval.lean:72:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [3739/3739] Built D1Bound5.AllLargeImpossible (78s)
+info: D1Bound5/AllLargeImpossible.lean:81:0: 'D1Bound5.IsD1Tuple.all_large_impossible' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3739 jobs).

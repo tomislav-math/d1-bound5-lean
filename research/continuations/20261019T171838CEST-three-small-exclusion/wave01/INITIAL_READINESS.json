@@ -1,0 +1,56 @@
+{
+  "utc": "2026-10-19T15:20:40.381679+00:00",
+  "unknown": [],
+  "targets": {
+    "ThreeAnchorDetailedAlternative": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "ThreeSmallPairAlternative": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorDetailedAlternative"
+      ]
+    },
+    "ThreeSmallLargeExtensions": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallPairAlternative",
+        "ThreeAnchorDetailedAlternative"
+      ]
+    },
+    "ThreeSmallFixedScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallLargeExtensions",
+        "ThreeSmallPairAlternative",
+        "ThreeAnchorDetailedAlternative"
+      ]
+    },
+    "ThreeSmallFixedExtension": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallFixedScalar",
+        "ThreeSmallLargeExtensions",
+        "ThreeSmallPairAlternative",
+        "ThreeAnchorDetailedAlternative"
+      ]
+    },
+    "ThreeSmallExclusion": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeSmallFixedExtension",
+        "ThreeSmallFixedScalar",
+        "ThreeSmallLargeExtensions",
+        "ThreeSmallPairAlternative",
+        "ThreeAnchorDetailedAlternative"
+      ]
+    }
+  }
+}

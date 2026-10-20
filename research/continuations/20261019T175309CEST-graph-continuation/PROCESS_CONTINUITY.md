@@ -1,0 +1,3 @@
+# Process continuity
+
+All compiler and checker sessions launched in this continuation have collected terminal tool results: pilot audit 18213 (0), arithmetic parts 18360 (0), parent join builds 19452 (0), initial syntax-failing audit 19518 (1), and corrected audit 19596 (0). The original predecessor pilot terminal session PID was not retained in its collected-process record; its two successful guarded per-module receipts and completed batch console are preserved, and both modules were subsequently replayed successfully in this continuation. No original terminal PID or exit is fabricated, and the earlier build batch was not rerun.

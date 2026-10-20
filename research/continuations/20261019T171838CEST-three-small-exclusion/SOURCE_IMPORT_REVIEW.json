@@ -1,0 +1,1681 @@
+{
+  "count": 224,
+  "modules": {
+    "ThreeAnchorDetailedAlternative": {
+      "sha256": "a5a75d25f4e5952898c87a00a14032abe399abc357749c9d62221714eb3c9b9a",
+      "imports": [
+        "D1Bound5.ThreeGeneralWindow",
+        "D1Bound5.CoherentThreeZeroBootstrap",
+        "D1Bound5.TwoSmallTupleInputs"
+      ]
+    },
+    "ThreeGeneralWindow": {
+      "sha256": "672e1e3d605f06db37de02cec597d627f04713038fc2c51993a56e88102920bc",
+      "imports": [
+        "D1Bound5.CoherentThreeGeneral",
+        "D1Bound5.FourAnchorVWindow"
+      ]
+    },
+    "CoherentThreeGeneral": {
+      "sha256": "3d70781b1840256782f08bbde98695e566d97e604c0ab97a7731d5a9f2432486",
+      "imports": [
+        "D1Bound5.CoherentFormBounds"
+      ]
+    },
+    "CoherentFormBounds": {
+      "sha256": "c03d23c1aa78f01b328715b302c1ec28dd87b243d972f665963735dee00e4981",
+      "imports": [
+        "D1Bound5.CoherentQuotientForms",
+        "D1Bound5.CoherentNearOne"
+      ]
+    },
+    "CoherentQuotientForms": {
+      "sha256": "392bcc4a54c87594a3594b5daa5b4ef8fcad70a5934eefb672cd5a7b190f86a4",
+      "imports": [
+        "D1Bound5.CoherentIntegralForms",
+        "D1Bound5.CoherentPolynomialWeights"
+      ]
+    },
+    "CoherentIntegralForms": {
+      "sha256": "81e6a044e834ea1f7a20cfce931dfefd9cdd8cbc6a1dc7467c69328d64c38e4c",
+      "imports": [
+        "D1Bound5.CoherentAnalyticInterpolation",
+        "D1Bound5.FullRingBridge"
+      ]
+    },
+    "CoherentAnalyticInterpolation": {
+      "sha256": "289b0bd79153d270dd2b679ca68b0d95c46f0054669b3b58cbc13d328e8ce08c",
+      "imports": [
+        "D1Bound5.ComplexHalfBinomial",
+        "D1Bound5.HalfBinomialAnalytic",
+        "D1Bound5.InterpolationWeights",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    "ComplexHalfBinomial": {
+      "sha256": "e7e6f8b11a6f554af427f9bfa36df35a8240f67bed0729f2ba7396a3dc39d624",
+      "imports": [
+        "D1Bound5.HalfBinomialConvolutionAbs",
+        "D1Bound5.CoherentWeightedRemainder",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    "HalfBinomialConvolutionAbs": {
+      "sha256": "1173ab778ae4d08a2f4654331009133181881091b647e271ed67fd57519e3d85",
+      "imports": [
+        "D1Bound5.HalfBinomialCoefficients"
+      ]
+    },
+    "HalfBinomialCoefficients": {
+      "sha256": "97b0412384b100b3ac306cb8297135156f099ce2af7ece88037027b2b15bd23b",
+      "imports": [
+        "Mathlib.RingTheory.Binomial",
+        "Mathlib.Algebra.BigOperators.NatAntidiagonal",
+        "D1Bound5.CoherentWeightedRemainder"
+      ]
+    },
+    "CoherentWeightedRemainder": {
+      "sha256": "2758a368bb264ac87ab368841c49c3a14a5ce140db6a7ea9c1e62cd97457ff48",
+      "imports": [
+        "D1Bound5.CoherentMajorant"
+      ]
+    },
+    "CoherentMajorant": {
+      "sha256": "7556732be060ea55e0263542b247cb96b16048503d14b4fd541c9746cc7af0d4",
+      "imports": [
+        "D1Bound5.HsymmSummability",
+        "Mathlib.Analysis.SpecificLimits.Normed"
+      ]
+    },
+    "HsymmSummability": {
+      "sha256": "592835d9084304e364d98889ecdfa742c48241dc735f5f7280ef640d86c616fa",
+      "imports": [
+        "D1Bound5.ComplexHsymmNorm",
+        "Mathlib.Analysis.SpecificLimits.Normed"
+      ]
+    },
+    "ComplexHsymmNorm": {
+      "sha256": "c7252d7667b324417f5f8a714dc25e995730949e38f38c8de4aa92481c81dc43",
+      "imports": [
+        "D1Bound5.HomogeneousSymmetric",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Data.Sym.Card",
+        "Mathlib.Analysis.Normed.Ring.Basic"
+      ]
+    },
+    "HomogeneousSymmetric": {
+      "sha256": "9ca0c1b5630feef5d0a34c972d9c43d84be51f3ce74b855f5c9873ea76bd8466",
+      "imports": [
+        "Mathlib.RingTheory.MvPolynomial.Symmetric.Defs",
+        "Mathlib.Data.Sym.Basic"
+      ]
+    },
+    "HalfBinomialAnalytic": {
+      "sha256": "109e12b103be56576f2b508ea1bde2f80f1c2a5c9319f282768950102447591a",
+      "imports": [
+        "D1Bound5.HalfBinomialCoefficients",
+        "Mathlib.Analysis.Analytic.Binomial"
+      ]
+    },
+    "InterpolationWeights": {
+      "sha256": "f0694cf6e24749b6ebbea5b804a44acbab942bf3fc03c6d3a67996fffcda18a7",
+      "imports": [
+        "D1Bound5.LagrangeHomogeneous",
+        "D1Bound5.ReciprocalAnchors"
+      ]
+    },
+    "LagrangeHomogeneous": {
+      "sha256": "b4a9130e2e09325e0a7c90a60c13433e1e3d45746589329d45719e084b45b442",
+      "imports": [
+        "D1Bound5.HomogeneousSymmetric",
+        "D1Bound5.LagrangeAdjunction",
+        "Mathlib.Data.Finset.Insert"
+      ]
+    },
+    "LagrangeAdjunction": {
+      "sha256": "8078b0e0b630a0efdfdb1b29b441485777d7118007ce69e74197ac884086e248",
+      "imports": [
+        "Mathlib.LinearAlgebra.Lagrange"
+      ]
+    },
+    "ReciprocalAnchors": {
+      "sha256": "0eef21f646e4e303b7482f6be00f9e043fad50634704078870004bfb326da97b",
+      "imports": [
+        "Mathlib.LinearAlgebra.Lagrange"
+      ]
+    },
+    "FullRingBridge": {
+      "sha256": "dc7878b5987408dc5ad74248ad83af5608a906791f27df468ed3d05ac252ac2f",
+      "imports": [
+        "D1Bound5.FullRingBasis",
+        "D1Bound5.ComplexCoordinates",
+        "D1Bound5.Specification",
+        "D1Bound5.OneThree"
+      ]
+    },
+    "FullRingBasis": {
+      "sha256": "7a7a55f350ab7d5224275914efa11b126ec34a9ae9cc9e505c2669503411924c",
+      "imports": [
+        "D1Bound5.CoordinateChange",
+        "Mathlib.NumberTheory.NumberField.Norm",
+        "Mathlib.LinearAlgebra.Dimension.Free",
+        "Mathlib.Data.Int.GCD",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "CoordinateChange": {
+      "sha256": "9b6bb34c1875a40d3412565a34153ddaa67227fb9054d869e7926e05c690437d",
+      "imports": [
+        "D1Bound5.Coordinates"
+      ]
+    },
+    "Coordinates": {
+      "sha256": "da0cb0c42a6044e813dcdaaa1831735e6baddba8fa16b037f5289e53bcfae065",
+      "imports": [
+        "Mathlib.Algebra.QuadraticAlgebra.Basic",
+        "Mathlib.Tactic.Linarith"
+      ]
+    },
+    "ComplexCoordinates": {
+      "sha256": "1683447b1e232bc1f4d7a3f22a33ac3030c9c47df02e5a5ff8d90857c32c1858",
+      "imports": [
+        "D1Bound5.Coordinates",
+        "Mathlib.Analysis.Complex.Norm",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "Specification": {
+      "sha256": "60d7ff20e6ffc449c6452bceb3b22f98c1db628f9ed34831c674a58bbcf40b50",
+      "imports": [
+        "D1Bound5.Basic",
+        "Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex"
+      ]
+    },
+    "Basic": {
+      "sha256": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+      "imports": [
+        "Mathlib.Algebra.Ring.Equiv",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Algebra.Ring.Basic"
+      ]
+    },
+    "OneThree": {
+      "sha256": "c460b2250b70545a8f61a27e15dc979839749602cbbccd3fc8fadf6e21e02682",
+      "imports": [
+        "D1Bound5.Coordinates",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "CoherentPolynomialWeights": {
+      "sha256": "f098961571ae9eda9b1aeb7c0bb7cf7d0b039a9b7e5f64da44f922daabe473a5",
+      "imports": [
+        "D1Bound5.CoherentAnalyticInterpolation",
+        "Mathlib.Data.Fin.VecNotation"
+      ]
+    },
+    "CoherentNearOne": {
+      "sha256": "2bc9cb36fbc13ebd4a45c12aad522c318dab7df9ff1f0b30190b7ecf486f48dd",
+      "imports": [
+        "D1Bound5.CoherentAnalyticInterpolation"
+      ]
+    },
+    "FourAnchorVWindow": {
+      "sha256": "745b5229447b46b23cd565d6e05245ce882a6a77d258e5d7beee2c8be63afe71",
+      "imports": [
+        "D1Bound5.FullRingThreeSelection",
+        "D1Bound5.FiniteClosedWindow"
+      ]
+    },
+    "FullRingThreeSelection": {
+      "sha256": "2e2cbb4843f28a0f2078cbc079307336d3600266b5a7fc9be4978928cce50c2d",
+      "imports": [
+        "D1Bound5.CoherentThreeSeparated"
+      ]
+    },
+    "CoherentThreeSeparated": {
+      "sha256": "59ed14d9f5e2f81a9db661347cad4ddf2d3b2b7ec38892dfe2a054a970e09ed2",
+      "imports": [
+        "D1Bound5.CoherentRetainedAnalyticData",
+        "D1Bound5.CoherentThreeNonvanishing"
+      ]
+    },
+    "CoherentRetainedAnalyticData": {
+      "sha256": "e4a665d10b2869f821502c2c77658404842057b13044350eb4f7b226404c0728",
+      "imports": [
+        "D1Bound5.CoherentRetainedIntegral"
+      ]
+    },
+    "CoherentRetainedIntegral": {
+      "sha256": "8fac0734c7218c5f7863cf6315d86f4eee91becdf95c83fd3622b76ed6b54058",
+      "imports": [
+        "D1Bound5.CoherentParameterForms",
+        "D1Bound5.CoherentTwoMainGap"
+      ]
+    },
+    "CoherentParameterForms": {
+      "sha256": "374d5b2d6781c171ef752c7123026755c8c7a83017464b5219e1a859229c8703",
+      "imports": [
+        "D1Bound5.CoherentThreeParameters"
+      ]
+    },
+    "CoherentThreeParameters": {
+      "sha256": "ca0fac013bc4ef76939f023e46143eabcee36be640a6d47b13f0373264757949",
+      "imports": [
+        "D1Bound5.CoherentFormBounds",
+        "D1Bound5.HalfBinomialLowDegree"
+      ]
+    },
+    "HalfBinomialLowDegree": {
+      "sha256": "17b2ae19d3894d4320d1ae42928a667c34b0cf5a2aa0480ab6650a21df9652c5",
+      "imports": [
+        "D1Bound5.ComplexHalfBinomial",
+        "Mathlib.Algebra.BigOperators.NatAntidiagonal"
+      ]
+    },
+    "CoherentTwoMainGap": {
+      "sha256": "c0509ec02d08b12069253aa8808767ae8f26ee3893a3c5b4a0de91ed1e4a0cfd",
+      "imports": [
+        "D1Bound5.CoherentTwoGap"
+      ]
+    },
+    "CoherentTwoGap": {
+      "sha256": "9b03b858f3c9928eaa8ca4f9e63d4ac4f91f397c8d8e6a3896dbdcf15993ec4f",
+      "imports": [
+        "D1Bound5.CoherentTwoUpper",
+        "D1Bound5.CoherentTwoSize"
+      ]
+    },
+    "CoherentTwoUpper": {
+      "sha256": "48f29479abf4d160e2b566ed3b872b4c44625f1795d166a6ef4424ed0069adec",
+      "imports": [
+        "D1Bound5.CoherentFormBounds",
+        "D1Bound5.HalfBinomialLowDegree"
+      ]
+    },
+    "CoherentTwoSize": {
+      "sha256": "8a8f6db3352296dc34c3bf72970d3d3c0c58939fc28136095cce2e2e458acdfa",
+      "imports": [
+        "D1Bound5.CoherentTwoVanishing",
+        "D1Bound5.CoherentQuotientForms"
+      ]
+    },
+    "CoherentTwoVanishing": {
+      "sha256": "3b9611037cfb35deff1d19449ec5b783d2b2588efa17cbfa510be1c3878acd11",
+      "imports": [
+        "D1Bound5.CoherentIntegralForms"
+      ]
+    },
+    "CoherentThreeNonvanishing": {
+      "sha256": "20f76d470fd8a77be69b6cbe7c960d5062bc8bb2410754eb1f27bcf0090be809",
+      "imports": [
+        "D1Bound5.CoherentThreeSimultaneous"
+      ]
+    },
+    "CoherentThreeSimultaneous": {
+      "sha256": "ee201a480813e6432c988412c0b0b54c06b4815f872ad14ff04a828a0dbc941f",
+      "imports": [
+        "D1Bound5.CoherentQuotientForms",
+        "Mathlib.LinearAlgebra.Lagrange",
+        "Mathlib.Tactic.ComputeDegree"
+      ]
+    },
+    "FiniteClosedWindow": {
+      "sha256": "c76f227fdc7536f8fd4a58375a484ac2d5bdae3cf78c3ac5339546d0024182fc",
+      "imports": [
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity"
+      ]
+    },
+    "CoherentThreeZeroBootstrap": {
+      "sha256": "b54246d0d1c9cfd8828a4478b051dd30ad348a9516f72094e48c67fab1b6cf30",
+      "imports": [
+        "D1Bound5.CoherentThreeGeneral",
+        "D1Bound5.CoherentParameterForms"
+      ]
+    },
+    "TwoSmallTupleInputs": {
+      "sha256": "c86ee9706a0079985443dc0486721f1de2b461a315650061cc8ea4e3e0ef5b5b",
+      "imports": [
+        "D1Bound5.TwoSmallOrdinaryHeight",
+        "D1Bound5.FourAnchorVWindow",
+        "D1Bound5.CrossBlockTuple",
+        "D1Bound5.FrontierLargeTuple",
+        "D1Bound5.MixedProductFourGrowth"
+      ]
+    },
+    "TwoSmallOrdinaryHeight": {
+      "sha256": "e2552609c32a48ca7942880be1c71c76b5c34fb2582e228c1345936b5eda4e5a",
+      "imports": [
+        "D1Bound5.FullRingOrdinaryHeight",
+        "D1Bound5.BennettRateLower",
+        "D1Bound5.TwoSmallHeightScalar"
+      ]
+    },
+    "FullRingOrdinaryHeight": {
+      "sha256": "8899269e1cc08e9d24a38236bc862c59ba7f8badc869787d9bb0f0e08c91243a",
+      "imports": [
+        "D1Bound5.OrdinaryHeightEnvelope",
+        "D1Bound5.BennettRootTransfer"
+      ]
+    },
+    "OrdinaryHeightEnvelope": {
+      "sha256": "b7c784fdb6c0b0ae3ce408900a9767c5e55c8d60707a9479b03b7dc8293b12ac",
+      "imports": [
+        "D1Bound5.OrdinaryLog10"
+      ]
+    },
+    "OrdinaryLog10": {
+      "sha256": "09aeaea7ebd8948074c88ecfb8ed793209871b3b024d7443a02f1048da4ea91c",
+      "imports": [
+        "D1Bound5.OrdinaryHeightScalar"
+      ]
+    },
+    "OrdinaryHeightScalar": {
+      "sha256": "0823b901aedbcca1a333b2b988ab8e6173c80406182e7af0372435df321e588d",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Algebra.Order.Floor.Semiring",
+        "Mathlib.Tactic"
+      ]
+    },
+    "BennettRootTransfer": {
+      "sha256": "a38bf0ffc8b2ba8c102ba5867c75b61a824a8d23c6fce61a35bfcc498b7a884a",
+      "imports": [
+        "D1Bound5.BennettRootApproximation",
+        "D1Bound5.BennettIntegralRowSelection",
+        "D1Bound5.BennettWeightedHeight",
+        "D1Bound5.BennettTwoResidualRate"
+      ]
+    },
+    "BennettRootApproximation": {
+      "sha256": "ca1061aebc87736a011fd6e5cb0011ac939b7397422bdbe21a20c1861b490805",
+      "imports": [
+        "D1Bound5.BennettRootBranch",
+        "D1Bound5.BennettTwoIntegralEntries",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "BennettRootBranch": {
+      "sha256": "a0ee90a754235b40717fef7f93fd2f0bd9c46c41e8fba43c2c193bb31c76b5b1",
+      "imports": [
+        "D1Bound5.CoherentAnalyticInterpolation"
+      ]
+    },
+    "BennettTwoIntegralEntries": {
+      "sha256": "07d63d84699ae294fc3d395f046972fa36aa179a18de306e5f612beceaaf5f1b",
+      "imports": [
+        "D1Bound5.BennettTwoIntegralSummands",
+        "D1Bound5.BennettResiduePolynomials",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    "BennettTwoIntegralSummands": {
+      "sha256": "cf848c27c1e7b66b43f1bb2e9f008252599e35de774adedcbacb56ab48e836d3",
+      "imports": [
+        "D1Bound5.BennettTwoDenominatorClearing",
+        "D1Bound5.BennettSubringSums"
+      ]
+    },
+    "BennettTwoDenominatorClearing": {
+      "sha256": "21eca1644697a9c747a683cd3c26583cb9a60c7838c517047d556b782f76b0da",
+      "imports": [
+        "D1Bound5.BennettClearedResidues"
+      ]
+    },
+    "BennettClearedResidues": {
+      "sha256": "ec76df5d4e2c4d6b07d0919f3d7f1eca9b85a57c220d930e6ae87c93827d8f29",
+      "imports": [
+        "D1Bound5.BennettPoleSeries",
+        "Mathlib.Algebra.Polynomial.BigOperators",
+        "Mathlib.Algebra.Polynomial.Degree.Operations",
+        "Mathlib.Tactic.Ring",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettPoleSeries": {
+      "sha256": "d467fe1ce7d532a4e4fe7ebbe139b749331fe498c06b5ac2897ed0a4d7fa6354",
+      "imports": [
+        "Mathlib.RingTheory.PowerSeries.Binomial",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "BennettSubringSums": {
+      "sha256": "5c21c49f96a2c66d645b20532b67dda8cde35833f4e0f3fe6b545b7454d81ecf",
+      "imports": [
+        "D1Bound5.BennettBinomialIntegrality"
+      ]
+    },
+    "BennettBinomialIntegrality": {
+      "sha256": "f95293967308ba92e9451def9a6f848adc0cc2ec40690f494052e3d6316f0262",
+      "imports": [
+        "Mathlib.RingTheory.Binomial",
+        "Mathlib.Combinatorics.Enumerative.Catalan.Basic",
+        "Mathlib.Algebra.BigOperators.NatAntidiagonal",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "BennettResiduePolynomials": {
+      "sha256": "5264fd8f08d4a6fb748bab8f101f05ca183c3e4658b02954972b81e086f0144d",
+      "imports": [
+        "D1Bound5.BennettClearedResidues"
+      ]
+    },
+    "BennettIntegralRowSelection": {
+      "sha256": "9c3c5f22bb6cb848bdf27168f61bbb1b8947f740ff7556d2698f7ee50542b384",
+      "imports": [
+        "D1Bound5.BennettTwoIntegralMatrix",
+        "D1Bound5.FullRingBridge",
+        "Mathlib.LinearAlgebra.Matrix.NonsingularInverse"
+      ]
+    },
+    "BennettTwoIntegralMatrix": {
+      "sha256": "136894d1b4f549edd11ad783443c9dfcdff9dc56c2e0bd789e83020f9f2279d2",
+      "imports": [
+        "D1Bound5.BennettTwoIntegralEntries",
+        "D1Bound5.BennettDeterminantNonzero",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "BennettDeterminantNonzero": {
+      "sha256": "164557a33c15c3cbb3b959546eec9a30e4643b3c84fcd2c4978c868aa62a1f8f",
+      "imports": [
+        "D1Bound5.BennettDeterminantFormula",
+        "D1Bound5.BennettChooseNonzero"
+      ]
+    },
+    "BennettDeterminantFormula": {
+      "sha256": "f98a83f3277331ffd79b4bad983ece2c8026e08c5e60f13dc8b325624528de0f",
+      "imports": [
+        "D1Bound5.BennettNodeRemoval"
+      ]
+    },
+    "BennettNodeRemoval": {
+      "sha256": "744b0d9ca6cef7f147ff8e1fb3ed54499f22a4c9c12ff289d69e5603296721b1",
+      "imports": [
+        "D1Bound5.BennettDeterminantConstant",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    "BennettDeterminantConstant": {
+      "sha256": "267ae930e881e7b102ec7dd3ddb0469bc45ab29e4985e0503efec75e7c50bb50",
+      "imports": [
+        "D1Bound5.BennettResidualCancellation",
+        "Mathlib.Algebra.Polynomial.Roots",
+        "Mathlib.Algebra.CharZero.Infinite"
+      ]
+    },
+    "BennettResidualCancellation": {
+      "sha256": "0e8f4d1dac16aef29c7622ad8fa6e48d05646e38a9ebaf133da673991996797d",
+      "imports": [
+        "D1Bound5.BennettResiduePolynomials",
+        "D1Bound5.BennettBinomialTransfer",
+        "D1Bound5.BennettLocalResidues",
+        "D1Bound5.BennettResidualDeterminant",
+        "Mathlib.RingTheory.PowerSeries.Trunc"
+      ]
+    },
+    "BennettBinomialTransfer": {
+      "sha256": "7c8a669a4f1cc287328c81f5b671e332dd23a6d5cc77c366017077852274896c",
+      "imports": [
+        "Mathlib.RingTheory.PowerSeries.Binomial",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "BennettLocalResidues": {
+      "sha256": "69884bc84f14bf065cb46a21f71bb9f253dca11c8d085058e033df4ac0004d31",
+      "imports": [
+        "D1Bound5.BennettPartialFractions",
+        "D1Bound5.BennettPoleSeries"
+      ]
+    },
+    "BennettPartialFractions": {
+      "sha256": "010f048f17daf1a97c4058a3ed6d941a8ab25f1f4871529526b7412bcf71a21c",
+      "imports": [
+        "D1Bound5.BennettResidueCoefficient",
+        "Mathlib.Algebra.Polynomial.PartialFractions"
+      ]
+    },
+    "BennettResidueCoefficient": {
+      "sha256": "8c207032d119b0629e3cee3a36cfe0f7dd94d73784c8b28b8cba78efa262f829",
+      "imports": [
+        "Mathlib.Algebra.Polynomial.BigOperators",
+        "Mathlib.Algebra.Polynomial.RingDivision",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettResidualDeterminant": {
+      "sha256": "d4ad136bba1428279a794309f2af79d21c79a906eda481e0c4808281896bf444",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Polynomial",
+        "Mathlib.Algebra.Polynomial.Div"
+      ]
+    },
+    "BennettChooseNonzero": {
+      "sha256": "242284e834a07d1f10f92c6ff0dc397a65048f9ca805d58c05766b00a9bc4ab5",
+      "imports": [
+        "Mathlib.RingTheory.Binomial",
+        "Mathlib.Tactic.LinearCombination",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettWeightedHeight": {
+      "sha256": "75e011686e317cc4f4aee29eb48fc02385e388f50e84d12c29ee7a3ad4bb85f9",
+      "imports": [
+        "D1Bound5.BennettTwoHeightBounds"
+      ]
+    },
+    "BennettTwoHeightBounds": {
+      "sha256": "fdaa812fbb34a8a666e2436a20b9c6dd6a699844aa0547a9a65c1f759aa97515",
+      "imports": [
+        "D1Bound5.BennettTwoEntryBounds",
+        "D1Bound5.BennettHeightNormalization"
+      ]
+    },
+    "BennettTwoEntryBounds": {
+      "sha256": "14876837f679d01eed3a777728ec991e30224838aed15293edc00f667fea9a45",
+      "imports": [
+        "D1Bound5.BennettLocalCoefficientBound",
+        "D1Bound5.BennettTwoIntegralEntries"
+      ]
+    },
+    "BennettLocalCoefficientBound": {
+      "sha256": "fd4a0f2effe871e8ebc1c24036cd22f28f05f6913ef472311d8f40670735ea89",
+      "imports": [
+        "D1Bound5.BennettCoefficientMajorant",
+        "D1Bound5.BennettPositiveSeries",
+        "D1Bound5.BennettTwoCoefficientConstants"
+      ]
+    },
+    "BennettCoefficientMajorant": {
+      "sha256": "52f2dc90c9817830bd21c1880dfcf0e6477a59dce71efbcde2deafd50273de8e",
+      "imports": [
+        "D1Bound5.BennettClearedResidues",
+        "D1Bound5.BennettBinomialTransfer",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity"
+      ]
+    },
+    "BennettPositiveSeries": {
+      "sha256": "97c8e1703cfe77445d9777396cd5b2920aa185f7c75649ef58d66b03bb6b026f",
+      "imports": [
+        "D1Bound5.BennettResidualMajorant",
+        "D1Bound5.BennettPoleSeries",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Topology.Algebra.InfiniteSum.Order",
+        "Mathlib.Tactic.FieldSimp"
+      ]
+    },
+    "BennettResidualMajorant": {
+      "sha256": "b75484763e5bdb67dae9e19c0cad718baf723c8291fc2f17c55a13171ba3db40",
+      "imports": [
+        "D1Bound5.CoherentMajorant",
+        "Mathlib.Analysis.Analytic.Binomial",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettTwoCoefficientConstants": {
+      "sha256": "034cf7aa6d3e853901a9f7bd5f2be74a2cd9af0c2f34f1de6a52a0f80541821b",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettHeightNormalization": {
+      "sha256": "b5e61e5d6eb88e26d2647369bff77c509498654f629d2229d692762546241a03",
+      "imports": [
+        "D1Bound5.BennettTwoCoefficientConstants",
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    "BennettTwoResidualRate": {
+      "sha256": "a959de125fdeac3f4cd04800acc29e3af47d9b0e2de609a39d3e257a4ba1c377",
+      "imports": [
+        "D1Bound5.BennettTwoResidualBound",
+        "D1Bound5.BennettTwoBetaBound",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ]
+    },
+    "BennettTwoResidualBound": {
+      "sha256": "ca93022505dbc1c4d74fe949e488db6dcf4bf0f1cbebbd1635b2a6e0bdfce03a",
+      "imports": [
+        "D1Bound5.BennettResidualBound",
+        "D1Bound5.BennettTwoIntegralMatrix",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "BennettResidualBound": {
+      "sha256": "8d3e33dd05c3d6f083c46bb963cedd7bdf12fde7cdfacb5185f8bb3a9a8ff44f",
+      "imports": [
+        "D1Bound5.BennettResidualEvaluation",
+        "D1Bound5.BennettResidualMajorant",
+        "D1Bound5.BennettRepeatedHsymm",
+        "D1Bound5.BennettChooseGamma"
+      ]
+    },
+    "BennettResidualEvaluation": {
+      "sha256": "d030bc1b298c007855437a873b058dcac35949cc3daa110cf555bdf87d4fd831",
+      "imports": [
+        "D1Bound5.BennettResidualCancellation",
+        "Mathlib.Analysis.Analytic.Binomial",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Tactic.Ring",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettRepeatedHsymm": {
+      "sha256": "2c35125785b6ff0c9b69a4236b7a718a4b75a5a68706b7a3ada2c46efaddc905",
+      "imports": [
+        "D1Bound5.BennettResiduesAtInfinity",
+        "D1Bound5.LagrangeHomogeneous",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma"
+      ]
+    },
+    "BennettResiduesAtInfinity": {
+      "sha256": "58386256effb45be605c396f13b3729aec81aaca34f62f0de6ccd21675f2e5ad",
+      "imports": [
+        "D1Bound5.BennettLocalResidues",
+        "Mathlib.Algebra.Polynomial.Reverse"
+      ]
+    },
+    "BennettChooseGamma": {
+      "sha256": "ed364c7393e2791f97fcc92aa240c1e9f11c109de4d2306c76becc3f16ded4f0",
+      "imports": [
+        "Mathlib.RingTheory.Binomial",
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettTwoBetaBound": {
+      "sha256": "6be0ec4b4373f2704cbfdc6beb52a3796d8063f1c67fa2c91242af5752323182",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "BennettRateLower": {
+      "sha256": "2a05d2a63514f5a778527c82f79a324a012d2e94fcd2c7bd6c3b5978ca22dd1f",
+      "imports": [
+        "D1Bound5.BennettTwoResidualRate"
+      ]
+    },
+    "TwoSmallHeightScalar": {
+      "sha256": "2fc4438e81abf1fb9766cd269fcc8b00c95036ba7e21a2aa00ca22bc65122f73",
+      "imports": [
+        "D1Bound5.OrdinaryLog10"
+      ]
+    },
+    "CrossBlockTuple": {
+      "sha256": "4f7736bd25878caf4f646f90a08781588133d8497db784873e94a7e8e819b915",
+      "imports": [
+        "D1Bound5.CrossBlockGrowth"
+      ]
+    },
+    "CrossBlockGrowth": {
+      "sha256": "3777e46d483287a817b131071ac51c08d504f0feca7cb831dcc041f533f01f1c",
+      "imports": [
+        "D1Bound5.CrossBlockUpper",
+        "D1Bound5.RootMatrixSigns"
+      ]
+    },
+    "CrossBlockUpper": {
+      "sha256": "751cfc90c8157cd148f1ea291c9c2514ef722d3e7ded4f856850dac4856d5706",
+      "imports": [
+        "D1Bound5.RootErrorMagnitude",
+        "D1Bound5.CrossBlockDeterminant",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "RootErrorMagnitude": {
+      "sha256": "090472365e3db009e37be35676f898eae037822776991930233fc88ea690af2b",
+      "imports": [
+        "D1Bound5.RootPerturbation",
+        "D1Bound5.DeterminantNormalization",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "RootPerturbation": {
+      "sha256": "7aaad87d1ed5a59f43b252455f1ebbb4d1f05aeee8eed1621908f38851f48649",
+      "imports": [
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "DeterminantNormalization": {
+      "sha256": "196cc874899f4fdc78056f81619aaf82ead08fc052cbd1257526b60749c0f0be",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+        "Mathlib.Data.Complex.Basic",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "CrossBlockDeterminant": {
+      "sha256": "cd6114eda30e1efcab5d9caabda7a9fe3c6ed338040456745dfdf25b3b2550b3",
+      "imports": [
+        "D1Bound5.FullRingBridge",
+        "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "RootMatrixSigns": {
+      "sha256": "ebdfe7f3d298bcbeeffe34affc4b69cd64eed73b495d78d2fa97d30c70560fcd",
+      "imports": [
+        "D1Bound5.RootErrorMagnitude",
+        "Mathlib.Analysis.Complex.Polynomial.Basic"
+      ]
+    },
+    "FrontierLargeTuple": {
+      "sha256": "912fae040f41448c6e6e89b2258d1258b75fe965d3018aff1fad40a66f5764a1",
+      "imports": [
+        "D1Bound5.FrontierLargeNumeric"
+      ]
+    },
+    "FrontierLargeNumeric": {
+      "sha256": "4bc5dd1e28ae7aa2a88637fecb028683507017fa8e74be43465c456295d143f5",
+      "imports": [
+        "D1Bound5.FrontierLargeCofactors"
+      ]
+    },
+    "FrontierLargeCofactors": {
+      "sha256": "b15ff130f21e4ba2c5a497adcd440be4b87140604e8d066a1d6928f84d85a8bd",
+      "imports": [
+        "D1Bound5.AdjugateCoverage",
+        "D1Bound5.TupleRootMatrixBridge"
+      ]
+    },
+    "AdjugateCoverage": {
+      "sha256": "f2847afb95c8defcb8c59c5324b1cbe3904cb7236a7d79d7d2486bba6b9076b4",
+      "imports": [
+        "D1Bound5.AdjugateFourBounds",
+        "D1Bound5.AdjugateOffDiagonal"
+      ]
+    },
+    "AdjugateFourBounds": {
+      "sha256": "e5781cd0cc609ab6e464413c644de534702a0bca3e48c68b9e060b00a6b88c13",
+      "imports": [
+        "D1Bound5.ProductFourNumericalClosure",
+        "D1Bound5.MatrixOperatorNorm",
+        "D1Bound5.ReferenceMatrixSpectral",
+        "Mathlib.Tactic.FinCases",
+        "Lean.Util.CollectAxioms"
+      ]
+    },
+    "ProductFourNumericalClosure": {
+      "sha256": "fb992c197fe0f50a9f89f189349d42efc0b35d9ebec71e17006e6846eae15712",
+      "imports": [
+        "D1Bound5.ScaledRootRankOneBound",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "ScaledRootRankOneBound": {
+      "sha256": "c3a3acfb01b9b1729ee54b59d46022f3c3bcecd6883975fd4487f105aee5c0b1",
+      "imports": [
+        "D1Bound5.RankOneDeterminantBound"
+      ]
+    },
+    "RankOneDeterminantBound": {
+      "sha256": "b362986f164211020855cf466db1800afbbc67d831c98940ef56e24c7e348a9c",
+      "imports": [
+        "D1Bound5.ReferencePerturbation",
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement"
+      ]
+    },
+    "ReferencePerturbation": {
+      "sha256": "ec86f12a56b6b3edf6e0b06345cfd19c9831619cf6ee0c116777a8c3288467cc",
+      "imports": [
+        "D1Bound5.ReferenceInverseNorm",
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.LinearAlgebra.Matrix.NonsingularInverse"
+      ]
+    },
+    "ReferenceInverseNorm": {
+      "sha256": "53050c6b49ff7b7eabf281a545ecf66dea734cd088fd701c36f0829189368aeb",
+      "imports": [
+        "D1Bound5.ReferenceMatrixSpectral",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "ReferenceMatrixSpectral": {
+      "sha256": "a9d2534dbab31dc06c160d4476f3546ac57b74623f0a03cba8eaeb8e7e822001",
+      "imports": [
+        "D1Bound5.RootMatrixOperatorBound",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "RootMatrixOperatorBound": {
+      "sha256": "bebb47341f2dbce50938d93401ea24ad5d189f7f69df4fffbfa01c87f611352c",
+      "imports": [
+        "D1Bound5.MatrixOperatorNorm",
+        "D1Bound5.DeterminantNormalization"
+      ]
+    },
+    "MatrixOperatorNorm": {
+      "sha256": "e3a215e2d0f7fe9174e19270dccf5ae1e487d675d84922a6f8a84e2966da5d96",
+      "imports": [
+        "D1Bound5.RootMatrixSigns",
+        "Mathlib.LinearAlgebra.Matrix.Permutation",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "AdjugateOffDiagonal": {
+      "sha256": "8c486c90daafb9dd89af32dc3fe1f2ba55d55fc2b7397544af7a0ac1e04b8b6f",
+      "imports": [
+        "D1Bound5.AdjugateFourBounds",
+        "Lean.Util.CollectAxioms"
+      ]
+    },
+    "TupleRootMatrixBridge": {
+      "sha256": "18bf68c70f7461d132ff1bb7a87d58364bb611e213e0471f018bd1b883568dd6",
+      "imports": [
+        "D1Bound5.ProductFourLargeBranch",
+        "D1Bound5.TailIrregular"
+      ]
+    },
+    "ProductFourLargeBranch": {
+      "sha256": "4851402ecfc8290d9255d8a258c4878b20354f6555e88cd106cf24ffdca061f8",
+      "imports": [
+        "D1Bound5.RootDeterminantLower",
+        "D1Bound5.SignedRootMatrixBounds",
+        "D1Bound5.ProductFourNumericalClosure",
+        "D1Bound5.ReferencePerturbation"
+      ]
+    },
+    "RootDeterminantLower": {
+      "sha256": "3d02f2749dfbdd091a145b68010d8c3853da3cc250556f78c0e8042ffaf6746c",
+      "imports": [
+        "D1Bound5.EvenDeterminant",
+        "D1Bound5.DeterminantNormalization",
+        "Mathlib.Analysis.Normed.Group.Basic"
+      ]
+    },
+    "EvenDeterminant": {
+      "sha256": "8be5563bc593805dbec0a0a77973231e6167cbe9b0c64e31ce73f3d46b08cc4c",
+      "imports": [
+        "D1Bound5.FullRingBridge",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+        "Mathlib.Algebra.CharP.Frobenius",
+        "Mathlib.Algebra.CharP.Two",
+        "Mathlib.Data.ZMod.Basic"
+      ]
+    },
+    "SignedRootMatrixBounds": {
+      "sha256": "724ffe1e8c3e601d09fb32390331e3f57a64d8b18daccad6e325bc40b9e20aea",
+      "imports": [
+        "D1Bound5.SymmetricFourDetBound",
+        "D1Bound5.SignedRootAdjugateBound"
+      ]
+    },
+    "SymmetricFourDetBound": {
+      "sha256": "2a8b9f67b260c4208f344e6df6c355fa9cb7ed11896ad19c480cd1c58d7b2c1c",
+      "imports": [
+        "D1Bound5.ProductFourNumericalClosure",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "SignedRootAdjugateBound": {
+      "sha256": "532029917d1e0aa4717eb030adcdb1225b1315c3f920d6c92af4241090d272e5",
+      "imports": [
+        "D1Bound5.AdjugateCoverage",
+        "D1Bound5.RootMatrixSigns"
+      ]
+    },
+    "TailIrregular": {
+      "sha256": "98aee920c9839181f5a78733c62a31450435bbb6574947c82f20fe99ca99dcdd",
+      "imports": [
+        "D1Bound5.SmallTailAllData",
+        "D1Bound5.SmallTailRange",
+        "D1Bound5.TailAnalyticMain"
+      ]
+    },
+    "SmallTailAllData": {
+      "sha256": "b043adcb34167ee12d7125095cb2fb5aa023d0064768e88ccfe344b7e38716d1",
+      "imports": [
+        "D1Bound5.SmallTailData0_1",
+        "D1Bound5.SmallTailModel15"
+      ]
+    },
+    "SmallTailData0_1": {
+      "sha256": "e8193c82da9fe118ab3eb160cf6f8da07be08bcc7943ff257aee829c26a5ca2e",
+      "imports": [
+        "D1Bound5.SmallTailExplicit"
+      ]
+    },
+    "SmallTailExplicit": {
+      "sha256": "1276e7682da7a886b79eccc5e7267d374a94b67c65efc71b70ac09c8660526af",
+      "imports": [
+        "D1Bound5.FiniteTail"
+      ]
+    },
+    "FiniteTail": {
+      "sha256": "4a84a3e4ca3b7d43920e93e12f04cbea329f4d21bc5572c8337e09d252793110",
+      "imports": [
+        "D1Bound5.SquareTest",
+        "D1Bound5.DiskEnumeration",
+        "D1Bound5.Regular",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.IntervalCases"
+      ]
+    },
+    "SquareTest": {
+      "sha256": "adcc13a33378056841f44d21785e69909232e4def68eb73ca742e5a49ce15ac3",
+      "imports": [
+        "D1Bound5.Coordinates",
+        "Mathlib.Data.Int.Sqrt"
+      ]
+    },
+    "DiskEnumeration": {
+      "sha256": "d1d1de7efa3c474d4e36936ae73c743f9c42044bc9487e406a2818230fd2ca53",
+      "imports": [
+        "D1Bound5.Coordinates",
+        "Mathlib.Data.Int.Sqrt",
+        "Mathlib.Data.Int.Interval",
+        "Mathlib.Data.Finset.Prod"
+      ]
+    },
+    "Regular": {
+      "sha256": "216649d224d94c38aed36aa23129fd314ab8957413daa9e4aa3f53dd8156c10a",
+      "imports": [
+        "D1Bound5.Basic",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "SmallTailModel15": {
+      "sha256": "e96aba3f8c1850d6941f20a160242cec6807927449cf2c5c5d3969a2ac4fd551",
+      "imports": [
+        "D1Bound5.FiniteTail"
+      ]
+    },
+    "SmallTailRange": {
+      "sha256": "c865f417a7e67904d3233f7fda419d37747223d0ad8cd78c1681f681b53a4c0d",
+      "imports": [
+        "D1Bound5.FiniteTail",
+        "D1Bound5.FullRingBridge"
+      ]
+    },
+    "TailAnalyticMain": {
+      "sha256": "ecaba9e1e964c7e6c51088002aaaf592031aa2393ee6eb52d94273cfda86b389",
+      "imports": [
+        "D1Bound5.TailAnalytic",
+        "D1Bound5.IrregularGrowth"
+      ]
+    },
+    "TailAnalytic": {
+      "sha256": "5b2309f4fb74010a3b4a60972a7be2b95652fd687910240dc3beb48298c9b28c",
+      "imports": [
+        "D1Bound5.RootPerturbation",
+        "D1Bound5.TailErrorBounds",
+        "Mathlib.Analysis.Complex.Polynomial.Basic"
+      ]
+    },
+    "TailErrorBounds": {
+      "sha256": "4bc1a1931cb13e58318d9d21cfd92884eddf3b1600951c14e0b1db708cae4598",
+      "imports": [
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    "IrregularGrowth": {
+      "sha256": "f449e549f059d0b5ff8d04afd421d9f1c8ec2bba64f1395f4efdedd79016bf4d",
+      "imports": [
+        "D1Bound5.FullRingBridge",
+        "D1Bound5.Regular"
+      ]
+    },
+    "MixedProductFourGrowth": {
+      "sha256": "6405700c83d4efaa313716abc06975c43c8dd7320d44c6d848be130386d5f504",
+      "imports": [
+        "D1Bound5.MixedSignedRootAdjugate",
+        "D1Bound5.TupleRootMatrixBridge",
+        "D1Bound5.WeightedSchur"
+      ]
+    },
+    "MixedSignedRootAdjugate": {
+      "sha256": "7f2604a22f1326cd9e13496498753b6e57f9db865d688f0cab3a2d3db16522f6",
+      "imports": [
+        "D1Bound5.MixedFourAdjugateBound"
+      ]
+    },
+    "MixedFourAdjugateBound": {
+      "sha256": "6b32cd9d498ea075f626860a30165f6ef389e005d96b2569ca3fea4cf0f5bd76",
+      "imports": [
+        "D1Bound5.MixedAdjugateScalarBound",
+        "D1Bound5.MixedAdjugateEnvelope",
+        "D1Bound5.MixedFourDetBound"
+      ]
+    },
+    "MixedAdjugateScalarBound": {
+      "sha256": "49eb841683fd0e7279ce3834daa64c9419ba6b50d0b8860f85374b8a0264de2d",
+      "imports": [
+        "D1Bound5.AdjugateCoverage"
+      ]
+    },
+    "MixedAdjugateEnvelope": {
+      "sha256": "f452ef49f0d5283120370edce69efeffabb48f22241346c2ec9821c339c43131",
+      "imports": [
+        "D1Bound5.WeightedSchur",
+        "D1Bound5.AdjugateCoverage"
+      ]
+    },
+    "WeightedSchur": {
+      "sha256": "0740899bda0b97ce5440dc1a326c7e0aa61aa178424db90f7d296c6acdfafdf8",
+      "imports": [
+        "D1Bound5.WeightedRowCertificate",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+        "Mathlib.Analysis.InnerProductSpace.PiL2"
+      ]
+    },
+    "WeightedRowCertificate": {
+      "sha256": "24e91527c5f644ec2b6289935e81e061377a21fe404f3e2ef431b87e3d5e91b5",
+      "imports": [
+        "D1Bound5.MatrixOperatorNorm",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "MixedFourDetBound": {
+      "sha256": "863a07b764253ce476290edc497efddecf3c39545921323e93756d8912d3da78",
+      "imports": [
+        "D1Bound5.SymmetricFourDetBound",
+        "D1Bound5.MixedRootMatrixSigns"
+      ]
+    },
+    "MixedRootMatrixSigns": {
+      "sha256": "2e004ca5529f8e5abf67259e26a8270075f09b04d9c8093e81458a83e3680457",
+      "imports": [
+        "D1Bound5.RootErrorMagnitude",
+        "D1Bound5.RootMatrixSigns"
+      ]
+    },
+    "ThreeSmallPairAlternative": {
+      "sha256": "3dc02360d7110c7469529da785f83b480f3aecc6182b6bb58ab6b87d9082a50e",
+      "imports": [
+        "D1Bound5.ThreeAnchorDetailedAlternative"
+      ]
+    },
+    "ThreeSmallLargeExtensions": {
+      "sha256": "9b94e87fede9e57b40903fa59e5b9584a753bc1b7a7bac5f5a4b14f8bc3b391f",
+      "imports": [
+        "D1Bound5.ThreeSmallPairAlternative",
+        "D1Bound5.TwoSmallFifthBound"
+      ]
+    },
+    "TwoSmallFifthBound": {
+      "sha256": "40729d4ab52d8b38a6cbd40d489450ac0c90b2a0c552b8bbb5039ce2f5583798",
+      "imports": [
+        "D1Bound5.TwoSmallMWindow",
+        "D1Bound5.FiniteMInterval",
+        "D1Bound5.TwoSmallLargeCScalar",
+        "D1Bound5.FullRingDirectFour",
+        "D1Bound5.TwoSmallLargeTBound"
+      ]
+    },
+    "TwoSmallMWindow": {
+      "sha256": "01923ebf8661b40e7df02a892c03d641336b952c4de01415c43f072023fbf04f",
+      "imports": [
+        "D1Bound5.TwoSmallHeightScalar",
+        "Mathlib.Tactic"
+      ]
+    },
+    "FiniteMInterval": {
+      "sha256": "53a6f39ac9a59fdf8135626fdfab3e56282ebeb2c05e568f1a8a0d4ed24b420f",
+      "imports": [
+        "D1Bound5.FiniteMFullRing",
+        "D1Bound5.FiniteClosedWindow"
+      ]
+    },
+    "FiniteMFullRing": {
+      "sha256": "ccd1c5fe763a7002b65f94178df335b7e0c574ea0b9cf29c56f7a3dc63944b8e",
+      "imports": [
+        "D1Bound5.FiniteMRowBound"
+      ]
+    },
+    "FiniteMRowBound": {
+      "sha256": "8f362cf2cd05cc79c68cd55d4cd481a8f4757c97b8b62b056279ef4736669437",
+      "imports": [
+        "D1Bound5.FiniteMIntegralRows",
+        "D1Bound5.FiniteMHeight",
+        "D1Bound5.FiniteMResidual",
+        "D1Bound5.FiniteRowRootTransfer"
+      ]
+    },
+    "FiniteMIntegralRows": {
+      "sha256": "6a41917e374548988e846d67ca045f1fa413585ce5c57ae666d21b73fb0a0713",
+      "imports": [
+        "D1Bound5.FiniteMBennettIdentity",
+        "D1Bound5.FullRingBridge"
+      ]
+    },
+    "FiniteMBennettIdentity": {
+      "sha256": "291fd6ba981541548cef4bed5210986ea71cc1c1e28ff467e85be78d671f7779",
+      "imports": [
+        "D1Bound5.FiniteMMatrix",
+        "D1Bound5.BennettDeterminantNonzero",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "FiniteMMatrix": {
+      "sha256": "8af7f9699b9fc84a48e57a25795d84c9aefe6f4ade8e20a65b9b82216db511c9",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+        "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+        "Mathlib.Algebra.BigOperators.Fin",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "FiniteMHeight": {
+      "sha256": "6928941a5a34ad2fa5a5df87a96078a75cfb91e880665ed0fbfc978d07ef85b6",
+      "imports": [
+        "D1Bound5.FiniteMMatrix",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Linarith",
+        "Lean.Elab.Tactic.Omega"
+      ]
+    },
+    "FiniteMResidual": {
+      "sha256": "20b5f3f0240599a870b13dc7bce59f4a645e7c3a3e921eff6e6196205ed5b078",
+      "imports": [
+        "D1Bound5.FiniteMResidualPoint",
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    "FiniteMResidualPoint": {
+      "sha256": "f7bb209498622e9e35161ef7d6d2d014918b6ada1ab43bba06f6efcfedaca12e",
+      "imports": [
+        "D1Bound5.FiniteMBennettIdentity",
+        "D1Bound5.BennettResidualBound",
+        "D1Bound5.FiniteEtaBound"
+      ]
+    },
+    "FiniteEtaBound": {
+      "sha256": "bbe0c480ef14e08f89c2bfd31afb3f5e0e4f98178a555879f1db7d5985f98cf6",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    "FiniteRowRootTransfer": {
+      "sha256": "4495cbe4dcaa55c3acb6a9939094800f79ebe9bac6aca2a6a2211f0d73fd1306",
+      "imports": [
+        "D1Bound5.BennettRootApproximation"
+      ]
+    },
+    "TwoSmallLargeCScalar": {
+      "sha256": "804f219a120af73973c5200ca150147c299fd63ae3573202fc4a1e60072c75cb",
+      "imports": [
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Tactic"
+      ]
+    },
+    "FullRingDirectFour": {
+      "sha256": "26f682adf7b364982556911f0c653055c60090d901726c7071aa654e23955b54",
+      "imports": [
+        "D1Bound5.CoherentDirectFour",
+        "D1Bound5.CoherentQuotientForms",
+        "D1Bound5.FiniteClosedWindow",
+        "D1Bound5.FullRingBridge",
+        "D1Bound5.Basic"
+      ]
+    },
+    "CoherentDirectFour": {
+      "sha256": "f298f052fa0e8fad59aa2ae6bf4f0b0845732c38cbe5210b92112fe6b28bc147",
+      "imports": [
+        "D1Bound5.CoherentFourParameters",
+        "D1Bound5.CoherentVandermondeFourNorm"
+      ]
+    },
+    "CoherentFourParameters": {
+      "sha256": "2e9b9910fdc9ab9d971f73968ff3041629e55002234f11342512ba505d011e8a",
+      "imports": [
+        "D1Bound5.CoherentParameterForms"
+      ]
+    },
+    "CoherentVandermondeFourNorm": {
+      "sha256": "f0df55ad3e2b2681b49c46bd1808bfbe1217c2949341300e1194940143f3e1da",
+      "imports": [
+        "D1Bound5.CoherentPolynomialWeights",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    "TwoSmallLargeTBound": {
+      "sha256": "d6d1d25b09e55be6aeeb64541cc1087985d46cf136bb810d21bad068c88bc67d",
+      "imports": [
+        "D1Bound5.TwoSmallLargeTScalar",
+        "D1Bound5.ThreeAnchorAlternative",
+        "D1Bound5.TwoSmallLargeSBound"
+      ]
+    },
+    "TwoSmallLargeTScalar": {
+      "sha256": "1b6203efdcea0221de771d1a60328cc585980bd3f0ccf1c486409156e649ed47",
+      "imports": [
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Tactic"
+      ]
+    },
+    "ThreeAnchorAlternative": {
+      "sha256": "5095319952ae8d09d25f205937a27e35e48cd8a596a2d21ed57756d4a63418b0",
+      "imports": [
+        "D1Bound5.ThreeGeneralWindow",
+        "D1Bound5.CoherentThreeZeroBootstrap",
+        "D1Bound5.TwoSmallTupleInputs"
+      ]
+    },
+    "TwoSmallLargeSBound": {
+      "sha256": "f88efe117337c840f1e922f0fcc137eb9bb3b6c06403cd0ab2afa19da75c0296",
+      "imports": [
+        "D1Bound5.TwoSmallLargeS"
+      ]
+    },
+    "TwoSmallLargeS": {
+      "sha256": "20bec0ab315fc8a7782d47069ae2c37f9dfb1ee84ae644f662f9d0a5097e8135",
+      "imports": [
+        "D1Bound5.TwoSmallTupleInputs"
+      ]
+    },
+    "ThreeSmallFixedScalar": {
+      "sha256": "d59d2ffa2f67d68b2084d696be49c307e1d6ca76bebadcdcb67883e86b4bbd55",
+      "imports": [
+        "D1Bound5.ThreeSmallLargeExtensions",
+        "D1Bound5.FiniteQInterval"
+      ]
+    },
+    "FiniteQInterval": {
+      "sha256": "93002bc61684705a1dbdf4c53f0dd7e54b963a766cfabd82272bd713d42011b8",
+      "imports": [
+        "D1Bound5.FiniteQFullRing",
+        "D1Bound5.FiniteClosedWindow"
+      ]
+    },
+    "FiniteQFullRing": {
+      "sha256": "3b4b04c21798d328daae1a9ca05b1a3af8fb181a13b9ea165ed60dc00c3f7890",
+      "imports": [
+        "D1Bound5.FiniteQRowBound"
+      ]
+    },
+    "FiniteQRowBound": {
+      "sha256": "791fbd5ab0485888fc2207407e4522dac5c3ad388f70c392e5ef0228d0e3578f",
+      "imports": [
+        "D1Bound5.FiniteQIntegralRows",
+        "D1Bound5.FiniteQHeight",
+        "D1Bound5.FiniteQResidualBound",
+        "D1Bound5.FiniteRowRootTransfer"
+      ]
+    },
+    "FiniteQIntegralRows": {
+      "sha256": "13dbc71d3f13cc35a26b1a62808a9ec3ba2232668209833fc8f21e0bdba9f6ad",
+      "imports": [
+        "D1Bound5.FiniteQMatrix",
+        "D1Bound5.FullRingBridge",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "FiniteQMatrix": {
+      "sha256": "3ee6c257a35cbef87e7863b9221f558f30f7e22b373aafe1a2ee836183738093",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+        "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+        "Mathlib.Algebra.BigOperators.Fin",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    "FiniteQHeight": {
+      "sha256": "86865cf236ac82f61de86bc28514d9e3b24a1d93eff23574b7cf2a6d0efa3d7e",
+      "imports": [
+        "D1Bound5.FiniteQMatrix",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.FinCases"
+      ]
+    },
+    "FiniteQResidualBound": {
+      "sha256": "a3e6f379d6e8b22749f6d6447d2c163488ae6d9c3b3948f32b3749f0bb7a7bac",
+      "imports": [
+        "D1Bound5.FiniteQResidualIdentity",
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    "FiniteQResidualIdentity": {
+      "sha256": "74ab040376af9b42e7ee62656f2fd8f3a92a0111248e8b31465d43a74a137c58",
+      "imports": [
+        "D1Bound5.FiniteQMatrix",
+        "D1Bound5.HalfBinomialAnalytic",
+        "Mathlib.Tactic.FieldSimp"
+      ]
+    },
+    "ThreeSmallFixedExtension": {
+      "sha256": "157e1dbeb8275e633d62d8c5d993c2f8311673086bcd004e4ab57d77aed66696",
+      "imports": [
+        "D1Bound5.ThreeSmallFixedScalar"
+      ]
+    },
+    "ThreeSmallExclusion": {
+      "sha256": "0dc7dba5727b9d1694bbd794d4a0876ffc8c3e3b74991534d3bd30a3608db3bd",
+      "imports": [
+        "D1Bound5.ThreeSmallFixedExtension",
+        "D1Bound5.ThreeSmallSextuple"
+      ]
+    },
+    "ThreeSmallSextuple": {
+      "sha256": "92e6b66ee26fa4969f4ba389855443d9744795188e2160b190dc72e04a9ee52f",
+      "imports": [
+        "D1Bound5.SmallTripleBoundedExtensions"
+      ]
+    },
+    "SmallTripleBoundedExtensions": {
+      "sha256": "48c636c065940c264bf5d45a57d236f9488ed0396e76184df898bebb518e4568",
+      "imports": [
+        "D1Bound5.SmallTripleOrbitProperties"
+      ]
+    },
+    "SmallTripleOrbitProperties": {
+      "sha256": "07ff15f6c03ab8e7ee1a1b77d6f2898bc846565283f65a83ca1bf04790a167ce",
+      "imports": [
+        "D1Bound5.SmallTripleRepresentativeProperties"
+      ]
+    },
+    "SmallTripleRepresentativeProperties": {
+      "sha256": "a83bbabd2bee324566724658a0b1876696641e481ed94e75fb471c1207165f52",
+      "imports": [
+        "D1Bound5.SmallExtensionSymmetry"
+      ]
+    },
+    "SmallExtensionSymmetry": {
+      "sha256": "67e063ccef711bfed6c0611c0e702166cb5f5a03a9533a5385fe57ef43b16f48",
+      "imports": [
+        "D1Bound5.SmallTripleExtensions",
+        "D1Bound5.SmallTripleClassification"
+      ]
+    },
+    "SmallTripleExtensions": {
+      "sha256": "4012985a91d9c7e7f8ef52a242c3eb2b671af1516c44413e2d52d177518230c5",
+      "imports": [
+        "D1Bound5.PairExtensionComplete",
+        "D1Bound5.SmallTripleExtensionData1",
+        "D1Bound5.SmallTripleExtensionData2",
+        "D1Bound5.SmallTripleExtensionData3",
+        "D1Bound5.SmallTripleExtensionData4",
+        "D1Bound5.SmallTripleExtensionData5",
+        "D1Bound5.SmallTripleExtensionData6",
+        "D1Bound5.SmallTripleExtensionData7",
+        "D1Bound5.SmallTripleExtensionData8",
+        "D1Bound5.SmallTripleExtensionData9",
+        "D1Bound5.SmallTripleExtensionData10"
+      ]
+    },
+    "PairExtensionComplete": {
+      "sha256": "924ab489e8d75168ec90c999dcbd5d27e2d982db7928a79976af846ca6b835a6",
+      "imports": [
+        "D1Bound5.PairExtensionCore",
+        "D1Bound5.FullRingDescent"
+      ]
+    },
+    "PairExtensionCore": {
+      "sha256": "d45446b353f1adcd08c1943cfe73040bef48ad11485fc541c7388b34f9e5255f",
+      "imports": [
+        "D1Bound5.SquareTest",
+        "D1Bound5.DiskEnumeration",
+        "D1Bound5.DescentAlgebra"
+      ]
+    },
+    "DescentAlgebra": {
+      "sha256": "cdc9699d8936a77fc1a6ff59d54b2a5e92fe962a175e2215e62e2e02b8375486",
+      "imports": [
+        "D1Bound5.Basic",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "FullRingDescent": {
+      "sha256": "910654eaf77c21677f830c425e228de882932990f2aacb1ab8d02acbad0e4650",
+      "imports": [
+        "D1Bound5.DescentNorm",
+        "D1Bound5.DescentDenominator"
+      ]
+    },
+    "DescentNorm": {
+      "sha256": "e450f6421d89ae185f5175e96fab77ed2aaba23eeb69a15bfdb754a53e2854b4",
+      "imports": [
+        "D1Bound5.DescentAlgebra",
+        "D1Bound5.RootPerturbation",
+        "Mathlib.Analysis.Complex.Polynomial.Basic"
+      ]
+    },
+    "DescentDenominator": {
+      "sha256": "4ea39dd9345b8a90b2de77132f93bba0d65366b0fcc68d814f94aaf0c70fdf97",
+      "imports": [
+        "D1Bound5.FullRingBridge",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    "SmallTripleExtensionData1": {
+      "sha256": "03e5796cc7e31c4d4194e8e368dfed993f810968002b0f261d7097b40a9f996b",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "PairSeedDisks": {
+      "sha256": "78505b817d0fd58b324eb977c7c891cc24704cb83dce618764d353027caf26bb",
+      "imports": [
+        "D1Bound5.PairExtensionCore",
+        "D1Bound5.FastDiskList"
+      ]
+    },
+    "FastDiskList": {
+      "sha256": "60afd777700a3d6a319be0b0145eb86a6f1657a58e26c7947467097b7c482fed",
+      "imports": [
+        "D1Bound5.DiskEnumeration",
+        "Mathlib.Data.List.Range"
+      ]
+    },
+    "SmallTripleExtensionData2": {
+      "sha256": "66875e77685eb2e4ee8ce1ba4229501c18260c5f57e52d69ee57585e35929046",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData3": {
+      "sha256": "463aa620f4230286ba39ef9121676a9c8cc6f5689028ff71b68a2aa01a6062f0",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData4": {
+      "sha256": "7b8ce25ff2a1b1bdeba4661beb87f82d9ff11017abd334d7924447d166c581af",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData5": {
+      "sha256": "0f52c03dcb1aef0af13ae431869add34d508399252e4add0eccf7dd09dc092de",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData6": {
+      "sha256": "36f224d3730e31a0a51a42e087cb11043ed4d384f831a7959f50bfd1ed91e3aa",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData7": {
+      "sha256": "784947cee6255504e305aae62572ff2231ec8392139ceb2d3615de8ad4f2c5f3",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData8": {
+      "sha256": "89ae5eb015cc06ce9d904be1f305c074eb3cd3fb88b017eb23ad5593272ca11e",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData9": {
+      "sha256": "d547b2c59760d0754a4660f0e6f6a2dd995b480c12bf4f53eac6fc574c6b3772",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleExtensionData10": {
+      "sha256": "f02e6c8d015b4e0538aba168e1bf2bb6744d45b1838d92210a569eb6c517214d",
+      "imports": [
+        "D1Bound5.PairSeedDisks"
+      ]
+    },
+    "SmallTripleClassification": {
+      "sha256": "29c06a840b00bae4fa8a3417f349d7002808f0195fa16482f0c5528783af6485",
+      "imports": [
+        "D1Bound5.SmallTripleData",
+        "D1Bound5.SmallQuadruple",
+        "D1Bound5.MaximalCoordinates",
+        "Mathlib.Algebra.Group.Int.Units"
+      ]
+    },
+    "SmallTripleData": {
+      "sha256": "d79644481c842f2a40b2f5554666f54fa185f12915c38d31e4f1b24ec16844da",
+      "imports": [
+        "D1Bound5.SmallTripleCheck",
+        "D1Bound5.SmallQuadrupleData"
+      ]
+    },
+    "SmallTripleCheck": {
+      "sha256": "1f75bcdaa9e326145897ef273ea3989447fff478e71849b1db21c3aa9abd5c19",
+      "imports": [
+        "D1Bound5.SmallQuadrupleCheck"
+      ]
+    },
+    "SmallQuadrupleCheck": {
+      "sha256": "14adf3f10fdc4fa38b0c8c8f25b1d030d41cedd9d36bb1ffe5906209d8835477",
+      "imports": [
+        "D1Bound5.Basic",
+        "D1Bound5.SquareTest",
+        "D1Bound5.DiskEnumeration"
+      ]
+    },
+    "SmallQuadrupleData": {
+      "sha256": "83944223ca113d2d1cc1c359d4a5cef8fb9f895b6e7bf9288b74b8f7a03d8908",
+      "imports": [
+        "D1Bound5.SmallQuadrupleCheck",
+        "Mathlib.Tactic.IntervalCases"
+      ]
+    },
+    "SmallQuadruple": {
+      "sha256": "711961f35418258108807ffc2f351fdfe390fbcae78fcb16809267ab419a0806",
+      "imports": [
+        "D1Bound5.SmallQuadrupleData",
+        "D1Bound5.RationalSquares",
+        "D1Bound5.FullRingBridge",
+        "D1Bound5.Sextuple",
+        "Mathlib.Tactic.IntervalCases"
+      ]
+    },
+    "RationalSquares": {
+      "sha256": "4cd56ab129029a6551801f8c22878c2598ef5298b732a909ebb1ad48e70f5e58",
+      "imports": [
+        "D1Bound5.SquareTest"
+      ]
+    },
+    "Sextuple": {
+      "sha256": "6c1f5ac664f7bb81799f2455c537b967b2cfb9335a5a58979be80cc275c0f766",
+      "imports": [
+        "D1Bound5.Basic",
+        "Mathlib.Data.Fin.Tuple.Sort",
+        "Mathlib.Data.Fintype.EquivFin"
+      ]
+    },
+    "MaximalCoordinates": {
+      "sha256": "db32306018b4cc9c601d0bd15648a6675ec234d51750d3dd04f9988129483527",
+      "imports": [
+        "D1Bound5.FullRingBasis",
+        "Mathlib.Algebra.Squarefree.Basic",
+        "Mathlib.Algebra.Polynomial.Monic"
+      ]
+    },
+    "PairLightArithmeticPrefixConcat": {
+      "sha256": "2a00628c416022cc78732a0b0067542b89f738f591b1289ce4370ba3279d0d3b",
+      "imports": [
+        "D1Bound5.PairLightArithmeticChunkProofs"
+      ]
+    },
+    "PairLightArithmeticChunkProofs": {
+      "sha256": "658b9d78aa5789e1a26cdcfc58f5960c552bb3ae7fdeda34961f362a081828a4",
+      "imports": [
+        "D1Bound5.PairLightArithmeticChunks",
+        "Mathlib.Data.List.Basic"
+      ]
+    },
+    "PairLightArithmeticChunks": {
+      "sha256": "f6567fcbc7792894e8607b67148594c393fe089550470cc632f4beffbdcfaca7",
+      "imports": [
+        "D1Bound5.PairLightArithmetic"
+      ]
+    },
+    "PairLightArithmetic": {
+      "sha256": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb",
+      "imports": [
+        "Init"
+      ]
+    },
+    "SmallPairLightAdaptiveLeft26_000Part00": {
+      "sha256": "aaa3a94b5d43503a9536b8fe1fb3d872bbbe22e6e083c5372a2a364d2d4d29bb",
+      "imports": [
+        "D1Bound5.SmallPairLightAdaptiveData26"
+      ]
+    },
+    "SmallPairLightAdaptiveData26": {
+      "sha256": "8fcbf5018c5c1dbac57bbba6f0cec8a92e2243d8ef255c12bbada752b611c969",
+      "imports": [
+        "D1Bound5.SmallPairLightData26",
+        "D1Bound5.PairLightArithmeticChunks"
+      ]
+    },
+    "SmallPairLightData26": {
+      "sha256": "5846a48684f6c85575a6bcb6b11c73f695438e75f50a0505e9d333ffa48b497d",
+      "imports": [
+        "D1Bound5.PairLightArithmetic"
+      ]
+    }
+  }
+}

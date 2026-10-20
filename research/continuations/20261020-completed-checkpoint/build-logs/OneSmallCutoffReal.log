@@ -1,0 +1,22 @@
+⚠ [1556/1571] Replayed D1Bound5.SmallQuadrupleCheck
+warning: D1Bound5/SmallQuadrupleCheck.lean:74:2: Try `simp at Hd` instead of `simpa using Hd`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ℹ [1570/1571] Replayed D1Bound5.OneSmallCutoffArithmetic
+info: D1Bound5/OneSmallCutoffArithmetic.lean:587:0: 'D1Bound5.oneSmallCutoffRows_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffArithmetic.lean:588:0: 'D1Bound5.oneSmallCutoffRows_triples' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffArithmetic.lean:589:0: 'D1Bound5.oneSmallFixedRows_cutoff_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [1571/1571] Built D1Bound5.OneSmallCutoffReal (19s)
+warning: D1Bound5/OneSmallCutoffReal.lean:30:30: Variable name `hS` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hS
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: D1Bound5/OneSmallCutoffReal.lean:41:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: D1Bound5/OneSmallCutoffReal.lean:78:0: 'D1Bound5.OneSmallCutoffRow.overlaps_at_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffReal.lean:79:0: 'D1Bound5.OneSmallCutoffRow.start_overlap_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: D1Bound5/OneSmallCutoffReal.lean:80:0: 'D1Bound5.fixed_cutoff_start_above_Q' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (1571 jobs).

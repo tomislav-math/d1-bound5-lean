@@ -1,0 +1,88 @@
+{
+  "unknown": [],
+  "targets": {
+    "ThreeAnchorDetailedAlternative": {
+      "accepted": false,
+      "eligible": true,
+      "missing": [],
+      "Q_dependencies": []
+    },
+    "ThreeSmallPairAlternative": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorDetailedAlternative"
+      ],
+      "Q_dependencies": []
+    },
+    "ThreeSmallLargeExtensions": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorDetailedAlternative",
+        "ThreeSmallPairAlternative"
+      ],
+      "Q_dependencies": []
+    },
+    "ThreeSmallFixedScalar": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorDetailedAlternative",
+        "ThreeSmallLargeExtensions",
+        "ThreeSmallPairAlternative"
+      ],
+      "Q_dependencies": [
+        "FiniteQInterval",
+        "FiniteQFullRing",
+        "FiniteQRowBound",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQHeight",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    },
+    "ThreeSmallFixedExtension": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorDetailedAlternative",
+        "ThreeSmallFixedScalar",
+        "ThreeSmallLargeExtensions",
+        "ThreeSmallPairAlternative"
+      ],
+      "Q_dependencies": [
+        "FiniteQInterval",
+        "FiniteQFullRing",
+        "FiniteQRowBound",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQHeight",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    },
+    "ThreeSmallExclusion": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "ThreeAnchorDetailedAlternative",
+        "ThreeSmallFixedExtension",
+        "ThreeSmallFixedScalar",
+        "ThreeSmallLargeExtensions",
+        "ThreeSmallPairAlternative"
+      ],
+      "Q_dependencies": [
+        "FiniteQInterval",
+        "FiniteQFullRing",
+        "FiniteQRowBound",
+        "FiniteQIntegralRows",
+        "FiniteQMatrix",
+        "FiniteQHeight",
+        "FiniteQResidualBound",
+        "FiniteQResidualIdentity"
+      ]
+    }
+  }
+}
