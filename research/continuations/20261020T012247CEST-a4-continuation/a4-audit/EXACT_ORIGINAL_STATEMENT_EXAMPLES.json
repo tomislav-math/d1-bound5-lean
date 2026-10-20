@@ -1,0 +1,218 @@
+[
+  {
+    "module": "FiniteA4Matrix",
+    "name": "D1Bound5.finiteA4Matrix_zero",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteA4Matrix x y c i 0 = finiteA4Constant x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteA4Matrix",
+    "name": "D1Bound5.finiteA4Matrix_one",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteA4Matrix x y c i 1 = x*finiteA4Left x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteA4Matrix",
+    "name": "D1Bound5.finiteA4Matrix_two",
+    "original_signature": " (x y c : R) (i : Fin 3) :\n    finiteA4Matrix x y c i 2 = y*finiteA4Right x y c i",
+    "explicit_arguments": "x y c i"
+  },
+  {
+    "module": "FiniteA4Matrix",
+    "name": "D1Bound5.finiteA4DividedMatrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteA4DividedMatrix x y c).det = 2910600*(x*y)^1*c^1*(x-y)^15",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteA4Matrix",
+    "name": "D1Bound5.finiteA4Matrix_det",
+    "original_signature": " (x y c : R) :\n    (finiteA4Matrix x y c).det = 2910600*(x*y)^2*c^1*(x-y)^15",
+    "explicit_arguments": "x y c"
+  },
+  {
+    "module": "FiniteA4Matrix",
+    "name": "D1Bound5.finiteA4DividedMatrix_det_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F] (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y) :\n    (finiteA4DividedMatrix x y c).det \u2260 0",
+    "explicit_arguments": "x y c hx hy hc hxy"
+  },
+  {
+    "module": "FiniteA4Coefficients",
+    "name": "D1Bound5.finiteA4_root_coeff_decomposition",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c : R) (i : Fin 3) (j : Fin 2) :\n    ![finiteA4Left x y c i,finiteA4Right x y c i] j =\n      \u2211 ell : Fin 5, finiteA4RootCoeff x y i j ell*c^(ell : \u2115)",
+    "explicit_arguments": "x y c i j"
+  },
+  {
+    "module": "FiniteA4Coefficients",
+    "name": "D1Bound5.finiteA4_coefficient_sums_0",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA4Coeff0 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA4Coeff0 i 1 r : \u211d)|) = finiteA4CoefficientSums i 0",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA4Coefficients",
+    "name": "D1Bound5.finiteA4_coefficient_sums_1",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA4Coeff1 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA4Coeff1 i 1 r : \u211d)|) = finiteA4CoefficientSums i 1",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA4Coefficients",
+    "name": "D1Bound5.finiteA4_coefficient_sums_2",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA4Coeff2 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA4Coeff2 i 1 r : \u211d)|) = finiteA4CoefficientSums i 2",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA4Coefficients",
+    "name": "D1Bound5.finiteA4_coefficient_sums_3",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA4Coeff3 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA4Coeff3 i 1 r : \u211d)|) = finiteA4CoefficientSums i 3",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA4Coefficients",
+    "name": "D1Bound5.finiteA4_coefficient_sums_4",
+    "original_signature": " (i : Fin 3) :\n    (\u2211 r, |(finiteA4Coeff4 i 0 r : \u211d)|)+\n      (\u2211 r, |(finiteA4Coeff4 i 1 r : \u211d)|) = finiteA4CoefficientSums i 4",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.map_finiteA4Constant",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteA4Constant x y c i) = finiteA4Constant (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.map_finiteA4Left",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteA4Left x y c i) = finiteA4Left (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.map_finiteA4Right",
+    "original_signature": " (f : R \u2192+* S) (x y c : R) (i : Fin 3) :\n    f (finiteA4Right x y c i) = finiteA4Right (f x) (f y) (f c) i",
+    "explicit_arguments": "f x y c i"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.map_finiteA4DividedMatrix",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c : R) (i j : Fin 3) :\n    f (finiteA4DividedMatrix x y c i j) =\n      finiteA4DividedMatrix (f x) (f y) (f c) i j",
+    "explicit_arguments": "f x y c i j"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.map_finiteA4RowForm",
+    "original_signature": " (f : R \u2192+* S)\n    (x y c z sX sY : R) (i : Fin 3) :\n    f (finiteA4RowForm x y c z sX sY i) =\n      finiteA4RowForm (f x) (f y) (f c) (f z) (f sX) (f sY) i",
+    "explicit_arguments": "f x y c z sX sY i"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.finiteA4RowForm_exists_ne_zero",
+    "original_signature": "\n    {F : Type*} [Field F] [CharZero F]\n    (x y c z sX sY : F) (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, finiteA4RowForm x y c z sX sY i \u2260 0",
+    "explicit_arguments": "x y c z sX sY hx hy hc hxy hz"
+  },
+  {
+    "module": "FiniteA4IntegralRows",
+    "name": "D1Bound5.full_ring_finiteA4RowForm_exists_one_le_norm",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c z sX sY : \ud835\udcde K) (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y) (hz : z \u2260 0) :\n    \u2203 i : Fin 3, 1 \u2264 \u2016finiteA4RowForm (phi (x : K)) (phi (y : K))\n      (phi (c : K)) (phi (z : K)) (phi (sX : K)) (phi (sY : K)) i\u2016",
+    "explicit_arguments": "hK phi x y c z sX sY hx hy hc hxy hz"
+  },
+  {
+    "module": "FiniteA4Height",
+    "name": "D1Bound5.finiteA4_root_coefficient_norm_le",
+    "original_signature": " (x y : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016)\n    (i : Fin 3) (ell : Fin 5) :\n    \u2016finiteA4RootCoeff x y i 0 ell\u2016+\u2016finiteA4RootCoeff x y i 1 ell\u2016 \u2264\n      (finiteA4CoefficientSums i ell : \u211d)*\u2016y\u2016^(5+(ell : \u2115))",
+    "explicit_arguments": "x y hxy i ell"
+  },
+  {
+    "module": "FiniteA4Height",
+    "name": "D1Bound5.finiteA4_coefficient_sums_nonneg",
+    "original_signature": " (i : Fin 3) (ell : Fin 5) :\n    0 \u2264 (finiteA4CoefficientSums i ell : \u211d)",
+    "explicit_arguments": "i ell"
+  },
+  {
+    "module": "FiniteA4Height",
+    "name": "D1Bound5.finiteA4_height_slack",
+    "original_signature": " (i : Fin 3) :\n    (101/100 : \u211d)*(\u2211 ell : Fin 5,\n      (finiteA4CoefficientSums i ell : \u211d)/(1000 : \u211d)^(4-(ell : \u2115))) < 165763",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FiniteA4Height",
+    "name": "D1Bound5.finiteA4_root_columns_norm_le",
+    "original_signature": " (x y c : \u2102) (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (i : Fin 3) :\n    \u2016finiteA4Left x y c i\u2016+\u2016finiteA4Right x y c i\u2016 \u2264\n      \u2016y\u2016^5*\u2211 ell : Fin 5, (finiteA4CoefficientSums i ell : \u211d)*(\u2016y\u2016*\u2016c\u2016)^(ell : \u2115)",
+    "explicit_arguments": "x y c hxy i"
+  },
+  {
+    "module": "FiniteA4Height",
+    "name": "D1Bound5.finiteA4_height_scaled",
+    "original_signature": " (x y c : \u2102) (hy : y \u2260 0)\n    (hxy : \u2016x\u2016 \u2264 \u2016y\u2016) (hYC : 1000 \u2264 \u2016y\u2016*\u2016c\u2016) (i : Fin 3) :\n    (101/100 : \u211d)*(\u2016finiteA4Left x y c i\u2016+\u2016finiteA4Right x y c i\u2016) <\n      165763*\u2016y\u2016^9*\u2016c\u2016^4",
+    "explicit_arguments": "x y c hy hxy hYC i"
+  },
+  {
+    "module": "FiniteA4ResidueIdentity",
+    "name": "D1Bound5.finiteA4_residue_identity",
+    "original_signature": " (x y c : F)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i j : Fin 3) :\n    finiteUnequalClearedEntry x y c 4 3 i j =\n      2*finiteA4RowFactor x y i*finiteA4Matrix x y c i j",
+    "explicit_arguments": "x y c hx hy hxy i j"
+  },
+  {
+    "module": "FiniteA4Residual",
+    "name": "D1Bound5.finiteA4_beta",
+    "original_signature": " : |Ring.choose (9/2 : \u211d) 11| = 63/524288",
+    "explicit_arguments": ""
+  },
+  {
+    "module": "FiniteA4Residual",
+    "name": "D1Bound5.finiteA4_residual_sum_identity",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hxy : x \u2260 y) (i : Fin 3) :\n    2*finiteA4RowFactor x y i*finiteA4Residual x y c i =\n      \u2211 j, finiteUnequalClearedEntry x y c 4 3 i j*\n        (1+bennettTwoNodes x y j*(x*y*c)\u207b\u00b9)^(1/2 : \u2102)",
+    "explicit_arguments": "x y c hx hy hxy i"
+  },
+  {
+    "module": "FiniteA4Residual",
+    "name": "D1Bound5.finiteA4RowFactor_ne_zero",
+    "original_signature": " (x y : \u2102) (hx : x \u2260 0) (hy : y \u2260 0)\n    (hxy : x \u2260 y) (i : Fin 3) : finiteA4RowFactor x y i \u2260 0",
+    "explicit_arguments": "x y hx hy hxy i"
+  },
+  {
+    "module": "FiniteA4Residual",
+    "name": "D1Bound5.finiteA4_residual_norm_lt_point",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteA4Residual x y c i\u2016 <\n      (101/100 : \u211d)*(63/524288)*(4^4*\u2016x-y\u2016^8/(\u2016x\u2016^4*\u2016y\u2016^4*\u2016c\u2016^7)) /\n        (2*\u2016finiteA4RowFactor x y i\u2016)",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC i"
+  },
+  {
+    "module": "FiniteA4Residual",
+    "name": "D1Bound5.finiteA4_residual_norm_lt",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteA4Residual x y c i\u2016 < (63/8 : \u211d)*\u2016y\u2016^4/(\u2016x\u2016^5*\u2016c\u2016^7)",
+    "explicit_arguments": "x y c hx hy hc hxy hXY hXC i"
+  },
+  {
+    "module": "FiniteA4Approximation",
+    "name": "D1Bound5.finiteA4Residual_explicit",
+    "original_signature": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (i : Fin 3) :\n    finiteA4Residual x y c i = finiteA4Constant x y c i +\n      x*finiteA4Left x y c i*(1+1/(x*c))^(1/2 : \u2102) +\n      y*finiteA4Right x y c i*(1+1/(y*c))^(1/2 : \u2102)",
+    "explicit_arguments": "x y c hx hy hc i"
+  },
+  {
+    "module": "FiniteA4Approximation",
+    "name": "D1Bound5.finiteA4RowForm_explicit",
+    "original_signature": " {R : Type*} [CommRing R]\n    (x y c z sX sY : R) (i : Fin 3) :\n    finiteA4RowForm x y c z sX sY i =\n      finiteA4Constant x y c i*z+finiteA4Left x y c i*sX+\n        finiteA4Right x y c i*sY",
+    "explicit_arguments": "x y c z sX sY i"
+  },
+  {
+    "module": "FiniteA4Approximation",
+    "name": "D1Bound5.finiteA4RowForm_norm_lt",
+    "original_signature": " (x y c z sX sY : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hz : z \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016)\n    (herrorX : \u2016(1+1/(x*c))^(1/2 : \u2102)-sX/(x*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016x\u2016*\u2016z\u2016^2))\n    (herrorY : \u2016(1+1/(y*c))^(1/2 : \u2102)-sY/(y*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016y\u2016*\u2016z\u2016^2)) (i : Fin 3) :\n    \u2016finiteA4RowForm x y c z sX sY i\u2016 <\n      165763*\u2016y\u2016^9*\u2016c\u2016^5/\u2016z\u2016 + (63/8 : \u211d)*\u2016y\u2016^4*\u2016z\u2016/(\u2016x\u2016^5*\u2016c\u2016^7)",
+    "explicit_arguments": "x y c z sX sY hx hy hc hz hxy hXY hXC herrorX herrorY i"
+  },
+  {
+    "module": "FiniteA4Approximation",
+    "name": "D1Bound5.full_ring_finiteA4_integer",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c d rX rY vX vY z : \ud835\udcde K)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hd : d \u2260 0) (hxy : x \u2260 y)\n    (hrX : rX^2=x*c+1) (hrY : rY^2=y*c+1)\n    (hvX : vX^2=x*d+1) (hvY : vY^2=y*d+1) (hzsq : z^2=c*d+1)\n    (hXY : \u2016phi (x : K)\u2016 \u2264 \u2016phi (y : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (x : K)\u2016*\u2016phi (c : K)\u2016)\n    (hC : 200*\u2016phi (y : K)\u2016 \u2264 \u2016phi (c : K)\u2016) :\n    1 < 165763*\u2016phi (y : K)\u2016^9*\u2016phi (c : K)\u2016^5/\u2016phi (z : K)\u2016 +\n      (63/8 : \u211d)*\u2016phi (y : K)\u2016^4*\u2016phi (z : K)\u2016/\n        (\u2016phi (x : K)\u2016^5*\u2016phi (c : K)\u2016^7)",
+    "explicit_arguments": "hK phi x y c d rX rY vX vY z hx hy hc hd hxy hrX hrY hvX hvY hzsq hXY hXC hC"
+  },
+  {
+    "module": "FiniteA4Interval",
+    "name": "D1Bound5.IsD1Tuple.finiteA4_inequality",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hXY : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 200*\u2016phi (t 1 : K)\u2016 \u2264 \u2016phi (t 2 : K)\u2016) :\n    \u2203 z : \ud835\udcde K, z^2=t 2*t 3+1 \u2227\n      1 < 165763*\u2016phi (t 1 : K)\u2016^9*\u2016phi (t 2 : K)\u2016^5/\u2016phi (z : K)\u2016 +\n        (63/8 : \u211d)*\u2016phi (t 1 : K)\u2016^4*\u2016phi (z : K)\u2016/\n          (\u2016phi (t 0 : K)\u2016^5*\u2016phi (t 2 : K)\u2016^7)",
+    "explicit_arguments": "hK phi t ht hXY hXC hC"
+  },
+  {
+    "module": "FiniteA4Interval",
+    "name": "D1Bound5.IsD1Tuple.finiteA4_closed_interval_excluded",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (t : Fin 4 \u2192 \ud835\udcde K) (ht : IsD1Tuple t)\n    (hXY : \u2016phi (t 0 : K)\u2016 \u2264 \u2016phi (t 1 : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (t 0 : K)\u2016*\u2016phi (t 2 : K)\u2016)\n    (hC : 200*\u2016phi (t 1 : K)\u2016 \u2264 \u2016phi (t 2 : K)\u2016)\n    (hCD : \u2016phi (t 2 : K)\u2016 \u2264 \u2016phi (t 3 : K)\u2016)\n    (hleft : 4*165763^2*\u2016phi (t 1 : K)\u2016^18*\u2016phi (t 2 : K)\u2016^9 /\n      (1-1/4000 : \u211d) \u2264 \u2016phi (t 3 : K)\u2016)\n    (hright : \u2016phi (t 3 : K)\u2016 \u2264\n      16*\u2016phi (t 0 : K)\u2016^10*\u2016phi (t 2 : K)\u2016^13 /\n        (3969*\u2016phi (t 1 : K)\u2016^8*(1+1/4000 : \u211d))) : False",
+    "explicit_arguments": "hK phi t ht hXY hXC hC hCD hleft hright"
+  }
+]

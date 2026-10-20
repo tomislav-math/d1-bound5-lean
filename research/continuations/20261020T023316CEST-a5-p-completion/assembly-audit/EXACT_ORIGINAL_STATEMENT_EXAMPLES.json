@@ -1,0 +1,8 @@
+[
+  {
+    "module": "AllLargeForcedPWindow",
+    "name": "D1Bound5.IsD1Tuple.all_large_forced_P_window",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016) :\n    let A := \u2016phi (a 0 : K)\u2016\n    let B := \u2016phi (a 1 : K)\u2016\n    let S := \u2016phi (a 2 : K)\u2016\n    let C := \u2016phi (a 4 : K)\u2016\n    let D := \u2016phi (a 5 : K)\u2016\n    (allLargeWindowP A B S C).1 \u2264 D \u2227 D \u2264 (allLargeWindowP A B S C).2",
+    "explicit_arguments": "hK phi a ha hmon hA"
+  }
+]

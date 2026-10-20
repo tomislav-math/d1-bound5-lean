@@ -1,0 +1,187 @@
+{
+  "time": "2026-10-20T02:26:58.883234+02:00",
+  "unknown": [],
+  "targets": {
+    "FiniteA5Coefficients": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA5Height": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Coefficients"
+      ]
+    },
+    "FiniteA5Approximation": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Height",
+        "FiniteA5Coefficients"
+      ]
+    },
+    "FiniteA5Interval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Approximation",
+        "FiniteA5Height",
+        "FiniteA5Coefficients"
+      ]
+    },
+    "AllLargeForcedPWindow": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Interval",
+        "FiniteA5Approximation",
+        "FiniteA5Height",
+        "FiniteA5Coefficients"
+      ]
+    },
+    "FinitePMatrix": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePMonomial": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePIntegralRows": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePHeight": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePResidualIdentity": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePLeadingBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity",
+        "FinitePMatrix",
+        "FinitePMonomial"
+      ]
+    },
+    "FinitePTailCoefficients": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity",
+        "FinitePMatrix",
+        "FinitePMonomial"
+      ]
+    },
+    "FinitePTailBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePTailCoefficients",
+        "FinitePResidualIdentity",
+        "FinitePMatrix",
+        "FinitePMonomial"
+      ]
+    },
+    "FinitePResidualBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePMatrix",
+        "FinitePMonomial",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePRowBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePMonomial",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePFullRing": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePRowBound",
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePMonomial",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePInterval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePMonomial",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "AllLargeImpossible": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "AllLargeForcedPWindow",
+        "FiniteA5Interval",
+        "FiniteA5Approximation",
+        "FiniteA5Height",
+        "FiniteA5Coefficients",
+        "FinitePInterval",
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePMonomial",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    }
+  }
+}

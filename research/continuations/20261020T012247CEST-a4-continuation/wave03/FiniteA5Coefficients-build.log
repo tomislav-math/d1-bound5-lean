@@ -1,0 +1,27 @@
+⚠ [3006/3008] Replayed D1Bound5.FiniteA5Matrix
+warning: D1Bound5/FiniteA5Matrix.lean:60:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Matrix.lean:66:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [3008/3008] Building D1Bound5.FiniteA5Coefficients (110s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteA5Coefficients.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteA5Coefficients.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteA5Coefficients.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteA5Coefficients.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteA5Coefficients.setup.json --json
+error: D1Bound5/FiniteA5Coefficients.lean:27:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/FiniteA5Coefficients.lean:67:75: unsolved goals
+case «0»
+⊢ 1966080 = ↑(![39000, 400320, 2426880, 5594880, 5521920, 1966080] 5)
+
+case «1»
+⊢ 3075072 = ↑(![65538, 365816, 1676928, 5609472, 7113216, 3075072] 5)
+
+case «2»
+⊢ 3075072 = ↑(![65538, 365816, 1676928, 5609472, 7113216, 3075072] 5)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteA5Coefficients
+error: build failed

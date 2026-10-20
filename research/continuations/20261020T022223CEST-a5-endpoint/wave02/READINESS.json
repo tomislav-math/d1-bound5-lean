@@ -1,0 +1,45 @@
+{
+  "time": "2026-10-20T02:23:05.958210+02:00",
+  "unknown": [],
+  "targets": {
+    "FiniteA5Coefficients": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA5Height": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Coefficients"
+      ]
+    },
+    "FiniteA5Approximation": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Height",
+        "FiniteA5Coefficients"
+      ]
+    },
+    "FiniteA5Interval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Approximation",
+        "FiniteA5Height",
+        "FiniteA5Coefficients"
+      ]
+    },
+    "AllLargeForcedPWindow": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Interval",
+        "FiniteA5Approximation",
+        "FiniteA5Height",
+        "FiniteA5Coefficients"
+      ]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.all_large_forced_P_window: [propext, Classical.choice, Quot.sound]
+@D1Bound5.IsD1Tuple.all_large_forced_P_window : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          3 ≤ ‖phi ↑(a 0)‖ →
+            have A := ‖phi ↑(a 0)‖;
+            have B := ‖phi ↑(a 1)‖;
+            have S := ‖phi ↑(a 2)‖;
+            have C := ‖phi ↑(a 4)‖;
+            have D := ‖phi ↑(a 5)‖;
+            (D1Bound5.allLargeWindowP A B S C).1 ≤ D ∧ D ≤ (D1Bound5.allLargeWindowP A B S C).2

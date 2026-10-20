@@ -1,0 +1,123 @@
+{
+  "utc": "2026-10-19T23:59:54.699907+00:00",
+  "unknown": [],
+  "targets": {
+    "FiniteA5Matrix": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA5Coefficients": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Matrix"
+      ]
+    },
+    "FiniteA5IntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Matrix"
+      ]
+    },
+    "FiniteA5Height": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Coefficients",
+        "FiniteA5Matrix"
+      ]
+    },
+    "FiniteA5ResidueRow0": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Matrix"
+      ]
+    },
+    "FiniteA5ResidueRow1": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Matrix"
+      ]
+    },
+    "FiniteA5ResidueRow2": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Matrix"
+      ]
+    },
+    "FiniteA5ResidueIdentity": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5ResidueRow0",
+        "FiniteA5Matrix",
+        "FiniteA5ResidueRow1",
+        "FiniteA5ResidueRow2"
+      ]
+    },
+    "FiniteA5Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5ResidueIdentity",
+        "FiniteA5ResidueRow0",
+        "FiniteA5Matrix",
+        "FiniteA5ResidueRow1",
+        "FiniteA5ResidueRow2"
+      ]
+    },
+    "FiniteA5Approximation": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5IntegralRows",
+        "FiniteA5Matrix",
+        "FiniteA5Height",
+        "FiniteA5Coefficients",
+        "FiniteA5Residual",
+        "FiniteA5ResidueIdentity",
+        "FiniteA5ResidueRow0",
+        "FiniteA5ResidueRow1",
+        "FiniteA5ResidueRow2"
+      ]
+    },
+    "FiniteA5Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Approximation",
+        "FiniteA5IntegralRows",
+        "FiniteA5Matrix",
+        "FiniteA5Height",
+        "FiniteA5Coefficients",
+        "FiniteA5Residual",
+        "FiniteA5ResidueIdentity",
+        "FiniteA5ResidueRow0",
+        "FiniteA5ResidueRow1",
+        "FiniteA5ResidueRow2"
+      ]
+    },
+    "AllLargeForcedPWindow": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA5Interval",
+        "FiniteA5Approximation",
+        "FiniteA5IntegralRows",
+        "FiniteA5Matrix",
+        "FiniteA5Height",
+        "FiniteA5Coefficients",
+        "FiniteA5Residual",
+        "FiniteA5ResidueIdentity",
+        "FiniteA5ResidueRow0",
+        "FiniteA5ResidueRow1",
+        "FiniteA5ResidueRow2"
+      ]
+    }
+  }
+}

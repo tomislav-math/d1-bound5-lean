@@ -1,0 +1,63 @@
+✖ [3006/3006] Building D1Bound5.FiniteA5Matrix (91s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteA5Matrix.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteA5Matrix.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteA5Matrix.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteA5Matrix.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteA5Matrix.setup.json --json
+error: D1Bound5/FiniteA5Matrix.lean:13:1202: (deterministic) timeout at `«synthesize pending MVars»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/FiniteA5Matrix.lean:16:1081: (deterministic) timeout at `«synthesize pending MVars»`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+error: D1Bound5/FiniteA5Matrix.lean:19:50: Unknown identifier `finiteA5Left`
+error: D1Bound5/FiniteA5Matrix.lean:19:71: Unknown identifier `finiteA5Right`
+warning: D1Bound5/FiniteA5Matrix.lean:28:23: declaration uses `sorry`
+warning: D1Bound5/FiniteA5Matrix.lean:26:16: declaration uses `sorry`
+error: D1Bound5/FiniteA5Matrix.lean:30:33: Unknown identifier `finiteA5Left`
+
+Note: It is not possible to treat `finiteA5Left` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+warning: D1Bound5/FiniteA5Matrix.lean:31:23: declaration uses `sorry`
+error: D1Bound5/FiniteA5Matrix.lean:33:33: Unknown identifier `finiteA5Right`
+
+Note: It is not possible to treat `finiteA5Right` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+warning: D1Bound5/FiniteA5Matrix.lean:34:23: declaration uses `sorry`
+error: D1Bound5/FiniteA5Matrix.lean:40:47: Unknown identifier `finiteA5Left`
+error: D1Bound5/FiniteA5Matrix.lean:40:60: Unknown identifier `finiteA5Right`
+info: D1Bound5/FiniteA5Matrix.lean:42:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteA5Matrix.lean:39:74: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+x y c : R
+⊢ -(x ^ 2 * y ^ 21 * c * 62432370) + x ^ 3 * y ^ 20 * c * 1186215030 - x ^ 4 * y ^ 19 * c * 10675935270 +
+                                      x ^ 5 * y ^ 18 * c * 60496966530 -
+                                    x ^ 6 * y ^ 17 * c * 241987866120 +
+                                  x ^ 7 * y ^ 16 * c * 725963598360 -
+                                x ^ 8 * y ^ 15 * c * 1693915062840 +
+                              x ^ 9 * y ^ 14 * c * 3145842259560 -
+                            x ^ 10 * y ^ 13 * c * 4718763389340 +
+                          x ^ 11 * y ^ 12 * c * 5767377475860 -
+                        x ^ 12 * y ^ 11 * c * 5767377475860 +
+                      x ^ 13 * y ^ 10 * c * 4718763389340 -
+                    x ^ 14 * y ^ 9 * c * 3145842259560 +
+                  x ^ 15 * y ^ 8 * c * 1693915062840 -
+                x ^ 16 * y ^ 7 * c * 725963598360 +
+              x ^ 17 * y ^ 6 * c * 241987866120 -
+            x ^ 18 * y ^ 5 * c * 60496966530 +
+          x ^ 19 * y ^ 4 * c * 10675935270 -
+        x ^ 20 * y ^ 3 * c * 1186215030 +
+      x ^ 21 * y ^ 2 * c * 62432370 =
+    0
+warning: D1Bound5/FiniteA5Matrix.lean:40:8: declaration uses `sorry`
+warning: D1Bound5/FiniteA5Matrix.lean:48:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteA5Matrix
+error: build failed

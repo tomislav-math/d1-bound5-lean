@@ -1,0 +1,532 @@
+⚠ [3006/3008] Replayed D1Bound5.FiniteA5Matrix
+warning: D1Bound5/FiniteA5Matrix.lean:60:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Matrix.lean:66:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [3008/3008] Building D1Bound5.FiniteA5Coefficients (113s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FiniteA5Coefficients.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteA5Coefficients.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FiniteA5Coefficients.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteA5Coefficients.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FiniteA5Coefficients.setup.json --json
+warning: D1Bound5/FiniteA5Coefficients.lean:38:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:47:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:56:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: D1Bound5/FiniteA5Coefficients.lean:65:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: D1Bound5/FiniteA5Coefficients.lean:74:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteA5Coefficients.lean:70:66: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+x y c : R
+⊢ ![-(x ^ 3 * y ^ 4 * 12870) - x ^ 4 * c * y ^ 4 * 127270 - x ^ 4 * y ^ 3 * 5720 + x ^ 5 * c * y ^ 3 * 51480 -
+                                                            x ^ 5 * c ^ 2 * y ^ 4 * 457600 +
+                                                          x ^ 5 * y ^ 2 * 780 -
+                                                        x ^ 6 * c * y ^ 2 * 17220 +
+                                                      x ^ 6 * c ^ 2 * y ^ 3 * 453200 -
+                                                    x ^ 6 * c ^ 3 * y ^ 4 * 765600 -
+                                                  x ^ 6 * y * 120 +
+                                                x ^ 7 * 10 +
+                                              x ^ 7 * c * y * 3800 -
+                                            x ^ 7 * c ^ 2 * y ^ 2 * 231120 +
+                                          x ^ 7 * c ^ 3 * y ^ 3 * 1085920 -
+                                        x ^ 7 * c ^ 4 * y ^ 4 * 605440 -
+                                      x ^ 8 * c * 390 +
+                                    x ^ 8 * c ^ 2 * y * 63920 -
+                                  x ^ 8 * c ^ 3 * y ^ 2 * 693120 +
+                                x ^ 8 * c ^ 4 * y ^ 3 * 1056000 -
+                              x ^ 8 * c ^ 5 * y ^ 4 * 183040 -
+                            x ^ 9 * c ^ 2 * 7600 +
+                          x ^ 9 * c ^ 3 * y * 223200 -
+                        x ^ 9 * c ^ 4 * y ^ 2 * 779520 +
+                      x ^ 9 * c ^ 5 * y ^ 3 * 366080 -
+                    x ^ 10 * c ^ 3 * 29600 +
+                  x ^ 10 * c ^ 4 * y * 279680 -
+                x ^ 10 * c ^ 5 * y ^ 2 * 299520 -
+              x ^ 11 * c ^ 4 * 40320 +
+            x ^ 11 * c ^ 5 * y * 116480 -
+          x ^ 12 * c ^ 5 * 17920,
+        -(x ^ 2 * y ^ 5 * 9009) - x ^ 3 * c * y ^ 5 * 115830 - x ^ 3 * y ^ 4 * 19305 - x ^ 4 * c * y ^ 4 * 57200 -
+                                                                        x ^ 4 * c ^ 2 * y ^ 5 * 514800 -
+                                                                      x ^ 4 * y ^ 3 * 4290 +
+                                                                    x ^ 5 * c * y ^ 3 * 14300 +
+                                                                  x ^ 5 * c ^ 2 * y ^ 4 * 286000 -
+                                                                x ^ 5 * c ^ 3 * y ^ 5 * 1029600 +
+                                                              x ^ 5 * y ^ 2 * 390 -
+                                                            x ^ 6 * c * y ^ 2 * 3000 -
+                                                          x ^ 6 * c ^ 2 * y ^ 3 * 127600 +
+                                                        x ^ 6 * c ^ 3 * y ^ 4 * 1320000 -
+                                                      x ^ 6 * c ^ 4 * y ^ 5 * 950400 -
+                                                    x ^ 6 * y * 45 +
+                                                  x ^ 7 * 3 +
+                                                x ^ 7 * c * y * 490 +
+                                              x ^ 7 * c ^ 2 * y ^ 2 * 41520 -
+                                            x ^ 7 * c ^ 3 * y ^ 3 * 913440 +
+                                          x ^ 7 * c ^ 4 * y ^ 4 * 1724800 -
+                                        x ^ 7 * c ^ 5 * y ^ 5 * 329472 -
+                                      x ^ 8 * c * 40 -
+                                    x ^ 8 * c ^ 2 * y * 8480 +
+                                  x ^ 8 * c ^ 3 * y ^ 2 * 382080 -
+                                x ^ 8 * c ^ 4 * y ^ 3 * 1492480 +
+                              x ^ 8 * c ^ 5 * y ^ 4 * 732160 +
+                            x ^ 9 * c ^ 2 * 800 -
+                          x ^ 9 * c ^ 3 * y * 91200 +
+                        x ^ 9 * c ^ 4 * y ^ 2 * 729600 -
+                      x ^ 9 * c ^ 5 * y ^ 3 * 732160 +
+                    x ^ 10 * c ^ 3 * 9600 -
+                  x ^ 10 * c ^ 4 * y * 195200 +
+                x ^ 10 * c ^ 5 * y ^ 2 * 399360 +
+              x ^ 11 * c ^ 4 * 22400 -
+            x ^ 11 * c ^ 5 * y * 116480 +
+          x ^ 12 * c ^ 5 * 14336,
+        x ^ 3 * y ^ 4 * 12870 + x ^ 4 * c * y ^ 4 * 127270 + x ^ 4 * y ^ 3 * 17160 + x ^ 5 * c * y ^ 3 * 40040 +
+                                                            x ^ 5 * c ^ 2 * y ^ 4 * 457600 +
+                                                          x ^ 5 * y ^ 2 * 2340 -
+                                                        x ^ 6 * c * y ^ 2 * 6780 -
+                                                      x ^ 6 * c ^ 2 * y ^ 3 * 177760 +
+                                                    x ^ 6 * c ^ 3 * y ^ 4 * 765600 -
+                                                  x ^ 6 * y * 120 +
+                                                x ^ 7 * 6 +
+                                              x ^ 7 * c * y * 808 +
+                                            x ^ 7 * c ^ 2 * y ^ 2 * 51648 -
+                                          x ^ 7 * c ^ 3 * y ^ 3 * 690624 +
+                                        x ^ 7 * c ^ 4 * y ^ 4 * 605440 -
+                                      x ^ 8 * c * 58 -
+                                    x ^ 8 * c ^ 2 * y * 9824 +
+                                  x ^ 8 * c ^ 3 * y ^ 2 * 318816 -
+                                x ^ 8 * c ^ 4 * y ^ 3 * 782848 +
+                              x ^ 8 * c ^ 5 * y ^ 4 * 183040 +
+                            x ^ 9 * c ^ 2 * 896 -
+                          x ^ 9 * c ^ 3 * y * 79872 +
+                        x ^ 9 * c ^ 4 * y ^ 2 * 457728 -
+                      x ^ 9 * c ^ 5 * y ^ 3 * 292864 +
+                    x ^ 10 * c ^ 3 * 8640 -
+                  x ^ 10 * c ^ 4 * y * 135680 +
+                x ^ 10 * c ^ 5 * y ^ 2 * 199680 +
+              x ^ 11 * c ^ 4 * 16640 -
+            x ^ 11 * c ^ 5 * y * 66560 +
+          x ^ 12 * c ^ 5 * 8960]
+      2 =
+    ⋯ + ⋯ + ⋯ * ⋯ + ⋯ * y ^ 8 * ↑⋯ +
+                                                                                                  x ^ 3 * c ^ 5 *
+                                                                                                      y ^ 9 *
+                                                                                                    ↑(Matrix.vecCons 0
+                                                                                                        (fun i =>
+                                                                                                          Matrix.vecCons
+                                                                                                            0
+                                                                                                            (fun i => 0)
+                                                                                                            i)
+                                                                                                        2) +
+                                                                                                x ^ 3 * y ^ 4 *
+                                                                                                  ↑(Matrix.vecCons
+                                                                                                      (-12870)
+                                                                                                      (fun i => ⋯) 2) +
+                                                                                              x ^ 4 * c * y ^ 4 *
+                                                                                                ↑(Matrix.vecCons
+                                                                                                    (-127270)
+                                                                                                    (fun i =>
+                                                                                                      Matrix.vecCons
+                                                                                                        (-57200)
+                                                                                                        (fun i =>
+                                                                                                          127270)
+                                                                                                        i)
+                                                                                                    2) +
+                                                                                            x ^ 4 * c ^ 2 * y ^ 5 *
+                                                                                              ↑(Matrix.vecCons 0
+                                                                                                  (fun i =>
+                                                                                                    Matrix.vecCons
+                                                                                                      (-514800)
+                                                                                                      (fun i => 0) i)
+                                                                                                  2) +
+                                                                                          x ^ 4 * c ^ 3 * y ^ 6 *
+                                                                                            ↑(Matrix.vecCons 0
+                                                                                                (fun i =>
+                                                                                                  Matrix.vecCons 0
+                                                                                                    (fun i => 0) i)
+                                                                                                2) +
+                                                                                        x ^ 4 * c ^ 4 * y ^ 7 *
+                                                                                          ↑(Matrix.vecCons 0
+                                                                                              (fun i =>
+                                                                                                Matrix.vecCons 0
+                                                                                                  (fun i => 0) i)
+                                                                                              2) +
+                                                                                      x ^ 4 * c ^ 5 * y ^ 8 *
+                                                                                        ↑(Matrix.vecCons 0
+                                                                                            (fun i =>
+                                                                                              Matrix.vecCons 0
+                                                                                                (fun i => 0) i)
+                                                                                            2) +
+                                                                                    x ^ 4 * y ^ 3 *
+                                                                                      ↑(Matrix.vecCons (-5720)
+                                                                                          (fun i =>
+                                                                                            Matrix.vecCons (-4290)
+                                                                                              (fun i => 17160) i)
+                                                                                          2) +
+                                                                                  x ^ 5 * c * y ^ 3 *
+                                                                                    ↑(Matrix.vecCons 51480
+                                                                                        (fun i =>
+                                                                                          Matrix.vecCons 14300
+                                                                                            (fun i => 40040) i)
+                                                                                        2) +
+                                                                                x ^ 5 * c ^ 2 * y ^ 4 *
+                                                                                  ↑(Matrix.vecCons (-457600)
+                                                                                      (fun i =>
+                                                                                        Matrix.vecCons 286000
+                                                                                          (fun i => 457600) i)
+                                                                                      2) +
+                                                                              x ^ 5 * c ^ 3 * y ^ 5 *
+                                                                                ↑(Matrix.vecCons 0
+                                                                                    (fun i =>
+                                                                                      Matrix.vecCons (-1029600)
+                                                                                        (fun i => 0) i)
+                                                                                    2) +
+                                                                            x ^ 5 * c ^ 4 * y ^ 6 *
+                                                                              ↑(Matrix.vecCons 0
+                                                                                  (fun i =>
+                                                                                    Matrix.vecCons 0 (fun i => 0) i)
+                                                                                  2) +
+                                                                          x ^ 5 * c ^ 5 * y ^ 7 *
+                                                                            ↑(Matrix.vecCons 0
+                                                                                (fun i =>
+                                                                                  Matrix.vecCons 0 (fun i => 0) i)
+                                                                                2) +
+                                                                        x ^ 5 * y ^ 2 *
+                                                                          ↑(Matrix.vecCons 780
+                                                                              (fun i =>
+                                                                                Matrix.vecCons 390 (fun i => 2340) i)
+                                                                              2) +
+                                                                      x ^ 6 * c * y ^ 2 *
+                                                                        ↑(Matrix.vecCons (-17220)
+                                                                            (fun i =>
+                                                                              Matrix.vecCons (-3000) (fun i => -6780) i)
+                                                                            2) +
+                                                                    x ^ 6 * c ^ 2 * y ^ 3 *
+                                                                      ↑(Matrix.vecCons 453200
+                                                                          (fun i =>
+                                                                            Matrix.vecCons (-127600) (fun i => -177760)
+                                                                              i)
+                                                                          2) +
+                                                                  x ^ 6 * c ^ 3 * y ^ 4 *
+                                                                    ↑(Matrix.vecCons (-765600)
+                                                                        (fun i =>
+                                                                          Matrix.vecCons 1320000 (fun i => 765600) i)
+                                                                        2) +
+                                                                x ^ 6 * c ^ 4 * y ^ 5 *
+                                                                  ↑(Matrix.vecCons 0
+                                                                      (fun i => Matrix.vecCons (-950400) (fun i => 0) i)
+                                                                      2) +
+                                                              x ^ 6 * c ^ 5 * y ^ 6 *
+                                                                ↑(Matrix.vecCons 0
+                                                                    (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                            x ^ 6 * y *
+                                                              ↑(Matrix.vecCons (-120)
+                                                                  (fun i => Matrix.vecCons (-45) (fun i => -120) i) 2) +
+                                                          x ^ 7 * c * y *
+                                                            ↑(Matrix.vecCons 3800
+                                                                (fun i => Matrix.vecCons 490 (fun i => 808) i) 2) +
+                                                        x ^ 7 * c ^ 2 * y ^ 2 *
+                                                          ↑(Matrix.vecCons (-231120)
+                                                              (fun i => Matrix.vecCons 41520 (fun i => 51648) i) 2) +
+                                                      x ^ 7 * c ^ 3 * y ^ 3 *
+                                                        ↑(Matrix.vecCons 1085920
+                                                            (fun i => Matrix.vecCons (-913440) (fun i => -690624) i)
+                                                            2) +
+                                                    x ^ 7 * c ^ 4 * y ^ 4 *
+                                                      ↑(Matrix.vecCons (-605440)
+                                                          (fun i => Matrix.vecCons 1724800 (fun i => 605440) i) 2) +
+                                                  x ^ 7 * c ^ 5 * y ^ 5 *
+                                                    ↑(Matrix.vecCons 0
+                                                        (fun i => Matrix.vecCons (-329472) (fun i => 0) i) 2) +
+                                                x ^ 7 *
+                                                  ↑(Matrix.vecCons 10 (fun i => Matrix.vecCons 3 (fun i => 6) i) 2) +
+                                              x ^ 8 * c *
+                                                ↑(Matrix.vecCons (-390) (fun i => Matrix.vecCons (-40) (fun i => -58) i)
+                                                    2) +
+                                            x ^ 8 * c ^ 2 * y *
+                                              ↑(Matrix.vecCons 63920
+                                                  (fun i => Matrix.vecCons (-8480) (fun i => -9824) i) 2) +
+                                          x ^ 8 * c ^ 3 * y ^ 2 *
+                                            ↑(Matrix.vecCons (-693120)
+                                                (fun i => Matrix.vecCons 382080 (fun i => 318816) i) 2) +
+                                        x ^ 8 * c ^ 4 * y ^ 3 *
+                                          ↑(Matrix.vecCons 1056000
+                                              (fun i => Matrix.vecCons (-1492480) (fun i => -782848) i) 2) +
+                                      x ^ 8 * c ^ 5 * y ^ 4 *
+                                        ↑(Matrix.vecCons (-183040) (fun i => Matrix.vecCons 732160 (fun i => 183040) i)
+                                            2) +
+                                    x ^ 9 * c ^ 2 *
+                                      ↑(Matrix.vecCons (-7600) (fun i => Matrix.vecCons 800 (fun i => 896) i) 2) +
+                                  x ^ 9 * c ^ 3 * y *
+                                    ↑(Matrix.vecCons 223200 (fun i => Matrix.vecCons (-91200) (fun i => -79872) i) 2) +
+                                x ^ 9 * c ^ 4 * y ^ 2 *
+                                  ↑(Matrix.vecCons (-779520) (fun i => Matrix.vecCons 729600 (fun i => 457728) i) 2) +
+                              x ^ 9 * c ^ 5 * y ^ 3 *
+                                ↑(Matrix.vecCons 366080 (fun i => Matrix.vecCons (-732160) (fun i => -292864) i) 2) +
+                            x ^ 10 * c ^ 3 *
+                              ↑(Matrix.vecCons (-29600) (fun i => Matrix.vecCons 9600 (fun i => 8640) i) 2) +
+                          x ^ 10 * c ^ 4 * y *
+                            ↑(Matrix.vecCons 279680 (fun i => Matrix.vecCons (-195200) (fun i => -135680) i) 2) +
+                        x ^ 10 * c ^ 5 * y ^ 2 *
+                          ↑(Matrix.vecCons (-299520) (fun i => Matrix.vecCons 399360 (fun i => 199680) i) 2) +
+                      x ^ 11 * c ^ 4 * ↑(Matrix.vecCons (-40320) (fun i => Matrix.vecCons 22400 (fun i => 16640) i) 2) +
+                    x ^ 11 * c ^ 5 * y *
+                      ↑(Matrix.vecCons 116480 (fun i => Matrix.vecCons (-116480) (fun i => -66560) i) 2) +
+                  x ^ 12 * c ^ 5 * ↑(Matrix.vecCons (-17920) (fun i => Matrix.vecCons 14336 (fun i => 8960) i) 2) +
+                c * y ^ 8 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+              c ^ 2 * y ^ 9 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+            c ^ 3 * y ^ 10 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+          c ^ 4 * y ^ 11 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+        c ^ 5 * y ^ 12 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+      y ^ 7 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2)
+info: D1Bound5/FiniteA5Coefficients.lean:83:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FiniteA5Coefficients.lean:79:66: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+x y c : R
+⊢ ![x * y ^ 6 * 120 - x * y ^ 7 * c * 3800 - x * y ^ 8 * c ^ 2 * 63920 - x * y ^ 9 * c ^ 3 * 223200 -
+                                                            x * y ^ 10 * c ^ 4 * 279680 -
+                                                          x * y ^ 11 * c ^ 5 * 116480 -
+                                                        x ^ 2 * y ^ 5 * 780 +
+                                                      x ^ 2 * y ^ 6 * c * 17220 +
+                                                    x ^ 2 * y ^ 7 * c ^ 2 * 231120 +
+                                                  x ^ 2 * y ^ 8 * c ^ 3 * 693120 +
+                                                x ^ 2 * y ^ 9 * c ^ 4 * 779520 +
+                                              x ^ 2 * y ^ 10 * c ^ 5 * 299520 +
+                                            x ^ 3 * y ^ 4 * 5720 -
+                                          x ^ 3 * y ^ 5 * c * 51480 -
+                                        x ^ 3 * y ^ 6 * c ^ 2 * 453200 -
+                                      x ^ 3 * y ^ 7 * c ^ 3 * 1085920 -
+                                    x ^ 3 * y ^ 8 * c ^ 4 * 1056000 -
+                                  x ^ 3 * y ^ 9 * c ^ 5 * 366080 +
+                                x ^ 4 * y ^ 3 * 12870 +
+                              x ^ 4 * y ^ 4 * c * 127270 +
+                            x ^ 4 * y ^ 5 * c ^ 2 * 457600 +
+                          x ^ 4 * y ^ 6 * c ^ 3 * 765600 +
+                        x ^ 4 * y ^ 7 * c ^ 4 * 605440 +
+                      x ^ 4 * y ^ 8 * c ^ 5 * 183040 -
+                    y ^ 7 * 10 +
+                  y ^ 8 * c * 390 +
+                y ^ 9 * c ^ 2 * 7600 +
+              y ^ 10 * c ^ 3 * 29600 +
+            y ^ 11 * c ^ 4 * 40320 +
+          y ^ 12 * c ^ 5 * 17920,
+        -(x * y ^ 6 * 120) + x * y ^ 7 * c * 808 - x * y ^ 8 * c ^ 2 * 9824 - x * y ^ 9 * c ^ 3 * 79872 -
+                                                            x * y ^ 10 * c ^ 4 * 135680 -
+                                                          x * y ^ 11 * c ^ 5 * 66560 +
+                                                        x ^ 2 * y ^ 5 * 2340 -
+                                                      x ^ 2 * y ^ 6 * c * 6780 +
+                                                    x ^ 2 * y ^ 7 * c ^ 2 * 51648 +
+                                                  x ^ 2 * y ^ 8 * c ^ 3 * 318816 +
+                                                x ^ 2 * y ^ 9 * c ^ 4 * 457728 +
+                                              x ^ 2 * y ^ 10 * c ^ 5 * 199680 +
+                                            x ^ 3 * y ^ 4 * 17160 +
+                                          x ^ 3 * y ^ 5 * c * 40040 -
+                                        x ^ 3 * y ^ 6 * c ^ 2 * 177760 -
+                                      x ^ 3 * y ^ 7 * c ^ 3 * 690624 -
+                                    x ^ 3 * y ^ 8 * c ^ 4 * 782848 -
+                                  x ^ 3 * y ^ 9 * c ^ 5 * 292864 +
+                                x ^ 4 * y ^ 3 * 12870 +
+                              x ^ 4 * y ^ 4 * c * 127270 +
+                            x ^ 4 * y ^ 5 * c ^ 2 * 457600 +
+                          x ^ 4 * y ^ 6 * c ^ 3 * 765600 +
+                        x ^ 4 * y ^ 7 * c ^ 4 * 605440 +
+                      x ^ 4 * y ^ 8 * c ^ 5 * 183040 +
+                    y ^ 7 * 6 -
+                  y ^ 8 * c * 58 +
+                y ^ 9 * c ^ 2 * 896 +
+              y ^ 10 * c ^ 3 * 8640 +
+            y ^ 11 * c ^ 4 * 16640 +
+          y ^ 12 * c ^ 5 * 8960,
+        -(x * y ^ 6 * 45) + x * y ^ 7 * c * 490 - x * y ^ 8 * c ^ 2 * 8480 - x * y ^ 9 * c ^ 3 * 91200 -
+                                                                        x * y ^ 10 * c ^ 4 * 195200 -
+                                                                      x * y ^ 11 * c ^ 5 * 116480 +
+                                                                    x ^ 2 * y ^ 5 * 390 -
+                                                                  x ^ 2 * y ^ 6 * c * 3000 +
+                                                                x ^ 2 * y ^ 7 * c ^ 2 * 41520 +
+                                                              x ^ 2 * y ^ 8 * c ^ 3 * 382080 +
+                                                            x ^ 2 * y ^ 9 * c ^ 4 * 729600 +
+                                                          x ^ 2 * y ^ 10 * c ^ 5 * 399360 -
+                                                        x ^ 3 * y ^ 4 * 4290 +
+                                                      x ^ 3 * y ^ 5 * c * 14300 -
+                                                    x ^ 3 * y ^ 6 * c ^ 2 * 127600 -
+                                                  x ^ 3 * y ^ 7 * c ^ 3 * 913440 -
+                                                x ^ 3 * y ^ 8 * c ^ 4 * 1492480 -
+                                              x ^ 3 * y ^ 9 * c ^ 5 * 732160 -
+                                            x ^ 4 * y ^ 3 * 19305 -
+                                          x ^ 4 * y ^ 4 * c * 57200 +
+                                        x ^ 4 * y ^ 5 * c ^ 2 * 286000 +
+                                      x ^ 4 * y ^ 6 * c ^ 3 * 1320000 +
+                                    x ^ 4 * y ^ 7 * c ^ 4 * 1724800 +
+                                  x ^ 4 * y ^ 8 * c ^ 5 * 732160 -
+                                x ^ 5 * y ^ 2 * 9009 -
+                              x ^ 5 * y ^ 3 * c * 115830 -
+                            x ^ 5 * y ^ 4 * c ^ 2 * 514800 -
+                          x ^ 5 * y ^ 5 * c ^ 3 * 1029600 -
+                        x ^ 5 * y ^ 6 * c ^ 4 * 950400 -
+                      x ^ 5 * y ^ 7 * c ^ 5 * 329472 +
+                    y ^ 7 * 3 -
+                  y ^ 8 * c * 40 +
+                y ^ 9 * c ^ 2 * 800 +
+              y ^ 10 * c ^ 3 * 9600 +
+            y ^ 11 * c ^ 4 * 22400 +
+          y ^ 12 * c ^ 5 * 14336]
+      2 =
+    ⋯ + ⋯ + ⋯ * ⋯ + ⋯ * c ^ 3 * ↑⋯ + x ^ 3 * y ^ 8 * c ^ 4 * ↑(Matrix.vecCons (-1056000) ⋯ 2) +
+                                                                                                x ^ 3 * y ^ 9 * c ^ 5 *
+                                                                                                  ↑(Matrix.vecCons
+                                                                                                      (-366080)
+                                                                                                      (fun i => ⋯) 2) +
+                                                                                              x ^ 4 * y ^ 3 *
+                                                                                                ↑(Matrix.vecCons 12870
+                                                                                                    (fun i =>
+                                                                                                      Matrix.vecCons
+                                                                                                        12870 ⋯ i)
+                                                                                                    2) +
+                                                                                            x ^ 4 * y ^ 4 * c *
+                                                                                              ↑(Matrix.vecCons 127270
+                                                                                                  (fun i =>
+                                                                                                    Matrix.vecCons
+                                                                                                      127270
+                                                                                                      (fun i => -57200)
+                                                                                                      i)
+                                                                                                  2) +
+                                                                                          x ^ 4 * y ^ 5 * c ^ 2 *
+                                                                                            ↑(Matrix.vecCons 457600
+                                                                                                (fun i =>
+                                                                                                  Matrix.vecCons 457600
+                                                                                                    (fun i => 286000) i)
+                                                                                                2) +
+                                                                                        x ^ 4 * y ^ 6 * c ^ 3 *
+                                                                                          ↑(Matrix.vecCons 765600
+                                                                                              (fun i =>
+                                                                                                Matrix.vecCons 765600
+                                                                                                  (fun i => 1320000) i)
+                                                                                              2) +
+                                                                                      x ^ 4 * y ^ 7 * c ^ 4 *
+                                                                                        ↑(Matrix.vecCons 605440
+                                                                                            (fun i =>
+                                                                                              Matrix.vecCons 605440
+                                                                                                (fun i => 1724800) i)
+                                                                                            2) +
+                                                                                    x ^ 4 * y ^ 8 * c ^ 5 *
+                                                                                      ↑(Matrix.vecCons 183040
+                                                                                          (fun i =>
+                                                                                            Matrix.vecCons 183040
+                                                                                              (fun i => 732160) i)
+                                                                                          2) +
+                                                                                  x ^ 5 * y ^ 2 *
+                                                                                    ↑(Matrix.vecCons 0
+                                                                                        (fun i =>
+                                                                                          Matrix.vecCons 0
+                                                                                            (fun i => -9009) i)
+                                                                                        2) +
+                                                                                x ^ 5 * y ^ 3 * c *
+                                                                                  ↑(Matrix.vecCons 0
+                                                                                      (fun i =>
+                                                                                        Matrix.vecCons 0
+                                                                                          (fun i => -115830) i)
+                                                                                      2) +
+                                                                              x ^ 5 * y ^ 4 * c ^ 2 *
+                                                                                ↑(Matrix.vecCons 0
+                                                                                    (fun i =>
+                                                                                      Matrix.vecCons 0
+                                                                                        (fun i => -514800) i)
+                                                                                    2) +
+                                                                            x ^ 5 * y ^ 5 * c ^ 3 *
+                                                                              ↑(Matrix.vecCons 0
+                                                                                  (fun i =>
+                                                                                    Matrix.vecCons 0 (fun i => -1029600)
+                                                                                      i)
+                                                                                  2) +
+                                                                          x ^ 5 * y ^ 6 * c ^ 4 *
+                                                                            ↑(Matrix.vecCons 0
+                                                                                (fun i =>
+                                                                                  Matrix.vecCons 0 (fun i => -950400) i)
+                                                                                2) +
+                                                                        x ^ 5 * y ^ 7 * c ^ 5 *
+                                                                          ↑(Matrix.vecCons 0
+                                                                              (fun i =>
+                                                                                Matrix.vecCons 0 (fun i => -329472) i)
+                                                                              2) +
+                                                                      x ^ 6 * y *
+                                                                        ↑(Matrix.vecCons 0
+                                                                            (fun i => Matrix.vecCons 0 (fun i => 0) i)
+                                                                            2) +
+                                                                    x ^ 6 * y ^ 2 * c *
+                                                                      ↑(Matrix.vecCons 0
+                                                                          (fun i => Matrix.vecCons 0 (fun i => 0) i)
+                                                                          2) +
+                                                                  x ^ 6 * y ^ 3 * c ^ 2 *
+                                                                    ↑(Matrix.vecCons 0
+                                                                        (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                                x ^ 6 * y ^ 4 * c ^ 3 *
+                                                                  ↑(Matrix.vecCons 0
+                                                                      (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                              x ^ 6 * y ^ 5 * c ^ 4 *
+                                                                ↑(Matrix.vecCons 0
+                                                                    (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                            x ^ 6 * y ^ 6 * c ^ 5 *
+                                                              ↑(Matrix.vecCons 0
+                                                                  (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                          x ^ 7 * y * c *
+                                                            ↑(Matrix.vecCons 0
+                                                                (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                        x ^ 7 * y ^ 2 * c ^ 2 *
+                                                          ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i)
+                                                              2) +
+                                                      x ^ 7 * y ^ 3 * c ^ 3 *
+                                                        ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i)
+                                                            2) +
+                                                    x ^ 7 * y ^ 4 * c ^ 4 *
+                                                      ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                  x ^ 7 * y ^ 5 * c ^ 5 *
+                                                    ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                                x ^ 7 *
+                                                  ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                              x ^ 8 * y * c ^ 2 *
+                                                ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                            x ^ 8 * y ^ 2 * c ^ 3 *
+                                              ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                          x ^ 8 * y ^ 3 * c ^ 4 *
+                                            ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                        x ^ 8 * y ^ 4 * c ^ 5 *
+                                          ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                      x ^ 8 * c * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                    x ^ 9 * y * c ^ 3 *
+                                      ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                  x ^ 9 * y ^ 2 * c ^ 4 *
+                                    ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                                x ^ 9 * y ^ 3 * c ^ 5 *
+                                  ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                              x ^ 9 * c ^ 2 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                            x ^ 10 * y * c ^ 4 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                          x ^ 10 * y ^ 2 * c ^ 5 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                        x ^ 10 * c ^ 3 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                      x ^ 11 * y * c ^ 5 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                    x ^ 11 * c ^ 4 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                  x ^ 12 * c ^ 5 * ↑(Matrix.vecCons 0 (fun i => Matrix.vecCons 0 (fun i => 0) i) 2) +
+                y ^ 7 * ↑(Matrix.vecCons (-10) (fun i => Matrix.vecCons 6 (fun i => 3) i) 2) +
+              y ^ 8 * c * ↑(Matrix.vecCons 390 (fun i => Matrix.vecCons (-58) (fun i => -40) i) 2) +
+            y ^ 9 * c ^ 2 * ↑(Matrix.vecCons 7600 (fun i => Matrix.vecCons 896 (fun i => 800) i) 2) +
+          y ^ 10 * c ^ 3 * ↑(Matrix.vecCons 29600 (fun i => Matrix.vecCons 8640 (fun i => 9600) i) 2) +
+        y ^ 11 * c ^ 4 * ↑(Matrix.vecCons 40320 (fun i => Matrix.vecCons 16640 (fun i => 22400) i) 2) +
+      y ^ 12 * c ^ 5 * ↑(Matrix.vecCons 17920 (fun i => Matrix.vecCons 8960 (fun i => 14336) i) 2)
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FiniteA5Coefficients
+error: build failed

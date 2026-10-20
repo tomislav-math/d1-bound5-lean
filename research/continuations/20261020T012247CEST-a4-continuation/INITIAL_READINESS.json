@@ -1,0 +1,73 @@
+{
+  "time": "2026-10-20T01:24:22.572944+02:00",
+  "unknown": [],
+  "targets": {
+    "FiniteA4Matrix": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FiniteA4Coefficients": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4Matrix"
+      ]
+    },
+    "FiniteA4IntegralRows": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4Matrix"
+      ]
+    },
+    "FiniteA4Height": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4Coefficients",
+        "FiniteA4Matrix"
+      ]
+    },
+    "FiniteA4ResidueIdentity": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4Matrix"
+      ]
+    },
+    "FiniteA4Residual": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4ResidueIdentity",
+        "FiniteA4Matrix"
+      ]
+    },
+    "FiniteA4Approximation": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4IntegralRows",
+        "FiniteA4Matrix",
+        "FiniteA4Height",
+        "FiniteA4Coefficients",
+        "FiniteA4Residual",
+        "FiniteA4ResidueIdentity"
+      ]
+    },
+    "FiniteA4Interval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FiniteA4Approximation",
+        "FiniteA4IntegralRows",
+        "FiniteA4Matrix",
+        "FiniteA4Height",
+        "FiniteA4Coefficients",
+        "FiniteA4Residual",
+        "FiniteA4ResidueIdentity"
+      ]
+    }
+  }
+}
