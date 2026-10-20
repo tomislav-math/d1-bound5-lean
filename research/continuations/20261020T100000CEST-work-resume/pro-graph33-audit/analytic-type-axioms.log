@@ -1,0 +1,25 @@
+GRAPH33_AXIOMS_PASS D1Bound5.PairGraphPrepared33.indexed_chunk04_checked: [propext, Quot.sound]
+GRAPH33_AXIOMS_PASS D1Bound5.PairGraphPrepared33.indexed_chunk05_checked: [propext, Quot.sound]
+GRAPH33_AXIOMS_PASS D1Bound5.PairGraphPrepared33.indexed_coverage_checked: [propext]
+GRAPH33_AXIOMS_PASS D1Bound5.PairGraphPrepared33.indexed_checked: [propext, Quot.sound]
+GRAPH33_AXIOMS_PASS D1Bound5.smallPairClosure_33_checked: [propext, Classical.choice, Quot.sound]
+D1Bound5.PairGraphPrepared33.indexed_chunk04_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_33
+    D1Bound5.smallPairB_33 D1Bound5.PairGraphPrepared33.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_33 128
+    (List.drop 512 D1Bound5.PairGraphPrepared33.witnesses) (List.drop 512 D1Bound5.PairGraphPrepared33.destinations) =
+  true
+D1Bound5.PairGraphPrepared33.indexed_chunk05_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_33
+    D1Bound5.smallPairB_33 D1Bound5.PairGraphPrepared33.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_33 80
+    (List.drop 640 D1Bound5.PairGraphPrepared33.witnesses) (List.drop 640 D1Bound5.PairGraphPrepared33.destinations) =
+  true
+D1Bound5.PairGraphPrepared33.indexed_coverage_checked : decide
+    (D1Bound5.PairGraphPrepared33.anchorRoot * D1Bound5.PairGraphPrepared33.anchorRoot =
+        D1Bound5.smallPairA_33 * D1Bound5.smallPairB_33 + 1 ∧
+      List.map D1Bound5.PairRootWitness.vertex D1Bound5.PairGraphPrepared33.witnesses = D1Bound5.smallPairClosure_33) =
+  true
+D1Bound5.PairGraphPrepared33.indexed_checked : D1Bound5.pairClosureIndexedWitnessBool D1Bound5.smallPairA_33
+    D1Bound5.smallPairB_33 D1Bound5.PairGraphPrepared33.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_33
+    D1Bound5.PairGraphPrepared33.witnesses D1Bound5.PairGraphPrepared33.destinations =
+  true
+D1Bound5.smallPairClosure_33_checked : D1Bound5.pairClosureBool D1Bound5.smallPairA_33 D1Bound5.smallPairB_33
+    (10 ^ 1100) D1Bound5.smallPairClosure_33 =
+  true

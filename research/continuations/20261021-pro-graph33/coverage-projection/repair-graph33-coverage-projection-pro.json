@@ -1,0 +1,15 @@
+{
+  "targets": [
+    {
+      "module": "SmallPairGraphClosure33Coverage",
+      "source_sha256": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f",
+      "replacements": [
+        {
+          "old": "  decide +kernel\n",
+          "new": "  have hzip {α β : Type} (xs : List α) (ys : List β)\n      (hlen : xs.length ≤ ys.length) :\n      List.zipWith (fun x _ => x) xs ys = xs := by\n    induction xs generalizing ys with\n    | nil => rfl\n    | cons x xs ih =>\n      cases ys with\n      | nil => simp at hlen\n      | cons y ys =>\n        exact congrArg (List.cons x) (ih ys (Nat.le_of_succ_le_succ hlen))\n  apply decide_eq_true\n  constructor\n  · decide +kernel\n  · unfold witnesses\n    rw [List.map_zipWith]\n    change List.zipWith (fun (z : QuadInt 1 2) (_ : QuadInt 1 2 × QuadInt 1 2) => z)\n      smallPairClosure_33 rootPairs = smallPairClosure_33\n    exact hzip smallPairClosure_33 rootPairs (by decide +kernel)\n",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
