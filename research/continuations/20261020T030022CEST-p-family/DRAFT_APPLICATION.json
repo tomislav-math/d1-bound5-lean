@@ -1,0 +1,17 @@
+{
+  "time": "2026-10-20T03:00:49.005684+02:00",
+  "source": "research/continuations/20261020T023316CEST-a5-p-completion/DRAFT_REVIEW.json",
+  "applied": {
+    "FinitePLeadingBound": {
+      "before_sha256": "f7a9a6fc6d9a179d58a3c1c072a801c947391a15d5af0bb93394c008dfafac5b",
+      "draft_sha256": "a7a741b189fc8741411aa4f7a734994d2fae981e33d5f625030ec04d1672c1c5",
+      "reason": "Use direct finite-case proofs for the three lower and upper anchor bounds; avoid a simplifier closing some branches before the subsequent explicit proofs."
+    },
+    "FinitePTailCoefficients": {
+      "before_sha256": "f751d7a91525f1a6268a6e0bce7e99834ef5bf89c75d62faf2d3ee765bccb76e",
+      "draft_sha256": "5cc984c2c985c2d22c5a049b518381dab8ea75e18ad9283f1e27ae409987f3ef",
+      "reason": "Normalize multiplication association directly in the scaled monomial bound, rather than a conversion followed by a potentially vacuous dsimp."
+    }
+  },
+  "status": "APPLIED_PENDING_COMPILATION"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "module": "FinitePMatrix",
+    "name": "D1Bound5.finitePDividedMatrix_det",
+    "original_signature": " (a b s c : R) :\n    (finitePDividedMatrix a b s c).det =\n      -78750*a*b*s*(a-b)^5*(a-s)*(b-s)*finitePDetFactor a b s c",
+    "explicit_arguments": "a b s c"
+  },
+  {
+    "module": "FinitePMatrix",
+    "name": "D1Bound5.finitePMatrix_det",
+    "original_signature": " (a b s c : R) :\n    (finitePMatrix a b s c).det =\n      -78750*a^2*b^2*s^2*(a-b)^5*(a-s)*(b-s)*finitePDetFactor a b s c",
+    "explicit_arguments": "a b s c"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.finiteP_factor_identity",
+    "original_signature": " {R : Type*} [CommRing R] (a b s : R) :\n    (a-b)^2 = 4*finitePLeadingFactor a b s-(6*s+a+b)*finitePLinearFactor a b s",
+    "explicit_arguments": "a b s"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.map_finitePLeadingFactor",
+    "original_signature": " {R S : Type*} [CommRing R] [CommRing S]\n    (f : R \u2192+* S) (a b s : R) :\n    f (finitePLeadingFactor a b s) = finitePLeadingFactor (f a) (f b) (f s)",
+    "explicit_arguments": "f a b s"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.map_finitePDividedMatrix",
+    "original_signature": " {R S : Type*} [CommRing R] [CommRing S]\n    (f : R \u2192+* S) (a b s c : R) (i j : Fin 4) :\n    f (finitePDividedMatrix a b s c i j) =\n      finitePDividedMatrix (f a) (f b) (f s) (f c) i j",
+    "explicit_arguments": "f a b s c i j"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.full_ring_finitePDetFactor_ne_zero",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102) (a b s c : \ud835\udcde K)\n    (hs : s \u2260 0) (hab : a \u2260 b)\n    (hAB : \u2016phi (a : K)\u2016 \u2264 \u2016phi (b : K)\u2016)\n    (hBS : \u2016phi (b : K)\u2016 \u2264 \u2016phi (s : K)\u2016)\n    (hC : 200*\u2016phi (s : K)\u2016 \u2264 \u2016phi (c : K)\u2016) :\n    finitePDetFactor (phi (a : K)) (phi (b : K)) (phi (s : K)) (phi (c : K)) \u2260 0",
+    "explicit_arguments": "hK phi a b s c hs hab hAB hBS hC"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.full_ring_finitePDividedMatrix_det_ne_zero",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102) (a b s c : \ud835\udcde K)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s)\n    (hAB : \u2016phi (a : K)\u2016 \u2264 \u2016phi (b : K)\u2016)\n    (hBS : \u2016phi (b : K)\u2016 \u2264 \u2016phi (s : K)\u2016)\n    (hC : 200*\u2016phi (s : K)\u2016 \u2264 \u2016phi (c : K)\u2016) :\n    (finitePDividedMatrix (phi (a : K)) (phi (b : K)) (phi (s : K)) (phi (c : K))).det \u2260 0",
+    "explicit_arguments": "hK phi a b s c ha hb hs hab has hbs hAB hBS hC"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.map_finitePRowForm",
+    "original_signature": " {R S : Type*} [CommRing R] [CommRing S]\n    (f : R \u2192+* S) (a b s c z rA rB rS : R) (i : Fin 4) :\n    f (finitePRowForm a b s c z rA rB rS i) =\n      finitePRowForm (f a) (f b) (f s) (f c) (f z) (f rA) (f rB) (f rS) i",
+    "explicit_arguments": "f a b s c z rA rB rS i"
+  },
+  {
+    "module": "FinitePIntegralRows",
+    "name": "D1Bound5.full_ring_finitePRowForm_exists_one_le_norm",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a b s c z rA rB rS : \ud835\udcde K)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0)\n    (hab : a \u2260 b) (has : a \u2260 s) (hbs : b \u2260 s) (hz : z \u2260 0)\n    (hAB : \u2016phi (a : K)\u2016 \u2264 \u2016phi (b : K)\u2016)\n    (hBS : \u2016phi (b : K)\u2016 \u2264 \u2016phi (s : K)\u2016)\n    (hC : 200*\u2016phi (s : K)\u2016 \u2264 \u2016phi (c : K)\u2016) :\n    \u2203 i : Fin 4, 1 \u2264 \u2016finitePRowForm (phi (a : K)) (phi (b : K)) (phi (s : K))\n      (phi (c : K)) (phi (z : K)) (phi (rA : K)) (phi (rB : K)) (phi (rS : K)) i\u2016",
+    "explicit_arguments": "hK phi a b s c z rA rB rS ha hb hs hab has hbs hz hAB hBS hC"
+  },
+  {
+    "module": "FinitePMonomial",
+    "name": "D1Bound5.finiteP_monomial_bound",
+    "original_signature": " (A S U V : \u211d) (q n d e : \u2115)\n    (hA1 : 1 \u2264 A) (hAU : A \u2264 U) (hAV : A \u2264 V)\n    (hUS : U \u2264 S) (hVS : V \u2264 S) (he : e \u2264 2)\n    (hsum : d+e+q \u2264 n+2) :\n    U^d*V^e/U^n \u2264 S^2/A^q",
+    "explicit_arguments": "A S U V q n d e hA1 hAU hAV hUS hVS he hsum"
+  }
+]

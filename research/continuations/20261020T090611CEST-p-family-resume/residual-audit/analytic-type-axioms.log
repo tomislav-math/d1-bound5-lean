@@ -1,0 +1,120 @@
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T090611CEST-p-family-resume/residual-audit/AnalyticAudit.lean:8:12: error: unknown namespace `NumberField`
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_half_coefficients: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePHalfRemainder_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairCoeff: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairResidual: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairTail: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingR: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingT: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairResidual_eq_leading_tail: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePResidual: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingV: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeading: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTail: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePResidual_eq_pairs: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePResidual_eq_leading_tail: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.FinitePLeadingTerm: []
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingTerms: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingTermValue: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeading_eq_terms: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingTerms_exponents: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingTerms_sum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeading_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTailCoeffTerms: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTailCoeffWeight: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTailCoeffTerms_admissible: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTailCoeffWeight_sum: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairCoeff_eq_terms: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairCoeff_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePPairTail_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTail_norm_lt: [propext, Classical.choice, Quot.sound]
+D1Bound5.finiteP_half_coefficients : D1Bound5.halfBinomialCoeff 5 = 7 / 256 ∧
+  D1Bound5.halfBinomialCoeff 6 = -21 / 1024 ∧ D1Bound5.halfBinomialCoeff 7 = 33 / 2048
+D1Bound5.finitePHalfRemainder_norm_le : ∀ (n : ℕ) (z : ℂ),
+  6 ≤ n → ‖z‖ < 1 → ‖D1Bound5.finiteQHalfRemainder n z‖ ≤ 21 / 1024 * ‖z‖ ^ n / (1 - ‖z‖)
+@D1Bound5.finitePPairCoeff : {R : Type u_1} → [CommRing R] → R → R → Fin 2 → Fin 2 → Fin 3 → R
+D1Bound5.finitePPairResidual : ℂ → ℂ → ℂ → Fin 2 → ℂ
+D1Bound5.finitePPairTail : ℂ → ℂ → ℂ → Fin 2 → ℂ
+D1Bound5.finitePLeadingR : ℂ → ℂ → ℂ
+D1Bound5.finitePLeadingT : ℂ → ℂ → ℂ
+D1Bound5.finitePPairResidual_eq_leading_tail : ∀ (u v c : ℂ),
+  u ≠ 0 →
+    v ≠ 0 →
+      c ≠ 0 →
+        ∀ (kind : Fin 2),
+          D1Bound5.finitePPairResidual u v c kind =
+            ![D1Bound5.finitePLeadingR u v, D1Bound5.finitePLeadingT u v] kind / c ^ 5 +
+              D1Bound5.finitePPairTail u v c kind
+D1Bound5.finitePResidual : ℂ → ℂ → ℂ → ℂ → Fin 4 → ℂ
+D1Bound5.finitePLeadingV : ℂ → ℂ → ℂ → ℂ
+D1Bound5.finitePLeading : ℂ → ℂ → ℂ → Fin 4 → ℂ
+D1Bound5.finitePTail : ℂ → ℂ → ℂ → ℂ → Fin 4 → ℂ
+D1Bound5.finitePResidual_eq_pairs : ∀ (a b s c : ℂ) (i : Fin 4),
+  D1Bound5.finitePResidual a b s c i =
+    ![D1Bound5.finitePPairResidual a b c 0,
+        D1Bound5.finitePPairResidual a b c 0 + D1Bound5.finitePPairResidual b s c 0 -
+          D1Bound5.finitePPairResidual a s c 0,
+        D1Bound5.finitePPairResidual a b c 1,
+        D1Bound5.finitePPairResidual a s c 1 - D1Bound5.finitePPairResidual b s c 1]
+      i
+D1Bound5.finitePResidual_eq_leading_tail : ∀ (a b s c : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      s ≠ 0 →
+        c ≠ 0 →
+          ∀ (i : Fin 4),
+            D1Bound5.finitePResidual a b s c i =
+              D1Bound5.finitePLeading a b s i / c ^ 5 + D1Bound5.finitePTail a b s c i
+D1Bound5.FinitePLeadingTerm : Type
+D1Bound5.finitePLeadingTerms : Fin 4 → Fin 12 → D1Bound5.FinitePLeadingTerm
+D1Bound5.finitePLeadingTermValue : (Fin 3 → ℂ) → D1Bound5.FinitePLeadingTerm → ℂ
+D1Bound5.finitePLeading_eq_terms : ∀ (a b s : ℂ),
+  a ≠ 0 →
+    b ≠ 0 →
+      s ≠ 0 →
+        ∀ (i : Fin 4),
+          D1Bound5.finitePLeading a b s i =
+            (∑ t, D1Bound5.finitePLeadingTermValue ![a, b, s] (D1Bound5.finitePLeadingTerms i t)) / 256
+D1Bound5.finitePLeadingTerms_exponents : ∀ (i : Fin 4) (t : Fin 12),
+  have u := D1Bound5.finitePLeadingTerms i t;
+  u.2.2.2.1 ≤ 2 ∧ u.2.2.2.1 + 3 ≤ u.2.2.2.2 + 2
+D1Bound5.finitePLeadingTerms_sum : ∀ (i : Fin 4), ∑ t, |↑(D1Bound5.finitePLeadingTerms i t).1| ≤ 560
+D1Bound5.finitePLeading_norm_le : ∀ (a b s : ℂ),
+  1 ≤ ‖a‖ → ‖a‖ ≤ ‖b‖ → ‖b‖ ≤ ‖s‖ → ∀ (i : Fin 4), ‖D1Bound5.finitePLeading a b s i‖ ≤ 35 / 16 * ‖s‖ ^ 2 / ‖a‖ ^ 3
+D1Bound5.finitePTailCoeffTerms : Fin 2 → Fin 2 → Fin 3 → Fin 3 → ℤ × ℕ × ℕ
+D1Bound5.finitePTailCoeffWeight : Fin 2 → Fin 2 → Fin 3 → ℕ
+D1Bound5.finitePTailCoeffTerms_admissible : ∀ (kind side : Fin 2) (l t : Fin 3),
+  (D1Bound5.finitePTailCoeffTerms kind side l t).2.2 ≤ 2 ∧
+    (D1Bound5.finitePTailCoeffTerms kind side l t).2.1 + (D1Bound5.finitePTailCoeffTerms kind side l t).2.2 ≤ 3 + ↑l
+D1Bound5.finitePTailCoeffWeight_sum : ∀ (kind : Fin 2),
+  ∑ side, ∑ l, D1Bound5.finitePTailCoeffWeight kind side l = ![876, 2676] kind
+D1Bound5.finitePPairCoeff_eq_terms : ∀ (u v : ℂ) (kind side : Fin 2) (l : Fin 3),
+  D1Bound5.finitePPairCoeff u v kind side l =
+    ∑ t,
+      ↑(D1Bound5.finitePTailCoeffTerms kind side l t).1 *
+          ![u, v] side ^ (D1Bound5.finitePTailCoeffTerms kind side l t).2.1 *
+        ![v, u] side ^ (D1Bound5.finitePTailCoeffTerms kind side l t).2.2
+D1Bound5.finitePPairCoeff_norm_le : ∀ (u v : ℂ) (A S : ℝ),
+  1 ≤ A →
+    A ≤ ‖u‖ →
+      A ≤ ‖v‖ →
+        ‖u‖ ≤ S →
+          ‖v‖ ≤ S →
+            ∀ (kind side : Fin 2) (l : Fin 3),
+              ‖D1Bound5.finitePPairCoeff u v kind side l‖ ≤
+                ↑(D1Bound5.finitePTailCoeffWeight kind side l) * (S ^ 2 / A ^ 4) * ‖![u, v] side‖ ^ (5 + ↑l)
+D1Bound5.finitePPairTail_norm_le : ∀ (u v c : ℂ) (A S : ℝ),
+  1 ≤ A →
+    A ≤ ‖u‖ →
+      A ≤ ‖v‖ →
+        ‖u‖ ≤ S →
+          ‖v‖ ≤ S →
+            1000 ≤ A * ‖c‖ →
+              ∀ (kind : Fin 2),
+                ‖D1Bound5.finitePPairTail u v c kind‖ ≤
+                  ↑(![876, 2676] kind) * (21 / 1024 * (1000 / 999) * S ^ 2 / (A ^ 4 * ‖c‖ ^ 6))
+D1Bound5.finitePTail_norm_lt : ∀ (a b s c : ℂ),
+  1 ≤ ‖a‖ →
+    ‖a‖ ≤ ‖b‖ →
+      ‖b‖ ≤ ‖s‖ →
+        1000 ≤ ‖a‖ * ‖c‖ → ∀ (i : Fin 4), ‖D1Bound5.finitePTail a b s c i‖ < 1 / 8 * ‖s‖ ^ 2 / (‖a‖ ^ 3 * ‖c‖ ^ 5)

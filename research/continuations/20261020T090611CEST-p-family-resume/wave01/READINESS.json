@@ -1,0 +1,93 @@
+{
+  "time": "2026-10-20T09:07:49.811486+02:00",
+  "unknown": [],
+  "targets": {
+    "FinitePResidualIdentity": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePLeadingBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity"
+      ]
+    },
+    "FinitePTailCoefficients": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity"
+      ]
+    },
+    "FinitePTailBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePTailCoefficients",
+        "FinitePResidualIdentity"
+      ]
+    },
+    "FinitePResidualBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePRowBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePFullRing": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePRowBound",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePInterval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "AllLargeImpossible": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePInterval",
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    }
+  }
+}

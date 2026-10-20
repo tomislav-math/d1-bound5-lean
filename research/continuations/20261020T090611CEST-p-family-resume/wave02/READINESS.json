@@ -1,0 +1,56 @@
+{
+  "time": "2026-10-20T09:13:44.270935+02:00",
+  "unknown": [],
+  "targets": {
+    "FinitePTailBound": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePResidualBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePTailBound"
+      ]
+    },
+    "FinitePRowBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualBound",
+        "FinitePTailBound"
+      ]
+    },
+    "FinitePFullRing": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePRowBound",
+        "FinitePResidualBound",
+        "FinitePTailBound"
+      ]
+    },
+    "FinitePInterval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePResidualBound",
+        "FinitePTailBound"
+      ]
+    },
+    "AllLargeImpossible": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePInterval",
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePResidualBound",
+        "FinitePTailBound"
+      ]
+    }
+  }
+}

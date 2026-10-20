@@ -1,0 +1,13 @@
+⚠ [1693/1746] Replayed D1Bound5.FinitePMatrix
+warning: D1Bound5/FinitePMatrix.lean:97:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [2955/2955] Built D1Bound5.FinitePIntegralRows (54s)
+warning: D1Bound5/FinitePIntegralRows.lean:172:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+Build completed successfully (2955 jobs).

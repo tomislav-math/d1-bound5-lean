@@ -1,0 +1,170 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRLeftCoeff: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRRightCoeff: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTLeftCoeff: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTRightCoeff: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePairQuadratic: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRLeft: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRRight: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTLeft: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTRight: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRConstant: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTConstant: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePDividedMatrix: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePMatrix: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePDetFactor: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePDividedMatrix_det: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePMatrix_det: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_monomial_bound: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLeadingFactor: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePLinearFactor: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_factor_identity: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finitePLeadingFactor: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finitePDividedMatrix: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finitePDetFactor_ne_zero: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finitePDividedMatrix_det_ne_zero: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRowForm: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.map_finitePRowForm: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finitePRowForm_exists_one_le_norm: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.FinitePTerm: []
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTermValue: []
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootTerms: [propext]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootCoeff: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootColumn: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootColumn_coeff: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootTerms_exponents: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_monomial_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePTermValue_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootCoeff_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finitePRootTerms_sums: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_root_columns_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_height_scalar: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_height_scaled: [propext, Classical.choice, Quot.sound]
+@D1Bound5.finitePRLeftCoeff : {R : Type u_1} → [CommRing R] → R → R → Fin 3 → R
+@D1Bound5.finitePRRightCoeff : {R : Type u_1} → [CommRing R] → R → R → Fin 3 → R
+@D1Bound5.finitePTLeftCoeff : {R : Type u_1} → [CommRing R] → R → R → Fin 3 → R
+@D1Bound5.finitePTRightCoeff : {R : Type u_1} → [CommRing R] → R → R → Fin 3 → R
+@D1Bound5.finitePairQuadratic : {R : Type u_1} → [CommRing R] → (Fin 3 → R) → R → R
+@D1Bound5.finitePRLeft : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePRRight : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePTLeft : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePTRight : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePRConstant : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePTConstant : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePDividedMatrix : {R : Type u_1} → [CommRing R] → R → R → R → R → Matrix (Fin 4) (Fin 4) R
+@D1Bound5.finitePMatrix : {R : Type u_1} → [CommRing R] → R → R → R → R → Matrix (Fin 4) (Fin 4) R
+@D1Bound5.finitePDetFactor : {R : Type u_1} → [CommRing R] → R → R → R → R → R
+@D1Bound5.finitePDividedMatrix_det : ∀ {R : Type u_1} [inst : CommRing R] (a b s c : R),
+  (D1Bound5.finitePDividedMatrix a b s c).det =
+    -78750 * a * b * s * (a - b) ^ 5 * (a - s) * (b - s) * D1Bound5.finitePDetFactor a b s c
+@D1Bound5.finitePMatrix_det : ∀ {R : Type u_1} [inst : CommRing R] (a b s c : R),
+  (D1Bound5.finitePMatrix a b s c).det =
+    -78750 * a ^ 2 * b ^ 2 * s ^ 2 * (a - b) ^ 5 * (a - s) * (b - s) * D1Bound5.finitePDetFactor a b s c
+D1Bound5.finiteP_monomial_bound : ∀ (A S U V : ℝ) (q n d e : ℕ),
+  1 ≤ A → A ≤ U → A ≤ V → U ≤ S → V ≤ S → e ≤ 2 → d + e + q ≤ n + 2 → U ^ d * V ^ e / U ^ n ≤ S ^ 2 / A ^ q
+@D1Bound5.finitePLeadingFactor : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finitePLinearFactor : {R : Type u_1} → [CommRing R] → R → R → R → R
+@D1Bound5.finiteP_factor_identity : ∀ {R : Type u_1} [inst : CommRing R] (a b s : R),
+  (a - b) ^ 2 = 4 * D1Bound5.finitePLeadingFactor a b s - (6 * s + a + b) * D1Bound5.finitePLinearFactor a b s
+@D1Bound5.map_finitePLeadingFactor : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S]
+  (f : R →+* S) (a b s : R), f (D1Bound5.finitePLeadingFactor a b s) = D1Bound5.finitePLeadingFactor (f a) (f b) (f s)
+@D1Bound5.map_finitePDividedMatrix : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S]
+  (f : R →+* S) (a b s c : R) (i j : Fin 4),
+  f (D1Bound5.finitePDividedMatrix a b s c i j) = D1Bound5.finitePDividedMatrix (f a) (f b) (f s) (f c) i j
+@D1Bound5.full_ring_finitePDetFactor_ne_zero : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a b s c : 𝓞 K),
+      s ≠ 0 →
+        a ≠ b →
+          ‖phi ↑a‖ ≤ ‖phi ↑b‖ →
+            ‖phi ↑b‖ ≤ ‖phi ↑s‖ →
+              200 * ‖phi ↑s‖ ≤ ‖phi ↑c‖ → D1Bound5.finitePDetFactor (phi ↑a) (phi ↑b) (phi ↑s) (phi ↑c) ≠ 0
+@D1Bound5.full_ring_finitePDividedMatrix_det_ne_zero : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a b s c : 𝓞 K),
+      a ≠ 0 →
+        b ≠ 0 →
+          s ≠ 0 →
+            a ≠ b →
+              a ≠ s →
+                b ≠ s →
+                  ‖phi ↑a‖ ≤ ‖phi ↑b‖ →
+                    ‖phi ↑b‖ ≤ ‖phi ↑s‖ →
+                      200 * ‖phi ↑s‖ ≤ ‖phi ↑c‖ →
+                        (D1Bound5.finitePDividedMatrix (phi ↑a) (phi ↑b) (phi ↑s) (phi ↑c)).det ≠ 0
+@D1Bound5.finitePRowForm : {R : Type u_1} → [CommRing R] → R → R → R → R → R → R → R → R → Fin 4 → R
+@D1Bound5.map_finitePRowForm : ∀ {R : Type u_1} {S : Type u_2} [inst : CommRing R] [inst_1 : CommRing S] (f : R →+* S)
+  (a b s c z rA rB rS : R) (i : Fin 4),
+  f (D1Bound5.finitePRowForm a b s c z rA rB rS i) =
+    D1Bound5.finitePRowForm (f a) (f b) (f s) (f c) (f z) (f rA) (f rB) (f rS) i
+@D1Bound5.full_ring_finitePRowForm_exists_one_le_norm : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a b s c z rA rB rS : 𝓞 K),
+      a ≠ 0 →
+        b ≠ 0 →
+          s ≠ 0 →
+            a ≠ b →
+              a ≠ s →
+                b ≠ s →
+                  z ≠ 0 →
+                    ‖phi ↑a‖ ≤ ‖phi ↑b‖ →
+                      ‖phi ↑b‖ ≤ ‖phi ↑s‖ →
+                        200 * ‖phi ↑s‖ ≤ ‖phi ↑c‖ →
+                          ∃ i,
+                            1 ≤
+                              ‖D1Bound5.finitePRowForm (phi ↑a) (phi ↑b) (phi ↑s) (phi ↑c) (phi ↑z) (phi ↑rA) (phi ↑rB)
+                                  (phi ↑rS) i‖
+D1Bound5.FinitePTerm : Type
+@D1Bound5.finitePTermValue : {R : Type u_1} → [CommRing R] → D1Bound5.FinitePTerm → R → R → R → R
+D1Bound5.finitePRootTerms : Fin 4 → Fin 3 → Fin 3 → Fin 3 → D1Bound5.FinitePTerm
+@D1Bound5.finitePRootCoeff : {R : Type u_1} → [CommRing R] → R → R → R → Fin 4 → Fin 3 → Fin 3 → R
+@D1Bound5.finitePRootColumn : {R : Type u_1} → [CommRing R] → R → R → R → R → Fin 4 → Fin 3 → R
+@D1Bound5.finitePRootColumn_coeff : ∀ {R : Type u_1} [inst : CommRing R] (a b s c : R) (i : Fin 4) (j : Fin 3),
+  D1Bound5.finitePRootColumn a b s c i j =
+    D1Bound5.finitePRootCoeff a b s i 0 j + D1Bound5.finitePRootCoeff a b s i 1 j * c +
+      D1Bound5.finitePRootCoeff a b s i 2 j * c ^ 2
+D1Bound5.finitePRootTerms_exponents : ∀ (i : Fin 4) (l j t : Fin 3),
+  have u := D1Bound5.finitePRootTerms i l j t;
+  u.2.1 + u.2.2.1 + u.2.2.2 ≤ 5 ∧ u.2.2.2 ≤ 2 ∨ u.2.1 + u.2.2.1 ≤ 1 ∧ u.2.2.2 ≤ 3
+D1Bound5.finiteP_monomial_le : ∀ (A B S : ℝ),
+  1 ≤ A →
+    A ≤ B →
+      B ≤ S →
+        ∀ (i j l : ℕ),
+          i + j + l ≤ 5 ∧ l ≤ 2 ∨ i + j ≤ 1 ∧ l ≤ 3 → A ^ i * B ^ j * S ^ l ≤ max (B * S ^ 3) (B ^ 3 * S ^ 2)
+D1Bound5.finitePTermValue_norm_le : ∀ (a b s : ℂ),
+  1 ≤ ‖a‖ →
+    ‖a‖ ≤ ‖b‖ →
+      ‖b‖ ≤ ‖s‖ →
+        ∀ (i : Fin 4) (l j t : Fin 3),
+          ‖D1Bound5.finitePTermValue (D1Bound5.finitePRootTerms i l j t) a b s‖ ≤
+            |↑(D1Bound5.finitePRootTerms i l j t).1| * max (‖b‖ * ‖s‖ ^ 3) (‖b‖ ^ 3 * ‖s‖ ^ 2)
+D1Bound5.finitePRootCoeff_norm_le : ∀ (a b s : ℂ),
+  1 ≤ ‖a‖ →
+    ‖a‖ ≤ ‖b‖ →
+      ‖b‖ ≤ ‖s‖ →
+        ∀ (i : Fin 4) (l j : Fin 3),
+          ‖D1Bound5.finitePRootCoeff a b s i l j‖ ≤
+            (∑ t, |↑(D1Bound5.finitePRootTerms i l j t).1|) * max (‖b‖ * ‖s‖ ^ 3) (‖b‖ ^ 3 * ‖s‖ ^ 2)
+D1Bound5.finitePRootTerms_sums : ∀ (i : Fin 4),
+  ∑ j, ∑ t, |↑(D1Bound5.finitePRootTerms i 0 j t).1| ≤ 492 ∧
+    ∑ j, ∑ t, |↑(D1Bound5.finitePRootTerms i 1 j t).1| ≤ 2424 ∧
+      ∑ j, ∑ t, |↑(D1Bound5.finitePRootTerms i 2 j t).1| ≤ 2352
+D1Bound5.finiteP_root_columns_norm_le : ∀ (a b s c : ℂ),
+  1 ≤ ‖a‖ →
+    ‖a‖ ≤ ‖b‖ →
+      ‖b‖ ≤ ‖s‖ →
+        ∀ (i : Fin 4),
+          ∑ j, ‖D1Bound5.finitePRootColumn a b s c i j‖ ≤
+            max (‖b‖ * ‖s‖ ^ 3) (‖b‖ ^ 3 * ‖s‖ ^ 2) * (492 + 2424 * ‖c‖ + 2352 * ‖c‖ ^ 2)
+D1Bound5.finiteP_height_scalar : ∀ (C : ℝ), 200 ≤ C → 101 / 100 * (492 + 2424 * C + 2352 * C ^ 2) < 2400 * C ^ 2
+D1Bound5.finiteP_height_scaled : ∀ (a b s c : ℂ),
+  1 ≤ ‖a‖ →
+    ‖a‖ ≤ ‖b‖ →
+      ‖b‖ ≤ ‖s‖ →
+        200 ≤ ‖c‖ →
+          ∀ (i : Fin 4),
+            101 / 100 * ∑ j, ‖D1Bound5.finitePRootColumn a b s c i j‖ <
+              2400 * max (‖b‖ * ‖s‖ ^ 3) (‖b‖ ^ 3 * ‖s‖ ^ 2) * ‖c‖ ^ 2

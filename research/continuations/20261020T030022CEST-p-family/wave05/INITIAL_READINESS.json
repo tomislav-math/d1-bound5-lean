@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-20T01:24:15.558601+00:00",
+  "unknown": [],
+  "targets": {
+    "FinitePHeight": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePResidualIdentity": {
+      "accepted": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePLeadingBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity"
+      ]
+    },
+    "FinitePTailCoefficients": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity"
+      ]
+    },
+    "FinitePTailBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePTailCoefficients",
+        "FinitePResidualIdentity"
+      ]
+    },
+    "FinitePResidualBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePRowBound": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePFullRing": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePRowBound",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePInterval": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "AllLargeImpossible": {
+      "accepted": false,
+      "eligible": false,
+      "missing": [
+        "FinitePInterval",
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    }
+  }
+}

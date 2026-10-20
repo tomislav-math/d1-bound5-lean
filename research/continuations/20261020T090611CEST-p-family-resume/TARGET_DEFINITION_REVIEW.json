@@ -1,0 +1,15 @@
+{
+  "time": "2026-10-20T09:26:17.986598+02:00",
+  "mathlib_tracked_changes": false,
+  "definition_sources": {
+    "Basic": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+    "Specification": "60d7ff20e6ffc449c6452bceb3b22f98c1db628f9ed34831c674a58bbcf40b50"
+  },
+  "MainStatement": "def MainStatement : Prop :=\n  \u2200 (K : Type u) [Field K] [NumberField K] [NumberField.IsTotallyComplex K],\n    Module.finrank \u211a K = 2 \u2192\n    \u2200 A : Finset (\ud835\udcde K), IsD1 A \u2192 A.card \u2264 5",
+  "scope": "Current source review by the proof author, not independent review. The root proposition is not proved by this record.",
+  "full_ring": true,
+  "nonzero_entries": true,
+  "zero_pair_roots_allowed": true,
+  "tied_moduli_allowed": true,
+  "main_statement_proved": false
+}

@@ -1,0 +1,21 @@
+✖ [1694/1694] Building D1Bound5.FinitePMatrix (45s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FinitePMatrix.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FinitePMatrix.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FinitePMatrix.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FinitePMatrix.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FinitePMatrix.setup.json --json
+error: D1Bound5/FinitePMatrix.lean:66:79: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+M : Matrix (Fin 4) (Fin 4) R
+h0 : M 0 3 = 0
+h2 : M 2 3 = 0
+⊢ M (Fin.succ 2) 3 * (M.submatrix (Fin.succ 2).succAbove (Fin.succAbove 3)).det =
+    M 3 3 * (M.submatrix (Fin.succAbove 3) (Fin.succAbove 3)).det
+error: D1Bound5/FinitePMatrix.lean:83:6: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+warning: D1Bound5/FinitePMatrix.lean:90:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FinitePMatrix
+error: build failed

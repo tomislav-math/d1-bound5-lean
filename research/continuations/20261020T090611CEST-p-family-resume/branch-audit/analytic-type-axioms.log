@@ -1,0 +1,6 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1Tuple.all_large_impossible: [propext, Classical.choice, Quot.sound]
+@D1Bound5.IsD1Tuple.all_large_impossible : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a → (Monotone fun i => ‖phi ↑(a i)‖) → 3 ≤ ‖phi ↑(a 0)‖ → False

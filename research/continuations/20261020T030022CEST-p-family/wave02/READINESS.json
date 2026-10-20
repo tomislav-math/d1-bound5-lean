@@ -1,0 +1,130 @@
+{
+  "time": "2026-10-20T03:03:53.390816+02:00",
+  "unknown": [],
+  "targets": {
+    "FinitePMatrix": {
+      "compiled": false,
+      "eligible": true,
+      "missing": []
+    },
+    "FinitePIntegralRows": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePHeight": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePResidualIdentity": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePLeadingBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity",
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePTailCoefficients": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePResidualIdentity",
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePTailBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePTailCoefficients",
+        "FinitePResidualIdentity",
+        "FinitePMatrix"
+      ]
+    },
+    "FinitePResidualBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePMatrix",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePRowBound": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePFullRing": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePRowBound",
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "FinitePInterval": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    },
+    "AllLargeImpossible": {
+      "compiled": false,
+      "eligible": false,
+      "missing": [
+        "FinitePInterval",
+        "FinitePFullRing",
+        "FinitePRowBound",
+        "FinitePIntegralRows",
+        "FinitePMatrix",
+        "FinitePHeight",
+        "FinitePResidualBound",
+        "FinitePLeadingBound",
+        "FinitePResidualIdentity",
+        "FinitePTailBound",
+        "FinitePTailCoefficients"
+      ]
+    }
+  }
+}

@@ -1,0 +1,777 @@
+✖ [1694/1694] Building D1Bound5.FinitePMatrix (153s)
+trace: .> LEAN_PATH=/Users/tp/Lean/D1Bound5/.lake/packages/Cli/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/batteries/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/Qq/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/aesop/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/importGraph/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/plausible/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/packages/mathlib/.lake/build/lib/lean:/Users/tp/Lean/D1Bound5/.lake/build/lib/lean /Users/tp/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /Users/tp/Lean/D1Bound5/D1Bound5/FinitePMatrix.lean -o /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FinitePMatrix.olean -i /Users/tp/Lean/D1Bound5/.lake/build/lib/lean/D1Bound5/FinitePMatrix.ilean -c /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FinitePMatrix.c --setup /Users/tp/Lean/D1Bound5/.lake/build/ir/D1Bound5/FinitePMatrix.setup.json --json
+info: D1Bound5/FinitePMatrix.lean:84:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+error: D1Bound5/FinitePMatrix.lean:76:67: unsolved goals
+R : Type u_1
+inst✝ : CommRing R
+a b s c : R
+⊢ Fin.induction (motive := fun x => Fin 4 → R)
+                                  (Fin.cons
+                                    (-(a * b ^ 2 * 90) - a * b ^ 3 * c * 200 - a * b ^ 4 * c ^ 2 * 120 +
+                                                      a ^ 2 * b * 90 -
+                                                    a ^ 3 * 30 +
+                                                  a ^ 3 * b * c * 200 +
+                                                a ^ 4 * b * c ^ 2 * 120 -
+                                              a ^ 4 * c * 100 -
+                                            a ^ 5 * c ^ 2 * 72 +
+                                          b ^ 3 * 30 +
+                                        b ^ 4 * c * 100 +
+                                      b ^ 5 * c ^ 2 * 72)
+                                    (Fin.cons
+                                      (c *
+                                            Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                  (fun i x =>
+                                                    Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                      i)
+                                                  i)
+                                              1 +
+                                          c ^ 2 *
+                                            Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                  (fun i x =>
+                                                    Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                      i)
+                                                  i)
+                                              2 +
+                                        Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                          (fun i x =>
+                                            Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i) i)
+                                              i)
+                                          0)
+                                      (Fin.cons
+                                        (c *
+                                              Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i) i)
+                                                    i)
+                                                1 +
+                                            c ^ 2 *
+                                              Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i) i)
+                                                    i)
+                                                2 +
+                                          Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                            (fun i x =>
+                                              Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                (fun i x =>
+                                                  Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i) i)
+                                                i)
+                                            0)
+                                        (Fin.cons 0 ![]))))
+                                  (fun i x =>
+                                    Fin.induction (motive := fun x => Fin 4 → R)
+                                      (Fin.cons
+                                        (-(a * b ^ 2 * 90) - a * b ^ 3 * c * 200 - a * b ^ 4 * c ^ 2 * 120 +
+                                                                      a * c * s ^ 3 * 200 +
+                                                                    a * c ^ 2 * s ^ 4 * 120 +
+                                                                  a * s ^ 2 * 90 +
+                                                                a ^ 2 * b * 90 -
+                                                              a ^ 2 * s * 90 +
+                                                            a ^ 3 * b * c * 200 -
+                                                          a ^ 3 * c * s * 200 +
+                                                        a ^ 4 * b * c ^ 2 * 120 -
+                                                      a ^ 4 * c ^ 2 * s * 120 -
+                                                    b * c * s ^ 3 * 200 -
+                                                  b * c ^ 2 * s ^ 4 * 120 -
+                                                b * s ^ 2 * 90 +
+                                              b ^ 2 * s * 90 +
+                                            b ^ 3 * c * s * 200 +
+                                          b ^ 4 * c ^ 2 * s * 120)
+                                        (Fin.cons
+                                          (c *
+                                                      Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        1 -
+                                                    c *
+                                                      Fin.induction (-(a * s * 35) + a ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (-(a ^ 2 * s * 140) + a ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (-(a ^ 3 * s * 120) + a ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        1 +
+                                                  c ^ 2 *
+                                                    Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                                      (fun i x =>
+                                                        Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                          (fun i x =>
+                                                            Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      2 -
+                                                c ^ 2 *
+                                                  Fin.induction (-(a * s * 35) + a ^ 2 * 7)
+                                                    (fun i x =>
+                                                      Fin.induction (-(a ^ 2 * s * 140) + a ^ 3 * 64)
+                                                        (fun i x =>
+                                                          Fin.induction (-(a ^ 3 * s * 120) + a ^ 4 * 72)
+                                                            (fun i x => ![] i) i)
+                                                        i)
+                                                    2 +
+                                              Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                        i)
+                                                    i)
+                                                0 -
+                                            Fin.induction (-(a * s * 35) + a ^ 2 * 7)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 2 * s * 140) + a ^ 3 * 64)
+                                                  (fun i x =>
+                                                    Fin.induction (-(a ^ 3 * s * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                      i)
+                                                  i)
+                                              0)
+                                          (Fin.cons
+                                            (c *
+                                                        Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                          (fun i x =>
+                                                            Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                              (fun i x =>
+                                                                Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          1 +
+                                                      c *
+                                                        Fin.induction (-(b * s * 35) + b ^ 2 * 7)
+                                                          (fun i x =>
+                                                            Fin.induction (-(b ^ 2 * s * 140) + b ^ 3 * 64)
+                                                              (fun i x =>
+                                                                Fin.induction (-(b ^ 3 * s * 120) + b ^ 4 * 72)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          1 +
+                                                    c ^ 2 *
+                                                      Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        2 +
+                                                  c ^ 2 *
+                                                    Fin.induction (-(b * s * 35) + b ^ 2 * 7)
+                                                      (fun i x =>
+                                                        Fin.induction (-(b ^ 2 * s * 140) + b ^ 3 * 64)
+                                                          (fun i x =>
+                                                            Fin.induction (-(b ^ 3 * s * 120) + b ^ 4 * 72)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      2 +
+                                                Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                  (fun i x =>
+                                                    Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                      (fun i x =>
+                                                        Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i)
+                                                          i)
+                                                      i)
+                                                  0 +
+                                              Fin.induction (-(b * s * 35) + b ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (-(b ^ 2 * s * 140) + b ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (-(b ^ 3 * s * 120) + b ^ 4 * 72) (fun i x => ![] i)
+                                                        i)
+                                                    i)
+                                                0)
+                                            (Fin.cons
+                                              (c *
+                                                          Fin.induction (b * s * 35 - s ^ 2 * 7)
+                                                            (fun i x =>
+                                                              Fin.induction (b * s ^ 2 * 140 - s ^ 3 * 64)
+                                                                (fun i x =>
+                                                                  Fin.induction (b * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                    (fun i x => ![] i) i)
+                                                                i)
+                                                            1 -
+                                                        c *
+                                                          Fin.induction (a * s * 35 - s ^ 2 * 7)
+                                                            (fun i x =>
+                                                              Fin.induction (a * s ^ 2 * 140 - s ^ 3 * 64)
+                                                                (fun i x =>
+                                                                  Fin.induction (a * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                    (fun i x => ![] i) i)
+                                                                i)
+                                                            1 +
+                                                      c ^ 2 *
+                                                        Fin.induction (b * s * 35 - s ^ 2 * 7)
+                                                          (fun i x =>
+                                                            Fin.induction (b * s ^ 2 * 140 - s ^ 3 * 64)
+                                                              (fun i x =>
+                                                                Fin.induction (b * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          2 -
+                                                    c ^ 2 *
+                                                      Fin.induction (a * s * 35 - s ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (a * s ^ 2 * 140 - s ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (a * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        2 +
+                                                  Fin.induction (b * s * 35 - s ^ 2 * 7)
+                                                    (fun i x =>
+                                                      Fin.induction (b * s ^ 2 * 140 - s ^ 3 * 64)
+                                                        (fun i x =>
+                                                          Fin.induction (b * s ^ 3 * 120 - s ^ 4 * 72)
+                                                            (fun i x => ![] i) i)
+                                                        i)
+                                                    0 -
+                                                Fin.induction (a * s * 35 - s ^ 2 * 7)
+                                                  (fun i x =>
+                                                    Fin.induction (a * s ^ 2 * 140 - s ^ 3 * 64)
+                                                      (fun i x =>
+                                                        Fin.induction (a * s ^ 3 * 120 - s ^ 4 * 72) (fun i x => ![] i)
+                                                          i)
+                                                      i)
+                                                  0)
+                                              ![]))))
+                                      (fun i x =>
+                                        Fin.induction (motive := fun x => Fin 4 → R)
+                                          (Fin.cons
+                                            (-(a * b ^ 3 * 120) - a * b ^ 4 * c * 100 + a ^ 2 * b ^ 2 * 270 -
+                                                                a ^ 3 * b * 240 +
+                                                              a ^ 3 * b ^ 2 * c * 600 +
+                                                            a ^ 4 * 75 -
+                                                          a ^ 4 * b * c * 800 +
+                                                        a ^ 4 * b ^ 2 * c ^ 2 * 360 -
+                                                      a ^ 5 * b * c ^ 2 * 576 +
+                                                    a ^ 5 * c * 300 +
+                                                  a ^ 6 * c ^ 2 * 240 +
+                                                b ^ 4 * 15 -
+                                              b ^ 6 * c ^ 2 * 24)
+                                            (Fin.cons
+                                              (c *
+                                                    Fin.induction (-(a * b ^ 2 * 105) + a ^ 2 * b * 56 - a ^ 3 * 15)
+                                                      (fun i x =>
+                                                        Fin.induction
+                                                          (-(a ^ 2 * b ^ 2 * 420) + a ^ 3 * b * 512 - a ^ 4 * 180)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 3 * b ^ 2 * 360) + a ^ 4 * b * 576 - a ^ 5 * 240)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      1 +
+                                                  c ^ 2 *
+                                                    Fin.induction (-(a * b ^ 2 * 105) + a ^ 2 * b * 56 - a ^ 3 * 15)
+                                                      (fun i x =>
+                                                        Fin.induction
+                                                          (-(a ^ 2 * b ^ 2 * 420) + a ^ 3 * b * 512 - a ^ 4 * 180)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 3 * b ^ 2 * 360) + a ^ 4 * b * 576 - a ^ 5 * 240)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      2 +
+                                                Fin.induction (-(a * b ^ 2 * 105) + a ^ 2 * b * 56 - a ^ 3 * 15)
+                                                  (fun i x =>
+                                                    Fin.induction
+                                                      (-(a ^ 2 * b ^ 2 * 420) + a ^ 3 * b * 512 - a ^ 4 * 180)
+                                                      (fun i x =>
+                                                        Fin.induction
+                                                          (-(a ^ 3 * b ^ 2 * 360) + a ^ 4 * b * 576 - a ^ 5 * 240)
+                                                          (fun i x => ![] i) i)
+                                                      i)
+                                                  0)
+                                              (Fin.cons
+                                                (c *
+                                                      Fin.induction (a * b ^ 2 * 70 - b ^ 3 * 6)
+                                                        (fun i x =>
+                                                          Fin.induction (a * b ^ 3 * 100 - b ^ 4 * 12)
+                                                            (fun i x => Fin.induction (b ^ 5 * 24) (fun i x => ![] i) i)
+                                                            i)
+                                                        1 +
+                                                    c ^ 2 *
+                                                      Fin.induction (a * b ^ 2 * 70 - b ^ 3 * 6)
+                                                        (fun i x =>
+                                                          Fin.induction (a * b ^ 3 * 100 - b ^ 4 * 12)
+                                                            (fun i x => Fin.induction (b ^ 5 * 24) (fun i x => ![] i) i)
+                                                            i)
+                                                        2 +
+                                                  Fin.induction (a * b ^ 2 * 70 - b ^ 3 * 6)
+                                                    (fun i x =>
+                                                      Fin.induction (a * b ^ 3 * 100 - b ^ 4 * 12)
+                                                        (fun i x => Fin.induction (b ^ 5 * 24) (fun i x => ![] i) i) i)
+                                                    0)
+                                                (Fin.cons 0 ![]))))
+                                          (fun i x =>
+                                            Fin.induction (motive := fun x => Fin 4 → R)
+                                              (Fin.cons
+                                                (-(a * c * s ^ 4 * 100) - a * s ^ 3 * 120 + a ^ 2 * s ^ 2 * 270 +
+                                                                                      a ^ 3 * c * s ^ 2 * 600 -
+                                                                                    a ^ 3 * s * 240 +
+                                                                                  a ^ 4 * 75 -
+                                                                                a ^ 4 * c * s * 800 +
+                                                                              a ^ 4 * c ^ 2 * s ^ 2 * 360 +
+                                                                            a ^ 5 * c * 300 -
+                                                                          a ^ 5 * c ^ 2 * s * 576 +
+                                                                        a ^ 6 * c ^ 2 * 240 +
+                                                                      b * c * s ^ 4 * 100 +
+                                                                    b * s ^ 3 * 120 -
+                                                                  b ^ 2 * s ^ 2 * 270 -
+                                                                b ^ 3 * c * s ^ 2 * 600 +
+                                                              b ^ 3 * s * 240 -
+                                                            b ^ 4 * 75 +
+                                                          b ^ 4 * c * s * 800 -
+                                                        b ^ 4 * c ^ 2 * s ^ 2 * 360 -
+                                                      b ^ 5 * c * 300 +
+                                                    b ^ 5 * c ^ 2 * s * 576 -
+                                                  b ^ 6 * c ^ 2 * 240)
+                                                (Fin.cons
+                                                  (c *
+                                                        Fin.induction (-(a * s ^ 2 * 105) + a ^ 2 * s * 56 - a ^ 3 * 15)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 2 * s ^ 2 * 420) + a ^ 3 * s * 512 - a ^ 4 * 180)
+                                                              (fun i x =>
+                                                                Fin.induction
+                                                                  (-(a ^ 3 * s ^ 2 * 360) + a ^ 4 * s * 576 -
+                                                                    a ^ 5 * 240)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          1 +
+                                                      c ^ 2 *
+                                                        Fin.induction (-(a * s ^ 2 * 105) + a ^ 2 * s * 56 - a ^ 3 * 15)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 2 * s ^ 2 * 420) + a ^ 3 * s * 512 - a ^ 4 * 180)
+                                                              (fun i x =>
+                                                                Fin.induction
+                                                                  (-(a ^ 3 * s ^ 2 * 360) + a ^ 4 * s * 576 -
+                                                                    a ^ 5 * 240)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          2 +
+                                                    Fin.induction (-(a * s ^ 2 * 105) + a ^ 2 * s * 56 - a ^ 3 * 15)
+                                                      (fun i x =>
+                                                        Fin.induction
+                                                          (-(a ^ 2 * s ^ 2 * 420) + a ^ 3 * s * 512 - a ^ 4 * 180)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 3 * s ^ 2 * 360) + a ^ 4 * s * 576 - a ^ 5 * 240)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      0)
+                                                  (Fin.cons
+                                                    (-(c *
+                                                            Fin.induction
+                                                              (-(b * s ^ 2 * 105) + b ^ 2 * s * 56 - b ^ 3 * 15)
+                                                              (fun i x =>
+                                                                Fin.induction
+                                                                  (-(b ^ 2 * s ^ 2 * 420) + b ^ 3 * s * 512 -
+                                                                    b ^ 4 * 180)
+                                                                  (fun i x =>
+                                                                    Fin.induction
+                                                                      (-(b ^ 3 * s ^ 2 * 360) + b ^ 4 * s * 576 -
+                                                                        b ^ 5 * 240)
+                                                                      (fun i x => ![] i) i)
+                                                                  i)
+                                                              1) -
+                                                        c ^ 2 *
+                                                          Fin.induction
+                                                            (-(b * s ^ 2 * 105) + b ^ 2 * s * 56 - b ^ 3 * 15)
+                                                            (fun i x =>
+                                                              Fin.induction
+                                                                (-(b ^ 2 * s ^ 2 * 420) + b ^ 3 * s * 512 - b ^ 4 * 180)
+                                                                (fun i x =>
+                                                                  Fin.induction
+                                                                    (-(b ^ 3 * s ^ 2 * 360) + b ^ 4 * s * 576 -
+                                                                      b ^ 5 * 240)
+                                                                    (fun i x => ![] i) i)
+                                                                i)
+                                                            2 -
+                                                      Fin.induction (-(b * s ^ 2 * 105) + b ^ 2 * s * 56 - b ^ 3 * 15)
+                                                        (fun i x =>
+                                                          Fin.induction
+                                                            (-(b ^ 2 * s ^ 2 * 420) + b ^ 3 * s * 512 - b ^ 4 * 180)
+                                                            (fun i x =>
+                                                              Fin.induction
+                                                                (-(b ^ 3 * s ^ 2 * 360) + b ^ 4 * s * 576 - b ^ 5 * 240)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        0)
+                                                    (Fin.cons
+                                                      (c *
+                                                                  Fin.induction (a * s ^ 2 * 70 - s ^ 3 * 6)
+                                                                    (fun i x =>
+                                                                      Fin.induction (a * s ^ 3 * 100 - s ^ 4 * 12)
+                                                                        (fun i x =>
+                                                                          Fin.induction (s ^ 5 * 24) (fun i x => ![] i)
+                                                                            i)
+                                                                        i)
+                                                                    1 -
+                                                                c *
+                                                                  Fin.induction (b * s ^ 2 * 70 - s ^ 3 * 6)
+                                                                    (fun i x =>
+                                                                      Fin.induction (b * s ^ 3 * 100 - s ^ 4 * 12)
+                                                                        (fun i x =>
+                                                                          Fin.induction (s ^ 5 * 24) (fun i x => ![] i)
+                                                                            i)
+                                                                        i)
+                                                                    1 +
+                                                              c ^ 2 *
+                                                                Fin.induction (a * s ^ 2 * 70 - s ^ 3 * 6)
+                                                                  (fun i x =>
+                                                                    Fin.induction (a * s ^ 3 * 100 - s ^ 4 * 12)
+                                                                      (fun i x =>
+                                                                        Fin.induction (s ^ 5 * 24) (fun i x => ![] i) i)
+                                                                      i)
+                                                                  2 -
+                                                            c ^ 2 *
+                                                              Fin.induction (b * s ^ 2 * 70 - s ^ 3 * 6)
+                                                                (fun i x =>
+                                                                  Fin.induction (b * s ^ 3 * 100 - s ^ 4 * 12)
+                                                                    (fun i x =>
+                                                                      Fin.induction (s ^ 5 * 24) (fun i x => ![] i) i)
+                                                                    i)
+                                                                2 +
+                                                          Fin.induction (a * s ^ 2 * 70 - s ^ 3 * 6)
+                                                            (fun i x =>
+                                                              Fin.induction (a * s ^ 3 * 100 - s ^ 4 * 12)
+                                                                (fun i x =>
+                                                                  Fin.induction (s ^ 5 * 24) (fun i x => ![] i) i)
+                                                                i)
+                                                            0 -
+                                                        Fin.induction (b * s ^ 2 * 70 - s ^ 3 * 6)
+                                                          (fun i x =>
+                                                            Fin.induction (b * s ^ 3 * 100 - s ^ 4 * 12)
+                                                              (fun i x =>
+                                                                Fin.induction (s ^ 5 * 24) (fun i x => ![] i) i)
+                                                              i)
+                                                          0)
+                                                      ![]))))
+                                              (fun i x => ![] i) i)
+                                          i)
+                                      i)
+                                  1 3 *
+                                Fin.induction (motive := fun x => Fin 4 → R)
+                                  (Fin.cons
+                                    (-(a * b ^ 2 * 90) - a * b ^ 3 * c * 200 - a * b ^ 4 * c ^ 2 * 120 +
+                                                      a ^ 2 * b * 90 -
+                                                    a ^ 3 * 30 +
+                                                  a ^ 3 * b * c * 200 +
+                                                a ^ 4 * b * c ^ 2 * 120 -
+                                              a ^ 4 * c * 100 -
+                                            a ^ 5 * c ^ 2 * 72 +
+                                          b ^ 3 * 30 +
+                                        b ^ 4 * c * 100 +
+                                      b ^ 5 * c ^ 2 * 72)
+                                    (Fin.cons
+                                      (c *
+                                            Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                  (fun i x =>
+                                                    Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                      i)
+                                                  i)
+                                              1 +
+                                          c ^ 2 *
+                                            Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                  (fun i x =>
+                                                    Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                      i)
+                                                  i)
+                                              2 +
+                                        Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                          (fun i x =>
+                                            Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i) i)
+                                              i)
+                                          0)
+                                      (Fin.cons
+                                        (c *
+                                              Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i) i)
+                                                    i)
+                                                1 +
+                                            c ^ 2 *
+                                              Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i) i)
+                                                    i)
+                                                2 +
+                                          Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                            (fun i x =>
+                                              Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                (fun i x =>
+                                                  Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i) i)
+                                                i)
+                                            0)
+                                        (Fin.cons 0 ![]))))
+                                  (fun i x =>
+                                    Fin.induction (motive := fun x => Fin 4 → R)
+                                      (Fin.cons
+                                        (-(a * b ^ 2 * 90) - a * b ^ 3 * c * 200 - a * b ^ 4 * c ^ 2 * 120 +
+                                                                      a * c * s ^ 3 * 200 +
+                                                                    a * c ^ 2 * s ^ 4 * 120 +
+                                                                  a * s ^ 2 * 90 +
+                                                                a ^ 2 * b * 90 -
+                                                              a ^ 2 * s * 90 +
+                                                            a ^ 3 * b * c * 200 -
+                                                          a ^ 3 * c * s * 200 +
+                                                        a ^ 4 * b * c ^ 2 * 120 -
+                                                      a ^ 4 * c ^ 2 * s * 120 -
+                                                    b * c * s ^ 3 * 200 -
+                                                  b * c ^ 2 * s ^ 4 * 120 -
+                                                b * s ^ 2 * 90 +
+                                              b ^ 2 * s * 90 +
+                                            b ^ 3 * c * s * 200 +
+                                          b ^ 4 * c ^ 2 * s * 120)
+                                        (Fin.cons
+                                          (c *
+                                                      Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        1 -
+                                                    c *
+                                                      Fin.induction (-(a * s * 35) + a ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (-(a ^ 2 * s * 140) + a ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (-(a ^ 3 * s * 120) + a ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        1 +
+                                                  c ^ 2 *
+                                                    Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                                      (fun i x =>
+                                                        Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                          (fun i x =>
+                                                            Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      2 -
+                                                c ^ 2 *
+                                                  Fin.induction (-(a * s * 35) + a ^ 2 * 7)
+                                                    (fun i x =>
+                                                      Fin.induction (-(a ^ 2 * s * 140) + a ^ 3 * 64)
+                                                        (fun i x =>
+                                                          Fin.induction (-(a ^ 3 * s * 120) + a ^ 4 * 72)
+                                                            (fun i x => ![] i) i)
+                                                        i)
+                                                    2 +
+                                              Fin.induction (-(a * b * 35) + a ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (-(a ^ 2 * b * 140) + a ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (-(a ^ 3 * b * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                        i)
+                                                    i)
+                                                0 -
+                                            Fin.induction (-(a * s * 35) + a ^ 2 * 7)
+                                              (fun i x =>
+                                                Fin.induction (-(a ^ 2 * s * 140) + a ^ 3 * 64)
+                                                  (fun i x =>
+                                                    Fin.induction (-(a ^ 3 * s * 120) + a ^ 4 * 72) (fun i x => ![] i)
+                                                      i)
+                                                  i)
+                                              0)
+                                          (Fin.cons
+                                            (c *
+                                                        Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                          (fun i x =>
+                                                            Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                              (fun i x =>
+                                                                Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          1 +
+                                                      c *
+                                                        Fin.induction (-(b * s * 35) + b ^ 2 * 7)
+                                                          (fun i x =>
+                                                            Fin.induction (-(b ^ 2 * s * 140) + b ^ 3 * 64)
+                                                              (fun i x =>
+                                                                Fin.induction (-(b ^ 3 * s * 120) + b ^ 4 * 72)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          1 +
+                                                    c ^ 2 *
+                                                      Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        2 +
+                                                  c ^ 2 *
+                                                    Fin.induction (-(b * s * 35) + b ^ 2 * 7)
+                                                      (fun i x =>
+                                                        Fin.induction (-(b ^ 2 * s * 140) + b ^ 3 * 64)
+                                                          (fun i x =>
+                                                            Fin.induction (-(b ^ 3 * s * 120) + b ^ 4 * 72)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      2 +
+                                                Fin.induction (a * b * 35 - b ^ 2 * 7)
+                                                  (fun i x =>
+                                                    Fin.induction (a * b ^ 2 * 140 - b ^ 3 * 64)
+                                                      (fun i x =>
+                                                        Fin.induction (a * b ^ 3 * 120 - b ^ 4 * 72) (fun i x => ![] i)
+                                                          i)
+                                                      i)
+                                                  0 +
+                                              Fin.induction (-(b * s * 35) + b ^ 2 * 7)
+                                                (fun i x =>
+                                                  Fin.induction (-(b ^ 2 * s * 140) + b ^ 3 * 64)
+                                                    (fun i x =>
+                                                      Fin.induction (-(b ^ 3 * s * 120) + b ^ 4 * 72) (fun i x => ![] i)
+                                                        i)
+                                                    i)
+                                                0)
+                                            (Fin.cons
+                                              (c *
+                                                          Fin.induction (b * s * 35 - s ^ 2 * 7)
+                                                            (fun i x =>
+                                                              Fin.induction (b * s ^ 2 * 140 - s ^ 3 * 64)
+                                                                (fun i x =>
+                                                                  Fin.induction (b * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                    (fun i x => ![] i) i)
+                                                                i)
+                                                            1 -
+                                                        c *
+                                                          Fin.induction (a * s * 35 - s ^ 2 * 7)
+                                                            (fun i x =>
+                                                              Fin.induction (a * s ^ 2 * 140 - s ^ 3 * 64)
+                                                                (fun i x =>
+                                                                  Fin.induction (a * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                    (fun i x => ![] i) i)
+                                                                i)
+                                                            1 +
+                                                      c ^ 2 *
+                                                        Fin.induction (b * s * 35 - s ^ 2 * 7)
+                                                          (fun i x =>
+                                                            Fin.induction (b * s ^ 2 * 140 - s ^ 3 * 64)
+                                                              (fun i x =>
+                                                                Fin.induction (b * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                  (fun i x => ![] i) i)
+                                                              i)
+                                                          2 -
+                                                    c ^ 2 *
+                                                      Fin.induction (a * s * 35 - s ^ 2 * 7)
+                                                        (fun i x =>
+                                                          Fin.induction (a * s ^ 2 * 140 - s ^ 3 * 64)
+                                                            (fun i x =>
+                                                              Fin.induction (a * s ^ 3 * 120 - s ^ 4 * 72)
+                                                                (fun i x => ![] i) i)
+                                                            i)
+                                                        2 +
+                                                  Fin.induction (b * s * 35 - s ^ 2 * 7)
+                                                    (fun i x =>
+                                                      Fin.induction (b * s ^ 2 * 140 - s ^ 3 * 64)
+                                                        (fun i x =>
+                                                          Fin.induction (b * s ^ 3 * 120 - s ^ 4 * 72)
+                                                            (fun i x => ![] i) i)
+                                                        i)
+                                                    0 -
+                                                Fin.induction (a * s * 35 - s ^ 2 * 7)
+                                                  (fun i x =>
+                                                    Fin.induction (a * s ^ 2 * 140 - s ^ 3 * 64)
+                                                      (fun i x =>
+                                                        Fin.induction (a * s ^ 3 * 120 - s ^ 4 * 72) (fun i x => ![] i)
+                                                          i)
+                                                      i)
+                                                  0)
+                                              ![]))))
+                                      (fun i x =>
+                                        Fin.induction (motive := fun x => Fin 4 → R)
+                                          (Fin.cons
+                                            (-(a * b ^ 3 * 120) - a * b ^ 4 * c * 100 + a ^ 2 * b ^ 2 * 270 -
+                                                                a ^ 3 * b * 240 +
+                                                              a ^ 3 * b ^ 2 * c * 600 +
+                                                            a ^ 4 * 75 -
+                                                          a ^ 4 * b * c * 800 +
+                                                        a ^ 4 * b ^ 2 * c ^ 2 * 360 -
+                                                      a ^ 5 * b * c ^ 2 * 576 +
+                                                    a ^ 5 * c * 300 +
+                                                  a ^ 6 * c ^ 2 * 240 +
+                                                b ^ 4 * 15 -
+                                              b ^ 6 * c ^ 2 * 24)
+                                            (Fin.cons
+                                              (c *
+                                                    Fin.induction (-(a * b ^ 2 * 105) + a ^ 2 * b * 56 - a ^ 3 * 15)
+                                                      (fun i x =>
+                                                        Fin.induction
+                                                          (-(a ^ 2 * b ^ 2 * 420) + a ^ 3 * b * 512 - a ^ 4 * 180)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 3 * b ^ 2 * 360) + a ^ 4 * b * 576 - a ^ 5 * 240)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      1 +
+                                                  c ^ 2 *
+                                                    Fin.induction (-(a * b ^ 2 * 105) + a ^ 2 * b * 56 - a ^ 3 * 15)
+                                                      (fun i x =>
+                                                        Fin.induction
+                                                          (-(a ^ 2 * b ^ 2 * 420) + a ^ 3 * b * 512 - a ^ 4 * 180)
+                                                          (fun i x =>
+                                                            Fin.induction
+                                                              (-(a ^ 3 * b ^ 2 * 360) + a ^ 4 * b * 576 - a ^ 5 * 240)
+                                                              (fun i x => ![] i) i)
+                                                          i)
+                                                      2 +
+                                                Fin.induction (-(a * b ^ 2 * 105) + a ^ 2 * b * 56 - ⋯) ⋯ ⋯)
+                                              ⋯))
+                                          ⋯ ⋯)
+                                      ⋯)
+                                  ⋯ ⋯ *
+                              ⋯ *
+                            ⋯ -
+                          ⋯ -
+                        ⋯ -
+                      ⋯ +
+                    ⋯ +
+                  ⋯ +
+                ⋯ -
+              ⋯ -
+            ⋯ -
+          ⋯ +
+        ⋯ +
+      ⋯ =
+    ⋯
+warning: D1Bound5/FinitePMatrix.lean:91:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- D1Bound5.FinitePMatrix
+error: build failed

@@ -1,0 +1,92 @@
+[
+  {
+    "module": "FinitePResidualIdentity",
+    "name": "D1Bound5.finiteP_half_coefficients",
+    "original_signature": " :\n    halfBinomialCoeff 5 = 7/256 \u2227 halfBinomialCoeff 6 = -21/1024 \u2227\n    halfBinomialCoeff 7 = 33/2048",
+    "explicit_arguments": ""
+  },
+  {
+    "module": "FinitePResidualIdentity",
+    "name": "D1Bound5.finitePHalfRemainder_norm_le",
+    "original_signature": " (n : \u2115) (z : \u2102)\n    (hn : 6 \u2264 n) (hz : \u2016z\u2016 < 1) :\n    \u2016finiteQHalfRemainder n z\u2016 \u2264 (21/1024 : \u211d)*\u2016z\u2016^n/(1-\u2016z\u2016)",
+    "explicit_arguments": "n z hn hz"
+  },
+  {
+    "module": "FinitePResidualIdentity",
+    "name": "D1Bound5.finitePPairResidual_eq_leading_tail",
+    "original_signature": " (u v c : \u2102)\n    (hu : u \u2260 0) (hv : v \u2260 0) (hc : c \u2260 0) (kind : Fin 2) :\n    finitePPairResidual u v c kind =\n      ![finitePLeadingR u v,finitePLeadingT u v] kind/c^5+finitePPairTail u v c kind",
+    "explicit_arguments": "u v c hu hv hc kind"
+  },
+  {
+    "module": "FinitePResidualIdentity",
+    "name": "D1Bound5.finitePResidual_eq_pairs",
+    "original_signature": " (a b s c : \u2102) (i : Fin 4) :\n    finitePResidual a b s c i =\n      ![finitePPairResidual a b c 0,\n        finitePPairResidual a b c 0+finitePPairResidual b s c 0-finitePPairResidual a s c 0,\n        finitePPairResidual a b c 1,finitePPairResidual a s c 1-finitePPairResidual b s c 1] i",
+    "explicit_arguments": "a b s c i"
+  },
+  {
+    "module": "FinitePResidualIdentity",
+    "name": "D1Bound5.finitePResidual_eq_leading_tail",
+    "original_signature": " (a b s c : \u2102)\n    (ha : a \u2260 0) (hb : b \u2260 0) (hs : s \u2260 0) (hc : c \u2260 0) (i : Fin 4) :\n    finitePResidual a b s c i = finitePLeading a b s i/c^5+finitePTail a b s c i",
+    "explicit_arguments": "a b s c ha hb hs hc i"
+  },
+  {
+    "module": "FinitePLeadingBound",
+    "name": "D1Bound5.finitePLeading_eq_terms",
+    "original_signature": " (a b s : \u2102) (ha : a \u2260 0) (hb : b \u2260 0)\n    (hs : s \u2260 0) (i : Fin 4) :\n    finitePLeading a b s i =\n      (\u2211 t, finitePLeadingTermValue ![a,b,s] (finitePLeadingTerms i t))/256",
+    "explicit_arguments": "a b s ha hb hs i"
+  },
+  {
+    "module": "FinitePLeadingBound",
+    "name": "D1Bound5.finitePLeadingTerms_exponents",
+    "original_signature": " (i : Fin 4) (t : Fin 12) :\n    let u := finitePLeadingTerms i t\n    u.2.2.2.1 \u2264 2 \u2227 u.2.2.2.1+3 \u2264 u.2.2.2.2+2",
+    "explicit_arguments": "i t"
+  },
+  {
+    "module": "FinitePLeadingBound",
+    "name": "D1Bound5.finitePLeadingTerms_sum",
+    "original_signature": " (i : Fin 4) :\n    (\u2211 t, |((finitePLeadingTerms i t).1 : \u211d)|) \u2264 560",
+    "explicit_arguments": "i"
+  },
+  {
+    "module": "FinitePLeadingBound",
+    "name": "D1Bound5.finitePLeading_norm_le",
+    "original_signature": " (a b s : \u2102)\n    (hA : 1 \u2264 \u2016a\u2016) (hAB : \u2016a\u2016 \u2264 \u2016b\u2016) (hBS : \u2016b\u2016 \u2264 \u2016s\u2016) (i : Fin 4) :\n    \u2016finitePLeading a b s i\u2016 \u2264 (35/16 : \u211d)*\u2016s\u2016^2/\u2016a\u2016^3",
+    "explicit_arguments": "a b s hA hAB hBS i"
+  },
+  {
+    "module": "FinitePTailCoefficients",
+    "name": "D1Bound5.finitePTailCoeffTerms_admissible",
+    "original_signature": " (kind side : Fin 2) (l t : Fin 3) :\n    (finitePTailCoeffTerms kind side l t).2.2 \u2264 2 \u2227\n      (finitePTailCoeffTerms kind side l t).2.1+\n        (finitePTailCoeffTerms kind side l t).2.2 \u2264 3+(l : \u2115)",
+    "explicit_arguments": "kind side l t"
+  },
+  {
+    "module": "FinitePTailCoefficients",
+    "name": "D1Bound5.finitePTailCoeffWeight_sum",
+    "original_signature": " (kind : Fin 2) :\n    (\u2211 side : Fin 2, \u2211 l : Fin 3, finitePTailCoeffWeight kind side l) =\n      ![876,2676] kind",
+    "explicit_arguments": "kind"
+  },
+  {
+    "module": "FinitePTailCoefficients",
+    "name": "D1Bound5.finitePPairCoeff_eq_terms",
+    "original_signature": " (u v : \u2102) (kind side : Fin 2) (l : Fin 3) :\n    finitePPairCoeff u v kind side l =\n      \u2211 t : Fin 3, ((finitePTailCoeffTerms kind side l t).1 : \u2102)*\n        (![u,v] side)^(finitePTailCoeffTerms kind side l t).2.1*\n        (![v,u] side)^(finitePTailCoeffTerms kind side l t).2.2",
+    "explicit_arguments": "u v kind side l"
+  },
+  {
+    "module": "FinitePTailCoefficients",
+    "name": "D1Bound5.finitePPairCoeff_norm_le",
+    "original_signature": " (u v : \u2102) (A S : \u211d)\n    (hA1 : 1 \u2264 A) (hAu : A \u2264 \u2016u\u2016) (hAv : A \u2264 \u2016v\u2016)\n    (huS : \u2016u\u2016 \u2264 S) (hvS : \u2016v\u2016 \u2264 S)\n    (kind side : Fin 2) (l : Fin 3) :\n    \u2016finitePPairCoeff u v kind side l\u2016 \u2264\n      (finitePTailCoeffWeight kind side l : \u211d)*(S^2/A^4)*\n        \u2016![u,v] side\u2016^(5+(l : \u2115))",
+    "explicit_arguments": "u v A S hA1 hAu hAv huS hvS kind side l"
+  },
+  {
+    "module": "FinitePTailBound",
+    "name": "D1Bound5.finitePPairTail_norm_le",
+    "original_signature": " (u v c : \u2102) (A S : \u211d)\n    (hA1 : 1 \u2264 A) (hAu : A \u2264 \u2016u\u2016) (hAv : A \u2264 \u2016v\u2016)\n    (huS : \u2016u\u2016 \u2264 S) (hvS : \u2016v\u2016 \u2264 S) (hAC : 1000 \u2264 A*\u2016c\u2016) (kind : Fin 2) :\n    \u2016finitePPairTail u v c kind\u2016 \u2264 (![876,2676] kind : \u2115)*\n      ((21/1024 : \u211d)*(1000/999)*S^2/(A^4*\u2016c\u2016^6))",
+    "explicit_arguments": "u v c A S hA1 hAu hAv huS hvS hAC kind"
+  },
+  {
+    "module": "FinitePTailBound",
+    "name": "D1Bound5.finitePTail_norm_lt",
+    "original_signature": " (a b s c : \u2102)\n    (hA : 1 \u2264 \u2016a\u2016) (hAB : \u2016a\u2016 \u2264 \u2016b\u2016) (hBS : \u2016b\u2016 \u2264 \u2016s\u2016)\n    (hAC : 1000 \u2264 \u2016a\u2016*\u2016c\u2016) (i : Fin 4) :\n    \u2016finitePTail a b s c i\u2016 < (1/8 : \u211d)*\u2016s\u2016^2/(\u2016a\u2016^3*\u2016c\u2016^5)",
+    "explicit_arguments": "a b s c hA hAB hBS hAC i"
+  }
+]

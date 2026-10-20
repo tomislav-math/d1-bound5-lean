@@ -1,0 +1,8 @@
+[
+  {
+    "module": "AllLargeImpossible",
+    "name": "D1Bound5.IsD1Tuple.all_large_impossible",
+    "original_signature": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : 3 \u2264 \u2016phi (a 0 : K)\u2016) : False",
+    "explicit_arguments": "hK phi a ha hmon hA"
+  }
+]
