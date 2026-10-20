@@ -1,0 +1,212 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteP_ratio_monomial_bound: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.coherent_retained_mixed_first_terminal_large: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.coherent_retained_mixed_four_terminal_sizes: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.coherent_retained_mixed_common_sizes: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.pairCoordinates: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairClassifiedBool: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.smallPairClassified_of_explicit_list: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.first_pair_root_norm_le_eight: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.one_small_fourth_root_norm_le: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.firstPairCoordinates: []
+ANALYTIC_AXIOMS_PASS D1Bound5.FirstPairNorms: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.firstPairClassifiedBool: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.firstPairClassified_of_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.oneSmallThirdCoveredBool: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.oneSmallThirdCovered_of_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.oneSmallFourthGrowthBool: [propext, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.oneSmallFourthGrowth_of_checked: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.integer_one_three_third_eq_eight: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.IsD1.one_three_small_third_eq_eight: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.one_three_eight_cutoff_contradiction: [propext, Classical.choice, Quot.sound]
+D1Bound5.finiteP_ratio_monomial_bound : ∀ (A B S : ℝ),
+  1 ≤ A →
+    A ≤ B →
+      B ≤ S →
+        ∀ (r : Fin 3) (i j l m t e : ℕ),
+          i + j + l + t ≤ m + 2 →
+            (e + j + l = if r = 0 then 2 else m + 2) →
+              (r ≠ 2 → l ≤ 2) → A ^ i * B ^ j * S ^ l / ![A, B, S] r ^ m ≤ S ^ 2 / A ^ t * (A / B) ^ e
+D1Bound5.coherent_retained_mixed_first_terminal_large : ∀ (A B S T C : ℝ),
+  1 ≤ A → 3 ≤ B → 0 < S → B ≤ S → S ≤ T → 2 * A * B * S < T → A ^ 2 * T ^ 5 / S ^ 2 < C → 16 * B * S * T < C
+D1Bound5.coherent_retained_mixed_four_terminal_sizes : ∀ (A B S T C D : ℝ),
+  1 ≤ A →
+    3 ≤ B →
+      0 < S →
+        0 < T →
+          S ≤ T →
+            S ≤ C →
+              1000 < C → 16 * B * S * T < C → A ^ 2 * C ^ 5 / S ^ 2 < D → 1000 * C < D ∧ 17 * A * B * S * T * C ^ 3 < D
+D1Bound5.coherent_retained_mixed_common_sizes : ∀ (A S T C : ℝ),
+  1 ≤ A → 3 ≤ S → S ≤ T → 48 ≤ A * T → A ^ 2 * T ^ 5 / S ^ 2 < C → 1000 < C ∧ 200 * S < C ∧ 4 * T < C
+@D1Bound5.pairCoordinates : {tau nu : ℤ} → D1Bound5.QuadInt tau nu → D1Bound5.QuadInt tau nu → Finset (ℤ × ℤ)
+@D1Bound5.smallPairClassifiedBool : {tau nu : ℤ} → List (D1Bound5.QuadInt tau nu) → List (Finset (ℤ × ℤ)) → Bool
+@D1Bound5.smallPairClassified_of_explicit_list : ∀ {tau nu : ℤ},
+  0 < D1Bound5.QuadInt.discriminant tau nu →
+    ∀ (xs : List (D1Bound5.QuadInt tau nu)) (rows : List (Finset (ℤ × ℤ))),
+      (∀ z ∈ D1Bound5.QuadInt.disk tau nu 8, z ∈ xs) →
+        D1Bound5.smallPairClassifiedBool xs rows = true →
+          ∀ (a b : D1Bound5.QuadInt tau nu),
+            a ≠ 0 →
+              b ≠ 0 →
+                a ≠ b →
+                  (∃ r, r * r = a * b + 1) →
+                    a * b + 1 ≠ 0 →
+                      QuadraticAlgebra.norm a ≤ 8 → QuadraticAlgebra.norm b ≤ 8 → D1Bound5.pairCoordinates a b ∈ rows
+@D1Bound5.first_pair_root_norm_le_eight : ∀ {tau nu : ℤ},
+  0 < D1Bound5.QuadInt.discriminant tau nu →
+    ∀ (a b q : D1Bound5.QuadInt tau nu),
+      QuadraticAlgebra.norm a * QuadraticAlgebra.norm b ≤ 63 → q * q = a * b + 1 → QuadraticAlgebra.norm q ≤ 8
+@D1Bound5.one_small_fourth_root_norm_le : ∀ {tau nu : ℤ},
+  0 < D1Bound5.QuadInt.discriminant tau nu →
+    ∀ (a z q : D1Bound5.QuadInt tau nu),
+      QuadraticAlgebra.norm a ≤ 2 → QuadraticAlgebra.norm z ≤ 21270 → q * q = a * z + 1 → QuadraticAlgebra.norm q ≤ 300
+@D1Bound5.firstPairCoordinates : {tau nu : ℤ} → D1Bound5.QuadInt tau nu → D1Bound5.QuadInt tau nu → (ℤ × ℤ) × ℤ × ℤ
+@D1Bound5.FirstPairNorms : {tau nu : ℤ} → D1Bound5.QuadInt tau nu → D1Bound5.QuadInt tau nu → Prop
+@D1Bound5.firstPairClassifiedBool : {tau nu : ℤ} →
+  List (D1Bound5.QuadInt tau nu) → List (D1Bound5.QuadInt tau nu) → List ((ℤ × ℤ) × ℤ × ℤ) → Bool
+@D1Bound5.firstPairClassified_of_checked : ∀ {tau nu : ℤ},
+  0 < D1Bound5.QuadInt.discriminant tau nu →
+    ∀ (small roots : List (D1Bound5.QuadInt tau nu)) (rows : List ((ℤ × ℤ) × ℤ × ℤ)),
+      (∀ a ∈ D1Bound5.QuadInt.disk tau nu 8, a ∈ small) →
+        (∀ q ∈ D1Bound5.QuadInt.disk tau nu 8, q ∈ roots) →
+          D1Bound5.firstPairClassifiedBool small roots rows = true →
+            ∀ (a b : D1Bound5.QuadInt tau nu),
+              D1Bound5.FirstPairNorms a b →
+                (∃ q, q * q = a * b + 1) → a = 1 ∧ b = 3 ∨ a = -1 ∧ b = -3 ∨ D1Bound5.firstPairCoordinates a b ∈ rows
+@D1Bound5.oneSmallThirdCoveredBool : {tau nu : ℤ} →
+  D1Bound5.QuadInt tau nu →
+    D1Bound5.QuadInt tau nu → List (D1Bound5.QuadInt tau nu) → List (D1Bound5.QuadInt tau nu) → Bool
+@D1Bound5.oneSmallThirdCovered_of_checked : ∀ {tau nu : ℤ},
+  0 < D1Bound5.QuadInt.discriminant tau nu →
+    ∀ (a b : D1Bound5.QuadInt tau nu) (diskEntries allowed : List (D1Bound5.QuadInt tau nu)),
+      (∀ s ∈ D1Bound5.QuadInt.disk tau nu 224, s ∈ diskEntries) →
+        D1Bound5.oneSmallThirdCoveredBool a b diskEntries allowed = true →
+          ∀ (s : D1Bound5.QuadInt tau nu),
+            QuadraticAlgebra.norm s ≤ 224 →
+              QuadraticAlgebra.norm b ≤ QuadraticAlgebra.norm s →
+                s ≠ a → s ≠ b → D1Bound5.PairExtension a b s → s ∈ allowed
+@D1Bound5.oneSmallFourthGrowthBool : {tau nu : ℤ} →
+  D1Bound5.QuadInt tau nu →
+    D1Bound5.QuadInt tau nu → D1Bound5.QuadInt tau nu → ℤ → List (D1Bound5.QuadInt tau nu) → Bool
+@D1Bound5.oneSmallFourthGrowth_of_checked : ∀ {tau nu : ℤ},
+  0 < D1Bound5.QuadInt.discriminant tau nu →
+    ∀ (a b s : D1Bound5.QuadInt tau nu),
+      a ≠ 0 →
+        QuadraticAlgebra.norm a ≤ 2 →
+          ∀ cutoff ≤ 21270,
+            ∀ (roots : List (D1Bound5.QuadInt tau nu)),
+              (∀ q ∈ D1Bound5.QuadInt.disk tau nu 300, q ∈ roots) →
+                D1Bound5.oneSmallFourthGrowthBool a b s cutoff roots = true →
+                  ∀ (z : D1Bound5.QuadInt tau nu),
+                    QuadraticAlgebra.norm z < cutoff →
+                      (∃ q, q * q = a * z + 1) →
+                        (∃ q, q * q = b * z + 1) →
+                          (∃ q, q * q = s * z + 1) →
+                            QuadraticAlgebra.norm z ≤ 4 * QuadraticAlgebra.norm b * QuadraticAlgebra.norm s
+D1Bound5.integer_one_three_third_eq_eight : ∀ (s r : ℤ), 3 < s → s < 15 → r * r = s + 1 → s = 8
+@D1Bound5.IsD1.one_three_small_third_eq_eight : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {A : Finset (𝓞 K)},
+      D1Bound5.IsD1 A →
+        1 ∈ A → 3 ∈ A → 4 < A.card → ∀ z ∈ A, z ≠ 1 → z ≠ 3 → 9 ≤ ‖phi ↑z‖ ^ 2 → ‖phi ↑z‖ ^ 2 < 225 → z = 8
+D1Bound5.one_three_eight_cutoff_contradiction : ∀ (T : ℝ), T ^ 2 < 1024 → 48 < T → False
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:108:14: error: Function expected at
+  discriminant
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `discriminant` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:110:19: error: Function expected at
+  disk
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `disk` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:123:14: error: Function expected at
+  discriminant
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `discriminant` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:128:14: error: Function expected at
+  discriminant
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `discriminant` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:134:14: error: Function expected at
+  discriminant
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `discriminant` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:137:20: error: Function expected at
+  disk
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `disk` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:138:20: error: Function expected at
+  disk
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `disk` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:146:14: error: Function expected at
+  discriminant
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `discriminant` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:148:20: error: Function expected at
+  disk
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `disk` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:155:14: error: Function expected at
+  discriminant
+but this term has type
+  ?m.1
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `discriminant` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
+/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/initial-audit/AnalyticAudit.lean:158:20: error: Function expected at
+  disk
+but this term has type
+  ?m.2
+
+Note: Expected a function because this term is being applied to the argument
+  tau
+
+Hint: The identifier `disk` is unknown, and Lean's `autoImplicit` option causes an unknown identifier to be treated as an implicitly bound variable with an unknown type. However, the unknown type cannot be a function, and a function is what Lean expects here. This is often the result of a typo or a missing `import` or `open` statement.
