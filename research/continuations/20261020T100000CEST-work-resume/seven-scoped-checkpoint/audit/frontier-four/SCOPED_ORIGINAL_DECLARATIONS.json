@@ -1,0 +1,305 @@
+[
+  {
+    "module": "FrontierCubicErrors",
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/before/FrontierCubicErrors.lean",
+    "original_sha256": "90fcd008ba5150c5f1159858f95da5d5b64d116b047933622f1fe12554a6d284",
+    "current_sha256": "290e56b9252013e634702a589994a6103f69a633748ac8b55583e58d2275eedb",
+    "normalizations": [],
+    "declarations": [
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.frontier_cubic_product_bounds",
+        "local_name": "frontier_cubic_product_bounds",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": []
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 8,
+        "header": " (x y z : \u2102) (k l : \u211d)\n    (hk : (1/2 : \u211d) \u2264 k) (hl : (1/2 : \u211d) \u2264 l)\n    (hx : \u2016x-(1/2 : \u2102)\u2016 \u2264 k-1/2)\n    (hy : \u2016y-(1/2 : \u2102)\u2016 \u2264 k-1/2)\n    (hz : \u2016z-(1/2 : \u2102)\u2016 \u2264 l-1/2) :\n    \u2016x*y*z\u2016 \u2264 k^2*l \u2227 \u2016x*y*z-(1/8 : \u2102)\u2016 \u2264 k^2*l-1/8"
+      },
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.frontier_three_cubic_cofactor",
+        "local_name": "frontier_three_cubic_cofactor",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": []
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 51,
+        "header": " (p q r : \u2102) (K : \u211d)\n    (hp : \u2016p-(1/8 : \u2102)\u2016 \u2264 K-1/8)\n    (hq : \u2016q-(1/8 : \u2102)\u2016 \u2264 K-1/8)\n    (hr : \u2016r-(1/8 : \u2102)\u2016 \u2264 K-1/8) :\n    \u2016p-q-r\u2016 \u2264 3*K-1/4"
+      },
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.frontier_quartic_polynomial",
+        "local_name": "frontier_quartic_polynomial",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": []
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 66,
+        "header": " (P Q R : \u2102) (L : \u211d) (hL : 0 \u2264 L)\n    (hP : \u2016P\u2016 \u2264 L) (hQ : \u2016Q\u2016 \u2264 L) (hR : \u2016R\u2016 \u2264 L) :\n    \u2016P^2+Q^2+R^2-2*(P*Q+P*R+Q*R)\u2016 \u2264 9*L^2"
+      }
+    ],
+    "not_individually_inventoried": []
+  },
+  {
+    "module": "FiniteN3RefinedResidual",
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/before/FiniteN3RefinedResidual.lean",
+    "original_sha256": "a4fc8bcf05764554d21c9833e93ec3550d675d368b6f02fda8672b3a5b7e7884",
+    "current_sha256": "0295ce772ecf9751263aff0b8d27649f592a52d5790634adaaa8e26b884eb51a",
+    "normalizations": [],
+    "declarations": [
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.finiteN3_residual_norm_lt_max",
+        "local_name": "finiteN3_residual_norm_lt_max",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": []
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 7,
+        "header": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016) (i : Fin 3) :\n    \u2016finiteN3Residual x y c i\u2016 <\n      (3535/409600 : \u211d)*max (\u2016x-y\u2016^6) (\u2016x\u2016*\u2016x-y\u2016^5)/\n        (\u2016x\u2016^4*\u2016y\u2016^3*\u2016c\u2016^6)"
+      },
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.finiteN3_residual_norm_lt_refined",
+        "local_name": "finiteN3_residual_norm_lt_refined",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": []
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 43,
+        "header": " (x y c : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016)\n    (R : \u211d)\n    (hdistance : (3535/409600 : \u211d)*max (\u2016x-y\u2016^6) (\u2016x\u2016*\u2016x-y\u2016^5) \u2264\n      R*\u2016y\u2016^6) (i : Fin 3) :\n    \u2016finiteN3Residual x y c i\u2016 < R*\u2016y\u2016^3/(\u2016x\u2016^4*\u2016c\u2016^6)"
+      }
+    ],
+    "not_individually_inventoried": [
+      {
+        "kind": "diagnostic_command",
+        "command": "#print axioms D1Bound5.finiteN3_residual_norm_lt_max"
+      },
+      {
+        "kind": "diagnostic_command",
+        "command": "#print axioms D1Bound5.finiteN3_residual_norm_lt_refined"
+      }
+    ]
+  },
+  {
+    "module": "FiniteN2HeightRefinement",
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/before/FiniteN2HeightRefinement.lean",
+    "original_sha256": "3ccc2572f94a8c07f81c957f3d9040e8c33d4200af9d2c6dc9562a40ee6bc49c",
+    "current_sha256": "b1126c09dc8f65e44341e2b5079d83bdc6a616c2b86378feaae223739d8bfcb0",
+    "normalizations": [],
+    "declarations": [
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.finiteN2RowForm_norm_lt_refined",
+        "local_name": "finiteN2RowForm_norm_lt_refined",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": [
+              "open scoped NumberField",
+              "open Module"
+            ]
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 10,
+        "header": "\n    (x y c z sX sY : \u2102) (hx : x \u2260 0) (hy : y \u2260 0) (hz : z \u2260 0)\n    (i : Fin 3) (M : \u211d)\n    (hheightScaled : (101/100 : \u211d)*(\u2016finiteN2Left x y c i\u2016+\u2016finiteN2Right x y c i\u2016) <\n      M*\u2016y\u2016^4*\u2016c\u2016^2)\n    (herr : \u2200 j : Fin 2,\n      \u2016(1+1/(![x,y] j*c))^(1/2 : \u2102)-![sX,sY] j/(![x,y] j*z)\u2016 \u2264\n        (101/100 : \u211d)*\u2016c\u2016/(\u2016![x,y] j\u2016*\u2016z\u2016^2))\n    (R : \u211d) (hres : \u2016finiteN2Residual x y c i\u2016 < R) :\n    \u2016finiteN2RowForm x y c z sX sY i\u2016 <\n      M*\u2016y\u2016^4*\u2016c\u2016^3/\u2016z\u2016+R*\u2016z\u2016"
+      },
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.full_ring_finiteN2_inequalities_of_height",
+        "local_name": "full_ring_finiteN2_inequalities_of_height",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": [
+              "open scoped NumberField",
+              "open Module"
+            ]
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 44,
+        "header": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {S : Finset (\ud835\udcde K)} (hS : IsD1 S) (x y c d : \ud835\udcde K)\n    (hxS : x \u2208 S) (hyS : y \u2208 S) (hcS : c \u2208 S) (hdS : d \u2208 S)\n    (hxy : x \u2260 y) (hxc : x \u2260 c) (hyc : y \u2260 c)\n    (hxd : x \u2260 d) (hyd : y \u2260 d) (hcd : c \u2260 d)\n    (hXY : \u2016phi (x : K)\u2016 \u2264 \u2016phi (y : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (x : K)\u2016*\u2016phi (c : K)\u2016)\n    (hCY : 200*\u2016phi (y : K)\u2016 \u2264 \u2016phi (c : K)\u2016)\n    (hCD : \u2016phi (c : K)\u2016 \u2264 \u2016phi (d : K)\u2016)\n    (M : \u211d)\n    (hheight : \u2200 i : Fin 3,\n      (101/100 : \u211d)*(\u2016finiteN2Left (phi (x : K)) (phi (y : K)) (phi (c : K)) i\u2016+\n        \u2016finiteN2Right (phi (x : K)) (phi (y : K)) (phi (c : K)) i\u2016) <\n          M*\u2016phi (y : K)\u2016^4*\u2016phi (c : K)\u2016^2) :\n    \u2203 z : \ud835\udcde K, z^2 = c*d+1 \u2227\n      (1 < M*\u2016phi (y : K)\u2016^4*\u2016phi (c : K)\u2016^3/\u2016phi (z : K)\u2016 +\n        (5/4 : \u211d)*\u2016phi (y : K)\u2016^2*\u2016phi (z : K)\u2016 /\n          (\u2016phi (x : K)\u2016^3*\u2016phi (c : K)\u2016^4)) \u2227\n      (1 < M*\u2016phi (y : K)\u2016^4*\u2016phi (c : K)\u2016^3/\u2016phi (z : K)\u2016 +\n        (101/2560 : \u211d)*max (\u2016phi (x : K)-phi (y : K)\u2016^4)\n          (\u2016phi (x : K)\u2016*\u2016phi (x : K)-phi (y : K)\u2016^3)*\u2016phi (z : K)\u2016 /\n            (\u2016phi (x : K)\u2016^3*\u2016phi (y : K)\u2016^2*\u2016phi (c : K)\u2016^4))"
+      }
+    ],
+    "not_individually_inventoried": []
+  },
+  {
+    "module": "FiniteN3HeightRefinement",
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/before/FiniteN3HeightRefinement.lean",
+    "original_sha256": "5fa95a135a71b6489de2e211f318411c7a8855b5a4a4200e849efbaa28bc6e68",
+    "current_sha256": "cc79841722f14bc0430d983e1a5bde6292d1c53ee9e96ec0883f3acc6f9a5dfb",
+    "normalizations": [],
+    "declarations": [
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.finiteN3RowForm_norm_lt_refined",
+        "local_name": "finiteN3RowForm_norm_lt_refined",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": [
+              "open scoped NumberField",
+              "open Module"
+            ]
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 12,
+        "header": " (x y c z sX sY : \u2102)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hz : z \u2260 0) (hxy : x \u2260 y)\n    (hXY : \u2016x\u2016 \u2264 \u2016y\u2016) (hXC : 1000 \u2264 \u2016x\u2016*\u2016c\u2016)\n    (herrorX : \u2016(1+1/(x*c))^(1/2 : \u2102)-sX/(x*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016x\u2016*\u2016z\u2016^2))\n    (herrorY : \u2016(1+1/(y*c))^(1/2 : \u2102)-sY/(y*z)\u2016 <\n      (101/100 : \u211d)*\u2016c\u2016/(\u2016y\u2016*\u2016z\u2016^2))\n    (M Rbound : \u211d)\n    (hheightBound : \u2200 i : Fin 3,\n      (101/100 : \u211d)*(\u2016finiteN3Left x y c i\u2016+\u2016finiteN3Right x y c i\u2016) <\n        M*\u2016y\u2016^7*\u2016c\u2016^3)\n    (hdistance : (3535/409600 : \u211d)*max (\u2016x-y\u2016^6) (\u2016x\u2016*\u2016x-y\u2016^5) \u2264 Rbound*\u2016y\u2016^6)\n    (i : Fin 3) :\n    \u2016finiteN3RowForm x y c z sX sY i\u2016 <\n      M*\u2016y\u2016^7*\u2016c\u2016^4/\u2016z\u2016 + Rbound*\u2016y\u2016^3*\u2016z\u2016/(\u2016x\u2016^4*\u2016c\u2016^6)"
+      },
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.full_ring_finiteN3_integer_refined",
+        "local_name": "full_ring_finiteN3_integer_refined",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": [
+              "open scoped NumberField",
+              "open Module"
+            ]
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 88,
+        "header": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (x y c d rX rY vX vY z : \ud835\udcde K)\n    (hx : x \u2260 0) (hy : y \u2260 0) (hc : c \u2260 0) (hd : d \u2260 0) (hxy : x \u2260 y)\n    (hrX : rX^2=x*c+1) (hrY : rY^2=y*c+1)\n    (hvX : vX^2=x*d+1) (hvY : vY^2=y*d+1) (hzsq : z^2=c*d+1)\n    (hXY : \u2016phi (x : K)\u2016 \u2264 \u2016phi (y : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (x : K)\u2016*\u2016phi (c : K)\u2016)\n    (hC : 200*\u2016phi (y : K)\u2016 \u2264 \u2016phi (c : K)\u2016)\n    (M Rbound : \u211d)\n    (hheightBound : \u2200 i : Fin 3,\n      (101/100 : \u211d)*(\u2016finiteN3Left (phi (x : K)) (phi (y : K)) (phi (c : K)) i\u2016+\n        \u2016finiteN3Right (phi (x : K)) (phi (y : K)) (phi (c : K)) i\u2016) <\n          M*\u2016phi (y : K)\u2016^7*\u2016phi (c : K)\u2016^3)\n    (hdistance : (3535/409600 : \u211d)*max (\u2016phi (x : K)-phi (y : K)\u2016^6)\n      (\u2016phi (x : K)\u2016*\u2016phi (x : K)-phi (y : K)\u2016^5) \u2264 Rbound*\u2016phi (y : K)\u2016^6) :\n    1 < M*\u2016phi (y : K)\u2016^7*\u2016phi (c : K)\u2016^4/\u2016phi (z : K)\u2016 +\n      Rbound*\u2016phi (y : K)\u2016^3*\u2016phi (z : K)\u2016/\n        (\u2016phi (x : K)\u2016^4*\u2016phi (c : K)\u2016^6)"
+      },
+      {
+        "kind": "theorem",
+        "name": "D1Bound5.full_ring_finiteN3_inequality_of_height",
+        "local_name": "full_ring_finiteN3_inequality_of_height",
+        "context": [
+          {
+            "opener": null,
+            "name": null,
+            "namespace": [],
+            "directives": [
+              "open scoped NumberField",
+              "open Module"
+            ]
+          },
+          {
+            "opener": "namespace D1Bound5",
+            "name": "D1Bound5",
+            "namespace": [
+              "D1Bound5"
+            ],
+            "directives": []
+          }
+        ],
+        "line": 150,
+        "header": "\n    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    {S : Finset (\ud835\udcde K)} (hS : IsD1 S) (x y c d : \ud835\udcde K)\n    (hxS : x \u2208 S) (hyS : y \u2208 S) (hcS : c \u2208 S) (hdS : d \u2208 S)\n    (hxy : x \u2260 y) (hxc : x \u2260 c) (hyc : y \u2260 c)\n    (hxd : x \u2260 d) (hyd : y \u2260 d) (hcd : c \u2260 d)\n    (hXY : \u2016phi (x : K)\u2016 \u2264 \u2016phi (y : K)\u2016)\n    (hXC : 1000 \u2264 \u2016phi (x : K)\u2016*\u2016phi (c : K)\u2016)\n    (hCY : 200*\u2016phi (y : K)\u2016 \u2264 \u2016phi (c : K)\u2016)\n    (M R : \u211d)\n    (hheight : \u2200 i : Fin 3,\n      (101/100 : \u211d)*(\u2016finiteN3Left (phi (x : K)) (phi (y : K)) (phi (c : K)) i\u2016+\n        \u2016finiteN3Right (phi (x : K)) (phi (y : K)) (phi (c : K)) i\u2016) <\n          M*\u2016phi (y : K)\u2016^7*\u2016phi (c : K)\u2016^3)\n    (hR : (3535/409600 : \u211d)*max (\u2016phi (x : K)-phi (y : K)\u2016^6)\n      (\u2016phi (x : K)\u2016*\u2016phi (x : K)-phi (y : K)\u2016^5) \u2264 R*\u2016phi (y : K)\u2016^6) :\n    \u2203 z : \ud835\udcde K, z^2=c*d+1 \u2227\n      1 < M*\u2016phi (y : K)\u2016^7*\u2016phi (c : K)\u2016^4/\u2016phi (z : K)\u2016+\n        R*\u2016phi (y : K)\u2016^3*\u2016phi (z : K)\u2016/(\u2016phi (x : K)\u2016^4*\u2016phi (c : K)\u2016^6)"
+      }
+    ],
+    "not_individually_inventoried": [
+      {
+        "kind": "diagnostic_command",
+        "command": "#print axioms D1Bound5.finiteN3RowForm_norm_lt_refined"
+      },
+      {
+        "kind": "diagnostic_command",
+        "command": "#print axioms D1Bound5.full_ring_finiteN3_integer_refined"
+      }
+    ]
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "status": "BOUND_SCOPED_AUDIT_PASS",
+  "time": "2026-10-20T10:12:53.481479+00:00",
+  "records": [
+    {
+      "label": "analytic-type-axioms",
+      "pid": 4441,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/bound-data-three-audit-v2/AnalyticAudit.lean"
+      ],
+      "time": "2026-10-20T10:08:59.779800+00:00",
+      "exit": 0,
+      "seconds": 66.69001674978063,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 66,
+      "binding_drift_paths": [],
+      "log": "analytic-type-axioms.log"
+    },
+    {
+      "label": "SmallPairClassificationData-targeted-replay",
+      "pid": 4479,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairClassificationData"
+      ],
+      "time": "2026-10-20T10:10:06.540737+00:00",
+      "exit": 0,
+      "seconds": 64.86915941629559,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 65,
+      "binding_drift_paths": [],
+      "log": "SmallPairClassificationData-targeted-replay.log"
+    },
+    {
+      "label": "FirstPairData-targeted-replay",
+      "pid": 4529,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.FirstPairData"
+      ],
+      "time": "2026-10-20T10:11:11.481650+00:00",
+      "exit": 0,
+      "seconds": 33.24091879092157,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 33,
+      "binding_drift_paths": [],
+      "log": "FirstPairData-targeted-replay.log"
+    },
+    {
+      "label": "OneSmallDisks-targeted-replay",
+      "pid": 4570,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.OneSmallDisks"
+      ],
+      "time": "2026-10-20T10:11:44.786217+00:00",
+      "exit": 0,
+      "seconds": 68.62557612499222,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 68,
+      "binding_drift_paths": [],
+      "log": "OneSmallDisks-targeted-replay.log"
+    }
+  ],
+  "binding_sha256": "a8538c26a228b85c0e942d615e884586c9b35c3c68445db959a8220cb0d10601",
+  "source_map_sha256": "1d6e84b44ee728bda1f47e13308a7e34f8bd61bdea18bc726257b3f3dcb1a658",
+  "main_theorem_claim": false
+}

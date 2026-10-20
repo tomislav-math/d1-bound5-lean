@@ -1,0 +1,168 @@
+ANALYTIC_AXIOMS_PASS D1Bound5.frontier_cubic_product_bounds: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.frontier_three_cubic_cofactor: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.frontier_quartic_polynomial: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN3_residual_norm_lt_max: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN3_residual_norm_lt_refined: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN2RowForm_norm_lt_refined: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteN2_inequalities_of_height: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.finiteN3RowForm_norm_lt_refined: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteN3_integer_refined: [propext, Classical.choice, Quot.sound]
+ANALYTIC_AXIOMS_PASS D1Bound5.full_ring_finiteN3_inequality_of_height: [propext, Classical.choice, Quot.sound]
+D1Bound5.frontier_cubic_product_bounds : ∀ (x y z : ℂ) (k l : ℝ),
+  1 / 2 ≤ k →
+    1 / 2 ≤ l →
+      ‖x - 1 / 2‖ ≤ k - 1 / 2 →
+        ‖y - 1 / 2‖ ≤ k - 1 / 2 →
+          ‖z - 1 / 2‖ ≤ l - 1 / 2 → ‖x * y * z‖ ≤ k ^ 2 * l ∧ ‖x * y * z - 1 / 8‖ ≤ k ^ 2 * l - 1 / 8
+D1Bound5.frontier_three_cubic_cofactor : ∀ (p q r : ℂ) (K : ℝ),
+  ‖p - 1 / 8‖ ≤ K - 1 / 8 → ‖q - 1 / 8‖ ≤ K - 1 / 8 → ‖r - 1 / 8‖ ≤ K - 1 / 8 → ‖p - q - r‖ ≤ 3 * K - 1 / 4
+D1Bound5.frontier_quartic_polynomial : ∀ (P Q R : ℂ) (L : ℝ),
+  0 ≤ L → ‖P‖ ≤ L → ‖Q‖ ≤ L → ‖R‖ ≤ L → ‖P ^ 2 + Q ^ 2 + R ^ 2 - 2 * (P * Q + P * R + Q * R)‖ ≤ 9 * L ^ 2
+D1Bound5.finiteN3_residual_norm_lt_max : ∀ (x y c : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          ‖x‖ ≤ ‖y‖ →
+            1000 ≤ ‖x‖ * ‖c‖ →
+              ∀ (i : Fin 3),
+                ‖D1Bound5.finiteN3Residual x y c i‖ <
+                  3535 / 409600 * max (‖x - y‖ ^ 6) (‖x‖ * ‖x - y‖ ^ 5) / (‖x‖ ^ 4 * ‖y‖ ^ 3 * ‖c‖ ^ 6)
+D1Bound5.finiteN3_residual_norm_lt_refined : ∀ (x y c : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        x ≠ y →
+          ‖x‖ ≤ ‖y‖ →
+            1000 ≤ ‖x‖ * ‖c‖ →
+              ∀ (R : ℝ),
+                3535 / 409600 * max (‖x - y‖ ^ 6) (‖x‖ * ‖x - y‖ ^ 5) ≤ R * ‖y‖ ^ 6 →
+                  ∀ (i : Fin 3), ‖D1Bound5.finiteN3Residual x y c i‖ < R * ‖y‖ ^ 3 / (‖x‖ ^ 4 * ‖c‖ ^ 6)
+D1Bound5.finiteN2RowForm_norm_lt_refined : ∀ (x y c z sX sY : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      z ≠ 0 →
+        ∀ (i : Fin 3) (M : ℝ),
+          101 / 100 * (‖D1Bound5.finiteN2Left x y c i‖ + ‖D1Bound5.finiteN2Right x y c i‖) < M * ‖y‖ ^ 4 * ‖c‖ ^ 2 →
+            (∀ (j : Fin 2),
+                ‖(1 + 1 / (![x, y] j * c)) ^ (1 / 2) - ![sX, sY] j / (![x, y] j * z)‖ ≤
+                  101 / 100 * ‖c‖ / (‖![x, y] j‖ * ‖z‖ ^ 2)) →
+              ∀ (R : ℝ),
+                ‖D1Bound5.finiteN2Residual x y c i‖ < R →
+                  ‖D1Bound5.finiteN2RowForm x y c z sX sY i‖ < M * ‖y‖ ^ 4 * ‖c‖ ^ 3 / ‖z‖ + R * ‖z‖
+@D1Bound5.full_ring_finiteN2_inequalities_of_height : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {S : Finset (NumberField.RingOfIntegers K)},
+      D1Bound5.IsD1 S →
+        ∀ (x y c d : NumberField.RingOfIntegers K),
+          x ∈ S →
+            y ∈ S →
+              c ∈ S →
+                d ∈ S →
+                  x ≠ y →
+                    x ≠ c →
+                      y ≠ c →
+                        x ≠ d →
+                          y ≠ d →
+                            c ≠ d →
+                              ‖phi ↑x‖ ≤ ‖phi ↑y‖ →
+                                1000 ≤ ‖phi ↑x‖ * ‖phi ↑c‖ →
+                                  200 * ‖phi ↑y‖ ≤ ‖phi ↑c‖ →
+                                    ‖phi ↑c‖ ≤ ‖phi ↑d‖ →
+                                      ∀ (M : ℝ),
+                                        (∀ (i : Fin 3),
+                                            101 / 100 *
+                                                (‖D1Bound5.finiteN2Left (phi ↑x) (phi ↑y) (phi ↑c) i‖ +
+                                                  ‖D1Bound5.finiteN2Right (phi ↑x) (phi ↑y) (phi ↑c) i‖) <
+                                              M * ‖phi ↑y‖ ^ 4 * ‖phi ↑c‖ ^ 2) →
+                                          ∃ z,
+                                            z ^ 2 = c * d + 1 ∧
+                                              1 <
+                                                  M * ‖phi ↑y‖ ^ 4 * ‖phi ↑c‖ ^ 3 / ‖phi ↑z‖ +
+                                                    5 / 4 * ‖phi ↑y‖ ^ 2 * ‖phi ↑z‖ / (‖phi ↑x‖ ^ 3 * ‖phi ↑c‖ ^ 4) ∧
+                                                1 <
+                                                  M * ‖phi ↑y‖ ^ 4 * ‖phi ↑c‖ ^ 3 / ‖phi ↑z‖ +
+                                                    101 / 2560 *
+                                                          max (‖phi ↑x - phi ↑y‖ ^ 4)
+                                                            (‖phi ↑x‖ * ‖phi ↑x - phi ↑y‖ ^ 3) *
+                                                        ‖phi ↑z‖ /
+                                                      (‖phi ↑x‖ ^ 3 * ‖phi ↑y‖ ^ 2 * ‖phi ↑c‖ ^ 4)
+D1Bound5.finiteN3RowForm_norm_lt_refined : ∀ (x y c z sX sY : ℂ),
+  x ≠ 0 →
+    y ≠ 0 →
+      c ≠ 0 →
+        z ≠ 0 →
+          x ≠ y →
+            ‖x‖ ≤ ‖y‖ →
+              1000 ≤ ‖x‖ * ‖c‖ →
+                ‖(1 + 1 / (x * c)) ^ (1 / 2) - sX / (x * z)‖ < 101 / 100 * ‖c‖ / (‖x‖ * ‖z‖ ^ 2) →
+                  ‖(1 + 1 / (y * c)) ^ (1 / 2) - sY / (y * z)‖ < 101 / 100 * ‖c‖ / (‖y‖ * ‖z‖ ^ 2) →
+                    ∀ (M Rbound : ℝ),
+                      (∀ (i : Fin 3),
+                          101 / 100 * (‖D1Bound5.finiteN3Left x y c i‖ + ‖D1Bound5.finiteN3Right x y c i‖) <
+                            M * ‖y‖ ^ 7 * ‖c‖ ^ 3) →
+                        3535 / 409600 * max (‖x - y‖ ^ 6) (‖x‖ * ‖x - y‖ ^ 5) ≤ Rbound * ‖y‖ ^ 6 →
+                          ∀ (i : Fin 3),
+                            ‖D1Bound5.finiteN3RowForm x y c z sX sY i‖ <
+                              M * ‖y‖ ^ 7 * ‖c‖ ^ 4 / ‖z‖ + Rbound * ‖y‖ ^ 3 * ‖z‖ / (‖x‖ ^ 4 * ‖c‖ ^ 6)
+@D1Bound5.full_ring_finiteN3_integer_refined : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (x y c d rX rY vX vY z : NumberField.RingOfIntegers K),
+      x ≠ 0 →
+        y ≠ 0 →
+          c ≠ 0 →
+            d ≠ 0 →
+              x ≠ y →
+                rX ^ 2 = x * c + 1 →
+                  rY ^ 2 = y * c + 1 →
+                    vX ^ 2 = x * d + 1 →
+                      vY ^ 2 = y * d + 1 →
+                        z ^ 2 = c * d + 1 →
+                          ‖phi ↑x‖ ≤ ‖phi ↑y‖ →
+                            1000 ≤ ‖phi ↑x‖ * ‖phi ↑c‖ →
+                              200 * ‖phi ↑y‖ ≤ ‖phi ↑c‖ →
+                                ∀ (M Rbound : ℝ),
+                                  (∀ (i : Fin 3),
+                                      101 / 100 *
+                                          (‖D1Bound5.finiteN3Left (phi ↑x) (phi ↑y) (phi ↑c) i‖ +
+                                            ‖D1Bound5.finiteN3Right (phi ↑x) (phi ↑y) (phi ↑c) i‖) <
+                                        M * ‖phi ↑y‖ ^ 7 * ‖phi ↑c‖ ^ 3) →
+                                    3535 / 409600 * max (‖phi ↑x - phi ↑y‖ ^ 6) (‖phi ↑x‖ * ‖phi ↑x - phi ↑y‖ ^ 5) ≤
+                                        Rbound * ‖phi ↑y‖ ^ 6 →
+                                      1 <
+                                        M * ‖phi ↑y‖ ^ 7 * ‖phi ↑c‖ ^ 4 / ‖phi ↑z‖ +
+                                          Rbound * ‖phi ↑y‖ ^ 3 * ‖phi ↑z‖ / (‖phi ↑x‖ ^ 4 * ‖phi ↑c‖ ^ 6)
+@D1Bound5.full_ring_finiteN3_inequality_of_height : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  Module.finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) {S : Finset (NumberField.RingOfIntegers K)},
+      D1Bound5.IsD1 S →
+        ∀ (x y c d : NumberField.RingOfIntegers K),
+          x ∈ S →
+            y ∈ S →
+              c ∈ S →
+                d ∈ S →
+                  x ≠ y →
+                    x ≠ c →
+                      y ≠ c →
+                        x ≠ d →
+                          y ≠ d →
+                            c ≠ d →
+                              ‖phi ↑x‖ ≤ ‖phi ↑y‖ →
+                                1000 ≤ ‖phi ↑x‖ * ‖phi ↑c‖ →
+                                  200 * ‖phi ↑y‖ ≤ ‖phi ↑c‖ →
+                                    ∀ (M R : ℝ),
+                                      (∀ (i : Fin 3),
+                                          101 / 100 *
+                                              (‖D1Bound5.finiteN3Left (phi ↑x) (phi ↑y) (phi ↑c) i‖ +
+                                                ‖D1Bound5.finiteN3Right (phi ↑x) (phi ↑y) (phi ↑c) i‖) <
+                                            M * ‖phi ↑y‖ ^ 7 * ‖phi ↑c‖ ^ 3) →
+                                        3535 / 409600 * max (‖phi ↑x - phi ↑y‖ ^ 6) (‖phi ↑x‖ * ‖phi ↑x - phi ↑y‖ ^ 5) ≤
+                                            R * ‖phi ↑y‖ ^ 6 →
+                                          ∃ z,
+                                            z ^ 2 = c * d + 1 ∧
+                                              1 <
+                                                M * ‖phi ↑y‖ ^ 7 * ‖phi ↑c‖ ^ 4 / ‖phi ↑z‖ +
+                                                  R * ‖phi ↑y‖ ^ 3 * ‖phi ↑z‖ / (‖phi ↑x‖ ^ 4 * ‖phi ↑c‖ ^ 6)
