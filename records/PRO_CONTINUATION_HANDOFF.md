@@ -11,7 +11,12 @@ Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph33-audit/
 The original Coverage timeout remains failed; only its structural replacement passed.
 No compiler or audit owner remains. Both locks were verified free.
 
-Publication pending for this prepared checkpoint. Preparation HEAD: 61898e5136b6ac2c10b4b2f17c6cdb5ed7972e0e.
+Proof/evidence commit: a6fe7b6c20ede294d4c6835d83effe594b96a613.
+Normal push succeeded and remote main matched this commit with PRIVATE visibility.
+Post-push evidence: research/continuations/20261021-pro-graph33/POST_PUSH_RECEIPT.json.
+This receipt and handoff are saved in the following record commit; inspect current HEAD.
+Canonical working files and pre-existing untracked research remain preserved.
+No new proof objects were uploaded.
 Next unit: apply the reviewed two-site numeral-coercion repair to
 RationalTripleExclusion, then perform one guarded build and exact scoped checks.
 Its current preimage and accepted dependencies were revalidated.
