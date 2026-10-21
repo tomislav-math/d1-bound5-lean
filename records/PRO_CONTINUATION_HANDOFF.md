@@ -9,7 +9,10 @@ in the nontrivial finite certificates; coverage/signature aliases have no axioms
 
 Evidence: research/continuations/20261021-pro-graph17-right-complete/.
 Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-right-complete-audit/.
-Publication prepared, not yet pushed. Starting HEAD: cefdaf6107d0d239049c628b58d6bf21cef316a2.
+Proof/evidence commit 8827fec8f92a44cf34afd1fd0ba31b1aa3fc2d46 was pushed normally.
+Remote main equality and PRIVATE visibility were verified. POST_PUSH_RECEIPT.json
+contains the publication evidence. This receipt and handoff are saved in the
+following record commit; inspect current HEAD.
 
 Earlier in this continuation the complete left certificate passed five builds,
 eight public-type/axiom checks and five targeted replays; proof commit
