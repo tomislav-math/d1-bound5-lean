@@ -10,7 +10,10 @@ The accepted dependency closure has 403 modules; these are not counts of results
 Evidence: research/continuations/20261021-pro-one-small/VERIFICATION_SUMMARY.json,
 SOURCE_MAP.json and original build receipts. Audit: research/continuations/
 20261020T100000CEST-work-resume/pro-one-small-audit/. Audit runner 82533 exited 0.
-Publication pending; starting HEAD a0c7da0dac3477d07bab9005f21dde87223e1b96.
+Proof/evidence commit: 64941cb74c0ffb18d82cc7e26e015e9a2c3f5894.
+Normal push succeeded; remote main matched and destination was verified PRIVATE.
+POST_PUSH_RECEIPT.json preserves the publication evidence. This record and handoff
+are saved in the following record commit; inspect current HEAD.
 
 Next main dependency: TwoSmallNondegenerateImpossible. Its closure still contains
 27 incomplete graph endpoints. Next candidate: SmallPairLightAdaptiveLeft17_000,
