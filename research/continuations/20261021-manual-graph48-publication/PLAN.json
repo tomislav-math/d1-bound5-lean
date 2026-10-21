@@ -1,0 +1,33 @@
+{
+  "extra": [
+    "research/continuations/20261021-manual-graph12-publication/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261021-manual-graph12-publication/INDEX_REVIEW.json",
+    "research/continuations/20261021-manual-graph12-publication/WHITESPACE_REVIEW.txt",
+    "research/continuations/20261021-manual-graph12-publication/OWNER.json",
+    "research/continuations/20261021-manual-graph12-publication/RELEASE.json"
+  ],
+  "groups": [
+    {
+      "audit": "pro-graph48-left-audit",
+      "scope": "left",
+      "unit": "20261021-pro-graph48-sides"
+    },
+    {
+      "audit": "pro-graph48-right-audit",
+      "scope": "right",
+      "unit": "20261021-pro-graph48-sides"
+    },
+    {
+      "audit": "pro-graph48-closure-core-audit",
+      "scope": "closure-core",
+      "unit": "20261021-pro-graph48-closure"
+    },
+    {
+      "audit": "pro-graph48-assembly-audit",
+      "scope": "assembly",
+      "unit": "20261021-pro-graph48-closure"
+    }
+  ],
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical root integration remains unverified.\nGraph48 is now a complete verified working endpoint: all 719 closure rows and\nthe triangle-free graph on 718 filtered vertices are connected. All 28 original\npublic declarations match the preserved merged source and reviewed plan.\nFive assembly modules were newly built and all 17 original declaration types,\ntransitive axioms and five targeted installed SAME-kernel replays passed.\nNo timeout, source/artifact drift, statement weakening or new axiom was used.\nEarlier accepted sides and closure were revalidated, not recomputed.\n\nEvidence: research/continuations/20261021-pro-graph48-closure/.\nSee assembly-VERIFICATION_SUMMARY.json and ENDPOINT_VERIFICATION.json.\nAll 37 endpoint/support modules have their own genuine original check records.\nThis is a working endpoint, not canonical-root or whole-theorem verification.\n\nGraph12 is complete and synchronized in 6309108d82419e74d2ebd21346ce13accd595326.\nEarlier graph35 and graph48 sides/closure are synchronized in a52daf956b552ef5383061852eba1d052b2b6a0d.\nNext: graph29 foundation. Current sources already split LightData29 into Left\nand Right. Build Left, Right, LightData29, AdaptiveData29 and Validation29 in\nthat order with pinned guarded checks. They are queued, have no accepted or\nfailed current-fingerprint attempts, and have no blocked dependencies as of\nthis read. Recheck live state before starting. The four coverage/signature\ntheorems and nineteen definitions need exact-type/axiom and kernel checks.\nThis is a direct dependency of MainTheorem through TwoSmallNondegenerateImpossible,\nSmallPairGraphs, GraphData29 and LightLeft29. Full graph29 remains incomplete.\n\nUse current source/receipt and actual process/lock state. Preserve unrelated\nwork and the inherited idle terminal79436. No automation was changed.",
+  "purpose": "Publish complete graph48 verified working endpoint"
+}
