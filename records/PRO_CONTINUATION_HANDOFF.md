@@ -13,7 +13,11 @@ Evidence: research/continuations/20261021-pro-graph17-closure/.
 Summary: closure-core-VERIFICATION_SUMMARY.json.
 Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-closure-core-audit/.
 Proof fingerprint: 943bf9b0d3530f0c6682616db4833b8ca9c38610d222a85102532b9bced4e225.
-Publication prepared, not yet committed or pushed. Starting HEAD: 1cad1b8695f94d26301e5711c7df81b523be586f.
+Proof/evidence commit: 5c6f1c572adac6336937eba9ba60232c74348767.
+Normal push succeeded; private remote main matched this exact commit.
+POST_PUSH_RECEIPT.json records the real publication checks, including equality
+of all 142 reviewed committed file bytes. This receipt and handoff are saved
+in the following record commit; inspect current HEAD.
 
 The merged graph17 module was replaced by its exact archived components and
 reviewed prefix proof. Every original public header/data body was preserved.
