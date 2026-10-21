@@ -1,33 +1,32 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. No accepted canonical root integration.
-Completed current unit: full graph12 right certificate. Eleven guarded builds,
-fourteen exact original public-type/transitive-axiom checks and eleven targeted
-installed SAME-kernel replays passed with unchanged guards. Build controller2758
-and audit controller3140 completed with actual exit zero.
-Evidence: research/continuations/20261021-pro-graph12-partitions/right-VERIFICATION_SUMMARY.json.
-Right proof fingerprint: 08fe828c05dadd9c808ac0074d2425600c5cb9b5e3dc7fa6112680eba8580bcb.
-Current publication is prepared, not yet pushed; starting HEAD 1d233fa9493f43bc634d8251a61ecadbc935da93.
+Completed unit: graph12 first closure block and full ordered coverage. Six
+modules passed guarded builds, exact public-type/transitive-axiom checks for
+nine definitions and four theorems, and six targeted SAME-kernel replays.
+Build controller5767 and audit controller5892 returned actual exit zero.
+The original 128-row statement follows from exact 64+64 parts, with the full
+vertex list and both mutation signs unchanged. The original timeout remains
+failed and preserved.
+Evidence: research/continuations/20261021-pro-graph12-closure-half-pilot/.
+Proof fingerprint: 49cfd1377dd729b5d9807a762951f8f7417b1294e0d6ac0ebbf09a54a46c608a.
+Publication is prepared, not yet pushed; starting HEAD f48b97f93624f500e9c11ec0c810ae55f524c720.
 
-Both graph12 sides now have checked complete359-head certificates. Left proof
-commit1d233fa9493f43bc634d8251a61ecadbc935da93 and foundation commit
-fe529d78e18f66abba707caafd2a9858a5c7dd61 were pushed with PRIVATE remote equality.
-The current selected checkpoint includes the genuine left post-push receipt.
-Totals for graph12 so far:25 accepted module builds,32 theorem and19 definition
-type/axiom checks,25 targeted replays. These are helper/module counts, not paper
-result counts. One original failed timeout is preserved separately and excluded.
+Graph12 foundation and both complete side certificates were synchronized at
+f48b97f93624f500e9c11ec0c810ae55f524c720. Their right post-push receipt is
+included in this checkpoint. There are now 31 accepted graph12 module builds
+and 31 targeted replays in this turn, with 36 theorem/28 definition checks;
+these are helper/module counts, not manuscript result counts.
 
-Next unit: prepare a row12-only restoration of the eight original archived
-components currently merged into SmallPairGraphData12. All archive bodies and
-hashes were compared exactly. The model is0,1, closure/witness/destination lists
-have720 rows, and the original filtered-count theorem is718. Use six exact
-closure parts of128,128,128,128,128,80, full global destination indices, and the
-accepted structural zipWith projection for exact ordered coverage. Preserve all
-28 original public declarations and data. No restoration is installed yet.
-Read W/prepared-light-remaining39/D1Bound5 originals, with W denoting
-research/continuations/20261018T010800CEST-main-continuation.
+Next bounded unit: SmallPairGraphClosure12Chunk01, not previously attempted.
+Its unchanged source and accepted dependencies are ready. Next exact command:
+/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph12-closure/bounded_build.py SmallPairGraphClosure12Chunk01
+If this different block times out, split it exactly instead of retrying it.
+Other remaining targets are Chunks02--05, the full closure parent and five
+assembly modules. The source restoration PLAN is historical: use its
+CURRENT_SOURCE_OVERRIDES and the current registry for the repaired Chunk00.
 
-Graph35 remains a checked LOCAL-ONLY endpoint. Graph48 sides/closure are checked
-LOCAL ONLY; five assembly modules remain unaccepted. Their recorded refusals
-were not retried or bypassed. Graph17 is synchronized. Last endpoint count:23/48.
-Inherited idle terminal79436 and all automations were left untouched.
+Graph35 remains verified LOCAL ONLY; graph48 sides/closure are verified LOCAL
+ONLY, with five assembly modules unaccepted. Their recorded refusals were
+not retried or bypassed. Graph17 is synchronized. Endpoint count remains23/48.
+Inherited idle terminal79436 and all scheduled tasks are untouched.
