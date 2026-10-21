@@ -1,0 +1,15 @@
+{
+  "targets": [
+    {
+      "module": "RationalTripleExclusion",
+      "source_sha256": "3b4eed051b98e0913edf7e32a5b70e88b0ca44cd93ed0d346cb059d3464f9839",
+      "replacements": [
+        {
+          "old": "cases sgn <;> norm_num\n",
+          "new": "cases sgn <;> norm_num [NumberField.RingOfIntegers.coe_eq_algebraMap,map_ofNat]\n",
+          "count": 2
+        }
+      ]
+    }
+  ]
+}

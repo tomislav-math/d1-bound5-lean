@@ -1,32 +1,35 @@
 # Pro continuation handoff
 
 Main theorem UNPROVED. No new canonical root integration.
-Completed unit: graph 33, with five guarded successful builds, five exact original
-public-type/transitive-axiom checks and four targeted installed SAME-kernel replays.
-Twenty-one of 48 graph endpoint modules have matching accepted current states.
+Completed unit: RationalTripleExclusion, with its original full-ring statement,
+hypotheses and both signs preserved. The reviewed two-site numeral-coercion
+repair passed a guarded build (exit 0, 102.057 seconds), one exact original
+public-type/transitive-axiom check, and one targeted installed SAME-kernel replay
+(exit 0, 165.444 seconds). All 329 source-closure modules and their required
+artifacts matched accepted evidence. No timeout or binding drift occurred.
 
-Evidence: research/continuations/20261021-pro-graph33/VERIFICATION_SUMMARY.json,
-SOURCE_MAP.json, original build receipts and coverage-projection/.
-Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph33-audit/.
-The original Coverage timeout remains failed; only its structural replacement passed.
-No compiler or audit owner remains. Both locks were verified free.
+Evidence: research/continuations/20261021-pro-rational-triple/.
+Audit: research/continuations/20261020T100000CEST-work-resume/pro-rational-triple-audit/.
+Substantive fingerprint: d1b1d907525e6465d8238afa9cac88c441e4f5d5b38a509b4243bca03c84ddc4.
+Build owner 73994 and audit owner 74451 both returned actual exit 0.
+Publication is prepared, not yet committed or pushed; starting local and remote
+main: 387c7d884a4a70a9f9026303f6169c149f36cb39. Preserve unrelated work.
 
-Proof/evidence commit: a6fe7b6c20ede294d4c6835d83effe594b96a613.
-Normal push succeeded and remote main matched this commit with PRIVATE visibility.
-Post-push evidence: research/continuations/20261021-pro-graph33/POST_PUSH_RECEIPT.json.
-This receipt and handoff are saved in the following record commit; inspect current HEAD.
-Canonical working files and pre-existing untracked research remain preserved.
-No new proof objects were uploaded.
-Next unit: apply the reviewed two-site numeral-coercion repair to
-RationalTripleExclusion, then perform one guarded build and exact scoped checks.
-Its current preimage and accepted dependencies were revalidated.
-After the mandatory new-turn access/ownership inspection, next exact command:
-/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/apply_reviewed_patch.py /Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/repair-rational-triple-exclusion-wave25.json
+Next dependency: RationalFirstTriple. Its current source (2a60baaa7e944ee03b500b778e6317bc87755aed2ca61061349e0bf8e56abb91)
+has a prior timeout, not an accepted build. Review a substantive narrowing of
+the two `simp_all [u]` commands to the corresponding entry equalities before
+one bounded attempt. The timeout cause has not been established. If accepted,
+OneSmallReducedImpossible and OneSmallImpossible are the subsequent joins;
+verify their current dependency closures before launching a compiler.
+Next action: finish this explicit publication, then prepare the scoped patch
+under the existing exclusive ownership protocol. No identical timeout retry.
 
-Hourly task: D1 formalizacija - satni nastavak 21-10-2026.
-Task ID: 6ad7f81b482c81919edf99da50faa443.
+The previous synchronized graph-33 checkpoint remains at proof commit
+a6fe7b6c20ede294d4c6835d83effe594b96a613 and record commit 387c7d884a4a70a9f9026303f6169c149f36cb39.
+It established 21 of 48 accepted graph endpoints; this unit does not add another.
+
+Hourly task ID: 6ad7f81b482c81919edf99da50faa443.
+Exact title: D1 formalizacija - satni nastavak 21-10-2026.
 Conversation destination: 6ad7ef6c-25a0-83eb-836b-d8dcf1fd1761.
-Enabled, every full hour in Europe/Zagreb, DTSTART 2026-10-21 02:00.
-The scheduling tool returned next_run_time=null. The exact requested prompt
-was saved and read back unchanged; see HOURLY_AUTOMATION.json in the checkpoint.
-The latest user instruction supersedes the former continuation-marker protocol.
+Every full hour in Europe/Zagreb; no scheduling changes in this continuation.
+The latest user instructions supersede the former continuation-marker protocol.

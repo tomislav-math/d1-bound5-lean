@@ -1,0 +1,18 @@
+[
+  {
+    "current_sha256": "a371b62371998ecafcf62355545deafcb8b9d090deb6a8d1f808d6deebc0624b",
+    "declarations": [
+      {
+        "header": "{K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (sgn : Bool)\n    (h0 : a 0 = if sgn then -1 else 1)\n    (h1 : a 1 = if sgn then -3 else 3)\n    (h2 : a 2 = if sgn then -8 else 8) : False",
+        "kind": "theorem",
+        "local_name": "IsD1Tuple.not_rational_one_three_eight",
+        "name": "D1Bound5.IsD1Tuple.not_rational_one_three_eight"
+      }
+    ],
+    "module": "RationalTripleExclusion",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-rational-triple/originals/RationalTripleExclusion.lean",
+    "original_sha256": "3b4eed051b98e0913edf7e32a5b70e88b0ca44cd93ed0d346cb059d3464f9839",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/repair-rational-triple-exclusion-wave25-before/RationalTripleExclusion.lean"
+  }
+]
