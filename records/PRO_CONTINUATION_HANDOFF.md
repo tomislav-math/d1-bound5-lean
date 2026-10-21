@@ -1,25 +1,30 @@
 # Current D1 formalization handoff
 
-Main theorem UNPROVED. No new canonical root integration.
-Graph17 is complete as a verified working endpoint, including seed coverage,
-exact filtering, full 719-row closure and the triangle-free 718-vertex graph.
-The five new assembly modules passed guarded builds, exact public-type and
-transitive-axiom checks for thirteen theorems and four definitions, and five
-targeted installed SAME-kernel replays. Previous closure/side checks were reused
-with matching current source and artifact fingerprints. No original statement,
-data body, exceptional case or checker was weakened.
+Main theorem UNPROVED. No accepted canonical root integration.
+Current completed unit: graph12 foundation. Three guarded builds, 23 exact
+public-type/transitive-axiom checks (19 definitions, four theorems) and three
+targeted installed SAME-kernel replays passed with unchanged guards. No axioms
+occur in these declarations. Build owners99313/99475 and audit owner99556
+returned actual exit zero.
+Evidence: research/continuations/20261021-pro-graph12-sides/foundation-VERIFICATION_SUMMARY.json.
+Proof fingerprint: d138a61fc1803d91803ab64654fb5c599147d3179ca367c19dd95ed876ce2b8b.
+Publication is prepared but not yet committed or pushed; starting HEAD 8489909dbf3a492370e470bef243edabb1abe5ab.
 
-Evidence: research/continuations/20261021-pro-graph17-closure/.
-ENDPOINT_VERIFICATION.json, assembly-VERIFICATION_SUMMARY.json and original receipts.
-Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-assembly-audit/.
-Publication prepared, not yet pushed; starting HEAD 36f9e0ebb7c3c60a6beade6a2bb0cc47461e3b47.
-Current accepted graph endpoints: 22 of 48. No main/root completion claim.
+Next unit: measure the original SmallPairLightAdaptiveLeft12_000 certificate
+with the current pinned bounded_build.py. Its data and validation prerequisites
+are accepted. Then complete the remaining left and right original prefixes and
+consumers, preserving full tails and original 138+221 heads per side.
+No graph12 endpoint claim. The source decomposition into the eight archived
+original graph12 components has only been inspected, not installed.
 
-Next useful unit: graph35 left and right arithmetic certificates. Their full
-sources were read, their existing exact prefix partitions reviewed, and their
-data prerequisites have matching accepted artifacts. No graph35 sources were
-changed or builds launched in this unit. Use the existing guarded owner protocol,
-measure one part, then complete each original side and synchronize it.
+Preserved prior state: graph17 is synchronized at8489909dbf3a492370e470bef243edabb1abe5ab.
+Graph35 is a complete verified LOCAL-ONLY endpoint, recorded in
+research/continuations/20261021-pro-graph35-closure/ENDPOINT_VERIFICATION.json.
+Graph48 sides and the719-row closure core have passed their separate audits;
+its five assembly modules are not accepted. The existing graph35 publication
+preparation and graph48 assembly execution refusals remain unresolved and are
+not retried or routed around here. Their original sources/evidence are intact.
+The last endpoint count was23 of48.
 
-Build controller91600 and audit controller91874 completed with actual exit zero.
-Inherited idle Python terminal79436 was left untouched. Automations unchanged.
+Inherited idle terminal79436 and all scheduled tasks are untouched. Current
+files, genuine receipts and actual process/lock state take precedence.
