@@ -1,0 +1,16 @@
+ONE_SMALL_AXIOMS_PASS D1Bound5.IsD1Tuple.one_small_reduced_impossible: [propext, Classical.choice, Quot.sound]
+ONE_SMALL_AXIOMS_PASS D1Bound5.IsD1Tuple.not_one_small: [propext, Classical.choice, Quot.sound]
+@D1Bound5.IsD1Tuple.one_small_reduced_impossible : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a →
+        (Monotone fun i => ‖phi ↑(a i)‖) →
+          ‖phi ↑(a 0)‖ ^ 2 = 1 ∧ 9 ≤ ‖phi ↑(a 1)‖ ^ 2 ∧ ‖phi ↑(a 1)‖ ^ 2 < 64 ∨
+              ‖phi ↑(a 0)‖ ^ 2 = 2 ∧ 9 ≤ ‖phi ↑(a 1)‖ ^ 2 ∧ ‖phi ↑(a 1)‖ ^ 2 < 16 →
+            False
+@D1Bound5.IsD1Tuple.not_one_small : ∀ {K : Type u_1} [inst : Field K] [inst_1 : NumberField K]
+  [NumberField.IsTotallyComplex K],
+  finrank ℚ K = 2 →
+    ∀ (phi : K →+* ℂ) (a : Fin 6 → 𝓞 K),
+      D1Bound5.IsD1Tuple a → (Monotone fun i => ‖phi ↑(a i)‖) → ‖phi ↑(a 0)‖ < 3 → 3 ≤ ‖phi ↑(a 1)‖ → False

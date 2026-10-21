@@ -1,20 +1,25 @@
-# Prepared one-small joins — NOT YET BUILT OR AUDITED
+# One-small branch: scoped verification complete
 
-This directory prepares the next two existing source modules without claiming
-compilation, axiom/type acceptance, kernel replay, or canonical root integration.
-The original sources are preserved in originals/. Their reviewed statements and
-proof bodies have not been edited. The independent source-only review is scoped
-explicitly and does not certify imported proofs or table completeness.
+The original full-ring theorem IsD1Tuple.not_one_small excludes a modulus-ordered
+D(1)-sextuple whose first modulus is below three and whose second modulus is at
+least three, in every totally complex number field of degree two. Its intermediate
+finite first-pair reduction is also verified. All original hypotheses, the full
+integer ring, non-strict ordering, both signs and zero-square-root cases are retained.
 
-After inspecting current access, handoff, Git and process state, the next command
-is:
+Two genuine guarded builds from the earlier run were reused after matching their
+complete source closures, configuration and accepted artifacts. No successful build
+was repeated. Both original public types and their transitive axioms passed the
+new audit, followed by two targeted installed SAME-kernel replays. Allowed axioms
+are only propext, Classical.choice and Quot.sound. This is not an independent
+kernel implementation or a fresh whole-root replay.
 
-    /Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-one-small/bounded_build.py OneSmallReducedImpossible
+SOURCE_MAP.json reconstructs the 403-module source closure from two new accepted
+payloads and 401 exact prior Git references. ACCEPTED_DEPENDENCY_EVIDENCE.json
+retains the original acceptance evidence; no compiled proof objects are uploaded.
+Original build receipts and logs are unchanged. New audit evidence is in
+../20261020T100000CEST-work-resume/pro-one-small-audit/. PREPARATION.json and the
+source-only review remain historical preparation records, not current status.
 
-The wrapper acquires the existing compiler ownership lock, rejects active work,
-verifies its exact target source and all required accepted dependency artifacts,
-and launches exactly one 240-second guarded build. It is the previously reviewed
-bounded wrapper with only its allowed target pins changed. It does not launch
-a batch or modify the queue. OneSmallImpossible is allowed only after its own
-current prerequisite checks pass. Save and synchronize each coherent checked
-unit using the project policy; do not interpret this preparation as acceptance.
+Canonical root integration and the main theorem remain unfinished. The remaining
+main branch is the nondegenerate two-small case and its finite graph certificates.
+Publication is established separately by the post-push receipt and handoff.

@@ -1,0 +1,32 @@
+[
+  {
+    "current_sha256": "eb14aff0b9ac6bdd8104694a4445f6257a639e3dd6f21e90f35760e3e104c960",
+    "declarations": [
+      {
+        "header": "{K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hsize :\n      (\u2016phi (a 0 : K)\u2016^2=1 \u2227 9\u2264\u2016phi (a 1 : K)\u2016^2 \u2227 \u2016phi (a 1 : K)\u2016^2<64) \u2228\n      (\u2016phi (a 0 : K)\u2016^2=2 \u2227 9\u2264\u2016phi (a 1 : K)\u2016^2 \u2227 \u2016phi (a 1 : K)\u2016^2<16)) : False",
+        "kind": "theorem",
+        "local_name": "IsD1Tuple.one_small_reduced_impossible",
+        "name": "D1Bound5.IsD1Tuple.one_small_reduced_impossible"
+      }
+    ],
+    "module": "OneSmallReducedImpossible",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-one-small/originals/OneSmallReducedImpossible.lean",
+    "original_sha256": "eb14aff0b9ac6bdd8104694a4445f6257a639e3dd6f21e90f35760e3e104c960"
+  },
+  {
+    "current_sha256": "bc74e35dff73f3a31c3a0c7289fa9bc0b4bcfd974356cedbecf1e757ce31954a",
+    "declarations": [
+      {
+        "header": "{K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (hA : \u2016phi (a 0 : K)\u2016 < 3) (hB : 3 \u2264 \u2016phi (a 1 : K)\u2016) : False",
+        "kind": "theorem",
+        "local_name": "IsD1Tuple.not_one_small",
+        "name": "D1Bound5.IsD1Tuple.not_one_small"
+      }
+    ],
+    "module": "OneSmallImpossible",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-one-small/originals/OneSmallImpossible.lean",
+    "original_sha256": "bc74e35dff73f3a31c3a0c7289fa9bc0b4bcfd974356cedbecf1e757ce31954a"
+  }
+]

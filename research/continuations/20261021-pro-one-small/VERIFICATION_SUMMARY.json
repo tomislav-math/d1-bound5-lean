@@ -1,0 +1,81 @@
+{
+  "allowed_transitive_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "audit_driver_actual_exit": 0,
+  "audit_driver_pid": 82533,
+  "main_theorem_complete": false,
+  "new_exact_original_public_type_axiom_checks": 2,
+  "new_targeted_installed_same_kernel_replays": 2,
+  "original_theorem_statements_unchanged": true,
+  "previous_guarded_builds_reused": [
+    "OneSmallReducedImpossible",
+    "OneSmallImpossible"
+  ],
+  "publication": "PREPARED_NOT_YET_COMMITTED_OR_PUSHED",
+  "root_integration": false,
+  "source_closure_modules": 403,
+  "starting_head": "a0c7da0dac3477d07bab9005f21dde87223e1b96",
+  "status": "ONE_SMALL_BRANCH_SCOPED_VERIFICATION_PASS",
+  "utc": "2026-10-21T05:39:38.838429+00:00",
+  "verification_records": [
+    {
+      "binding_drift_paths": [],
+      "binding_poll_count": 70,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-one-small-audit/AnalyticAudit.lean"
+      ],
+      "exit": 0,
+      "guards_unchanged": true,
+      "label": "analytic-type-axioms",
+      "log": "analytic-type-axioms.log",
+      "pid": 82541,
+      "seconds": 72.53508858429268,
+      "time": "2026-10-21T05:35:50.440837+00:00",
+      "timed_out": false
+    },
+    {
+      "binding_drift_paths": [],
+      "binding_poll_count": 44,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.OneSmallReducedImpossible"
+      ],
+      "exit": 0,
+      "guards_unchanged": true,
+      "label": "OneSmallReducedImpossible-targeted-replay",
+      "log": "OneSmallReducedImpossible-targeted-replay.log",
+      "pid": 82585,
+      "seconds": 46.402481500059366,
+      "time": "2026-10-21T05:37:04.583275+00:00",
+      "timed_out": false
+    },
+    {
+      "binding_drift_paths": [],
+      "binding_poll_count": 54,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.OneSmallImpossible"
+      ],
+      "exit": 0,
+      "guards_unchanged": true,
+      "label": "OneSmallImpossible-targeted-replay",
+      "log": "OneSmallImpossible-targeted-replay.log",
+      "pid": 82635,
+      "seconds": 55.888541291002184,
+      "time": "2026-10-21T05:37:52.597089+00:00",
+      "timed_out": false
+    }
+  ]
+}
