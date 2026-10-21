@@ -1,24 +1,29 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. No new canonical root integration.
-Completed unit: full graph17 left certificate. Three remaining parts, the
-223-head parent and the complete left consumer passed five guarded builds,
-eight exact public-type/transitive-axiom checks and five targeted installed
-SAME-kernel replays. All exits zero, with unchanged source/artifact guards.
-Prior left block000 and coverage/signature proofs were reused.
+Completed unit: full graph17 right certificate, original 138+220 heads. Eight
+parts, two original parents and the final consumer passed eleven guarded builds,
+fourteen exact public-type/transitive-axiom checks and eleven targeted installed
+SAME-kernel replays. All exits zero and all guards unchanged. Only propext occurs
+in the nontrivial finite certificates; coverage/signature aliases have no axioms.
 
-Evidence: research/continuations/20261021-pro-graph17-left-complete/.
-Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-left-complete-audit/.
-Publication prepared, not yet pushed. Starting HEAD: 6fae99a5280c4e1c6517e087b2241b182ccb7a1e.
+Evidence: research/continuations/20261021-pro-graph17-right-complete/.
+Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-right-complete-audit/.
+Publication prepared, not yet pushed. Starting HEAD: cefdaf6107d0d239049c628b58d6bf21cef316a2.
 
-Next useful unit: graph17 right prefixes and full SmallPairLightRight17.
-Their complete source bodies were read. Prefix counts are 138 and 220;
-parts retain all original tails. Revalidate acceptance and source pins, then
-use the established one-owner bounded build and audit procedures.
-The whole graph17 endpoint still needs its original exact closure/assembly
-certificates; an existing split restoration proposal is available and must
-be reviewed before use. Do not blindly retry a timed-out merged module.
+Earlier in this continuation the complete left certificate passed five builds,
+eight public-type/axiom checks and five targeted replays; proof commit
+cefdaf6107d0d239049c628b58d6bf21cef316a2 was pushed and PRIVATE remote equality
+verified. Its source/evidence is in 20261021-pro-graph17-left-complete. The current
+publication also includes that unit's exact post-push receipt.
 
-The complete one-small branch and previous graph17 left000 are synchronized.
-There remain 27 incomplete graph endpoints. The inherited idle Python REPL
-79436 was not touched and did not own project locks. Hourly task unchanged.
+Next unit: original graph17 closure/seed/filter/assembly chain. All current
+original dependencies are compiled, but the endpoint itself is not accepted.
+Read NEXT_GRAPH17_RESTORATION.md in the current checkpoint before preparing a
+row17-scoped, provenance-updated successor to the existing exact split proposal.
+Do not run the stale all-row installer or repeat a giant closure decision.
+No full graph17 claim: 21 of 48 graph endpoints remain accepted.
+
+Both build controller86709 and audit controller87007 are drained with exit zero.
+The inherited idle Python terminal79436 is not a compiler and was left untouched.
+Hourly task and settings unchanged. Current files/receipts supersede old counts.
