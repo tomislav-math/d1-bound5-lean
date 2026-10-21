@@ -1,35 +1,22 @@
-# Graph 17 closure — verified working core
+# Graph 17 — verified working endpoint
 
-The original theorem smallPairClosure_17_checked has passed guarded compilation,
-exact original public-type and transitive-axiom checking, and targeted replay
-in the installed SAME Lean kernel. It asserts the unchanged pairClosureBool
-for the complete original ordered vertex list at integer norm bound 10^1100.
+The complete working SmallPairGraphData17 endpoint is now compiled and scoped-verified.
+The original 719-row closure, seed coverage, exact large-vertex filtering, both
+side certificates and triangle-free graph conclusion are joined without changing
+any original public statement or data body. The filtered graph has 718 vertices.
 
-All 719 original witness/destination rows are retained. Six exact prefix
-certificates cover 128+128+128+128+128+79 rows. Global destination indices,
-both signed mutations, all original roots, strict outside-bound checks and the
-final empty tails are unchanged. Structural zipWith projection proves ordered
-coverage, with the original anchor equation checked separately.
+The new assembly unit has five guarded builds, exact original public-type and
+transitive-axiom checks for thirteen theorems and four data definitions, and five
+targeted replays in the installed SAME Lean kernel. Earlier closure and side
+checks were reused with matching current source/artifact fingerprints, not rerun.
+ENDPOINT_VERIFICATION.json and assembly-VERIFICATION_SUMMARY.json record the
+distinct assurance levels. The assembly source closure contains 83 modules.
 
-Ten modules passed guarded builds and targeted installed SAME-kernel replay.
-The exact public-type/transitive-axiom audit covers nine theorem declarations
-and nine data definitions. No fresh whole-root replay, clean checkout or
-independent kernel implementation is claimed. The source closure contains
-32 modules, including 22 reused accepted dependencies.
+The exact original receipts and logs, originals/, candidates/, and installation/
+remain preserved. assembly-SOURCE_MAP.json reconstructs the accepted working
+closure. The original row17 restoration changed no other graph, hold or timeout.
 
-closure-core-VERIFICATION_SUMMARY.json and the exact original build receipts
-record the assurance levels. The audit directory is
-../20261020T100000CEST-work-resume/pro-graph17-closure-core-audit/.
-closure-core-SOURCE_MAP.json reconstructs the accepted source closure.
-
-The row17-only installation preserves every original public header and data
-body. Its originals, candidates, guarded installation receipt, pilot provenance
-reconciliation and unchanged preimage are retained. The prior all-row proposals
-were not modified. Rows35/48, existing holds and timeouts were not changed.
-
-Five remaining installed modules are DRAFTS, NOT YET BUILT OR AUDITED here:
-Arithmetic17, RawSelectedData17, LightAssembly17, GraphTriangle17 and the final
-GraphData17 aggregate. Their complete names are in assembly-TARGETS.json.
-Both graph17 side certificates were already verified and synchronized.
-Full graph17 completion, canonical root integration and the original main
-theorem remain unfinished. Publication requires the separate push receipt.
+This is a complete graph endpoint, not accepted canonical root integration or
+a proof of the original main theorem. No clean checkout replay, independent
+kernel implementation or external independent review is claimed. The publication
+receipt is saved separately after an actual normal push and remote comparison.

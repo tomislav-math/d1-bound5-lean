@@ -1,0 +1,187 @@
+[
+  {
+    "current_sha256": "c5ad7a04be55cfcfdd22f3a74ab3f5e3ef667ed0f85cea269e060f25883ed011",
+    "declarations": [
+      {
+        "header": ":\n    pairSeedsCoveredBool smallPairA_17 smallPairB_17\n      seedRootDisk_0_2 smallPairClosure_17 = true",
+        "kind": "theorem",
+        "local_name": "smallPairSeeds_17_checked",
+        "name": "D1Bound5.smallPairSeeds_17_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ":\n    largePairVertices smallPairA_17 smallPairB_17 smallPairClosure_17 = smallPairLarge_17",
+        "kind": "theorem",
+        "local_name": "smallPairFilter_17_checked",
+        "name": "D1Bound5.smallPairFilter_17_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ": smallPairLarge_17.length = 718",
+        "kind": "theorem",
+        "local_name": "smallPairLarge_17_count",
+        "name": "D1Bound5.smallPairLarge_17_count",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphArithmetic17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphArithmetic17.lean",
+    "original_sha256": "c5ad7a04be55cfcfdd22f3a74ab3f5e3ef667ed0f85cea269e060f25883ed011",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphArithmetic17.lean"
+  },
+  {
+    "current_sha256": "177b5706da25a5b194b4aa9f4f84f9c508c44dc4f85e660be38675a65cf76158",
+    "declarations": [
+      {
+        "header": ": List (PairResidueVertex 0 2)",
+        "kind": "def",
+        "local_name": "leftCached",
+        "name": "D1Bound5.PairSelectedPrepared17.leftCached",
+        "namespace": "D1Bound5.PairSelectedPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "leftRows",
+        "name": "D1Bound5.PairSelectedPrepared17.leftRows",
+        "namespace": "D1Bound5.PairSelectedPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": List (PairResidueVertex 0 2)",
+        "kind": "def",
+        "local_name": "rightCached",
+        "name": "D1Bound5.PairSelectedPrepared17.rightCached",
+        "namespace": "D1Bound5.PairSelectedPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "rightRows",
+        "name": "D1Bound5.PairSelectedPrepared17.rightRows",
+        "namespace": "D1Bound5.PairSelectedPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairRawSelectedData17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairRawSelectedData17.lean",
+    "original_sha256": "177b5706da25a5b194b4aa9f4f84f9c508c44dc4f85e660be38675a65cf76158",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairRawSelectedData17.lean"
+  },
+  {
+    "current_sha256": "4a4c3cceb1e234d5a7ca9081233a76921a24091b498fb613e4d351fee3c72181",
+    "declarations": [
+      {
+        "header": ": sieve = smallPairSieve_0_2",
+        "kind": "theorem",
+        "local_name": "sieve_eq",
+        "name": "D1Bound5.PairLightPrepared17.sieve_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftVertices = (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).1.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "leftVertices_eq",
+        "name": "D1Bound5.PairLightPrepared17.leftVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftCached = PairSelectedPrepared17.leftCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "leftCached_eq",
+        "name": "D1Bound5.PairLightPrepared17.leftCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": leftRows = PairSelectedPrepared17.leftRows",
+        "kind": "theorem",
+        "local_name": "leftRows_eq",
+        "name": "D1Bound5.PairLightPrepared17.leftRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_0_2 (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).1 = true",
+        "kind": "theorem",
+        "local_name": "left_checked",
+        "name": "D1Bound5.PairLightPrepared17.left_checked",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightVertices = (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).2.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "rightVertices_eq",
+        "name": "D1Bound5.PairLightPrepared17.rightVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightCached = PairSelectedPrepared17.rightCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "rightCached_eq",
+        "name": "D1Bound5.PairLightPrepared17.rightCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": rightRows = PairSelectedPrepared17.rightRows",
+        "kind": "theorem",
+        "local_name": "rightRows_eq",
+        "name": "D1Bound5.PairLightPrepared17.rightRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_0_2 (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).2 = true",
+        "kind": "theorem",
+        "local_name": "right_checked",
+        "name": "D1Bound5.PairLightPrepared17.right_checked",
+        "namespace": "D1Bound5.PairLightPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairLightAssembly17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairLightAssembly17.lean",
+    "original_sha256": "4a4c3cceb1e234d5a7ca9081233a76921a24091b498fb613e4d351fee3c72181",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairLightAssembly17.lean"
+  },
+  {
+    "current_sha256": "1e6c37e71a69365eea81e4ed6b59e320e9ecc5d92e1df618e25901093f907e68",
+    "declarations": [
+      {
+        "header": ":\n    pairGraphTriangleFreeBool smallPairSieve_0_2 smallPairLarge_17 = true",
+        "kind": "theorem",
+        "local_name": "smallPairNoTriangle_17_checked",
+        "name": "D1Bound5.smallPairNoTriangle_17_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphTriangle17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphTriangle17.lean",
+    "original_sha256": "1e6c37e71a69365eea81e4ed6b59e320e9ecc5d92e1df618e25901093f907e68",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphTriangle17.lean"
+  },
+  {
+    "current_sha256": "f778cd9f578f8d61f3b0073f3fb833753b7c2869941bfc8401a6bb806ae2ca72",
+    "declarations": [],
+    "module": "SmallPairGraphData17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphData17.lean",
+    "original_sha256": "f778cd9f578f8d61f3b0073f3fb833753b7c2869941bfc8401a6bb806ae2ca72",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphData17.lean"
+  }
+]
