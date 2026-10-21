@@ -20,5 +20,7 @@ Do not infer root acceptance from working-module checks. Inherited idle terminal
 
 
 Publication starting HEAD: d846225a52a9bdda738ef82dd716f2db7160edce.
-Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-evening-graph29-left-publication.
+Proof/evidence commit ad7c514e42dc61d2bbcafb4cd1d75fcd3d85d4b9 was pushed normally.
+Remote main equality and PRIVATE visibility were verified. The post-push receipt
+is in research/continuations/20261021-evening-graph29-left-publication/.
+This handoff and receipt are included in the following record commit.
