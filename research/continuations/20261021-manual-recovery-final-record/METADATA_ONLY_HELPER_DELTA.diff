@@ -1,0 +1,11 @@
+--- reviewed-publication-guard
++++ metadata-final-publication-guard
+@@ -47,7 +47,7 @@
+     if p.is_file():paths.add(rel(p))
+   checked.append({**group,'targets':summary['targets'],'proof_fingerprint':summary['proof_fingerprint'],'declarations':summary['declarations'],'targeted_same_kernel_replays':summary['targeted_same_kernel_replays']})
+  head=git('rev-parse','HEAD')
+- (R/'records/PRO_CONTINUATION_HANDOFF.md').write_text(plan['handoff']+'\n\nPublication starting HEAD: '+head+'.\nPublication is prepared, not yet pushed. The actual final Git state is recorded\nin POST_PUSH_RECEIPT.json under '+str(O.relative_to(R))+'.\n')
++ (R/'records/PRO_CONTINUATION_HANDOFF.md').write_text(plan['handoff']+'\n')
+  paths.add('records/PRO_CONTINUATION_HANDOFF.md')
+  for p in plan.get('extra',[]):paths.add(rel(p))
+  q=subprocess.run(['/Users/tp/.local/bin/python3.12','-B',str(R/'scripts/git_sync_preflight.py')],cwd=R,capture_output=True,text=True,timeout=40);assert q.returncode==0,q.stdout

@@ -1,34 +1,36 @@
 # Current D1 formalization handoff
 
-Main theorem UNPROVED. Canonical root integration remains unverified.
-Graph29 foundation is now checked: five guarded builds, 23 original declaration
-type/transitive-axiom checks (19 definitions and four coverage/signature theorems),
-and five targeted installed SAME-kernel replays. Every exit is zero, without
-source/artifact drift or timeout. No theorem statement or source data changed.
-Evidence: research/continuations/20261021-manual-graph29-foundation/.
-See foundation-VERIFICATION_SUMMARY.json and MANUAL_RECOVERY_RUN.json.
-The full graph29 and its triangle-free endpoint remain incomplete.
+Main theorem UNPROVED. Canonical-root integration is still unverified.
+All proof work accepted in this manual run is committed and pushed through
+fc3ae15ab44ba2830df6942dcd0969b3b57b0f79; local/remote main equality and PRIVATE
+repository status were verified. This final checkpoint changes records only.
 
-This manual run completed 14 new guarded builds, 64 original-declaration
-checks and 21 targeted SAME-kernel replays. Accepted earlier evidence was reused
-only after checking current source/artifact and binding fingerprints.
-Graph12 working endpoint is synchronized in 6309108d82419e74d2ebd21346ce13accd595326.
-Graph48 working endpoint is synchronized in 28d7fb5ead2b6590e90eb503ed7133adb38edd3d.
-Earlier graph35 and graph48 sides/closure were synchronized in a52daf956b552ef5383061852eba1d052b2b6a0d.
-These verified working endpoints are not canonical-root or full-theorem checks.
+Completed working endpoints: graph12 (720 closure rows, 718 filtered vertices)
+and graph48 (719 rows, 718 vertices), with all original 28 public declarations
+preserved for each. Their exact type/axiom checks and installed SAME-kernel
+replays passed. Graph35's previously accepted endpoint was also synchronized.
+Graph29 has only its five-module foundation accepted: nineteen definitions,
+four coverage/signature theorems, exact original types and five kernel replays.
+The complete graph29 remains open.
 
-Next: graph29 left/right independence certificates. Current prefix modules are
-Left29_000 (126 heads), Left29_001 (254), Right29_000 (125), Right29_001 (256).
-Reuse the accepted common prefix/partition infrastructure and the verified
-foundation. Test a representative bounded piece before a large batch and split
-expensive checks with exact coverage and complete tails. Do not change the
-original public claims or accept raw enumeration as proof. Then verify the
-left/right wrappers, closure and final endpoint with their original types.
+New checks executed in this run: 14 guarded builds, 64 declaration type/axiom
+checks, 21 targeted SAME-kernel replays. All passed with matching source/artifact
+fingerprints and no timeout. Older successful checks were reused, not repeated.
+Full evidence index: research/continuations/20261021-manual-graph29-foundation/MANUAL_RECOVERY_RUN.json.
+Endpoint evidence: 20261021-manual-graph12-assembly/ENDPOINT_VERIFICATION.json
+and 20261021-pro-graph48-closure/ENDPOINT_VERIFICATION.json under research/continuations/.
+Graph29 evidence: 20261021-manual-graph29-foundation/foundation-VERIFICATION_SUMMARY.json.
+Post-push receipts are in the matching manual-*-publication folders.
 
-Before work, inspect live processes, locks and newest source/receipts. No compiler
-or publication from this run is intended to remain unmanaged. The inherited idle
-terminal79436 was untouched. No automation was changed.
+Next: graph29 left/right independence certificates, starting with a representative
+bounded prefix. Current prefixes cover left 126+254 and right 125+256 heads.
+Reuse accepted prefix/partition lemmas, preserve complete tails and prove exact
+coverage when splitting. Then verify the wrappers, closure and graph endpoint.
+Do not rebuild accepted foundation modules while source/artifact hashes match.
 
-Publication starting HEAD: 28d7fb5ead2b6590e90eb503ed7133adb38edd3d.
-Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-manual-graph29-publication.
+All compiler and audit processes launched by this run have finished. The
+publication guards have bounded ownership and explicit release receipts. Inspect
+actual locks/processes and newest files before continuing. The inherited idle
+terminal79436 and all automations were left unchanged. Proof publication uses
+exact research snapshots/source maps under GIT_SYNC_POLICY.md; unrelated draft
+canonical sources were not staged or overwritten.
