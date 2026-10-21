@@ -32,5 +32,7 @@ scheduled automations remain untouched.
 
 
 Publication starting HEAD: 4db869718a6f962e60d30ba75abc47bc5e57a1f3.
-Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-evening-graph29-closure-pilot-publication.
+Closure-pilot proof/evidence commit db1abb2cb4e48fa0877b06c94622dea8f77ae98c was pushed normally.
+Remote main equality and PRIVATE visibility were verified. Exact publication
+evidence is in research/continuations/20261021-evening-graph29-closure-pilot-publication/POST_PUSH_RECEIPT.json.
+This handoff and receipt are saved in the following record commit; inspect HEAD.
