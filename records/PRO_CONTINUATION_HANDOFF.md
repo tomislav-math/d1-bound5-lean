@@ -1,36 +1,24 @@
 # Current D1 formalization handoff
 
-Main theorem UNPROVED. Canonical-root integration is still unverified.
-All proof work accepted in this manual run is committed and pushed through
-fc3ae15ab44ba2830df6942dcd0969b3b57b0f79; local/remote main equality and PRIVATE
-repository status were verified. This final checkpoint changes records only.
+Main theorem UNPROVED. Canonical-root integration remains unverified.
+The complete graph29 left independence certificate passed 12 guarded builds,
+15 exact original public-type/transitive-axiom checks and 12 targeted installed
+SAME-kernel replays. All exits were zero, with unchanged sources and artifacts.
+The original 126+254 heads and all full remaining tails are preserved. Nine
+finite parts were joined using the accepted generic prefix-concatenation lemma.
+Evidence: research/continuations/20261021-evening-graph29-sides/left-VERIFICATION_SUMMARY.json.
+Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph29-left-audit/.
+Build controller21792 and audit controller22181 have completed with exit zero.
 
-Completed working endpoints: graph12 (720 closure rows, 718 filtered vertices)
-and graph48 (719 rows, 718 vertices), with all original 28 public declarations
-preserved for each. Their exact type/axiom checks and installed SAME-kernel
-replays passed. Graph35's previously accepted endpoint was also synchronized.
-Graph29 has only its five-module foundation accepted: nineteen definitions,
-four coverage/signature theorems, exact original types and five kernel replays.
-The complete graph29 remains open.
+Next useful unit: graph29 right independence, original prefixes125+256.
+Preserve the exact original statements and full tails; measure a first part,
+then prove the original parents and SmallPairLightRight29. Reuse the accepted
+foundation and left side. Graph29 closure and its final endpoint remain open.
+Earlier graph12/35/48 recovery and synchronization are preserved unchanged.
+Do not infer root acceptance from working-module checks. Inherited idle terminal
+79436 and all scheduled automations are untouched.
 
-New checks executed in this run: 14 guarded builds, 64 declaration type/axiom
-checks, 21 targeted SAME-kernel replays. All passed with matching source/artifact
-fingerprints and no timeout. Older successful checks were reused, not repeated.
-Full evidence index: research/continuations/20261021-manual-graph29-foundation/MANUAL_RECOVERY_RUN.json.
-Endpoint evidence: 20261021-manual-graph12-assembly/ENDPOINT_VERIFICATION.json
-and 20261021-pro-graph48-closure/ENDPOINT_VERIFICATION.json under research/continuations/.
-Graph29 evidence: 20261021-manual-graph29-foundation/foundation-VERIFICATION_SUMMARY.json.
-Post-push receipts are in the matching manual-*-publication folders.
 
-Next: graph29 left/right independence certificates, starting with a representative
-bounded prefix. Current prefixes cover left 126+254 and right 125+256 heads.
-Reuse accepted prefix/partition lemmas, preserve complete tails and prove exact
-coverage when splitting. Then verify the wrappers, closure and graph endpoint.
-Do not rebuild accepted foundation modules while source/artifact hashes match.
-
-All compiler and audit processes launched by this run have finished. The
-publication guards have bounded ownership and explicit release receipts. Inspect
-actual locks/processes and newest files before continuing. The inherited idle
-terminal79436 and all automations were left unchanged. Proof publication uses
-exact research snapshots/source maps under GIT_SYNC_POLICY.md; unrelated draft
-canonical sources were not staged or overwritten.
+Publication starting HEAD: d846225a52a9bdda738ef82dd716f2db7160edce.
+Publication is prepared, not yet pushed. The actual final Git state is recorded
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-evening-graph29-left-publication.
