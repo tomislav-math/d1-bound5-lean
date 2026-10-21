@@ -1,0 +1,187 @@
+[
+  {
+    "current_sha256": "f63837b55c69bdb709897de72e83d4ac38d1ee00669f9ffa16acb6f62232a866",
+    "declarations": [
+      {
+        "header": ":\n    pairSeedsCoveredBool smallPairA_12 smallPairB_12\n      seedRootDisk_0_1 smallPairClosure_12 = true",
+        "kind": "theorem",
+        "local_name": "smallPairSeeds_12_checked",
+        "name": "D1Bound5.smallPairSeeds_12_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ":\n    largePairVertices smallPairA_12 smallPairB_12 smallPairClosure_12 = smallPairLarge_12",
+        "kind": "theorem",
+        "local_name": "smallPairFilter_12_checked",
+        "name": "D1Bound5.smallPairFilter_12_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ": smallPairLarge_12.length = 718",
+        "kind": "theorem",
+        "local_name": "smallPairLarge_12_count",
+        "name": "D1Bound5.smallPairLarge_12_count",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphArithmetic12",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairGraphArithmetic12.lean",
+    "original_sha256": "f63837b55c69bdb709897de72e83d4ac38d1ee00669f9ffa16acb6f62232a866",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairGraphArithmetic12.lean"
+  },
+  {
+    "current_sha256": "ae7df2e33e86b16824b9aeb75cedb47199e7ce352388405387d80306a29f1d2a",
+    "declarations": [
+      {
+        "header": ": List (PairResidueVertex 0 1)",
+        "kind": "def",
+        "local_name": "leftCached",
+        "name": "D1Bound5.PairSelectedPrepared12.leftCached",
+        "namespace": "D1Bound5.PairSelectedPrepared12",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "leftRows",
+        "name": "D1Bound5.PairSelectedPrepared12.leftRows",
+        "namespace": "D1Bound5.PairSelectedPrepared12",
+        "opens": []
+      },
+      {
+        "header": ": List (PairResidueVertex 0 1)",
+        "kind": "def",
+        "local_name": "rightCached",
+        "name": "D1Bound5.PairSelectedPrepared12.rightCached",
+        "namespace": "D1Bound5.PairSelectedPrepared12",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "rightRows",
+        "name": "D1Bound5.PairSelectedPrepared12.rightRows",
+        "namespace": "D1Bound5.PairSelectedPrepared12",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairRawSelectedData12",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairRawSelectedData12.lean",
+    "original_sha256": "ae7df2e33e86b16824b9aeb75cedb47199e7ce352388405387d80306a29f1d2a",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairRawSelectedData12.lean"
+  },
+  {
+    "current_sha256": "f97804cda6000ca5224866d4c03f9dac3bc3dfdcf5a143f857e57e3150616c7e",
+    "declarations": [
+      {
+        "header": ": sieve = smallPairSieve_0_1",
+        "kind": "theorem",
+        "local_name": "sieve_eq",
+        "name": "D1Bound5.PairLightPrepared12.sieve_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftVertices = (pairSplitByMask smallPairLarge_12 PairGraphPrepared12.colors).1.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "leftVertices_eq",
+        "name": "D1Bound5.PairLightPrepared12.leftVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftCached = PairSelectedPrepared12.leftCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "leftCached_eq",
+        "name": "D1Bound5.PairLightPrepared12.leftCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ": leftRows = PairSelectedPrepared12.leftRows",
+        "kind": "theorem",
+        "local_name": "leftRows_eq",
+        "name": "D1Bound5.PairLightPrepared12.leftRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_12 PairGraphPrepared12.colors).1 = true",
+        "kind": "theorem",
+        "local_name": "left_checked",
+        "name": "D1Bound5.PairLightPrepared12.left_checked",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightVertices = (pairSplitByMask smallPairLarge_12 PairGraphPrepared12.colors).2.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "rightVertices_eq",
+        "name": "D1Bound5.PairLightPrepared12.rightVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightCached = PairSelectedPrepared12.rightCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "rightCached_eq",
+        "name": "D1Bound5.PairLightPrepared12.rightCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ": rightRows = PairSelectedPrepared12.rightRows",
+        "kind": "theorem",
+        "local_name": "rightRows_eq",
+        "name": "D1Bound5.PairLightPrepared12.rightRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_12 PairGraphPrepared12.colors).2 = true",
+        "kind": "theorem",
+        "local_name": "right_checked",
+        "name": "D1Bound5.PairLightPrepared12.right_checked",
+        "namespace": "D1Bound5.PairLightPrepared12",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairLightAssembly12",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairLightAssembly12.lean",
+    "original_sha256": "f97804cda6000ca5224866d4c03f9dac3bc3dfdcf5a143f857e57e3150616c7e",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairLightAssembly12.lean"
+  },
+  {
+    "current_sha256": "784ba1e429ba058107836205f2eb02895ec3d918c8bff82e7fa6ecd813be5ac0",
+    "declarations": [
+      {
+        "header": ":\n    pairGraphTriangleFreeBool smallPairSieve_0_1 smallPairLarge_12 = true",
+        "kind": "theorem",
+        "local_name": "smallPairNoTriangle_12_checked",
+        "name": "D1Bound5.smallPairNoTriangle_12_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphTriangle12",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairGraphTriangle12.lean",
+    "original_sha256": "784ba1e429ba058107836205f2eb02895ec3d918c8bff82e7fa6ecd813be5ac0",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairGraphTriangle12.lean"
+  },
+  {
+    "current_sha256": "ad2a46e887c9ca361cf657fa0b33affe672dc9b06ccc9064441889c5aee7fc9f",
+    "declarations": [],
+    "module": "SmallPairGraphData12",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairGraphData12.lean",
+    "original_sha256": "ad2a46e887c9ca361cf657fa0b33affe672dc9b06ccc9064441889c5aee7fc9f",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-manual-graph12-assembly/originals/SmallPairGraphData12.lean"
+  }
+]

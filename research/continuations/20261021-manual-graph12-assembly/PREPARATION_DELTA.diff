@@ -1,0 +1,10 @@
+--- accepted-closure-rest/prepare_checks.py
++++ assembly/prepare_checks.py
+@@ -57,6 +57,7 @@
+  for prior_scope in ['left','right']:
+   for n,item in load(R/'research/continuations/20261021-pro-graph12-partitions'/(prior_scope+'-SOURCE_MAP.json'))['sources'].items():oldmap[(n,item['sha256'])]=item
+  for n,item in load(R/'research/continuations/20261021-pro-graph12-closure-half-pilot/first-block-SOURCE_MAP.json')['sources'].items():oldmap[(n,item['sha256'])]=item
++ for n,item in load(R/'research/continuations/20261021-pro-graph12-closure-rest/closure-rest-SOURCE_MAP.json')['sources'].items():oldmap[(n,item['sha256'])]=item
+  source_map={};evidence={}
+  for n,h in sorted(union.items()):
+   c=d.closure(n);key=mod.fingerprint(c);mf=d.expected_manifest(n,key,latest);assert mf and d.artifacts(n)==mf,n

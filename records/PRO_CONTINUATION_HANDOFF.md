@@ -1,31 +1,29 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. Canonical root integration remains unverified.
-Manual continuation on 21 October completed the previously refused graph12
-remaining-closure audit: seven exact original type/transitive-axiom checks and
-six targeted SAME-kernel replays, all exits zero without timeout or drift.
-Six prior guarded builds were reused, not repeated. Full graph12 closure covers
-all 720 original ordered rows, with both mutation signs and 10^1100 unchanged.
-Evidence: research/continuations/20261021-pro-graph12-closure-rest/.
-Fingerprint: 031491dfbb7c2818019015ebc1c83414e4bac757e56aa451dd73d346d2edc1b7.
+Graph12 is now a complete verified working endpoint, including its 720-row
+closure and triangle-free graph on 718 filtered vertices. All 28 original public
+declarations are preserved, as checked against the original merged source.
+Four assembly modules were newly built; Arithmetic12 reused its accepted build.
+All 17 assembly declaration types/transitive axioms and five targeted SAME-kernel
+replays passed. The six earlier closure replays also passed during this manual run.
+Current source and compiled artifact fingerprints were checked without drift.
 
-The previously completed graph35 endpoint and graph48 sides/closure were
-revalidated against current source, compiled artifact and original audit bindings.
-Their genuine successful checks are reused, not presented as newly executed.
-Only verified scopes in VERIFIED_UNITS.json are accepted; other saved candidates
-remain drafts. No original statement, hypothesis or exception was changed.
+Evidence: research/continuations/20261021-manual-graph12-assembly/.
+See assembly-VERIFICATION_SUMMARY.json and ENDPOINT_VERIFICATION.json.
+Earlier foundation, partition and closure evidence is referenced there.
+The whole graph endpoint is connected locally; it is not yet canonical-root
+integration and does not by itself prove MainStatement.
 
-Next: finish graph12 assembly. Arithmetic12 already has a guarded build.
-Run the existing graph12 closure/bounded_build.py on SmallPairRawSelectedData12,
-SmallPairLightAssembly12, SmallPairGraphTriangle12, SmallPairGraphData12, serially.
-Then bind five assembly targets using the current first-block and closure-rest
-source maps, not the historical PLAN pins for the repaired Chunk00 and coverage.
-Graph48 has five pending assembly modules; its existing bounded runner and
-assembly targets are ready. Both final endpoint audits still remain.
+Graph35 and graph48 sides/closure were synchronized in a52daf956b552ef5383061852eba1d052b2b6a0d.
+Next: finish graph48's five assembly targets with its existing bounded runner,
+then exact-type/axiom audit and targeted replays. Its 28 public headers were
+also compared with the preserved original and reviewed plan, without changes.
 
-Use actual process/lock state before the next unit. The inherited idle terminal
-79436 is untouched. No automation was changed.
+Use actual process/lock state before the next action. Do not rebuild accepted
+units with matching fingerprints. The inherited idle terminal79436 is untouched.
+No automation was changed.
 
-Publication starting HEAD: 6daff0f982af264e900e75e42309b97fa9d4c8d0.
+Publication starting HEAD: a52daf956b552ef5383061852eba1d052b2b6a0d.
 Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-manual-recovery-checkpoint.
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-manual-graph12-publication.

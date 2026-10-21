@@ -1,0 +1,69 @@
+{
+  "extra": [
+    "research/continuations/20261021-manual-graph12-assembly/ENDPOINT_VERIFICATION.json",
+    "research/continuations/20261021-manual-recovery-checkpoint/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261021-manual-recovery-checkpoint/INDEX_REVIEW.json",
+    "research/continuations/20261021-manual-recovery-checkpoint/WHITESPACE_REVIEW.txt",
+    "research/continuations/20261021-manual-recovery-checkpoint/OWNER.json",
+    "research/continuations/20261021-manual-recovery-checkpoint/RELEASE.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphArithmetic12.lean",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphArithmetic12-BUILD_RECEIPT.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphArithmetic12-SOURCE_CLOSURE.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphArithmetic12-ORIGINAL_SOURCES.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphArithmetic12-build.log",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairRawSelectedData12.lean",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairRawSelectedData12-BUILD_RECEIPT.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairRawSelectedData12-SOURCE_CLOSURE.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairRawSelectedData12-ORIGINAL_SOURCES.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairRawSelectedData12-build.log",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairLightAssembly12.lean",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairLightAssembly12-BUILD_RECEIPT.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairLightAssembly12-SOURCE_CLOSURE.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairLightAssembly12-ORIGINAL_SOURCES.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairLightAssembly12-build.log",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphTriangle12.lean",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphTriangle12-BUILD_RECEIPT.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphTriangle12-SOURCE_CLOSURE.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphTriangle12-ORIGINAL_SOURCES.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphTriangle12-build.log",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphData12.lean",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphData12-BUILD_RECEIPT.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphData12-SOURCE_CLOSURE.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphData12-ORIGINAL_SOURCES.json",
+    "research/continuations/20261021-pro-graph12-closure/SmallPairGraphData12-build.log"
+  ],
+  "groups": [
+    {
+      "audit": "pro-graph12-foundation-audit",
+      "scope": "foundation",
+      "unit": "20261021-pro-graph12-sides"
+    },
+    {
+      "audit": "pro-graph12-left-audit",
+      "scope": "left",
+      "unit": "20261021-pro-graph12-partitions"
+    },
+    {
+      "audit": "pro-graph12-right-audit",
+      "scope": "right",
+      "unit": "20261021-pro-graph12-partitions"
+    },
+    {
+      "audit": "pro-graph12-first-block-audit",
+      "scope": "first-block",
+      "unit": "20261021-pro-graph12-closure-half-pilot"
+    },
+    {
+      "audit": "pro-graph12-closure-rest-audit",
+      "scope": "closure-rest",
+      "unit": "20261021-pro-graph12-closure-rest"
+    },
+    {
+      "audit": "pro-graph12-assembly-audit",
+      "scope": "assembly",
+      "unit": "20261021-manual-graph12-assembly"
+    }
+  ],
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical root integration remains unverified.\nGraph12 is now a complete verified working endpoint, including its 720-row\nclosure and triangle-free graph on 718 filtered vertices. All 28 original public\ndeclarations are preserved, as checked against the original merged source.\nFour assembly modules were newly built; Arithmetic12 reused its accepted build.\nAll 17 assembly declaration types/transitive axioms and five targeted SAME-kernel\nreplays passed. The six earlier closure replays also passed during this manual run.\nCurrent source and compiled artifact fingerprints were checked without drift.\n\nEvidence: research/continuations/20261021-manual-graph12-assembly/.\nSee assembly-VERIFICATION_SUMMARY.json and ENDPOINT_VERIFICATION.json.\nEarlier foundation, partition and closure evidence is referenced there.\nThe whole graph endpoint is connected locally; it is not yet canonical-root\nintegration and does not by itself prove MainStatement.\n\nGraph35 and graph48 sides/closure were synchronized in a52daf956b552ef5383061852eba1d052b2b6a0d.\nNext: finish graph48's five assembly targets with its existing bounded runner,\nthen exact-type/axiom audit and targeted replays. Its 28 public headers were\nalso compared with the preserved original and reviewed plan, without changes.\n\nUse actual process/lock state before the next action. Do not rebuild accepted\nunits with matching fingerprints. The inherited idle terminal79436 is untouched.\nNo automation was changed.",
+  "purpose": "Publish complete graph12 verified working endpoint"
+}
