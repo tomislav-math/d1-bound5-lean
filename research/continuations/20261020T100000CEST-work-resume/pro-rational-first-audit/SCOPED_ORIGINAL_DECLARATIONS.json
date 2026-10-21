@@ -1,0 +1,18 @@
+[
+  {
+    "current_sha256": "ec1ac5de875e09a521e7a6eb080ad83829858bc64b6e20605fb5ad65cd1bb9b5",
+    "declarations": [
+      {
+        "header": "{K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]\n    (hK : finrank \u211a K = 2) (phi : K \u2192+* \u2102)\n    (a : Fin 6 \u2192 \ud835\udcde K) (ha : IsD1Tuple a)\n    (hmon : Monotone (fun i => \u2016phi (a i : K)\u2016))\n    (sgn : Bool) (hx : a 0 = if sgn then -1 else 1)\n    (hy : a 1 = if sgn then -3 else 3) :\n    a 2 = if sgn then -8 else 8",
+        "kind": "theorem",
+        "local_name": "IsD1Tuple.rational_first_pair_third_eq_eight",
+        "name": "D1Bound5.IsD1Tuple.rational_first_pair_third_eq_eight"
+      }
+    ],
+    "module": "RationalFirstTriple",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-rational-first/originals/RationalFirstTriple.lean",
+    "original_sha256": "2a60baaa7e944ee03b500b778e6317bc87755aed2ca61061349e0bf8e56abb91",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/repair-rational-first-triple-pro-v1-before/RationalFirstTriple.lean"
+  }
+]

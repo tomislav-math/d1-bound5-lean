@@ -1,0 +1,20 @@
+{
+  "targets": [
+    {
+      "module": "RationalFirstTriple",
+      "replacements": [
+        {
+          "count": 1,
+          "new": "  have hu0 : u 0=1 := by cases sgn <;> simp [u,hx]\n",
+          "old": "  have hu0 : u 0=1 := by cases sgn <;> simp_all [u]\n"
+        },
+        {
+          "count": 1,
+          "new": "  have hu1 : u 1=3 := by cases sgn <;> simp [u,hy]\n",
+          "old": "  have hu1 : u 1=3 := by cases sgn <;> simp_all [u]\n"
+        }
+      ],
+      "source_sha256": "2a60baaa7e944ee03b500b778e6317bc87755aed2ca61061349e0bf8e56abb91"
+    }
+  ]
+}

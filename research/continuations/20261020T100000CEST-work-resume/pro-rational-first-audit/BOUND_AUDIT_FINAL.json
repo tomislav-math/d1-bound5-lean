@@ -1,0 +1,46 @@
+{
+  "status": "BOUND_SCOPED_AUDIT_PASS",
+  "time": "2026-10-21T00:10:27.844725+00:00",
+  "records": [
+    {
+      "label": "analytic-type-axioms",
+      "pid": 76526,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-rational-first-audit/AnalyticAudit.lean"
+      ],
+      "time": "2026-10-21T00:08:05.982204+00:00",
+      "exit": 0,
+      "seconds": 81.25655087502673,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 79,
+      "binding_drift_paths": [],
+      "log": "analytic-type-axioms.log"
+    },
+    {
+      "label": "RationalFirstTriple-targeted-replay",
+      "pid": 76578,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.RationalFirstTriple"
+      ],
+      "time": "2026-10-21T00:09:28.615516+00:00",
+      "exit": 0,
+      "seconds": 57.882795500103384,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 56,
+      "binding_drift_paths": [],
+      "log": "RationalFirstTriple-targeted-replay.log"
+    }
+  ],
+  "binding_sha256": "3b7051c0380daf19dd50a56b67b14268d3267e4400bbc537321caf8a21e61c0e",
+  "source_map_sha256": "cb4338ca4fa90f98983977a6ab16fb92091cfe89e2c26a3ae17aba8696ad6634",
+  "main_theorem_claim": false
+}
