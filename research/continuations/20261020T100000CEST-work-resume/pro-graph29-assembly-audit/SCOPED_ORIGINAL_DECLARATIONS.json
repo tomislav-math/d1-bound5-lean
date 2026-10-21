@@ -1,0 +1,187 @@
+[
+  {
+    "current_sha256": "9c03dd78331bb1db2c0289b5b4d68f04d20fe5e7fa15fee676c238927f047874",
+    "declarations": [
+      {
+        "header": ":\n    pairSeedsCoveredBool smallPairA_29 smallPairB_29\n      seedRootDisk_1_1 smallPairClosure_29 = true",
+        "kind": "theorem",
+        "local_name": "smallPairSeeds_29_checked",
+        "name": "D1Bound5.smallPairSeeds_29_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ":\n    largePairVertices smallPairA_29 smallPairB_29 smallPairClosure_29 = smallPairLarge_29",
+        "kind": "theorem",
+        "local_name": "smallPairFilter_29_checked",
+        "name": "D1Bound5.smallPairFilter_29_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ": smallPairLarge_29.length = 761",
+        "kind": "theorem",
+        "local_name": "smallPairLarge_29_count",
+        "name": "D1Bound5.smallPairLarge_29_count",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphArithmetic29",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairGraphArithmetic29.lean",
+    "original_sha256": "9c03dd78331bb1db2c0289b5b4d68f04d20fe5e7fa15fee676c238927f047874",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairGraphArithmetic29.lean"
+  },
+  {
+    "current_sha256": "cb250dfb0f3a845e4c45728b9aeb08186ea7efd2264d68f95718b76f733f0ce5",
+    "declarations": [
+      {
+        "header": ": List (PairResidueVertex 1 1)",
+        "kind": "def",
+        "local_name": "leftCached",
+        "name": "D1Bound5.PairSelectedPrepared29.leftCached",
+        "namespace": "D1Bound5.PairSelectedPrepared29",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "leftRows",
+        "name": "D1Bound5.PairSelectedPrepared29.leftRows",
+        "namespace": "D1Bound5.PairSelectedPrepared29",
+        "opens": []
+      },
+      {
+        "header": ": List (PairResidueVertex 1 1)",
+        "kind": "def",
+        "local_name": "rightCached",
+        "name": "D1Bound5.PairSelectedPrepared29.rightCached",
+        "namespace": "D1Bound5.PairSelectedPrepared29",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "rightRows",
+        "name": "D1Bound5.PairSelectedPrepared29.rightRows",
+        "namespace": "D1Bound5.PairSelectedPrepared29",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairRawSelectedData29",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairRawSelectedData29.lean",
+    "original_sha256": "cb250dfb0f3a845e4c45728b9aeb08186ea7efd2264d68f95718b76f733f0ce5",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairRawSelectedData29.lean"
+  },
+  {
+    "current_sha256": "dbacc8a2310d456f91b493fad40c48e58201b13c3a10f48ba7591cc4e9cbc81f",
+    "declarations": [
+      {
+        "header": ": sieve = smallPairSieve_1_1",
+        "kind": "theorem",
+        "local_name": "sieve_eq",
+        "name": "D1Bound5.PairLightPrepared29.sieve_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftVertices = (pairSplitByMask smallPairLarge_29 PairGraphPrepared29.colors).1.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "leftVertices_eq",
+        "name": "D1Bound5.PairLightPrepared29.leftVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftCached = PairSelectedPrepared29.leftCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "leftCached_eq",
+        "name": "D1Bound5.PairLightPrepared29.leftCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ": leftRows = PairSelectedPrepared29.leftRows",
+        "kind": "theorem",
+        "local_name": "leftRows_eq",
+        "name": "D1Bound5.PairLightPrepared29.leftRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_29 PairGraphPrepared29.colors).1 = true",
+        "kind": "theorem",
+        "local_name": "left_checked",
+        "name": "D1Bound5.PairLightPrepared29.left_checked",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightVertices = (pairSplitByMask smallPairLarge_29 PairGraphPrepared29.colors).2.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "rightVertices_eq",
+        "name": "D1Bound5.PairLightPrepared29.rightVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightCached = PairSelectedPrepared29.rightCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "rightCached_eq",
+        "name": "D1Bound5.PairLightPrepared29.rightCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ": rightRows = PairSelectedPrepared29.rightRows",
+        "kind": "theorem",
+        "local_name": "rightRows_eq",
+        "name": "D1Bound5.PairLightPrepared29.rightRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_29 PairGraphPrepared29.colors).2 = true",
+        "kind": "theorem",
+        "local_name": "right_checked",
+        "name": "D1Bound5.PairLightPrepared29.right_checked",
+        "namespace": "D1Bound5.PairLightPrepared29",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairLightAssembly29",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairLightAssembly29.lean",
+    "original_sha256": "dbacc8a2310d456f91b493fad40c48e58201b13c3a10f48ba7591cc4e9cbc81f",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairLightAssembly29.lean"
+  },
+  {
+    "current_sha256": "5f677e8e8d8740cd86f7ac9d349494f4380512b84afc48192a2f3427d56e147d",
+    "declarations": [
+      {
+        "header": ":\n    pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_29 = true",
+        "kind": "theorem",
+        "local_name": "smallPairNoTriangle_29_checked",
+        "name": "D1Bound5.smallPairNoTriangle_29_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphTriangle29",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairGraphTriangle29.lean",
+    "original_sha256": "5f677e8e8d8740cd86f7ac9d349494f4380512b84afc48192a2f3427d56e147d",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairGraphTriangle29.lean"
+  },
+  {
+    "current_sha256": "11e0bb29f08bcff1b688adaf7f926c92c8163bd1f3915d0cf4ca37830f29dab5",
+    "declarations": [],
+    "module": "SmallPairGraphData29",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairGraphData29.lean",
+    "original_sha256": "11e0bb29f08bcff1b688adaf7f926c92c8163bd1f3915d0cf4ca37830f29dab5",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/originals/SmallPairGraphData29.lean"
+  }
+]

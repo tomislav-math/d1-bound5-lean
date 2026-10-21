@@ -1,25 +1,25 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. Canonical-root integration remains unverified.
-The original full graph29 closure theorem is now proved and scoped-verified
-for all763 ordered witness rows, both mutation signs and complete global indices.
-The closure core combines16 guarded builds and16 targeted SAME-kernel replays,
-with exact original types and transitive axioms checked for15 theorems and9
-definitions. Earlier successful pilot and blocks01--04 checks were reused.
-New unit: blocks05--11 and the original closure parent; eight builds/replays and
-nine theorem checks passed. Build batches30150/30388 and audit30567 exited zero.
-Evidence: research/continuations/20261021-evening-graph29-closure/CLOSURE_VERIFICATION.json
-and closure-finish-VERIFICATION_SUMMARY.json in the same folder.
+Graph29 is now a complete scoped-verified working endpoint. Its original28
+public declarations,763 ordered closure rows,761 filtered vertices,both
+mutation signs and complete full-tail comparisons are preserved.
+The existing completed assembly checks were recovered and their current source,
+configuration and artifact hashes revalidated, not recompiled or re-audited.
+Evidence: research/continuations/20261021-evening-graph29-closure/ENDPOINT_VERIFICATION.json.
+The full graph29 development has50 distinct accepted modules and50 targeted
+SAME-kernel replays; these are module counts, not manuscript-result counts.
+The assembly scope contains5 modules and17 public declarations.
+There are26 current accepted working graph endpoints out of48.
 
-Both graph29 side certificates remain verified and synchronized. Full graph29
-still needs five assembly modules. Next exact command after ownership checks:
-/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/bounded_build.py SmallPairGraphArithmetic29
-Then RawSelectedData29, LightAssembly29, GraphTriangle29 and GraphData29.
-Use assembly-TARGETS.json and the existing scoped-check helpers after builds.
-Do not rebuild accepted closure or side modules. Earlier graph12/17/35/48
-results, inherited idle terminal79436 and all automations remain unchanged.
+Next useful unit: graph25 foundation, whose split left/right data modules
+have no previous current build attempts. Inspect and use its current sources,
+then prove exact full-tail side certificates using the accepted prefix helper.
+Do not rebuild accepted graph29 modules. Earlier graph12/17/35/48 proofs and
+all unrelated drafts are preserved. The inherited idle terminal79436 and
+all scheduled automations remain untouched.
 
 
-Publication starting HEAD: 61390464068e7bbff41a252d2fa55b389b74d433.
+Publication starting HEAD: c68629ddeca30d8bf86ad74f69c0439425d38b6a.
 Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-late-graph29-closure-finish-publication.
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-night-graph29-endpoint-publication.
