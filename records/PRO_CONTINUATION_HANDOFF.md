@@ -33,5 +33,9 @@ Inherited idle terminal79436 and all scheduled automations were untouched.
 
 
 Publication starting HEAD: 49f67dc47c63916145e7f4eb70a462751023f1d3.
-Publication is prepared, not yet pushed. The actual final Git state is recorded
+Proof/evidence commit 9ca7641e10ee80d690a1c5becd1bac011ffa2847 was pushed normally.
+Remote main equality and PRIVATE visibility were verified. Evidence is recorded
 in POST_PUSH_RECEIPT.json under research/continuations/20261021-night-graph25-left-publication.
+
+This post-push receipt and handoff update are saved in the following record
+commit. Inspect current HEAD; no proof changes are made by that record commit.
