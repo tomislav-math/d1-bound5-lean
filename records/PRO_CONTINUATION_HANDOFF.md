@@ -15,8 +15,11 @@ owner 76518 have both returned actual exit 0.
 Evidence: research/continuations/20261021-pro-rational-first/.
 Audit: research/continuations/20261020T100000CEST-work-resume/pro-rational-first-audit/.
 Substantive fingerprint: 86cfafc1ca3a297043cb1e2d45dfccbff4004ef116543f7bdbfdf4e58c63e2af.
-Publication is prepared, not yet committed or pushed; starting local and remote
-main: ae7c1dc05034662ce0bab0bc0dbef81bbab1a32d.
+Proof/evidence commit: aefcc7e1598e20bbff6b7731766202da01bdf151.
+Normal push succeeded; remote main equals this commit and the destination is PRIVATE.
+POST_PUSH_RECEIPT.json preserves the publication evidence. This receipt and handoff
+are saved in the following record commit; inspect current HEAD.
+Unrelated working files and compiled-only research remain preserved.
 
 Earlier in this continuation, RationalTripleExclusion passed its guarded build,
 exact type/transitive-axiom check and targeted installed SAME-kernel replay.
