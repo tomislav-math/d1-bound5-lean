@@ -1,26 +1,29 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. Canonical-root integration remains unverified.
-The complete graph29 left independence certificate passed 12 guarded builds,
-15 exact original public-type/transitive-axiom checks and 12 targeted installed
-SAME-kernel replays. All exits were zero, with unchanged sources and artifacts.
-The original 126+254 heads and all full remaining tails are preserved. Nine
-finite parts were joined using the accepted generic prefix-concatenation lemma.
-Evidence: research/continuations/20261021-evening-graph29-sides/left-VERIFICATION_SUMMARY.json.
-Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph29-left-audit/.
-Build controller21792 and audit controller22181 have completed with exit zero.
+Both complete graph29 side-independence certificates are verified. This turn
+completed 24 guarded builds, 30 exact original theorem-type/transitive-axiom
+checks and 24 targeted installed SAME-kernel replays. All exited zero with
+unchanged source/artifact fingerprints. The original left126+254 and right125+256
+heads retain every full remaining tail and all cross-part comparisons.
+Evidence: research/continuations/20261021-evening-graph29-sides/,
+left-VERIFICATION_SUMMARY.json and right-VERIFICATION_SUMMARY.json.
+Left proof commit ad7c514e42dc61d2bbcafb4cd1d75fcd3d85d4b9 and record commit
+20d3e6f9af235db185eb11f260c58ca9d41feffb were pushed and verified PRIVATE.
+Right build controller24015 and audit controller24571 have exited zero.
 
-Next useful unit: graph29 right independence, original prefixes125+256.
-Preserve the exact original statements and full tails; measure a first part,
-then prove the original parents and SmallPairLightRight29. Reuse the accepted
-foundation and left side. Graph29 closure and its final endpoint remain open.
-Earlier graph12/35/48 recovery and synchronization are preserved unchanged.
-Do not infer root acceptance from working-module checks. Inherited idle terminal
-79436 and all scheduled automations are untouched.
+Next: restore only graph29's eight original archived components from
+research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/.
+The merged original source is a053d55a62f07a2134b0d7c268a43914566376355049b5828289445cd2450e99.
+Preserve all28 original declarations and every data body. Split its763-row
+indexed closure into bounded complete-index prefixes, retain both mutation
+signs, use structural ordered coverage, and prove the original closure parent.
+Compile Inputs/WitnessData and measure one prefix before further proof batches.
+The graph29 full endpoint and main theorem remain open. Earlier completed and
+synchronized graph12/17/35/48 work is preserved. Inherited idle terminal79436
+and all scheduled automations remain untouched.
 
 
-Publication starting HEAD: d846225a52a9bdda738ef82dd716f2db7160edce.
-Proof/evidence commit ad7c514e42dc61d2bbcafb4cd1d75fcd3d85d4b9 was pushed normally.
-Remote main equality and PRIVATE visibility were verified. The post-push receipt
-is in research/continuations/20261021-evening-graph29-left-publication/.
-This handoff and receipt are included in the following record commit.
+Publication starting HEAD: 20d3e6f9af235db185eb11f260c58ca9d41feffb.
+Publication is prepared, not yet pushed. The actual final Git state is recorded
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-evening-graph29-right-publication.

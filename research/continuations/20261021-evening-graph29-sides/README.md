@@ -1,8 +1,10 @@
-# Graph29 exact side-certificate development
+# Graph29 exact side-independence certificates
 
-The complete left certificate is verified by guarded builds, exact original
-public-type/transitive-axiom checks and targeted installed SAME-kernel replays.
-See left-VERIFICATION_SUMMARY.json and its genuine referenced receipts.
-The right certificate and full graph endpoint remain open at this checkpoint.
-Sources are reconstructible through left-SOURCE_MAP.json. No proof objects or
-canonical-root acceptance are included. Publication is recorded separately.
+Both original sides are verified. The left126+254 and right125+256 head
+prefixes retain every complete remaining tail. Exact original public types,
+transitive axioms and targeted installed SAME-kernel replays passed for both
+sides. Each side used12 guarded builds and15 theorem-type/axiom examples.
+No new axioms, native computation shortcut or weaker public statement was used.
+See the left/right VERIFICATION_SUMMARY, SOURCE_MAP and genuine receipts.
+The full graph endpoint, its closure and canonical-root integration remain open.
+Publication is recorded in the separate evening graph29 publication folders.
