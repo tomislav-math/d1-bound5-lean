@@ -1,30 +1,33 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. No accepted canonical root integration.
-Completed unit: full graph12 left certificate. Its eight exact complete-tail
-parts, two original parent statements and unchanged consumer passed eleven
-guarded builds, fourteen exact public-type/transitive-axiom checks and eleven
-targeted installed SAME-kernel replays. All exits were zero with unchanged guards.
-Build controller1032 and audit controller1319 are drained.
-Evidence: research/continuations/20261021-pro-graph12-partitions/left-VERIFICATION_SUMMARY.json.
-Proof fingerprint: 992f1cee564e1c21f150ce9e80899e3e7656af407e8eac1d161441471236fb91.
-This unit is prepared for publication; starting HEAD fe529d78e18f66abba707caafd2a9858a5c7dd61.
+Completed current unit: full graph12 right certificate. Eleven guarded builds,
+fourteen exact original public-type/transitive-axiom checks and eleven targeted
+installed SAME-kernel replays passed with unchanged guards. Build controller2758
+and audit controller3140 completed with actual exit zero.
+Evidence: research/continuations/20261021-pro-graph12-partitions/right-VERIFICATION_SUMMARY.json.
+Right proof fingerprint: 08fe828c05dadd9c808ac0074d2425600c5cb9b5e3dc7fa6112680eba8580bcb.
+Current publication is prepared, not yet pushed; starting HEAD 1d233fa9493f43bc634d8251a61ecadbc935da93.
 
-Graph12 foundation is synchronized atfe529d78e18f66abba707caafd2a9858a5c7dd61.
-Its three builds, nineteen definition/four theorem type and axiom checks, and
-three kernel replays passed. foundation-POST_PUSH_RECEIPT.json is included in
-this reviewed publication. The original left block000 timeout is preserved
-without reclassification in graph12-partitions/prior-timeout/.
+Both graph12 sides now have checked complete359-head certificates. Left proof
+commit1d233fa9493f43bc634d8251a61ecadbc935da93 and foundation commit
+fe529d78e18f66abba707caafd2a9858a5c7dd61 were pushed with PRIVATE remote equality.
+The current selected checkpoint includes the genuine left post-push receipt.
+Totals for graph12 so far:25 accepted module builds,32 theorem and19 definition
+type/axiom checks,25 targeted replays. These are helper/module counts, not paper
+result counts. One original failed timeout is preserved separately and excluded.
 
-Next bounded unit: SmallPairLightAdaptiveRight12_000Part00. Measure that part
-with graph12-partitions/bounded_build.py, then complete right-TARGETS.json
-serially and run prepare_checks.py right, the bound scoped runner and
-finish_checks.py right. Reuse the accepted foundation and left-side proofs.
-Both sides retain359 original heads and all complete remaining tails.
-The whole graph12 endpoint remains uncompiled; no closure restoration installed.
+Next unit: prepare a row12-only restoration of the eight original archived
+components currently merged into SmallPairGraphData12. All archive bodies and
+hashes were compared exactly. The model is0,1, closure/witness/destination lists
+have720 rows, and the original filtered-count theorem is718. Use six exact
+closure parts of128,128,128,128,128,80, full global destination indices, and the
+accepted structural zipWith projection for exact ordered coverage. Preserve all
+28 original public declarations and data. No restoration is installed yet.
+Read W/prepared-light-remaining39/D1Bound5 originals, with W denoting
+research/continuations/20261018T010800CEST-main-continuation.
 
-Preserved prior state: graph17 synchronized at8489909dbf3a492370e470bef243edabb1abe5ab.
-Graph35 is fully checked LOCAL ONLY. Graph48 sides and closure core are checked
-LOCAL ONLY; five assembly modules remain unaccepted. Their recorded publication/
-execution refusals were not retried or bypassed. Last endpoint count:23 of48.
+Graph35 remains a checked LOCAL-ONLY endpoint. Graph48 sides/closure are checked
+LOCAL ONLY; five assembly modules remain unaccepted. Their recorded refusals
+were not retried or bypassed. Graph17 is synchronized. Last endpoint count:23/48.
 Inherited idle terminal79436 and all automations were left untouched.
