@@ -1,0 +1,95 @@
+[
+  {
+    "current_sha256": "f55dd66fbb38c401cdc36038a26e989e1fe838186aef6c506874b2dca6fa618b",
+    "declarations": [
+      {
+        "header": ":\n    pairLightSelectedFloorPrefixBool 0 2 PairLightPrepared17.sieve 50\n      (leftCached001.drop 0) (leftRows001.drop 0) = true",
+        "kind": "theorem",
+        "local_name": "left_prefix_001_part00_checked",
+        "name": "D1Bound5.PairLightAdaptivePrepared17.left_prefix_001_part00_checked"
+      }
+    ],
+    "module": "SmallPairLightAdaptiveLeft17_001Part00",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-left-complete/originals/SmallPairLightAdaptiveLeft17_001Part00.lean",
+    "original_sha256": "f55dd66fbb38c401cdc36038a26e989e1fe838186aef6c506874b2dca6fa618b"
+  },
+  {
+    "current_sha256": "b796db53c22d8130eb10e8f6dbb7bb2508f4f626f175fcd1186353b502953ddd",
+    "declarations": [
+      {
+        "header": ":\n    pairLightSelectedFloorPrefixBool 0 2 PairLightPrepared17.sieve 73\n      (leftCached001.drop 50) (leftRows001.drop 50) = true",
+        "kind": "theorem",
+        "local_name": "left_prefix_001_part01_checked",
+        "name": "D1Bound5.PairLightAdaptivePrepared17.left_prefix_001_part01_checked"
+      }
+    ],
+    "module": "SmallPairLightAdaptiveLeft17_001Part01",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-left-complete/originals/SmallPairLightAdaptiveLeft17_001Part01.lean",
+    "original_sha256": "b796db53c22d8130eb10e8f6dbb7bb2508f4f626f175fcd1186353b502953ddd"
+  },
+  {
+    "current_sha256": "c12980f510716dd728cca289dc59b2adf11147625e127cc9204bd1a6d111b1cf",
+    "declarations": [
+      {
+        "header": ":\n    pairLightSelectedFloorPrefixBool 0 2 PairLightPrepared17.sieve 100\n      (leftCached001.drop 123) (leftRows001.drop 123) = true",
+        "kind": "theorem",
+        "local_name": "left_prefix_001_part02_checked",
+        "name": "D1Bound5.PairLightAdaptivePrepared17.left_prefix_001_part02_checked"
+      }
+    ],
+    "module": "SmallPairLightAdaptiveLeft17_001Part02",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-left-complete/originals/SmallPairLightAdaptiveLeft17_001Part02.lean",
+    "original_sha256": "c12980f510716dd728cca289dc59b2adf11147625e127cc9204bd1a6d111b1cf"
+  },
+  {
+    "current_sha256": "4fd8d83e713b51b6703768b856234cf95ff1c8c62f045c87b8a7297faf9a5c08",
+    "declarations": [
+      {
+        "header": ":\n    pairLightSelectedFloorPrefixBool 0 2 PairLightPrepared17.sieve 223\n      leftCached001 leftRows001 = true",
+        "kind": "theorem",
+        "local_name": "left_prefix_001_checked",
+        "name": "D1Bound5.PairLightAdaptivePrepared17.left_prefix_001_checked"
+      }
+    ],
+    "module": "SmallPairLightAdaptiveLeft17_001",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-left-complete/originals/SmallPairLightAdaptiveLeft17_001.lean",
+    "original_sha256": "f0e5e6387bbc0c0fed1dc529347525a16d35b92549d43e06626bafd9e9a065a9"
+  },
+  {
+    "current_sha256": "241ab9ee815b70417e1fa13266f24f6997e08f38ed449bcc78fa2972dc0fb424",
+    "declarations": [
+      {
+        "header": ":\n    decide (leftCached.map Prod.fst = leftVertices) = true",
+        "kind": "theorem",
+        "local_name": "left_coverage_checked",
+        "name": "D1Bound5.PairLightPrepared17.left_coverage_checked"
+      },
+      {
+        "header": ":\n    (leftCached.all fun x => decide (x.2 = pairLightCoordinateSignature sieve x.1)) = true",
+        "kind": "theorem",
+        "local_name": "left_signatures_checked",
+        "name": "D1Bound5.PairLightPrepared17.left_signatures_checked"
+      },
+      {
+        "header": ":\n    pairLightSelectedFloorIndependentBool 0 2 sieve leftCached leftRows = true",
+        "kind": "theorem",
+        "local_name": "left_independent_checked",
+        "name": "D1Bound5.PairLightPrepared17.left_independent_checked"
+      },
+      {
+        "header": ":\n    pairLightSelectedFloorIndependentCertificateBool 0 2 sieve\n      leftVertices leftCached leftRows = true",
+        "kind": "theorem",
+        "local_name": "left_certificate_checked",
+        "name": "D1Bound5.PairLightPrepared17.left_certificate_checked"
+      }
+    ],
+    "module": "SmallPairLightLeft17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-left-complete/originals/SmallPairLightLeft17.lean",
+    "original_sha256": "241ab9ee815b70417e1fa13266f24f6997e08f38ed449bcc78fa2972dc0fb424"
+  }
+]
