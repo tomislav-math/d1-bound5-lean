@@ -1,33 +1,34 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. Canonical root integration remains unverified.
-Graph48 is now a complete verified working endpoint: all 719 closure rows and
-the triangle-free graph on 718 filtered vertices are connected. All 28 original
-public declarations match the preserved merged source and reviewed plan.
-Five assembly modules were newly built and all 17 original declaration types,
-transitive axioms and five targeted installed SAME-kernel replays passed.
-No timeout, source/artifact drift, statement weakening or new axiom was used.
-Earlier accepted sides and closure were revalidated, not recomputed.
+Graph29 foundation is now checked: five guarded builds, 23 original declaration
+type/transitive-axiom checks (19 definitions and four coverage/signature theorems),
+and five targeted installed SAME-kernel replays. Every exit is zero, without
+source/artifact drift or timeout. No theorem statement or source data changed.
+Evidence: research/continuations/20261021-manual-graph29-foundation/.
+See foundation-VERIFICATION_SUMMARY.json and MANUAL_RECOVERY_RUN.json.
+The full graph29 and its triangle-free endpoint remain incomplete.
 
-Evidence: research/continuations/20261021-pro-graph48-closure/.
-See assembly-VERIFICATION_SUMMARY.json and ENDPOINT_VERIFICATION.json.
-All 37 endpoint/support modules have their own genuine original check records.
-This is a working endpoint, not canonical-root or whole-theorem verification.
+This manual run completed 14 new guarded builds, 64 original-declaration
+checks and 21 targeted SAME-kernel replays. Accepted earlier evidence was reused
+only after checking current source/artifact and binding fingerprints.
+Graph12 working endpoint is synchronized in 6309108d82419e74d2ebd21346ce13accd595326.
+Graph48 working endpoint is synchronized in 28d7fb5ead2b6590e90eb503ed7133adb38edd3d.
+Earlier graph35 and graph48 sides/closure were synchronized in a52daf956b552ef5383061852eba1d052b2b6a0d.
+These verified working endpoints are not canonical-root or full-theorem checks.
 
-Graph12 is complete and synchronized in 6309108d82419e74d2ebd21346ce13accd595326.
-Earlier graph35 and graph48 sides/closure are synchronized in a52daf956b552ef5383061852eba1d052b2b6a0d.
-Next: graph29 foundation. Current sources already split LightData29 into Left
-and Right. Build Left, Right, LightData29, AdaptiveData29 and Validation29 in
-that order with pinned guarded checks. They are queued, have no accepted or
-failed current-fingerprint attempts, and have no blocked dependencies as of
-this read. Recheck live state before starting. The four coverage/signature
-theorems and nineteen definitions need exact-type/axiom and kernel checks.
-This is a direct dependency of MainTheorem through TwoSmallNondegenerateImpossible,
-SmallPairGraphs, GraphData29 and LightLeft29. Full graph29 remains incomplete.
+Next: graph29 left/right independence certificates. Current prefix modules are
+Left29_000 (126 heads), Left29_001 (254), Right29_000 (125), Right29_001 (256).
+Reuse the accepted common prefix/partition infrastructure and the verified
+foundation. Test a representative bounded piece before a large batch and split
+expensive checks with exact coverage and complete tails. Do not change the
+original public claims or accept raw enumeration as proof. Then verify the
+left/right wrappers, closure and final endpoint with their original types.
 
-Use current source/receipt and actual process/lock state. Preserve unrelated
-work and the inherited idle terminal79436. No automation was changed.
+Before work, inspect live processes, locks and newest source/receipts. No compiler
+or publication from this run is intended to remain unmanaged. The inherited idle
+terminal79436 was untouched. No automation was changed.
 
-Publication starting HEAD: 6309108d82419e74d2ebd21346ce13accd595326.
+Publication starting HEAD: 28d7fb5ead2b6590e90eb503ed7133adb38edd3d.
 Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-manual-graph48-publication.
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-manual-graph29-publication.
