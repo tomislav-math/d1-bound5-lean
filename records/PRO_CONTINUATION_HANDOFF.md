@@ -1,29 +1,28 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. No new canonical root integration.
-Completed unit: OneSmallReducedImpossible and OneSmallImpossible. The original
-full-ring one-small branch now has exact public-type/transitive-axiom checks and
-two targeted installed SAME-kernel replays, all exit 0 with unchanged guards.
-The earlier two successful guarded builds were revalidated and reused, not rerun.
-The accepted dependency closure has 403 modules; these are not counts of results.
+Last completed unit: graph17 left block000 (heads0 through136). Its five
+complete-tail parts and unchanged original parent have six guarded builds,
+six exact public-type/transitive-axiom checks and six targeted installed
+SAME-kernel replays, all exit0 with unchanged guards. Audit owner83919 exited0.
+Evidence: research/continuations/20261021-pro-graph17-left000/.
+Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-left000-audit/.
+Publication pending; starting HEAD241b4562d18f175b278284f21b66e0eb5d21d3bc.
 
-Evidence: research/continuations/20261021-pro-one-small/VERIFICATION_SUMMARY.json,
-SOURCE_MAP.json and original build receipts. Audit: research/continuations/
-20261020T100000CEST-work-resume/pro-one-small-audit/. Audit runner 82533 exited 0.
-Proof/evidence commit: 64941cb74c0ffb18d82cc7e26e015e9a2c3f5894.
-Normal push succeeded; remote main matched and destination was verified PRIVATE.
-POST_PUSH_RECEIPT.json preserves the publication evidence. This record and handoff
-are saved in the following record commit; inspect current HEAD.
+Earlier in this turn, the entire one-small branch passed its missing exact
+type/axiom checks and two targeted kernel replays, reusing the existing builds.
+It is synchronized in proof commit64941cb74c0ffb18d82cc7e26e015e9a2c3f5894 and
+record commit241b4562d18f175b278284f21b66e0eb5d21d3bc; remote PRIVATE main matched.
+Evidence: research/continuations/20261021-pro-one-small/.
 
-Next main dependency: TwoSmallNondegenerateImpossible. Its closure still contains
-27 incomplete graph endpoints. Next candidate: SmallPairLightAdaptiveLeft17_000,
-using the installed exact five-part partition and existing prefix-concatenation
-lemma. Measure Part00 first, then complete its four siblings and original parent
-when practical. Preserve every original vertex tail and cross-part comparison.
-Five other immediate MainTheorem dependencies have current accepted builds;
-this statement does not upgrade their individual audit assurance levels.
+Next bounded unit: SmallPairLightAdaptiveLeft17_001Part00, Part01, Part02,
+then SmallPairLightAdaptiveLeft17_001 and SmallPairLightLeft17. Their complete
+source bodies were read; the partition is50+73+100 heads beginning at137.
+Prepare a reviewed target-pin wrapper, revalidate accepted dependencies and
+compile serially under the existing lock protocol. The last module joins both
+left prefixes with the already prepared coverage/signature checks and empty tail.
+Do not claim full graph17 or main completion. The two-small branch still has
+27 incomplete graph endpoints; no whole-project rebuild was run to recount them.
 
-Exclusive project locks were acquired successfully in this manual continuation.
-An inherited idle Python REPL (terminal PID 79436) was observed waiting for input;
-it was not used or modified and did not prevent the existing locks being acquired.
-Hourly task 6ad7f81b482c81919edf99da50faa443 remains untouched.
+An inherited idle Python REPL terminal79436 remains untouched; it did not own
+the project locks. Hourly task6ad7f81b482c81919edf99da50faa443 was not changed.
