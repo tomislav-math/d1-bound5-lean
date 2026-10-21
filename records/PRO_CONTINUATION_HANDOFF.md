@@ -1,31 +1,36 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. Canonical-root integration remains unverified.
-Both complete graph29 side-independence certificates are verified. This turn
-completed 24 guarded builds, 30 exact original theorem-type/transitive-axiom
-checks and 24 targeted installed SAME-kernel replays. All exited zero with
-unchanged source/artifact fingerprints. The original left126+254 and right125+256
-heads retain every full remaining tail and all cross-part comparisons.
-Evidence: research/continuations/20261021-evening-graph29-sides/,
-left-VERIFICATION_SUMMARY.json and right-VERIFICATION_SUMMARY.json.
-Left proof commit ad7c514e42dc61d2bbcafb4cd1d75fcd3d85d4b9 and record commit
-20d3e6f9af235db185eb11f260c58ca9d41feffb were pushed and verified PRIVATE.
-Right build controller24015 and audit controller24571 have exited zero.
+Completed current unit: graph29 closure pilot, four modules. Inputs29,
+WitnessData29, Closure29Chunk00 and Closure29Coverage passed guarded builds,
+11 exact public-type/transitive-axiom checks (nine definitions, two theorems)
+and four targeted installed SAME-kernel replays. All exits zero; sources,
+configuration and artifacts stayed unchanged. First64 mutation rows are checked;
+ordered coverage includes the complete763-entry list. Full graph29 is NOT done.
+Evidence: research/continuations/20261021-evening-graph29-closure/closure-pilot-VERIFICATION_SUMMARY.json.
+Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph29-closure-pilot-audit/.
+Build controllers26698 and26951 and audit controller27077 have exited zero.
+Proof fingerprint: aac9bbfc173131f59550ac2e0f4695e245f26785cda087391865d40465b7ba20.
 
-Next: restore only graph29's eight original archived components from
-research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/.
-The merged original source is a053d55a62f07a2134b0d7c268a43914566376355049b5828289445cd2450e99.
-Preserve all28 original declarations and every data body. Split its763-row
-indexed closure into bounded complete-index prefixes, retain both mutation
-signs, use structural ordered coverage, and prove the original closure parent.
-Compile Inputs/WitnessData and measure one prefix before further proof batches.
-The graph29 full endpoint and main theorem remain open. Earlier completed and
-synchronized graph12/17/35/48 work is preserved. Inherited idle terminal79436
-and all scheduled automations remain untouched.
+Both graph29 side certificates were previously completed and synchronized.
+Left proof commit ad7c514e42dc61d2bbcafb4cd1d75fcd3d85d4b9; right proof commit
+7d7d0c6178be24afb6476d175237a59dc8d6a6a6; latest side record commit
+4db869718a6f962e60d30ba75abc47bc5e57a1f3. Private remote equality was verified.
+The evening run totals28 guarded builds,32 theorem and9 definition type/axiom
+checks, and28 targeted SAME-kernel replays. These are proof-module/helper counts,
+not counts of new manuscript results. See closure/EVENING_PROGRESS.json.
+
+Next exact command after current-state/ownership inspection:
+/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261021-evening-graph29-closure/bounded_build.py SmallPairGraphClosure29Chunk01
+Chunks01--11, the original closure parent and five assembly modules remain
+uncompiled. Their archived candidates are explicitly labeled in CANDIDATE_STATUS.
+The first64-row pilot took114.842 seconds, below its240-second bound. Reuse its
+accepted evidence; do not rerun it. Preserve complete global destination indices,
+both mutation signs, original types and all763 rows. No accepted roots were added.
+Earlier graph12/17/35/48 work is preserved. Inherited idle terminal79436 and all
+scheduled automations remain untouched.
 
 
-Publication starting HEAD: 20d3e6f9af235db185eb11f260c58ca9d41feffb.
-Right proof/evidence commit 7d7d0c6178be24afb6476d175237a59dc8d6a6a6 was pushed normally.
-Remote main equality and PRIVATE visibility were verified. The post-push receipt
-is in research/continuations/20261021-evening-graph29-right-publication/.
-This handoff and receipt are included in the following record commit.
+Publication starting HEAD: 4db869718a6f962e60d30ba75abc47bc5e57a1f3.
+Publication is prepared, not yet pushed. The actual final Git state is recorded
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-evening-graph29-closure-pilot-publication.
