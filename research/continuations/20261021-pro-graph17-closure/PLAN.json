@@ -1,0 +1,138 @@
+{
+  "base_commit": "1cad1b8695f94d26301e5711c7df81b523be586f",
+  "build_order": [
+    "SmallPairGraphInputs17",
+    "SmallPairGraphArithmetic17",
+    "SmallPairGraphWitnessData17",
+    "SmallPairGraphClosure17Chunk00",
+    "SmallPairGraphClosure17Chunk01",
+    "SmallPairGraphClosure17Chunk02",
+    "SmallPairGraphClosure17Chunk03",
+    "SmallPairGraphClosure17Chunk04",
+    "SmallPairGraphClosure17Chunk05",
+    "SmallPairGraphClosure17Coverage",
+    "SmallPairGraphClosure17",
+    "SmallPairRawSelectedData17",
+    "SmallPairLightAssembly17",
+    "SmallPairGraphTriangle17",
+    "SmallPairGraphData17"
+  ],
+  "complete_rows": 719,
+  "immutable_provenance": {
+    "/Users/tp/Lean/D1Bound5/D1Bound5/SmallPairGraphClosure33Coverage.lean": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphArithmetic17.lean": "c5ad7a04be55cfcfdd22f3a74ab3f5e3ef667ed0f85cea269e060f25883ed011",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphClosure17.lean": "9f517bc78b093d8fe783fecc7f9cd2c6accaa6814ea09e9126c1b5e3be4ffe53",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphData17.lean": "f778cd9f578f8d61f3b0073f3fb833753b7c2869941bfc8401a6bb806ae2ca72",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphInputs17.lean": "14dcee288b5c5034537c21a54909e9c88c45bc02daa4f71ad12e914dcc78eac0",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphTriangle17.lean": "1e6c37e71a69365eea81e4ed6b59e320e9ecc5d92e1df618e25901093f907e68",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphWitnessData17.lean": "ee4cc0ada864f2edccd3bfbac4878785200bc89becb9c371b8452bd6c376071b",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairLightAssembly17.lean": "4a4c3cceb1e234d5a7ca9081233a76921a24091b498fb613e4d351fee3c72181",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairRawSelectedData17.lean": "177b5706da25a5b194b4aa9f4f84f9c508c44dc4f85e660be38675a65cf76158",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/graph-data17_35_48-integrated-prefix-proposal/PLAN.json": "6a1a8d225e4a7872244f8815ea26cb01b74eb57719cf0f1d26f225031dd8a2c6",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-graph33-audit/BOUND_AUDIT_FINAL.json": "215507dd2f0e5e53da5ff759d480d3a9c99913beb0b6882147537ae1d5f1ae43",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph33/coverage-projection/SmallPairGraphClosure33Coverage-BUILD_RECEIPT.json": "3adf6e8110242dfb26e3646ab4d4b11dea7475747b5506ca145d1af29b6992d9"
+  },
+  "original_plan_sha256": "6a1a8d225e4a7872244f8815ea26cb01b74eb57719cf0f1d26f225031dd8a2c6",
+  "original_public_declarations": 28,
+  "original_public_headers": [
+    "def smallPairA_17 : QuadInt 0 2 ",
+    "def smallPairB_17 : QuadInt 0 2 ",
+    "def smallPairClosure_17 : List (QuadInt 0 2) ",
+    "def smallPairLarge_17 : List (QuadInt 0 2) ",
+    "def colors : \u2115 ",
+    "theorem smallPairSeeds_17_checked :\n    pairSeedsCoveredBool smallPairA_17 smallPairB_17\n      seedRootDisk_0_2 smallPairClosure_17 = true ",
+    "theorem smallPairFilter_17_checked :\n    largePairVertices smallPairA_17 smallPairB_17 smallPairClosure_17 = smallPairLarge_17 ",
+    "theorem smallPairLarge_17_count : smallPairLarge_17.length = 718 ",
+    "def anchorRoot : QuadInt 0 2 ",
+    "def rootPairs : List (QuadInt 0 2 \u00d7 QuadInt 0 2) ",
+    "def witnesses : List (PairRootWitness 0 2) ",
+    "def destinations : List (Option \u2115 \u00d7 Option \u2115) ",
+    "theorem PairGraphPrepared17.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 witnesses destinations = true ",
+    "theorem smallPairClosure_17_checked :\n    pairClosureBool smallPairA_17 smallPairB_17\n      (10^1100) smallPairClosure_17 = true ",
+    "def leftCached : List (PairResidueVertex 0 2) ",
+    "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+    "def rightCached : List (PairResidueVertex 0 2) ",
+    "def rightRows : List (\u2115 \u00d7 List \u2115) ",
+    "theorem sieve_eq : sieve = smallPairSieve_0_2 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared17.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared17.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_0_2 (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared17.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared17.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_0_2 (pairSplitByMask smallPairLarge_17 PairGraphPrepared17.colors).2 = true ",
+    "theorem smallPairNoTriangle_17_checked :\n    pairGraphTriangleFreeBool smallPairSieve_0_2 smallPairLarge_17 = true "
+  ],
+  "pilot_provenance_delta": {
+    "SmallPairGraphClosure33": {
+      "SmallPairGraphClosure33Coverage": {
+        "after": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+        "before": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f"
+      }
+    },
+    "SmallPairGraphClosure33Coverage": {
+      "SmallPairGraphClosure33Coverage": {
+        "after": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+        "before": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f"
+      }
+    },
+    "SmallPairGraphData33": {
+      "SmallPairGraphClosure33Coverage": {
+        "after": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+        "before": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f"
+      }
+    }
+  },
+  "prefix_parts": [
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure17Chunk00",
+      "offset": 0
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure17Chunk01",
+      "offset": 128
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure17Chunk02",
+      "offset": 256
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure17Chunk03",
+      "offset": 384
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure17Chunk04",
+      "offset": 512
+    },
+    {
+      "count": 79,
+      "module": "SmallPairGraphClosure17Chunk05",
+      "offset": 640
+    }
+  ],
+  "source_manifest": {
+    "SmallPairGraphArithmetic17": "c5ad7a04be55cfcfdd22f3a74ab3f5e3ef667ed0f85cea269e060f25883ed011",
+    "SmallPairGraphClosure17": "4840fd17cd892930435cec68826aef54d98a8a9821927e698f129eb7ac737f0c",
+    "SmallPairGraphClosure17Chunk00": "b1a5abd3d59d9781b810c998266dd99783cebd3ac4c8754c5fa2fc4965192010",
+    "SmallPairGraphClosure17Chunk01": "22d58ce6cb5b95f7c047553b40af15e71d1a0b4aa3f6cc4eb37fd0c191a23bd0",
+    "SmallPairGraphClosure17Chunk02": "ac4b3a459a466f602436cd4930731ad7b132e12c859c99882b8c468a1d8a7b97",
+    "SmallPairGraphClosure17Chunk03": "13266d6cf05cb7f5714599e0e4cdfac03819ec26776dfc8350cc0627c321dc54",
+    "SmallPairGraphClosure17Chunk04": "c72e4c4fcb9c8c6e951accf06d6771c7a9170e03a0d8322db359bea300eea886",
+    "SmallPairGraphClosure17Chunk05": "fabd85eda9f5e425163cef74718c4b31c430796e3d0adeb2749e2fc8c3b9fb1c",
+    "SmallPairGraphClosure17Coverage": "736db42d4fe1dfc26897ea442976f531990705ff6b305f3866a702034333a14f",
+    "SmallPairGraphData17": "f778cd9f578f8d61f3b0073f3fb833753b7c2869941bfc8401a6bb806ae2ca72",
+    "SmallPairGraphInputs17": "14dcee288b5c5034537c21a54909e9c88c45bc02daa4f71ad12e914dcc78eac0",
+    "SmallPairGraphTriangle17": "1e6c37e71a69365eea81e4ed6b59e320e9ecc5d92e1df618e25901093f907e68",
+    "SmallPairGraphWitnessData17": "ee4cc0ada864f2edccd3bfbac4878785200bc89becb9c371b8452bd6c376071b",
+    "SmallPairLightAssembly17": "4a4c3cceb1e234d5a7ca9081233a76921a24091b498fb613e4d351fee3c72181",
+    "SmallPairRawSelectedData17": "177b5706da25a5b194b4aa9f4f84f9c508c44dc4f85e660be38675a65cf76158"
+  },
+  "status": "REVIEWED_ROW17_ONLY_NOT_BUILT",
+  "structural_coverage_sha256": "736db42d4fe1dfc26897ea442976f531990705ff6b305f3866a702034333a14f"
+}

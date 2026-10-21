@@ -1,0 +1,260 @@
+[
+  {
+    "current_sha256": "14dcee288b5c5034537c21a54909e9c88c45bc02daa4f71ad12e914dcc78eac0",
+    "declarations": [
+      {
+        "header": ": QuadInt 0 2",
+        "kind": "def",
+        "local_name": "smallPairA_17",
+        "name": "D1Bound5.smallPairA_17",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": QuadInt 0 2",
+        "kind": "def",
+        "local_name": "smallPairB_17",
+        "name": "D1Bound5.smallPairB_17",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": List (QuadInt 0 2)",
+        "kind": "def",
+        "local_name": "smallPairClosure_17",
+        "name": "D1Bound5.smallPairClosure_17",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": List (QuadInt 0 2)",
+        "kind": "def",
+        "local_name": "smallPairLarge_17",
+        "name": "D1Bound5.smallPairLarge_17",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": \u2115",
+        "kind": "def",
+        "local_name": "colors",
+        "name": "D1Bound5.PairGraphPrepared17.colors",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": [
+          "open QuadInt"
+        ]
+      }
+    ],
+    "module": "SmallPairGraphInputs17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphInputs17.lean",
+    "original_sha256": "14dcee288b5c5034537c21a54909e9c88c45bc02daa4f71ad12e914dcc78eac0",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphInputs17.lean"
+  },
+  {
+    "current_sha256": "ee4cc0ada864f2edccd3bfbac4878785200bc89becb9c371b8452bd6c376071b",
+    "declarations": [
+      {
+        "header": ": QuadInt 0 2",
+        "kind": "def",
+        "local_name": "anchorRoot",
+        "name": "D1Bound5.PairGraphPrepared17.anchorRoot",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": List (QuadInt 0 2 \u00d7 QuadInt 0 2)",
+        "kind": "def",
+        "local_name": "rootPairs",
+        "name": "D1Bound5.PairGraphPrepared17.rootPairs",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": List (PairRootWitness 0 2)",
+        "kind": "def",
+        "local_name": "witnesses",
+        "name": "D1Bound5.PairGraphPrepared17.witnesses",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      },
+      {
+        "header": ": List (Option \u2115 \u00d7 Option \u2115)",
+        "kind": "def",
+        "local_name": "destinations",
+        "name": "D1Bound5.PairGraphPrepared17.destinations",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphWitnessData17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphWitnessData17.lean",
+    "original_sha256": "ee4cc0ada864f2edccd3bfbac4878785200bc89becb9c371b8452bd6c376071b",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphWitnessData17.lean"
+  },
+  {
+    "current_sha256": "b1a5abd3d59d9781b810c998266dd99783cebd3ac4c8754c5fa2fc4965192010",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 128\n      (witnesses.drop 0) (destinations.drop 0) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk00_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_chunk00_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Chunk00",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk00.lean",
+    "original_sha256": "b1a5abd3d59d9781b810c998266dd99783cebd3ac4c8754c5fa2fc4965192010",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk00.lean"
+  },
+  {
+    "current_sha256": "22d58ce6cb5b95f7c047553b40af15e71d1a0b4aa3f6cc4eb37fd0c191a23bd0",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 128\n      (witnesses.drop 128) (destinations.drop 128) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk01_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_chunk01_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Chunk01",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk01.lean",
+    "original_sha256": "22d58ce6cb5b95f7c047553b40af15e71d1a0b4aa3f6cc4eb37fd0c191a23bd0",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk01.lean"
+  },
+  {
+    "current_sha256": "ac4b3a459a466f602436cd4930731ad7b132e12c859c99882b8c468a1d8a7b97",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 128\n      (witnesses.drop 256) (destinations.drop 256) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk02_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_chunk02_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Chunk02",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk02.lean",
+    "original_sha256": "ac4b3a459a466f602436cd4930731ad7b132e12c859c99882b8c468a1d8a7b97",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk02.lean"
+  },
+  {
+    "current_sha256": "13266d6cf05cb7f5714599e0e4cdfac03819ec26776dfc8350cc0627c321dc54",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 128\n      (witnesses.drop 384) (destinations.drop 384) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk03_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_chunk03_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Chunk03",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk03.lean",
+    "original_sha256": "13266d6cf05cb7f5714599e0e4cdfac03819ec26776dfc8350cc0627c321dc54",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk03.lean"
+  },
+  {
+    "current_sha256": "c72e4c4fcb9c8c6e951accf06d6771c7a9170e03a0d8322db359bea300eea886",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 128\n      (witnesses.drop 512) (destinations.drop 512) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk04_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_chunk04_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Chunk04",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk04.lean",
+    "original_sha256": "c72e4c4fcb9c8c6e951accf06d6771c7a9170e03a0d8322db359bea300eea886",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk04.lean"
+  },
+  {
+    "current_sha256": "fabd85eda9f5e425163cef74718c4b31c430796e3d0adeb2749e2fc8c3b9fb1c",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 79\n      (witnesses.drop 640) (destinations.drop 640) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk05_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_chunk05_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Chunk05",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk05.lean",
+    "original_sha256": "fabd85eda9f5e425163cef74718c4b31c430796e3d0adeb2749e2fc8c3b9fb1c",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Chunk05.lean"
+  },
+  {
+    "current_sha256": "736db42d4fe1dfc26897ea442976f531990705ff6b305f3866a702034333a14f",
+    "declarations": [
+      {
+        "header": ":\n    decide (anchorRoot * anchorRoot = smallPairA_17 * smallPairB_17 + 1 \u2227\n      witnesses.map PairRootWitness.vertex = smallPairClosure_17) = true",
+        "kind": "theorem",
+        "local_name": "indexed_coverage_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_coverage_checked",
+        "namespace": "D1Bound5.PairGraphPrepared17",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure17Coverage",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Coverage.lean",
+    "original_sha256": "fafc8ea5b233adef18abe233ca501a97aa6c0c5237e61f89af83a3d68fa283cf",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17Coverage.lean"
+  },
+  {
+    "current_sha256": "4840fd17cd892930435cec68826aef54d98a8a9821927e698f129eb7ac737f0c",
+    "declarations": [
+      {
+        "header": ":\n    pairClosureIndexedWitnessBool smallPairA_17 smallPairB_17 anchorRoot\n      (10^1100) smallPairClosure_17 witnesses destinations = true",
+        "kind": "theorem",
+        "local_name": "PairGraphPrepared17.indexed_checked",
+        "name": "D1Bound5.PairGraphPrepared17.indexed_checked",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open PairGraphPrepared17"
+        ]
+      },
+      {
+        "header": ":\n    pairClosureBool smallPairA_17 smallPairB_17\n      (10^1100) smallPairClosure_17 = true",
+        "kind": "theorem",
+        "local_name": "smallPairClosure_17_checked",
+        "name": "D1Bound5.smallPairClosure_17_checked",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open PairGraphPrepared17"
+        ]
+      }
+    ],
+    "module": "SmallPairGraphClosure17",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17.lean",
+    "original_sha256": "9f517bc78b093d8fe783fecc7f9cd2c6accaa6814ea09e9126c1b5e3be4ffe53",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/originals/SmallPairGraphClosure17.lean"
+  }
+]

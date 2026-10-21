@@ -1,32 +1,35 @@
 # Current D1 formalization handoff
 
 Main theorem UNPROVED. No new canonical root integration.
-Completed unit: full graph17 right certificate, original 138+220 heads. Eight
-parts, two original parents and the final consumer passed eleven guarded builds,
-fourteen exact public-type/transitive-axiom checks and eleven targeted installed
-SAME-kernel replays. All exits zero and all guards unchanged. Only propext occurs
-in the nontrivial finite certificates; coverage/signature aliases have no axioms.
+Completed unit: graph17 exact closure core, retaining all 719 original rows,
+global destination indices, both signed mutations and the original norm bound.
+Inputs, WitnessData, six chunks, structural Coverage and original Closure passed
+ten guarded builds, exact public-type/transitive-axiom checks of nine theorems
+and nine definitions, and ten targeted installed SAME-kernel replays.
+All exits zero, no timeouts, and all source/artifact guards remained unchanged.
+The source closure contains 32 modules. No external independent review is claimed.
 
-Evidence: research/continuations/20261021-pro-graph17-right-complete/.
-Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-right-complete-audit/.
-Proof/evidence commit 8827fec8f92a44cf34afd1fd0ba31b1aa3fc2d46 was pushed normally.
-Remote main equality and PRIVATE visibility were verified. POST_PUSH_RECEIPT.json
-contains the publication evidence. This receipt and handoff are saved in the
-following record commit; inspect current HEAD.
+Evidence: research/continuations/20261021-pro-graph17-closure/.
+Summary: closure-core-VERIFICATION_SUMMARY.json.
+Audit: research/continuations/20261020T100000CEST-work-resume/pro-graph17-closure-core-audit/.
+Proof fingerprint: 943bf9b0d3530f0c6682616db4833b8ca9c38610d222a85102532b9bced4e225.
+Publication prepared, not yet committed or pushed. Starting HEAD: 1cad1b8695f94d26301e5711c7df81b523be586f.
 
-Earlier in this continuation the complete left certificate passed five builds,
-eight public-type/axiom checks and five targeted replays; proof commit
-cefdaf6107d0d239049c628b58d6bf21cef316a2 was pushed and PRIVATE remote equality
-verified. Its source/evidence is in 20261021-pro-graph17-left-complete. The current
-publication also includes that unit's exact post-push receipt.
+The merged graph17 module was replaced by its exact archived components and
+reviewed prefix proof. Every original public header/data body was preserved.
+Only row17 was changed; all-row proposals, rows35/48 and holds remain untouched.
+Do not rerun the original stale all-row installer. New modules and exact
+preimages are in candidates/, originals/ and installation/.
 
-Next unit: original graph17 closure/seed/filter/assembly chain. All current
-original dependencies are compiled, but the endpoint itself is not accepted.
-Read NEXT_GRAPH17_RESTORATION.md in the current checkpoint before preparing a
-row17-scoped, provenance-updated successor to the existing exact split proposal.
-Do not run the stale all-row installer or repeat a giant closure decision.
-No full graph17 claim: 21 of 48 graph endpoints remain accepted.
+Next unit: the seed/filter Arithmetic17 module, then RawSelectedData17,
+LightAssembly17, GraphTriangle17 and the final GraphData17 aggregate. These five
+are installed DRAFTS, not accepted builds. Both side certificates are already
+verified and synchronized; do not repeat their successful checks.
+After current-state and ownership inspection, next exact command:
+/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph17-closure/bounded_build.py SmallPairGraphArithmetic17
 
-Both build controller86709 and audit controller87007 are drained with exit zero.
-The inherited idle Python terminal79436 is not a compiler and was left untouched.
-Hourly task and settings unchanged. Current files/receipts supersede old counts.
+The same checkpoint contains assembly-TARGETS.json and the reviewed
+prepare_checks.py/finish_checks.py helpers for a separate assembly audit.
+Inspect every current source and its receipt before use. Full graph17, final
+root integration and all main-theorem gates remain unfinished.
+Inherited idle Python terminal79436 was left untouched. Automations unchanged.
