@@ -1,32 +1,31 @@
 # Current D1 formalization handoff
 
-Main theorem UNPROVED. No accepted canonical root integration.
-Completed unit: graph12 first closure block and full ordered coverage. Six
-modules passed guarded builds, exact public-type/transitive-axiom checks for
-nine definitions and four theorems, and six targeted SAME-kernel replays.
-Build controller5767 and audit controller5892 returned actual exit zero.
-The original 128-row statement follows from exact 64+64 parts, with the full
-vertex list and both mutation signs unchanged. The original timeout remains
-failed and preserved.
-Evidence: research/continuations/20261021-pro-graph12-closure-half-pilot/.
-Proof fingerprint: 49cfd1377dd729b5d9807a762951f8f7417b1294e0d6ac0ebbf09a54a46c608a.
-Publication is prepared, not yet pushed; starting HEAD f48b97f93624f500e9c11ec0c810ae55f524c720.
+Main theorem UNPROVED. Canonical root integration remains unverified.
+Manual continuation on 21 October completed the previously refused graph12
+remaining-closure audit: seven exact original type/transitive-axiom checks and
+six targeted SAME-kernel replays, all exits zero without timeout or drift.
+Six prior guarded builds were reused, not repeated. Full graph12 closure covers
+all 720 original ordered rows, with both mutation signs and 10^1100 unchanged.
+Evidence: research/continuations/20261021-pro-graph12-closure-rest/.
+Fingerprint: 031491dfbb7c2818019015ebc1c83414e4bac757e56aa451dd73d346d2edc1b7.
 
-Graph12 foundation and both complete side certificates were synchronized at
-f48b97f93624f500e9c11ec0c810ae55f524c720. Their right post-push receipt is
-included in this checkpoint. There are now 31 accepted graph12 module builds
-and 31 targeted replays in this turn, with 36 theorem/28 definition checks;
-these are helper/module counts, not manuscript result counts.
+The previously completed graph35 endpoint and graph48 sides/closure were
+revalidated against current source, compiled artifact and original audit bindings.
+Their genuine successful checks are reused, not presented as newly executed.
+Only verified scopes in VERIFIED_UNITS.json are accepted; other saved candidates
+remain drafts. No original statement, hypothesis or exception was changed.
 
-Next bounded unit: SmallPairGraphClosure12Chunk01, not previously attempted.
-Its unchanged source and accepted dependencies are ready. Next exact command:
-/Users/tp/.local/bin/python3.12 -B /Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph12-closure/bounded_build.py SmallPairGraphClosure12Chunk01
-If this different block times out, split it exactly instead of retrying it.
-Other remaining targets are Chunks02--05, the full closure parent and five
-assembly modules. The source restoration PLAN is historical: use its
-CURRENT_SOURCE_OVERRIDES and the current registry for the repaired Chunk00.
+Next: finish graph12 assembly. Arithmetic12 already has a guarded build.
+Run the existing graph12 closure/bounded_build.py on SmallPairRawSelectedData12,
+SmallPairLightAssembly12, SmallPairGraphTriangle12, SmallPairGraphData12, serially.
+Then bind five assembly targets using the current first-block and closure-rest
+source maps, not the historical PLAN pins for the repaired Chunk00 and coverage.
+Graph48 has five pending assembly modules; its existing bounded runner and
+assembly targets are ready. Both final endpoint audits still remain.
 
-Graph35 remains verified LOCAL ONLY; graph48 sides/closure are verified LOCAL
-ONLY, with five assembly modules unaccepted. Their recorded refusals were
-not retried or bypassed. Graph17 is synchronized. Endpoint count remains23/48.
-Inherited idle terminal79436 and all scheduled tasks are untouched.
+Use actual process/lock state before the next unit. The inherited idle terminal
+79436 is untouched. No automation was changed.
+
+Publication starting HEAD: 6daff0f982af264e900e75e42309b97fa9d4c8d0.
+Publication is prepared, not yet pushed. The actual final Git state is recorded
+in POST_PUSH_RECEIPT.json under research/continuations/20261021-manual-recovery-checkpoint.

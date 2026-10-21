@@ -1,0 +1,49 @@
+{
+  "purpose": "Publish graph12 completed closure and previously verified graph35 and graph48 units",
+  "groups": [
+    {
+      "unit": "20261021-pro-graph12-closure-rest",
+      "scope": "closure-rest",
+      "audit": "pro-graph12-closure-rest-audit"
+    },
+    {
+      "unit": "20261021-pro-graph35-sides",
+      "scope": "left",
+      "audit": "pro-graph35-left-audit"
+    },
+    {
+      "unit": "20261021-pro-graph35-sides",
+      "scope": "right",
+      "audit": "pro-graph35-right-audit"
+    },
+    {
+      "unit": "20261021-pro-graph35-closure",
+      "scope": "closure-core",
+      "audit": "pro-graph35-closure-core-audit"
+    },
+    {
+      "unit": "20261021-pro-graph35-closure",
+      "scope": "assembly",
+      "audit": "pro-graph35-assembly-audit"
+    },
+    {
+      "unit": "20261021-pro-graph48-sides",
+      "scope": "left",
+      "audit": "pro-graph48-left-audit"
+    },
+    {
+      "unit": "20261021-pro-graph48-sides",
+      "scope": "right",
+      "audit": "pro-graph48-right-audit"
+    },
+    {
+      "unit": "20261021-pro-graph48-closure",
+      "scope": "closure-core",
+      "audit": "pro-graph48-closure-core-audit"
+    }
+  ],
+  "extra": [
+    "research/continuations/20261021-pro-graph12-closure-half-pilot/first-block-POST_PUSH_RECEIPT.json"
+  ],
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical root integration remains unverified.\nManual continuation on 21 October completed the previously refused graph12\nremaining-closure audit: seven exact original type/transitive-axiom checks and\nsix targeted SAME-kernel replays, all exits zero without timeout or drift.\nSix prior guarded builds were reused, not repeated. Full graph12 closure covers\nall 720 original ordered rows, with both mutation signs and 10^1100 unchanged.\nEvidence: research/continuations/20261021-pro-graph12-closure-rest/.\nFingerprint: 031491dfbb7c2818019015ebc1c83414e4bac757e56aa451dd73d346d2edc1b7.\n\nThe previously completed graph35 endpoint and graph48 sides/closure were\nrevalidated against current source, compiled artifact and original audit bindings.\nTheir genuine successful checks are reused, not presented as newly executed.\nOnly verified scopes in VERIFIED_UNITS.json are accepted; other saved candidates\nremain drafts. No original statement, hypothesis or exception was changed.\n\nNext: finish graph12 assembly. Arithmetic12 already has a guarded build.\nRun the existing graph12 closure/bounded_build.py on SmallPairRawSelectedData12,\nSmallPairLightAssembly12, SmallPairGraphTriangle12, SmallPairGraphData12, serially.\nThen bind five assembly targets using the current first-block and closure-rest\nsource maps, not the historical PLAN pins for the repaired Chunk00 and coverage.\nGraph48 has five pending assembly modules; its existing bounded runner and\nassembly targets are ready. Both final endpoint audits still remain.\n\nUse actual process/lock state before the next unit. The inherited idle terminal\n79436 is untouched. No automation was changed."
+}

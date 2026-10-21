@@ -1,0 +1,63 @@
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.smallPairA_48: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.smallPairB_48: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.smallPairClosure_48: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.smallPairLarge_48: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.colors: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.anchorRoot: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.rootPairs: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.witnesses: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.destinations: []
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_chunk00_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_chunk01_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_chunk02_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_chunk03_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_chunk04_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_chunk05_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_coverage_checked: [propext]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared48.indexed_checked: [propext, Quot.sound]
+GRAPH48_CLOSURE_AXIOMS_PASS D1Bound5.smallPairClosure_48_checked: [propext, Classical.choice, Quot.sound]
+D1Bound5.smallPairA_48 : D1Bound5.QuadInt 1 8
+D1Bound5.smallPairB_48 : D1Bound5.QuadInt 1 8
+D1Bound5.smallPairClosure_48 : List (D1Bound5.QuadInt 1 8)
+D1Bound5.smallPairLarge_48 : List (D1Bound5.QuadInt 1 8)
+D1Bound5.PairGraphPrepared48.colors : ℕ
+D1Bound5.PairGraphPrepared48.anchorRoot : D1Bound5.QuadInt 1 8
+D1Bound5.PairGraphPrepared48.rootPairs : List (D1Bound5.QuadInt 1 8 × D1Bound5.QuadInt 1 8)
+D1Bound5.PairGraphPrepared48.witnesses : List (D1Bound5.PairRootWitness 1 8)
+D1Bound5.PairGraphPrepared48.destinations : List (Option ℕ × Option ℕ)
+D1Bound5.PairGraphPrepared48.indexed_chunk00_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48 128
+    (List.drop 0 D1Bound5.PairGraphPrepared48.witnesses) (List.drop 0 D1Bound5.PairGraphPrepared48.destinations) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_chunk01_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48 128
+    (List.drop 128 D1Bound5.PairGraphPrepared48.witnesses) (List.drop 128 D1Bound5.PairGraphPrepared48.destinations) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_chunk02_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48 128
+    (List.drop 256 D1Bound5.PairGraphPrepared48.witnesses) (List.drop 256 D1Bound5.PairGraphPrepared48.destinations) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_chunk03_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48 128
+    (List.drop 384 D1Bound5.PairGraphPrepared48.witnesses) (List.drop 384 D1Bound5.PairGraphPrepared48.destinations) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_chunk04_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48 128
+    (List.drop 512 D1Bound5.PairGraphPrepared48.witnesses) (List.drop 512 D1Bound5.PairGraphPrepared48.destinations) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_chunk05_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48 79
+    (List.drop 640 D1Bound5.PairGraphPrepared48.witnesses) (List.drop 640 D1Bound5.PairGraphPrepared48.destinations) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_coverage_checked : decide
+    (D1Bound5.PairGraphPrepared48.anchorRoot * D1Bound5.PairGraphPrepared48.anchorRoot =
+        D1Bound5.smallPairA_48 * D1Bound5.smallPairB_48 + 1 ∧
+      List.map D1Bound5.PairRootWitness.vertex D1Bound5.PairGraphPrepared48.witnesses = D1Bound5.smallPairClosure_48) =
+  true
+D1Bound5.PairGraphPrepared48.indexed_checked : D1Bound5.pairClosureIndexedWitnessBool D1Bound5.smallPairA_48
+    D1Bound5.smallPairB_48 D1Bound5.PairGraphPrepared48.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_48
+    D1Bound5.PairGraphPrepared48.witnesses D1Bound5.PairGraphPrepared48.destinations =
+  true
+D1Bound5.smallPairClosure_48_checked : D1Bound5.pairClosureBool D1Bound5.smallPairA_48 D1Bound5.smallPairB_48
+    (10 ^ 1100) D1Bound5.smallPairClosure_48 =
+  true

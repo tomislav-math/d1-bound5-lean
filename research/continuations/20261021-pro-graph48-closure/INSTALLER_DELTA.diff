@@ -1,0 +1,90 @@
+--- executed_row35_installer
++++ row48_scoped_installer
+@@ -1,5 +1,5 @@
+-"""Install only row35 exact archived components and reviewed complete-tail closure parts.
+-No compiler, Git mutation, timeout change, hold release, or change to rows17/48.
++"""Install only row48 exact archived components and reviewed complete-tail closure parts.
++No compiler, Git mutation, timeout change, hold release, or change to rows17/35.
+ """
+ from pathlib import Path
+ from datetime import datetime,timezone
+@@ -22,7 +22,7 @@
+ def imports(s):return re.findall(r'^import D1Bound5\.(\w+)\s*$',s,re.M)
+ assert sha(P/'PLAN.json')=='6a1a8d225e4a7872244f8815ea26cb01b74eb57719cf0f1d26f225031dd8a2c6'
+ assert sha(W/'continuation_driver_capacity.py')==DRIVER
+-plan=load(P/'PLAN.json');row=next(item for item in plan['parents'] if item['row']==35);target=row['module'];names=row['build_order'];assert row['row']==35 and target=='SmallPairGraphData35'
++plan=load(P/'PLAN.json');row=next(item for item in plan['parents'] if item['row']==48);target=row['module'];names=row['build_order'];assert row['row']==48 and target=='SmallPairGraphData48'
+ blobs={n:(P/(n+'.lean')).read_bytes() for n in names}
+ assert all(dg(b)==plan['source_manifest'][n] for n,b in blobs.items())
+ pre=(P/(target+'.before.lean')).read_bytes();assert dg(pre)==row['preimage_sha256']
+@@ -35,18 +35,18 @@
+  assert body(s)==pre.decode()[m.end():end].strip() and dg(body(s).encode())==c['archive_body_sha256']
+  assert imports(s)==c['archive_imports'];originals[n]=ab;public+=headers(s);provenance[str(a)]=dg(ab)
+  if c['closure_first_proof_replaced']:
+-  assert n=='SmallPairGraphClosure35';ns=blobs[n].decode();a1=list(re.finditer(r'^theorem ',s,re.M));a2=list(re.finditer(r'^theorem ',ns,re.M))
++  assert n=='SmallPairGraphClosure48';ns=blobs[n].decode();a1=list(re.finditer(r'^theorem ',s,re.M));a2=list(re.finditer(r'^theorem ',ns,re.M))
+   assert len(a1)==len(a2)==2 and headers(s)==headers(ns)
+   assert body(s[:a1[0].start()])==body(ns[:a2[0].start()]) and s[a1[1].start():]==ns[a2[1].start():]
+  else:assert ab==blobs[n]
+ assert public==row['original_public_headers']==headers(pre.decode()) and len(public)==28
+-assert [j for p in row['prefix_parts'] for j in range(p['offset'],p['offset']+p['count'])]==list(range(739))
++assert [j for p in row['prefix_parts'] for j in range(p['offset'],p['offset']+p['count'])]==list(range(719))
+ # Reuse the accepted structural projection proof, with only row/model substitutions.
+ cov33=R/'D1Bound5/SmallPairGraphClosure33Coverage.lean';assert sha(cov33)==NEW
+-cov35=cov33.read_text().replace('33','35').encode()
+-assert headers(cov35.decode())==headers(blobs['SmallPairGraphClosure35Coverage'].decode())
+-assert 'List.zipWith' in (P/'SmallPairGraphWitnessData35.lean').read_text()
+-originals['SmallPairGraphClosure35Coverage']=blobs['SmallPairGraphClosure35Coverage'];blobs['SmallPairGraphClosure35Coverage']=cov35
++cov48=cov33.read_text().replace('33','48').replace('QuadInt 1 2','QuadInt 1 8').encode()
++assert headers(cov48.decode())==headers(blobs['SmallPairGraphClosure48Coverage'].decode())
++assert 'List.zipWith' in (P/'SmallPairGraphWitnessData48.lean').read_text()
++originals['SmallPairGraphClosure48Coverage']=blobs['SmallPairGraphClosure48Coverage'];blobs['SmallPairGraphClosure48Coverage']=cov48
+ for n in names:
+  s=blobs[n].decode();assert not re.search(r'\b(sorry|admit|sorryAx|axiom|native_decide|unsafe|implemented_by)\b',s)
+ seen=set();external=set()
+@@ -62,7 +62,7 @@
+ assert any(x['label']=='SmallPairGraphClosure33Coverage-targeted-replay' for x in audit['records'])
+ provenance.update({str(cov33):NEW,str(cov_receipt_path):sha(cov_receipt_path),str(ap):sha(ap)})
+ oldgate=plan['runtime_pilot_gate'];pilots=oldgate['all_required_current_pilot_targets'];assert len(pilots)==30
+-spec=importlib.util.spec_from_file_location('row35_install_driver',W/'continuation_driver_capacity.py');dmod=importlib.util.module_from_spec(spec);sys.modules[spec.name]=dmod;spec.loader.exec_module(dmod)
++spec=importlib.util.spec_from_file_location('row48_install_driver',W/'continuation_driver_capacity.py');dmod=importlib.util.module_from_spec(spec);sys.modules[spec.name]=dmod;spec.loader.exec_module(dmod)
+ with (W/'continuation-driver.lock').open('r+') as owner,(W/'continuation-intake.lock').open('r+') as intake:
+  for f in [owner,intake]:fcntl.flock(f,fcntl.LOCK_EX|fcntl.LOCK_NB)
+  assert git('rev-parse','HEAD')==BASE and git('branch','--show-current')=='main' and not git('diff','--cached','--name-only')
+@@ -92,7 +92,7 @@
+   sources[n]=closures[n][n];evidence[n]={'fingerprint':key,'artifacts':m,'original_receipt':latest.get((n,key)),'baseline_entry':None if (n,key) in latest else d.baseline['accepted'][n]}
+   for path,h in m.items():assert path not in artifacts or artifacts[path]==h;artifacts[path]=h
+  static=dict(d.static);queue_bytes=d.queue_path.read_bytes();index_sha=sha(R/'.git/index')
+- untouched={n:sha(R/'D1Bound5'/(n+'.lean')) for n in ['SmallPairGraphData17','SmallPairGraphData48']}
++ untouched={n:sha(R/'D1Bound5'/(n+'.lean')) for n in ['SmallPairGraphData17','SmallPairGraphData35']}
+  def stable():
+   assert git('rev-parse','HEAD')==BASE and sha(R/'.git/index')==index_sha
+   assert d.queue_path.read_bytes()==queue_bytes and d.active_path.read_bytes()==active_bytes
+@@ -100,15 +100,15 @@
+   assert d.manifest_matches(artifacts,cached=False) and d.manifest_matches(static,cached=False)
+   assert all(sha(p)==h for p,h in provenance.items())
+  stable();recdir=O/'installation';recdir.mkdir();(O/'candidates').mkdir();(O/'originals').mkdir()
+- put(recdir/'SmallPairGraphData35.before.lean',pre);put(recdir/'QUEUE_BEFORE.json',queue_bytes);put(recdir/'ACTIVE_BEFORE.json',active_bytes)
++ put(recdir/'SmallPairGraphData48.before.lean',pre);put(recdir/'QUEUE_BEFORE.json',queue_bytes);put(recdir/'ACTIVE_BEFORE.json',active_bytes)
+  for n in names:put(O/'candidates'/(n+'.lean'),blobs[n]);put(O/'originals'/(n+'.lean'),originals[n])
+  pins={n:dg(blobs[n]) for n in names}
+- save(O/'PLAN.json',{'status':'REVIEWED_ROW35_ONLY_NOT_BUILT','base_commit':BASE,'source_manifest':pins,'build_order':names,'original_public_headers':public,'original_public_declarations':28,'prefix_parts':row['prefix_parts'],'complete_rows':739,'structural_coverage_sha256':pins['SmallPairGraphClosure35Coverage'],'original_plan_sha256':sha(P/'PLAN.json'),'pilot_provenance_delta':pilot_differences,'immutable_provenance':provenance})
++ save(O/'PLAN.json',{'status':'REVIEWED_ROW48_ONLY_NOT_BUILT','base_commit':BASE,'source_manifest':pins,'build_order':names,'original_public_headers':public,'original_public_declarations':28,'prefix_parts':row['prefix_parts'],'complete_rows':719,'structural_coverage_sha256':pins['SmallPairGraphClosure48Coverage'],'original_plan_sha256':sha(P/'PLAN.json'),'pilot_provenance_delta':pilot_differences,'immutable_provenance':provenance})
+  save(recdir/'GUARDS_BEFORE.json',{'head':BASE,'index_sha256':index_sha,'source_sha256':sources,'compiled_artifacts':artifacts,'configuration':static,'pilot_receipts':pilot_receipts,'target_original_closure':closures[target],'untouched_rows':untouched})
+  save(recdir/'ACCEPTED_INPUT_EVIDENCE.json',evidence)
+  stable()
+  for n in row['new_names']:put(R/'D1Bound5'/(n+'.lean'),blobs[n])
+- tmp=R/'D1Bound5/SmallPairGraphData35.partition.tmp';assert not tmp.exists();put(tmp,blobs[target]);assert sha(R/'D1Bound5'/(target+'.lean'))==row['preimage_sha256'];os.replace(tmp,R/'D1Bound5'/(target+'.lean'))
++ tmp=R/'D1Bound5/SmallPairGraphData48.partition.tmp';assert not tmp.exists();put(tmp,blobs[target]);assert sha(R/'D1Bound5'/(target+'.lean'))==row['preimage_sha256'];os.replace(tmp,R/'D1Bound5'/(target+'.lean'))
+  after=json.loads(queue_bytes);after['names']+=row['new_names'];assert {k:v for k,v in after.items() if k!='names'}=={k:v for k,v in q.items() if k!='names'}
+  dmod.atomic_json(d.queue_path,after)
+  assert all(sha(R/'D1Bound5'/(n+'.lean'))==h for n,h in pins.items())
+@@ -117,7 +117,7 @@
+  assert d.manifest_matches(artifacts,cached=False) and d.manifest_matches(static,cached=False)
+  assert d.active_path.read_bytes()==active_bytes and git('rev-parse','HEAD')==BASE and sha(R/'.git/index')==index_sha
+  save(recdir/'QUEUE_AFTER.json',after)
+- result={'status':'INSTALLED_UNCOMPILED_ROW35_EXACT_SPLIT','utc':datetime.now(timezone.utc).isoformat(),'new_modules':row['new_names'],'replaced_module':target,'other_rows_unchanged':True,'all_28_original_public_headers_and_data_preserved':True,'pilot_count':30,'pilot_delta_bound_to_accepted_receipts':True,'both_locks_held':True,'configuration_and_hold_settings_unchanged':True,'compiler_started':False,'root_integration':False}
++ result={'status':'INSTALLED_UNCOMPILED_ROW48_EXACT_SPLIT','utc':datetime.now(timezone.utc).isoformat(),'new_modules':row['new_names'],'replaced_module':target,'other_rows_unchanged':True,'all_28_original_public_headers_and_data_preserved':True,'pilot_count':30,'pilot_delta_bound_to_accepted_receipts':True,'both_locks_held':True,'configuration_and_hold_settings_unchanged':True,'compiler_started':False,'root_integration':False}
+  save(recdir/'APPLICATION_RECEIPT.json',result)
+  wrapper=R/'research/continuations/20261021-pro-graph17-right-complete/bounded_build.py';assert sha(wrapper)=='3c62d9c27d3df9c7cad370d491169b3d99415debf3295bd1390a19448287ade3'
+  s=wrapper.read_text();s,n=re.subn(r'^PINS = .*$', 'PINS = '+repr(pins),s,count=1,flags=re.M);assert n==1;put(O/'bounded_build.py',s)

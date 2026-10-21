@@ -1,0 +1,138 @@
+{
+  "base_commit": "8489909dbf3a492370e470bef243edabb1abe5ab",
+  "build_order": [
+    "SmallPairGraphInputs48",
+    "SmallPairGraphArithmetic48",
+    "SmallPairGraphWitnessData48",
+    "SmallPairGraphClosure48Chunk00",
+    "SmallPairGraphClosure48Chunk01",
+    "SmallPairGraphClosure48Chunk02",
+    "SmallPairGraphClosure48Chunk03",
+    "SmallPairGraphClosure48Chunk04",
+    "SmallPairGraphClosure48Chunk05",
+    "SmallPairGraphClosure48Coverage",
+    "SmallPairGraphClosure48",
+    "SmallPairRawSelectedData48",
+    "SmallPairLightAssembly48",
+    "SmallPairGraphTriangle48",
+    "SmallPairGraphData48"
+  ],
+  "complete_rows": 719,
+  "immutable_provenance": {
+    "/Users/tp/Lean/D1Bound5/D1Bound5/SmallPairGraphClosure33Coverage.lean": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphArithmetic48.lean": "e6244101e338a3e2941a187afc7d87015a68a1d81020bdd3e34df785c575e237",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphClosure48.lean": "6ac6e7fac242d6f990ac662bb8e36be9c566a74797c0dad84a793523e27837de",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphData48.lean": "67117dadd435e7aefd827e1b26d6d38f784f8dbe813c3ee40ae5bd5d1f6da2eb",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphInputs48.lean": "b5a04c7b1aa5d377ec08e976ebcefd4f1729f0e3ae979bcb64fddd41b60c793a",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphTriangle48.lean": "d0b8c096f827eae465c69849ba3a3f886f328b3e9cb72bc1d1658259d473cdaf",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphWitnessData48.lean": "abe44b11257879f82ce8180c0b3eec5ec07fe33413020aa84ae0863a631ef53b",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairLightAssembly48.lean": "cbece2e752376f1748b5f5e76f355572d81d9117b4233dcc85b4e0f49ce687fe",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairRawSelectedData48.lean": "2cfece920a14fa90dde0b1a7f4ea89944f0bc4f6069847e1d1dab698fa946be6",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/graph-data17_35_48-integrated-prefix-proposal/PLAN.json": "6a1a8d225e4a7872244f8815ea26cb01b74eb57719cf0f1d26f225031dd8a2c6",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-graph33-audit/BOUND_AUDIT_FINAL.json": "215507dd2f0e5e53da5ff759d480d3a9c99913beb0b6882147537ae1d5f1ae43",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261021-pro-graph33/coverage-projection/SmallPairGraphClosure33Coverage-BUILD_RECEIPT.json": "3adf6e8110242dfb26e3646ab4d4b11dea7475747b5506ca145d1af29b6992d9"
+  },
+  "original_plan_sha256": "6a1a8d225e4a7872244f8815ea26cb01b74eb57719cf0f1d26f225031dd8a2c6",
+  "original_public_declarations": 28,
+  "original_public_headers": [
+    "def smallPairA_48 : QuadInt 1 8 ",
+    "def smallPairB_48 : QuadInt 1 8 ",
+    "def smallPairClosure_48 : List (QuadInt 1 8) ",
+    "def smallPairLarge_48 : List (QuadInt 1 8) ",
+    "def colors : \u2115 ",
+    "theorem smallPairSeeds_48_checked :\n    pairSeedsCoveredBool smallPairA_48 smallPairB_48\n      seedRootDisk_1_8 smallPairClosure_48 = true ",
+    "theorem smallPairFilter_48_checked :\n    largePairVertices smallPairA_48 smallPairB_48 smallPairClosure_48 = smallPairLarge_48 ",
+    "theorem smallPairLarge_48_count : smallPairLarge_48.length = 718 ",
+    "def anchorRoot : QuadInt 1 8 ",
+    "def rootPairs : List (QuadInt 1 8 \u00d7 QuadInt 1 8) ",
+    "def witnesses : List (PairRootWitness 1 8) ",
+    "def destinations : List (Option \u2115 \u00d7 Option \u2115) ",
+    "theorem PairGraphPrepared48.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_48 smallPairB_48 anchorRoot\n      (10^1100) smallPairClosure_48 witnesses destinations = true ",
+    "theorem smallPairClosure_48_checked :\n    pairClosureBool smallPairA_48 smallPairB_48\n      (10^1100) smallPairClosure_48 = true ",
+    "def leftCached : List (PairResidueVertex 1 8) ",
+    "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+    "def rightCached : List (PairResidueVertex 1 8) ",
+    "def rightRows : List (\u2115 \u00d7 List \u2115) ",
+    "theorem sieve_eq : sieve = smallPairSieve_1_8 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_48 PairGraphPrepared48.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared48.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared48.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_1_8 (pairSplitByMask smallPairLarge_48 PairGraphPrepared48.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_48 PairGraphPrepared48.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared48.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared48.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_1_8 (pairSplitByMask smallPairLarge_48 PairGraphPrepared48.colors).2 = true ",
+    "theorem smallPairNoTriangle_48_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_8 smallPairLarge_48 = true "
+  ],
+  "pilot_provenance_delta": {
+    "SmallPairGraphClosure33": {
+      "SmallPairGraphClosure33Coverage": {
+        "after": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+        "before": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f"
+      }
+    },
+    "SmallPairGraphClosure33Coverage": {
+      "SmallPairGraphClosure33Coverage": {
+        "after": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+        "before": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f"
+      }
+    },
+    "SmallPairGraphData33": {
+      "SmallPairGraphClosure33Coverage": {
+        "after": "bd10abcbcb8b3652c7cc692c2786f2dda353af12b14c140bba660a499605c4f0",
+        "before": "bbdf849a2fe20ad1c1dbc31b97a11b26d2a85585f3aba995282c64d92bc21f7f"
+      }
+    }
+  },
+  "prefix_parts": [
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure48Chunk00",
+      "offset": 0
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure48Chunk01",
+      "offset": 128
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure48Chunk02",
+      "offset": 256
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure48Chunk03",
+      "offset": 384
+    },
+    {
+      "count": 128,
+      "module": "SmallPairGraphClosure48Chunk04",
+      "offset": 512
+    },
+    {
+      "count": 79,
+      "module": "SmallPairGraphClosure48Chunk05",
+      "offset": 640
+    }
+  ],
+  "source_manifest": {
+    "SmallPairGraphArithmetic48": "e6244101e338a3e2941a187afc7d87015a68a1d81020bdd3e34df785c575e237",
+    "SmallPairGraphClosure48": "198676a6be372a21196ef6cfa12f60b7daffa7cfb63ec70651488a558130e6f8",
+    "SmallPairGraphClosure48Chunk00": "f41c6d549f33c08ff1a2828fad1012fa6593d8a662c9c193849058b8527b0009",
+    "SmallPairGraphClosure48Chunk01": "44f3e32e907573b9fbb393209ff42addddcb2b05ddad6df63652d9bda16314b8",
+    "SmallPairGraphClosure48Chunk02": "5084a60bcaf999047cd33c13e93259a3b8edb9625bdc01953dd00ed1f0ddeb3e",
+    "SmallPairGraphClosure48Chunk03": "9b15107a2ba5c0f7af11208d0c7a5d9f215b1fb45d58b8aa06b580517a0f5c01",
+    "SmallPairGraphClosure48Chunk04": "b606fd1fed0841d24bacc6b591be03ce5996859fff66ef7d98fec58be6082626",
+    "SmallPairGraphClosure48Chunk05": "af5331d00cb735bca4495a5fba307cf94687567216c0a047256b7a7fd9a3e197",
+    "SmallPairGraphClosure48Coverage": "cf547bf730123feb39f681d5a24fa79be0441f9efa99e2fe1672ec6e23f4d1e6",
+    "SmallPairGraphData48": "67117dadd435e7aefd827e1b26d6d38f784f8dbe813c3ee40ae5bd5d1f6da2eb",
+    "SmallPairGraphInputs48": "b5a04c7b1aa5d377ec08e976ebcefd4f1729f0e3ae979bcb64fddd41b60c793a",
+    "SmallPairGraphTriangle48": "d0b8c096f827eae465c69849ba3a3f886f328b3e9cb72bc1d1658259d473cdaf",
+    "SmallPairGraphWitnessData48": "abe44b11257879f82ce8180c0b3eec5ec07fe33413020aa84ae0863a631ef53b",
+    "SmallPairLightAssembly48": "cbece2e752376f1748b5f5e76f355572d81d9117b4233dcc85b4e0f49ce687fe",
+    "SmallPairRawSelectedData48": "2cfece920a14fa90dde0b1a7f4ea89944f0bc4f6069847e1d1dab698fa946be6"
+  },
+  "status": "REVIEWED_ROW48_ONLY_NOT_BUILT",
+  "structural_coverage_sha256": "cf547bf730123feb39f681d5a24fa79be0441f9efa99e2fe1672ec6e23f4d1e6"
+}
