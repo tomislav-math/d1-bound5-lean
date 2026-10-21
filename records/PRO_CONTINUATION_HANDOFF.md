@@ -12,8 +12,11 @@ Evidence: research/continuations/20261021-pro-rational-triple/.
 Audit: research/continuations/20261020T100000CEST-work-resume/pro-rational-triple-audit/.
 Substantive fingerprint: d1b1d907525e6465d8238afa9cac88c441e4f5d5b38a509b4243bca03c84ddc4.
 Build owner 73994 and audit owner 74451 both returned actual exit 0.
-Publication is prepared, not yet committed or pushed; starting local and remote
-main: 387c7d884a4a70a9f9026303f6169c149f36cb39. Preserve unrelated work.
+Proof/evidence commit: 163f397ee50f451f6864702cf03b0da4b93aab25.
+Normal push succeeded; remote main equals this commit and the destination is PRIVATE.
+POST_PUSH_RECEIPT.json preserves the exact publication evidence. This receipt and
+handoff are saved in the following record commit; inspect current HEAD.
+All unrelated working files and compiled-only research remain preserved.
 
 Next dependency: RationalFirstTriple. Its current source (2a60baaa7e944ee03b500b778e6317bc87755aed2ca61061349e0bf8e56abb91)
 has a prior timeout, not an accepted build. Review a substantive narrowing of
@@ -21,7 +24,7 @@ the two `simp_all [u]` commands to the corresponding entry equalities before
 one bounded attempt. The timeout cause has not been established. If accepted,
 OneSmallReducedImpossible and OneSmallImpossible are the subsequent joins;
 verify their current dependency closures before launching a compiler.
-Next action: finish this explicit publication, then prepare the scoped patch
+Next action: prepare and independently review the scoped RationalFirstTriple patch
 under the existing exclusive ownership protocol. No identical timeout retry.
 
 The previous synchronized graph-33 checkpoint remains at proof commit
