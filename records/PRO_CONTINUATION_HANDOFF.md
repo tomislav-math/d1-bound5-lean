@@ -25,5 +25,7 @@ and all scheduled automations remain untouched.
 
 
 Publication starting HEAD: 20d3e6f9af235db185eb11f260c58ca9d41feffb.
-Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261021-evening-graph29-right-publication.
+Right proof/evidence commit 7d7d0c6178be24afb6476d175237a59dc8d6a6a6 was pushed normally.
+Remote main equality and PRIVATE visibility were verified. The post-push receipt
+is in research/continuations/20261021-evening-graph29-right-publication/.
+This handoff and receipt are included in the following record commit.
