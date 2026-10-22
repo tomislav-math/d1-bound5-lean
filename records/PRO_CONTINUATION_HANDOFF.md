@@ -25,3 +25,7 @@ tied moduli, zero pair-square roots, and distinct nonzero elements.
 Working practice: economize Work-mode tokens, reuse exact matching successful evidence, one compiler, and
 explicit bounded proof units with regular private Git publication. The Chat hourly task keeps its original
 prompt and is PAUSED BY THE USER; do not resume or edit it without direction.
+
+Latest checked archive: 20261022-economical-graph3-left-pilot12-v2. graph3 LEFT heads 0..11, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
