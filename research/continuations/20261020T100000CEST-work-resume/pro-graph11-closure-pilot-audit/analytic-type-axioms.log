@@ -1,0 +1,29 @@
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.smallPairA_11: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.smallPairB_11: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.smallPairClosure_11: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.smallPairLarge_11: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.colors: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.anchorRoot: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.rootPairs: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.witnesses: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.destinations: []
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.indexed_chunk00_checked: [propext, Quot.sound]
+GRAPH11_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared11.indexed_coverage_checked: [propext]
+D1Bound5.smallPairA_11 : D1Bound5.QuadInt 0 1
+D1Bound5.smallPairB_11 : D1Bound5.QuadInt 0 1
+D1Bound5.smallPairClosure_11 : List (D1Bound5.QuadInt 0 1)
+D1Bound5.smallPairLarge_11 : List (D1Bound5.QuadInt 0 1)
+D1Bound5.PairGraphPrepared11.colors : ℕ
+D1Bound5.PairGraphPrepared11.anchorRoot : D1Bound5.QuadInt 0 1
+D1Bound5.PairGraphPrepared11.rootPairs : List (D1Bound5.QuadInt 0 1 × D1Bound5.QuadInt 0 1)
+D1Bound5.PairGraphPrepared11.witnesses : List (D1Bound5.PairRootWitness 0 1)
+D1Bound5.PairGraphPrepared11.destinations : List (Option ℕ × Option ℕ)
+D1Bound5.PairGraphPrepared11.indexed_chunk00_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_11
+    D1Bound5.smallPairB_11 D1Bound5.PairGraphPrepared11.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_11 64
+    (List.drop 0 D1Bound5.PairGraphPrepared11.witnesses) (List.drop 0 D1Bound5.PairGraphPrepared11.destinations) =
+  true
+D1Bound5.PairGraphPrepared11.indexed_coverage_checked : decide
+    (D1Bound5.PairGraphPrepared11.anchorRoot * D1Bound5.PairGraphPrepared11.anchorRoot =
+        D1Bound5.smallPairA_11 * D1Bound5.smallPairB_11 + 1 ∧
+      List.map D1Bound5.PairRootWitness.vertex D1Bound5.PairGraphPrepared11.witnesses = D1Bound5.smallPairClosure_11) =
+  true

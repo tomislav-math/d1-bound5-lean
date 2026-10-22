@@ -1,0 +1,28 @@
+{
+  "purpose": "Publish the verified graph11 working endpoint only after the actual seven-scope endpoint collector passes and the actual inventory confirms 28 of 48 accepted endpoints; archive only the three closure scopes, their collector evidence, and the preceding sides publication post-records.",
+  "groups": [
+    {
+      "unit": "20261022-graph11-closure",
+      "scope": "closure-pilot",
+      "audit": "pro-graph11-closure-pilot-audit"
+    },
+    {
+      "unit": "20261022-graph11-closure",
+      "scope": "closure-rest",
+      "audit": "pro-graph11-closure-rest-audit"
+    },
+    {
+      "unit": "20261022-graph11-closure",
+      "scope": "assembly",
+      "audit": "pro-graph11-assembly-audit"
+    }
+  ],
+  "extra": [
+    "research/continuations/20261022-graph11-sides-publication/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261022-graph11-sides-publication/INDEX_REVIEW.json",
+    "research/continuations/20261022-graph11-sides-publication/OWNER.json",
+    "research/continuations/20261022-graph11-sides-publication/RELEASE.json"
+  ],
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical-root integration remains unverified.\n\nGraph11 is now a complete verified working endpoint. The actual endpoint\ncollector passed, and the subsequent read-only inventory confirms 28 of 48\naccepted working endpoints, with Graph11 added and none removed. This count\nconcerns separately verified working endpoints. It does not establish\nMainStatement or canonical-root integration.\n\nGraph11 retains the model QuadInt 0 1, all 719 closure rows and 718 filtered\nvertices. Its root-pair and destination lists remain aligned. The closure proof\ncovers exactly eleven blocks of 64 rows and one final block of 15 at offset 704.\nEvery mutation lookup retains the complete original destination vertex list,\nand both mutation signs remain checked. All 28 original closure/assembly public\ndeclarations are preserved; the four raw literal definitions are relocated\nbyte-identically into four modules with their original imports and namespace.\nThe original raw-data module becomes an import-only wrapper.\n\nThe seven-scope endpoint collector validates 58 distinct guarded-build and\ntargeted installed SAME-kernel-replay targets, 32 definitions, 64 theorems and\nseven exact original-type/transitive-axiom audits. These are 96 declarations in\ntotal. The current publication contains only the three newly completed closure\nscopes: closure-pilot (4 targets, 9 definitions, 2 theorems), closure-rest\n(12 targets, 13 theorems), and assembly (9 targets, 4 definitions, 13 theorems).\nThe separately committed foundation and side scopes are reused as verified\ndependencies and are not counted as newly completed work.\n\nAuthoritative endpoint evidence:\nresearch/continuations/20261022-graph11-closure/ENDPOINT_VERIFICATION.json\nresearch/continuations/20261022-graph11-closure/ENDPOINT_PROOF_STATE.json\nresearch/continuations/20261022-graph11-closure/ENDPOINT_INVENTORY.json\n\nThe exact endpoint proof fingerprint and transitive source-closure size are\nrecorded by the actual collector in ENDPOINT_VERIFICATION.json and are checked\nagainst ENDPOINT_PROOF_STATE.json. Use those measured values; no guessed\nfingerprint or source-closure count belongs in the handoff. The inventory file\npreserves the actual read-only collector output supporting the 27-to-28 change.\n\nThe prior graph11 foundation and sides publications remain separately recorded.\nThis publication also archives the sides publication's POST_PUSH_RECEIPT.json,\nINDEX_REVIEW.json, OWNER.json and RELEASE.json from:\nresearch/continuations/20261022-graph11-sides-publication/\nTheir actual records identify the preceding committed and pushed proof state.\nHistorical scoped verification and publication fields remain unchanged; the\nendpoint record and later successful push receipts document subsequent progress.\n\nThe remaining 20 graph endpoints are:\n1, 3, 4, 5, 6, 7, 8, 10, 14, 15, 19, 21, 23, 24, 28, 30, 36, 39, 43, 46.\n\nAfter those endpoints: SmallPairGraphs, TwoSmallSextuple,\nTwoSmallNondegenerateImpossible, MainTheorem, canonical-root integration, and\nthe final clean-checkout pinned build, full type/axiom review and fresh\nintegrated-root installed-kernel replay remain open. Reuse all completed\nGraph11, Graph25 and Graph29 proofs when continuing. No overall completion\npercentage is asserted.\n\nThe unchanged target is every finite D(1)-set of distinct nonzero elements of\nthe full ring of integers O_K in every imaginary quadratic number field having\ncardinality at most five. Half-integral bases, tied moduli and zero pair-square\nroots remain allowed. No new mathematical assumption is introduced.\n"
+}
+

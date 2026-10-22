@@ -1,0 +1,62 @@
+{
+  "collector_review": {
+    "actual_scope_records_required": true,
+    "author": "audit_graph_progress",
+    "expected_definitions": 32,
+    "expected_targets": 58,
+    "expected_theorems": 64,
+    "inventory_is_read_only": true,
+    "root_read_all_source": true
+  },
+  "compiler_run": false,
+  "independent_reviews": {
+    "build_scope.py": [
+      "audit_theorem_scope"
+    ],
+    "finish_checks.py": [
+      "audit_graph_progress"
+    ],
+    "install_row11.py": [
+      "audit_remaining_non_graph",
+      "audit_theorem_scope"
+    ],
+    "prepare_checks.py": [
+      "audit_graph_progress"
+    ]
+  },
+  "installation_review": [
+    "Added prewrite rejection of existing or symlink temporary target, retaining immediate replacement checks",
+    "Guarded worker unchanged apart from exact 25-target PINS; one compiler worker and 240-second target limit",
+    "Existing project locks, paused queue, current dependency fingerprints and original source preimages required"
+  ],
+  "main_theorem_complete": false,
+  "mathematical_checks": [
+    "719 closure rows partitioned exactly as 11 * 64 + 15, with terminal empty tail at 719",
+    "Complete original destination vertex list retained for every chunk and both mutation signs",
+    "QuadInt 0 1 model retained; exactly three graph29 coverage template model substitutions",
+    "Eight raw originals and 28 original declarations preserved; four literal blocks are byte-identical",
+    "Both original closure statement headers preserved; second closure declaration preserved in full",
+    "Thirteen new proof helpers; all 41 declarations assigned exactly once"
+  ],
+  "root_integration": false,
+  "root_reviewed": [
+    "install_row11.py",
+    "prepare_checks.py",
+    "finish_checks.py",
+    "bounded_build_template.py",
+    "build_scope.py",
+    "collect_endpoint.py",
+    "collect_endpoint_inventory.py"
+  ],
+  "script_sha256": {
+    "bounded_build_template.py": "3cd90f876193aef1d6c4014ba9794bb95995ae005f23af4772a020aa0a024cf8",
+    "build_scope.py": "7500c5e0fe07d3fd81c7cf73c533d14188f314c74a86807cade158d978172eb1",
+    "collect_endpoint.py": "f68ef5f62a7ac2a04391d79b4861b48896da12cbfa142d956a24befd97cebaf3",
+    "collect_endpoint_inventory.py": "46144d8f790d0e02141684ac49926c0a7094b762f3dd48bdd74fa4c89c87c7ef",
+    "finish_checks.py": "b6f8245a78499f20f5747dc6e58e17b659686b4f3c25280863448b9ffedb789c",
+    "install_row11.py": "18848e54edf7a559ddf6ee289e79ff5618962dd56dbc5d23fc9c720d24ba80f6",
+    "prepare_checks.py": "9e4294a71cb8e65bb6e83e617f66c3ac97972f171cac2ac7069361362449f49b"
+  },
+  "status": "STATIC_REVIEW_PASS_ACTUAL_MAC_AUDITS_REQUIRED",
+  "whole_graph11_complete": false
+}
