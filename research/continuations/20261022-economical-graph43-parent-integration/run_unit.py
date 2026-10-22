@@ -49,7 +49,11 @@ with (W/'continuation-driver.lock').open('r+') as owner:
    assert sha(src)==sha(old)==pins['original'] and sha(new)==pins['candidate']
    assert old.read_text().split('theorem ',1)[1].split(':=',1)[0]==new.read_text().split('theorem ',1)[1].split(':=',1)[0]
    (O/'originals'/(n+'.lean')).write_bytes(old.read_bytes())
+  for n,h in plan['unchanged_modules'].items():
+   src=R/'D1Bound5'/(n+'.lean');old=proposal/'originals'/(n+'.lean');assert sha(src)==sha(old)==h
+   (O/'originals'/(n+'.lean')).write_bytes(old.read_bytes())
   for n in parents:(R/'D1Bound5'/(n+'.lean')).write_bytes((proposal/'candidates'/(n+'.lean')).read_bytes())
+  save('INSTALLATION.json',{'status':'UNVERIFIED_CANDIDATE_PARENTS_INSTALLED','parents':plan['parents'],'originals_archived':True,'main_theorem_complete':False})
   targets=['SmallPairLightData43','SmallPairLightAdaptiveData43']+parents+['SmallPairLightAdaptiveValidation43','SmallPairLightLeft43','SmallPairLightRight43']
   proof_targets=parents+['SmallPairLightAdaptiveValidation43','SmallPairLightLeft43','SmallPairLightRight43']
   counts=[]
@@ -89,7 +93,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   names=[];headers={}
   for n in proof_targets:
    text=(R/'D1Bound5'/(n+'.lean')).read_text();ns=re.search(r'^namespace (\S+)',text,re.M).group(1)
-   preserved=(O/'originals'/(n+'.lean')).read_text() if n in parents else text
+   preserved=(O/'originals'/(n+'.lean')).read_text() if (O/'originals'/(n+'.lean')).exists() else text
    headers[n]=[]
    for match in re.finditer(r'^theorem (\w+)\s*(:[\s\S]*?):=',text,re.M):
     name,ty=match.groups();original=re.search(r'^theorem '+name+r'\s*(:[\s\S]*?):=',preserved,re.M);assert original and original.group(1)==ty

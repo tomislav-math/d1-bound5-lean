@@ -58,3 +58,8 @@ Latest checked archive: 20261022-economical-graph43-right000. RIGHT heads 0..91,
 Guarded builds, exact-type/transitive-axiom audit, 10 targeted installed-kernel replays passed.
 MainTheorem remains UNPROVED; graph43 and canonical-root integration remain incomplete; endpoint count 30/48.
 Prepared right000/001/002 scripts are not evidence of completion; inspect each actual VERIFICATION_SUMMARY.
+
+Latest checked archive: 20261022-economical-graph43-right001. RIGHT heads 92..213, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit, 12 targeted installed-kernel replays passed.
+MainTheorem remains UNPROVED; graph43 and canonical-root integration remain incomplete; endpoint count 30/48.
+Prepared right000/001/002 scripts are not evidence of completion; inspect each actual VERIFICATION_SUMMARY.
