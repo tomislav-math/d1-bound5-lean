@@ -29,3 +29,7 @@ prompt and is PAUSED BY THE USER; do not resume or edit it without direction.
 Latest checked archive: 20261022-economical-graph3-left-pilot12-v2. graph3 LEFT heads 0..11, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
 Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261022-economical-graph3-left000. graph3 LEFT heads 0..111, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
+Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
