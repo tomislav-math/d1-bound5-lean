@@ -83,3 +83,8 @@ Latest checked archive: 20261022-economical-graph43-closure-rest001. closure wit
 Guarded builds, exact-type/transitive-axiom audit, 4 targeted installed-kernel replays passed.
 MainTheorem remains UNPROVED; graph43 and canonical-root integration remain incomplete; endpoint count 30/48.
 Prepared right000/001/002 scripts are not evidence of completion; inspect each actual VERIFICATION_SUMMARY.
+
+Latest checked archive: 20261022-economical-graph43-closure-rest002. closure witness rows 320..575 over the complete 963-vertex list.
+Guarded builds, exact-type/transitive-axiom audit, 4 targeted installed-kernel replays passed.
+MainTheorem remains UNPROVED; graph43 and canonical-root integration remain incomplete; endpoint count 30/48.
+Prepared right000/001/002 scripts are not evidence of completion; inspect each actual VERIFICATION_SUMMARY.
