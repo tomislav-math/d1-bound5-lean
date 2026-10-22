@@ -1,0 +1,497 @@
+{
+  "all_original_literal_definitions_byte_identical": true,
+  "both_mutation_signs_and_global_indices_preserved": true,
+  "build_order": [
+    "SmallPairGraphInputs1",
+    "SmallPairGraphWitnessData1",
+    "SmallPairGraphClosure1Chunk00",
+    "SmallPairGraphClosure1Chunk01",
+    "SmallPairGraphClosure1Chunk02",
+    "SmallPairGraphClosure1Chunk03",
+    "SmallPairGraphClosure1Chunk04",
+    "SmallPairGraphClosure1Chunk05",
+    "SmallPairGraphClosure1Chunk06",
+    "SmallPairGraphClosure1Chunk07",
+    "SmallPairGraphClosure1Chunk08",
+    "SmallPairGraphClosure1Chunk09",
+    "SmallPairGraphClosure1Chunk10",
+    "SmallPairGraphClosure1Chunk11",
+    "SmallPairGraphClosure1Coverage",
+    "SmallPairGraphClosure1",
+    "SmallPairGraphArithmetic1",
+    "SmallPairRawSelectedData1LeftCached",
+    "SmallPairRawSelectedData1LeftRows",
+    "SmallPairRawSelectedData1RightCached",
+    "SmallPairRawSelectedData1RightRows",
+    "SmallPairRawSelectedData1",
+    "SmallPairLightAssembly1",
+    "SmallPairGraphTriangle1",
+    "SmallPairGraphData1"
+  ],
+  "closure_rows": 720,
+  "coverage_template_sha256": "16bbbcfa2e81413a9c2553d413b4d7d2e2f9203e70dc18f06687328ff90afce1",
+  "exact_merged_reconstruction": true,
+  "filtered_vertices": 718,
+  "main_theorem_complete": false,
+  "original_merged_bytes": 2195796,
+  "original_merged_sha256": "b0bceb6340003eab18f64c436c6a4b70f1c8eb14a7d185892b2e4c314665a808",
+  "original_public_declarations": 28,
+  "original_public_headers": [
+    "def smallPairA_1 : QuadInt 0 1 ",
+    "def smallPairB_1 : QuadInt 0 1 ",
+    "def smallPairClosure_1 : List (QuadInt 0 1) ",
+    "def smallPairLarge_1 : List (QuadInt 0 1) ",
+    "def colors : \u2115 ",
+    "theorem smallPairSeeds_1_checked :\n    pairSeedsCoveredBool smallPairA_1 smallPairB_1\n      seedRootDisk_0_1 smallPairClosure_1 = true ",
+    "theorem smallPairFilter_1_checked :\n    largePairVertices smallPairA_1 smallPairB_1 smallPairClosure_1 = smallPairLarge_1 ",
+    "theorem smallPairLarge_1_count : smallPairLarge_1.length = 718 ",
+    "def anchorRoot : QuadInt 0 1 ",
+    "def rootPairs : List (QuadInt 0 1 \u00d7 QuadInt 0 1) ",
+    "def witnesses : List (PairRootWitness 0 1) ",
+    "def destinations : List (Option \u2115 \u00d7 Option \u2115) ",
+    "theorem PairGraphPrepared1.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_1 smallPairB_1 anchorRoot\n      (10^1100) smallPairClosure_1 witnesses destinations = true ",
+    "theorem smallPairClosure_1_checked :\n    pairClosureBool smallPairA_1 smallPairB_1\n      (10^1100) smallPairClosure_1 = true ",
+    "def leftCached : List (PairResidueVertex 0 1) ",
+    "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+    "def rightCached : List (PairResidueVertex 0 1) ",
+    "def rightRows : List (\u2115 \u00d7 List \u2115) ",
+    "theorem sieve_eq : sieve = smallPairSieve_0_1 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared1.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared1.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared1.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared1.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).2 = true ",
+    "theorem smallPairNoTriangle_1_checked :\n    pairGraphTriangleFreeBool smallPairSieve_0_1 smallPairLarge_1 = true "
+  ],
+  "original_source_manifest": {
+    "SmallPairGraphArithmetic1": "4cf70ea7f533f7bcf9c1290bafbe049be2d7c2be79e22d2ce03e1d504275229c",
+    "SmallPairGraphClosure1": "bd41e1f8926b8f039cac203d25868ad0ec5bfaf8a02d14bebbf0f0694d38548f",
+    "SmallPairGraphData1": "c3a89df917ce69a6a97de4d1e310bea197d359c8968e77cffbe5135810c8e559",
+    "SmallPairGraphInputs1": "5cd545bd15a06ecc43d8cfba5534724ca9e4bb3b996df32ac26455f986ee06da",
+    "SmallPairGraphTriangle1": "0426ce832b04f05b1b392fd627413c51849a8a7583e14e613e0b14c9a68b6e7b",
+    "SmallPairGraphWitnessData1": "063d9f2152729e1b0ab7730807fc92406c944c3189084df1d046e572be4c6174",
+    "SmallPairLightAssembly1": "aa4d0f7e0c25b110a19624502dedc5a05c11705261bb7992594a13587facbf72",
+    "SmallPairRawSelectedData1": "db148b0fb761a79b93b710ca93f37aee5d098fb0b0027f8e4d329e08a3b2dd72"
+  },
+  "origins": {
+    "SmallPairGraphArithmetic1": {
+      "names": [
+        "smallPairSeeds_1_checked",
+        "smallPairFilter_1_checked",
+        "smallPairLarge_1_count"
+      ],
+      "original_module": "SmallPairGraphArithmetic1",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphClosure1": {
+      "names": [
+        "PairGraphPrepared1.indexed_checked",
+        "smallPairClosure_1_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1",
+      "preservation": "original_headers_only"
+    },
+    "SmallPairGraphClosure1Chunk00": {
+      "names": [
+        "indexed_chunk00_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk00",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk01": {
+      "names": [
+        "indexed_chunk01_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk01",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk02": {
+      "names": [
+        "indexed_chunk02_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk02",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk03": {
+      "names": [
+        "indexed_chunk03_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk03",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk04": {
+      "names": [
+        "indexed_chunk04_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk04",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk05": {
+      "names": [
+        "indexed_chunk05_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk05",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk06": {
+      "names": [
+        "indexed_chunk06_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk06",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk07": {
+      "names": [
+        "indexed_chunk07_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk07",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk08": {
+      "names": [
+        "indexed_chunk08_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk08",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk09": {
+      "names": [
+        "indexed_chunk09_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk09",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk10": {
+      "names": [
+        "indexed_chunk10_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk10",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Chunk11": {
+      "names": [
+        "indexed_chunk11_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Chunk11",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure1Coverage": {
+      "names": [
+        "indexed_coverage_checked"
+      ],
+      "original_module": "SmallPairGraphClosure1Coverage",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphData1": {
+      "names": [],
+      "original_module": "SmallPairGraphData1",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphInputs1": {
+      "names": [
+        "smallPairA_1",
+        "smallPairB_1",
+        "smallPairClosure_1",
+        "smallPairLarge_1",
+        "colors"
+      ],
+      "original_module": "SmallPairGraphInputs1",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphTriangle1": {
+      "names": [
+        "smallPairNoTriangle_1_checked"
+      ],
+      "original_module": "SmallPairGraphTriangle1",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphWitnessData1": {
+      "names": [
+        "anchorRoot",
+        "rootPairs",
+        "witnesses",
+        "destinations"
+      ],
+      "original_module": "SmallPairGraphWitnessData1",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairLightAssembly1": {
+      "names": [
+        "sieve_eq",
+        "leftVertices_eq",
+        "leftCached_eq",
+        "leftRows_eq",
+        "left_checked",
+        "rightVertices_eq",
+        "rightCached_eq",
+        "rightRows_eq",
+        "right_checked"
+      ],
+      "original_module": "SmallPairLightAssembly1",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairRawSelectedData1": {
+      "names": [],
+      "original_module": "SmallPairRawSelectedData1",
+      "preservation": "imports_only_wrapper"
+    },
+    "SmallPairRawSelectedData1LeftCached": {
+      "names": [
+        "leftCached"
+      ],
+      "original_module": "SmallPairRawSelectedData1",
+      "preservation": "exact_declaration_source"
+    },
+    "SmallPairRawSelectedData1LeftRows": {
+      "names": [
+        "leftRows"
+      ],
+      "original_module": "SmallPairRawSelectedData1",
+      "preservation": "exact_declaration_source"
+    },
+    "SmallPairRawSelectedData1RightCached": {
+      "names": [
+        "rightCached"
+      ],
+      "original_module": "SmallPairRawSelectedData1",
+      "preservation": "exact_declaration_source"
+    },
+    "SmallPairRawSelectedData1RightRows": {
+      "names": [
+        "rightRows"
+      ],
+      "original_module": "SmallPairRawSelectedData1",
+      "preservation": "exact_declaration_source"
+    }
+  },
+  "prefix_parts": [
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk00",
+      "offset": 0
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk01",
+      "offset": 64
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk02",
+      "offset": 128
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk03",
+      "offset": 192
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk04",
+      "offset": 256
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk05",
+      "offset": 320
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk06",
+      "offset": 384
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk07",
+      "offset": 448
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk08",
+      "offset": 512
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk09",
+      "offset": 576
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk10",
+      "offset": 640
+    },
+    {
+      "count": 16,
+      "module": "SmallPairGraphClosure1Chunk11",
+      "offset": 704
+    }
+  ],
+  "raw_literal_partition": {
+    "definition_sha256": {
+      "leftCached": "388d781ada5fec5df1d2e3e7ec8b18ffc6fddd8e94fa86457139ff82b68428f5",
+      "leftRows": "6f49472939b94a4e9e87800d58ae76b63385bac43328fc007b143040e95789d0",
+      "rightCached": "f710dc3b47b084c5ffe9f5a0b6cb976dccfe770e760092399ad2d421727fdf36",
+      "rightRows": "9af773356fcf6fc868b5c73d623fcf23ddd600f71d1652357e456adcd3ea4313"
+    },
+    "exact_byte_reconstruction": true,
+    "groups": {
+      "SmallPairRawSelectedData1LeftCached": [
+        "leftCached"
+      ],
+      "SmallPairRawSelectedData1LeftRows": [
+        "leftRows"
+      ],
+      "SmallPairRawSelectedData1RightCached": [
+        "rightCached"
+      ],
+      "SmallPairRawSelectedData1RightRows": [
+        "rightRows"
+      ]
+    },
+    "namespace": "D1Bound5.PairSelectedPrepared1",
+    "original_imports_preserved_in_each_data_module": true,
+    "original_module": "SmallPairRawSelectedData1",
+    "prefix_sha256": "a403e558e71ec475fc2c856def84c14dab1be36d6b4bb2a7e0459e4577857f9e",
+    "source_bytes": {
+      "SmallPairRawSelectedData1LeftCached": 183980,
+      "SmallPairRawSelectedData1LeftRows": 486648,
+      "SmallPairRawSelectedData1RightCached": 182967,
+      "SmallPairRawSelectedData1RightRows": 490837
+    },
+    "source_manifest": {
+      "SmallPairRawSelectedData1LeftCached": "d1c434762f504b3c562e6143276868623e6d89d521842322679912b74c24b7d4",
+      "SmallPairRawSelectedData1LeftRows": "25af4fe373e15120e6a977c1e4fb852a6a5f36f4e3fafe907b4ee389d8540bc9",
+      "SmallPairRawSelectedData1RightCached": "ff45e2304c9c3703fa6991ed7f52d56b6622939df27d576adc951237e5a3143c",
+      "SmallPairRawSelectedData1RightRows": "56c5ac26e16edc01483d7eefbd356c5668df9a0f79873bfad5928a2a306aa077"
+    },
+    "suffix_sha256": "8114b57e71c5bd36f246575aea75476d8ddd1c0f368108e06322432ba633f35f"
+  },
+  "requires_completed_foundation_and_sides": true,
+  "reviewed_helper_source_manifest": {
+    "SmallPairGraphClosure1Chunk00": "9f94bc2d9aff48853bb118eb24639760171949710963bf43c6f747932955100e",
+    "SmallPairGraphClosure1Chunk01": "9f11f15a513e303e452fe4eb3496f89e4d74914fb84efeaef8933875646c1031",
+    "SmallPairGraphClosure1Chunk02": "eff0896fa20d71eef981d66f9e81f62f4d6445b29ecce15fc4f306214d2802c9",
+    "SmallPairGraphClosure1Chunk03": "51354e2055dce4ad760151db1ee40f083a2b9f16390b040d209bd84c26274727",
+    "SmallPairGraphClosure1Chunk04": "06f484f604af8e6d4b69639df411a2135a22db37e10afd84a58bd56876dd1829",
+    "SmallPairGraphClosure1Chunk05": "d45ab64890390cf6276efd102d069269d4fda0942296c541a2efab7a0eb7c556",
+    "SmallPairGraphClosure1Chunk06": "d77b6879660bda095ac0459fa050561605fa0f116ce3b4a0c8ae2f1310a63d5e",
+    "SmallPairGraphClosure1Chunk07": "a6dc530d434722966781f948a87144b72024862568b24daf7cf4603face63c74",
+    "SmallPairGraphClosure1Chunk08": "ef9ab2e1852240cc83ad69f7e117a2ac2a9d72d484899fd1a031540bcd137d80",
+    "SmallPairGraphClosure1Chunk09": "abf63f485e8c2cc420571f28c36ef29dafc951d06c1f3ab0bda9cc379f00171d",
+    "SmallPairGraphClosure1Chunk10": "2772268a2a45d0ca6fcf626a195c3fb49f2f942d2d5e47bcd9df054b07d890c5",
+    "SmallPairGraphClosure1Chunk11": "ec78d6eaa965e0acd1486ad66ed664bdd869399073c037a6e31c40271f339d28",
+    "SmallPairGraphClosure1Coverage": "dd36a8f7cad26f49608937d9a5058c9682d3a56fae9424d312be176642b03d83"
+  },
+  "root_integration": false,
+  "scope_counts": {
+    "assembly": {
+      "declarations": 17,
+      "definitions": 4,
+      "targets": 9,
+      "theorems": 13
+    },
+    "closure-pilot": {
+      "declarations": 11,
+      "definitions": 9,
+      "targets": 4,
+      "theorems": 2
+    },
+    "closure-rest": {
+      "declarations": 13,
+      "definitions": 0,
+      "targets": 12,
+      "theorems": 13
+    }
+  },
+  "scopes": {
+    "assembly": [
+      "SmallPairGraphArithmetic1",
+      "SmallPairRawSelectedData1LeftCached",
+      "SmallPairRawSelectedData1LeftRows",
+      "SmallPairRawSelectedData1RightCached",
+      "SmallPairRawSelectedData1RightRows",
+      "SmallPairRawSelectedData1",
+      "SmallPairLightAssembly1",
+      "SmallPairGraphTriangle1",
+      "SmallPairGraphData1"
+    ],
+    "closure-pilot": [
+      "SmallPairGraphInputs1",
+      "SmallPairGraphWitnessData1",
+      "SmallPairGraphClosure1Chunk00",
+      "SmallPairGraphClosure1Coverage"
+    ],
+    "closure-rest": [
+      "SmallPairGraphClosure1Chunk01",
+      "SmallPairGraphClosure1Chunk02",
+      "SmallPairGraphClosure1Chunk03",
+      "SmallPairGraphClosure1Chunk04",
+      "SmallPairGraphClosure1Chunk05",
+      "SmallPairGraphClosure1Chunk06",
+      "SmallPairGraphClosure1Chunk07",
+      "SmallPairGraphClosure1Chunk08",
+      "SmallPairGraphClosure1Chunk09",
+      "SmallPairGraphClosure1Chunk10",
+      "SmallPairGraphClosure1Chunk11",
+      "SmallPairGraphClosure1"
+    ]
+  },
+  "source_bytes": {
+    "SmallPairGraphArithmetic1": 555,
+    "SmallPairGraphClosure1": 6899,
+    "SmallPairGraphClosure1Chunk00": 543,
+    "SmallPairGraphClosure1Chunk01": 545,
+    "SmallPairGraphClosure1Chunk02": 547,
+    "SmallPairGraphClosure1Chunk03": 547,
+    "SmallPairGraphClosure1Chunk04": 547,
+    "SmallPairGraphClosure1Chunk05": 547,
+    "SmallPairGraphClosure1Chunk06": 547,
+    "SmallPairGraphClosure1Chunk07": 547,
+    "SmallPairGraphClosure1Chunk08": 547,
+    "SmallPairGraphClosure1Chunk09": 547,
+    "SmallPairGraphClosure1Chunk10": 547,
+    "SmallPairGraphClosure1Chunk11": 547,
+    "SmallPairGraphClosure1Coverage": 1112,
+    "SmallPairGraphData1": 121,
+    "SmallPairGraphInputs1": 414855,
+    "SmallPairGraphTriangle1": 389,
+    "SmallPairGraphWitnessData1": 432565,
+    "SmallPairLightAssembly1": 2022,
+    "SmallPairRawSelectedData1": 206,
+    "SmallPairRawSelectedData1LeftCached": 183980,
+    "SmallPairRawSelectedData1LeftRows": 486648,
+    "SmallPairRawSelectedData1RightCached": 182967,
+    "SmallPairRawSelectedData1RightRows": 490837
+  },
+  "source_manifest": {
+    "SmallPairGraphArithmetic1": "4cf70ea7f533f7bcf9c1290bafbe049be2d7c2be79e22d2ce03e1d504275229c",
+    "SmallPairGraphClosure1": "1c5b7889253b1e9e774a58da7481e5ff5d498dd85f6f4662f2afa0d5743bac34",
+    "SmallPairGraphClosure1Chunk00": "9f94bc2d9aff48853bb118eb24639760171949710963bf43c6f747932955100e",
+    "SmallPairGraphClosure1Chunk01": "9f11f15a513e303e452fe4eb3496f89e4d74914fb84efeaef8933875646c1031",
+    "SmallPairGraphClosure1Chunk02": "eff0896fa20d71eef981d66f9e81f62f4d6445b29ecce15fc4f306214d2802c9",
+    "SmallPairGraphClosure1Chunk03": "51354e2055dce4ad760151db1ee40f083a2b9f16390b040d209bd84c26274727",
+    "SmallPairGraphClosure1Chunk04": "06f484f604af8e6d4b69639df411a2135a22db37e10afd84a58bd56876dd1829",
+    "SmallPairGraphClosure1Chunk05": "d45ab64890390cf6276efd102d069269d4fda0942296c541a2efab7a0eb7c556",
+    "SmallPairGraphClosure1Chunk06": "d77b6879660bda095ac0459fa050561605fa0f116ce3b4a0c8ae2f1310a63d5e",
+    "SmallPairGraphClosure1Chunk07": "a6dc530d434722966781f948a87144b72024862568b24daf7cf4603face63c74",
+    "SmallPairGraphClosure1Chunk08": "ef9ab2e1852240cc83ad69f7e117a2ac2a9d72d484899fd1a031540bcd137d80",
+    "SmallPairGraphClosure1Chunk09": "abf63f485e8c2cc420571f28c36ef29dafc951d06c1f3ab0bda9cc379f00171d",
+    "SmallPairGraphClosure1Chunk10": "2772268a2a45d0ca6fcf626a195c3fb49f2f942d2d5e47bcd9df054b07d890c5",
+    "SmallPairGraphClosure1Chunk11": "ec78d6eaa965e0acd1486ad66ed664bdd869399073c037a6e31c40271f339d28",
+    "SmallPairGraphClosure1Coverage": "dd36a8f7cad26f49608937d9a5058c9682d3a56fae9424d312be176642b03d83",
+    "SmallPairGraphData1": "c3a89df917ce69a6a97de4d1e310bea197d359c8968e77cffbe5135810c8e559",
+    "SmallPairGraphInputs1": "5cd545bd15a06ecc43d8cfba5534724ca9e4bb3b996df32ac26455f986ee06da",
+    "SmallPairGraphTriangle1": "0426ce832b04f05b1b392fd627413c51849a8a7583e14e613e0b14c9a68b6e7b",
+    "SmallPairGraphWitnessData1": "063d9f2152729e1b0ab7730807fc92406c944c3189084df1d046e572be4c6174",
+    "SmallPairLightAssembly1": "aa4d0f7e0c25b110a19624502dedc5a05c11705261bb7992594a13587facbf72",
+    "SmallPairRawSelectedData1": "ae217cb7e009b216add8c8c06d58d9840255fff1f6ce68826ff88b4be7f1bf2a",
+    "SmallPairRawSelectedData1LeftCached": "d1c434762f504b3c562e6143276868623e6d89d521842322679912b74c24b7d4",
+    "SmallPairRawSelectedData1LeftRows": "25af4fe373e15120e6a977c1e4fb852a6a5f36f4e3fafe907b4ee389d8540bc9",
+    "SmallPairRawSelectedData1RightCached": "ff45e2304c9c3703fa6991ed7f52d56b6622939df27d576adc951237e5a3143c",
+    "SmallPairRawSelectedData1RightRows": "56c5ac26e16edc01483d7eefbd356c5668df9a0f79873bfad5928a2a306aa077"
+  },
+  "status": "REVIEWED_GRAPH1_CLOSURE_SOURCE_PROPOSAL_NOT_INSTALLED"
+}

@@ -1,0 +1,711 @@
+{
+  "closure_rows": 720,
+  "declaration_counts": {
+    "definitions": 13,
+    "theorems": 15,
+    "total": 28
+  },
+  "destination_index_max": 719,
+  "destination_index_min": 0,
+  "exact_merged_reconstruction": true,
+  "filtered_vertices": 718,
+  "literal_evidence": {
+    "destinations": {
+      "literal_bytes": 17111,
+      "literal_sha256": "f1228d8ce9089905bbb3101e48500da5d787cdfbee74e1b189e5bbb3820a6e7b",
+      "original_module": "SmallPairGraphWitnessData1",
+      "rows": 720
+    },
+    "leftCached": {
+      "literal_bytes": 183763,
+      "literal_sha256": "30fd561c97048750f7a82c26e48e2a33710c6eacf1c9a32e6900d9028d96bb5e",
+      "original_module": "SmallPairRawSelectedData1",
+      "rows": 360
+    },
+    "leftRows": {
+      "literal_bytes": 486431,
+      "literal_sha256": "346b71c08fb25a2bc7be393d2ed41e3aa1b161926303b8ace9155ee91a3cfda1",
+      "original_module": "SmallPairRawSelectedData1",
+      "rows": 360
+    },
+    "rightCached": {
+      "literal_bytes": 182750,
+      "literal_sha256": "741b9a51831103eb3cd0f0d0af446acf3f179ac9284a5f84d386000976cc06a4",
+      "original_module": "SmallPairRawSelectedData1",
+      "rows": 358
+    },
+    "rightRows": {
+      "literal_bytes": 490620,
+      "literal_sha256": "5b124aed8186bbcf56759df09630d492499b7f6f27c6fe038a4607d4886f874a",
+      "original_module": "SmallPairRawSelectedData1",
+      "rows": 358
+    },
+    "rootPairs": {
+      "literal_bytes": 415057,
+      "literal_sha256": "1459d88c5c125e6eafcea45bd82ef146db913c1467a40a8bca1c224fb0372441",
+      "original_module": "SmallPairGraphWitnessData1",
+      "rows": 720
+    },
+    "smallPairClosure_1": {
+      "literal_bytes": 207192,
+      "literal_sha256": "62106a9c13b0e4f4b3b8e030fa2c9f077b309307465ef0a7d84212889f27ec09",
+      "original_module": "SmallPairGraphInputs1",
+      "rows": 720
+    },
+    "smallPairLarge_1": {
+      "literal_bytes": 207164,
+      "literal_sha256": "2780c23204d4d112984ab5d77878838899b5315a8b9fc47801e7146a458bc264",
+      "original_module": "SmallPairGraphInputs1",
+      "rows": 718
+    }
+  },
+  "main_theorem_complete": false,
+  "merged_external_imports": [
+    "SmallPairGraphCheck",
+    "TwoSmallSeedDisks",
+    "PairClosureWitness",
+    "PairClosureIndexedWitness",
+    "SmallPairLightLeft1",
+    "SmallPairLightRight1",
+    "PairLightArithmeticBridge",
+    "PairCachedResidues",
+    "SmallPairSieve_0_1"
+  ],
+  "merged_prefix": "import D1Bound5.SmallPairGraphCheck\nimport D1Bound5.TwoSmallSeedDisks\nimport D1Bound5.PairClosureWitness\nimport D1Bound5.PairClosureIndexedWitness\nimport D1Bound5.SmallPairLightLeft1\nimport D1Bound5.SmallPairLightRight1\nimport D1Bound5.PairLightArithmeticBridge\nimport D1Bound5.PairCachedResidues\nimport D1Bound5.SmallPairSieve_0_1\n\n",
+  "merged_prefix_sha256": "f6161af2bd32fe81fe9bf2ffb32f9ff4f8486e025d53a7e64d29e4482e5d0a0c",
+  "merged_segments": {
+    "SmallPairGraphArithmetic1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.smallPairFilter_1_checked": "1c01f56575808ed1fb0ad9b6cad1e844b2f8270a0cdde960f898ec3f8b1edf19",
+        "D1Bound5.smallPairLarge_1_count": "58fb73e04430fb7b5547a78b7045b34d3098b522d794be1d152ab7ccc668ab7d",
+        "D1Bound5.smallPairSeeds_1_checked": "31548b8a69696fcf2f341aa4269626459e4e28b65fe96aadefb891eda3dd4f4e"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 415921,
+      "merged_body_start": 415437,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairGraphArithmetic1; original SHA256 4cf70ea7f533f7bcf9c1290bafbe049be2d7c2be79e22d2ce03e1d504275229c. -/\n",
+      "merged_marker_start": 415293,
+      "merged_segment_bytes": 484,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "f1404cf417462526c6bbb604e6ea1535197b4fa42e7bc9e2228e81faa4b58320",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 555,
+      "original_import_prefix": "import D1Bound5.SmallPairGraphInputs1\nimport D1Bound5.TwoSmallSeedDisks\n",
+      "original_imports": [
+        "SmallPairGraphInputs1",
+        "TwoSmallSeedDisks"
+      ],
+      "original_sha256": "4cf70ea7f533f7bcf9c1290bafbe049be2d7c2be79e22d2ce03e1d504275229c",
+      "preserved_core_bytes": 481,
+      "preserved_core_sha256": "76739290cf2a4dd5c204b2127eafa273e4fc4386251b5e30944754081e472298"
+    },
+    "SmallPairGraphClosure1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.PairGraphPrepared1.indexed_checked": "d2c62eb0669d9cfdfa9380e11a3fe57b58fa78bc4980a2f1348d0375c756abce",
+        "D1Bound5.smallPairClosure_1_checked": "b39c64df4ffae5a71024c52dbf268a04e182e9ec0d1a01d3ff18195e2135e7f8"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 849336,
+      "merged_body_start": 848700,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairGraphClosure1; original SHA256 bd41e1f8926b8f039cac203d25868ad0ec5bfaf8a02d14bebbf0f0694d38548f. -/\n",
+      "merged_marker_start": 848559,
+      "merged_segment_bytes": 636,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "8a94dc1e8e1a11809f06655c442e3037c14537a84abcbdd02fc5ceb7a30314ce",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 720,
+      "original_import_prefix": "import D1Bound5.SmallPairGraphWitnessData1\nimport D1Bound5.PairClosureIndexedWitness\n",
+      "original_imports": [
+        "SmallPairGraphWitnessData1",
+        "PairClosureIndexedWitness"
+      ],
+      "original_sha256": "bd41e1f8926b8f039cac203d25868ad0ec5bfaf8a02d14bebbf0f0694d38548f",
+      "preserved_core_bytes": 633,
+      "preserved_core_sha256": "ff5e409ba35346218ea44dfda203d20cc3ab7f0cc3a36a516d6b171073a24554"
+    },
+    "SmallPairGraphData1": {
+      "archive_body_leading_whitespace": "",
+      "archive_body_trailing_whitespace": "",
+      "declaration_source_sha256": {},
+      "exact_reconstruction": true,
+      "merged_body_end": 2195796,
+      "merged_body_start": 2195795,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairGraphData1; original SHA256 c3a89df917ce69a6a97de4d1e310bea197d359c8968e77cffbe5135810c8e559. -/\n",
+      "merged_marker_start": 2195657,
+      "merged_segment_bytes": 1,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "merged_segment_trailing_whitespace": "",
+      "original_bytes": 121,
+      "original_import_prefix": "import D1Bound5.SmallPairGraphArithmetic1\nimport D1Bound5.SmallPairGraphClosure1\nimport D1Bound5.SmallPairGraphTriangle1\n",
+      "original_imports": [
+        "SmallPairGraphArithmetic1",
+        "SmallPairGraphClosure1",
+        "SmallPairGraphTriangle1"
+      ],
+      "original_sha256": "c3a89df917ce69a6a97de4d1e310bea197d359c8968e77cffbe5135810c8e559",
+      "preserved_core_bytes": 0,
+      "preserved_core_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "SmallPairGraphInputs1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.PairGraphPrepared1.colors": "fc657f2451c8db2b1a55fbf3bf1e08a7d10e61b19f6fdf6ba12e6f6b4875e2d4",
+        "D1Bound5.smallPairA_1": "16424fc0072a25639f37fc51bf408f2f8d4d08520be8e94cf7cb4706c4495266",
+        "D1Bound5.smallPairB_1": "934b30fa649d2767a5a82d312a01c0df74b99a76e4bd9b059b97dd5524915177",
+        "D1Bound5.smallPairClosure_1": "2b6cf806aafff0f4cd647f4698f2bab429316923b1aab2edf3c439d15bbe529d",
+        "D1Bound5.smallPairLarge_1": "1c459ec10df4fda504eea58f1720aae18d42bb0cc65e3792a5c909b30c24c451"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 415293,
+      "merged_body_start": 473,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairGraphInputs1; original SHA256 5cd545bd15a06ecc43d8cfba5534724ca9e4bb3b996df32ac26455f986ee06da. -/\n",
+      "merged_marker_start": 333,
+      "merged_segment_bytes": 414820,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "736c0bf6517e6b9601923d2b4dd9b7b875eab9514643f1eb5256b6340b6b0d63",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 414855,
+      "original_import_prefix": "import D1Bound5.SmallPairGraphCheck\n",
+      "original_imports": [
+        "SmallPairGraphCheck"
+      ],
+      "original_sha256": "5cd545bd15a06ecc43d8cfba5534724ca9e4bb3b996df32ac26455f986ee06da",
+      "preserved_core_bytes": 414817,
+      "preserved_core_sha256": "cdf0c36de98f3f9cea6f2ae22154c2452e5e3378b4f3ace1979a4a58ecf2c617"
+    },
+    "SmallPairGraphTriangle1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.smallPairNoTriangle_1_checked": "68270abe5727dc01a3b34f2ca3e1a3f582e2fb93eec0aca869366b801b17dbf1"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 2195657,
+      "merged_body_start": 2195307,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairGraphTriangle1; original SHA256 0426ce832b04f05b1b392fd627413c51849a8a7583e14e613e0b14c9a68b6e7b. -/\n",
+      "merged_marker_start": 2195165,
+      "merged_segment_bytes": 350,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "c177f6669109ab5f73cfedd15467856f3093627521d6d68fed7b3c59f67669e5",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 389,
+      "original_import_prefix": "import D1Bound5.SmallPairLightAssembly1\n",
+      "original_imports": [
+        "SmallPairLightAssembly1"
+      ],
+      "original_sha256": "0426ce832b04f05b1b392fd627413c51849a8a7583e14e613e0b14c9a68b6e7b",
+      "preserved_core_bytes": 347,
+      "preserved_core_sha256": "4c04e0cf9f4f630506d89f68ae9c39aa0067e82ba11049ca9c30add2fbbfb995"
+    },
+    "SmallPairGraphWitnessData1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.PairGraphPrepared1.anchorRoot": "fb49444f7962cf2771da2d66df86a7b86c0afd02ba42db39ca3a0292cf9638c9",
+        "D1Bound5.PairGraphPrepared1.destinations": "945df3b263de01485298e5cdebc2ffbc8961ed64c384e766ab3773f442e56141",
+        "D1Bound5.PairGraphPrepared1.rootPairs": "3fe66e6868de62e3575fc4292d91cbd46c8c0871ad7af4e193f3fa27994c555c",
+        "D1Bound5.PairGraphPrepared1.witnesses": "89adb8c74d61fef676afaf9e4802817e8bcc661395928daa39ae62f72e83259f"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 848559,
+      "merged_body_start": 416066,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairGraphWitnessData1; original SHA256 063d9f2152729e1b0ab7730807fc92406c944c3189084df1d046e572be4c6174. -/\n",
+      "merged_marker_start": 415921,
+      "merged_segment_bytes": 432493,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "f1b047c6e6446bd0dd29d5b070d37111cdf55ce6580b5298d546b691e68ff69f",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 432565,
+      "original_import_prefix": "import D1Bound5.SmallPairGraphInputs1\nimport D1Bound5.PairClosureWitness\n",
+      "original_imports": [
+        "SmallPairGraphInputs1",
+        "PairClosureWitness"
+      ],
+      "original_sha256": "063d9f2152729e1b0ab7730807fc92406c944c3189084df1d046e572be4c6174",
+      "preserved_core_bytes": 432490,
+      "preserved_core_sha256": "7559b012cbcee4e71612def8c5cadd443d2b7011c44aeb8c31a3c39b85fe451f"
+    },
+    "SmallPairLightAssembly1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.PairLightPrepared1.leftCached_eq": "21034e59897b58f6555da48be93e63be5f48ff531aa28df50ccc8b79e4693f4b",
+        "D1Bound5.PairLightPrepared1.leftRows_eq": "383dbfd8e037eb78c67645d4296aa0ac98d81d6838a14e6e1f9afb02370c2723",
+        "D1Bound5.PairLightPrepared1.leftVertices_eq": "4053fed36982b36befe953c186001bac54382f70fbecc72d717d1149e0146660",
+        "D1Bound5.PairLightPrepared1.left_checked": "56aa3a08e704deef7095e638ff4476fba0a000c1a4050a583972bf731a512d24",
+        "D1Bound5.PairLightPrepared1.rightCached_eq": "9036104b1850629b185388ef6721a9e9cf03bca74896ca1938f1eaebb7e865e2",
+        "D1Bound5.PairLightPrepared1.rightRows_eq": "e102e583a952ea924a73fa03bcb61fe604a1bc2461dc832db455036a6da6e14d",
+        "D1Bound5.PairLightPrepared1.rightVertices_eq": "10e746e96b1575f158dc26424cd1f1123a89e3b89446a9d78c947ba5e286b855",
+        "D1Bound5.PairLightPrepared1.right_checked": "83349c4006a9f2130331c5507b4bc05c85762e50d032232d1cac1923fd89a1e0",
+        "D1Bound5.PairLightPrepared1.sieve_eq": "30b5ad3983c919be07118d3b9a30aacfefbad4d9d96341f757a0696526b3b5f9"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 2195165,
+      "merged_body_start": 2193299,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairLightAssembly1; original SHA256 aa4d0f7e0c25b110a19624502dedc5a05c11705261bb7992594a13587facbf72. -/\n",
+      "merged_marker_start": 2193157,
+      "merged_segment_bytes": 1866,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "c86200f5d332cca6c516ec3dd54a7c2e0f9b0924db46f8ef644abde2bdd9292f",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 2022,
+      "original_import_prefix": "import D1Bound5.SmallPairLightLeft1\nimport D1Bound5.SmallPairLightRight1\nimport D1Bound5.PairLightArithmeticBridge\nimport D1Bound5.SmallPairRawSelectedData1\n",
+      "original_imports": [
+        "SmallPairLightLeft1",
+        "SmallPairLightRight1",
+        "PairLightArithmeticBridge",
+        "SmallPairRawSelectedData1"
+      ],
+      "original_sha256": "aa4d0f7e0c25b110a19624502dedc5a05c11705261bb7992594a13587facbf72",
+      "preserved_core_bytes": 1863,
+      "preserved_core_sha256": "e9f9e209cacb522f791b1e4d5a5e05058f0989972f049ec512f1ef2eaf0fa739"
+    },
+    "SmallPairRawSelectedData1": {
+      "archive_body_leading_whitespace": "\n",
+      "archive_body_trailing_whitespace": "\n",
+      "declaration_source_sha256": {
+        "D1Bound5.PairSelectedPrepared1.leftCached": "388d781ada5fec5df1d2e3e7ec8b18ffc6fddd8e94fa86457139ff82b68428f5",
+        "D1Bound5.PairSelectedPrepared1.leftRows": "6f49472939b94a4e9e87800d58ae76b63385bac43328fc007b143040e95789d0",
+        "D1Bound5.PairSelectedPrepared1.rightCached": "f710dc3b47b084c5ffe9f5a0b6cb976dccfe770e760092399ad2d421727fdf36",
+        "D1Bound5.PairSelectedPrepared1.rightRows": "9af773356fcf6fc868b5c73d623fcf23ddd600f71d1652357e456adcd3ea4313"
+      },
+      "exact_reconstruction": true,
+      "merged_body_end": 2193157,
+      "merged_body_start": 849480,
+      "merged_marker": "/- Preserved body from D1Bound5.SmallPairRawSelectedData1; original SHA256 db148b0fb761a79b93b710ca93f37aee5d098fb0b0027f8e4d329e08a3b2dd72. -/\n",
+      "merged_marker_start": 849336,
+      "merged_segment_bytes": 1343677,
+      "merged_segment_leading_whitespace": "\n",
+      "merged_segment_sha256": "3d66c432810ed54cda56da60d6b25e9171e91f6d954262b70de755eb03073ee4",
+      "merged_segment_trailing_whitespace": "\n\n",
+      "original_bytes": 1343784,
+      "original_import_prefix": "import D1Bound5.SmallPairGraphInputs1\nimport D1Bound5.PairCachedResidues\nimport D1Bound5.SmallPairSieve_0_1\n",
+      "original_imports": [
+        "SmallPairGraphInputs1",
+        "PairCachedResidues",
+        "SmallPairSieve_0_1"
+      ],
+      "original_sha256": "db148b0fb761a79b93b710ca93f37aee5d098fb0b0027f8e4d329e08a3b2dd72",
+      "preserved_core_bytes": 1343674,
+      "preserved_core_sha256": "82cb7fabde720ac71215f5b06b49f699c3d95fdc50050a7e83eaffa28cf30465"
+    }
+  },
+  "original_declarations": {
+    "SmallPairGraphArithmetic1": [
+      {
+        "header": ":\n    pairSeedsCoveredBool smallPairA_1 smallPairB_1\n      seedRootDisk_0_1 smallPairClosure_1 = true",
+        "kind": "theorem",
+        "local_name": "smallPairSeeds_1_checked",
+        "name": "D1Bound5.smallPairSeeds_1_checked",
+        "namespace": "D1Bound5",
+        "opens": [],
+        "raw_header": "theorem smallPairSeeds_1_checked :\n    pairSeedsCoveredBool smallPairA_1 smallPairB_1\n      seedRootDisk_0_1 smallPairClosure_1 = true "
+      },
+      {
+        "header": ":\n    largePairVertices smallPairA_1 smallPairB_1 smallPairClosure_1 = smallPairLarge_1",
+        "kind": "theorem",
+        "local_name": "smallPairFilter_1_checked",
+        "name": "D1Bound5.smallPairFilter_1_checked",
+        "namespace": "D1Bound5",
+        "opens": [],
+        "raw_header": "theorem smallPairFilter_1_checked :\n    largePairVertices smallPairA_1 smallPairB_1 smallPairClosure_1 = smallPairLarge_1 "
+      },
+      {
+        "header": ": smallPairLarge_1.length = 718",
+        "kind": "theorem",
+        "local_name": "smallPairLarge_1_count",
+        "name": "D1Bound5.smallPairLarge_1_count",
+        "namespace": "D1Bound5",
+        "opens": [],
+        "raw_header": "theorem smallPairLarge_1_count : smallPairLarge_1.length = 718 "
+      }
+    ],
+    "SmallPairGraphClosure1": [
+      {
+        "header": ":\n    pairClosureIndexedWitnessBool smallPairA_1 smallPairB_1 anchorRoot\n      (10^1100) smallPairClosure_1 witnesses destinations = true",
+        "kind": "theorem",
+        "local_name": "PairGraphPrepared1.indexed_checked",
+        "name": "D1Bound5.PairGraphPrepared1.indexed_checked",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open PairGraphPrepared1"
+        ],
+        "raw_header": "theorem PairGraphPrepared1.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_1 smallPairB_1 anchorRoot\n      (10^1100) smallPairClosure_1 witnesses destinations = true "
+      },
+      {
+        "header": ":\n    pairClosureBool smallPairA_1 smallPairB_1\n      (10^1100) smallPairClosure_1 = true",
+        "kind": "theorem",
+        "local_name": "smallPairClosure_1_checked",
+        "name": "D1Bound5.smallPairClosure_1_checked",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open PairGraphPrepared1"
+        ],
+        "raw_header": "theorem smallPairClosure_1_checked :\n    pairClosureBool smallPairA_1 smallPairB_1\n      (10^1100) smallPairClosure_1 = true "
+      }
+    ],
+    "SmallPairGraphData1": [],
+    "SmallPairGraphInputs1": [
+      {
+        "header": ": QuadInt 0 1",
+        "kind": "def",
+        "local_name": "smallPairA_1",
+        "name": "D1Bound5.smallPairA_1",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ],
+        "raw_header": "def smallPairA_1 : QuadInt 0 1 "
+      },
+      {
+        "header": ": QuadInt 0 1",
+        "kind": "def",
+        "local_name": "smallPairB_1",
+        "name": "D1Bound5.smallPairB_1",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ],
+        "raw_header": "def smallPairB_1 : QuadInt 0 1 "
+      },
+      {
+        "header": ": List (QuadInt 0 1)",
+        "kind": "def",
+        "local_name": "smallPairClosure_1",
+        "name": "D1Bound5.smallPairClosure_1",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ],
+        "raw_header": "def smallPairClosure_1 : List (QuadInt 0 1) "
+      },
+      {
+        "header": ": List (QuadInt 0 1)",
+        "kind": "def",
+        "local_name": "smallPairLarge_1",
+        "name": "D1Bound5.smallPairLarge_1",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ],
+        "raw_header": "def smallPairLarge_1 : List (QuadInt 0 1) "
+      },
+      {
+        "header": ": \u2115",
+        "kind": "def",
+        "local_name": "colors",
+        "name": "D1Bound5.PairGraphPrepared1.colors",
+        "namespace": "D1Bound5.PairGraphPrepared1",
+        "opens": [
+          "open QuadInt"
+        ],
+        "raw_header": "def colors : \u2115 "
+      }
+    ],
+    "SmallPairGraphTriangle1": [
+      {
+        "header": ":\n    pairGraphTriangleFreeBool smallPairSieve_0_1 smallPairLarge_1 = true",
+        "kind": "theorem",
+        "local_name": "smallPairNoTriangle_1_checked",
+        "name": "D1Bound5.smallPairNoTriangle_1_checked",
+        "namespace": "D1Bound5",
+        "opens": [],
+        "raw_header": "theorem smallPairNoTriangle_1_checked :\n    pairGraphTriangleFreeBool smallPairSieve_0_1 smallPairLarge_1 = true "
+      }
+    ],
+    "SmallPairGraphWitnessData1": [
+      {
+        "header": ": QuadInt 0 1",
+        "kind": "def",
+        "local_name": "anchorRoot",
+        "name": "D1Bound5.PairGraphPrepared1.anchorRoot",
+        "namespace": "D1Bound5.PairGraphPrepared1",
+        "opens": [],
+        "raw_header": "def anchorRoot : QuadInt 0 1 "
+      },
+      {
+        "header": ": List (QuadInt 0 1 \u00d7 QuadInt 0 1)",
+        "kind": "def",
+        "local_name": "rootPairs",
+        "name": "D1Bound5.PairGraphPrepared1.rootPairs",
+        "namespace": "D1Bound5.PairGraphPrepared1",
+        "opens": [],
+        "raw_header": "def rootPairs : List (QuadInt 0 1 \u00d7 QuadInt 0 1) "
+      },
+      {
+        "header": ": List (PairRootWitness 0 1)",
+        "kind": "def",
+        "local_name": "witnesses",
+        "name": "D1Bound5.PairGraphPrepared1.witnesses",
+        "namespace": "D1Bound5.PairGraphPrepared1",
+        "opens": [],
+        "raw_header": "def witnesses : List (PairRootWitness 0 1) "
+      },
+      {
+        "header": ": List (Option \u2115 \u00d7 Option \u2115)",
+        "kind": "def",
+        "local_name": "destinations",
+        "name": "D1Bound5.PairGraphPrepared1.destinations",
+        "namespace": "D1Bound5.PairGraphPrepared1",
+        "opens": [],
+        "raw_header": "def destinations : List (Option \u2115 \u00d7 Option \u2115) "
+      }
+    ],
+    "SmallPairLightAssembly1": [
+      {
+        "header": ": sieve = smallPairSieve_0_1",
+        "kind": "theorem",
+        "local_name": "sieve_eq",
+        "name": "D1Bound5.PairLightPrepared1.sieve_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem sieve_eq : sieve = smallPairSieve_0_1 "
+      },
+      {
+        "header": ":\n    leftVertices = (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).1.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "leftVertices_eq",
+        "name": "D1Bound5.PairLightPrepared1.leftVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).1.map pairLightCoordinates "
+      },
+      {
+        "header": ":\n    leftCached = PairSelectedPrepared1.leftCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "leftCached_eq",
+        "name": "D1Bound5.PairLightPrepared1.leftCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared1.leftCached.map pairLightCachedCoordinates "
+      },
+      {
+        "header": ": leftRows = PairSelectedPrepared1.leftRows",
+        "kind": "theorem",
+        "local_name": "leftRows_eq",
+        "name": "D1Bound5.PairLightPrepared1.leftRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem leftRows_eq : leftRows = PairSelectedPrepared1.leftRows "
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).1 = true",
+        "kind": "theorem",
+        "local_name": "left_checked",
+        "name": "D1Bound5.PairLightPrepared1.left_checked",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem left_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).1 = true "
+      },
+      {
+        "header": ":\n    rightVertices = (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).2.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "rightVertices_eq",
+        "name": "D1Bound5.PairLightPrepared1.rightVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).2.map pairLightCoordinates "
+      },
+      {
+        "header": ":\n    rightCached = PairSelectedPrepared1.rightCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "rightCached_eq",
+        "name": "D1Bound5.PairLightPrepared1.rightCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared1.rightCached.map pairLightCachedCoordinates "
+      },
+      {
+        "header": ": rightRows = PairSelectedPrepared1.rightRows",
+        "kind": "theorem",
+        "local_name": "rightRows_eq",
+        "name": "D1Bound5.PairLightPrepared1.rightRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem rightRows_eq : rightRows = PairSelectedPrepared1.rightRows "
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).2 = true",
+        "kind": "theorem",
+        "local_name": "right_checked",
+        "name": "D1Bound5.PairLightPrepared1.right_checked",
+        "namespace": "D1Bound5.PairLightPrepared1",
+        "opens": [],
+        "raw_header": "theorem right_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_1 PairGraphPrepared1.colors).2 = true "
+      }
+    ],
+    "SmallPairRawSelectedData1": [
+      {
+        "header": ": List (PairResidueVertex 0 1)",
+        "kind": "def",
+        "local_name": "leftCached",
+        "name": "D1Bound5.PairSelectedPrepared1.leftCached",
+        "namespace": "D1Bound5.PairSelectedPrepared1",
+        "opens": [],
+        "raw_header": "def leftCached : List (PairResidueVertex 0 1) "
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "leftRows",
+        "name": "D1Bound5.PairSelectedPrepared1.leftRows",
+        "namespace": "D1Bound5.PairSelectedPrepared1",
+        "opens": [],
+        "raw_header": "def leftRows : List (\u2115 \u00d7 List \u2115) "
+      },
+      {
+        "header": ": List (PairResidueVertex 0 1)",
+        "kind": "def",
+        "local_name": "rightCached",
+        "name": "D1Bound5.PairSelectedPrepared1.rightCached",
+        "namespace": "D1Bound5.PairSelectedPrepared1",
+        "opens": [],
+        "raw_header": "def rightCached : List (PairResidueVertex 0 1) "
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "rightRows",
+        "name": "D1Bound5.PairSelectedPrepared1.rightRows",
+        "namespace": "D1Bound5.PairSelectedPrepared1",
+        "opens": [],
+        "raw_header": "def rightRows : List (\u2115 \u00d7 List \u2115) "
+      }
+    ]
+  },
+  "original_merged_bytes": 2195796,
+  "original_merged_sha256": "b0bceb6340003eab18f64c436c6a4b70f1c8eb14a7d185892b2e4c314665a808",
+  "original_source_bytes": {
+    "SmallPairGraphArithmetic1": 555,
+    "SmallPairGraphClosure1": 720,
+    "SmallPairGraphData1": 121,
+    "SmallPairGraphInputs1": 414855,
+    "SmallPairGraphTriangle1": 389,
+    "SmallPairGraphWitnessData1": 432565,
+    "SmallPairLightAssembly1": 2022,
+    "SmallPairRawSelectedData1": 1343784
+  },
+  "original_source_manifest": {
+    "SmallPairGraphArithmetic1": "4cf70ea7f533f7bcf9c1290bafbe049be2d7c2be79e22d2ce03e1d504275229c",
+    "SmallPairGraphClosure1": "bd41e1f8926b8f039cac203d25868ad0ec5bfaf8a02d14bebbf0f0694d38548f",
+    "SmallPairGraphData1": "c3a89df917ce69a6a97de4d1e310bea197d359c8968e77cffbe5135810c8e559",
+    "SmallPairGraphInputs1": "5cd545bd15a06ecc43d8cfba5534724ca9e4bb3b996df32ac26455f986ee06da",
+    "SmallPairGraphTriangle1": "0426ce832b04f05b1b392fd627413c51849a8a7583e14e613e0b14c9a68b6e7b",
+    "SmallPairGraphWitnessData1": "063d9f2152729e1b0ab7730807fc92406c944c3189084df1d046e572be4c6174",
+    "SmallPairLightAssembly1": "aa4d0f7e0c25b110a19624502dedc5a05c11705261bb7992594a13587facbf72",
+    "SmallPairRawSelectedData1": "db148b0fb761a79b93b710ca93f37aee5d098fb0b0027f8e4d329e08a3b2dd72"
+  },
+  "proposed_prefix_parts": [
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk00",
+      "offset": 0
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk01",
+      "offset": 64
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk02",
+      "offset": 128
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk03",
+      "offset": 192
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk04",
+      "offset": 256
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk05",
+      "offset": 320
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk06",
+      "offset": 384
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk07",
+      "offset": 448
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk08",
+      "offset": 512
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk09",
+      "offset": 576
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure1Chunk10",
+      "offset": 640
+    },
+    {
+      "count": 16,
+      "module": "SmallPairGraphClosure1Chunk11",
+      "offset": 704
+    }
+  ],
+  "proposed_terminal_drop": 720,
+  "raw_literal_partition": {
+    "definition_sha256": {
+      "leftCached": "388d781ada5fec5df1d2e3e7ec8b18ffc6fddd8e94fa86457139ff82b68428f5",
+      "leftRows": "6f49472939b94a4e9e87800d58ae76b63385bac43328fc007b143040e95789d0",
+      "rightCached": "f710dc3b47b084c5ffe9f5a0b6cb976dccfe770e760092399ad2d421727fdf36",
+      "rightRows": "9af773356fcf6fc868b5c73d623fcf23ddd600f71d1652357e456adcd3ea4313"
+    },
+    "exact_byte_reconstruction": true,
+    "groups": {
+      "SmallPairRawSelectedData1LeftCached": [
+        "leftCached"
+      ],
+      "SmallPairRawSelectedData1LeftRows": [
+        "leftRows"
+      ],
+      "SmallPairRawSelectedData1RightCached": [
+        "rightCached"
+      ],
+      "SmallPairRawSelectedData1RightRows": [
+        "rightRows"
+      ]
+    },
+    "namespace": "D1Bound5.PairSelectedPrepared1",
+    "original_imports_preserved_in_each_data_module": true,
+    "original_module": "SmallPairRawSelectedData1",
+    "prefix_sha256": "a403e558e71ec475fc2c856def84c14dab1be36d6b4bb2a7e0459e4577857f9e",
+    "source_bytes": {
+      "SmallPairRawSelectedData1LeftCached": 183980,
+      "SmallPairRawSelectedData1LeftRows": 486648,
+      "SmallPairRawSelectedData1RightCached": 182967,
+      "SmallPairRawSelectedData1RightRows": 490837
+    },
+    "source_manifest": {
+      "SmallPairRawSelectedData1LeftCached": "d1c434762f504b3c562e6143276868623e6d89d521842322679912b74c24b7d4",
+      "SmallPairRawSelectedData1LeftRows": "25af4fe373e15120e6a977c1e4fb852a6a5f36f4e3fafe907b4ee389d8540bc9",
+      "SmallPairRawSelectedData1RightCached": "ff45e2304c9c3703fa6991ed7f52d56b6622939df27d576adc951237e5a3143c",
+      "SmallPairRawSelectedData1RightRows": "56c5ac26e16edc01483d7eefbd356c5668df9a0f79873bfad5928a2a306aa077"
+    },
+    "suffix_sha256": "8114b57e71c5bd36f246575aea75476d8ddd1c0f368108e06322432ba633f35f"
+  },
+  "root_integration": false,
+  "schema": 1,
+  "source_preservation_only": true,
+  "status": "ACTUAL_GRAPH1_CLOSURE_SOURCE_INSPECTION_NOT_A_KERNEL_RESULT"
+}

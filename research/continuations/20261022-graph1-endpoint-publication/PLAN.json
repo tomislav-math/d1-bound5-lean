@@ -1,0 +1,139 @@
+{
+  "purpose": "Publish the graph1 working endpoint only after the actual seven-scope collector passes and the actual inventory confirms the sole 28-to-29 endpoint transition; archive only the three closure scopes, their collector evidence, and the preceding sides publication post-records.",
+  "status": "LOCAL_PROPOSAL_ENDPOINT_COMPLETION_AND_PUBLICATION_NOT_CLAIMED",
+  "handoff_application": "The handoff is prospective. Apply it only after the reviewed endpoint collector, actual inventory, and publication guard validate the completed exact records. Until then it is not a statement of current completion.",
+  "groups": [
+    {
+      "unit": "20261022-graph1-closure",
+      "scope": "closure-pilot",
+      "audit": "pro-graph1-closure-pilot-audit"
+    },
+    {
+      "unit": "20261022-graph1-closure",
+      "scope": "closure-rest",
+      "audit": "pro-graph1-closure-rest-audit"
+    },
+    {
+      "unit": "20261022-graph1-closure",
+      "scope": "assembly",
+      "audit": "pro-graph1-assembly-audit"
+    }
+  ],
+  "extra": [
+    "research/continuations/20261022-graph1-sides-publication/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261022-graph1-sides-publication/OWNER.json",
+    "research/continuations/20261022-graph1-sides-publication/RELEASE.json"
+  ],
+  "expected_review": {
+    "endpoint_module": "SmallPairGraphData1",
+    "model": {
+      "tau": 0,
+      "nu": 1
+    },
+    "foundation_commit": "d05caaa83a0d079d90599de5dc3d376fb41e4ff1",
+    "side_commit_source": "research/continuations/20261022-graph1-sides-publication/POST_PUSH_RECEIPT.json",
+    "scope_totals": {
+      "foundation": {
+        "targets": 7,
+        "definitions": 19,
+        "theorems": 4
+      },
+      "sides-pilot": {
+        "targets": 2,
+        "definitions": 0,
+        "theorems": 2
+      },
+      "left-rest": {
+        "targets": 12,
+        "definitions": 0,
+        "theorems": 15
+      },
+      "right-rest": {
+        "targets": 12,
+        "definitions": 0,
+        "theorems": 15
+      },
+      "closure-pilot": {
+        "targets": 4,
+        "definitions": 9,
+        "theorems": 2
+      },
+      "closure-rest": {
+        "targets": 12,
+        "definitions": 0,
+        "theorems": 13
+      },
+      "assembly": {
+        "targets": 9,
+        "definitions": 4,
+        "theorems": 13
+      }
+    },
+    "distinct_targets": 58,
+    "declarations": 96,
+    "definitions": 32,
+    "theorems": 64,
+    "type_axiom_audits": 7,
+    "new_publication_targets": 25,
+    "new_publication_definitions": 13,
+    "new_publication_theorems": 28,
+    "preserved_original_closure_assembly_declarations": 28,
+    "closure_rows": 720,
+    "filtered_vertices": 718,
+    "closure_chunks": [
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      16
+    ],
+    "final_chunk_offset": 704,
+    "heads_per_side": {
+      "left": 360,
+      "right": 358
+    },
+    "expected_endpoint_transition": {
+      "before_count": 28,
+      "after_count": 29,
+      "total": 48,
+      "added": [
+        1
+      ],
+      "removed": [],
+      "remaining": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        14,
+        15,
+        19,
+        21,
+        23,
+        24,
+        28,
+        30,
+        36,
+        39,
+        43,
+        46
+      ]
+    },
+    "proof_fingerprint_source": "research/continuations/20261022-graph1-closure/ENDPOINT_VERIFICATION.json",
+    "proof_state_path": "research/continuations/20261022-graph1-closure/ENDPOINT_PROOF_STATE.json",
+    "inventory_path": "research/continuations/20261022-graph1-closure/ENDPOINT_INVENTORY.json",
+    "main_theorem_complete": false,
+    "root_integration": false
+  },
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical-root integration remains unverified.\n\nGraph1 is now a complete verified working endpoint. The actual seven-scope\nendpoint collector passed, and the subsequent read-only inventory confirms\n29 of 48 accepted working endpoints, with Graph1 added and none removed.\nThis count concerns separately verified working endpoints. It does not\nestablish MainStatement or canonical-root integration.\n\nGraph1 retains the model QuadInt 0 1, all 720 closure rows and 718 filtered\nvertices, with the complete asymmetric 360/358 side data. Its root-pair and\ndestination lists remain aligned with all 720 closure entries. The closure\nproof covers exactly eleven blocks of 64 rows and one final block of 16 at\noffset 704. Every mutation lookup retains the complete original destination\nvertex list, and both mutation signs remain checked. All 28 original\nclosure/assembly public declarations are preserved. The four raw literal\ndefinitions retain their exact bodies, original imports and namespace when\nrelocated into four modules; the raw-data facade only imports those modules.\n\nThe seven-scope collector validates 58 distinct guarded-build and targeted\ninstalled SAME-kernel-replay targets, 32 definitions, 64 theorems and seven\nexact original-type/transitive-axiom audits: 96 declarations in total.\nThis publication contains only the three newly completed closure scopes:\nclosure-pilot (4 targets, 9 definitions, 2 theorems), closure-rest (12 targets,\n13 theorems), and assembly (9 targets, 4 definitions, 13 theorems).\nThe separately committed foundation and three side scopes are reused as\nverified dependencies and are not counted as newly completed work.\n\nThe side proofs retain their original parent blocks, 137+223 on the left and\n138+220 on the right, with full-tail partitions [16,20,22,24,26,29] and\n[34,42,56,91] on the left, and [16,20,22,24,26,30] and [34,42,56,88] on the right.\nEvery cross-part and cross-parent-block comparison remains included: 64,620\nunordered pairs on the left and 63,903 on the right, totaling 128,523.\nThe four original parent statements and both side wrapper files are unchanged.\n\nAuthoritative endpoint evidence:\nresearch/continuations/20261022-graph1-closure/ENDPOINT_VERIFICATION.json\nresearch/continuations/20261022-graph1-closure/ENDPOINT_PROOF_STATE.json\nresearch/continuations/20261022-graph1-closure/ENDPOINT_INVENTORY.json\n\nThe actual collector records the endpoint proof fingerprint, proof-state byte\nhash and transitive source-closure size. Verify these measured values against\nthe actual proof-state file; no guessed fingerprint or source-closure count\nbelongs in this handoff. The inventory preserves the actual read-only output\nsupporting the 28-to-29 change and the unchanged prior endpoint set.\n\nThe graph1 foundation was committed and privately pushed at\nd05caaa83a0d079d90599de5dc3d376fb41e4ff1. Its original seven-module scope remains\nseparately recorded. The actual side proof commit and successful private push\nare identified by\nresearch/continuations/20261022-graph1-sides-publication/POST_PUSH_RECEIPT.json.\nThis publication preserves that receipt together with OWNER.json and\nRELEASE.json from the same sides publication directory. No side commit hash\nis inferred from a source fingerprint. Historical scope and publication\nfields remain unchanged; endpoint evidence and later actual push receipts\nrecord subsequent progress.\n\nThe remaining 19 graph endpoints are:\n3, 4, 5, 6, 7, 8, 10, 14, 15, 19, 21, 23, 24, 28, 30, 36, 39, 43, 46.\n\nGraph43's earlier raw-data build remains research evidence, preserved under\nresearch/continuations/20261022-graph43-pilot/. It is not a verified graph43\nendpoint. Its original D1 data source and the uncompiled, unverified\nSmallPairLightAdaptiveLeft43_000Part00 trial remain unchanged.\n\nAfter the remaining finite endpoints: SmallPairGraphs, TwoSmallSextuple,\nTwoSmallNondegenerateImpossible, MainTheorem, canonical-root integration, and\nthe final clean-checkout pinned build, full type/axiom review and fresh\nintegrated-root installed-kernel replay remain open. Reuse all completed\ngraph proofs and their exact evidence. No overall completion percentage is\nasserted.\n\nThe unchanged target is every finite D(1)-set of distinct nonzero elements of\nthe full ring of integers O_K in every imaginary quadratic number field having\ncardinality at most five. Half-integral bases, tied moduli and zero pair-square\nroots remain allowed. No new mathematical assumption is introduced.\n"
+}

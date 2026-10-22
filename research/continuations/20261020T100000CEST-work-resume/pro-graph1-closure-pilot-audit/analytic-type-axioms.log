@@ -1,0 +1,29 @@
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.smallPairA_1: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.smallPairB_1: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.smallPairClosure_1: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.smallPairLarge_1: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.colors: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.anchorRoot: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.rootPairs: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.witnesses: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.destinations: []
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.indexed_chunk00_checked: [propext, Quot.sound]
+GRAPH1_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared1.indexed_coverage_checked: [propext]
+D1Bound5.smallPairA_1 : D1Bound5.QuadInt 0 1
+D1Bound5.smallPairB_1 : D1Bound5.QuadInt 0 1
+D1Bound5.smallPairClosure_1 : List (D1Bound5.QuadInt 0 1)
+D1Bound5.smallPairLarge_1 : List (D1Bound5.QuadInt 0 1)
+D1Bound5.PairGraphPrepared1.colors : ℕ
+D1Bound5.PairGraphPrepared1.anchorRoot : D1Bound5.QuadInt 0 1
+D1Bound5.PairGraphPrepared1.rootPairs : List (D1Bound5.QuadInt 0 1 × D1Bound5.QuadInt 0 1)
+D1Bound5.PairGraphPrepared1.witnesses : List (D1Bound5.PairRootWitness 0 1)
+D1Bound5.PairGraphPrepared1.destinations : List (Option ℕ × Option ℕ)
+D1Bound5.PairGraphPrepared1.indexed_chunk00_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_1
+    D1Bound5.smallPairB_1 D1Bound5.PairGraphPrepared1.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_1 64
+    (List.drop 0 D1Bound5.PairGraphPrepared1.witnesses) (List.drop 0 D1Bound5.PairGraphPrepared1.destinations) =
+  true
+D1Bound5.PairGraphPrepared1.indexed_coverage_checked : decide
+    (D1Bound5.PairGraphPrepared1.anchorRoot * D1Bound5.PairGraphPrepared1.anchorRoot =
+        D1Bound5.smallPairA_1 * D1Bound5.smallPairB_1 + 1 ∧
+      List.map D1Bound5.PairRootWitness.vertex D1Bound5.PairGraphPrepared1.witnesses = D1Bound5.smallPairClosure_1) =
+  true
