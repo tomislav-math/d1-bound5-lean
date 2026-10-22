@@ -1,0 +1,158 @@
+{
+  "base_commit": "1a59da7aaef5884a8cefb3c907d111084cac1535",
+  "build_order": [
+    "SmallPairGraphInputs25",
+    "SmallPairGraphWitnessData25",
+    "SmallPairGraphClosure25Chunk00",
+    "SmallPairGraphClosure25Chunk01",
+    "SmallPairGraphClosure25Chunk02",
+    "SmallPairGraphClosure25Chunk03",
+    "SmallPairGraphClosure25Chunk04",
+    "SmallPairGraphClosure25Chunk05",
+    "SmallPairGraphClosure25Chunk06",
+    "SmallPairGraphClosure25Chunk07",
+    "SmallPairGraphClosure25Chunk08",
+    "SmallPairGraphClosure25Chunk09",
+    "SmallPairGraphClosure25Chunk10",
+    "SmallPairGraphClosure25Chunk11",
+    "SmallPairGraphClosure25Coverage",
+    "SmallPairGraphClosure25",
+    "SmallPairGraphArithmetic25",
+    "SmallPairRawSelectedData25",
+    "SmallPairLightAssembly25",
+    "SmallPairGraphTriangle25",
+    "SmallPairGraphData25"
+  ],
+  "closure_rows": 762,
+  "main_theorem_complete": false,
+  "original_merged_sha256": "0779efad350db71a408f5ae4dfb28264806d50f3f009a26aa664723f165173b3",
+  "original_public_declarations": 28,
+  "original_public_headers": [
+    "def smallPairA_25 : QuadInt 1 1 ",
+    "def smallPairB_25 : QuadInt 1 1 ",
+    "def smallPairClosure_25 : List (QuadInt 1 1) ",
+    "def smallPairLarge_25 : List (QuadInt 1 1) ",
+    "def colors : \u2115 ",
+    "theorem smallPairSeeds_25_checked :\n    pairSeedsCoveredBool smallPairA_25 smallPairB_25\n      seedRootDisk_1_1 smallPairClosure_25 = true ",
+    "theorem smallPairFilter_25_checked :\n    largePairVertices smallPairA_25 smallPairB_25 smallPairClosure_25 = smallPairLarge_25 ",
+    "theorem smallPairLarge_25_count : smallPairLarge_25.length = 761 ",
+    "def anchorRoot : QuadInt 1 1 ",
+    "def rootPairs : List (QuadInt 1 1 \u00d7 QuadInt 1 1) ",
+    "def witnesses : List (PairRootWitness 1 1) ",
+    "def destinations : List (Option \u2115 \u00d7 Option \u2115) ",
+    "theorem PairGraphPrepared25.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_25 smallPairB_25 anchorRoot\n      (10^1100) smallPairClosure_25 witnesses destinations = true ",
+    "theorem smallPairClosure_25_checked :\n    pairClosureBool smallPairA_25 smallPairB_25\n      (10^1100) smallPairClosure_25 = true ",
+    "def leftCached : List (PairResidueVertex 1 1) ",
+    "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+    "def rightCached : List (PairResidueVertex 1 1) ",
+    "def rightRows : List (\u2115 \u00d7 List \u2115) ",
+    "theorem sieve_eq : sieve = smallPairSieve_1_1 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared25.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared25.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared25.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared25.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).2 = true ",
+    "theorem smallPairNoTriangle_25_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_25 = true "
+  ],
+  "prefix_parts": [
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk00",
+      "offset": 0
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk01",
+      "offset": 64
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk02",
+      "offset": 128
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk03",
+      "offset": 192
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk04",
+      "offset": 256
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk05",
+      "offset": 320
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk06",
+      "offset": 384
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk07",
+      "offset": 448
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk08",
+      "offset": 512
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk09",
+      "offset": 576
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure25Chunk10",
+      "offset": 640
+    },
+    {
+      "count": 58,
+      "module": "SmallPairGraphClosure25Chunk11",
+      "offset": 704
+    }
+  ],
+  "root_integration": false,
+  "source_manifest": {
+    "SmallPairGraphArithmetic25": "adbd31c0b9ce182d87399cdbbe96f473c24aa8d054625ec7524511b6667c572d",
+    "SmallPairGraphClosure25": "d76b5a372dcc2a0a86abd57001a94b86fd9580c549192fe65cf554ec752528d1",
+    "SmallPairGraphClosure25Chunk00": "b133e4308ad08eca5b77717c5bcb485d54fc1431e936eaa55296c316f9e28616",
+    "SmallPairGraphClosure25Chunk01": "426085ac4121c288e28d8ead7258490e9470b9fd4a39788c74359c2df65e639e",
+    "SmallPairGraphClosure25Chunk02": "43efbabf94b253569d106a05b42e2cbc3f9dfaa688f10d3548d7af2c4c23625a",
+    "SmallPairGraphClosure25Chunk03": "fbc0f49942b8af5216a5d54ba40545860d5a4155b27fb1367672669e48d562e9",
+    "SmallPairGraphClosure25Chunk04": "87887c7aeebb183e7b4dbcba6c9d5c5a59ab2fc66ffa36afc9f9efe75415a44e",
+    "SmallPairGraphClosure25Chunk05": "74df9399b6f9fd8eed01aae4551e9d6474bb575ea61dce8243888f833e0807bb",
+    "SmallPairGraphClosure25Chunk06": "897bb242c854883c3eb3fb81ece57e9fe91626d174c19459e38e1ef1612efc80",
+    "SmallPairGraphClosure25Chunk07": "2236268d2be17d8b3f44e28ea50e4be3df7776543a7dd9e40ae13e5120c36345",
+    "SmallPairGraphClosure25Chunk08": "1e1dbdddc34a2e43fb4a5a83a0052874facc2116f1b9876032ef89eb859b3ec7",
+    "SmallPairGraphClosure25Chunk09": "3123d0708afc842a94b70624c9934c2b454d6a1b4ae3d22a7813badb96e0678c",
+    "SmallPairGraphClosure25Chunk10": "58240911183a0f69264acef55e94ea9678ae650d3cde046bbd0366352082cc96",
+    "SmallPairGraphClosure25Chunk11": "d95d99c9c85da4bb63f77d87dc4c5b9917e6d5bfd8f60e6d7c5d7af76724ab8d",
+    "SmallPairGraphClosure25Coverage": "77a810005a03b4bc385ebccc885c63c7b573f20b72ade9df8c6bd3e3754a7530",
+    "SmallPairGraphData25": "cef7208eaaee99bc29dba01a22e8d816599dd69af1f34088426e5cafe74a600a",
+    "SmallPairGraphInputs25": "e21e9c8c3f0ad8438726b3bcb26af38e89411d1090e9304422abee471ce9c18b",
+    "SmallPairGraphTriangle25": "fa05c5cdeefddbdb8b3935e9a00083ee1ceeed81cdd9aafc2366023452fb1c49",
+    "SmallPairGraphWitnessData25": "aad5db997a1a656ffe11b6d5627d083e2addabe315319a0bfb8ab88b70e20b6a",
+    "SmallPairLightAssembly25": "bd192e00e2176c523d859addb25c5bf30a7494b725c17168d6f36a58f7031fa6",
+    "SmallPairRawSelectedData25": "76ed86bf2dc6bf86b79bbaa574dff6d99fb70878ea6d86009fc7c483af4f7e54"
+  },
+  "source_provenance": {
+    "/Users/tp/Lean/D1Bound5/D1Bound5/SmallPairGraphClosure29Coverage.lean": "16bbbcfa2e81413a9c2553d413b4d7d2e2f9203e70dc18f06687328ff90afce1",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphArithmetic25.lean": "adbd31c0b9ce182d87399cdbbe96f473c24aa8d054625ec7524511b6667c572d",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphClosure25.lean": "fee51bd2f50af70f54d081386630bc3e88b5b14b2a68c149f1591d3c0cbabff4",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphData25.lean": "cef7208eaaee99bc29dba01a22e8d816599dd69af1f34088426e5cafe74a600a",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphInputs25.lean": "e21e9c8c3f0ad8438726b3bcb26af38e89411d1090e9304422abee471ce9c18b",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphTriangle25.lean": "fa05c5cdeefddbdb8b3935e9a00083ee1ceeed81cdd9aafc2366023452fb1c49",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairGraphWitnessData25.lean": "aad5db997a1a656ffe11b6d5627d083e2addabe315319a0bfb8ab88b70e20b6a",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairLightAssembly25.lean": "bd192e00e2176c523d859addb25c5bf30a7494b725c17168d6f36a58f7031fa6",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5/SmallPairRawSelectedData25.lean": "76ed86bf2dc6bf86b79bbaa574dff6d99fb70878ea6d86009fc7c483af4f7e54"
+  },
+  "status": "REVIEWED_GRAPH25_RESTORATION_NOT_BUILT"
+}

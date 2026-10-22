@@ -1,0 +1,52 @@
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairSeeds_25_checked: [propext, Quot.sound]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairFilter_25_checked: [propext, Quot.sound]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairLarge_25_count: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairSelectedPrepared25.leftCached: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairSelectedPrepared25.leftRows: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairSelectedPrepared25.rightCached: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairSelectedPrepared25.rightRows: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.sieve_eq: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.leftVertices_eq: [propext]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.leftCached_eq: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.leftRows_eq: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.left_checked: [propext, Classical.choice, Quot.sound]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.rightVertices_eq: [propext]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.rightCached_eq: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.rightRows_eq: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairLightPrepared25.right_checked: [propext, Classical.choice, Quot.sound]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairNoTriangle_25_checked: [propext, Classical.choice, Quot.sound]
+D1Bound5.smallPairSeeds_25_checked : D1Bound5.pairSeedsCoveredBool D1Bound5.smallPairA_25 D1Bound5.smallPairB_25
+    D1Bound5.seedRootDisk_1_1 D1Bound5.smallPairClosure_25 =
+  true
+D1Bound5.smallPairFilter_25_checked : D1Bound5.largePairVertices D1Bound5.smallPairA_25 D1Bound5.smallPairB_25
+    D1Bound5.smallPairClosure_25 =
+  D1Bound5.smallPairLarge_25
+D1Bound5.smallPairLarge_25_count : D1Bound5.smallPairLarge_25.length = 761
+D1Bound5.PairSelectedPrepared25.leftCached : List (D1Bound5.PairResidueVertex 1 1)
+D1Bound5.PairSelectedPrepared25.leftRows : List (ℕ × List ℕ)
+D1Bound5.PairSelectedPrepared25.rightCached : List (D1Bound5.PairResidueVertex 1 1)
+D1Bound5.PairSelectedPrepared25.rightRows : List (ℕ × List ℕ)
+D1Bound5.PairLightPrepared25.sieve_eq : D1Bound5.PairLightPrepared25.sieve = D1Bound5.smallPairSieve_1_1
+D1Bound5.PairLightPrepared25.leftVertices_eq : D1Bound5.PairLightPrepared25.leftVertices =
+  List.map D1Bound5.pairLightCoordinates
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_25 D1Bound5.PairGraphPrepared25.colors).1
+D1Bound5.PairLightPrepared25.leftCached_eq : D1Bound5.PairLightPrepared25.leftCached =
+  List.map D1Bound5.pairLightCachedCoordinates D1Bound5.PairSelectedPrepared25.leftCached
+D1Bound5.PairLightPrepared25.leftRows_eq : D1Bound5.PairLightPrepared25.leftRows =
+  D1Bound5.PairSelectedPrepared25.leftRows
+D1Bound5.PairLightPrepared25.left_checked : D1Bound5.pairIndependentBool D1Bound5.smallPairSieve_1_1
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_25 D1Bound5.PairGraphPrepared25.colors).1 =
+  true
+D1Bound5.PairLightPrepared25.rightVertices_eq : D1Bound5.PairLightPrepared25.rightVertices =
+  List.map D1Bound5.pairLightCoordinates
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_25 D1Bound5.PairGraphPrepared25.colors).2
+D1Bound5.PairLightPrepared25.rightCached_eq : D1Bound5.PairLightPrepared25.rightCached =
+  List.map D1Bound5.pairLightCachedCoordinates D1Bound5.PairSelectedPrepared25.rightCached
+D1Bound5.PairLightPrepared25.rightRows_eq : D1Bound5.PairLightPrepared25.rightRows =
+  D1Bound5.PairSelectedPrepared25.rightRows
+D1Bound5.PairLightPrepared25.right_checked : D1Bound5.pairIndependentBool D1Bound5.smallPairSieve_1_1
+    (D1Bound5.pairSplitByMask D1Bound5.smallPairLarge_25 D1Bound5.PairGraphPrepared25.colors).2 =
+  true
+D1Bound5.smallPairNoTriangle_25_checked : D1Bound5.pairGraphTriangleFreeBool D1Bound5.smallPairSieve_1_1
+    D1Bound5.smallPairLarge_25 =
+  true

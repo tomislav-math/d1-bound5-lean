@@ -1,0 +1,29 @@
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairA_25: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairB_25: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairClosure_25: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.smallPairLarge_25: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.colors: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.anchorRoot: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.rootPairs: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.witnesses: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.destinations: []
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.indexed_chunk00_checked: [propext, Quot.sound]
+GRAPH25_CLOSURE_AXIOMS_PASS D1Bound5.PairGraphPrepared25.indexed_coverage_checked: [propext]
+D1Bound5.smallPairA_25 : D1Bound5.QuadInt 1 1
+D1Bound5.smallPairB_25 : D1Bound5.QuadInt 1 1
+D1Bound5.smallPairClosure_25 : List (D1Bound5.QuadInt 1 1)
+D1Bound5.smallPairLarge_25 : List (D1Bound5.QuadInt 1 1)
+D1Bound5.PairGraphPrepared25.colors : ℕ
+D1Bound5.PairGraphPrepared25.anchorRoot : D1Bound5.QuadInt 1 1
+D1Bound5.PairGraphPrepared25.rootPairs : List (D1Bound5.QuadInt 1 1 × D1Bound5.QuadInt 1 1)
+D1Bound5.PairGraphPrepared25.witnesses : List (D1Bound5.PairRootWitness 1 1)
+D1Bound5.PairGraphPrepared25.destinations : List (Option ℕ × Option ℕ)
+D1Bound5.PairGraphPrepared25.indexed_chunk00_checked : D1Bound5.pairIndexedWitnessesPrefixBool D1Bound5.smallPairA_25
+    D1Bound5.smallPairB_25 D1Bound5.PairGraphPrepared25.anchorRoot (10 ^ 1100) D1Bound5.smallPairClosure_25 64
+    (List.drop 0 D1Bound5.PairGraphPrepared25.witnesses) (List.drop 0 D1Bound5.PairGraphPrepared25.destinations) =
+  true
+D1Bound5.PairGraphPrepared25.indexed_coverage_checked : decide
+    (D1Bound5.PairGraphPrepared25.anchorRoot * D1Bound5.PairGraphPrepared25.anchorRoot =
+        D1Bound5.smallPairA_25 * D1Bound5.smallPairB_25 + 1 ∧
+      List.map D1Bound5.PairRootWitness.vertex D1Bound5.PairGraphPrepared25.witnesses = D1Bound5.smallPairClosure_25) =
+  true

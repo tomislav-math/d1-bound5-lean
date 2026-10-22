@@ -1,0 +1,140 @@
+[
+  {
+    "current_sha256": "e21e9c8c3f0ad8438726b3bcb26af38e89411d1090e9304422abee471ce9c18b",
+    "declarations": [
+      {
+        "header": ": QuadInt 1 1",
+        "kind": "def",
+        "local_name": "smallPairA_25",
+        "name": "D1Bound5.smallPairA_25",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": QuadInt 1 1",
+        "kind": "def",
+        "local_name": "smallPairB_25",
+        "name": "D1Bound5.smallPairB_25",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": List (QuadInt 1 1)",
+        "kind": "def",
+        "local_name": "smallPairClosure_25",
+        "name": "D1Bound5.smallPairClosure_25",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": List (QuadInt 1 1)",
+        "kind": "def",
+        "local_name": "smallPairLarge_25",
+        "name": "D1Bound5.smallPairLarge_25",
+        "namespace": "D1Bound5",
+        "opens": [
+          "open QuadInt"
+        ]
+      },
+      {
+        "header": ": \u2115",
+        "kind": "def",
+        "local_name": "colors",
+        "name": "D1Bound5.PairGraphPrepared25.colors",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": [
+          "open QuadInt"
+        ]
+      }
+    ],
+    "module": "SmallPairGraphInputs25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphInputs25.lean",
+    "original_sha256": "e21e9c8c3f0ad8438726b3bcb26af38e89411d1090e9304422abee471ce9c18b",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphInputs25.lean"
+  },
+  {
+    "current_sha256": "aad5db997a1a656ffe11b6d5627d083e2addabe315319a0bfb8ab88b70e20b6a",
+    "declarations": [
+      {
+        "header": ": QuadInt 1 1",
+        "kind": "def",
+        "local_name": "anchorRoot",
+        "name": "D1Bound5.PairGraphPrepared25.anchorRoot",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": List (QuadInt 1 1 \u00d7 QuadInt 1 1)",
+        "kind": "def",
+        "local_name": "rootPairs",
+        "name": "D1Bound5.PairGraphPrepared25.rootPairs",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": List (PairRootWitness 1 1)",
+        "kind": "def",
+        "local_name": "witnesses",
+        "name": "D1Bound5.PairGraphPrepared25.witnesses",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": List (Option \u2115 \u00d7 Option \u2115)",
+        "kind": "def",
+        "local_name": "destinations",
+        "name": "D1Bound5.PairGraphPrepared25.destinations",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphWitnessData25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphWitnessData25.lean",
+    "original_sha256": "aad5db997a1a656ffe11b6d5627d083e2addabe315319a0bfb8ab88b70e20b6a",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphWitnessData25.lean"
+  },
+  {
+    "current_sha256": "b133e4308ad08eca5b77717c5bcb485d54fc1431e936eaa55296c316f9e28616",
+    "declarations": [
+      {
+        "header": ":\n    pairIndexedWitnessesPrefixBool smallPairA_25 smallPairB_25 anchorRoot\n      (10^1100) smallPairClosure_25 64\n      (witnesses.drop 0) (destinations.drop 0) = true",
+        "kind": "theorem",
+        "local_name": "indexed_chunk00_checked",
+        "name": "D1Bound5.PairGraphPrepared25.indexed_chunk00_checked",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure25Chunk00",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphClosure25Chunk00.lean",
+    "original_sha256": "b133e4308ad08eca5b77717c5bcb485d54fc1431e936eaa55296c316f9e28616",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphClosure25Chunk00.lean"
+  },
+  {
+    "current_sha256": "77a810005a03b4bc385ebccc885c63c7b573f20b72ade9df8c6bd3e3754a7530",
+    "declarations": [
+      {
+        "header": ":\n    decide (anchorRoot * anchorRoot = smallPairA_25 * smallPairB_25 + 1 \u2227\n      witnesses.map PairRootWitness.vertex = smallPairClosure_25) = true",
+        "kind": "theorem",
+        "local_name": "indexed_coverage_checked",
+        "name": "D1Bound5.PairGraphPrepared25.indexed_coverage_checked",
+        "namespace": "D1Bound5.PairGraphPrepared25",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphClosure25Coverage",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphClosure25Coverage.lean",
+    "original_sha256": "77a810005a03b4bc385ebccc885c63c7b573f20b72ade9df8c6bd3e3754a7530",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphClosure25Coverage.lean"
+  }
+]

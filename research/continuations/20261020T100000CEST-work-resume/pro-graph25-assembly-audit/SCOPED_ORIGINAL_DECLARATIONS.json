@@ -1,0 +1,187 @@
+[
+  {
+    "current_sha256": "adbd31c0b9ce182d87399cdbbe96f473c24aa8d054625ec7524511b6667c572d",
+    "declarations": [
+      {
+        "header": ":\n    pairSeedsCoveredBool smallPairA_25 smallPairB_25\n      seedRootDisk_1_1 smallPairClosure_25 = true",
+        "kind": "theorem",
+        "local_name": "smallPairSeeds_25_checked",
+        "name": "D1Bound5.smallPairSeeds_25_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ":\n    largePairVertices smallPairA_25 smallPairB_25 smallPairClosure_25 = smallPairLarge_25",
+        "kind": "theorem",
+        "local_name": "smallPairFilter_25_checked",
+        "name": "D1Bound5.smallPairFilter_25_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      },
+      {
+        "header": ": smallPairLarge_25.length = 761",
+        "kind": "theorem",
+        "local_name": "smallPairLarge_25_count",
+        "name": "D1Bound5.smallPairLarge_25_count",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphArithmetic25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphArithmetic25.lean",
+    "original_sha256": "adbd31c0b9ce182d87399cdbbe96f473c24aa8d054625ec7524511b6667c572d",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphArithmetic25.lean"
+  },
+  {
+    "current_sha256": "76ed86bf2dc6bf86b79bbaa574dff6d99fb70878ea6d86009fc7c483af4f7e54",
+    "declarations": [
+      {
+        "header": ": List (PairResidueVertex 1 1)",
+        "kind": "def",
+        "local_name": "leftCached",
+        "name": "D1Bound5.PairSelectedPrepared25.leftCached",
+        "namespace": "D1Bound5.PairSelectedPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "leftRows",
+        "name": "D1Bound5.PairSelectedPrepared25.leftRows",
+        "namespace": "D1Bound5.PairSelectedPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": List (PairResidueVertex 1 1)",
+        "kind": "def",
+        "local_name": "rightCached",
+        "name": "D1Bound5.PairSelectedPrepared25.rightCached",
+        "namespace": "D1Bound5.PairSelectedPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": List (\u2115 \u00d7 List \u2115)",
+        "kind": "def",
+        "local_name": "rightRows",
+        "name": "D1Bound5.PairSelectedPrepared25.rightRows",
+        "namespace": "D1Bound5.PairSelectedPrepared25",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairRawSelectedData25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairRawSelectedData25.lean",
+    "original_sha256": "76ed86bf2dc6bf86b79bbaa574dff6d99fb70878ea6d86009fc7c483af4f7e54",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairRawSelectedData25.lean"
+  },
+  {
+    "current_sha256": "bd192e00e2176c523d859addb25c5bf30a7494b725c17168d6f36a58f7031fa6",
+    "declarations": [
+      {
+        "header": ": sieve = smallPairSieve_1_1",
+        "kind": "theorem",
+        "local_name": "sieve_eq",
+        "name": "D1Bound5.PairLightPrepared25.sieve_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftVertices = (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).1.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "leftVertices_eq",
+        "name": "D1Bound5.PairLightPrepared25.leftVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ":\n    leftCached = PairSelectedPrepared25.leftCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "leftCached_eq",
+        "name": "D1Bound5.PairLightPrepared25.leftCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": leftRows = PairSelectedPrepared25.leftRows",
+        "kind": "theorem",
+        "local_name": "leftRows_eq",
+        "name": "D1Bound5.PairLightPrepared25.leftRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).1 = true",
+        "kind": "theorem",
+        "local_name": "left_checked",
+        "name": "D1Bound5.PairLightPrepared25.left_checked",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightVertices = (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).2.map pairLightCoordinates",
+        "kind": "theorem",
+        "local_name": "rightVertices_eq",
+        "name": "D1Bound5.PairLightPrepared25.rightVertices_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ":\n    rightCached = PairSelectedPrepared25.rightCached.map pairLightCachedCoordinates",
+        "kind": "theorem",
+        "local_name": "rightCached_eq",
+        "name": "D1Bound5.PairLightPrepared25.rightCached_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ": rightRows = PairSelectedPrepared25.rightRows",
+        "kind": "theorem",
+        "local_name": "rightRows_eq",
+        "name": "D1Bound5.PairLightPrepared25.rightRows_eq",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      },
+      {
+        "header": ":\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_25 PairGraphPrepared25.colors).2 = true",
+        "kind": "theorem",
+        "local_name": "right_checked",
+        "name": "D1Bound5.PairLightPrepared25.right_checked",
+        "namespace": "D1Bound5.PairLightPrepared25",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairLightAssembly25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairLightAssembly25.lean",
+    "original_sha256": "bd192e00e2176c523d859addb25c5bf30a7494b725c17168d6f36a58f7031fa6",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairLightAssembly25.lean"
+  },
+  {
+    "current_sha256": "fa05c5cdeefddbdb8b3935e9a00083ee1ceeed81cdd9aafc2366023452fb1c49",
+    "declarations": [
+      {
+        "header": ":\n    pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_25 = true",
+        "kind": "theorem",
+        "local_name": "smallPairNoTriangle_25_checked",
+        "name": "D1Bound5.smallPairNoTriangle_25_checked",
+        "namespace": "D1Bound5",
+        "opens": []
+      }
+    ],
+    "module": "SmallPairGraphTriangle25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphTriangle25.lean",
+    "original_sha256": "fa05c5cdeefddbdb8b3935e9a00083ee1ceeed81cdd9aafc2366023452fb1c49",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphTriangle25.lean"
+  },
+  {
+    "current_sha256": "cef7208eaaee99bc29dba01a22e8d816599dd69af1f34088426e5cafe74a600a",
+    "declarations": [],
+    "module": "SmallPairGraphData25",
+    "normalizations": [],
+    "original_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphData25.lean",
+    "original_sha256": "cef7208eaaee99bc29dba01a22e8d816599dd69af1f34088426e5cafe74a600a",
+    "original_source_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph25-closure/originals/SmallPairGraphData25.lean"
+  }
+]

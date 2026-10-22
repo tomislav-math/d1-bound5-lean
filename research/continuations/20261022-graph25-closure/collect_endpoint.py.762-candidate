@@ -1,0 +1,249 @@
+"""Collect already verified graph25 scopes; never run Lean, Lake, or a kernel replay."""
+from pathlib import Path
+from datetime import datetime, timezone
+import fcntl
+import hashlib
+import importlib.util
+import json
+import re
+import sys
+
+R = Path('/Users/tp/Lean/D1Bound5')
+C = R / 'research/continuations'
+W = C / '20261018T010800CEST-main-continuation'
+O = Path(__file__).resolve().parent
+DRIVER = W / 'continuation_driver_capacity.py'
+DRIVER_SHA = 'df17ea85c25eb77c7413f339d7ac673f28d63ca93a761317312ebef8876068db'
+ENDPOINT = 'SmallPairGraphData25'
+SCOPES = [
+    ('20261021-night-graph25-foundation', 'foundation'),
+    ('20261021-night-graph25-sides', 'left'),
+    ('20261022-graph25-right', 'right'),
+    ('20261022-graph25-closure', 'closure-pilot'),
+    ('20261022-graph25-closure', 'closure-rest'),
+    ('20261022-graph25-closure', 'assembly'),
+]
+
+
+def load(path):
+    return json.loads(Path(path).read_text())
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def fingerprint(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+
+
+def repo_file(value):
+    path = Path(value)
+    if not path.is_absolute():
+        path = R / path
+    assert path.is_file() and not path.is_symlink() and path.resolve().is_relative_to(R)
+    return path
+
+
+def merge(destination, values):
+    for key, value in values.items():
+        assert key not in destination or destination[key] == value, key
+        destination[key] = value
+
+
+def headers(text):
+    return [text[m.start():text.index(':=', m.start())]
+            for m in re.finditer(r'^(?:def|theorem|lemma|abbrev|structure) ', text, re.M)]
+
+
+def write_new(path, value):
+    with Path(path).open('x') as stream:
+        stream.write(json.dumps(value, indent=2, sort_keys=True) + '\n')
+
+
+assert O == C / '20261022-graph25-closure'
+assert sha(DRIVER) == DRIVER_SHA
+assert not (O / 'ENDPOINT_VERIFICATION.json').exists()
+assert not (O / 'ENDPOINT_PROOF_STATE.json').exists()
+spec = importlib.util.spec_from_file_location('graph25_endpoint_collection_driver', DRIVER)
+module = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = module
+spec.loader.exec_module(module)
+
+with (W / 'continuation-driver.lock').open('r+') as owner, \
+        (W / 'continuation-intake.lock').open('r+') as intake:
+    for lock in (owner, intake):
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    driver = module.Driver(R, W)
+    active = load(driver.active_path)
+    assert not active.get('active') and not active.get('protected_closure')
+    queue = load(driver.queue_path)
+    assert queue['max_parallel'] == 1 and queue['pause_after_current'] is True
+    latest = driver.latest()
+    targets = []
+    source_guards = {}
+    artifact_guards = {}
+    file_guards = {str(DRIVER): DRIVER_SHA}
+    scope_evidence = {}
+    totals = {'definitions': 0, 'theorems': 0, 'guarded_builds': 0,
+              'targeted_same_kernel_replays': 0}
+    for unit, scope in SCOPES:
+        folder = C / unit
+        summary_path = folder / (scope + '-VERIFICATION_SUMMARY.json')
+        summary = load(summary_path)
+        assert summary['status'] == 'SCOPED_VERIFICATION_PASS'
+        assert summary['public_headers_exact'] is True
+        assert summary['root_integration'] is False and summary['main_theorem_complete'] is False
+        unit_targets = summary['targets']
+        assert unit_targets == load(folder / (scope + '-TARGETS.json'))
+        assert unit_targets and len(unit_targets) == len(set(unit_targets))
+        assert not set(targets) & set(unit_targets), 'Duplicate targets across scopes'
+        targets.extend(unit_targets)
+        audit_rel = Path(summary['audit'])
+        assert not audit_rel.is_absolute() and '..' not in audit_rel.parts
+        audit = R / audit_rel
+        assert audit.resolve().parent == (C / '20261020T100000CEST-work-resume').resolve()
+        assert not load(audit / 'active-targeted-replay.json')['active']
+        final = load(audit / 'BOUND_AUDIT_FINAL.json')
+        receipts = load(audit / 'TARGETED_REPLAY_RECEIPTS.json')
+        assert final['status'] == 'BOUND_SCOPED_AUDIT_PASS' and final['records'] == receipts
+        assert [row['label'] for row in receipts] == ['analytic-type-axioms'] + [
+            name + '-targeted-replay' for name in unit_targets]
+        assert all(row['exit'] == 0 and not row['timed_out'] and row['guards_unchanged']
+                   and not row['binding_drift_paths'] for row in receipts)
+        binding_path = audit / 'PREPARATION_BINDINGS.json'
+        binding = load(binding_path)
+        assert binding['schema'] == 1 and binding['audit_folder'] == str(audit.resolve())
+        assert binding['targets'] == binding['replays'] == unit_targets
+        assert final['binding_sha256'] == sha(binding_path)
+        for path, digest in binding['files'].items():
+            assert sha(repo_file(path)) == digest, path
+        merge(file_guards, binding['files'])
+        merge(file_guards, {str(binding_path): sha(binding_path)})
+        source_map_path = folder / (scope + '-SOURCE_MAP.json')
+        evidence_path = folder / (scope + '-ACCEPTED_DEPENDENCY_EVIDENCE.json')
+        sources = load(source_map_path)['sources']
+        evidence = load(evidence_path)
+        assert set(sources) == set(evidence)
+        assert binding['project_sources'] == {name: item['sha256'] for name, item in sources.items()}
+        for name, item in sources.items():
+            assert item['path'] == 'D1Bound5/' + name + '.lean'
+            assert sha(repo_file(item['path'])) == item['sha256'], name
+            closure = driver.closure(name)
+            key = module.fingerprint(closure)
+            expected = driver.expected_manifest(name, key, latest)
+            assert key == evidence[name]['fingerprint'] and expected, name
+            assert expected == evidence[name]['artifacts'] == driver.artifacts(name), name
+            merge(source_guards, {name: item['sha256']})
+            merge(artifact_guards, expected)
+            if name in unit_targets:
+                assert item['assurance'] == 'guarded_build_exact_public_type_transitive_axioms_targeted_same_kernel_replay'
+        assert all(artifact_guards.get(path) == digest
+                   for path, digest in binding['target_artifacts'].items())
+        configuration = load(folder / 'CONFIGURATION.json')
+        assert configuration == driver.static and driver.manifest_matches(configuration)
+        state_path = folder / (scope + '-PROOF_STATE.json')
+        state = load(state_path)
+        expected_state = {
+            'sources': [[name, item['sha256']] for name, item in sorted(sources.items())],
+            'configuration': configuration,
+            'build_fingerprints': {name: evidence[name]['fingerprint'] for name in unit_targets},
+            'artifact_fingerprints': {name: evidence[name]['artifacts'] for name in unit_targets},
+            'audit_harness_sha256': sha(audit / 'AnalyticAudit.lean'),
+            'accepted_checks': [{key: row[key] for key in ('label', 'exit', 'guards_unchanged')}
+                                for row in receipts],
+        }
+        assert state == expected_state and fingerprint(state) == summary['proof_fingerprint']
+        assert summary['guarded_builds'] == summary['targeted_same_kernel_replays'] == len(unit_targets)
+        assert summary['definitions'] + summary['theorems'] == summary['declarations']
+        for key in totals:
+            totals[key] += summary[key]
+        scope_evidence[str(summary_path.relative_to(R))] = {
+            'sha256': sha(summary_path), 'proof_fingerprint': summary['proof_fingerprint'],
+            'proof_state_sha256': sha(state_path),
+            'bound_audit_sha256': sha(audit / 'BOUND_AUDIT_FINAL.json'),
+            'targets': unit_targets,
+        }
+        for path in [summary_path, state_path, source_map_path, evidence_path,
+                     audit / 'BOUND_AUDIT_FINAL.json', audit / 'TARGETED_REPLAY_RECEIPTS.json',
+                     folder / 'CONFIGURATION.json', folder / (scope + '-TARGETS.json')]:
+            merge(file_guards, {str(path): sha(path)})
+
+    assert len(targets) == len(set(targets)) == 50 and ENDPOINT in targets
+    assert totals['guarded_builds'] == totals['targeted_same_kernel_replays'] == 50
+    endpoint_closure = driver.closure(ENDPOINT)
+    assert all(source_guards.get(name) == digest for name, digest in endpoint_closure.items())
+    endpoint_key = module.fingerprint(endpoint_closure)
+    endpoint_artifacts = driver.expected_manifest(ENDPOINT, endpoint_key, latest)
+    assert endpoint_artifacts and driver.artifacts(ENDPOINT) == endpoint_artifacts
+
+    installation_binding = load(O / 'INSTALL_BINDING.json')
+    plan = load(O / 'PLAN.json')
+    before = O / 'installation' / (ENDPOINT + '.before.lean')
+    assert sha(before) == installation_binding['original_merged_sha256']
+    assert before.stat().st_size == installation_binding['original_merged_bytes']
+    merged = before.read_text()
+    markers = list(re.finditer(
+        r'^/- Preserved body from D1Bound5\.(\w+); original SHA256 ([0-9a-f]{64})\. -/\n',
+        merged, re.M))
+    expected_originals = installation_binding['original_module_sha256']
+    assert len(markers) == len(expected_originals) == 8
+    assert {match[1] for match in markers} == set(expected_originals)
+    preserved_headers = []
+    for index, match in enumerate(markers):
+        name = match[1]
+        original = O / 'originals' / (name + '.lean')
+        candidate = O / 'candidates' / (name + '.lean')
+        current = R / 'D1Bound5' / (name + '.lean')
+        assert sha(original) == expected_originals[name] == match[2]
+        assert sha(candidate) == sha(current) == plan['source_manifest'][name]
+        old = original.read_text()
+        end = markers[index + 1].start() if index + 1 < len(markers) else len(merged)
+        assert re.sub(r'^import [^\n]*(?:\n|$)', '', old, flags=re.M).strip() == merged[match.end():end].strip()
+        assert headers(old) == headers(candidate.read_text()) == headers(current.read_text())
+        preserved_headers.extend(headers(old))
+        for path in [original, candidate]:
+            merge(file_guards, {str(path): sha(path)})
+    assert preserved_headers == headers(merged) == plan['original_public_headers']
+    assert len(preserved_headers) == plan['original_public_declarations'] == 28
+    count_header = 'theorem smallPairLarge_25_count : smallPairLarge_25.length = 761'
+    assert sum(' '.join(value.split()) == count_header for value in preserved_headers) == 1
+    for name, declaration in [('SmallPairGraphInputs25', 'smallPairClosure_25'),
+                              ('SmallPairGraphWitnessData25', 'rootPairs'),
+                              ('SmallPairGraphWitnessData25', 'destinations')]:
+        text = (R / 'D1Bound5' / (name + '.lean')).read_text()
+        match = re.search(r'^def ' + declaration + r'\b.*?:=\s*\[\n(.*?)\n\]', text, re.M | re.S)
+        assert match and len([line for line in match[1].splitlines() if line.strip()]) == 762
+    parts = plan['prefix_parts']
+    assert len(parts) == 12 and all(part['module'] in targets for part in parts)
+    assert [part['count'] for part in parts] == [64] * 11 + [58]
+    assert [i for part in parts for i in range(part['offset'], part['offset'] + part['count'])] == list(range(762))
+    assert plan['closure_rows'] == 762
+    for path in [O / 'INSTALL_BINDING.json', O / 'PLAN.json', before]:
+        merge(file_guards, {str(path): sha(path)})
+    assert all(sha(repo_file(path)) == digest for path, digest in file_guards.items())
+    assert all(sha(R / 'D1Bound5' / (name + '.lean')) == digest for name, digest in source_guards.items())
+    assert driver.manifest_matches(artifact_guards) and driver.manifest_matches(driver.static)
+    active = load(driver.active_path)
+    assert not active.get('active') and not active.get('protected_closure')
+    proof_state = {
+        'module': ENDPOINT, 'targets': targets, 'endpoint_source_closure': endpoint_closure,
+        'endpoint_build_fingerprint': endpoint_key, 'endpoint_artifacts': endpoint_artifacts,
+        'verified_sources': source_guards, 'verified_artifacts': artifact_guards,
+        'configuration': driver.static, 'scope_evidence': scope_evidence,
+        'original_public_headers_sha256': fingerprint(preserved_headers),
+        'closure_rows': 762, 'filtered_vertices': 761,
+    }
+    result = {
+        'status': 'GRAPH25_WORKING_ENDPOINT_SCOPED_VERIFIED',
+        'utc': datetime.now(timezone.utc).isoformat(), 'module': ENDPOINT,
+        'closure_rows': 762, 'filtered_vertices': 761,
+        'original_public_declarations_preserved': 28,
+        'module_and_check_totals': totals, 'source_closure_modules': len(endpoint_closure),
+        'scope_evidence': scope_evidence, 'proof_fingerprint': fingerprint(proof_state),
+        'root_integration': False, 'main_theorem_complete': False,
+        'publication': 'PREPARED_NOT_YET_PUSHED', 'compiler_run_by_collector': False,
+    }
+    write_new(O / 'ENDPOINT_PROOF_STATE.json', proof_state)
+    write_new(O / 'ENDPOINT_VERIFICATION.json', result)
+    print(json.dumps(result), flush=True)
