@@ -6,7 +6,7 @@ Authoritative count: research/continuations/20261022-graph46-closure/CURRENT_END
 Graph46 endpoint archive was privately pushed at 603331b5d7d5ffcafecf2652de7564a3b26b255a.
 Its actual publication receipt is in 20261022-graph46-endpoint-publication/POST_PUSH_RECEIPT.json.
 
-New checked unit: graph43 LEFT heads 0 through 90, each against its complete original tail.
+First checked unit: graph43 LEFT heads 0 through 90, each against its complete original tail.
 Eight parts [12,12,12,12,12,12,12,7] and their exact 91-head composition passed guarded builds,
 exact-type/transitive-axiom audit, and 10 targeted installed-kernel replays including the raw data.
 Evidence: research/continuations/20261022-economical-graph43-first91/VERIFICATION_SUMMARY.json.
@@ -33,3 +33,10 @@ two-small bounds, TwoSmallNondegenerateImpossible and MainTheorem. Clean-checkou
 original-type/axiom review, and integrated-root kernel replay are still required.
 Preserve the full original theorem over O_K of every imaginary quadratic field, including
 half-integral bases, tied moduli, zero pair-square roots, and distinct nonzero elements.
+
+Latest completed scope: graph43 LEFT heads 91..211, 121 heads with complete tails.
+Eleven part theorems and one exact composition passed guarded builds, the exact-type/axiom
+audit, and 12 targeted installed-kernel replays. Evidence: 20261022-economical-graph43-left001/VERIFICATION_SUMMARY.json.
+The block001 prepared status above is superseded by this actual result. Left heads 0..211 are now
+verified in two scopes; graph43 is still incomplete. First91 archive push: b656f1ff43fcfcdba156c800dd77099b31358d6c.
+Next action: run block002 for heads212..481 with current HEAD, after this checked unit is pushed.
