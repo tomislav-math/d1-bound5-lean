@@ -1,0 +1,85 @@
+{
+  "assurance": "RAW_DATA_BUILD_ONLY; NO_GUARDED_DRIVER_ACCEPTANCE; NO_GRAPH_ENDPOINT_PROOF",
+  "base_commit": "91411eede8ee5f726362c031322ec97078b82a57",
+  "canonical_root_integrated": false,
+  "git_mutations_performed_by_this_script": [],
+  "main_theorem_complete": false,
+  "observed_review_sha256": "3b129869db3de27599fd61c17a4e99f77fe9125e1807ec7b19f7d29fed8ad1e3",
+  "original_build_result": {
+    "exit": 0,
+    "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261022-graph43-pilot/SmallPairLightData43Left-build.log",
+    "module": "SmallPairLightData43Left",
+    "seconds": 165.162,
+    "source_sha256_after": "fe5cf826078feacc3260d2508e813308329947bff39d67fdf3317016b5534f8a",
+    "source_sha256_before": "fe5cf826078feacc3260d2508e813308329947bff39d67fdf3317016b5534f8a",
+    "timed_out": false
+  },
+  "original_build_start": {
+    "command": [
+      "/Users/tp/.elan/bin/lake",
+      "build",
+      "D1Bound5.SmallPairLightData43Left"
+    ],
+    "module": "SmallPairLightData43Left",
+    "scope": "raw-existing-data",
+    "source_sha256": "fe5cf826078feacc3260d2508e813308329947bff39d67fdf3317016b5534f8a",
+    "started_epoch": 1792648828.0140202,
+    "timeout_seconds": 240
+  },
+  "original_data_source_unchanged": true,
+  "original_exact_index_review": {
+    "exit": 1,
+    "report": {
+      "detail": "A staged-tree proof source lacks a source fingerprint",
+      "status": "INDEX_REVIEW_FAILED_NO_MUTATION"
+    }
+  },
+  "original_index_sha256": "65cfe259d559a4f7f4e958498056ad9577742a0f7410a5ce2de4abba74515f65",
+  "original_staged_sha256": {
+    "D1Bound5/SmallPairLightData43Left.lean": "fe5cf826078feacc3260d2508e813308329947bff39d67fdf3317016b5534f8a",
+    "records/PRO_CONTINUATION_HANDOFF.md": "0b1aa52f4939299cabaf51818fc5961b6e540b0386178d8288a34f0bf43ca288",
+    "research/continuations/20261022-graph43-pilot/BUILD_RESULT.json": "ab34246e8cec4b2b99358f1cabec83b6cd167141ec2b5f97e13d31de790bae65",
+    "research/continuations/20261022-graph43-pilot/START.json": "79745fbf505eb22f367f52fc9c29ee5ed6492853bd2ae6e82b0f9459a62608da",
+    "research/continuations/20261022-graph43-pilot/SmallPairLightData43Left-build.log": "e296cd2854567faf9f161c7a0120bda6288c155e6d102cbd4214e2f33fd0db3c"
+  },
+  "preparation_preflight": {
+    "exit": 0,
+    "report": {
+      "heads_match": true,
+      "local_head": "91411eede8ee5f726362c031322ec97078b82a57",
+      "manifest_counts": {
+        "records/proof-source-sha256.txt": 110,
+        "records/verification-tools-sha256.txt": 58
+      },
+      "permission": "ADMIN",
+      "read_only": true,
+      "remote_head": "91411eede8ee5f726362c031322ec97078b82a57",
+      "repository": "tomislav-math/d1-bound5-lean",
+      "staged_count": 5,
+      "status": "PREFLIGHT_PASS_REVIEW_STILL_REQUIRED",
+      "utc": "2026-10-22T07:17:45.743422+00:00",
+      "visibility": "PRIVATE"
+    }
+  },
+  "prior_pre_execution_refusals_preserved_in_handoff": [
+    "compiler launch",
+    "trial source move",
+    "original five-file commit"
+  ],
+  "prior_refusals_overridden": false,
+  "proposed_staging": "Separately unstage only the D1 data path; stage the research snapshot, this record, and updated handoff; retain the existing three raw build records.",
+  "reason": "The data-only source lacks an indexed proof-source fingerprint. Preserve it as research without changing proof manifests or claiming driver acceptance.",
+  "source_snapshot": {
+    "bytes": 603005,
+    "origin": "D1Bound5/SmallPairLightData43Left.lean",
+    "path": "research/continuations/20261022-graph43-pilot/source_snapshot/SmallPairLightData43Left.lean",
+    "sha256": "fe5cf826078feacc3260d2508e813308329947bff39d67fdf3317016b5534f8a"
+  },
+  "status": "RESEARCH_ARCHIVE_PREPARED_NOT_STAGED_OR_COMMITTED",
+  "trial": {
+    "path": "D1Bound5/SmallPairLightAdaptiveLeft43_000Part00.lean",
+    "sha256": "4c0744092a91c97188c41e360adef5aac60230014047e13b6f48e7adf67c5fa9",
+    "status": "UNCOMPILED_UNVERIFIED_UNCHANGED_NOT_SELECTED"
+  },
+  "utc": "2026-10-22T07:17:49.012127+00:00"
+}

@@ -1,5 +1,19 @@
 # Current D1 formalization handoff
 
+## 22 October 2026 — graph43 research archive reconciliation
+
+A fresh exact-index review rejected the earlier five-file staged snapshot because the added `D1Bound5/SmallPairLightData43Left.lean` has no indexed proof-source fingerprint. The ordinary private-repository preflight passed; it does not replace that exact-index requirement. No proof manifest or acceptance record is changed.
+
+The exact data-source bytes are now also preserved under `research/continuations/20261022-graph43-pilot/source_snapshot/SmallPairLightData43Left.lean`, with the original raw build evidence and a `RECONCILIATION.json` record. The original D1 data source and the uncompiled trial remain unchanged. This prepares a narrower research-only archive; it has not yet been staged, committed, or pushed. Subsequent index changes and publication require separate ordinary reviewed tool calls.
+
+The preceding raw data build does not establish guarded driver acceptance or a graph43 endpoint theorem. The earlier compiler-launch, move, and commit refusals remain historical facts and are not overridden by this preparation. The older instruction below to keep the five-file index intact describes that earlier state; the proposed repaired archive preserves its evidence while removing the unverified D1 source from the commit selection only. Main theorem UNPROVED; canonical-root integration remains unverified.
+
+## 22 October 2026 — graph43 left-data compilation and proof draft
+
+The original `SmallPairLightData43Left.lean` compiled successfully with pinned Lake/Lean in 165.162 s (exit 0; timeout 240 s). Its SHA256 remained `fe5cf826078feacc3260d2508e813308329947bff39d67fdf3317016b5534f8a`. Evidence is in `research/continuations/20261022-graph43-pilot/BUILD_RESULT.json` and the adjacent build log. This is a data-module build, not a proof or root integration.
+
+A new pilot theorem source `D1Bound5/SmallPairLightAdaptiveLeft43_000Part00.lean` expresses the first twelve graph43 left-head independence checks with complete tails. It is UNCOMPILED and UNVERIFIED because the compiler-launch tool call was refused before execution. A subsequent attempt to move the trial source into the research directory was also refused before execution. Do not treat this file as an accepted dependency or claim a theorem from it. It requires pinned compilation, type/axiom checks and kernel replay. Five reviewed files (the compiled left-data source, this handoff, the START/build JSON receipts and compiler log) were staged, with `git diff --cached --check` and the private-repository Git preflight both passing. The normal Git commit command was refused before execution. No new commit or push occurred; keep the staged index intact. Reuse the verified Graph43 left-data build; do not rerun identical source bytes without a concrete reason.
+
 Main theorem UNPROVED. Canonical-root integration remains unverified.
 
 Graph11 is now a complete verified working endpoint. The actual endpoint
