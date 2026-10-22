@@ -42,7 +42,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
    for block in ['000','001','002']:
     n='SmallPairLight'+side+'3Prefix'+block;c=d.closure(n);key=m.fingerprint(c);expected=d.expected_manifest(n,key,d.latest())
     assert expected and expected==d.artifacts(n),'Missing current verified prefix '+n
-  scopes=[R/'research/continuations'/('20261022-economical-graph3-'+short) for short in ['left-pilot12-v2','left000','left001','left002','right-pilot12','right000','right001','right002']]
+  scopes=[R/'research/continuations'/('20261022-economical-graph3-'+short) for short in ['left-pilot12-v2','left000','left001','left002','right-pilot12-v2','right000','right001','right002']]
   refs=[p for p in proposal.rglob('*') if p.is_file()]+[R/'research/continuations/20261022-graph3-foundation/foundation_inputs.py']
   for scope in scopes:
    a=json.loads((scope/'VERIFICATION_SUMMARY.json').read_text());assert a['status']=='SCOPED_VERIFICATION_PASS'

@@ -38,9 +38,9 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   assert not (O/'PLAN.json').exists()
   seed=R/'D1Bound5/SmallPairLightAdaptiveLeft43_000Part00.lean'
   assert sha(seed)=='4c0744092a91c97188c41e360adef5aac60230014047e13b6f48e7adf67c5fa9'
-  pilot=R/'research/continuations/20261022-economical-graph3-right-pilot12'
-  ps=json.loads((pilot/'VERIFICATION_SUMMARY.json').read_text());assert ps['status']=='SCOPED_VERIFICATION_PASS' and ps['targeted_kernel_replays']==4
-  pa=json.loads((pilot/'AUDIT_RESULTS.json').read_text());assert len(pa)==5 and all(x['exit']==0 and not x['timed_out'] for x in pa)
+  pilot=R/'research/continuations/20261022-economical-graph3-right-pilot12-v2'
+  ps=json.loads((pilot/'VERIFICATION_SUMMARY.json').read_text());assert ps['status']=='SCOPED_VERIFICATION_PASS' and ps['targeted_kernel_replays']==5
+  pa=json.loads((pilot/'AUDIT_RESULTS.json').read_text());assert len(pa)==6 and all(x['exit']==0 and not x['timed_out'] for x in pa)
   assert all(sha(R/'D1Bound5'/(n+'.lean'))==h for n,h in ps['source_closure'].items())
   assert all(d.artifacts(n)==v for n,v in ps['artifacts'].items()) and d.manifest_matches(ps['configuration'])
   references={str(p.relative_to(R)):sha(p) for p in [seed,pilot/'VERIFICATION_SUMMARY.json',pilot/'AUDIT_RESULTS.json',pilot/'AnalyticAudit.lean',pilot/'run_unit.py']}
