@@ -51,7 +51,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
    for n,a in summary['artifacts'].items():merge(verified_artifacts,a)
    replayed.update(row['command'][-1].removeprefix('D1Bound5.') for row in kernels)
    audit_count+=len(types);kernel_count+=len(kernels)
-   scope_records[short]={'summary_sha256':sha(folder/'VERIFICATION_SUMMARY.json'),'audit_results_sha256':sha(folder/'AUDIT_RESULTS.json'),'audit_input_sha256':{row['command'][-1]:sha(row['command'][-1]) for row in types},'targeted_kernel_replays':len(kernels),'targets':summary['targets']}
+   scope_records[short]={'summary_sha256':sha(folder/'VERIFICATION_SUMMARY.json'),'audit_results_sha256':sha(folder/'AUDIT_RESULTS.json'),'audit_input_sha256':{row['command'][-1]:sha(row['command'][-1]) for row in types},'targeted_kernel_replays':len(kernels),'targets':summary['targets'],'no_separate_kernel_replay_modules':{n:{'definitions':16 if n=='SmallPairLightAdaptiveData43' else 0,'theorems':0,'basis':'guarded typechecked aliases; no separate new replay claimed' if n=='SmallPairLightAdaptiveData43' else 'import facade without declarations'} for n in sorted(missing)}}
   latest=d.latest();closure=d.closure('SmallPairGraphData43');assert set(closure)<=set(verified_sources)
   q=load(d.queue_path);assert q['max_parallel']==1 and q['pause_after_current'] is True
   current=[];evidence={};all_sources={};all_artifacts={}

@@ -7,4 +7,6 @@ while time.monotonic()<limit:
  if (O/'VERIFICATION_SUMMARY.json').exists() and not json.loads((O/'OWNER.json').read_text())['active']:break
  time.sleep(2)
 else:raise TimeoutError('Proof worker still active; no publication changes performed')
+if json.loads((O/'VERIFICATION_SUMMARY.json').read_text()).get('graph43_endpoint_complete',False):
+ subprocess.run(['/Users/tp/.local/bin/python3.12','-B',str(W/'20261022-economical-graph43-closure/collect_endpoint.py')],check=True)
 subprocess.run(['/Users/tp/.local/bin/python3.12','-B',str(Path(__file__).with_name('prepare.py')),O.name,sys.argv[2]],check=True)

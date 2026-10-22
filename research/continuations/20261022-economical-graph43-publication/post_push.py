@@ -7,5 +7,5 @@ h=g('rev-parse','HEAD');remote=g('ls-remote','origin','refs/heads/main').split()
 hashes=json.loads((O/'PUBLICATION_HASHES.json').read_text())
 for p,v in hashes.items():assert hashlib.sha256(subprocess.check_output(['git','-C',str(R),'show',h+':'+p])).hexdigest()==v
 info=json.loads(subprocess.check_output(['/Users/tp/.local/bin/gh','repo','view','tomislav-math/d1-bound5-lean','--json','visibility']));assert info['visibility']=='PRIVATE'
-review=json.loads((O/'INDEX_REVIEW.json').read_text());a={'status':'PUSH_VERIFIED','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'head':h,'remote_head':remote,'committed_paths':review['changed_paths'],'reviewed_paths':len(hashes),'main_theorem_complete':False,'graph43_complete':False}
+review=json.loads((O/'INDEX_REVIEW.json').read_text());a={'status':'PUSH_VERIFIED','utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'head':h,'remote_head':remote,'committed_paths':review['changed_paths'],'reviewed_paths':len(hashes),'main_theorem_complete':False,'graph43_complete':json.loads((O/'VERIFICATION_SUMMARY.json').read_text()).get('graph43_endpoint_complete',False)}
 (O/'POST_PUSH_RECEIPT.json').write_text(json.dumps(a,indent=2)+'\n');print(json.dumps(a))
