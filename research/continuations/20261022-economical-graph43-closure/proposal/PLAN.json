@@ -1,0 +1,569 @@
+{
+  "all_original_literal_definitions_byte_identical": true,
+  "both_mutation_signs_and_global_indices_preserved": true,
+  "build_order": [
+    "SmallPairGraphInputs43",
+    "SmallPairGraphWitnessData43",
+    "SmallPairGraphClosure43Chunk00",
+    "SmallPairGraphClosure43Chunk01",
+    "SmallPairGraphClosure43Chunk02",
+    "SmallPairGraphClosure43Chunk03",
+    "SmallPairGraphClosure43Chunk04",
+    "SmallPairGraphClosure43Chunk05",
+    "SmallPairGraphClosure43Chunk06",
+    "SmallPairGraphClosure43Chunk07",
+    "SmallPairGraphClosure43Chunk08",
+    "SmallPairGraphClosure43Chunk09",
+    "SmallPairGraphClosure43Chunk10",
+    "SmallPairGraphClosure43Chunk11",
+    "SmallPairGraphClosure43Chunk12",
+    "SmallPairGraphClosure43Chunk13",
+    "SmallPairGraphClosure43Chunk14",
+    "SmallPairGraphClosure43Chunk15",
+    "SmallPairGraphClosure43Coverage",
+    "SmallPairGraphClosure43",
+    "SmallPairGraphArithmetic43",
+    "SmallPairRawSelectedData43LeftCached",
+    "SmallPairRawSelectedData43LeftRows",
+    "SmallPairRawSelectedData43RightCached",
+    "SmallPairRawSelectedData43RightRows",
+    "SmallPairRawSelectedData43",
+    "SmallPairLightAssembly43",
+    "SmallPairGraphTriangle43",
+    "SmallPairGraphData43"
+  ],
+  "closure_rows": 963,
+  "coverage_template_sha256": "16bbbcfa2e81413a9c2553d413b4d7d2e2f9203e70dc18f06687328ff90afce1",
+  "exact_merged_reconstruction": true,
+  "filtered_vertices": 962,
+  "main_theorem_complete": false,
+  "model": {
+    "nu": 3,
+    "tau": 1
+  },
+  "original_merged_bytes": 2201748,
+  "original_merged_sha256": "c8b0e4d07c00c5f0487a39f9e38ea0985ad50064dcbbaff514849bf0dc886ec2",
+  "original_public_declarations": 28,
+  "original_public_headers": [
+    "def smallPairA_43 : QuadInt 1 3 ",
+    "def smallPairB_43 : QuadInt 1 3 ",
+    "def smallPairClosure_43 : List (QuadInt 1 3) ",
+    "def smallPairLarge_43 : List (QuadInt 1 3) ",
+    "def colors : \u2115 ",
+    "theorem smallPairSeeds_43_checked :\n    pairSeedsCoveredBool smallPairA_43 smallPairB_43\n      seedRootDisk_1_3 smallPairClosure_43 = true ",
+    "theorem smallPairFilter_43_checked :\n    largePairVertices smallPairA_43 smallPairB_43 smallPairClosure_43 = smallPairLarge_43 ",
+    "theorem smallPairLarge_43_count : smallPairLarge_43.length = 962 ",
+    "def anchorRoot : QuadInt 1 3 ",
+    "def rootPairs : List (QuadInt 1 3 \u00d7 QuadInt 1 3) ",
+    "def witnesses : List (PairRootWitness 1 3) ",
+    "def destinations : List (Option \u2115 \u00d7 Option \u2115) ",
+    "theorem PairGraphPrepared43.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_43 smallPairB_43 anchorRoot\n      (10^1100) smallPairClosure_43 witnesses destinations = true ",
+    "theorem smallPairClosure_43_checked :\n    pairClosureBool smallPairA_43 smallPairB_43\n      (10^1100) smallPairClosure_43 = true ",
+    "def leftCached : List (PairResidueVertex 1 3) ",
+    "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+    "def rightCached : List (PairResidueVertex 1 3) ",
+    "def rightRows : List (\u2115 \u00d7 List \u2115) ",
+    "theorem sieve_eq : sieve = smallPairSieve_1_3 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared43.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared43.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_1_3 (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared43.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared43.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_1_3 (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).2 = true ",
+    "theorem smallPairNoTriangle_43_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_3 smallPairLarge_43 = true "
+  ],
+  "original_source_manifest": {
+    "SmallPairGraphArithmetic43": "e5f34b379ce5169c43ac116b737d74c40f2d6c8e9799f87b666db23e5ef5c3f2",
+    "SmallPairGraphClosure43": "d73ec88844775660cbbcbe575180e6aaf2bd2865d9392acaecd7f4d36b13fdb2",
+    "SmallPairGraphData43": "2d3c77d61e5d29b44efddfd3692b2666c7300f104de89a8dd27cb3839201bc1a",
+    "SmallPairGraphInputs43": "4f8fe115d6404e1d98e2072adad71686b983e444069ed6e86739c4ba59ead417",
+    "SmallPairGraphTriangle43": "9e0618e09278664bac7c07fe4f54e9091267acb082d3de0ff1ed1edd484a6733",
+    "SmallPairGraphWitnessData43": "9dedcb1381b8d96deb7061067833410f8e6c6541ff04be6c3d57d380c7f29cd8",
+    "SmallPairLightAssembly43": "a1f93b85259f267bea1466e442343da00fa48b8f5128ef4939b965627b146f42",
+    "SmallPairRawSelectedData43": "4ec9cdf67e2fc91216a258db43373d2698e83460bab30b291ebfb01d36752cc9"
+  },
+  "origins": {
+    "SmallPairGraphArithmetic43": {
+      "names": [
+        "smallPairSeeds_43_checked",
+        "smallPairFilter_43_checked",
+        "smallPairLarge_43_count"
+      ],
+      "original_module": "SmallPairGraphArithmetic43",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphClosure43": {
+      "names": [
+        "PairGraphPrepared43.indexed_checked",
+        "smallPairClosure_43_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43",
+      "preservation": "original_headers_only"
+    },
+    "SmallPairGraphClosure43Chunk00": {
+      "names": [
+        "indexed_chunk00_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk00",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk01": {
+      "names": [
+        "indexed_chunk01_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk01",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk02": {
+      "names": [
+        "indexed_chunk02_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk02",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk03": {
+      "names": [
+        "indexed_chunk03_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk03",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk04": {
+      "names": [
+        "indexed_chunk04_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk04",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk05": {
+      "names": [
+        "indexed_chunk05_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk05",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk06": {
+      "names": [
+        "indexed_chunk06_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk06",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk07": {
+      "names": [
+        "indexed_chunk07_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk07",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk08": {
+      "names": [
+        "indexed_chunk08_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk08",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk09": {
+      "names": [
+        "indexed_chunk09_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk09",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk10": {
+      "names": [
+        "indexed_chunk10_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk10",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk11": {
+      "names": [
+        "indexed_chunk11_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk11",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk12": {
+      "names": [
+        "indexed_chunk12_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk12",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk13": {
+      "names": [
+        "indexed_chunk13_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk13",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk14": {
+      "names": [
+        "indexed_chunk14_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk14",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Chunk15": {
+      "names": [
+        "indexed_chunk15_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Chunk15",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphClosure43Coverage": {
+      "names": [
+        "indexed_coverage_checked"
+      ],
+      "original_module": "SmallPairGraphClosure43Coverage",
+      "preservation": "new_reviewed_helper"
+    },
+    "SmallPairGraphData43": {
+      "names": [],
+      "original_module": "SmallPairGraphData43",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphInputs43": {
+      "names": [
+        "smallPairA_43",
+        "smallPairB_43",
+        "smallPairClosure_43",
+        "smallPairLarge_43",
+        "colors"
+      ],
+      "original_module": "SmallPairGraphInputs43",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphTriangle43": {
+      "names": [
+        "smallPairNoTriangle_43_checked"
+      ],
+      "original_module": "SmallPairGraphTriangle43",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairGraphWitnessData43": {
+      "names": [
+        "anchorRoot",
+        "rootPairs",
+        "witnesses",
+        "destinations"
+      ],
+      "original_module": "SmallPairGraphWitnessData43",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairLightAssembly43": {
+      "names": [
+        "sieve_eq",
+        "leftVertices_eq",
+        "leftCached_eq",
+        "leftRows_eq",
+        "left_checked",
+        "rightVertices_eq",
+        "rightCached_eq",
+        "rightRows_eq",
+        "right_checked"
+      ],
+      "original_module": "SmallPairLightAssembly43",
+      "preservation": "exact_module_bytes"
+    },
+    "SmallPairRawSelectedData43": {
+      "names": [],
+      "original_module": "SmallPairRawSelectedData43",
+      "preservation": "imports_only_wrapper"
+    },
+    "SmallPairRawSelectedData43LeftCached": {
+      "names": [
+        "leftCached"
+      ],
+      "original_module": "SmallPairRawSelectedData43",
+      "preservation": "exact_declaration_source"
+    },
+    "SmallPairRawSelectedData43LeftRows": {
+      "names": [
+        "leftRows"
+      ],
+      "original_module": "SmallPairRawSelectedData43",
+      "preservation": "exact_declaration_source"
+    },
+    "SmallPairRawSelectedData43RightCached": {
+      "names": [
+        "rightCached"
+      ],
+      "original_module": "SmallPairRawSelectedData43",
+      "preservation": "exact_declaration_source"
+    },
+    "SmallPairRawSelectedData43RightRows": {
+      "names": [
+        "rightRows"
+      ],
+      "original_module": "SmallPairRawSelectedData43",
+      "preservation": "exact_declaration_source"
+    }
+  },
+  "prefix_parts": [
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk00",
+      "offset": 0
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk01",
+      "offset": 64
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk02",
+      "offset": 128
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk03",
+      "offset": 192
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk04",
+      "offset": 256
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk05",
+      "offset": 320
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk06",
+      "offset": 384
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk07",
+      "offset": 448
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk08",
+      "offset": 512
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk09",
+      "offset": 576
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk10",
+      "offset": 640
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk11",
+      "offset": 704
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk12",
+      "offset": 768
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk13",
+      "offset": 832
+    },
+    {
+      "count": 64,
+      "module": "SmallPairGraphClosure43Chunk14",
+      "offset": 896
+    },
+    {
+      "count": 3,
+      "module": "SmallPairGraphClosure43Chunk15",
+      "offset": 960
+    }
+  ],
+  "raw_literal_partition": {
+    "definition_sha256": {
+      "leftCached": "ddc9532f08ea92481ffa68bf772ac4f9fb0bc02c5feef63acc4131322f12764c",
+      "leftRows": "791ab5be358b03a7601956018e95257167d3bb4569914064001c413fffd6092f",
+      "rightCached": "8be2d9bc5f0b68c5a85044914dbe8dd5adbf29888c4fa955136fc0ddf573b8d6",
+      "rightRows": "f6cb3a69e2c6997df63d6629ecfb25c3b11d88e8711bfa69f4d13982f889ad90"
+    },
+    "exact_byte_reconstruction": true,
+    "groups": {
+      "SmallPairRawSelectedData43LeftCached": [
+        "leftCached"
+      ],
+      "SmallPairRawSelectedData43LeftRows": [
+        "leftRows"
+      ],
+      "SmallPairRawSelectedData43RightCached": [
+        "rightCached"
+      ],
+      "SmallPairRawSelectedData43RightRows": [
+        "rightRows"
+      ]
+    },
+    "namespace": "D1Bound5.PairSelectedPrepared43",
+    "original_imports_preserved_in_each_data_module": true,
+    "original_module": "SmallPairRawSelectedData43",
+    "prefix_sha256": "585b36abb8c22f58d4604620fecccc432650200e4778fdcf4e6293c2edc4b50e",
+    "source_bytes": {
+      "SmallPairRawSelectedData43LeftCached": 246097,
+      "SmallPairRawSelectedData43LeftRows": 203477,
+      "SmallPairRawSelectedData43RightCached": 244911,
+      "SmallPairRawSelectedData43RightRows": 370138
+    },
+    "source_manifest": {
+      "SmallPairRawSelectedData43LeftCached": "070aef3a188f91cd8c1ec4b85034d7273e97c06a5ad549b82be27a8dd9255ef3",
+      "SmallPairRawSelectedData43LeftRows": "c2b14d55a337e9e05b1d5988980c7cbd76574c79751c03469e78dba65990429d",
+      "SmallPairRawSelectedData43RightCached": "7395475905116615d3c5e7962d7a2a4e914f0be7bea282fe75087ba89291a8a6",
+      "SmallPairRawSelectedData43RightRows": "ced6f0b5f25503683fed8ff2a06cb6e877ad331fee2dd443d13cd287c7f83316"
+    },
+    "suffix_sha256": "e0814eb2c330b4308c0361d321f014168f99c1da78f7ef2ced6b91900a050413"
+  },
+  "requires_completed_foundation_and_sides": true,
+  "reviewed_helper_source_manifest": {
+    "SmallPairGraphClosure43Chunk00": "6268d855d851600c95c7b198e6e70cab2b35baa7f182b2435b90fa6fec174ecc",
+    "SmallPairGraphClosure43Chunk01": "34f117d9b435f68a05869408fdaba9009f2dbfff98d1c8af082c8e5d11260e42",
+    "SmallPairGraphClosure43Chunk02": "e62036ebc8ae178bb0fd79aaad9d93af69e8f8391e6568f8c56898be8bc13de8",
+    "SmallPairGraphClosure43Chunk03": "494d324b40156c77ac12266d2656b58ced65bee94505a928e459ce20df49714a",
+    "SmallPairGraphClosure43Chunk04": "32a7715ead529b8a32c6b98a46c65cd30eec1b78cfbaf68f20a29675442f2ffd",
+    "SmallPairGraphClosure43Chunk05": "10f79a1c64d8aac8ab90e98f3d53d89a06434284fe3fd78779f64dce1f7341f6",
+    "SmallPairGraphClosure43Chunk06": "4821a116837b3a389b286965d24958dd5d783f71db83d092b8dc86391a2292ec",
+    "SmallPairGraphClosure43Chunk07": "7f2d8c15b6ea8e010d78dafd6134e36949f26f08c119fa02e0a00665a4a6c176",
+    "SmallPairGraphClosure43Chunk08": "f8d0aec5ff3bf1c6a6ed339b7c56447c048fc92414335217cda2ec04b1ae2bfd",
+    "SmallPairGraphClosure43Chunk09": "73eb3aa96d9497b10851d2a5c0af94d6f669e99671ac061b883d5e66732adc9c",
+    "SmallPairGraphClosure43Chunk10": "42e553b0006277fe9cb2f4269b440755d661b71220914d01a5acd34749fe4255",
+    "SmallPairGraphClosure43Chunk11": "354e82325b588d24361d7e0b58e59152dfab3d5dccb32e1868ef9858ac3c58e8",
+    "SmallPairGraphClosure43Chunk12": "7fd161ac5c050670c18d7d9c512e56b6ed211221e2e9e22a45c16b39facbc976",
+    "SmallPairGraphClosure43Chunk13": "64e2d40ade92415f1b8e72a39541044856001d3d8b7e09ee720eed5e4de01098",
+    "SmallPairGraphClosure43Chunk14": "2b2fc146b13e67a86f5faa8d52f371850b7687a624d8d97206169095157f9ca0",
+    "SmallPairGraphClosure43Chunk15": "2b73f0138fb125e2f93afce2f328fdbe6ec834136d612cb8848e42a7e53dc8dc",
+    "SmallPairGraphClosure43Coverage": "81b93ba58505765b7bd849efe3f6c5b1727888a0809f05c00f105a23e512e992"
+  },
+  "root_integration": false,
+  "scope_counts": {
+    "assembly": {
+      "declarations": 17,
+      "definitions": 4,
+      "targets": 9,
+      "theorems": 13
+    },
+    "closure-pilot": {
+      "declarations": 11,
+      "definitions": 9,
+      "targets": 4,
+      "theorems": 2
+    },
+    "closure-rest": {
+      "declarations": 17,
+      "definitions": 0,
+      "targets": 16,
+      "theorems": 17
+    }
+  },
+  "scopes": {
+    "assembly": [
+      "SmallPairGraphArithmetic43",
+      "SmallPairRawSelectedData43LeftCached",
+      "SmallPairRawSelectedData43LeftRows",
+      "SmallPairRawSelectedData43RightCached",
+      "SmallPairRawSelectedData43RightRows",
+      "SmallPairRawSelectedData43",
+      "SmallPairLightAssembly43",
+      "SmallPairGraphTriangle43",
+      "SmallPairGraphData43"
+    ],
+    "closure-pilot": [
+      "SmallPairGraphInputs43",
+      "SmallPairGraphWitnessData43",
+      "SmallPairGraphClosure43Chunk00",
+      "SmallPairGraphClosure43Coverage"
+    ],
+    "closure-rest": [
+      "SmallPairGraphClosure43Chunk01",
+      "SmallPairGraphClosure43Chunk02",
+      "SmallPairGraphClosure43Chunk03",
+      "SmallPairGraphClosure43Chunk04",
+      "SmallPairGraphClosure43Chunk05",
+      "SmallPairGraphClosure43Chunk06",
+      "SmallPairGraphClosure43Chunk07",
+      "SmallPairGraphClosure43Chunk08",
+      "SmallPairGraphClosure43Chunk09",
+      "SmallPairGraphClosure43Chunk10",
+      "SmallPairGraphClosure43Chunk11",
+      "SmallPairGraphClosure43Chunk12",
+      "SmallPairGraphClosure43Chunk13",
+      "SmallPairGraphClosure43Chunk14",
+      "SmallPairGraphClosure43Chunk15",
+      "SmallPairGraphClosure43"
+    ]
+  },
+  "source_bytes": {
+    "SmallPairGraphArithmetic43": 567,
+    "SmallPairGraphClosure43": 8978,
+    "SmallPairGraphClosure43Chunk00": 549,
+    "SmallPairGraphClosure43Chunk01": 551,
+    "SmallPairGraphClosure43Chunk02": 553,
+    "SmallPairGraphClosure43Chunk03": 553,
+    "SmallPairGraphClosure43Chunk04": 553,
+    "SmallPairGraphClosure43Chunk05": 553,
+    "SmallPairGraphClosure43Chunk06": 553,
+    "SmallPairGraphClosure43Chunk07": 553,
+    "SmallPairGraphClosure43Chunk08": 553,
+    "SmallPairGraphClosure43Chunk09": 553,
+    "SmallPairGraphClosure43Chunk10": 553,
+    "SmallPairGraphClosure43Chunk11": 553,
+    "SmallPairGraphClosure43Chunk12": 553,
+    "SmallPairGraphClosure43Chunk13": 553,
+    "SmallPairGraphClosure43Chunk14": 553,
+    "SmallPairGraphClosure43Chunk15": 552,
+    "SmallPairGraphClosure43Coverage": 1121,
+    "SmallPairGraphData43": 124,
+    "SmallPairGraphInputs43": 555035,
+    "SmallPairGraphTriangle43": 396,
+    "SmallPairGraphWitnessData43": 578095,
+    "SmallPairLightAssembly43": 2047,
+    "SmallPairRawSelectedData43": 210,
+    "SmallPairRawSelectedData43LeftCached": 246097,
+    "SmallPairRawSelectedData43LeftRows": 203477,
+    "SmallPairRawSelectedData43RightCached": 244911,
+    "SmallPairRawSelectedData43RightRows": 370138
+  },
+  "source_manifest": {
+    "SmallPairGraphArithmetic43": "e5f34b379ce5169c43ac116b737d74c40f2d6c8e9799f87b666db23e5ef5c3f2",
+    "SmallPairGraphClosure43": "1699092b76086a40b2e0b1f7069344d65f09cb39b9f09ecca7ca7e72e1be2bb5",
+    "SmallPairGraphClosure43Chunk00": "6268d855d851600c95c7b198e6e70cab2b35baa7f182b2435b90fa6fec174ecc",
+    "SmallPairGraphClosure43Chunk01": "34f117d9b435f68a05869408fdaba9009f2dbfff98d1c8af082c8e5d11260e42",
+    "SmallPairGraphClosure43Chunk02": "e62036ebc8ae178bb0fd79aaad9d93af69e8f8391e6568f8c56898be8bc13de8",
+    "SmallPairGraphClosure43Chunk03": "494d324b40156c77ac12266d2656b58ced65bee94505a928e459ce20df49714a",
+    "SmallPairGraphClosure43Chunk04": "32a7715ead529b8a32c6b98a46c65cd30eec1b78cfbaf68f20a29675442f2ffd",
+    "SmallPairGraphClosure43Chunk05": "10f79a1c64d8aac8ab90e98f3d53d89a06434284fe3fd78779f64dce1f7341f6",
+    "SmallPairGraphClosure43Chunk06": "4821a116837b3a389b286965d24958dd5d783f71db83d092b8dc86391a2292ec",
+    "SmallPairGraphClosure43Chunk07": "7f2d8c15b6ea8e010d78dafd6134e36949f26f08c119fa02e0a00665a4a6c176",
+    "SmallPairGraphClosure43Chunk08": "f8d0aec5ff3bf1c6a6ed339b7c56447c048fc92414335217cda2ec04b1ae2bfd",
+    "SmallPairGraphClosure43Chunk09": "73eb3aa96d9497b10851d2a5c0af94d6f669e99671ac061b883d5e66732adc9c",
+    "SmallPairGraphClosure43Chunk10": "42e553b0006277fe9cb2f4269b440755d661b71220914d01a5acd34749fe4255",
+    "SmallPairGraphClosure43Chunk11": "354e82325b588d24361d7e0b58e59152dfab3d5dccb32e1868ef9858ac3c58e8",
+    "SmallPairGraphClosure43Chunk12": "7fd161ac5c050670c18d7d9c512e56b6ed211221e2e9e22a45c16b39facbc976",
+    "SmallPairGraphClosure43Chunk13": "64e2d40ade92415f1b8e72a39541044856001d3d8b7e09ee720eed5e4de01098",
+    "SmallPairGraphClosure43Chunk14": "2b2fc146b13e67a86f5faa8d52f371850b7687a624d8d97206169095157f9ca0",
+    "SmallPairGraphClosure43Chunk15": "2b73f0138fb125e2f93afce2f328fdbe6ec834136d612cb8848e42a7e53dc8dc",
+    "SmallPairGraphClosure43Coverage": "81b93ba58505765b7bd849efe3f6c5b1727888a0809f05c00f105a23e512e992",
+    "SmallPairGraphData43": "2d3c77d61e5d29b44efddfd3692b2666c7300f104de89a8dd27cb3839201bc1a",
+    "SmallPairGraphInputs43": "4f8fe115d6404e1d98e2072adad71686b983e444069ed6e86739c4ba59ead417",
+    "SmallPairGraphTriangle43": "9e0618e09278664bac7c07fe4f54e9091267acb082d3de0ff1ed1edd484a6733",
+    "SmallPairGraphWitnessData43": "9dedcb1381b8d96deb7061067833410f8e6c6541ff04be6c3d57d380c7f29cd8",
+    "SmallPairLightAssembly43": "a1f93b85259f267bea1466e442343da00fa48b8f5128ef4939b965627b146f42",
+    "SmallPairRawSelectedData43": "fc26d5e8239093921dfb58025a917a3a71f5534270712711e9ae778505f2c044",
+    "SmallPairRawSelectedData43LeftCached": "070aef3a188f91cd8c1ec4b85034d7273e97c06a5ad549b82be27a8dd9255ef3",
+    "SmallPairRawSelectedData43LeftRows": "c2b14d55a337e9e05b1d5988980c7cbd76574c79751c03469e78dba65990429d",
+    "SmallPairRawSelectedData43RightCached": "7395475905116615d3c5e7962d7a2a4e914f0be7bea282fe75087ba89291a8a6",
+    "SmallPairRawSelectedData43RightRows": "ced6f0b5f25503683fed8ff2a06cb6e877ad331fee2dd443d13cd287c7f83316"
+  },
+  "status": "REVIEWED_GRAPH43_CLOSURE_SOURCE_PROPOSAL_NOT_INSTALLED"
+}

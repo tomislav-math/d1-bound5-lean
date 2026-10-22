@@ -15,7 +15,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   assert all(sha(R/'D1Bound5'/(n+'.lean'))==h and sha(O/'sources'/(n+'.lean'))==h for n,h in a['source_closure'].items())
   assert all(d.artifacts(n)==v for n,v in a['artifacts'].items()) and d.manifest_matches(a['configuration'])
   handoff=R/'records/PRO_CONTINUATION_HANDOFF.md'
-  scope=('both LEFT/RIGHT side certificates, with preserved original parent/wrapper theorem headers' if a.get('light_side_certificates') else f"RIGHT heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails")
+  scope=('both LEFT/RIGHT side certificates, with preserved original parent/wrapper theorem headers' if a.get('light_side_certificates') else (f"closure witness rows {a['start_offset']}..{a['start_offset']+a['heads']-1} over the complete {a['global_closure_vertices']}-vertex list" if a.get('global_closure_vertices') else f"RIGHT heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails"))
   entry=f"\nLatest checked archive: {O.name}. {scope}.\nGuarded builds, exact-type/transitive-axiom audit, {a['targeted_kernel_replays']} targeted installed-kernel replays passed.\nMainTheorem remains UNPROVED; graph43 and canonical-root integration remain incomplete; endpoint count 30/48.\nPrepared right000/001/002 scripts are not evidence of completion; inspect each actual VERIFICATION_SUMMARY.\n"
   assert O.name not in handoff.read_text() or 'Latest checked archive: '+O.name not in handoff.read_text()
   handoff.write_text(handoff.read_text()+entry)
@@ -23,6 +23,8 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   paths += [R/('research/continuations/20261022-economical-graph43-right'+b+'/run_unit.py') for b in ['000','001','002']]
   paths += [p for p in (W.parent/'20261022-economical-graph43-parent-proposal').rglob('*') if p.is_file()]
   paths += [W.parent/'20261022-economical-graph43-parent-integration/run_unit.py']
+  paths += [p for p in (W.parent/'20261022-economical-graph43-closure').rglob('*') if p.is_file()]
+  paths += [W.parent/'20261022-economical-graph43-closure-pilot/run_unit.py']
   paths=sorted(set(str(p.relative_to(R)) for p in paths));assert not any('__pycache__' in x for x in paths)
   (O/'PUBLICATION_PATHS.txt').write_text('\n'.join(paths)+'\n');(O/'PUBLICATION_HASHES.json').write_text(json.dumps({p:sha(R/p) for p in paths},indent=2,sort_keys=True)+'\n')
   print(json.dumps({'status':'PUBLICATION_SCOPE_VALIDATED','paths':len(paths),'heads':a['heads'],'kernel_replays':a['targeted_kernel_replays']}))
