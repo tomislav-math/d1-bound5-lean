@@ -49,3 +49,7 @@ Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. Mai
 Latest checked archive: 20261022-economical-graph3-right000. graph3 RIGHT heads0..110, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
 Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261022-economical-graph3-right001. graph3 RIGHT heads111..305, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
+Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
