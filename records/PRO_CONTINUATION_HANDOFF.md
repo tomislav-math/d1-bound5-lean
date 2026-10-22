@@ -40,3 +40,11 @@ audit, and 12 targeted installed-kernel replays. Evidence: 20261022-economical-g
 The block001 prepared status above is superseded by this actual result. Left heads 0..211 are now
 verified in two scopes; graph43 is still incomplete. First91 archive push: b656f1ff43fcfcdba156c800dd77099b31358d6c.
 Next action: run block002 for heads212..481 with current HEAD, after this checked unit is pushed.
+
+Latest completed scope: graph43 LEFT heads 212..481, 270 heads with complete tails.
+Twelve parts and exact composition passed guarded builds, exact-type/transitive-axiom audit,
+and 13 targeted installed-kernel replays. Evidence: 20261022-economical-graph43-left002/VERIFICATION_SUMMARY.json.
+All LEFT heads 0..481 are now verified in three separate scopes. Original parents and canonical
+root remain unintegrated. Graph43 remains incomplete; endpoint count stays 30/48.
+The earlier block002 prepared status is superseded. Next: guarded RIGHT raw data and 12-head pilot;
+prepared script in 20261022-economical-graph43-right-pilot12, not yet verified.
