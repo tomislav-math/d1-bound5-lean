@@ -1,0 +1,60 @@
+{
+  "actual_fragment_bytes": {
+    "SmallPairLightData1Left": 303940,
+    "SmallPairLightData1LeftRows": 486597,
+    "SmallPairLightData1Right": 282298,
+    "SmallPairLightData1RightRows": 490786
+  },
+  "actual_literal_rows": {
+    "leftCached": 360,
+    "leftRows": 360,
+    "leftVertices": 360,
+    "rightCached": 358,
+    "rightRows": 358,
+    "rightVertices": 358,
+    "sieve": 25
+  },
+  "actual_original_declarations": {
+    "definitions": 19,
+    "theorems": 4,
+    "total": 23
+  },
+  "actual_source_evidence_sha256": "7903077f4f7d78f57004526ffcaa43bca5f1413be529e5c3e138806c5d787fe1",
+  "checks": [
+    "Python AST parse for all six scripts",
+    "Actual source metadata hashes and byte counts agree with remote SOURCE_INSPECTION",
+    "Both small original full_text values agree with their remote hashes and exact headers",
+    "UNBOUND loader rejected before parent supplied baseline",
+    "Optimized Python import fails through explicit if/raise guard",
+    "Parent-supplied final binding loads and matches exact source inspection",
+    "Remote inspector completed by parent; no local compiler execution"
+  ],
+  "graph": 1,
+  "main_theorem_complete": false,
+  "no_git_commands_by_this_agent": true,
+  "no_lean_or_kernel_execution_by_this_agent": true,
+  "no_remote_calls_by_this_agent": true,
+  "note": "Scripts frozen for parent upload. Final GRAPH1_BINDING and PROVENANCE_BINDING belong to parent; this source review is not a build/audit result.",
+  "review_findings_resolved": [
+    "Effective optimized-Python rejection replaces assert __debug__",
+    "Both lock, new/temp path, original-byte, root, queue, index and configuration preflights",
+    "Fresh reviewed configuration comparison before every target; no configuration refresh",
+    "Worker rechecks its installation receipt and queue after completion",
+    "Final audit record/binding/current source/artifact/provenance equality",
+    "Final audit-start immutable inputs and compiled artifacts equal reviewed binding/evidence"
+  ],
+  "root_integration": false,
+  "script_sha256": {
+    "bounded_build_template.py": "fbd4b0511b12c95fec7117a5a094b5db854fb2f87d8352f0d5e458eef49727f2",
+    "finish_checks.py": "7e5a9c6174a478fdbe107079dd7c189593e3311f10c60fa953322c01afc7c86f",
+    "foundation_inputs.py": "e56a8c312093a1914acfb33a5183b9df3ed1f7cff43bf2a840a79d6cf0823b43",
+    "inspect_inputs.py": "0364513a699e1c6cbd9a307c38f44c9aec955934860af4255b32ea8e2ebfb06b",
+    "installer.py": "fb546c121d5c6a3456192987c32cd6ef6674d6e5f211b8a519ac1db2f39cb715",
+    "prepare_checks.py": "a23a3fd95c0967215959ff11457f7028357ae36793d42e75bb5e6b6092ce9883"
+  },
+  "source_reviewers": [
+    "graph1_foundation",
+    "graph1_local_review"
+  ],
+  "status": "LOCAL_SOURCE_REVIEW_PASS_NOT_A_KERNEL_RESULT"
+}

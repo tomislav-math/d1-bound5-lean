@@ -1,0 +1,25 @@
+{
+  "change": "Require exact equality with the original files mapping plus the actual hash at the resolved binding path. All original payload hashes, proofs, types, axioms, artifacts, replay receipts, and remaining checks stay unchanged.",
+  "corrected_script": "finish_checks_v2.py",
+  "corrected_sha256": "51d249627785738ca2536fb1505966a97913ae4e216711bf5d096867d0f87aad",
+  "frozen_payload_unchanged": true,
+  "main_theorem_complete": false,
+  "no_build_or_replay_repeated": true,
+  "original_frozen_script_preserved": true,
+  "original_script": "finish_checks.py",
+  "original_sha256": "7e5a9c6174a478fdbe107079dd7c189593e3311f10c60fa953322c01afc7c86f",
+  "readonly_observation": {
+    "exit": 0,
+    "extra_guard_keys": [
+      "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-graph1-foundation-audit/PREPARATION_BINDINGS.json"
+    ],
+    "guard_files_exact_with_runner_added_self_binding": true,
+    "missing_guard_keys": [],
+    "process_pid": 73603,
+    "recorded_original_binding_unchanged": true
+  },
+  "reason": "The pinned audit runner augments its in-memory preparation_files with the unchanged PREPARATION_BINDINGS.json file itself. The original finish script compared to only the on-disk files mapping, which intentionally cannot contain its own hash.",
+  "root_integration": false,
+  "schema": 1,
+  "status": "EXACT_RUNNER_SELF_BINDING_COMPARISON_CORRECTED"
+}
