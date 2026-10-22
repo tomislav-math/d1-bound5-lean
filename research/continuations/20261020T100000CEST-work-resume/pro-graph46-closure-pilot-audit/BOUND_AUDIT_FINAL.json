@@ -1,0 +1,103 @@
+{
+  "status": "BOUND_SCOPED_AUDIT_PASS",
+  "time": "2026-10-22T12:15:00.999074+00:00",
+  "records": [
+    {
+      "label": "analytic-type-axioms",
+      "pid": 824,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-graph46-closure-pilot-audit/AnalyticAudit.lean"
+      ],
+      "time": "2026-10-22T12:08:45.595567+00:00",
+      "exit": 0,
+      "seconds": 97.15810612495989,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 96,
+      "binding_drift_paths": [],
+      "log": "analytic-type-axioms.log"
+    },
+    {
+      "label": "SmallPairGraphInputs46-targeted-replay",
+      "pid": 949,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairGraphInputs46"
+      ],
+      "time": "2026-10-22T12:10:22.826203+00:00",
+      "exit": 0,
+      "seconds": 60.00709804100916,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 60,
+      "binding_drift_paths": [],
+      "log": "SmallPairGraphInputs46-targeted-replay.log"
+    },
+    {
+      "label": "SmallPairGraphWitnessData46-targeted-replay",
+      "pid": 995,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairGraphWitnessData46"
+      ],
+      "time": "2026-10-22T12:11:22.902757+00:00",
+      "exit": 0,
+      "seconds": 56.249906584154814,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 56,
+      "binding_drift_paths": [],
+      "log": "SmallPairGraphWitnessData46-targeted-replay.log"
+    },
+    {
+      "label": "SmallPairGraphClosure46Chunk00-targeted-replay",
+      "pid": 1021,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairGraphClosure46Chunk00"
+      ],
+      "time": "2026-10-22T12:12:19.223610+00:00",
+      "exit": 0,
+      "seconds": 109.45356366690248,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 107,
+      "binding_drift_paths": [],
+      "log": "SmallPairGraphClosure46Chunk00-targeted-replay.log"
+    },
+    {
+      "label": "SmallPairGraphClosure46Coverage-targeted-replay",
+      "pid": 1113,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairGraphClosure46Coverage"
+      ],
+      "time": "2026-10-22T12:14:08.751564+00:00",
+      "exit": 0,
+      "seconds": 52.18469087500125,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 52,
+      "binding_drift_paths": [],
+      "log": "SmallPairGraphClosure46Coverage-targeted-replay.log"
+    }
+  ],
+  "binding_sha256": "7ec8e7e0502c65ff53fdfc7d9ed48038c44d7561e8da523108e256bcd4acce75",
+  "source_map_sha256": "d7558d3502cebefd9de29f501a1998653e0774b17d1b298852d0b6b4c7b7e7bf",
+  "main_theorem_claim": false
+}

@@ -1,0 +1,194 @@
+{
+  "purpose": "Prospectively archive graph46 endpoint evidence only after all seven actual scopes, the endpoint collector and saved current inventory pass; publish only the three new closure scopes and exact preceding-publication/endpoint records.",
+  "status": "LOCAL_PROPOSAL_ENDPOINT_COMPLETION_AND_PUBLICATION_NOT_CLAIMED",
+  "handoff_application": "Prospective conditional text only. Root must verify every actual endpoint and inventory gate in PUBLICATION_REVIEW.md before invoking the unchanged generic guard. The guard does not enforce status/expected_review metadata, run the collectors, or validate the contents of extra endpoint JSON files, and writes the handoff before checking extra paths. Never treat this plan as completed verification, an executable binding, a staged selection or a push receipt.",
+  "groups": [
+    {
+      "unit": "20261022-graph46-closure",
+      "scope": "closure-pilot",
+      "audit": "pro-graph46-closure-pilot-audit"
+    },
+    {
+      "unit": "20261022-graph46-closure",
+      "scope": "closure-rest",
+      "audit": "pro-graph46-closure-rest-audit"
+    },
+    {
+      "unit": "20261022-graph46-closure",
+      "scope": "assembly",
+      "audit": "pro-graph46-assembly-audit"
+    }
+  ],
+  "extra": [
+    "research/continuations/20261022-graph46-sides-publication/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261022-graph46-sides-publication/OWNER.json",
+    "research/continuations/20261022-graph46-sides-publication/RELEASE.json",
+    "research/continuations/20261022-graph46-sides-publication/SELECTED_FILES_SHA256.json",
+    "research/continuations/20261022-graph46-sides-publication/STAGING_PATHS.txt",
+    "research/continuations/20261022-graph46-sides-publication/GIT_PREFLIGHT.json",
+    "research/continuations/20261022-graph46-sides-publication/VERIFIED_UNITS.json",
+    "research/continuations/20261022-graph46-sides-publication/SELECTED_REVIEW.json",
+    "research/continuations/20261022-graph46-sides-publication/INDEX_REVIEW.json",
+    "research/continuations/20261022-graph46-sides-publication/PREFLIGHT.json",
+    "research/continuations/20261022-graph46-sides-publication/WHITESPACE_REVIEW.json",
+    "research/continuations/20261022-graph46-closure/ENDPOINT_VERIFICATION.json",
+    "research/continuations/20261022-graph46-closure/ENDPOINT_PROOF_STATE.json",
+    "research/continuations/20261022-graph46-closure/CURRENT_ENDPOINT_INVENTORY.json"
+  ],
+  "expected_review": {
+    "endpoint_module": "SmallPairGraphData46",
+    "graph": 46,
+    "model": {
+      "nu": 6,
+      "tau": 1
+    },
+    "scope_totals": {
+      "foundation": {
+        "targets": 7,
+        "definitions": 19,
+        "theorems": 4
+      },
+      "sides-pilot": {
+        "targets": 2,
+        "definitions": 0,
+        "theorems": 2
+      },
+      "left-rest": {
+        "targets": 12,
+        "definitions": 0,
+        "theorems": 15
+      },
+      "right-rest": {
+        "targets": 12,
+        "definitions": 0,
+        "theorems": 15
+      },
+      "closure-pilot": {
+        "targets": 4,
+        "definitions": 9,
+        "theorems": 2
+      },
+      "closure-rest": {
+        "targets": 12,
+        "definitions": 0,
+        "theorems": 13
+      },
+      "assembly": {
+        "targets": 9,
+        "definitions": 4,
+        "theorems": 13
+      }
+    },
+    "distinct_targets": 58,
+    "declarations": 96,
+    "definitions": 32,
+    "theorems": 64,
+    "guarded_builds": 58,
+    "targeted_same_kernel_replays": 58,
+    "type_axiom_audits": 7,
+    "new_publication_targets": 25,
+    "new_publication_definitions": 13,
+    "new_publication_theorems": 28,
+    "new_publication_declarations": 41,
+    "preserved_original_closure_assembly_declarations": 28,
+    "closure_rows": 719,
+    "root_pair_rows": 719,
+    "destination_rows": 719,
+    "filtered_vertices": 718,
+    "closure_chunks": [
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      64,
+      15
+    ],
+    "final_chunk_offset": 704,
+    "heads_per_side": {
+      "left": 360,
+      "right": 358
+    },
+    "original_parent_counts": {
+      "left": [
+        137,
+        223
+      ],
+      "right": [
+        138,
+        220
+      ]
+    },
+    "unordered_pairs": {
+      "left": 64620,
+      "right": 63903,
+      "total": 128523
+    },
+    "original_triangle_statement": "theorem smallPairNoTriangle_46_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_6 smallPairLarge_46 = true",
+    "source_evidence": {
+      "inspection_sha256": "a2e6cfff7ccb0c38a00459f711ef65a8784239a5db0e93d1b2239f7d5a774041",
+      "proposal_plan_sha256": "371d93de63a74168ab771eef77537b47a4bd44941b6421f9c3de30870ffe6a43",
+      "proposal_payload_sha256": "0911a39d4056e8c7b9e44f3b835908dea0c91454848156ee79985f7feb2496c2"
+    },
+    "endpoint_summary_path": "research/continuations/20261022-graph46-closure/ENDPOINT_VERIFICATION.json",
+    "proof_state_path": "research/continuations/20261022-graph46-closure/ENDPOINT_PROOF_STATE.json",
+    "inventory_path": "research/continuations/20261022-graph46-closure/CURRENT_ENDPOINT_INVENTORY.json",
+    "baseline_inventory_source": "research/continuations/20261022-graph46-closure/INSTALL_BINDING.json:baseline_endpoint_inventory",
+    "required_endpoint_status": "GRAPH46_WORKING_ENDPOINT_SCOPED_VERIFIED",
+    "required_inventory_status": "CURRENT_WORKING_ENDPOINT_INVENTORY_AFTER_GRAPH46_PASS",
+    "required_inventory_transition": {
+      "added_endpoints": [
+        46
+      ],
+      "removed_endpoints": [],
+      "expected_transition_matches": true,
+      "baseline_must_equal_actual_install_binding": true,
+      "unknown_modules": []
+    },
+    "conditional_endpoint_count": {
+      "description": "Use 30/48 only after the actual saved inventory confirms all these fields.",
+      "previous_accepted_endpoint_count": 29,
+      "accepted_endpoint_count": 30,
+      "total_endpoints": 48,
+      "remaining_endpoint_count": 18,
+      "added_endpoints": [
+        46
+      ],
+      "removed_endpoints": [],
+      "expected_transition_matches": true
+    },
+    "foundation_postrecords_already_required_in_sides_archive": [
+      "research/continuations/20261022-graph46-foundation-publication/POST_PUSH_RECEIPT.json",
+      "research/continuations/20261022-graph46-foundation-publication/OWNER.json",
+      "research/continuations/20261022-graph46-foundation-publication/RELEASE.json",
+      "research/continuations/20261022-graph46-foundation-publication/SELECTED_REVIEW.json",
+      "research/continuations/20261022-graph46-foundation-publication/INDEX_REVIEW.json",
+      "research/continuations/20261022-graph46-foundation-publication/PREFLIGHT.json",
+      "research/continuations/20261022-graph46-foundation-publication/WHITESPACE_REVIEW.json"
+    ],
+    "foundation_postrecord_coverage_gate": "Verify actual bound bytes in the sides archive/current HEAD; if missing, review an exact extra-list revision before invoking the guard.",
+    "sides_postreceipt_path": "research/continuations/20261022-graph46-sides-publication/POST_PUSH_RECEIPT.json",
+    "actual_graph1_archive_commit": "2e18bda519a42f28f2e7c1ef409e610e0a9ce75f",
+    "graph1_archived_paths": 394,
+    "graph1_preserved_canonical_working_sources": 25,
+    "graph43_isolated_trial_is_driver_accepted": false,
+    "graph43_isolated_trial_establishes_endpoint": false,
+    "publication_scope": "Research proof/evidence and records only; review actual generated selection and require exact staged path/hash equality before separate ordinary Git calls.",
+    "canonical_source_promotion_in_this_publication": false,
+    "root_integration": false,
+    "main_theorem_complete": false,
+    "future_proof_and_publication_values": "Read actual measured hashes, source-closure size, timings and commits from the completed records; this prospective plan invents none.",
+    "expected_sides_post_selection_review_files": [
+      "SELECTED_REVIEW.json",
+      "INDEX_REVIEW.json",
+      "PREFLIGHT.json",
+      "WHITESPACE_REVIEW.json"
+    ]
+  },
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical-root integration remains unverified.\n\nPROSPECTIVE GRAPH46 ENDPOINT HANDOFF: apply this text only after the actual\nseven-scope endpoint collector and actual current-inventory gates pass.\nThis prepared text by itself is not proof acceptance or a publication receipt.\n\nIf those gates have passed, graph46 qualifies as a complete verified working\nendpoint for the model QuadInt 1 6. That conclusion is supported only by the\nactual ENDPOINT_VERIFICATION.json and ENDPOINT_PROOF_STATE.json under\nresearch/continuations/20261022-graph46-closure/ and their current matching\nsource, artifact, original-type/axiom and installed-kernel replay evidence.\nThe main theorem and canonical-root integration remain separate open work.\n\nThe required seven-scope evidence covers 58 distinct guarded-build and\ntargeted installed SAME-kernel-replay targets, 32 definitions, 64 theorems and\nseven exact original-type/transitive-axiom audits: 96 declarations in total.\nThe required earlier scopes are foundation, sides-pilot, left-rest and\nright-rest. The three new publication groups are closure-pilot (4 targets,\n9 definitions and 2 theorems), closure-rest (12 targets and 13 theorems), and\nassembly (9 targets, 4 definitions and 13 theorems). Earlier foundation and\nside scopes are reused verified dependencies, not newly counted proof work.\n\nThe reviewed source proposal preserves all 719 closure, root-pair and\ndestination rows and all 718 filtered vertices. Its closure decomposition is\neleven blocks of 64 and a final block of 15 at offset 704. Each mutation\nlookup retains the complete original global destination list and both signs.\nAll 28 original closure/assembly declarations retain their public statements.\nThe four raw literal definitions retain their exact bodies, imports and\nnamespace in four separate modules; their facade contains imports only.\nThe original final statement remains:\n\ntheorem smallPairNoTriangle_46_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_6 smallPairLarge_46 = true\n\nThe sides retain 360 left and 358 right heads, with original parent blocks\n137+223 and 138+220. Full-tail partitions remain [16,20,22,24,26,29] and\n[34,42,56,91] on the left, and [16,20,22,24,26,30] and [34,42,56,88] on the\nright. Every cross-part and cross-parent comparison is retained: 64,620 left\nand 63,903 right unordered pairs, totaling 128,523. The original four parent\nstatements and both wrapper files remain unchanged. Source preservation and\nthese counts require actual proof verification; they do not replace it.\n\nAuthoritative current inventory, after successful actual collection:\nresearch/continuations/20261022-graph46-closure/CURRENT_ENDPOINT_INVENTORY.json\n\nUse the actual inventory's accepted and remaining endpoint lists. The\nanticipated count is 30 of 48 only if that saved real output confirms 29\nprevious and 30 current accepted endpoints, 48 total, 18 remaining, exactly\nadded_endpoints [46], no removed endpoints, and expected_transition_matches\ntrue. If those conditions do not hold, no 30/48 claim is made. The previous\naccepted set must match the actual closure installation binding, and actual\nsource/proof-state hashes must match the endpoint evidence. No endpoint count\nis an overall formalization-completion percentage.\n\nThe collector records the actual endpoint proof fingerprint, proof-state byte\nhash and transitive source-closure size. Read those measured values from the\nreal records; no guessed fingerprint, timing or closure size belongs here.\nHistorical source, preparation and scope publication fields retain their\noriginal statuses. Later actual endpoint and post-push receipts record any\ncompleted progress without rewriting historical evidence.\n\nThe actual graph46 foundation and side commits must come from their completed\nprivate-publication records. The preceding sides publication is under\nresearch/continuations/20261022-graph46-sides-publication/; preserve its actual\nPOST_PUSH_RECEIPT.json, OWNER.json and RELEASE.json together with its known\nselection, staging, preflight and verified-unit files, plus the actual\nSELECTED_REVIEW.json, INDEX_REVIEW.json, PREFLIGHT.json and\nWHITESPACE_REVIEW.json. The earlier foundation postrecords, including those\nfour reviews, and separate foundation-binding helper are already required in\nthe sides archive; verify their actual committed coverage. No future graph46\ncommit, proof fingerprint or successful push receipt is inferred here.\n\nGraph1 remains an actual verified working endpoint. Its exact 394-file\nresearch archive was committed and privately pushed at\n2e18bda519a42f28f2e7c1ef409e610e0a9ce75f. It preserved all 25 canonical working\nsources and their matching archive snapshots. The prior owner's timeout and\nthe separate successful recovery owner, reviews, post-push receipt, release\nand finish records remain true historical evidence under\nresearch/continuations/20261022-graph1-publication-recovery/. Neither policy,\nproof manifests, index helper nor canonical root was changed by that recovery.\nIt is not permission to add unreviewed canonical sources to this archive.\n\nGraph43 remains an incomplete endpoint. Its original raw-data build is\nresearch evidence. Later separate TRIAL12_BUILD_RESULT.json and\nTRIAL12_AUDIT_RESULT.json under\nresearch/continuations/20261022-graph43-pilot/ record a successful isolated\n12-head trial of SmallPairLightAdaptiveLeft43_000Part00, an exact-type and\ntransitive-axiom audit, and installed-kernel replay. Those isolated results\nare not guarded driver acceptance and do not verify the complete graph43\nscope or establish its endpoint. Preserve earlier records and failed exact\nfingerprints; no identical failed attempt is silently retried.\n\nAfter the remaining finite endpoints, the open chain includes SmallPairGraphs,\nSmallPairBoundedExtensions/TwoSmallSextuple, the two-small lower and upper\nbounds, TwoSmallNondegenerateImpossible, and MainTheorem. Canonical-root\nintegration, a clean-checkout pinned build, full original-type and axiom\nreview, and a fresh integrated-root installed-kernel replay remain open.\nReuse completed exact proofs and their actual recorded evidence.\n\nThe unchanged target is every finite D(1)-set of distinct nonzero elements\nof the full ring of integers O_K of every imaginary quadratic number field\nhaving cardinality at most five. Half-integral bases, tied moduli and zero\npair-square roots remain allowed. No new mathematical assumption is introduced.\n"
+}
