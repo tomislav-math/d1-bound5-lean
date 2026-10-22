@@ -2,55 +2,87 @@
 
 Main theorem UNPROVED. Canonical-root integration remains unverified.
 
-Graph46 foundation is now scoped-verified. Its seven modules preserve all
-19 original definitions and four original validation theorems for QuadInt 1 6.
-The data retains 25 sieve entries, 360 left vertices/cached entries/rows, and
-358 right vertices/cached entries/rows. Original parent counts remain 137+223
-on the left and 138+220 on the right. Four exact literal fragments preserve
-every original declaration body and public type, and the original data module
-becomes an import-only facade. The adaptive data and validation files remain
-byte identical to their originals.
+Graph46 left and right independence proofs are now scoped-verified for QuadInt
+1 6. The three completed scopes contain exactly 32 theorems in 26 distinct
+build/replay targets:
 
-Seven guarded builds, the exact original-type and transitive-axiom audit, and
-seven targeted installed SAME-kernel replays passed. Actual proof fingerprints,
-source/artifact maps, timings, and input/provenance bindings are recorded under
-research/continuations/20261022-graph46-foundation/. The authoritative scope
-records are foundation-VERIFICATION_SUMMARY.json and foundation-PROOF_STATE.json;
-the bound audit is under research/continuations/20261020T100000CEST-work-resume/
-pro-graph46-foundation-audit/. The original source snapshots and the broad and
-narrow source inspections retain their separate measured hashes. No guessed
-foundation fingerprint, timing, source-closure size or input binding is used.
+- sides-pilot: two theorems in two targets;
+- left-rest: 15 theorems in 12 targets;
+- right-rest: 15 theorems in 12 targets.
 
-Graph46 independence and closure remain unverified. Its reviewed side proposal
-has 26 targets and 32 theorems, with 16-head left/right pilots required before
-any remainder. The original full-tail partitions retain every one of 64,620
-left and 63,903 right unordered pairs, totaling 128,523. The closure source
-proposal retains 719 closure/root-pair/destination rows and 718 filtered
-vertices, split into eleven 64-row prefixes and a final 15-row prefix.
-These source checks and coverage counts do not claim Lean acceptance of the
-side or closure proofs. The larger right-side row data and different model
-remain reasons to inspect the actual graph46 pilot results before proceeding.
+All 26 guarded builds, all three exact original-type/transitive-axiom audits,
+and all 26 targeted installed SAME-kernel replays passed. Both actual 16-head
+pilots were verified before either remainder, and their actual build/replay
+measurements were reviewed under the inherited 240-second target cap. The
+remainder scopes preserve their exact pilot proof-state, source, artifact and
+bound-receipt reuse evidence. Actual measured timings remain in the records;
+no timing is inferred from graph1 or from equal head counts.
 
-The complete working endpoint count remains 29 of 48. Graph1 is a verified
-working endpoint, with 58 guarded builds and targeted same-kernel replays,
-seven original-type/axiom audits, and 96 declarations. Its actual inventory
-added only graph1 and removed no prior endpoint. Its exact 394-file research
-archive was committed and privately pushed at
-2e18bda519a42f28f2e7c1ef409e610e0a9ce75f.
+The 32 theorems comprise 20 partition helper theorems, four original parent
+theorems and eight theorems in the two unchanged wrapper files. This side
+scope adds no definitions and does not recount the foundation declarations.
+The left side retains all 360 heads and its original parent blocks 137+223;
+the right side retains all 358 heads and its original parent blocks 138+220.
+The verified full-tail partitions are:
 
-The graph1 publication required a separately reviewed index correction:
-25 canonical paths outside the reviewed archive selection were removed only
-from staging. Their working bytes and both identical research snapshots were
-preserved. The proof-source manifests, index helper, policy, and canonical
-root were unchanged. The old publication owner's timeout remains historical
-evidence; it was not rewritten into a successful owner record. The new
-recovery OWNER, exact-index/preflight reviews, actual private-push receipt,
-RELEASE, FINISH and whitespace review are preserved separately under
-research/continuations/20261022-graph1-publication-recovery/. This publication
-also preserves that recovery's actual observation, guard, exact unstage list,
-local source review and recovery review, and the preceding publication's
-old OWNER and actual post-push receipt. Historical records retain their
-original statuses; later exact records document the successful recovery.
+- left000: [16, 20, 22, 24, 26, 29];
+- left001: [34, 42, 56, 91];
+- right000: [16, 20, 22, 24, 26, 30];
+- right001: [34, 42, 56, 88].
+
+Every head is compared with its complete original remaining tail, including
+all comparisons across helper and original parent-block boundaries. Exactly
+64,620 left and 63,903 right unordered pairs are preserved, totaling 128,523.
+The four original parent statements remain exact and both wrapper files are
+byte identical to their originals. No data, comparison or mathematical
+assumption is removed.
+
+Authoritative side evidence is under
+research/continuations/20261022-graph46-sides/ in the sides-pilot-, left-rest-
+and right-rest-VERIFICATION_SUMMARY.json and corresponding PROOF_STATE.json
+files. The bound audit records are under
+research/continuations/20261020T100000CEST-work-resume/
+pro-graph46-sides-pilot-audit/, pro-graph46-left-rest-audit/ and
+pro-graph46-right-rest-audit/. These actual records supply the proof-state,
+source/artifact, original-statement and replay fingerprints.
+
+The previously verified graph46 foundation preserves 19 original definitions
+and four original validation theorems in seven modules. Its 25 sieve entries
+and complete asymmetric 360/358 data are reused as verified dependencies.
+The actual foundation private-push commit is identified by
+research/continuations/20261022-graph46-foundation-publication/POST_PUSH_RECEIPT.json.
+This publication preserves that actual receipt together with OWNER.json,
+RELEASE.json and the four actual post-selection reviews from the same directory:
+SELECTED_REVIEW.json, INDEX_REVIEW.json, PREFLIGHT.json and WHITESPACE_REVIEW.json.
+No foundation commit is inferred from a source hash or copied from a different graph.
+
+The actual prerequisite binding is preserved as REVIEWED_FOUNDATION_BINDING.json
+under the sides directory. Its separately reviewed helper and local reviews
+are archived under research/continuations/20261022-graph46-sides-binding-plan/
+as bind_foundation.py, REVIEW.md and LOCAL_SOURCE_REVIEW.json. The helper's
+existence alone is not a successful binding or proof result. Historical source,
+preparation and publication records retain their original status fields;
+actual later verification and push receipts record the completed work.
+
+Graph46 is not yet a complete working endpoint. Its original 719 closure,
+root-pair and destination rows, 718 filtered vertices, indexed witnesses and
+final endpoint assembly remain to be verified. The reviewed closure proposal
+uses eleven 64-row prefixes and a final 15-row prefix at offset 704, retaining
+the complete destination list and both mutation signs. Source partition and
+coverage checks alone do not establish acceptance of those closure proofs.
+Continue with the actual closure pilot, remaining chunks, assembly and final
+endpoint collector after preserving these verified foundation and side scopes.
+The working endpoint count remains 29 of 48.
+
+Graph1 remains a complete verified working endpoint. Its 58 guarded-build and
+same-kernel replay targets, seven exact-type/axiom audits and 96 declarations
+were archived and privately pushed at
+2e18bda519a42f28f2e7c1ef409e610e0a9ce75f. The completed graph1 recovery preserved
+its exact 394-file research archive and all 25 canonical working sources and
+matching snapshots. The old timed-out owner and separate successful recovery
+records retain their exact historical status; policy, proof manifests, index
+helper and canonical root were not changed. Recovery records remain under
+research/continuations/20261022-graph1-publication-recovery/.
 
 Endpoints still awaiting completion are
 3, 4, 5, 6, 7, 8, 10, 14, 15, 19, 21, 23, 24, 28, 30, 36, 39, 43, 46.
@@ -81,6 +113,6 @@ cardinality at most five. Half-integral bases, tied moduli, and zero pair-square
 roots remain allowed. No new mathematical assumption is introduced.
 
 
-Publication starting HEAD: 2e18bda519a42f28f2e7c1ef409e610e0a9ce75f.
+Publication starting HEAD: 2641bb625a1cadda2a59ea7251b40b72d14fbfb0.
 Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261022-graph46-foundation-publication.
+in POST_PUSH_RECEIPT.json under research/continuations/20261022-graph46-sides-publication.

@@ -1,0 +1,226 @@
+{
+  "acceptance_claimed": false,
+  "adaptive_blocks": {
+    "blocks": [
+      {
+        "block": "000",
+        "cached_definition": "leftCached000",
+        "global_end_exclusive": 137,
+        "global_start": 0,
+        "head_count": 137,
+        "module": "SmallPairLightAdaptiveLeft46_000",
+        "nu": 6,
+        "original_public_header": "theorem left_prefix_000_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 137\n      leftCached000 leftRows000 = true ",
+        "rows_definition": "leftRows000",
+        "side": "left",
+        "tau": 1
+      },
+      {
+        "block": "001",
+        "cached_definition": "leftCached001",
+        "global_end_exclusive": 360,
+        "global_start": 137,
+        "head_count": 223,
+        "module": "SmallPairLightAdaptiveLeft46_001",
+        "nu": 6,
+        "original_public_header": "theorem left_prefix_001_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 223\n      leftCached001 leftRows001 = true ",
+        "rows_definition": "leftRows001",
+        "side": "left",
+        "tau": 1
+      },
+      {
+        "block": "000",
+        "cached_definition": "rightCached000",
+        "global_end_exclusive": 138,
+        "global_start": 0,
+        "head_count": 138,
+        "module": "SmallPairLightAdaptiveRight46_000",
+        "nu": 6,
+        "original_public_header": "theorem right_prefix_000_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 138\n      rightCached000 rightRows000 = true ",
+        "rows_definition": "rightRows000",
+        "side": "right",
+        "tau": 1
+      },
+      {
+        "block": "001",
+        "cached_definition": "rightCached001",
+        "global_end_exclusive": 358,
+        "global_start": 138,
+        "head_count": 220,
+        "module": "SmallPairLightAdaptiveRight46_001",
+        "nu": 6,
+        "original_public_header": "theorem right_prefix_001_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 220\n      rightCached001 rightRows001 = true ",
+        "rows_definition": "rightRows001",
+        "side": "right",
+        "tau": 1
+      }
+    ],
+    "definitions": {
+      "leftCached000": "PairLightPrepared46.leftCached",
+      "leftCached001": "leftCached000.drop 137",
+      "leftCached002": "leftCached001.drop 223",
+      "leftRows000": "PairLightPrepared46.leftRows",
+      "leftRows001": "leftRows000.drop 137",
+      "leftRows002": "leftRows001.drop 223",
+      "rightCached000": "PairLightPrepared46.rightCached",
+      "rightCached001": "rightCached000.drop 138",
+      "rightCached002": "rightCached001.drop 220",
+      "rightRows000": "PairLightPrepared46.rightRows",
+      "rightRows001": "rightRows000.drop 138",
+      "rightRows002": "rightRows001.drop 220"
+    },
+    "head_totals_by_side": {
+      "left": 360,
+      "right": 358
+    }
+  },
+  "foundation_completion_verified": false,
+  "graph": 46,
+  "kernel_replayed": false,
+  "lean_compiled": false,
+  "model": {
+    "A": {
+      "definition_line": "def smallPairA_46 : QuadInt 1 6 := \u27e8-1,-1\u27e9",
+      "nu": 6,
+      "tau": 1,
+      "term": "\u27e8-1,-1\u27e9"
+    },
+    "B": {
+      "definition_line": "def smallPairB_46 : QuadInt 1 6 := \u27e8-2,1\u27e9",
+      "nu": 6,
+      "tau": 1,
+      "term": "\u27e8-2,1\u27e9"
+    }
+  },
+  "original_foundation_source_sha256": {
+    "SmallPairLightAdaptiveData46": "18f080c0c7e29d88ea48f60a5cbee00f8cad2147bed5cdd93dc7f451fb8bfc4d",
+    "SmallPairLightAdaptiveValidation46": "3bd0d7c3be7939a8d9b4574daaac7e8327673aa43ccbd104bb79f0896f6d44a2",
+    "SmallPairLightData46": "23bb56c1324351088509a5955120e0af1409246a18d764be28526c7dcad7fea3"
+  },
+  "original_light_data": {
+    "bytes": 1554200,
+    "imports": [
+      "D1Bound5.PairLightArithmetic"
+    ],
+    "literals": {
+      "leftCached": {
+        "bytes": 180720,
+        "coordinate_sequence_sha256": "d08f59ccb19cc22e821eff59646169de12402a18c1236ce794faccc635ffff2f",
+        "declaration_start_byte": 122788,
+        "end_byte": 303555,
+        "rows": 360,
+        "sha256": "65f5628852e57a9adc361cfe0f1836382c137ebfffef8c0603b1ad429f557620",
+        "shape": "list_of_coordinate_signature_pairs",
+        "signature_lengths": [
+          25
+        ],
+        "start_byte": 122835
+      },
+      "leftRows": {
+        "bytes": 350635,
+        "declaration_start_byte": 303557,
+        "end_byte": 654233,
+        "rows": 360,
+        "sha256": "dd0e20725f45e1d824782ff0ac7d98c847e6c7c801a004ad7ac3ba2c758b1add",
+        "shape": "list_of_natural_and_natural_list_pairs",
+        "start_byte": 303598
+      },
+      "leftVertices": {
+        "bytes": 102521,
+        "coordinate_sequence_sha256": "d08f59ccb19cc22e821eff59646169de12402a18c1236ce794faccc635ffff2f",
+        "declaration_start_byte": 20218,
+        "end_byte": 122786,
+        "rows": 360,
+        "sha256": "61f3d9e988ccf58537bbdf162c151eea9990a3e5537e0b459e9594cea65279c6",
+        "shape": "list_of_integer_coordinates",
+        "start_byte": 20265
+      },
+      "rightCached": {
+        "bytes": 179515,
+        "coordinate_sequence_sha256": "7d15c8a28dbd3aabc36e90e76dbf5c9c450cfa96ff61f08d50fedc562e00dd80",
+        "declaration_start_byte": 756237,
+        "end_byte": 935800,
+        "rows": 358,
+        "sha256": "9d00a45d33de5428a90c61e9c3a3af1a099fc4eb2874ecb66c6be510b2c9022a",
+        "shape": "list_of_coordinate_signature_pairs",
+        "signature_lengths": [
+          25
+        ],
+        "start_byte": 756285
+      },
+      "rightRows": {
+        "bytes": 618321,
+        "declaration_start_byte": 935802,
+        "end_byte": 1554165,
+        "rows": 358,
+        "sha256": "c31d6d92d3aa9fdfd1b1f1543d49a37d96149d89042bfc387c560092950a9b53",
+        "shape": "list_of_natural_and_natural_list_pairs",
+        "start_byte": 935844
+      },
+      "rightVertices": {
+        "bytes": 101952,
+        "coordinate_sequence_sha256": "7d15c8a28dbd3aabc36e90e76dbf5c9c450cfa96ff61f08d50fedc562e00dd80",
+        "declaration_start_byte": 654235,
+        "end_byte": 756235,
+        "rows": 358,
+        "sha256": "3f08631eb39da144a6b953af104ff657aea3dcfbfb57037c432f764de2f979a5",
+        "shape": "list_of_integer_coordinates",
+        "start_byte": 654283
+      },
+      "sieve": {
+        "bytes": 20049,
+        "declaration_start_byte": 134,
+        "end_byte": 20216,
+        "rows": 25,
+        "sha256": "bb465f0caedc3c2321f3e470969aadc7d9e0c2a3bd5d6fb8533963d083903fc6",
+        "shape": "list_of_natural_pairs",
+        "start_byte": 167
+      }
+    },
+    "path": "/Users/tp/Lean/D1Bound5/D1Bound5/SmallPairLightData46.lean",
+    "sha256": "23bb56c1324351088509a5955120e0af1409246a18d764be28526c7dcad7fea3"
+  },
+  "original_public_parent_headers": {
+    "SmallPairLightAdaptiveLeft46_000": "theorem left_prefix_000_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 137\n      leftCached000 leftRows000 = true ",
+    "SmallPairLightAdaptiveLeft46_001": "theorem left_prefix_001_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 223\n      leftCached001 leftRows001 = true ",
+    "SmallPairLightAdaptiveRight46_000": "theorem right_prefix_000_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 138\n      rightCached000 rightRows000 = true ",
+    "SmallPairLightAdaptiveRight46_001": "theorem right_prefix_001_checked :\n    pairLightSelectedFloorPrefixBool 1 6 PairLightPrepared46.sieve 220\n      rightCached001 rightRows001 = true "
+  },
+  "original_side_source_sha256": {
+    "SmallPairLightAdaptiveLeft46_000": "46c376bdddd78e7c67db1dfb83d386424166b5f668f5310b0c2576b5ac29da87",
+    "SmallPairLightAdaptiveLeft46_001": "a9e484173812ad57d929216f84a84db1ba6c094bc38f29abb0d20d79e1db15ab",
+    "SmallPairLightAdaptiveRight46_000": "e7d2efd8a67e4d7c5acd0229b230835e8097d9e72669ddd71672da450a79dd3d",
+    "SmallPairLightAdaptiveRight46_001": "ef7af6e7b0267c4f8e9e22f0e90835f085e3a6ed69d902ca1008372b7998f71d",
+    "SmallPairLightLeft46": "1f83b52da398d7859b2344f560660efce4764f16abde756d5407b114342d3f4f",
+    "SmallPairLightRight46": "739c702ff1f9840879a27681847c112e22b302f45be3cd1ea64e1144781104cd"
+  },
+  "schema": 1,
+  "side_consistency": {
+    "left": {
+      "adaptive_blocks_contiguous_from_zero": true,
+      "adaptive_coverage_equals_literal_length": true,
+      "all_three_lengths_equal": true,
+      "cached_coordinates_match_vertices": true,
+      "list_counts": [
+        360,
+        360,
+        360
+      ]
+    },
+    "right": {
+      "adaptive_blocks_contiguous_from_zero": true,
+      "adaptive_coverage_equals_literal_length": true,
+      "all_three_lengths_equal": true,
+      "cached_coordinates_match_vertices": true,
+      "list_counts": [
+        358,
+        358,
+        358
+      ]
+    }
+  },
+  "source_inspection_path": "/workspace/scratch/e5a9d9a15bbc/graph46_inspection/SOURCE_INSPECTION.json",
+  "source_inspection_sha256": "f2d3955f2af8d40917f33e1697a825c786fb8a8f2a2f09720628f5a0cc0b2b54",
+  "source_snapshot_stable_at_inspection": true,
+  "status": "OBSERVED_SOURCE_METADATA_NOT_PROOF_ACCEPTANCE"
+}

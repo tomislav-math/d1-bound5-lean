@@ -1,0 +1,65 @@
+{
+  "status": "BOUND_SCOPED_AUDIT_PASS",
+  "time": "2026-10-22T11:42:41.139512+00:00",
+  "records": [
+    {
+      "label": "analytic-type-axioms",
+      "pid": 93754,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-graph46-sides-pilot-audit/AnalyticAudit.lean"
+      ],
+      "time": "2026-10-22T11:42:19.088088+00:00",
+      "exit": 0,
+      "seconds": 4.998496582731605,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 5,
+      "binding_drift_paths": [],
+      "log": "analytic-type-axioms.log"
+    },
+    {
+      "label": "SmallPairLightAdaptiveLeft46_000Part00-targeted-replay",
+      "pid": 93775,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairLightAdaptiveLeft46_000Part00"
+      ],
+      "time": "2026-10-22T11:42:24.114427+00:00",
+      "exit": 0,
+      "seconds": 8.419256124645472,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 9,
+      "binding_drift_paths": [],
+      "log": "SmallPairLightAdaptiveLeft46_000Part00-targeted-replay.log"
+    },
+    {
+      "label": "SmallPairLightAdaptiveRight46_000Part00-targeted-replay",
+      "pid": 93803,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairLightAdaptiveRight46_000Part00"
+      ],
+      "time": "2026-10-22T11:42:32.578952+00:00",
+      "exit": 0,
+      "seconds": 8.528144541662186,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 9,
+      "binding_drift_paths": [],
+      "log": "SmallPairLightAdaptiveRight46_000Part00-targeted-replay.log"
+    }
+  ],
+  "binding_sha256": "72f6e6ff4a5c08877476b5a50109f31aef5b992de378d4598b2caee7c5ad22e1",
+  "source_map_sha256": "5641701414bf2d85faca94734f18a968e4da9d67df0da56626adb51828c29cc7",
+  "main_theorem_claim": false
+}

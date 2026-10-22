@@ -1,0 +1,938 @@
+{
+  "PairLightArithmetic": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/PairLightArithmetic.c": "641c4ed62a4c0fa9ba4900bd46ced8c27449938e6cc0121eb002a2f3b2d19a6e",
+      ".lake/build/ir/D1Bound5/PairLightArithmetic.c.hash": "cb4ee68cc4379cbc88d98828f288bfe320d0541aa09c1bf5dc0efcd885ac1514",
+      ".lake/build/ir/D1Bound5/PairLightArithmetic.setup.json": "6ce0930fe914ec780bd631864f8e89e4fe467e17aad8af9643b9bfdf13474511",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.ilean": "62aa59f014a16155a988220702de30c222ff4d27f6d1cfaf2b92ad6f174e1886",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.ilean.hash": "d2e024130f909e79a4bc75ea49c14043b2d856642ddf36781d4a9d8f34fa4f12",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.olean": "021ca4776b91b83dcdcc431a5495463793acd399349dd79f8395e952fa639dc4",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.olean.hash": "df25e9fd72f75a011217ab12541a4c9edcfe7f580c9641dfebdc59ea5268fe19",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.trace": "191f53e10a2543e81bbf578c297cf3ac8f039501197b369e2e9d8338d2302151"
+    },
+    "baseline_entry": null,
+    "fingerprint": "6445072a6c9525f7723d6c402acddd5306c4210e6cc8480ac13358ce5c9cc1c1",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/PairLightArithmetic.c": "641c4ed62a4c0fa9ba4900bd46ced8c27449938e6cc0121eb002a2f3b2d19a6e",
+        ".lake/build/ir/D1Bound5/PairLightArithmetic.c.hash": "cb4ee68cc4379cbc88d98828f288bfe320d0541aa09c1bf5dc0efcd885ac1514",
+        ".lake/build/ir/D1Bound5/PairLightArithmetic.setup.json": "6ce0930fe914ec780bd631864f8e89e4fe467e17aad8af9643b9bfdf13474511",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.ilean": "62aa59f014a16155a988220702de30c222ff4d27f6d1cfaf2b92ad6f174e1886",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.ilean.hash": "d2e024130f909e79a4bc75ea49c14043b2d856642ddf36781d4a9d8f34fa4f12",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.olean": "021ca4776b91b83dcdcc431a5495463793acd399349dd79f8395e952fa639dc4",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.olean.hash": "df25e9fd72f75a011217ab12541a4c9edcfe7f580c9641dfebdc59ea5268fe19",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmetic.trace": "191f53e10a2543e81bbf578c297cf3ac8f039501197b369e2e9d8338d2302151"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "6445072a6c9525f7723d6c402acddd5306c4210e6cc8480ac13358ce5c9cc1c1",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PairLightArithmetic-20261018T044135770624Z.log",
+      "name": "PairLightArithmetic",
+      "seconds": 6.328566875308752,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "ac3b9e9f7d91be83861de5b2f384eb0c669c61cfa9bd323309d57565e89af6eb",
+      "timed_out": false,
+      "timeout_seconds": 600,
+      "utc": "2026-10-18T04:41:42.117185+00:00"
+    }
+  },
+  "PairLightArithmeticChunkProofs": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/PairLightArithmeticChunkProofs.c": "1c824870d33c57adaf051fba3206046bceada9c9919061be8946b9171d8009f0",
+      ".lake/build/ir/D1Bound5/PairLightArithmeticChunkProofs.c.hash": "b1c92ca70989110682f5db2795d5fecc8867cfb5d590d949ada9c988daf98736",
+      ".lake/build/ir/D1Bound5/PairLightArithmeticChunkProofs.setup.json": "f74159a27f93e946e00faac8572d05c1a43ef826056be528c2ef4b5e686ee26c",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.ilean": "48126b6231810670d8bbe5d9039c506df2ea5085b4feb21bf5207310440012b3",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.ilean.hash": "95ee3f0494d0913bea96622138c26463f0df7bc12e8736e1c441073519af462e",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.olean": "a6c9d38e1208a28ebbc2a85c4b7751bf48eac689b70902f6373588073f14827d",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.olean.hash": "94919d36e41cd83367dc725a6e305124660e7f63fc719c42eb27e657677f9771",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.trace": "e411e1abdafe88ed73bcae8de12788c31405ed7770bc1ad1e1fedb577e7b8304"
+    },
+    "baseline_entry": null,
+    "fingerprint": "459a4cbf4b16ffffd9bf300bf24451b36b3e6753ee4e81cccb731f37de133b96",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/PairLightArithmeticChunkProofs.c": "1c824870d33c57adaf051fba3206046bceada9c9919061be8946b9171d8009f0",
+        ".lake/build/ir/D1Bound5/PairLightArithmeticChunkProofs.c.hash": "b1c92ca70989110682f5db2795d5fecc8867cfb5d590d949ada9c988daf98736",
+        ".lake/build/ir/D1Bound5/PairLightArithmeticChunkProofs.setup.json": "f74159a27f93e946e00faac8572d05c1a43ef826056be528c2ef4b5e686ee26c",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.ilean": "48126b6231810670d8bbe5d9039c506df2ea5085b4feb21bf5207310440012b3",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.ilean.hash": "95ee3f0494d0913bea96622138c26463f0df7bc12e8736e1c441073519af462e",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.olean": "a6c9d38e1208a28ebbc2a85c4b7751bf48eac689b70902f6373588073f14827d",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.olean.hash": "94919d36e41cd83367dc725a6e305124660e7f63fc719c42eb27e657677f9771",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunkProofs.trace": "e411e1abdafe88ed73bcae8de12788c31405ed7770bc1ad1e1fedb577e7b8304"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "459a4cbf4b16ffffd9bf300bf24451b36b3e6753ee4e81cccb731f37de133b96",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PairLightArithmeticChunkProofs-20261018T053510222109Z.log",
+      "name": "PairLightArithmeticChunkProofs",
+      "seconds": 9.202431291807443,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "658b9d78aa5789e1a26cdcfc58f5960c552bb3ae7fdeda34961f362a081828a4",
+      "timed_out": false,
+      "timeout_seconds": 600,
+      "utc": "2026-10-18T05:35:19.426878+00:00"
+    }
+  },
+  "PairLightArithmeticChunks": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/PairLightArithmeticChunks.c": "c7119099a4670ad4433f946cc6277f4a1b81f2b26d961132fd6f3adf87a8ffd3",
+      ".lake/build/ir/D1Bound5/PairLightArithmeticChunks.c.hash": "b3740d4cba5398f50cf4f0b15077b040d38b4651235e3a1d5eae8defa87cb922",
+      ".lake/build/ir/D1Bound5/PairLightArithmeticChunks.setup.json": "ba1d58528295d36193799f7bf9375910b9f7e4f30b761baf398aa2402ec3e354",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.ilean": "36fae3363f12a03d76809b263079b7a88b9b30518fc86c6ab45f937844e2d502",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.ilean.hash": "480ae8022f851503b8a903e7b8efa2f45157e53d519d0c322dec14581ac2a6dd",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.olean": "b701b96d84683ec61dd31421dd1e4e740b1fd650050fdd881c246aec166ce797",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.olean.hash": "22a366fef3eaf6ec31becb095005f7e82b0b3ed4399ca26bd2eb69f694971ab7",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.trace": "2ce766d808999df974be2ffef5dc515d80f4228d5b51b995edda5468d38ffe97"
+    },
+    "baseline_entry": null,
+    "fingerprint": "af904ef31705f581f261dad219285a9aeb5b2f18bfc91d80741f612e76a2262f",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/PairLightArithmeticChunks.c": "c7119099a4670ad4433f946cc6277f4a1b81f2b26d961132fd6f3adf87a8ffd3",
+        ".lake/build/ir/D1Bound5/PairLightArithmeticChunks.c.hash": "b3740d4cba5398f50cf4f0b15077b040d38b4651235e3a1d5eae8defa87cb922",
+        ".lake/build/ir/D1Bound5/PairLightArithmeticChunks.setup.json": "ba1d58528295d36193799f7bf9375910b9f7e4f30b761baf398aa2402ec3e354",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.ilean": "36fae3363f12a03d76809b263079b7a88b9b30518fc86c6ab45f937844e2d502",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.ilean.hash": "480ae8022f851503b8a903e7b8efa2f45157e53d519d0c322dec14581ac2a6dd",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.olean": "b701b96d84683ec61dd31421dd1e4e740b1fd650050fdd881c246aec166ce797",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.olean.hash": "22a366fef3eaf6ec31becb095005f7e82b0b3ed4399ca26bd2eb69f694971ab7",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticChunks.trace": "2ce766d808999df974be2ffef5dc515d80f4228d5b51b995edda5468d38ffe97"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "af904ef31705f581f261dad219285a9aeb5b2f18bfc91d80741f612e76a2262f",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PairLightArithmeticChunks-20261018T053505783246Z.log",
+      "name": "PairLightArithmeticChunks",
+      "seconds": 4.231219333130866,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "f6567fcbc7792894e8607b67148594c393fe089550470cc632f4beffbdcfaca7",
+      "timed_out": false,
+      "timeout_seconds": 600,
+      "utc": "2026-10-18T05:35:10.019703+00:00"
+    }
+  },
+  "PairLightArithmeticPrefixConcat": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/PairLightArithmeticPrefixConcat.c": "be3e81586e6943c5eae64da5b0b63ae96ff38383577f2fdbc1610f22181d45e8",
+      ".lake/build/ir/D1Bound5/PairLightArithmeticPrefixConcat.c.hash": "cfd4a75a3a8406d6ef7a46cb5f5811aaef32361ab1772911963f1959ab8d38a9",
+      ".lake/build/ir/D1Bound5/PairLightArithmeticPrefixConcat.setup.json": "bc509e8fa17414756f063de0c37be1f6f232c41f2e2b6626cd08334288aad18c",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.ilean": "c59b4836e43e525e2e711c9339d973a5beaf0c47d6aff2517d1f196766d65a21",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.ilean.hash": "8599cace4db41bc419557d88d8500120f461ecc6e9299bbb71caa904db2c1311",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.olean": "96e4118c09e1c3bd4287bc1cda733d69949f53bfdd8e9d621397748aab774c46",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.olean.hash": "dc7dc06f23c275c6f2acfd2cbab79ef7bb739b034279d7e2a26905f22fccd7c6",
+      ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.trace": "9dab42f1b45279ff3f7fb11d3b8e1667cf5f96b409addf8eb9a3f01f8e704f38"
+    },
+    "baseline_entry": null,
+    "fingerprint": "44466fdb5fa0339705d4491c01618975f17932588ebb81743972a0facee7f94e",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/PairLightArithmeticPrefixConcat.c": "be3e81586e6943c5eae64da5b0b63ae96ff38383577f2fdbc1610f22181d45e8",
+        ".lake/build/ir/D1Bound5/PairLightArithmeticPrefixConcat.c.hash": "cfd4a75a3a8406d6ef7a46cb5f5811aaef32361ab1772911963f1959ab8d38a9",
+        ".lake/build/ir/D1Bound5/PairLightArithmeticPrefixConcat.setup.json": "bc509e8fa17414756f063de0c37be1f6f232c41f2e2b6626cd08334288aad18c",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.ilean": "c59b4836e43e525e2e711c9339d973a5beaf0c47d6aff2517d1f196766d65a21",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.ilean.hash": "8599cace4db41bc419557d88d8500120f461ecc6e9299bbb71caa904db2c1311",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.olean": "96e4118c09e1c3bd4287bc1cda733d69949f53bfdd8e9d621397748aab774c46",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.olean.hash": "dc7dc06f23c275c6f2acfd2cbab79ef7bb739b034279d7e2a26905f22fccd7c6",
+        ".lake/build/lib/lean/D1Bound5/PairLightArithmeticPrefixConcat.trace": "9dab42f1b45279ff3f7fb11d3b8e1667cf5f96b409addf8eb9a3f01f8e704f38"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "44466fdb5fa0339705d4491c01618975f17932588ebb81743972a0facee7f94e",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/PairLightArithmeticPrefixConcat-20261019T154923346920Z.log",
+      "name": "PairLightArithmeticPrefixConcat",
+      "seconds": 11.123681208118796,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "2a00628c416022cc78732a0b0067542b89f738f591b1289ce4370ba3279d0d3b",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-19T15:49:34.475083+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveData46": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveData46.c": "cf55e20192ec289da5c1ce3756a9f2c0f4f6200c32c27bc87310e36caec06dca",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveData46.c.hash": "a3bfed73b35d8eef4225bc9206d9aef2a266cb8ae3116ac2e6ce1b023aa149b4",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveData46.setup.json": "8a62f3bf278194d5eae08f03e83cdf9e2ecbefc1ccbe2e04229e8dd07af7ac80",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.ilean": "af6c9ada49fde6af0c3e6643899682f57c5da505edf468a4f25ee65b9511cf20",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.ilean.hash": "b9b0da4859cd23f549826a0c431676deb4e8016715f268e6454d2504609c0c21",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.olean": "94490c31c736fcbf4e62ebb2442ee98e8587c1b54930ca5a11d048982b04e311",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.olean.hash": "717094717dcd74d70177d8c2f4b457d4211e7913111cb0dd39fa9f6739b9c954",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.trace": "77f15800e49ea47d1f09b823d73b547f5888473e2d7b065b8cbd4b6ecdf2492b"
+    },
+    "baseline_entry": null,
+    "fingerprint": "ec4ec46edac85ef1af0a4c4f64108f5f6be211f8a44b46ea68b701e2b123ca0a",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveData46.c": "cf55e20192ec289da5c1ce3756a9f2c0f4f6200c32c27bc87310e36caec06dca",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveData46.c.hash": "a3bfed73b35d8eef4225bc9206d9aef2a266cb8ae3116ac2e6ce1b023aa149b4",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveData46.setup.json": "8a62f3bf278194d5eae08f03e83cdf9e2ecbefc1ccbe2e04229e8dd07af7ac80",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.ilean": "af6c9ada49fde6af0c3e6643899682f57c5da505edf468a4f25ee65b9511cf20",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.ilean.hash": "b9b0da4859cd23f549826a0c431676deb4e8016715f268e6454d2504609c0c21",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.olean": "94490c31c736fcbf4e62ebb2442ee98e8587c1b54930ca5a11d048982b04e311",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.olean.hash": "717094717dcd74d70177d8c2f4b457d4211e7913111cb0dd39fa9f6739b9c954",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveData46.trace": "77f15800e49ea47d1f09b823d73b547f5888473e2d7b065b8cbd4b6ecdf2492b"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "ec4ec46edac85ef1af0a4c4f64108f5f6be211f8a44b46ea68b701e2b123ca0a",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveData46-20261022T112942034811Z.log",
+      "name": "SmallPairLightAdaptiveData46",
+      "seconds": 18.228844250086695,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "18f080c0c7e29d88ea48f60a5cbee00f8cad2147bed5cdd93dc7f451fb8bfc4d",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:30:00.269197+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000.c": "82109238fa15c4057bca6a155d627e341e63176236301e1e6f79897c361988db",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000.c.hash": "97e83ac04b6681ec6d8fa40b4e65255c9425f63e4a7adcb279ea6ceebc950d0e",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000.setup.json": "4c89b1063e1df7f576513565ff4215f24ffb9a2bd1dd896f52782bbb14a7d966",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.ilean": "7a8554194366ec9927e4f2ca459ef0d9bdc2791226ce52ef92020a7c60fbbf72",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.ilean.hash": "166d26c74f57d562e01a9c736274641a92b10277af6ab33176d0702c43307c11",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.olean": "cb7888c0b22764152f8c099700a0dfab0190027c5ce903d4187d2b24505df212",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.olean.hash": "cc7c38893d937f6c1fde2bfee3604a3c647458f0e879708e26df1c13c05ee6bb",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.trace": "962ad01761b5a2f9d6dcd88c2694dc6327c6a4e31fbb9ef389ea242197e41433"
+    },
+    "baseline_entry": null,
+    "fingerprint": "d3532b29d18a0270c7210ff3b4800c04957244c9e8100e4d970c3910bf7dadbd",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000.c": "82109238fa15c4057bca6a155d627e341e63176236301e1e6f79897c361988db",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000.c.hash": "97e83ac04b6681ec6d8fa40b4e65255c9425f63e4a7adcb279ea6ceebc950d0e",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000.setup.json": "4c89b1063e1df7f576513565ff4215f24ffb9a2bd1dd896f52782bbb14a7d966",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.ilean": "7a8554194366ec9927e4f2ca459ef0d9bdc2791226ce52ef92020a7c60fbbf72",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.ilean.hash": "166d26c74f57d562e01a9c736274641a92b10277af6ab33176d0702c43307c11",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.olean": "cb7888c0b22764152f8c099700a0dfab0190027c5ce903d4187d2b24505df212",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.olean.hash": "cc7c38893d937f6c1fde2bfee3604a3c647458f0e879708e26df1c13c05ee6bb",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000.trace": "962ad01761b5a2f9d6dcd88c2694dc6327c6a4e31fbb9ef389ea242197e41433"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "d3532b29d18a0270c7210ff3b4800c04957244c9e8100e4d970c3910bf7dadbd",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000-20261022T114451162511Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000",
+      "seconds": 8.166688833385706,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "380c7dc6a60d9ae7dca3f4f36b4f51475b8794d300bf0a55c96a71cbdc5caf65",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:44:59.332716+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000Part00": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.c": "8845906e315c2b762b40ea11ac1fddcfb75df6588142351820859eb508c1e252",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.c.hash": "579039add87860f2d571c974b2cef33dde3ce3c349d337d74dc714e31cd1c47d",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.setup.json": "6fa2fea394a5b680cd8da82fdda01c86816a63e2a786f42d131b7b24c8d7be61",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.ilean": "4adf88b1668796e906e3a550816c77fa77bc0c4e23f01aebb044141e84782e5d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.ilean.hash": "e44f517873862de66274aec9290bc56daee802af0cc80b8c47606f9552281537",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.olean": "88955fca41fa0fa65d3fcacd0e1521484b718f0484925051e90be40bfe56e8eb",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.olean.hash": "91d115bc83c7a076a2a8268b6a776c2a2c1fdfef8f1381e679db838a8205784c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.trace": "45fe3510a564ca618af5a653a27c17657c8f805718a9bb9094f33fd499dc2eb8"
+    },
+    "baseline_entry": null,
+    "fingerprint": "150577a60ee8065784195dd5859da7f12cf10ec26ee4979d02abe9fcd5d18f9f",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.c": "8845906e315c2b762b40ea11ac1fddcfb75df6588142351820859eb508c1e252",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.c.hash": "579039add87860f2d571c974b2cef33dde3ce3c349d337d74dc714e31cd1c47d",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.setup.json": "6fa2fea394a5b680cd8da82fdda01c86816a63e2a786f42d131b7b24c8d7be61",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.ilean": "4adf88b1668796e906e3a550816c77fa77bc0c4e23f01aebb044141e84782e5d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.ilean.hash": "e44f517873862de66274aec9290bc56daee802af0cc80b8c47606f9552281537",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.olean": "88955fca41fa0fa65d3fcacd0e1521484b718f0484925051e90be40bfe56e8eb",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.olean.hash": "91d115bc83c7a076a2a8268b6a776c2a2c1fdfef8f1381e679db838a8205784c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part00.trace": "45fe3510a564ca618af5a653a27c17657c8f805718a9bb9094f33fd499dc2eb8"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "150577a60ee8065784195dd5859da7f12cf10ec26ee4979d02abe9fcd5d18f9f",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000Part00-20261022T114012780135Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000Part00",
+      "seconds": 8.148049333132803,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "66ce7a36ac8f973813419cf810f374fe6775edaab370f382abd4a7a52984714c",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:40:20.933954+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000Part01": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.c": "f1d01f819aafe1d0b5b4e6c5e198ad30a3b87890ae6d32483c1e39a35a8adda5",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.c.hash": "53a3d89821a34a3c37fad63c802b24a12f08e0f9d53f204ec047c2aaba29c0e7",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.setup.json": "87a3eab77c09e57b33e984ea1d5f5f3022217eab473fbb16e8bf6a647d273648",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.ilean": "89b2dda957e0f1986be574a069950a07d015bfabda0c0e94029d7896a1c2675c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.ilean.hash": "7328b17d2639b43fbc11ac6724728787ec5e092df9be8c08ad790535e6d1f6cb",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.olean": "c1142697722cbbeea1ff121b342933b8cd74694a6e2dae93284b07aaee1c5cff",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.olean.hash": "d730b0bbea9d4e1d22e75ab7134b60f19dc04c2982d80e1db1859c6c74526d5d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.trace": "8ca6dd71e8e6d1d4159a5a2fc75c20512584badc55f4bd5bc3fd25f7bbe75cf8"
+    },
+    "baseline_entry": null,
+    "fingerprint": "0fa331c30e45daa57918b8ec58e23fbb157f49a59a1036fd421025ce98239ca4",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.c": "f1d01f819aafe1d0b5b4e6c5e198ad30a3b87890ae6d32483c1e39a35a8adda5",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.c.hash": "53a3d89821a34a3c37fad63c802b24a12f08e0f9d53f204ec047c2aaba29c0e7",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.setup.json": "87a3eab77c09e57b33e984ea1d5f5f3022217eab473fbb16e8bf6a647d273648",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.ilean": "89b2dda957e0f1986be574a069950a07d015bfabda0c0e94029d7896a1c2675c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.ilean.hash": "7328b17d2639b43fbc11ac6724728787ec5e092df9be8c08ad790535e6d1f6cb",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.olean": "c1142697722cbbeea1ff121b342933b8cd74694a6e2dae93284b07aaee1c5cff",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.olean.hash": "d730b0bbea9d4e1d22e75ab7134b60f19dc04c2982d80e1db1859c6c74526d5d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part01.trace": "8ca6dd71e8e6d1d4159a5a2fc75c20512584badc55f4bd5bc3fd25f7bbe75cf8"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "0fa331c30e45daa57918b8ec58e23fbb157f49a59a1036fd421025ce98239ca4",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000Part01-20261022T114355980288Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000Part01",
+      "seconds": 10.196665208321065,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "2a933b2b9515ad79c0724ba0ecf0c0b5ddc132cc45e978471e85927e35a74f41",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:44:06.181436+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000Part02": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.c": "efb92faddc0e30b9acd74731a34457e6cbd892e43e5591d129d6c56524abecc1",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.c.hash": "c987f52f41bf8581de5fa38e81e0f244a810cf1397020ab65a58e0e0284165da",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.setup.json": "7b2371823b87d836d0d97ceae6210301e23075e79d7098188bde5110544b6866",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.ilean": "fef2778c937499631e75fb281579a95f881e797699344da124115103b93a466d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.ilean.hash": "f92095ca7e9712981c186498de85c39c2ca649470f7163b26b6ac235e8e27b9c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.olean": "4ed1f34e4b3eabe939d21e52019b4545dcfe08d414b6ff0242f01b6488f0f262",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.olean.hash": "33fc0743b150b04607354a77b52d5bfd982bb0ada2feb29a7e5210569e96f069",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.trace": "fb622eaaa25fae3828591be2e11c55d00d928751c4576ca66be59fc0dbc27d15"
+    },
+    "baseline_entry": null,
+    "fingerprint": "f5f23ad3c43f897df1da774310ffeee8b749495be225bbc77052468479005b52",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.c": "efb92faddc0e30b9acd74731a34457e6cbd892e43e5591d129d6c56524abecc1",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.c.hash": "c987f52f41bf8581de5fa38e81e0f244a810cf1397020ab65a58e0e0284165da",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.setup.json": "7b2371823b87d836d0d97ceae6210301e23075e79d7098188bde5110544b6866",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.ilean": "fef2778c937499631e75fb281579a95f881e797699344da124115103b93a466d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.ilean.hash": "f92095ca7e9712981c186498de85c39c2ca649470f7163b26b6ac235e8e27b9c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.olean": "4ed1f34e4b3eabe939d21e52019b4545dcfe08d414b6ff0242f01b6488f0f262",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.olean.hash": "33fc0743b150b04607354a77b52d5bfd982bb0ada2feb29a7e5210569e96f069",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part02.trace": "fb622eaaa25fae3828591be2e11c55d00d928751c4576ca66be59fc0dbc27d15"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "f5f23ad3c43f897df1da774310ffeee8b749495be225bbc77052468479005b52",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000Part02-20261022T114408799352Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000Part02",
+      "seconds": 10.164571749977767,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "cf0d7aa86854c4e1a45b2ce3968e8c94a3781bf6c0b7abe271b2ad6471aa2f85",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:44:18.969990+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000Part03": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.c": "f0df7d7c6a1a1cc8188232d5ea946182d501ddbaabeca128ace3be9caf7c0f6b",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.c.hash": "68af0717f7c9c30c39009b9d0ee5b833b0ed103ede06f4b42deeb7dbb8bfdda8",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.setup.json": "741845ab7b59d880203e0dd797b7aea464c5bb8bf12a1ac9798db9da206793ad",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.ilean": "f9e8b499575d801bef929e2cc7eac87e60c643b79df5329d830062d1c2dcd2dc",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.ilean.hash": "81d7b5ddc0a14802c24e2c0b22790e3e641f5f71d0bc788976a6471226db2ffb",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.olean": "a9c53f0a61f3f22b8f11ac9dacafa707ec34bf57ea4fcb00b0a27924f084210a",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.olean.hash": "5233ffa205d282bc1df56ccbbcb7b57f28b1a4bed61f7cfd282c70efc1bbff82",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.trace": "9604639a6ad881f634f27e72c2070e128011571bddb1df4a90ef602aba4ab00b"
+    },
+    "baseline_entry": null,
+    "fingerprint": "e3c7823cb8122be79e0c9ce9c8fb61d19b37ac9de52a847a0afd83016a03113b",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.c": "f0df7d7c6a1a1cc8188232d5ea946182d501ddbaabeca128ace3be9caf7c0f6b",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.c.hash": "68af0717f7c9c30c39009b9d0ee5b833b0ed103ede06f4b42deeb7dbb8bfdda8",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.setup.json": "741845ab7b59d880203e0dd797b7aea464c5bb8bf12a1ac9798db9da206793ad",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.ilean": "f9e8b499575d801bef929e2cc7eac87e60c643b79df5329d830062d1c2dcd2dc",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.ilean.hash": "81d7b5ddc0a14802c24e2c0b22790e3e641f5f71d0bc788976a6471226db2ffb",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.olean": "a9c53f0a61f3f22b8f11ac9dacafa707ec34bf57ea4fcb00b0a27924f084210a",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.olean.hash": "5233ffa205d282bc1df56ccbbcb7b57f28b1a4bed61f7cfd282c70efc1bbff82",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part03.trace": "9604639a6ad881f634f27e72c2070e128011571bddb1df4a90ef602aba4ab00b"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "e3c7823cb8122be79e0c9ce9c8fb61d19b37ac9de52a847a0afd83016a03113b",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000Part03-20261022T114421342709Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000Part03",
+      "seconds": 8.155440249945968,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "8bd62df93ec2f296a1c94e835924714d03c2c94c8b100eabd377f5c153825122",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:44:29.501870+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000Part04": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.c": "7552225bf53760855fad78cdfc5fc2c4537adbcf47934fc5d0ef7adb1d728bf3",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.c.hash": "3b6f7b0ce16cb51f3c61d13cb639cf3c4cdfd29da4c6625e5a72bc947ea1e68b",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.setup.json": "bd2a637d76cbe553acb3627d4bee807ab4320422e680f843e2f10d0e35323691",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.ilean": "9dd5d9f8567652c162dfad94b5d47512ab3dbe07dd53fb66c96ee4e6efafa8e0",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.ilean.hash": "1be470c78e981fdc43d355efa4fc53c86c7484f9761e7f36cf30e8c11545657a",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.olean": "986c48f553786e68f9707600e481bbf430bfcc006d0136529a34656d4c00b815",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.olean.hash": "37ded42768b2eb5dabb27b9e1cdfe38ac9cd05c639c8b068c070a17d4e8b5f2a",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.trace": "76871aee06bf34c3c70e4db39590e482b97259da52c070d7861087e19447ef49"
+    },
+    "baseline_entry": null,
+    "fingerprint": "8ef22d947aea6198c0d63b31b3b378bc4a6b690ec798645f5343dddfdd1d472b",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.c": "7552225bf53760855fad78cdfc5fc2c4537adbcf47934fc5d0ef7adb1d728bf3",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.c.hash": "3b6f7b0ce16cb51f3c61d13cb639cf3c4cdfd29da4c6625e5a72bc947ea1e68b",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.setup.json": "bd2a637d76cbe553acb3627d4bee807ab4320422e680f843e2f10d0e35323691",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.ilean": "9dd5d9f8567652c162dfad94b5d47512ab3dbe07dd53fb66c96ee4e6efafa8e0",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.ilean.hash": "1be470c78e981fdc43d355efa4fc53c86c7484f9761e7f36cf30e8c11545657a",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.olean": "986c48f553786e68f9707600e481bbf430bfcc006d0136529a34656d4c00b815",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.olean.hash": "37ded42768b2eb5dabb27b9e1cdfe38ac9cd05c639c8b068c070a17d4e8b5f2a",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part04.trace": "76871aee06bf34c3c70e4db39590e482b97259da52c070d7861087e19447ef49"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "8ef22d947aea6198c0d63b31b3b378bc4a6b690ec798645f5343dddfdd1d472b",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000Part04-20261022T114431973925Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000Part04",
+      "seconds": 8.147382374852896,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "abfcb0567959f973ba953eeb54484a8a85f5b681cf355ba438ff90b1f13cc87f",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:44:40.124909+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_000Part05": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.c": "dbefa49db60233d1e12427708a6f4b503b563ebd26634b8bfc8ea4855356dfc8",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.c.hash": "e87ffd50cbee9727388e1c0687e8b2652c4031067471fee1b1fb97892df024ea",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.setup.json": "c58d1317e50822387b15f7ce93cfbdf928be2be7f4a3698d1b6f2d21d6a52e7b",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.ilean": "8952a942f4e1ad9a414ea8a6ccf1e6b92a566f7bfe43324bb2a0ee42db01904f",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.ilean.hash": "8953f8f7c6c817abdb8a2e6a6a1ae8147b36bb4271f18b988058c9bf3676f664",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.olean": "7c7565753c78c382398266c905160861165133002ed4d6a51166d844adbfd16d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.olean.hash": "80e629c6114377ff51cb77dc7567738b2fae4f87fe865c0a75b0cf14262c7b4d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.trace": "7ea3f1c69a389b462b454232a5ef945fbbc42bdd31adfcb1537d1116bf5016a1"
+    },
+    "baseline_entry": null,
+    "fingerprint": "931db8cf21d6fbcb213795a8a87d45ead40e0b05236df3dfb6997ae0cd52d9ae",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.c": "dbefa49db60233d1e12427708a6f4b503b563ebd26634b8bfc8ea4855356dfc8",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.c.hash": "e87ffd50cbee9727388e1c0687e8b2652c4031067471fee1b1fb97892df024ea",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.setup.json": "c58d1317e50822387b15f7ce93cfbdf928be2be7f4a3698d1b6f2d21d6a52e7b",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.ilean": "8952a942f4e1ad9a414ea8a6ccf1e6b92a566f7bfe43324bb2a0ee42db01904f",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.ilean.hash": "8953f8f7c6c817abdb8a2e6a6a1ae8147b36bb4271f18b988058c9bf3676f664",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.olean": "7c7565753c78c382398266c905160861165133002ed4d6a51166d844adbfd16d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.olean.hash": "80e629c6114377ff51cb77dc7567738b2fae4f87fe865c0a75b0cf14262c7b4d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_000Part05.trace": "7ea3f1c69a389b462b454232a5ef945fbbc42bdd31adfcb1537d1116bf5016a1"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "931db8cf21d6fbcb213795a8a87d45ead40e0b05236df3dfb6997ae0cd52d9ae",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_000Part05-20261022T114442411053Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_000Part05",
+      "seconds": 6.133693834301084,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "51bebc004aec7a0f33677d28187845e45de0fb3ee718fdd100a57e6f2fde0d38",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:44:48.547654+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_001": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001.c": "574f74329c177839237082dc60fe163da403816544923d972beacd506d261f4c",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001.c.hash": "5895d64fbd09bfd794d1e6b810476a321ad79b8e2c51b080515ed71adb16793a",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001.setup.json": "07e95ae0b542c8f74627b0389e485bf3833e9b05f6e332ec69a5c452bf5aaf7c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.ilean": "cbeb10c0c1a5f5da8ed814d15d43599344e11015dd7d194d72acc89569204f6f",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.ilean.hash": "9fe1e8fe782cd0b2f5b25a7ac957af28c9c3022e253ad4a24ae67cb29d8de6a5",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.olean": "cbcb33c0fd1a2d5ec776a059a6aa0729fcbf05d11c35c23ff158bc79007d806c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.olean.hash": "76895f68bbb0ba01ebb29ec59790a589398ad43fb3c2013152867156787f85e9",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.trace": "2200986fcc47128b2ea68531328c9805fb1b098874942a472923ffbdfbe11ed1"
+    },
+    "baseline_entry": null,
+    "fingerprint": "07e44c6359c96e363efae6def4f5e02d8cb8bcbdd7f1ddadd268945dd5bd576e",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001.c": "574f74329c177839237082dc60fe163da403816544923d972beacd506d261f4c",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001.c.hash": "5895d64fbd09bfd794d1e6b810476a321ad79b8e2c51b080515ed71adb16793a",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001.setup.json": "07e95ae0b542c8f74627b0389e485bf3833e9b05f6e332ec69a5c452bf5aaf7c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.ilean": "cbeb10c0c1a5f5da8ed814d15d43599344e11015dd7d194d72acc89569204f6f",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.ilean.hash": "9fe1e8fe782cd0b2f5b25a7ac957af28c9c3022e253ad4a24ae67cb29d8de6a5",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.olean": "cbcb33c0fd1a2d5ec776a059a6aa0729fcbf05d11c35c23ff158bc79007d806c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.olean.hash": "76895f68bbb0ba01ebb29ec59790a589398ad43fb3c2013152867156787f85e9",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001.trace": "2200986fcc47128b2ea68531328c9805fb1b098874942a472923ffbdfbe11ed1"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "07e44c6359c96e363efae6def4f5e02d8cb8bcbdd7f1ddadd268945dd5bd576e",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_001-20261022T114541063483Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_001",
+      "seconds": 8.158728749956936,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "53fcefbac060778d76cd3a0ec795a4b7706f12fac4304f4ad763959f7803865d",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:45:49.225654+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_001Part00": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.c": "08e319515b5f44df747bcc4ff2acacd6f3c2f4c2dea3b687933bdb8295e10c08",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.c.hash": "76c834a76d1cbe254a6411a1e332ffcd1b861661e35fa9be6ade58617579d00d",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.setup.json": "238e196fd97917214d6fa467e29935483210bef9698737d0eb22374fe10898b0",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.ilean": "20fae6e4589d984c0f4c78a9fd74d2a312d566792f0bf7811f425dd8957c4cd9",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.ilean.hash": "dfe3c357e575bc8d2ef948c54960d1c6951e0ff8c1a353af412214d48b647dd1",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.olean": "a74b2f6d29a48dbab29094fe7886da8d2739bdf0c2cb795b4993ed07754612cb",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.olean.hash": "0b9e070851bdd92578fe8a0b48f921f24ee46db62b707ad990f1cf1651b2b45b",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.trace": "47876942c8741a570671e5e4b5c6a2e7716c91efe06e49193db79c45a15a223d"
+    },
+    "baseline_entry": null,
+    "fingerprint": "b9db9a27ef45c5a62bef8b00e09b0bef83f3701c740479e7092d17918f416056",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.c": "08e319515b5f44df747bcc4ff2acacd6f3c2f4c2dea3b687933bdb8295e10c08",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.c.hash": "76c834a76d1cbe254a6411a1e332ffcd1b861661e35fa9be6ade58617579d00d",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.setup.json": "238e196fd97917214d6fa467e29935483210bef9698737d0eb22374fe10898b0",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.ilean": "20fae6e4589d984c0f4c78a9fd74d2a312d566792f0bf7811f425dd8957c4cd9",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.ilean.hash": "dfe3c357e575bc8d2ef948c54960d1c6951e0ff8c1a353af412214d48b647dd1",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.olean": "a74b2f6d29a48dbab29094fe7886da8d2739bdf0c2cb795b4993ed07754612cb",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.olean.hash": "0b9e070851bdd92578fe8a0b48f921f24ee46db62b707ad990f1cf1651b2b45b",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part00.trace": "47876942c8741a570671e5e4b5c6a2e7716c91efe06e49193db79c45a15a223d"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "b9db9a27ef45c5a62bef8b00e09b0bef83f3701c740479e7092d17918f416056",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_001Part00-20261022T114501878646Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_001Part00",
+      "seconds": 8.300792874768376,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "200ca375cd989ba41abb2519f27f82b3c7a233d58ddfee23fac007ad5a65b346",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:45:10.184153+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_001Part01": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.c": "3252e358f49d16b807b3f39477df280d6d8db93565a539df561e5755378386ef",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.c.hash": "3f97f5165fa4f7058cee52154b6ca1ea1799fd7943949789327273fd4ba8556e",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.setup.json": "20bde032e123f2ceb290314a5ccbaee5a9ec73d8b294788cc5844fbc547449fa",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.ilean": "afbaf5e4c4e1b3e17da7edb39d825ec36271759daf8d3eb57f1f6df2cf5ed6ac",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.ilean.hash": "81c7db5ed5059a516a9bb0526acc18d167ef4e78d75238e3cfdfcddc785272ed",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.olean": "ff6fd3221564ef8e4e616489690eef29ea5d7f12730b8570aa1497a0123f6379",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.olean.hash": "0993f6f2e5e0b937184bcc3a340172aee02aa03ee9d752768d2b8b0e2140ef49",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.trace": "a5c8a9e480cea9953dc788e80713bffeea7773831abece77c4835a2e3f2ec6c4"
+    },
+    "baseline_entry": null,
+    "fingerprint": "5eaffa678b067503ff92232168d3ac4a6c7cad275be5313fee01795ea04e9994",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.c": "3252e358f49d16b807b3f39477df280d6d8db93565a539df561e5755378386ef",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.c.hash": "3f97f5165fa4f7058cee52154b6ca1ea1799fd7943949789327273fd4ba8556e",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.setup.json": "20bde032e123f2ceb290314a5ccbaee5a9ec73d8b294788cc5844fbc547449fa",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.ilean": "afbaf5e4c4e1b3e17da7edb39d825ec36271759daf8d3eb57f1f6df2cf5ed6ac",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.ilean.hash": "81c7db5ed5059a516a9bb0526acc18d167ef4e78d75238e3cfdfcddc785272ed",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.olean": "ff6fd3221564ef8e4e616489690eef29ea5d7f12730b8570aa1497a0123f6379",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.olean.hash": "0993f6f2e5e0b937184bcc3a340172aee02aa03ee9d752768d2b8b0e2140ef49",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part01.trace": "a5c8a9e480cea9953dc788e80713bffeea7773831abece77c4835a2e3f2ec6c4"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "5eaffa678b067503ff92232168d3ac4a6c7cad275be5313fee01795ea04e9994",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_001Part01-20261022T114512728288Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_001Part01",
+      "seconds": 8.165960917249322,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "ba1aeb42b1d3018bcbfaada8ac4db9b56970023423f5d08ba7d03b0b9fcbac77",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:45:20.898020+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_001Part02": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.c": "393c3ec779b6f6881a0e586666f938612cd22871d47fb64db758dacea28ed470",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.c.hash": "a33d963d43abcef245adc5e8e1362703c7bc7c8bbd664efb3e7534698f54b3f5",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.setup.json": "3fccf72f2c4f3ee07bf494cfc8a8831b87dca3ef840ec63bc6aa0f349a675989",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.ilean": "1ccba50afb79345e3e822bb8b1716e376406e1560ccfba912d50ed31c2bcd5ff",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.ilean.hash": "c56827cccb85bedd148fdf4b889cde326c5a25c698d8512257410b96c74d41b3",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.olean": "c431a0f41668ee6eccc2c1a738f476bde3d95ac06059d850e95d36a272b466ad",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.olean.hash": "8e2aa61a31dc448967e9ab9526226c2a329b329ff4fb37662b4cef3bcf59ba68",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.trace": "c54101c74cf2216094009657082c5df433495740fe94398c284824da3c630893"
+    },
+    "baseline_entry": null,
+    "fingerprint": "1151a8e4acd916c356af3c9cddbe29e0015bc24dc70e0259169303e9692f58fd",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.c": "393c3ec779b6f6881a0e586666f938612cd22871d47fb64db758dacea28ed470",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.c.hash": "a33d963d43abcef245adc5e8e1362703c7bc7c8bbd664efb3e7534698f54b3f5",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.setup.json": "3fccf72f2c4f3ee07bf494cfc8a8831b87dca3ef840ec63bc6aa0f349a675989",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.ilean": "1ccba50afb79345e3e822bb8b1716e376406e1560ccfba912d50ed31c2bcd5ff",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.ilean.hash": "c56827cccb85bedd148fdf4b889cde326c5a25c698d8512257410b96c74d41b3",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.olean": "c431a0f41668ee6eccc2c1a738f476bde3d95ac06059d850e95d36a272b466ad",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.olean.hash": "8e2aa61a31dc448967e9ab9526226c2a329b329ff4fb37662b4cef3bcf59ba68",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part02.trace": "c54101c74cf2216094009657082c5df433495740fe94398c284824da3c630893"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "1151a8e4acd916c356af3c9cddbe29e0015bc24dc70e0259169303e9692f58fd",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_001Part02-20261022T114523315611Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_001Part02",
+      "seconds": 6.163255291059613,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "216500c4c3ef200ce1c8f9ccb854ecddf96c55627eecca314b2e986e59d7291b",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:45:29.482736+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveLeft46_001Part03": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.c": "24c656af26e6666461a62dfb520870a0e289bf1bf0c6c6fa926113d728183259",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.c.hash": "40466fb205346f6fee982cae41c2e64e5a28c75e7b84adf3e4c43ccfbef0f911",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.setup.json": "62ed655689623956f7dfcde41cbed7099307d3953faff7ddd760f330c02fb287",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.ilean": "2f02ea10eba7d8e50d9b4ad3a68636412d6eac58ae8cc9ec4d40a9a63edd8873",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.ilean.hash": "8d5431faf7b8f4657f6b7503c6cdf09ec6eb6173e82791be6e377c63e5b7d539",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.olean": "7488c1717dd16d1e189ba886f00ae8b3a8f11e2c02bd34bb8810ec2f328322ba",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.olean.hash": "4ae0a059414f80a18647da682d473e3e4711305f89e988937704e57a1d6de697",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.trace": "750607c059fbaacfbbc44427e0f832ebd827b6339982933cfe0499849a1f4d4c"
+    },
+    "baseline_entry": null,
+    "fingerprint": "b67909c266dceb5097c73b2f10ccf21540bd31fcce857f278c2e68697554472b",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.c": "24c656af26e6666461a62dfb520870a0e289bf1bf0c6c6fa926113d728183259",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.c.hash": "40466fb205346f6fee982cae41c2e64e5a28c75e7b84adf3e4c43ccfbef0f911",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.setup.json": "62ed655689623956f7dfcde41cbed7099307d3953faff7ddd760f330c02fb287",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.ilean": "2f02ea10eba7d8e50d9b4ad3a68636412d6eac58ae8cc9ec4d40a9a63edd8873",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.ilean.hash": "8d5431faf7b8f4657f6b7503c6cdf09ec6eb6173e82791be6e377c63e5b7d539",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.olean": "7488c1717dd16d1e189ba886f00ae8b3a8f11e2c02bd34bb8810ec2f328322ba",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.olean.hash": "4ae0a059414f80a18647da682d473e3e4711305f89e988937704e57a1d6de697",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveLeft46_001Part03.trace": "750607c059fbaacfbbc44427e0f832ebd827b6339982933cfe0499849a1f4d4c"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "b67909c266dceb5097c73b2f10ccf21540bd31fcce857f278c2e68697554472b",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveLeft46_001Part03-20261022T114532147559Z.log",
+      "name": "SmallPairLightAdaptiveLeft46_001Part03",
+      "seconds": 6.133738416712731,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "3eb0ca94942d8fcba0982e9decd43f8a82d85878edaafcc7bbb447066a761bc1",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:45:38.284297+00:00"
+    }
+  },
+  "SmallPairLightAdaptiveValidation46": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveValidation46.c": "42690360686e3641a3c7032792cd7478c306d834026550314a3184daa1cdc0e8",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveValidation46.c.hash": "8758303c0195950e37e1415345904d1a14d512705813e84dd8df16f54d0f7bca",
+      ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveValidation46.setup.json": "e25029ca02bd8f4cc1c5b6ae3b15b3375aa00c4ab68cfaff9da7182e685422bd",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.ilean": "9aea8a01182067a86f42b327bfdad7612fb75566b6495be016c19e228b1cdc3d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.ilean.hash": "34a0fc5a6772d2463af2b2b9a11e375730b6e0bd00edb204fe84523ca2ad6ef7",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.olean": "26379063e5b7ec38ef31ee016db8160161192ecd878e4e909937733d79a7a8b9",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.olean.hash": "303ea0d3d06800044c207af2c8c1def5cc7e4dd6188479d032aece7c633dd78e",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.trace": "6d7d725f81f94e8996a5a5c6b0a5f19f8111000d9eedd0c6ea242078d4d21c3e"
+    },
+    "baseline_entry": null,
+    "fingerprint": "8af11963db3c03355230716d043aa5c91e861bb9fb5ccb301a84a5b6a4f711ff",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveValidation46.c": "42690360686e3641a3c7032792cd7478c306d834026550314a3184daa1cdc0e8",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveValidation46.c.hash": "8758303c0195950e37e1415345904d1a14d512705813e84dd8df16f54d0f7bca",
+        ".lake/build/ir/D1Bound5/SmallPairLightAdaptiveValidation46.setup.json": "e25029ca02bd8f4cc1c5b6ae3b15b3375aa00c4ab68cfaff9da7182e685422bd",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.ilean": "9aea8a01182067a86f42b327bfdad7612fb75566b6495be016c19e228b1cdc3d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.ilean.hash": "34a0fc5a6772d2463af2b2b9a11e375730b6e0bd00edb204fe84523ca2ad6ef7",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.olean": "26379063e5b7ec38ef31ee016db8160161192ecd878e4e909937733d79a7a8b9",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.olean.hash": "303ea0d3d06800044c207af2c8c1def5cc7e4dd6188479d032aece7c633dd78e",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightAdaptiveValidation46.trace": "6d7d725f81f94e8996a5a5c6b0a5f19f8111000d9eedd0c6ea242078d4d21c3e"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "8af11963db3c03355230716d043aa5c91e861bb9fb5ccb301a84a5b6a4f711ff",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightAdaptiveValidation46-20261022T113002597184Z.log",
+      "name": "SmallPairLightAdaptiveValidation46",
+      "seconds": 20.402635875158012,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "3bd0d7c3be7939a8d9b4574daaac7e8327673aa43ccbd104bb79f0896f6d44a2",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:30:23.003884+00:00"
+    }
+  },
+  "SmallPairLightData46": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightData46.c": "bfaaf10f77abdbd6731fad309c91f259b3cafbb376977b87e1f4a601c0639e9d",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46.c.hash": "4e22da08af0bcfd087eb0149510afcb1d560bdf145c1f53386d0d0b9473bd61f",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46.setup.json": "8eee18604ca8a03cd1400704f084f13a0a78fdc0b8d6a021f68e92f049557db4",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.ilean": "aa68921cf206cdebe8a297bf17a5ac9a7fe79cacfab91507341a1ce99842b24c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.ilean.hash": "ccbf35bd9e7ce623497d156c56a87447a1c9570ece829802ccdc4271b7e4a72a",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.olean": "8aeea09638069f60a21db7b4fe7f040ebce3248f0ab6bb96fce96df417ffc45c",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.olean.hash": "99cf1a1349f4396d4cc68273c042d051d4fc56e51154c58662be6dff368c0084",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.trace": "5fc5d2ff1e5612ce09e123e745d9653af6b72506f4c1329b762dcec8b3616aad"
+    },
+    "baseline_entry": null,
+    "fingerprint": "9db4b051682e4da1749b0e2b9ee49103e830ff1ea55cc037d33e38c33a448047",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightData46.c": "bfaaf10f77abdbd6731fad309c91f259b3cafbb376977b87e1f4a601c0639e9d",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46.c.hash": "4e22da08af0bcfd087eb0149510afcb1d560bdf145c1f53386d0d0b9473bd61f",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46.setup.json": "8eee18604ca8a03cd1400704f084f13a0a78fdc0b8d6a021f68e92f049557db4",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.ilean": "aa68921cf206cdebe8a297bf17a5ac9a7fe79cacfab91507341a1ce99842b24c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.ilean.hash": "ccbf35bd9e7ce623497d156c56a87447a1c9570ece829802ccdc4271b7e4a72a",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.olean": "8aeea09638069f60a21db7b4fe7f040ebce3248f0ab6bb96fce96df417ffc45c",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.olean.hash": "99cf1a1349f4396d4cc68273c042d051d4fc56e51154c58662be6dff368c0084",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46.trace": "5fc5d2ff1e5612ce09e123e745d9653af6b72506f4c1329b762dcec8b3616aad"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "9db4b051682e4da1749b0e2b9ee49103e830ff1ea55cc037d33e38c33a448047",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightData46-20261022T112936243346Z.log",
+      "name": "SmallPairLightData46",
+      "seconds": 4.108225709293038,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "1bb76a20712dc107d944841a8ce55d0daac857469ba061b5b217428ac54a1c3a",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:29:40.355085+00:00"
+    }
+  },
+  "SmallPairLightData46Left": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightData46Left.c": "4581a32c46e2f3c63502491c86a5b589346c12a448349d61dcb1a0d58b7fd8e4",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46Left.c.hash": "517788ed1c45d22c99db1a32bf63aec9c73c9cc24ada5dd1de62483babcadf3c",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46Left.setup.json": "bfe7954536a0543ab8fd23b9213a7dd2b789eb88d480a354ed92807c640817ab",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.ilean": "c32302dc8d1370b5be1ac366f78cf0d2e0a251459cda0e9ac04a0c2f1d0ca9ee",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.ilean.hash": "071f0ae1497f401e5d9c5e66b80113e3d8ee4551e9d479aca4765efe971f57be",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.olean": "0b2fccd8cb692371a7021a78eea409108f3198363a826d8fc46d64359321a8d9",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.olean.hash": "4833c8efd540573125487ec8f767536e0806f822a0a98caa7130331d4890c12f",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.trace": "40661b760ce8159753525fc2e6dcd9de48120b04e267862ee3215ae961830523"
+    },
+    "baseline_entry": null,
+    "fingerprint": "e30a64a3caee5359c3dbbc7922eb3affa9c4d8aa0c5631defb895acd127c8139",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightData46Left.c": "4581a32c46e2f3c63502491c86a5b589346c12a448349d61dcb1a0d58b7fd8e4",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46Left.c.hash": "517788ed1c45d22c99db1a32bf63aec9c73c9cc24ada5dd1de62483babcadf3c",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46Left.setup.json": "bfe7954536a0543ab8fd23b9213a7dd2b789eb88d480a354ed92807c640817ab",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.ilean": "c32302dc8d1370b5be1ac366f78cf0d2e0a251459cda0e9ac04a0c2f1d0ca9ee",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.ilean.hash": "071f0ae1497f401e5d9c5e66b80113e3d8ee4551e9d479aca4765efe971f57be",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.olean": "0b2fccd8cb692371a7021a78eea409108f3198363a826d8fc46d64359321a8d9",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.olean.hash": "4833c8efd540573125487ec8f767536e0806f822a0a98caa7130331d4890c12f",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Left.trace": "40661b760ce8159753525fc2e6dcd9de48120b04e267862ee3215ae961830523"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "e30a64a3caee5359c3dbbc7922eb3affa9c4d8aa0c5631defb895acd127c8139",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightData46Left-20261022T112519048540Z.log",
+      "name": "SmallPairLightData46Left",
+      "seconds": 106.41539791738614,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "8ee6e402dc6449b19ff46fae4154a0b12d8c2619a6238ae7a202490a8e48ded6",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:27:05.466776+00:00"
+    }
+  },
+  "SmallPairLightData46LeftRows": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightData46LeftRows.c": "e0d1435ead65df8b55d32ad7d80e18781c888fa4d85761fdd7a54ac1ba4d7872",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46LeftRows.c.hash": "b28fb0a86071d8bf1be675bb46b5ff2d9826cdf04677943361ec0c2cdb0ef81d",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46LeftRows.setup.json": "ce0e2d4320ec9d9e3da8c6c6bd055e0fd0b7a10dce8c4886150e3765e3f8dd37",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.ilean": "1b7204c0df17edf8334b61dc058776c9b9030ce0ae69ba56cfbfcb7380583779",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.ilean.hash": "d77afad278f16b87bb7770c6470392fd7cb776f7567363c024656f7f72c2bdc3",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.olean": "b9e4622fff64e6d90568ad777766ef718e7953a1474b5a5172035273cb496ef1",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.olean.hash": "2361f69f4be3e526071aa3909f3b71e7a6c202d6abbd1049d89923010b6ee399",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.trace": "3f732304bbd537d1234c83f88b10e18ec6d6e535d406f551bded1273ad79df91"
+    },
+    "baseline_entry": null,
+    "fingerprint": "0003cd4885c868761d4aca7072c68da32f6167da076d383298053bbc54827c8b",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightData46LeftRows.c": "e0d1435ead65df8b55d32ad7d80e18781c888fa4d85761fdd7a54ac1ba4d7872",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46LeftRows.c.hash": "b28fb0a86071d8bf1be675bb46b5ff2d9826cdf04677943361ec0c2cdb0ef81d",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46LeftRows.setup.json": "ce0e2d4320ec9d9e3da8c6c6bd055e0fd0b7a10dce8c4886150e3765e3f8dd37",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.ilean": "1b7204c0df17edf8334b61dc058776c9b9030ce0ae69ba56cfbfcb7380583779",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.ilean.hash": "d77afad278f16b87bb7770c6470392fd7cb776f7567363c024656f7f72c2bdc3",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.olean": "b9e4622fff64e6d90568ad777766ef718e7953a1474b5a5172035273cb496ef1",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.olean.hash": "2361f69f4be3e526071aa3909f3b71e7a6c202d6abbd1049d89923010b6ee399",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46LeftRows.trace": "3f732304bbd537d1234c83f88b10e18ec6d6e535d406f551bded1273ad79df91"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "0003cd4885c868761d4aca7072c68da32f6167da076d383298053bbc54827c8b",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightData46LeftRows-20261022T112735562704Z.log",
+      "name": "SmallPairLightData46LeftRows",
+      "seconds": 8.082731375005096,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "dcd49de63b13f89d14f0c4bdda56a75c367930b8db2e40a2404a0234f2eeca72",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:27:43.649784+00:00"
+    }
+  },
+  "SmallPairLightData46Right": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightData46Right.c": "f95f79d73337aecde128713c0a53c66efd782a98d064c468f6f219b64a4cd7ec",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46Right.c.hash": "4ecf72cb7f4a19063a6203ce35a86bc7f584ef485488ba0d4049465842b91293",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46Right.setup.json": "f1e90d6ef476a944ab294bb508b7f51df8c5479a55595c7478772e273ecc59ed",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.ilean": "758126a43b5bd0218af9da4ff9ab5069fdf1f002cab1ec1bab7190d1b69b9f23",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.ilean.hash": "587f911e7b50e7b5ebd202f3e1bc0cda17a2ac02665fd3565aafa29959cd7f75",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.olean": "106e56ebb284503049d1ac3baeeb9d10b0bc950a0df13e107c578c6f8209c82a",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.olean.hash": "fcc585f80abf9107683c9585c246181fe0b4feae5cb47228f837a9999354e563",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.trace": "1960d413fe890f12f4863653429f65a96b7ffebb58ad7599a522f4ceb7daa035"
+    },
+    "baseline_entry": null,
+    "fingerprint": "ed5a678455aaf7eb541f770c98528e13bce2341a427e4903260b0360413e3de3",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightData46Right.c": "f95f79d73337aecde128713c0a53c66efd782a98d064c468f6f219b64a4cd7ec",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46Right.c.hash": "4ecf72cb7f4a19063a6203ce35a86bc7f584ef485488ba0d4049465842b91293",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46Right.setup.json": "f1e90d6ef476a944ab294bb508b7f51df8c5479a55595c7478772e273ecc59ed",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.ilean": "758126a43b5bd0218af9da4ff9ab5069fdf1f002cab1ec1bab7190d1b69b9f23",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.ilean.hash": "587f911e7b50e7b5ebd202f3e1bc0cda17a2ac02665fd3565aafa29959cd7f75",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.olean": "106e56ebb284503049d1ac3baeeb9d10b0bc950a0df13e107c578c6f8209c82a",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.olean.hash": "fcc585f80abf9107683c9585c246181fe0b4feae5cb47228f837a9999354e563",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46Right.trace": "1960d413fe890f12f4863653429f65a96b7ffebb58ad7599a522f4ceb7daa035"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "ed5a678455aaf7eb541f770c98528e13bce2341a427e4903260b0360413e3de3",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightData46Right-20261022T112744830322Z.log",
+      "name": "SmallPairLightData46Right",
+      "seconds": 100.4022978330031,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "a88f8a7e725288efecae86c84246777f78e53632fe6381696c8cfaa10d4ee793",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:29:25.256447+00:00"
+    }
+  },
+  "SmallPairLightData46RightRows": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightData46RightRows.c": "69e3eebeb277295942053c6f00b6404c73f0974443c3a139e5854d9dbac9182e",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46RightRows.c.hash": "c945410aa6052a8c3ceae7565ee009a81e2512a8161bdf26b4841423cc028019",
+      ".lake/build/ir/D1Bound5/SmallPairLightData46RightRows.setup.json": "0f7fb2d0293cde47e1f0a4cdf3320193e46ec5a3864a5de3e58f759c949e4e85",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.ilean": "a594be39e8591f023ff51d545f6d63874140dccf7d6d8cbf0d4265acf9b02e67",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.ilean.hash": "e091e301ff1c7989dd28dffba57b87372558a9af7898299d00b42bc44bd43205",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.olean": "867487c63b4393cf4d281a62dbe5a146d2bb6f5aa14b572ed86a939e21f94174",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.olean.hash": "193f35ff862bf37b4d35c9e07c0d3fce4fc3a18d25c362ed366f93e1a30846df",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.trace": "9b6cdc81ddb9f1f5c2c127019fdefd5bf4ea6005215ff46e8daf0ad9c5f15cf8"
+    },
+    "baseline_entry": null,
+    "fingerprint": "20e680356e7e4967ef137a07f4b041ea9735a7e3167e8414196776c18e88b1a5",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightData46RightRows.c": "69e3eebeb277295942053c6f00b6404c73f0974443c3a139e5854d9dbac9182e",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46RightRows.c.hash": "c945410aa6052a8c3ceae7565ee009a81e2512a8161bdf26b4841423cc028019",
+        ".lake/build/ir/D1Bound5/SmallPairLightData46RightRows.setup.json": "0f7fb2d0293cde47e1f0a4cdf3320193e46ec5a3864a5de3e58f759c949e4e85",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.ilean": "a594be39e8591f023ff51d545f6d63874140dccf7d6d8cbf0d4265acf9b02e67",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.ilean.hash": "e091e301ff1c7989dd28dffba57b87372558a9af7898299d00b42bc44bd43205",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.olean": "867487c63b4393cf4d281a62dbe5a146d2bb6f5aa14b572ed86a939e21f94174",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.olean.hash": "193f35ff862bf37b4d35c9e07c0d3fce4fc3a18d25c362ed366f93e1a30846df",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightData46RightRows.trace": "9b6cdc81ddb9f1f5c2c127019fdefd5bf4ea6005215ff46e8daf0ad9c5f15cf8"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "20e680356e7e4967ef137a07f4b041ea9735a7e3167e8414196776c18e88b1a5",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightData46RightRows-20261022T112926676040Z.log",
+      "name": "SmallPairLightData46RightRows",
+      "seconds": 8.077339333016425,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "fc85fb3bab0318f36271a2ba817605d5f138dae0d60833e1aa4da39bbdd085a8",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:29:34.758572+00:00"
+    }
+  },
+  "SmallPairLightLeft46": {
+    "artifacts": {
+      ".lake/build/ir/D1Bound5/SmallPairLightLeft46.c": "681122e1051b06519fc405c6843c9d447d71156aee0a8b91888f23bfb704d731",
+      ".lake/build/ir/D1Bound5/SmallPairLightLeft46.c.hash": "0b5f55cd5539535cea760b25b39e1f19d190af08a7ff19e2853d22f38d40905a",
+      ".lake/build/ir/D1Bound5/SmallPairLightLeft46.setup.json": "b47d64a09a5d8c3fbb71964a81f70c0c2e290079548f1ad1ccb5a6765b751227",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.ilean": "b79fd55f0ba18cf679bac320bc44eaeeefd50137f38b7ce86ec2590fd967dd2d",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.ilean.hash": "f9d928141626333cbb9423a12ffad87299f1abae4199cb244d5a5d27616167e7",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.olean": "b31ad5cb98146106e54c167d7affcbfdefae8408fef59a55804bb11c65414f73",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.olean.hash": "2ba43057bce6b89a09ab3cc09711aa10b2e849275817992936bc90f8d0863e9b",
+      ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.trace": "116fa3ae1327afc45eb69e101cc0b926dcc6c2ad2f4ab7693d6742e6af89ad19"
+    },
+    "baseline_entry": null,
+    "fingerprint": "383112465b6de06b6b7bccac5a49dc2fa2e2e916b28dee3fc5fc72fd924b2402",
+    "original_receipt": {
+      "accepted_build": true,
+      "artifacts": {
+        ".lake/build/ir/D1Bound5/SmallPairLightLeft46.c": "681122e1051b06519fc405c6843c9d447d71156aee0a8b91888f23bfb704d731",
+        ".lake/build/ir/D1Bound5/SmallPairLightLeft46.c.hash": "0b5f55cd5539535cea760b25b39e1f19d190af08a7ff19e2853d22f38d40905a",
+        ".lake/build/ir/D1Bound5/SmallPairLightLeft46.setup.json": "b47d64a09a5d8c3fbb71964a81f70c0c2e290079548f1ad1ccb5a6765b751227",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.ilean": "b79fd55f0ba18cf679bac320bc44eaeeefd50137f38b7ce86ec2590fd967dd2d",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.ilean.hash": "f9d928141626333cbb9423a12ffad87299f1abae4199cb244d5a5d27616167e7",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.olean": "b31ad5cb98146106e54c167d7affcbfdefae8408fef59a55804bb11c65414f73",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.olean.hash": "2ba43057bce6b89a09ab3cc09711aa10b2e849275817992936bc90f8d0863e9b",
+        ".lake/build/lib/lean/D1Bound5/SmallPairLightLeft46.trace": "116fa3ae1327afc45eb69e101cc0b926dcc6c2ad2f4ab7693d6742e6af89ad19"
+      },
+      "closure_unchanged": true,
+      "exit": 0,
+      "fingerprint": "383112465b6de06b6b7bccac5a49dc2fa2e2e916b28dee3fc5fc72fd924b2402",
+      "interrupted": false,
+      "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/continuation-builds/SmallPairLightLeft46-20261022T114552546778Z.log",
+      "name": "SmallPairLightLeft46",
+      "seconds": 8.193894333206117,
+      "shared_artifacts_unchanged": true,
+      "source_sha256": "1f83b52da398d7859b2344f560660efce4764f16abde756d5407b114342d3f4f",
+      "timed_out": false,
+      "timeout_seconds": 240,
+      "utc": "2026-10-22T11:46:00.743995+00:00"
+    }
+  }
+}
