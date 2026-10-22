@@ -48,3 +48,8 @@ All LEFT heads 0..481 are now verified in three separate scopes. Original parent
 root remain unintegrated. Graph43 remains incomplete; endpoint count stays 30/48.
 The earlier block002 prepared status is superseded. Next: guarded RIGHT raw data and 12-head pilot;
 prepared script in 20261022-economical-graph43-right-pilot12, not yet verified.
+
+Latest checked archive: 20261022-economical-graph43-right-pilot12. RIGHT heads 0..11, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit, 3 targeted installed-kernel replays passed.
+MainTheorem remains UNPROVED; graph43 and canonical-root integration remain incomplete; endpoint count 30/48.
+Prepared right000/001/002 scripts are not evidence of completion; inspect each actual VERIFICATION_SUMMARY.
