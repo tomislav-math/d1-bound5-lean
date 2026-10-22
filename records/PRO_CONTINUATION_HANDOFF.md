@@ -61,3 +61,7 @@ Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. Mai
 Latest checked archive: 20261022-economical-graph3-parent-integration. graph3 both complete light-side certificates, six original parent theorem headers preserved.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261022-economical-graph3-closure-pilot. graph3 closure witness rows 0..63 over the complete 829-vertex list.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.

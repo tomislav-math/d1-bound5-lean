@@ -33,7 +33,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
    assert current==inventory['current_accepted_endpoints']
   handoff=R/'records/PRO_CONTINUATION_HANDOFF.md'
   assert '31/48 finite graph endpoints' in handoff.read_text()
-  scope=a.get('scope_description',f"graph3 LEFT heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails")
+  scope=a.get('scope_description',f"graph3 closure witness rows {a['start_offset']}..{a['start_offset']+a['heads']-1} over the complete {a['global_closure_vertices']}-vertex list" if a.get('global_closure_vertices') else f"graph3 LEFT heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails")
   entry=f"\nLatest checked archive: {O.name}. {scope}.\nGuarded builds, exact-type/transitive-axiom audit and {a['targeted_kernel_replays']} targeted installed-kernel replays passed.\nGraph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.\n"
   assert 'Latest checked archive: '+O.name not in handoff.read_text()
   if endpoint_complete:
