@@ -1,0 +1,147 @@
+{
+  "acceptance_claimed": false,
+  "audit_folder": "research/continuations/20261020T100000CEST-work-resume/pro-graph46-foundation-audit",
+  "broad_source_inspection": {
+    "bytes": 95246,
+    "reported_actual_remote_exit": 0,
+    "sha256": "f2d3955f2af8d40917f33e1697a825c786fb8a8f2a2f09720628f5a0cc0b2b54"
+  },
+  "build_scopes": {
+    "pilot": [
+      "SmallPairLightData46Left"
+    ],
+    "rest": [
+      "SmallPairLightData46LeftRows",
+      "SmallPairLightData46Right",
+      "SmallPairLightData46RightRows",
+      "SmallPairLightData46",
+      "SmallPairLightAdaptiveData46",
+      "SmallPairLightAdaptiveValidation46"
+    ]
+  },
+  "executable_input_binding_present": false,
+  "executable_provenance_binding_present": false,
+  "final_audit_scope": "foundation",
+  "fragment_source_bytes": {
+    "SmallPairLightData46Left": 303590,
+    "SmallPairLightData46LeftRows": 350845,
+    "SmallPairLightData46Right": 281734,
+    "SmallPairLightData46RightRows": 618532
+  },
+  "fragment_source_manifest": {
+    "SmallPairLightData46Left": "8ee6e402dc6449b19ff46fae4154a0b12d8c2619a6238ae7a202490a8e48ded6",
+    "SmallPairLightData46LeftRows": "dcd49de63b13f89d14f0c4bdda56a75c367930b8db2e40a2404a0234f2eeca72",
+    "SmallPairLightData46Right": "a88f8a7e725288efecae86c84246777f78e53632fe6381696c8cfaa10d4ee793",
+    "SmallPairLightData46RightRows": "fc85fb3bab0318f36271a2ba817605d5f138dae0d60833e1aa4da39bbdd085a8"
+  },
+  "graph": 46,
+  "independent_runtime_reviewer": "/root/graph1_foundation/graph1_local_review",
+  "kernel_replayed": false,
+  "lean_compiled": false,
+  "literal_row_counts": {
+    "leftCached": 360,
+    "leftRows": 360,
+    "leftVertices": 360,
+    "rightCached": 358,
+    "rightRows": 358,
+    "rightVertices": 358,
+    "sieve": 25
+  },
+  "local_checks_passed": [
+    "Python AST parsing for all eight scripts",
+    "Pure imports with subprocess APIs trapped for all importable scripts",
+    "Explicit optimized-Python rejection for all eight scripts",
+    "One worker replacement marker and valid synthesized Python syntax",
+    "Actual broad/narrow original source, header, count and fragment hash cross-checks",
+    "Frozen inspector/common hashes unchanged after actual remote source inspection",
+    "Exact candidate, PLAN, payload and worker reconstruction reviewed",
+    "Committed provenance and current accepted artifact binding reviewed",
+    "Both locks, one compiler, timeout240 and existing-fingerprint rejection reviewed",
+    "Pilot/rest ordering, signal drain, no retry/resume and actual receipt guards independently reviewed",
+    "Original declaration bodies/types and corrected preparation-binding self-entry reviewed"
+  ],
+  "main_theorem_complete": false,
+  "narrow_source_inspection": {
+    "bytes": 15033,
+    "reported_actual_remote_exit": 0,
+    "sha256": "e5ebda74206e24c4b086986c801753b4d5b99f5e77997a8402f44f252cd46d5b"
+  },
+  "publication_extras": {
+    "files": {
+      "research/continuations/20261022-graph46-inspection/SOURCE_INSPECTION.json": {
+        "bytes": 95246,
+        "sha256": "f2d3955f2af8d40917f33e1697a825c786fb8a8f2a2f09720628f5a0cc0b2b54"
+      },
+      "research/continuations/20261022-graph46-inspection/inspect_graph46.py": {
+        "bytes": 24412,
+        "sha256": "6e3cd9d44a8e27ffa37c78cdf00e6a543c9b749c69e853b1776e17d96bf6ab8f"
+      }
+    },
+    "kernel_result": false,
+    "main_theorem_complete": false,
+    "publication_scope": "graph46 foundation only, excluded from current graph1 endpoint publication",
+    "root_integration": false,
+    "schema": 1,
+    "source_only": true,
+    "status": "ACTUAL_GRAPH46_RESEARCH_FILES_REQUIRED_IN_FOUNDATION_PUBLICATION"
+  },
+  "reviewed_script_pins_sha256": "614b9a518174a2ba7d98f21628791c6af68e2239d90d3648ee68544352f97c2d",
+  "root_integration": false,
+  "schema": 1,
+  "scripts_frozen": {
+    "bind_inputs.py": {
+      "bytes": 12543,
+      "sha256": "d5b6127d2a363fb2d224d70415d4babb8a719c10d1811b659ecb9b176e0e554e"
+    },
+    "bounded_build_template.py": {
+      "bytes": 9204,
+      "sha256": "b32fc730d040d7cfc8b2c4bb5047d5749a45689d742bd99943532ced12e31e3b"
+    },
+    "build_scope.py": {
+      "bytes": 13913,
+      "sha256": "515c81ccfd1d8e1dbc12dbb98b10e35ce7c5c54ceb061f52685fd6f4e56812f2"
+    },
+    "finish_checks.py": {
+      "bytes": 13753,
+      "sha256": "93bec7ebf494d0e478ee579c3561bdcf1b20254504456ef9201d8c1bcc4a9619"
+    },
+    "foundation_inputs.py": {
+      "bytes": 18191,
+      "sha256": "7bddb13018a45ef5f65aaf5b7f64d845e08cde31f91f64a0da23397f4e5c301f"
+    },
+    "inspect_inputs.py": {
+      "bytes": 1814,
+      "sha256": "1d81787d63034c7268d6e4a2cf1ec9aa6f651e9fb19ac576a05a6e65bc3abe6e"
+    },
+    "installer.py": {
+      "bytes": 15250,
+      "sha256": "84a204e78b79885fdc521ecc75be1d88532db8fd49755bd02bc75dbd9977f308"
+    },
+    "prepare_checks.py": {
+      "bytes": 18794,
+      "sha256": "11029c4ff3b646790fa1991cbefb4f537511dc6c7a5c28433bbd3974fc7749b7"
+    }
+  },
+  "source_counts": {
+    "definitions": 19,
+    "theorems": 4,
+    "total": 23
+  },
+  "source_installation_performed": false,
+  "status": "LOCAL_GRAPH46_FOUNDATION_RUNTIME_REVIEW_PASS_EXECUTABLE_BASELINE_UNBOUND",
+  "supporting_files": {
+    "ADAPTATION_PLAN.md": "0cfe900f0168db319bcc5457f788f63f407fe98a04a99264546e9c3d0aa474b3",
+    "GRAPH46_BINDING_TEMPLATE.json": "33d393bcc2d89b56974457abf29e72b2c85c7146e2d90273134a840d444ca8ce",
+    "PROVENANCE_BINDING_TEMPLATE.json": "4201f5e8d397b91d010ace8d70dd0e185cc2371322db6f317157ed512849448d",
+    "PUBLICATION_EXTRAS.json": "de38f49221c392e53b0d11668f519553c5fb4449ab3b9dd8495b9bb7a62a5e08"
+  },
+  "targets": [
+    "SmallPairLightData46Left",
+    "SmallPairLightData46LeftRows",
+    "SmallPairLightData46Right",
+    "SmallPairLightData46RightRows",
+    "SmallPairLightData46",
+    "SmallPairLightAdaptiveData46",
+    "SmallPairLightAdaptiveValidation46"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "purpose": "Publish the actually verified graph46 foundation as research proof/evidence, preserve the completed graph1 archive recovery and private push records, and retain the unchanged canonical-root/main-theorem status.",
+  "status": "LOCAL_PROPOSAL_APPLY_ONLY_AFTER_ACTUAL_FOUNDATION_PASS",
+  "groups": [
+    {
+      "unit": "20261022-graph46-foundation",
+      "scope": "foundation",
+      "audit": "pro-graph46-foundation-audit"
+    }
+  ],
+  "extra": [
+    "research/continuations/20261022-graph46-inspection/inspect_graph46.py",
+    "research/continuations/20261022-graph46-inspection/SOURCE_INSPECTION.json",
+    "research/continuations/20261022-graph1-endpoint-publication/OWNER.json",
+    "research/continuations/20261022-graph1-endpoint-publication/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261022-graph1-publication-recovery/ACTUAL_INDEX_OBSERVATION.json",
+    "research/continuations/20261022-graph1-publication-recovery/recovery_guard.py",
+    "research/continuations/20261022-graph1-publication-recovery/UNSTAGE_PATHS.txt",
+    "research/continuations/20261022-graph1-publication-recovery/OWNER.json",
+    "research/continuations/20261022-graph1-publication-recovery/READY.json",
+    "research/continuations/20261022-graph1-publication-recovery/INDEX_REVIEW.json",
+    "research/continuations/20261022-graph1-publication-recovery/PREFLIGHT.json",
+    "research/continuations/20261022-graph1-publication-recovery/COMMIT_READY.json",
+    "research/continuations/20261022-graph1-publication-recovery/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261022-graph1-publication-recovery/RELEASE.json",
+    "research/continuations/20261022-graph1-publication-recovery/FINISH.json",
+    "research/continuations/20261022-graph1-publication-recovery/WHITESPACE_REVIEW.json",
+    "research/continuations/20261022-graph1-publication-recovery/RECOVERY_REVIEW.md",
+    "research/continuations/20261022-graph1-publication-recovery/LOCAL_REVIEW.json"
+  ],
+  "expected_review": {
+    "graph": 46,
+    "model": {
+      "tau": 1,
+      "nu": 6
+    },
+    "targets": 7,
+    "definitions": 19,
+    "theorems": 4,
+    "declarations": 23,
+    "guarded_builds": 7,
+    "targeted_same_kernel_replays": 7,
+    "accepted_working_endpoints": 29,
+    "total_working_endpoints": 48,
+    "main_theorem_complete": false,
+    "root_integration": false,
+    "whole_graph46_complete": false,
+    "target_modules": [
+      "SmallPairLightData46Left",
+      "SmallPairLightData46LeftRows",
+      "SmallPairLightData46Right",
+      "SmallPairLightData46RightRows",
+      "SmallPairLightData46",
+      "SmallPairLightAdaptiveData46",
+      "SmallPairLightAdaptiveValidation46"
+    ],
+    "public_headers_exact": true,
+    "literal_rows": {
+      "sieve": 25,
+      "leftVertices": 360,
+      "leftCached": 360,
+      "leftRows": 360,
+      "rightVertices": 358,
+      "rightCached": 358,
+      "rightRows": 358
+    },
+    "parent_blocks": {
+      "left": [
+        137,
+        223
+      ],
+      "right": [
+        138,
+        220
+      ]
+    },
+    "foundation_summary_path": "research/continuations/20261022-graph46-foundation/foundation-VERIFICATION_SUMMARY.json",
+    "foundation_proof_state_path": "research/continuations/20261022-graph46-foundation/foundation-PROOF_STATE.json",
+    "foundation_input_binding_path": "research/continuations/20261022-graph46-foundation/GRAPH46_BINDING.json",
+    "foundation_audit_final_path": "research/continuations/20261020T100000CEST-work-resume/pro-graph46-foundation-audit/BOUND_AUDIT_FINAL.json",
+    "actual_graph1_archive_commit": "2e18bda519a42f28f2e7c1ef409e610e0a9ce75f",
+    "graph1_recovery_archived_files": 394,
+    "graph1_recovery_canonical_working_files_preserved": 25,
+    "graph1_recovery_receipt_path": "research/continuations/20261022-graph1-publication-recovery/POST_PUSH_RECEIPT.json",
+    "graph1_recovery_finish_path": "research/continuations/20261022-graph1-publication-recovery/FINISH.json",
+    "publication_scope": "Research proof/evidence and records only; the exact generated staging list must be reviewed before any separate Git mutation.",
+    "canonical_source_promotion_in_this_publication": false,
+    "foundation_fingerprints_and_timings": "Read only from the actual completed records; this proposal supplies no executable binding or fabricated proof hash."
+  },
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical-root integration remains unverified.\n\nGraph46 foundation is now scoped-verified. Its seven modules preserve all\n19 original definitions and four original validation theorems for QuadInt 1 6.\nThe data retains 25 sieve entries, 360 left vertices/cached entries/rows, and\n358 right vertices/cached entries/rows. Original parent counts remain 137+223\non the left and 138+220 on the right. Four exact literal fragments preserve\nevery original declaration body and public type, and the original data module\nbecomes an import-only facade. The adaptive data and validation files remain\nbyte identical to their originals.\n\nSeven guarded builds, the exact original-type and transitive-axiom audit, and\nseven targeted installed SAME-kernel replays passed. Actual proof fingerprints,\nsource/artifact maps, timings, and input/provenance bindings are recorded under\nresearch/continuations/20261022-graph46-foundation/. The authoritative scope\nrecords are foundation-VERIFICATION_SUMMARY.json and foundation-PROOF_STATE.json;\nthe bound audit is under research/continuations/20261020T100000CEST-work-resume/\npro-graph46-foundation-audit/. The original source snapshots and the broad and\nnarrow source inspections retain their separate measured hashes. No guessed\nfoundation fingerprint, timing, source-closure size or input binding is used.\n\nGraph46 independence and closure remain unverified. Its reviewed side proposal\nhas 26 targets and 32 theorems, with 16-head left/right pilots required before\nany remainder. The original full-tail partitions retain every one of 64,620\nleft and 63,903 right unordered pairs, totaling 128,523. The closure source\nproposal retains 719 closure/root-pair/destination rows and 718 filtered\nvertices, split into eleven 64-row prefixes and a final 15-row prefix.\nThese source checks and coverage counts do not claim Lean acceptance of the\nside or closure proofs. The larger right-side row data and different model\nremain reasons to inspect the actual graph46 pilot results before proceeding.\n\nThe complete working endpoint count remains 29 of 48. Graph1 is a verified\nworking endpoint, with 58 guarded builds and targeted same-kernel replays,\nseven original-type/axiom audits, and 96 declarations. Its actual inventory\nadded only graph1 and removed no prior endpoint. Its exact 394-file research\narchive was committed and privately pushed at\n2e18bda519a42f28f2e7c1ef409e610e0a9ce75f.\n\nThe graph1 publication required a separately reviewed index correction:\n25 canonical paths outside the reviewed archive selection were removed only\nfrom staging. Their working bytes and both identical research snapshots were\npreserved. The proof-source manifests, index helper, policy, and canonical\nroot were unchanged. The old publication owner's timeout remains historical\nevidence; it was not rewritten into a successful owner record. The new\nrecovery OWNER, exact-index/preflight reviews, actual private-push receipt,\nRELEASE, FINISH and whitespace review are preserved separately under\nresearch/continuations/20261022-graph1-publication-recovery/. This publication\nalso preserves that recovery's actual observation, guard, exact unstage list,\nlocal source review and recovery review, and the preceding publication's\nold OWNER and actual post-push receipt. Historical records retain their\noriginal statuses; later exact records document the successful recovery.\n\nEndpoints still awaiting completion are\n3, 4, 5, 6, 7, 8, 10, 14, 15, 19, 21, 23, 24, 28, 30, 36, 39, 43, 46.\nNo overall proof-completion percentage is asserted.\n\nGraph43 remains an incomplete endpoint. Its earlier raw left-data build was\narchived as research evidence, with the then-uncompiled trial status preserved\nin the historical records. Later separate records under\nresearch/continuations/20261022-graph43-pilot/ report a successful isolated\n12-head trial for SmallPairLightAdaptiveLeft43_000Part00:\nTRIAL12_BUILD_RESULT.json records the build, and TRIAL12_AUDIT_RESULT.json\nrecords the exact-type/transitive-axiom audit and installed-kernel replay.\nThese isolated results are not guarded driver acceptance. They do not verify\nthe full graph43 scope or establish a graph43 endpoint proof. Historical refusals and original\nrecords remain preserved. Do not retry an identical failed fingerprint or\ninfer a permanent permission change from a later different successful operation.\n\nAfter all finite endpoints, the remaining chain includes SmallPairGraphs,\nSmallPairBoundedExtensions/TwoSmallSextuple, the lower and upper bounds for\nthe two-small case, TwoSmallNondegenerateImpossible, and MainTheorem.\nCanonical-root integration, a clean-checkout pinned build, full original-type\nand axiom review, and a fresh integrated-root kernel replay remain open.\nReuse completed exact proofs and their recorded evidence.\n\nThe target remains every finite D(1)-set of distinct nonzero elements of the\nfull ring of integers O_K of every imaginary quadratic number field having\ncardinality at most five. Half-integral bases, tied moduli, and zero pair-square\nroots remain allowed. No new mathematical assumption is introduced.\n",
+  "handoff_application": "Prospective text only. The generic publication guard does not enforce this metadata field: root must first verify the actual foundation summary, exact original-type/transitive-axiom audit, all seven guarded-build and same-kernel replay receipts, current source/artifact/configuration/binding fingerprints, and the existing publication/index checks. Only then may the guard apply the handoff. This local plan is not a build, acceptance, input binding, or push receipt."
+}

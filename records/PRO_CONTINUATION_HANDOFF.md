@@ -2,81 +2,85 @@
 
 Main theorem UNPROVED. Canonical-root integration remains unverified.
 
-Graph1 is now a complete verified working endpoint. The actual seven-scope
-endpoint collector passed, and the subsequent read-only inventory confirms
-29 of 48 accepted working endpoints, with Graph1 added and none removed.
-This count concerns separately verified working endpoints. It does not
-establish MainStatement or canonical-root integration.
+Graph46 foundation is now scoped-verified. Its seven modules preserve all
+19 original definitions and four original validation theorems for QuadInt 1 6.
+The data retains 25 sieve entries, 360 left vertices/cached entries/rows, and
+358 right vertices/cached entries/rows. Original parent counts remain 137+223
+on the left and 138+220 on the right. Four exact literal fragments preserve
+every original declaration body and public type, and the original data module
+becomes an import-only facade. The adaptive data and validation files remain
+byte identical to their originals.
 
-Graph1 retains the model QuadInt 0 1, all 720 closure rows and 718 filtered
-vertices, with the complete asymmetric 360/358 side data. Its root-pair and
-destination lists remain aligned with all 720 closure entries. The closure
-proof covers exactly eleven blocks of 64 rows and one final block of 16 at
-offset 704. Every mutation lookup retains the complete original destination
-vertex list, and both mutation signs remain checked. All 28 original
-closure/assembly public declarations are preserved. The four raw literal
-definitions retain their exact bodies, original imports and namespace when
-relocated into four modules; the raw-data facade only imports those modules.
+Seven guarded builds, the exact original-type and transitive-axiom audit, and
+seven targeted installed SAME-kernel replays passed. Actual proof fingerprints,
+source/artifact maps, timings, and input/provenance bindings are recorded under
+research/continuations/20261022-graph46-foundation/. The authoritative scope
+records are foundation-VERIFICATION_SUMMARY.json and foundation-PROOF_STATE.json;
+the bound audit is under research/continuations/20261020T100000CEST-work-resume/
+pro-graph46-foundation-audit/. The original source snapshots and the broad and
+narrow source inspections retain their separate measured hashes. No guessed
+foundation fingerprint, timing, source-closure size or input binding is used.
 
-The seven-scope collector validates 58 distinct guarded-build and targeted
-installed SAME-kernel-replay targets, 32 definitions, 64 theorems and seven
-exact original-type/transitive-axiom audits: 96 declarations in total.
-This publication contains only the three newly completed closure scopes:
-closure-pilot (4 targets, 9 definitions, 2 theorems), closure-rest (12 targets,
-13 theorems), and assembly (9 targets, 4 definitions, 13 theorems).
-The separately committed foundation and three side scopes are reused as
-verified dependencies and are not counted as newly completed work.
+Graph46 independence and closure remain unverified. Its reviewed side proposal
+has 26 targets and 32 theorems, with 16-head left/right pilots required before
+any remainder. The original full-tail partitions retain every one of 64,620
+left and 63,903 right unordered pairs, totaling 128,523. The closure source
+proposal retains 719 closure/root-pair/destination rows and 718 filtered
+vertices, split into eleven 64-row prefixes and a final 15-row prefix.
+These source checks and coverage counts do not claim Lean acceptance of the
+side or closure proofs. The larger right-side row data and different model
+remain reasons to inspect the actual graph46 pilot results before proceeding.
 
-The side proofs retain their original parent blocks, 137+223 on the left and
-138+220 on the right, with full-tail partitions [16,20,22,24,26,29] and
-[34,42,56,91] on the left, and [16,20,22,24,26,30] and [34,42,56,88] on the right.
-Every cross-part and cross-parent-block comparison remains included: 64,620
-unordered pairs on the left and 63,903 on the right, totaling 128,523.
-The four original parent statements and both side wrapper files are unchanged.
+The complete working endpoint count remains 29 of 48. Graph1 is a verified
+working endpoint, with 58 guarded builds and targeted same-kernel replays,
+seven original-type/axiom audits, and 96 declarations. Its actual inventory
+added only graph1 and removed no prior endpoint. Its exact 394-file research
+archive was committed and privately pushed at
+2e18bda519a42f28f2e7c1ef409e610e0a9ce75f.
 
-Authoritative endpoint evidence:
-research/continuations/20261022-graph1-closure/ENDPOINT_VERIFICATION.json
-research/continuations/20261022-graph1-closure/ENDPOINT_PROOF_STATE.json
-research/continuations/20261022-graph1-closure/ENDPOINT_INVENTORY.json
+The graph1 publication required a separately reviewed index correction:
+25 canonical paths outside the reviewed archive selection were removed only
+from staging. Their working bytes and both identical research snapshots were
+preserved. The proof-source manifests, index helper, policy, and canonical
+root were unchanged. The old publication owner's timeout remains historical
+evidence; it was not rewritten into a successful owner record. The new
+recovery OWNER, exact-index/preflight reviews, actual private-push receipt,
+RELEASE, FINISH and whitespace review are preserved separately under
+research/continuations/20261022-graph1-publication-recovery/. This publication
+also preserves that recovery's actual observation, guard, exact unstage list,
+local source review and recovery review, and the preceding publication's
+old OWNER and actual post-push receipt. Historical records retain their
+original statuses; later exact records document the successful recovery.
 
-The actual collector records the endpoint proof fingerprint, proof-state byte
-hash and transitive source-closure size. Verify these measured values against
-the actual proof-state file; no guessed fingerprint or source-closure count
-belongs in this handoff. The inventory preserves the actual read-only output
-supporting the 28-to-29 change and the unchanged prior endpoint set.
-
-The graph1 foundation was committed and privately pushed at
-d05caaa83a0d079d90599de5dc3d376fb41e4ff1. Its original seven-module scope remains
-separately recorded. The actual side proof commit and successful private push
-are identified by
-research/continuations/20261022-graph1-sides-publication/POST_PUSH_RECEIPT.json.
-This publication preserves that receipt together with OWNER.json and
-RELEASE.json from the same sides publication directory. No side commit hash
-is inferred from a source fingerprint. Historical scope and publication
-fields remain unchanged; endpoint evidence and later actual push receipts
-record subsequent progress.
-
-The remaining 19 graph endpoints are:
+Endpoints still awaiting completion are
 3, 4, 5, 6, 7, 8, 10, 14, 15, 19, 21, 23, 24, 28, 30, 36, 39, 43, 46.
+No overall proof-completion percentage is asserted.
 
-Graph43's earlier raw-data build remains research evidence, preserved under
-research/continuations/20261022-graph43-pilot/. It is not a verified graph43
-endpoint. Its original D1 data source and the uncompiled, unverified
-SmallPairLightAdaptiveLeft43_000Part00 trial remain unchanged.
+Graph43 remains an incomplete endpoint. Its earlier raw left-data build was
+archived as research evidence, with the then-uncompiled trial status preserved
+in the historical records. Later separate records under
+research/continuations/20261022-graph43-pilot/ report a successful isolated
+12-head trial for SmallPairLightAdaptiveLeft43_000Part00:
+TRIAL12_BUILD_RESULT.json records the build, and TRIAL12_AUDIT_RESULT.json
+records the exact-type/transitive-axiom audit and installed-kernel replay.
+These isolated results are not guarded driver acceptance. They do not verify
+the full graph43 scope or establish a graph43 endpoint proof. Historical refusals and original
+records remain preserved. Do not retry an identical failed fingerprint or
+infer a permanent permission change from a later different successful operation.
 
-After the remaining finite endpoints: SmallPairGraphs, TwoSmallSextuple,
-TwoSmallNondegenerateImpossible, MainTheorem, canonical-root integration, and
-the final clean-checkout pinned build, full type/axiom review and fresh
-integrated-root installed-kernel replay remain open. Reuse all completed
-graph proofs and their exact evidence. No overall completion percentage is
-asserted.
+After all finite endpoints, the remaining chain includes SmallPairGraphs,
+SmallPairBoundedExtensions/TwoSmallSextuple, the lower and upper bounds for
+the two-small case, TwoSmallNondegenerateImpossible, and MainTheorem.
+Canonical-root integration, a clean-checkout pinned build, full original-type
+and axiom review, and a fresh integrated-root kernel replay remain open.
+Reuse completed exact proofs and their recorded evidence.
 
-The unchanged target is every finite D(1)-set of distinct nonzero elements of
-the full ring of integers O_K in every imaginary quadratic number field having
-cardinality at most five. Half-integral bases, tied moduli and zero pair-square
+The target remains every finite D(1)-set of distinct nonzero elements of the
+full ring of integers O_K of every imaginary quadratic number field having
+cardinality at most five. Half-integral bases, tied moduli, and zero pair-square
 roots remain allowed. No new mathematical assumption is introduced.
 
 
-Publication starting HEAD: 7c5c5bb6239da37ce2fe5bdd4e733bd2bbc54311.
+Publication starting HEAD: 2e18bda519a42f28f2e7c1ef409e610e0a9ce75f.
 Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261022-graph1-endpoint-publication.
+in POST_PUSH_RECEIPT.json under research/continuations/20261022-graph46-foundation-publication.

@@ -1,0 +1,54 @@
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.sieve: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.leftVertices: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.leftCached: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.leftRows: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.rightVertices: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.rightCached: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightPrepared46.rightRows: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.leftCached000: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.leftRows000: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.leftCached001: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.leftRows001: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.leftCached002: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.leftRows002: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.rightCached000: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.rightRows000: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.rightCached001: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.rightRows001: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.rightCached002: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.rightRows002: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.left_coverage_checked: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.left_signatures_checked: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.right_coverage_checked: []
+GRAPH46_FOUNDATION_AXIOMS_PASS D1Bound5.PairLightAdaptivePrepared46.right_signatures_checked: []
+D1Bound5.PairLightPrepared46.sieve : List (Nat × Nat)
+D1Bound5.PairLightPrepared46.leftVertices : List D1Bound5.PairLightCoordinate
+D1Bound5.PairLightPrepared46.leftCached : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightPrepared46.leftRows : List (Nat × List Nat)
+D1Bound5.PairLightPrepared46.rightVertices : List D1Bound5.PairLightCoordinate
+D1Bound5.PairLightPrepared46.rightCached : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightPrepared46.rightRows : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.leftCached000 : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightAdaptivePrepared46.leftRows000 : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.leftCached001 : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightAdaptivePrepared46.leftRows001 : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.leftCached002 : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightAdaptivePrepared46.leftRows002 : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.rightCached000 : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightAdaptivePrepared46.rightRows000 : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.rightCached001 : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightAdaptivePrepared46.rightRows001 : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.rightCached002 : List D1Bound5.PairLightCachedVertex
+D1Bound5.PairLightAdaptivePrepared46.rightRows002 : List (Nat × List Nat)
+D1Bound5.PairLightAdaptivePrepared46.left_coverage_checked : decide
+    (List.map Prod.fst D1Bound5.PairLightPrepared46.leftCached = D1Bound5.PairLightPrepared46.leftVertices) =
+  true
+D1Bound5.PairLightAdaptivePrepared46.left_signatures_checked : (D1Bound5.PairLightPrepared46.leftCached.all fun x =>
+    decide (x.snd = D1Bound5.pairLightCoordinateSignature D1Bound5.PairLightPrepared46.sieve x.fst)) =
+  true
+D1Bound5.PairLightAdaptivePrepared46.right_coverage_checked : decide
+    (List.map Prod.fst D1Bound5.PairLightPrepared46.rightCached = D1Bound5.PairLightPrepared46.rightVertices) =
+  true
+D1Bound5.PairLightAdaptivePrepared46.right_signatures_checked : (D1Bound5.PairLightPrepared46.rightCached.all fun x =>
+    decide (x.snd = D1Bound5.pairLightCoordinateSignature D1Bound5.PairLightPrepared46.sieve x.fst)) =
+  true
