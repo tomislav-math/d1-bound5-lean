@@ -57,7 +57,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
    else:s+=f'by\n    apply pairLightSelectedFloorPrefixBool_of_add 1 3 PairLightPrepared43.sieve {c} {rest-c}\n      (PairLightPrepared43.rightCached.drop {offset}) (PairLightPrepared43.rightRows.drop {offset})\n    · exact right_prefix_001_part{i:02d}_checked\n    · simpa only [List.drop_drop, Nat.reduceAdd] using h{offset+c:03d}\n'
   s+='  exact h092\nend D1Bound5.PairLightAdaptivePrepared43\n'
   p=R/'D1Bound5'/(n+'.lean');assert not p.exists();p.write_text(s)
-  targets=['SmallPairLightData43Right']+parts+[n]
+  targets=parts+[n]
   q=json.loads(d.queue_path.read_text());assert q['max_parallel']==1 and q['pause_after_current'] is True
   save('QUEUE_BEFORE.json',q)
   for n in targets:
@@ -94,7 +94,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
    a=f'(PairLightPrepared43.rightCached.drop {offset})'
    b=f'(PairLightPrepared43.rightRows.drop {offset})'
    audit+=f'example : pairLightSelectedFloorPrefixBool 1 3 PairLightPrepared43.sieve {c}\n  {a} {b} = true := {th}\n'
-  names=['D1Bound5.PairLightAdaptivePrepared43.'+th for th,_,_ in decls]+['D1Bound5.PairLightAdaptivePrepared43.right_prefix_001_direct_checked']+['D1Bound5.PairLightPrepared43.'+v for v in ['sieve','rightVertices','rightCached','rightRows']]
+  names=['D1Bound5.PairLightAdaptivePrepared43.'+th for th,_,_ in decls]+['D1Bound5.PairLightAdaptivePrepared43.right_prefix_001_direct_checked']
   audit+='end D1Bound5.PairLightAdaptivePrepared43\nrun_cmd do\n  for name in (['+', '.join(chr(96)+n for n in names)+'] : List Lean.Name) do\n    let ax ← Lean.collectAxioms name\n    let bad := ax.filter fun n => !(['+chr(96)+'propext, '+chr(96)+'Classical.choice, '+chr(96)+'Quot.sound] : List Lean.Name).contains n\n    unless bad.isEmpty do Lean.throwError "Unexpected axioms {name}: {bad}"\n    Lean.logInfo m!"TYPE_AXIOMS_PASS {name}: {ax}"\n'
   (O/'AnalyticAudit.lean').write_text(audit);frozen={n:d.artifacts(n) for n in sources}
   commands=[('exact-types-axioms',['/Users/tp/.elan/bin/lake','env','lean',str(O/'AnalyticAudit.lean')])]+[(n+'-kernel',['/Users/tp/.elan/bin/lake','env','leanchecker','--verbose','D1Bound5.'+n]) for n in targets]

@@ -19,7 +19,9 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   assert O.name not in handoff.read_text() or 'Latest checked archive: '+O.name not in handoff.read_text()
   handoff.write_text(handoff.read_text()+entry)
   paths=[handoff]+list(Path(__file__).resolve().parent.glob('*.py'))+[p for p in O.rglob('*') if p.is_file() and p.name not in {'PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','INDEX_REVIEW.json','POST_PUSH_RECEIPT.json'}]+[P/n for n in ['PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','POST_PUSH_RECEIPT.json','INDEX_REVIEW.json'] if (P/n).exists()]
-  if 'pilot12' in O.name:paths += [R/('research/continuations/20261022-economical-graph43-right'+b+'/run_unit.py') for b in ['000','001','002']]
+  paths += [R/('research/continuations/20261022-economical-graph43-right'+b+'/run_unit.py') for b in ['000','001','002']]
+  paths += [p for p in (W.parent/'20261022-economical-graph43-parent-proposal').rglob('*') if p.is_file()]
+  paths += [W.parent/'20261022-economical-graph43-parent-integration/run_unit.py']
   paths=sorted(set(str(p.relative_to(R)) for p in paths));assert not any('__pycache__' in x for x in paths)
   (O/'PUBLICATION_PATHS.txt').write_text('\n'.join(paths)+'\n');(O/'PUBLICATION_HASHES.json').write_text(json.dumps({p:sha(R/p) for p in paths},indent=2,sort_keys=True)+'\n')
   print(json.dumps({'status':'PUBLICATION_SCOPE_VALIDATED','paths':len(paths),'heads':a['heads'],'kernel_replays':a['targeted_kernel_replays']}))
