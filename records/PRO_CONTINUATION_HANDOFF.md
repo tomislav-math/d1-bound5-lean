@@ -64,6 +64,10 @@ TwoSmallNondegenerateImpossible, MainTheorem, canonical-root integration and
 all final whole-project verification gates remain open.
 
 
-Publication starting HEAD: 1a59da7aaef5884a8cefb3c907d111084cac1535.
-Publication is prepared, not yet pushed. The actual final Git state is recorded
-in POST_PUSH_RECEIPT.json under research/continuations/20261022-graph25-endpoint-publication.
+Graph25 endpoint proof/evidence publication is verified on private main at
+11d490014d63a97f126081bfbea932d39be331fd.
+The actual commit, push and independent remote verification are recorded in
+research/continuations/20261022-graph25-endpoint-publication/POST_PUSH_RECEIPT.json.
+A separate record-only commit archives that receipt and this updated handoff.
+No proof source, accepted-root import, queue setting or automation is changed
+by the record-only update.
