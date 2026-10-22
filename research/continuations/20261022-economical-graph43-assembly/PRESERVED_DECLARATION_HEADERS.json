@@ -1,0 +1,35 @@
+{
+  "SmallPairGraphArithmetic43": [
+    "theorem smallPairSeeds_43_checked :\n    pairSeedsCoveredBool smallPairA_43 smallPairB_43\n      seedRootDisk_1_3 smallPairClosure_43 = true ",
+    "theorem smallPairFilter_43_checked :\n    largePairVertices smallPairA_43 smallPairB_43 smallPairClosure_43 = smallPairLarge_43 ",
+    "theorem smallPairLarge_43_count : smallPairLarge_43.length = 962 "
+  ],
+  "SmallPairGraphData43": [],
+  "SmallPairGraphTriangle43": [
+    "theorem smallPairNoTriangle_43_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_3 smallPairLarge_43 = true "
+  ],
+  "SmallPairLightAssembly43": [
+    "theorem sieve_eq : sieve = smallPairSieve_1_3 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared43.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared43.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_1_3 (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared43.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared43.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_1_3 (pairSplitByMask smallPairLarge_43 PairGraphPrepared43.colors).2 = true "
+  ],
+  "SmallPairRawSelectedData43": [],
+  "SmallPairRawSelectedData43LeftCached": [
+    "def leftCached : List (PairResidueVertex 1 3) "
+  ],
+  "SmallPairRawSelectedData43LeftRows": [
+    "def leftRows : List (\u2115 \u00d7 List \u2115) "
+  ],
+  "SmallPairRawSelectedData43RightCached": [
+    "def rightCached : List (PairResidueVertex 1 3) "
+  ],
+  "SmallPairRawSelectedData43RightRows": [
+    "def rightRows : List (\u2115 \u00d7 List \u2115) "
+  ]
+}
