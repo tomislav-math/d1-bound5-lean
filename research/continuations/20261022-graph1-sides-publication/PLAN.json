@@ -1,0 +1,106 @@
+{
+  "purpose": "Publish the three actually verified graph1 side scopes with their complete-tail asymmetric partitions and unchanged public statements, and preserve the preceding verified foundation publication records.",
+  "status": "LOCAL_PROPOSAL_APPLY_ONLY_AFTER_COMPLETED_SCOPE_GUARD",
+  "handoff_application": "The handoff below is future text. The publication guard may write it only after validating all three completed scopes and their current exact source/artifact evidence. Its completion claims do not describe the current proposal-preparation state.",
+  "groups": [
+    {
+      "unit": "20261022-graph1-sides",
+      "scope": "sides-pilot",
+      "audit": "pro-graph1-sides-pilot-audit"
+    },
+    {
+      "unit": "20261022-graph1-sides",
+      "scope": "left-rest",
+      "audit": "pro-graph1-left-rest-audit"
+    },
+    {
+      "unit": "20261022-graph1-sides",
+      "scope": "right-rest",
+      "audit": "pro-graph1-right-rest-audit"
+    }
+  ],
+  "extra": [
+    "research/continuations/20261022-graph1-foundation-publication/POST_PUSH_RECEIPT.json",
+    "research/continuations/20261022-graph1-foundation-publication/OWNER.json",
+    "research/continuations/20261022-graph1-foundation-publication/RELEASE.json"
+  ],
+  "expected_review": {
+    "foundation_commit": "d05caaa83a0d079d90599de5dc3d376fb41e4ff1",
+    "graph43_research_archive_commit": "91f9f53bce69959727d5fe5b751e6cc29e88abea",
+    "targets_per_scope": {
+      "sides-pilot": 2,
+      "left-rest": 12,
+      "right-rest": 12
+    },
+    "theorems_per_scope": {
+      "sides-pilot": 2,
+      "left-rest": 15,
+      "right-rest": 15
+    },
+    "distinct_targets": 26,
+    "theorems": 32,
+    "definitions": 0,
+    "helper_modules": 20,
+    "original_parent_modules": 4,
+    "unchanged_wrapper_modules": 2,
+    "guarded_builds": 26,
+    "type_axiom_audits": 3,
+    "targeted_same_kernel_replays": 26,
+    "heads_per_side": {
+      "left": 360,
+      "right": 358
+    },
+    "original_parent_counts": {
+      "left": [
+        137,
+        223
+      ],
+      "right": [
+        138,
+        220
+      ]
+    },
+    "partitions": {
+      "left000": [
+        16,
+        20,
+        22,
+        24,
+        26,
+        29
+      ],
+      "left001": [
+        34,
+        42,
+        56,
+        91
+      ],
+      "right000": [
+        16,
+        20,
+        22,
+        24,
+        26,
+        30
+      ],
+      "right001": [
+        34,
+        42,
+        56,
+        88
+      ]
+    },
+    "unordered_pairs": {
+      "left": 64620,
+      "right": 63903,
+      "total": 128523
+    },
+    "working_endpoints_verified": 28,
+    "working_endpoints_total": 48,
+    "next_closure_entries": 720,
+    "next_large_vertices": 718,
+    "main_theorem_complete": false,
+    "root_integration": false
+  },
+  "handoff": "# Current D1 formalization handoff\n\nMain theorem UNPROVED. Canonical-root integration remains unverified.\n\nGraph1 left and right independence proofs are now scoped-verified. The three\ncompleted scopes cover exactly 32 theorems in 26 distinct build/replay targets:\n\n- sides-pilot: two theorems in two targets;\n- left-rest: 15 theorems in 12 targets;\n- right-rest: 15 theorems in 12 targets.\n\nAll 26 guarded builds, all three exact original-type/transitive-axiom audits,\nand all 26 targeted installed SAME-kernel replays passed. The remainder scopes\nreuse both verified pilots with their exact proof-state, source, artifact and\nbound-receipt evidence. The 32-theorem count comprises 20 partition helper\ntheorems, four original parent theorems and eight theorems in the two unchanged\nside wrapper files. It excludes the previously verified foundation declarations.\n\nThe left side retains all 360 heads and the original parent blocks 137+223;\nthe right side retains all 358 heads and the original parent blocks 138+220.\nThe verified full-tail partitions are:\n\n- left000: [16, 20, 22, 24, 26, 29];\n- left001: [34, 42, 56, 91];\n- right000: [16, 20, 22, 24, 26, 30];\n- right001: [34, 42, 56, 88].\n\nEvery head is compared with its complete original remaining tail, including\ncomparisons across partition boundaries and across the two original parent\nblocks. The coverage is exactly 64,620 unordered pairs on the left and 63,903\non the right, totaling 128,523 pairs. The four parent theorem statements and\nboth wrapper files are unchanged. No data, pair comparison or mathematical\nassumption is removed.\n\nAuthoritative side evidence is under\nresearch/continuations/20261022-graph1-sides/\nin the sides-pilot-, left-rest- and right-rest-VERIFICATION_SUMMARY.json and\ncorresponding PROOF_STATE.json files. Their bound audit records are under\nresearch/continuations/20261020T100000CEST-work-resume/\npro-graph1-sides-pilot-audit/, pro-graph1-left-rest-audit/ and\npro-graph1-right-rest-audit/.\n\nThe verified graph1 foundation was committed and privately pushed at\nd05caaa83a0d079d90599de5dc3d376fb41e4ff1. Its seven modules preserve the exact\n19 original definitions and four original validation theorems, with 25 sieve\nentries and the complete asymmetric 360/358 side data. This publication\npreserves POST_PUSH_RECEIPT.json, OWNER.json and RELEASE.json from\nresearch/continuations/20261022-graph1-foundation-publication/.\nOlder scoped and publication records retain their historical status fields;\ncompleted scope evidence and actual push receipts document subsequent progress.\n\nGraph1 is not yet a completed graph endpoint. Its original 720-entry closure,\n718 large vertices, indexed closure witnesses, and final endpoint assembly\nremain to be verified. Continue with the exact closure partition and the\nfinal endpoint collector after preserving these verified foundation and side\nproofs. The verified working endpoint count remains 28 of 48.\n\nGraph11 is complete. Its proof/evidence was committed at\n20c3be2fa9297634047833a290a5bca9007adb5e, with final publication records at\n91411eede8ee5f726362c031322ec97078b82a57.\nRemaining endpoints: 1, 3, 4, 5, 6, 7, 8, 10, 14, 15, 19, 21, 23, 24, 28,\n30, 36, 39, 43, 46.\n\nThe separate graph43 raw left-data build was preserved as research evidence\nand privately pushed at 91f9f53bce69959727d5fe5b751e6cc29e88abea. Its exact\nsource snapshot, original build receipts, exact-index reconciliation and push\nreceipt are under research/continuations/20261022-graph43-pilot/. This archive\ndoes not establish guarded driver acceptance or a graph43 endpoint theorem.\nThe original D1 data source and SmallPairLightAdaptiveLeft43_000Part00 trial\nremain unchanged; the trial is uncompiled and unverified. The earlier\npre-execution refusals remain preserved in the historical handoff and\nreconciliation and have not been overridden or claimed permanently remedied.\n\nAfter all finite graph endpoints: SmallPairGraphs, TwoSmallSextuple,\nTwoSmallNondegenerateImpossible, MainTheorem, canonical-root integration,\nand the final clean-checkout pinned build, full type/axiom review and fresh\nintegrated-root installed-kernel replay remain open.\n\nThe unchanged target is every finite D(1)-set of distinct nonzero elements of\nthe full ring of integers O_K in every imaginary quadratic number field having\ncardinality at most five. Half-integral bases, tied moduli and zero pair-square\nroots remain allowed. No new mathematical assumption is introduced.\n"
+}

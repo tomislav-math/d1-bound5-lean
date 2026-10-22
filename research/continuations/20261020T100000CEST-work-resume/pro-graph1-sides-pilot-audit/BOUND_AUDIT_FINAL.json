@@ -1,0 +1,65 @@
+{
+  "status": "BOUND_SCOPED_AUDIT_PASS",
+  "time": "2026-10-22T07:40:57.736732+00:00",
+  "records": [
+    {
+      "label": "analytic-type-axioms",
+      "pid": 74822,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "lean",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261020T100000CEST-work-resume/pro-graph1-sides-pilot-audit/AnalyticAudit.lean"
+      ],
+      "time": "2026-10-22T07:40:34.446288+00:00",
+      "exit": 0,
+      "seconds": 4.905996959190816,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 5,
+      "binding_drift_paths": [],
+      "log": "analytic-type-axioms.log"
+    },
+    {
+      "label": "SmallPairLightAdaptiveLeft1_000Part00-targeted-replay",
+      "pid": 74844,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairLightAdaptiveLeft1_000Part00"
+      ],
+      "time": "2026-10-22T07:40:39.387553+00:00",
+      "exit": 0,
+      "seconds": 9.364911624696106,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 10,
+      "binding_drift_paths": [],
+      "log": "SmallPairLightAdaptiveLeft1_000Part00-targeted-replay.log"
+    },
+    {
+      "label": "SmallPairLightAdaptiveRight1_000Part00-targeted-replay",
+      "pid": 74874,
+      "command": [
+        "/Users/tp/.elan/bin/lake",
+        "env",
+        "leanchecker",
+        "--verbose",
+        "D1Bound5.SmallPairLightAdaptiveRight1_000Part00"
+      ],
+      "time": "2026-10-22T07:40:48.795661+00:00",
+      "exit": 0,
+      "seconds": 8.910226374864578,
+      "timed_out": false,
+      "guards_unchanged": true,
+      "binding_poll_count": 9,
+      "binding_drift_paths": [],
+      "log": "SmallPairLightAdaptiveRight1_000Part00-targeted-replay.log"
+    }
+  ],
+  "binding_sha256": "1897fc215c8b89d4a05c0c3e3594ba8c18ceb8d771a49f7b058ebe3a5c6b79b5",
+  "source_map_sha256": "deb44f11166319814b40934abd2cedbabae685c526b93ea9a548d7c8cfd00619",
+  "main_theorem_claim": false
+}
