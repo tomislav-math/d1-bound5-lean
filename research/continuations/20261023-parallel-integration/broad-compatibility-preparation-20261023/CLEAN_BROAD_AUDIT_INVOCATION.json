@@ -1,0 +1,23 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/clean_broad_audit.py",
+    "--invocation",
+    "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/CLEAN_AUDIT_INVOCATION.json",
+    "--invocation-sha256",
+    "0424734528208217a08f76635f49733b5268aecec86167f4217dc0bd7d4de17a",
+    "--broad-audit",
+    "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/broad-compatibility/Audit.lean",
+    "--out",
+    "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-broad-audit",
+    "--timeout",
+    "1800"
+  ],
+  "runner_sha256": "89dc770741a3d280a1b8498f507bce3fa6b124634793c8b6f2d1ee40bd4d9db5",
+  "broad_source_sha256": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61",
+  "exact118_helper_sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87",
+  "requires": "Completed clean4406source build and successful exact118audits with matching frozen inputs",
+  "main_theorem_complete": false,
+  "guard_test_report_sha256": "d2dc27625331caf560ff41eb534421c7988c80311aefd39c89ce9bcb9274cdc3"
+}

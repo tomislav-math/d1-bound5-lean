@@ -1,0 +1,33 @@
+{
+  "status": "DRAFT_RESEARCH_ONLY_NOT_INSTALLED",
+  "utc": "2026-10-23T13:38:19.946899+00:00",
+  "purpose": "Minimal pending-state README/STATUS update for final release preparation; no success assertion.",
+  "remote_project": "/Users/tp/Lean/D1Bound5",
+  "base_remote_sha256": {
+    "README.md": "6854a48fb949019dddd5a0a1dfbc6c3686fbafa029b67f8157becb0cba4e6695",
+    "STATUS.md": "422d07136bbb9ad5c3240576bf92e101e54e48745a71253f2e7c3f4b97d2aeeb"
+  },
+  "proposed_sha256": {
+    "README.md": "6baa8c46429cf608245e09da4e5e036256297cc6aa4b9ff3531cf513bbd008f9",
+    "STATUS.md": "4695a61b98b261f9d872a102df3be104827d7e222f48c4877e3eb439ed9728e6"
+  },
+  "patch_sha256": "7a6fdca3d039b2d044da313c8240b2161bc8715716864ae31fbab82020bf3e3d",
+  "required_before_install": [
+    "Recheck base README and STATUS hashes; if changed, rebase only intended hunks without dropping concurrent edits.",
+    "Install only alongside the separately reviewed repository verification package providing scripts/check.sh with its explicit lock arguments and scripts/verification/README.md.",
+    "Do not alter active immutable source checkout or build identities.",
+    "Keep all pending statuses until exact final receipt evidence is available; eventual COMPLETE wording requires all documented gates."
+  ],
+  "preserved": [
+    "Paper title/authors/date/downloads and manuscript identity.",
+    "Private repository/license status and existing GitHub workflow policy.",
+    "All historical STATUS entries byte-for-byte after the new leading entry."
+  ],
+  "statement_sources": {
+    "D1Bound5/Basic.lean": "408272dc6fd995b836f6d3c6be839fa9c5248e49b1ec96b2135117042cb995cf",
+    "D1Bound5/Specification.lean": "60d7ff20e6ffc449c6452bceb3b22f98c1db628f9ed34831c674a58bbcf40b50",
+    "D1Bound5/MainTheorem.lean": "0d4652828c5f48475a6e80d8d00fa209e39c0638a58ebd99fd719e271c2670f6"
+  },
+  "no_production_changes": true,
+  "no_lean_execution": true
+}

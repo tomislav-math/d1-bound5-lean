@@ -1,0 +1,22 @@
+{
+  "status": "NARROW_RESOURCE_AND_DOCUMENTATION_DELTA_REVIEW_PASS",
+  "reviewed_files": {
+    "scripts/verification/check.py": "82749dc3164e32b2273ec91bf2cb4b178283d9b92a8eab543534d4b583879883",
+    "scripts/verification/resource_hints.json": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
+    "scripts/verification/release_pins.json": "0725e34a6da18722fe8b0efe620f6d29ba1557fbe0b6e908ed25f76cb7f4a51f",
+    "scripts/verification/README.md": "9cb3caa4331ebbc1853fff3c3bb426cda974571186b2e7d77575e9f89241ee8d"
+  },
+  "utc": "2026-10-23T13:17:01Z",
+  "code_findings": [
+    "Only positive --build-timeout default1200 added and forwarded as unchanged builder --timeout",
+    "Proof-source/artifact/runtime/freeze/exact-type/axiom/kernel acceptance logic unchanged",
+    "Resource hints have11entries and are byte-identical to reviewed FRESH_COST_HINTS_V2.json",
+    "Resource hints included in required_tools; historical receipt paths are optional scheduling metadata and not opened by scheduler"
+  ],
+  "documentation_finding": "README prematurely describes successful resumed run while clean source build status is RUNNING; requested present-tense configuration wording pending actual full successful receipt",
+  "no_compiler_or_checker_executed": true,
+  "main_theorem_complete": false,
+  "corrected_readme_sha256": "9cb3caa4331ebbc1853fff3c3bb426cda974571186b2e7d77575e9f89241ee8d",
+  "documentation_finding_resolved": "Current resumption configuration described accurately; full source build completion explicitly remains a separate recorded gate.",
+  "updated_utc": "2026-10-23T13:17:09Z"
+}

@@ -1,0 +1,30 @@
+{
+  "status": "STATIC_REVIEW_PASS_EXECUTION_PENDING",
+  "reviewed_files": {
+    "lean-offload/repository-verification-proposal/scripts/verification/check.py": "5efbb2a45a37d5272607863986f524891db71fefff64b23c66877a1b56f2eca0",
+    "lean-offload/repository-verification-proposal/scripts/Audit.lean": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61"
+  },
+  "utc": "2026-10-23T13:01:08Z",
+  "checks": [
+    "exact canonical D1Bound5 source-lock scope and committed source/tool/configuration checks",
+    "source policy requires explicit acceptance status and exact scanned-source manifest equality",
+    "fresh build isolated artifacts and successful complete status; clean helper reconstructs all fresh receipts",
+    "exact114 original declaration audit plus independent4root target/axiom audit; fixed harness hashes",
+    "current pre-replay freeze equals the actual type/axiom audit INPUT_FREEZE under shared build lock",
+    "source-only prehashed helper loading ignores timestamp-valid stale Python caches",
+    "installed pinned leanchecker invoked exactly --verbose --fresh D1Bound5 with exact replay banner",
+    "without replay returns3 and complete_verification false; errors return1; only full successful replay sets true",
+    "full original broad Audit scan/log markers and all named #check/#print diagnostics preserved; appended target/private scan",
+    "optional broad compatibility status explicitly pending; no claim it was executed"
+  ],
+  "limitations": [
+    "This review did not execute any Lean process, clean build, or kernel replay",
+    "Final release pin/tool/source manifests and source-policy package require separate final assembled-package validation",
+    "Optional expanded broad Audit.lean remains uncompiled at this review"
+  ],
+  "resolved_findings": [
+    "Original proposal lost broad audit diagnostics/log compatibility; restored",
+    "Cached-bytecode helper loading replaced by exact verified source-byte execution"
+  ],
+  "main_theorem_complete": false
+}

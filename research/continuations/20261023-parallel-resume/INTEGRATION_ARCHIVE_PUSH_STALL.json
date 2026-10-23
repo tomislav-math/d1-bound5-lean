@@ -1,0 +1,30 @@
+{
+  "status": "FIRST_PROCESS_INTERRUPTED_AFTER_STALL_BOUNDED_RETRY_RUNNING",
+  "repository": "tomislav-math/d1-bound5-lean",
+  "visibility_last_verified": "PRIVATE",
+  "local_commit": "9b418359968913eb3e73beeee72ffa1ce953c9f1",
+  "remote_commit_before_retry": "cec1b4b11174cafa9017b23d850d14a5b1b61f7e",
+  "first_process": {
+    "pid": 87629,
+    "command": "git -C /Users/tp/Lean/D1Bound5 push origin main",
+    "stdout_stderr": "No output was returned during 668.41 seconds.",
+    "completion": "signal SIGTERM",
+    "exit_code": null,
+    "classification": "Executed process interrupted after observed transfer stall; no tool refusal or kernel failure."
+  },
+  "retry": {
+    "pid": 87814,
+    "command": "git -C /Users/tp/Lean/D1Bound5 -c http.version=HTTP/1.1 -c http.lowSpeedLimit=1000 -c http.lowSpeedTime=120 push origin main",
+    "status": "RUNNING",
+    "permissions_or_credentials_changed": false
+  },
+  "clean_source_build": {
+    "status": "RUNNING_RESUMED",
+    "exec_session": 29025,
+    "build_id": "5dc783eabefa40a9a0919cb489496962",
+    "validated_prior_passes": 411,
+    "initial_failures": "Three 240-second timeouts retained with original receipts; no mathematical source changes.",
+    "default_timeout_seconds": 1200,
+    "hints_sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa"
+  }
+}

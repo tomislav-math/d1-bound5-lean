@@ -1,0 +1,21 @@
+{
+  "configuration_coverage": [
+    "records/verification-tools-sha256.txt",
+    "scripts/verification/release_pins.json configuration_sha256",
+    "source-lock auxiliary map",
+    "committed Git blob equality"
+  ],
+  "configuration_present_in_final_tool_manifest": true,
+  "configuration_sha256": {
+    "lake-manifest.json": "7ba6f92faaef8900c85a20ac695495111285a1b0c355cb1441a69b34ba9500f4",
+    "lakefile.lean": "fa17c8e0e386fe8ffadcab88a9a328337c3db37cc7d64681e7ca26836c73bfb3",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "final_production_entries": 4406,
+  "final_tool_manifest_pending": false,
+  "git_preflight_compatibility": "Both existing Git helpers verify every row in both manifests. Index review requires all production Lean sources in the proof manifest, but does not require configuration in that same manifest. No helper or policy changes needed.",
+  "historical_production_entries": 107,
+  "historical_proof_manifest_entries": 110,
+  "production_and_configuration_bytes_changed_by_migration": false,
+  "status": "PROPOSED_EXPLICIT_CATEGORY_MIGRATION"
+}

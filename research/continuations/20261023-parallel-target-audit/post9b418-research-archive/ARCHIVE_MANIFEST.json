@@ -1,0 +1,1607 @@
+{
+  "base_commit": "9b418359968913eb3e73beeee72ffa1ce953c9f1",
+  "bytes": 7060088,
+  "candidate_runtime_mutations": [],
+  "compiler_or_kernel_commands": [],
+  "curated_scope_sha256": "028b547d1fd594790885594586243372efa99e52fa50ac06a71516d135b3ca23",
+  "current_progress_snapshot": {
+    "accepted_root_manifest_unchanged": true,
+    "active_work": "All48 finite endpoints, MainTheorem, canonical candidate root,114types/axioms and independent target gate PASS. Clean4406source build resumed after3resource-only240s timeouts; all3timedoutmodules now compile unchanged. Clean final audits and official fresh root kernel replay still pending.",
+    "agent_verified_pending_remote_archive": {},
+    "canonical_candidate_modules": 4406,
+    "clean_build": {
+      "active_modules_observed": [
+        "D1Bound5.SmallPairLightAdaptiveLeft33_001Part00",
+        "D1Bound5.SmallPairLightAdaptiveLeft33_001Part01",
+        "D1Bound5.SmallPairLightData38",
+        "D1Bound5.SmallPairLightData3Left",
+        "D1Bound5.SmallPairLightData3RightCached",
+        "D1Bound5.SmallPairLightData40",
+        "D1Bound5.SmallPairLightData42"
+      ],
+      "build_id": "5dc783eabefa40a9a0919cb489496962",
+      "build_path": "/workspace/scratch/fed64f41ca78/clean-build",
+      "candidate_is_remote_release": false,
+      "completed_modules_observed": 1235,
+      "current_invocation": "094b5d0e2c1243d4ae3d9805d9b3efd1",
+      "current_invocation_failures_observed": 0,
+      "default_timeout_seconds": 1200,
+      "first_invocation": "f0066da497544e39bcd09054b5ecd9b7",
+      "first_invocation_exit_code": 1,
+      "first_invocation_failure_kind": "Three240s resource timeouts, all resolved by longer limits with unchanged sources.",
+      "initial_project_artifacts": 0,
+      "local_candidate_commit": "102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2",
+      "project_modules": 4406,
+      "resource_hints_sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
+      "root_exec_session": 29025,
+      "runtime_lock_sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+      "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+      "source_path": "/workspace/scratch/fed64f41ca78/clean-checkout",
+      "started_utc": "2026-10-23T12:38:43Z",
+      "status": "RUNNING_RESUMED_NOT_ACCEPTED",
+      "validated_prior_passes": 411
+    },
+    "count": 48,
+    "current_private_head": "9b418359968913eb3e73beeee72ffa1ce953c9f1",
+    "main_theorem_status": "COMPILED_EXACT_TYPE_AND_AXIOMS_PASS_FINAL_CLEAN_GATES_PENDING",
+    "new_endpoint_evidence": {
+      "10": "research/continuations/20261023-parallel-graphs-a/graph10/verified-evidence/audit/CLOSURE_VERIFICATION_SUMMARY.json",
+      "14": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph14-endpoint-audit/VERIFICATION_SUMMARY.json",
+      "15": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph15-endpoint-audit/VERIFICATION_SUMMARY.json",
+      "21": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph21-endpoint-audit/VERIFICATION_SUMMARY.json",
+      "23": "research/continuations/20261023-parallel-graphs-c/local-verification/results-graph23-full-audit/VERIFICATION_SUMMARY.json",
+      "28": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph28-endpoint-audit/VERIFICATION_SUMMARY.json",
+      "30": "research/continuations/20261023-parallel-graphs-c/local-verification/results-graph30-full-audit/VERIFICATION_SUMMARY.json",
+      "36": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph36-endpoint-audit/VERIFICATION_SUMMARY.json",
+      "39": "research/continuations/20261023-parallel-graph39/linux-endpoint/results-graph39-verified/VERIFICATION_SUMMARY.json",
+      "4": "research/continuations/20261023-parallel-graphs-a/graph4/verified-evidence/audit/CLOSURE_VERIFICATION_SUMMARY.json",
+      "6": "research/continuations/20261023-parallel-graphs-a/graph6/verified-evidence/audit/CLOSURE_VERIFICATION_SUMMARY.json",
+      "8": "research/continuations/20261023-parallel-graphs-a/graph8/verified-evidence/audit/CLOSURE_VERIFICATION_SUMMARY.json"
+    },
+    "previous_36_evidence": "research/continuations/20261023-economical-graph24-assembly/CURRENT_ENDPOINT_INVENTORY.json",
+    "utc": "2026-10-23T13:28:38.641220+00:00",
+    "verified_working_graph_endpoints": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  "derived_file_note": "These two metadata files are also in the explicit stage pathfile; they are not self-hashed in the payload manifest. Root must revalidate all hashes and run canonical staged preflight before any commit.",
+  "derived_files": [
+    "ARCHIVE_MANIFEST.json",
+    "STAGE_PATHS.txt"
+  ],
+  "essential_runtime_lock_parts": [
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 4194209,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "0d19c40d785f589136653981f15508302153b0b9",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-000.jsonfrag",
+      "sha256": "c2ec5719e60dad86216f87e7a2f150182401351a66050e2fcf9d66d65787cc0f"
+    },
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 4194183,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "0b9fdacb843d1ebb5d144e98ee12d1291bebb9bd",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-001.jsonfrag",
+      "sha256": "bfdbe09881402dbf64c4ee9b758a6a2683c4bc2d10ecd6946dc89c5f60fa3ead"
+    },
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 4194194,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "e044c40b515cdeb613fee28d5a6325f6df43bf41",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-002.jsonfrag",
+      "sha256": "d6b8268019fc8b997ab2c9d4381df10db4f9319c9d4e1df994d3030f006e890e"
+    },
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 4194137,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "504c5de1379c638e1b373bc60ab853f193a237f2",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-003.jsonfrag",
+      "sha256": "7ca98913a5e5db3c47edde8dffb2170b28cce49200c3bef17dfe7f70b8a41bed"
+    },
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 4194235,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "a006b59522c696cf9f25dcedeca7c710e1c05785",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-004.jsonfrag",
+      "sha256": "d2960348405376f2a654c085f185b9b1375c82b751012e491b89e59b87de765a"
+    },
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 4194262,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "8eddead33cc66ff1ba994205f0abf2d62c58713c",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-005.jsonfrag",
+      "sha256": "10285d58a297e83c33d75bfe385b692d942e880ca46ef63d5ad0ef16ff531795"
+    },
+    {
+      "already_byte_identical_at_base": true,
+      "bytes": 203599,
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_NOT_TRANSPORT",
+      "git_blob_oid": "b8b283a2e79a7f123d8ea03e5b0c163b8149a7be",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-006.jsonfrag",
+      "sha256": "ff4611da5c4e1a9cd750b62a3bfcc41dfa66ddb6dde8633fb8ef67b5d1d73e05"
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-000.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-001.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-002.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-003.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-004.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-005.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-006.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-007.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-008.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-009.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-010.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-011.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-012.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-013.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-014.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-015.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-016.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-017.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-018.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-019.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/transport/chunk-020.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/payload-00.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/payload-01.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/payload.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence-export.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/additions-transfer.b64",
+      "reason": "transport"
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/transfer.b64",
+      "reason": "transport"
+    }
+  ],
+  "file_count": 145,
+  "files": {
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/OWNER_FULL_SOURCE_POLICY_REPORT.json": {
+      "bytes": 3869,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "46b5b3cdc7a4228a53a05b7e62cb0e549ad212b67282fbd2c0fa4cce97ac8b9b"
+    },
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/REVIEW.json": {
+      "bytes": 4222,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "444c6b2c31d02719a4284b2a1917e0e6615dc7af445da659d5160f7f2b9dd58d"
+    },
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/SYNC_RECEIPT.json": {
+      "bytes": 823,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "52c65eb84dd93553ce038d1694b5f5f7611c2fbe2c683836e489c0dec16bb894"
+    },
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/check.py": {
+      "bytes": 14593,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "5efbb2a45a37d5272607863986f524891db71fefff64b23c66877a1b56f2eca0"
+    },
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/clean_final_audits.py": {
+      "bytes": 18648,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87"
+    },
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/reviewed_source_policy.json": {
+      "bytes": 10868,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "d7395bfa8af0914ed2d3cb9a7d298b32754553886c88f2c1dc375ff2857d65dd"
+    },
+    "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/source_policy.py": {
+      "bytes": 16593,
+      "change": "new",
+      "scope": "Graph39 final independent portable gate review",
+      "sha256": "11c2f2406ed479a76d08fac8c228562bb2e9dec8e9de9d0198500d3e91243821"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/DATA24_SOURCE_COST_REVIEW.json": {
+      "bytes": 12736,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "f43421305e162e24ed089b978e3ac822112ff96d3519a21d24ce7e38e3996398"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/SYNC_RECEIPT.json": {
+      "bytes": 1603,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "30d8fa487f7797b75fea4ddef379108e0b575a4067a4bb56f720e2090ff59114"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/broad-audit-review/CLEAN_BROAD_AUDIT_INVOCATION.json": {
+      "bytes": 1201,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "36a9920cc8cec0d85ba3e220e95afb1ae748ff7f21cf71479665bdeb20279aae"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/broad-audit-review/CLEAN_BROAD_GUARD_TESTS.json": {
+      "bytes": 885,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "d2dc27625331caf560ff41eb534421c7988c80311aefd39c89ce9bcb9274cdc3"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/broad-audit-review/REVIEW.json": {
+      "bytes": 2992,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "aa1f9af377b9b2af1d1861653ff3c17e9cd30bff74ffef5cccc9184528b01dff"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/broad-audit-review/clean_broad_audit.py": {
+      "bytes": 11699,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "89dc770741a3d280a1b8498f507bce3fa6b124634793c8b6f2d1ee40bd4d9db5"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/broad-audit-review/test_clean_broad_audit.py": {
+      "bytes": 6385,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "60192ca9d94d305aec5844d4d55be443d9c3659dd42db21fb12af5b2ed8128a3"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/release-docs-proposal/PROPOSAL.json": {
+      "bytes": 1925,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "172a7cfe7b28c4f69bb6a89e13517a6ba0f3dd2c2fd115565bf028aa49bbe692"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/release-docs-proposal/README_STATUS_PENDING.patch": {
+      "bytes": 6820,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "7a6fdca3d039b2d044da313c8240b2161bc8715716864ae31fbab82020bf3e3d"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/release-docs-proposal/before/README.md": {
+      "bytes": 3444,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "6854a48fb949019dddd5a0a1dfbc6c3686fbafa029b67f8157becb0cba4e6695"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/release-docs-proposal/before/STATUS.md": {
+      "bytes": 83512,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "422d07136bbb9ad5c3240576bf92e101e54e48745a71253f2e7c3f4b97d2aeeb"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/release-docs-proposal/proposed/README.md": {
+      "bytes": 4839,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "6baa8c46429cf608245e09da4e5e036256297cc6aa4b9ff3531cf513bbd008f9"
+    },
+    "research/continuations/20261023-parallel-graph39/review-supplement-20261023/release-docs-proposal/proposed/STATUS.md": {
+      "bytes": 85812,
+      "change": "new",
+      "scope": "Graph39 broad-audit review and pending documentation supplement",
+      "sha256": "4695a61b98b261f9d872a102df3be104827d7e222f48c4877e3eb439ed9728e6"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/FRESH_COST_HINTS_V2.json": {
+      "bytes": 5795,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/FRESH_COST_HINTS_V2_EVIDENCE.json": {
+      "bytes": 1681,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "462c78cdf151a80f211f90af8ba65893e00973f40e01db28c5a26fa4d50117b3"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/FRESH_HISTORICAL_SLOW_MODULES.json": {
+      "bytes": 364999,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "c6a6366fdf53512a0853d67310ab8eebc78028674b5dca4f3859d671243a5719"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/REMOTE_ARCHIVE_VERIFIED.json": {
+      "bytes": 1825,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "02dcb3d9d71794f42e8e30031aa7a834c6a9f42b331bcbb2c6e140113c2e1d8b"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/attempts/D1Bound5.SmallPairLightData11Left/33679516e255454f9e9b0a00ea490dfc/compiler.log": {
+      "bytes": 0,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/attempts/D1Bound5.SmallPairLightData11Left/33679516e255454f9e9b0a00ea490dfc/receipt.json": {
+      "bytes": 1421,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e1525e57620510d1aa337331507d6c12aa71a32cd19ca4f3ec9ba298c89733ad"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/attempts/D1Bound5.SmallPairLightData12/4a19f716f77342979b3815abe2a6a1eb/compiler.log": {
+      "bytes": 0,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/attempts/D1Bound5.SmallPairLightData12/4a19f716f77342979b3815abe2a6a1eb/receipt.json": {
+      "bytes": 1405,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "39d8b61f88fa16d893cd6de9f5f5bbdbf3edb9c4e4381bbaa9d76915516d1f8d"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/attempts/D1Bound5.SmallPairLightData13/0bd230cefb284666ad96753e9325f3b3/compiler.log": {
+      "bytes": 0,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/attempts/D1Bound5.SmallPairLightData13/0bd230cefb284666ad96753e9325f3b3/receipt.json": {
+      "bytes": 1405,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "a429d6f900813e696989e95b6b1bdb119fbf70260f55e2a2a51fcfaea5347f69"
+    },
+    "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/clean-build/invocations/f0066da497544e39bcd09054b5ecd9b7/SUMMARY.json": {
+      "bytes": 214792,
+      "change": "new",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "91bf0e94fd5810e004ee0275b63b7032e403680e974eda563c669615c14648a1"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/CANONICAL_FILES.json": {
+      "bytes": 1557815,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "80c4898468bb108fc80cec1a17b85febb4dda5d030f1bc5c942d833835fb3229"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/CLASSIFICATION.json": {
+      "bytes": 19340,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "0688d57cc31ad897d5160a193fcb4cce7aa33fae2025bee77f85f8e9a212d7aa"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/EXPECTED_NOT_INDEXED.json": {
+      "bytes": 222464,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "be07b163196b8c68571590db2885330e9e3fb4485d5f820490b60f08d3e4747b"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/EXTRA_PROTECTED_TRACKED_SOURCES.json": {
+      "bytes": 3,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/EXTRA_UNTRACKED_SOURCES.json": {
+      "bytes": 113436,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "0258eb9bb6ed9b0ffe62b7c7d4471e027b77e8ffeee141fbfb5ab4c5e5ccf487"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/FINAL_MANIFEST.json": {
+      "bytes": 2675,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "c68e3d02eea98c09a5b878a2fa64d5ff1ebade34551e72464742d1e15feb207f"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/FINAL_SYNC_VERIFIED.json": {
+      "bytes": 348,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "8ec5904127ad9f5b0218b8a9cde0f527c647c19ea129dcf8fa51bbb3d6490ade"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/GIT_HEAD_PRODUCTION.json": {
+      "bytes": 15170,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "6be7a19452caaafcab6c80ce5a8803bf1e1b3ca7acd065ef11165af0d9691d8b"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/GIT_INDEX_PRODUCTION.json": {
+      "bytes": 13030,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "faf76051aa4f8dc4343826a4dc8eba1bf5e65f87156c69e8d19602c1e1e65144"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/IGNORE_AND_SIZE_REVIEW.json": {
+      "bytes": 345,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "52362eae76fe2929df6d027c91db219560f8f9b353536d1087483a7cb5ceff4f"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/NO_OVERWRITE_CAPABILITY.json": {
+      "bytes": 714,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "4fb62272e4b6524b48892123316b17f81f6ee9e548e5ca877760ef19b32169d2"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/OUTPUT_MANIFEST.json": {
+      "bytes": 999,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "d15c9ace8ef70adad1459acace0acef2c985da06071027053425f11156eaedcc"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/PREPARED_RELOCATION_PLAN.json": {
+      "bytes": 135371,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "8d8412630d8f8b724599b89bd3ebfc7d4446d99de432ba40001e4c9d5df85b40"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/REPORT.md": {
+      "bytes": 4362,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "aa1e1406fb8be1633393a4f6f9bb74ebbfd68b9c2636293b9bb53061d70b63a1"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/SUMMARY.json": {
+      "bytes": 1945,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "84153df8986702d546e7fc38a50c4b86cabfc02a8002c2f98fbfcb3f4a7d5c40"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/TRACKED_PUBLICATION_DELTA.json": {
+      "bytes": 241,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "70f576b0472b0ef1e44514af2128ed1cdac0d488e461832d4dc97051d3ab80f0"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/UMBRELLA_PENDING.diff": {
+      "bytes": 221,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "8a42c61e913f0bf2571d8b08ff961f7d3422f9309676e6627294342e89f7c5ef"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/canonical-production.sha256.txt": {
+      "bytes": 532922,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "1dbff8c543dc0e21330c5275c65eaa72ae45d3c3d3ea31e6cbf99dbbb7c1a63d"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/inventory.py": {
+      "bytes": 6764,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "a01c3f4f631b4a0c8c57d27147e63b354958107ede1bf9af537af63d5f42b662"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/obsolete-untracked.sha256.txt": {
+      "bytes": 37549,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "54da6d5be2198096c5d21977272006d1311c38a0c2fb018399cf730cc2599d6e"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/protected-extra.sha256.txt": {
+      "bytes": 0,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/review-a.json": {
+      "bytes": 2411,
+      "change": "new",
+      "scope": "B canonical cleanup read-only inventory",
+      "sha256": "effecdfb39f94a832e59e5019c61232badf15af1f20687558de3e5c1f51fb25f"
+    },
+    "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory.py": {
+      "bytes": 6764,
+      "change": "new",
+      "scope": "B canonical cleanup inventory script",
+      "sha256": "a01c3f4f631b4a0c8c57d27147e63b354958107ede1bf9af537af63d5f42b662"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/BROAD_AUDIT_RECIPE.json": {
+      "bytes": 1438,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "d209b9842c39b88a896af0b0e93200c5a6529f38a8fb93ae5548978af030f14f"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/MANIFEST_CATEGORY_MAPPING.json": {
+      "bytes": 1123,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "54c0e3f11e2de19eb98a6496cc82d8b45791de0e2f0987bd3865506ed49150c9"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/MANIFEST_PREPARATION_SELFCHECK.json": {
+      "bytes": 822,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "4a75a309b3dce3d6a535a81979e2dcde0c3af03881772151e8c8a2a7ebfb23e4"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/MANIFEST_PROPOSAL.json": {
+      "bytes": 4055,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "199d56aef122f3b94041e2eef27b7086249c6a3d587b066e728c65413b35ec71"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/PACKAGE_MANIFEST.json": {
+      "bytes": 5370,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "e1cc35542d5b26939686ba98eb3bc7c4d075aadb7997a970f8c3ef3ceb62121d"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/PATH_MAPPING.json": {
+      "bytes": 1386,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "6e08ddb1793f1257dfb5e81ae122c77427253bb5105528dd3f8cf45b8ff306e4"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/PROPOSAL.md": {
+      "bytes": 3351,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "15ad31132a236876615299d1f8bce1e5beca0970137834282095217a29c93d73"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/PROPOSAL_STATUS.json": {
+      "bytes": 1754,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "c0726d5cd809b8177a1c593c37c0b1ce9c02e93ef29aa91dddb5796eae3e3c4b"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/REMOTE_SYNC_VERIFIED.json": {
+      "bytes": 457,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "0d0f490271525244b45bef5ab5b7172fca7ec8aa946a1ab34c9402f2c1b1f225"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/WRAPPER_LIFECYCLE_SELFCHECK.json": {
+      "bytes": 776,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "dcd806fe59a0648acd21cdfd0211abd13c63b94873a0e131e74b336579689ca3"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/WRAPPER_LIFECYCLE_SELFCHECK_BEFORE_BUILD_TIMEOUT.json": {
+      "bytes": 733,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "be0e6e929d0498062349eb1a8ecc0b33975b5ccf9d1865ca82e12b035a5c2861"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/WRAPPER_LIFECYCLE_SELFCHECK_V1.json": {
+      "bytes": 594,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "423f63cb919c88bbc2d4410d438ee58c28c1aa02da3e86d033437b9485f50314"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/CLEAN_AUDIT_INVOCATION.json": {
+      "bytes": 2200,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "0424734528208217a08f76635f49733b5268aecec86167f4217dc0bd7d4de17a"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/ENTRYPOINT_INDEPENDENT_REVIEW.json": {
+      "bytes": 2013,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "ccbcbc840651ae845d537d4009b5efb74352894131b4c0dd7a51a7e0f7a50906"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/ENTRYPOINT_V2_RESOURCE_REVIEW.json": {
+      "bytes": 1616,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "42bffe3c68b2965a4a62e6cdb7e74349cf52724efbb1a7bc13e8738edcc136a1"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/HISTORICAL_TOOL_REVALIDATION.json": {
+      "bytes": 376,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "dacb7b891ca699e921e85e056344d890a6d368cd5a15c837644a72d1d50ebc3d"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/INDEPENDENT_PORTABLE_GATE_REVIEW.json": {
+      "bytes": 4222,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "444c6b2c31d02719a4284b2a1917e0e6615dc7af445da659d5160f7f2b9dd58d"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/MANIFEST_PREPARATION_SELFCHECK.json": {
+      "bytes": 822,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "4a75a309b3dce3d6a535a81979e2dcde0c3af03881772151e8c8a2a7ebfb23e4"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/SOURCE_POLICY_VALIDATION.json": {
+      "bytes": 1932,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "fb3d7193d470a7717e2eebedf92d17c1492f10006027010e01e3fd71d3be62ae"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/WRAPPER_LIFECYCLE_SELFCHECK.json": {
+      "bytes": 776,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "dcd806fe59a0648acd21cdfd0211abd13c63b94873a0e131e74b336579689ca3"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/WRAPPER_LIFECYCLE_SELFCHECK_BEFORE_BUILD_TIMEOUT.json": {
+      "bytes": 733,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "be0e6e929d0498062349eb1a8ecc0b33975b5ccf9d1865ca82e12b035a5c2861"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/evidence/WRAPPER_LIFECYCLE_SELFCHECK_V1.json": {
+      "bytes": 594,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "423f63cb919c88bbc2d4410d438ee58c28c1aa02da3e86d033437b9485f50314"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/records/proof-source-sha256.txt": {
+      "bytes": 495373,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "af5813a4364be84328e0e67bc940f8388c6539b435eb180b7a1fa66857bbe80b"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/records/verification-history/20261023/Audit.before.lean": {
+      "bytes": 3137,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "940982c822825c7d4b9e40b9c8897e84ff0682c61f6aef7a22e90796b13823e8"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/records/verification-history/20261023/GIT_SYNC_POLICY.before.md": {
+      "bytes": 5468,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "f9be79625f5ba7387e5165b46cd4d0175c24f64ccc8d9f0bea01f611e3a8652b"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/records/verification-history/20261023/proof-source.before.sha256.txt": {
+      "bytes": 10919,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "2326e0229f2ce0c55fb62894e2125dbda2ce7c531be85c11266d0e6615e5a771"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/records/verification-history/20261023/verification-tools.before.sha256.txt": {
+      "bytes": 6009,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "71fda5b348750271a2680b5456988b5c6a9ae6f27161b96cddb10efc90da0468"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/records/verification-tools-sha256.txt": {
+      "bytes": 7739,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "7dc94934002d475e32a0dcb94d066f764c4a3db2d2e8dcd9ee7057b56383ca68"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/Audit.lean": {
+      "bytes": 5535,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/check.sh": {
+      "bytes": 166,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "54a9ab27026a78217bc0a45a29bf51f5e7e8bdcd109e760548c01c6d9b0bfedc"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/fresh_project_build.py": {
+      "bytes": 36338,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/source_audit.py": {
+      "bytes": 291,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "a2549507ce239f5b34d2b5870a5e52c296f71df702516ad4a7dcc314004d016a"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/FinalIntegrationAudit.lean": {
+      "bytes": 52454,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "005f05312ef81f9a961e1c8adefb00b98e514cca3794adcc438118e4edf5d1ac"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/FinalTargetAudit.lean": {
+      "bytes": 1483,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "b21a0deae156faabd97ad38e87920a5f9f16700cad843c3e38e040c90aaa61d7"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/README.md": {
+      "bytes": 8189,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "9cb3caa4331ebbc1853fff3c3bb426cda974571186b2e7d77575e9f89241ee8d"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/SOURCE_POLICY_VALIDATION.json": {
+      "bytes": 1932,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "fb3d7193d470a7717e2eebedf92d17c1492f10006027010e01e3fd71d3be62ae"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/check.py": {
+      "bytes": 14791,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "82749dc3164e32b2273ec91bf2cb4b178283d9b92a8eab543534d4b583879883"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/clean_final_audits.py": {
+      "bytes": 18648,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/prepare_manifests.py": {
+      "bytes": 4933,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "d593d2bea0fff0fab2aa1bdeb6350ff7e1cf929599d5ac1d2f671774b2bd97cf"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/release_pins.json": {
+      "bytes": 1691,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "0725e34a6da18722fe8b0efe620f6d29ba1557fbe0b6e908ed25f76cb7f4a51f"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/resource_hints.json": {
+      "bytes": 5795,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/reviewed_source_policy.json": {
+      "bytes": 10868,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "d7395bfa8af0914ed2d3cb9a7d298b32754553886c88f2c1dc375ff2857d65dd"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/source_policy.py": {
+      "bytes": 16593,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "11c2f2406ed479a76d08fac8c228562bb2e9dec8e9de9d0198500d3e91243821"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/test_check.py": {
+      "bytes": 14439,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "eadd23a0c0da14f1b954f7fc2c7f52dd106eeb198321f5bbbabab7dd7a408fd4"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/test_prepare_manifests.py": {
+      "bytes": 9950,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "f66861eb84c87023191a3ed43877f99bf9672326f92960ba8aea9e1dc94d3038"
+    },
+    "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/scripts/verification/test_source_policy.py": {
+      "bytes": 10146,
+      "change": "new",
+      "scope": "B portable verification proposal V2",
+      "sha256": "b3a505d7bf9609c877395dae6986efa7b8119af2b5ca0af04088f376db13455e"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/CLEAN_AUDIT_INVOCATION_PREFLIGHT.json": {
+      "bytes": 872,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "825c26c3bdd1c045dc705747ac4c0a360b4d5a2b2a15365a8126397e41c46642"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/CLEAN_BROAD_AUDIT_INVOCATION.json": {
+      "bytes": 1201,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "36a9920cc8cec0d85ba3e220e95afb1ae748ff7f21cf71479665bdeb20279aae"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/CLEAN_BROAD_GUARD_TESTS.json": {
+      "bytes": 885,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "d2dc27625331caf560ff41eb534421c7988c80311aefd39c89ce9bcb9274cdc3"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/MANIFEST.json": {
+      "bytes": 709,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "919edb2134ffd1d57a34027df579c7cad675e23d275c6fe26020f957d7483964"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/broad-compatibility/Audit.lean": {
+      "bytes": 5535,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/clean_broad_audit.py": {
+      "bytes": 11699,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "89dc770741a3d280a1b8498f507bce3fa6b124634793c8b6f2d1ee40bd4d9db5"
+    },
+    "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/test_clean_broad_audit.py": {
+      "bytes": 6385,
+      "change": "new",
+      "scope": "Integration broad compatibility prepared only",
+      "sha256": "60192ca9d94d305aec5844d4d55be443d9c3659dd42db21fb12af5b2ed8128a3"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/CLEAN_AUDIT_GUARD_TESTS.json": {
+      "bytes": 971,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "984bd727deb3fceceef36ca6cbdb45039ee1af805f1de061ca06826c03949331"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/CLEAN_AUDIT_INVOCATION.json": {
+      "bytes": 2200,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "0424734528208217a08f76635f49733b5268aecec86167f4217dc0bd7d4de17a"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/MANIFEST.json": {
+      "bytes": 771,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "b0bcfba1415fbb2c25b3cc50a1a786e90a7a400a47f7b6340aca6437d98d3b91"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/clean_final_audits.py": {
+      "bytes": 18648,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/entrypoint-independent-review/Audit.reviewed.lean": {
+      "bytes": 5535,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/entrypoint-independent-review/INDEPENDENT_REVIEW.json": {
+      "bytes": 2013,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "ccbcbc840651ae845d537d4009b5efb74352894131b4c0dd7a51a7e0f7a50906"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/entrypoint-independent-review/check.reviewed.py": {
+      "bytes": 14593,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "5efbb2a45a37d5272607863986f524891db71fefff64b23c66877a1b56f2eca0"
+    },
+    "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/test_clean_final_audits.py": {
+      "bytes": 10278,
+      "change": "new",
+      "scope": "Integration verified tool hardening",
+      "sha256": "665e2465e949d6da7e2f95d8e3db9dd54e7917703c34202ffcfb04b7c3b3d6bf"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/ASSESSMENT.md": {
+      "bytes": 11507,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "854ee6850bb8da54189f8fc527a3a783a68bf4a2f50b721139d65e06cc2e02b0"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/IMPORT_SIZE_PROXY.json": {
+      "bytes": 1224862,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "f87671f762d4bd9ce3bfd232c9546e41558becc3db46b2e40a094a649a614494"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/IMPORT_SIZE_SUMMARY.json": {
+      "bytes": 764,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "29b50774c5695943c80f4bb203f9858ac7d7097ffaf76e82aee9ce3fa91dd2b3"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/INDEX.json": {
+      "bytes": 2169,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "59dd78fff7dfbe736cfa3d6f316d4daccf32d4acc5016fac9d601868021e6641"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/LOCAL_CAPACITY.json": {
+      "bytes": 444,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "1edd7f8b715da633db7e9e82260f6da8f4b8eecf2deaf64a0eaed5683204b153"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/REMOTE_CAPACITY.json": {
+      "bytes": 958,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "727fccba47c2b6bd50b36eb8f8b863930a80b5145ae5e5388b79ee783c4e90d6"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/SAVED_ADDRESS_PROXY.json": {
+      "bytes": 661,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "97bc064dbe3f6996cf2567c06c3b57c06a7c19b86c1b2f0048c91112f274d332"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/SCOPED_TIMING_PAIRS.json": {
+      "bytes": 204615,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "b926d286d06754de16f07b2efaa8fb3d55d7cf26f2f2248b5f7f08cae8b322ae"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/SOURCE_EVIDENCE.json": {
+      "bytes": 1969,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "7d39b5e70a91d09299092c7831713cb6ff11cd98d826fd70124fda7101efcd71"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/analyze_import_sizes.py": {
+      "bytes": 3899,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "ee0cece4e3ffe423b3358c6561aadc7eca9d3b69374a4c134ebd6da5c9de4517"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/analyze_saved_addresses.py": {
+      "bytes": 2537,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "d6e6b871eb6f15264614113e7cc6e2c3070e7723268849c186e912aa8a1a054b"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/official-source/src/kernel/environment.cpp": {
+      "bytes": 12458,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "6748cf9368a16b7e4fd8546accc78f98874fb69323934b21c796e722dad136b2"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/official-source/src/kernel/type_checker.cpp": {
+      "bytes": 53663,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "5312a8f02318d6e3fe7eca68bf3525d5f3558fa98f5737612b52cac2e588c447"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/official-source/src/kernel/type_checker.h": {
+      "bytes": 9337,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "251e5910586972445d0ebd317a056e27d8f124515f19ae7865560526fa7935b0"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/official-source/src/library/module.cpp": {
+      "bytes": 29583,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "a78bb4583a9746dea78570c1885500356da9bd1ecebdcb199645cf42709d890d"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/official-source/src/runtime/sharecommon.cpp": {
+      "bytes": 16467,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "5dc0f3d06e45bf78d89a298694baae141fdecb717da1be19977347678c07adff"
+    },
+    "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/official-source/src/runtime/sharecommon.h": {
+      "bytes": 2348,
+      "change": "new",
+      "scope": "Offload final replay resource assessment",
+      "sha256": "f84596bdc8e58b4c3df436f7ff3eaf0f07accd74a9b335d66937fc1261d1e60e"
+    },
+    "research/continuations/20261023-parallel-resume/CURRENT_PROGRESS.json": {
+      "bytes": 4419,
+      "change": "modified",
+      "scope": "Root progress snapshot",
+      "sha256": "f3b64b610f7ecf5f7282ca0da1dd22840c4301963aad0f5be467870639a5d55d"
+    },
+    "research/continuations/20261023-parallel-resume/FINAL_INTEGRATION_ARCHIVE_PUSH_RECEIPT.json": {
+      "bytes": 764,
+      "change": "new",
+      "scope": "Root archive push receipt",
+      "sha256": "4984ba826f60b5061ca06b1dd4aede68c0b3a14535d6b0d164aa8cd9244f5bec"
+    },
+    "research/continuations/20261023-parallel-resume/INTEGRATION_ARCHIVE_PUSH_STALL.json": {
+      "bytes": 1335,
+      "change": "new",
+      "scope": "Root preserved archive push stall",
+      "sha256": "a17c7d79684e2ed72691c6b4008890216f599086d3f068b1938fe1db62b2ca36"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/CLEAN_AUDIT_GIT_HARDENED_INDEPENDENT_REVIEW.json": {
+      "bytes": 2658,
+      "change": "new",
+      "scope": "Independent Git-hardened clean audit runner review",
+      "sha256": "8e3c8f8e00689a8443f1905661077fa2d41f696cf6acd506a987a7bf01f761d9"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/SOURCE_MANIFEST.json": {
+      "bytes": 985105,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "fa84386224dedc9b6a9a4fa76679b7bdaf1250cf1927e0ae59c170bc4eee9550"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/SOURCE_POLICY_REPORT.json": {
+      "bytes": 3869,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "46b5b3cdc7a4228a53a05b7e62cb0e549ad212b67282fbd2c0fa4cce97ac8b9b"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/SOURCE_POLICY_VALIDATION.json": {
+      "bytes": 1932,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "fb3d7193d470a7717e2eebedf92d17c1492f10006027010e01e3fd71d3be62ae"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/SYNC_RECEIPT.json": {
+      "bytes": 704,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "5123f008ddc1e7522596bd4a92adb211d0230c80844d4fc4ad3ccab604cc574e"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/reviewed_source_policy.json": {
+      "bytes": 10868,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "d7395bfa8af0914ed2d3cb9a7d298b32754553886c88f2c1dc375ff2857d65dd"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/source_policy.py": {
+      "bytes": 16593,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "11c2f2406ed479a76d08fac8c228562bb2e9dec8e9de9d0198500d3e91243821"
+    },
+    "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/test_source_policy.py": {
+      "bytes": 10146,
+      "change": "new",
+      "scope": "Independent final source policy",
+      "sha256": "b3a505d7bf9609c877395dae6986efa7b8119af2b5ca0af04088f376db13455e"
+    },
+    "research/continuations/20261023-parallel-target-audit/post9b418-research-archive/OWNER_SCOPES.json": {
+      "bytes": 7062,
+      "change": "new",
+      "scope": "Explicit owner archive scopes",
+      "sha256": "028b547d1fd594790885594586243372efa99e52fa50ac06a71516d135b3ca23"
+    },
+    "research/continuations/20261023-parallel-target-audit/post9b418-research-archive/prepare_manifest.py": {
+      "bytes": 12386,
+      "change": "new",
+      "scope": "Archive proposal preparer",
+      "sha256": "84e767fc9315d37d8e5ae33b4533d1c3fd464708292c4a24603f20472f4ab94e"
+    }
+  },
+  "git_index_sha256_before_after": "c4966e3bde35fdaac84909aece22d541d95159a6435b2f073be752e89214409d",
+  "git_mutations": [],
+  "owner_receipts_revalidated": [
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/REMOTE_SYNC_VERIFIED.json",
+      "sha256": "31a8937db284a565abc5b5c2e8706d2ef748a4706efc3fb13713d82a4f4ea4ca",
+      "verified_entries": 37
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/REMOTE_ARCHIVE_VERIFIED.json",
+      "sha256": "4dc97e91e0f06807e54ce5681b7085aebd180fd3613fdd7efe285544a0a13b1c",
+      "verified_entries": 18
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/resource-retry-v2/REMOTE_ARCHIVE_VERIFIED.json",
+      "sha256": "02dcb3d9d71794f42e8e30031aa7a834c6a9f42b331bcbb2c6e140113c2e1d8b",
+      "verified_entries": 10
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-b/repository-verification-proposal-v2/PACKAGE_MANIFEST.json",
+      "sha256": "e1cc35542d5b26939686ba98eb3bc7c4d075aadb7997a970f8c3ef3ceb62121d",
+      "verified_entries": 44
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/OUTPUT_MANIFEST.json",
+      "sha256": "d15c9ace8ef70adad1459acace0acef2c985da06071027053425f11156eaedcc",
+      "verified_entries": 10
+    },
+    {
+      "path": "research/continuations/20261023-parallel-target-audit/post-proof-order-repairs/source-policy-final/SYNC_RECEIPT.json",
+      "sha256": "5123f008ddc1e7522596bd4a92adb211d0230c80844d4fc4ad3ccab604cc574e",
+      "verified_entries": 5
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graphs-b/canonical-cleanup-inventory-01/FINAL_MANIFEST.json",
+      "sha256": "c68e3d02eea98c09a5b878a2fa64d5ff1ebade34551e72464742d1e15feb207f",
+      "verified_entries": 20
+    },
+    {
+      "path": "research/continuations/20261023-parallel-integration/verification-tool-hardening-20261023/MANIFEST.json",
+      "sha256": "b0bcfba1415fbb2c25b3cc50a1a786e90a7a400a47f7b6340aca6437d98d3b91",
+      "verified_entries": 7
+    },
+    {
+      "path": "research/continuations/20261023-parallel-integration/broad-compatibility-preparation-20261023/MANIFEST.json",
+      "sha256": "919edb2134ffd1d57a34027df579c7cad675e23d275c6fe26020f957d7483964",
+      "verified_entries": 6
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graph39/independent-candidate-review/portable-gate-review/SYNC_RECEIPT.json",
+      "sha256": "52c65eb84dd93553ce038d1694b5f5f7611c2fbe2c683836e489c0dec16bb894",
+      "verified_entries": 6
+    },
+    {
+      "path": "research/continuations/20261023-parallel-graph39/review-supplement-20261023/SYNC_RECEIPT.json",
+      "sha256": "30d8fa487f7797b75fea4ddef379108e0b575a4067a4bb56f720e2090ff59114",
+      "verified_entries": 12
+    },
+    {
+      "path": "research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/resource-assessment/INDEX.json",
+      "sha256": "59dd78fff7dfbe736cfa3d6f316d4daccf32d4acc5016fac9d601868021e6641",
+      "verified_entries": 16
+    }
+  ],
+  "pending_status": {
+    "broad_compatibility_audit": "PENDING",
+    "canonical_production_cleanup_or_tool_activation": "NOT_PERFORMED_BY_THIS_ARCHIVE",
+    "clean_final_mathematical_and_axiom_audits": "NOT_YET_RUN_ON_COMPLETED_CLEAN_BUILD",
+    "fresh_installed_kernel_replay": "NOT_STARTED_PENDING_PRIOR_GATES",
+    "fresh_project_source_build": "RUNNING_OR_PENDING_FINAL_SUCCESS",
+    "global_main_theorem_acceptance": false,
+    "status": "RESEARCH_ARCHIVE_PROPOSAL_ONLY"
+  },
+  "policy": {
+    "credential_pattern_count": 6,
+    "max_file_bytes": 5242880,
+    "no_symlinks": true,
+    "no_transport_or_proof_artifacts": true,
+    "sha256": "7f07b1a6d3974c02840538af4900b25036c63b8d5945fd047b48cbcaefd6407f",
+    "source": "scripts/git_sync_preflight.py",
+    "strict_utf8": true
+  },
+  "schema": 1,
+  "scope_counts": {
+    "A fresh build tooling, durable identities and resource retry": 11,
+    "Archive proposal preparer": 1,
+    "B canonical cleanup inventory script": 1,
+    "B canonical cleanup read-only inventory": 22,
+    "B portable verification proposal V2": 46,
+    "Explicit owner archive scopes": 1,
+    "Graph39 broad-audit review and pending documentation supplement": 13,
+    "Graph39 final independent portable gate review": 7,
+    "Independent Git-hardened clean audit runner review": 1,
+    "Independent final source policy": 7,
+    "Integration broad compatibility prepared only": 7,
+    "Integration verified tool hardening": 8,
+    "Offload final replay resource assessment": 17,
+    "Root archive push receipt": 1,
+    "Root preserved archive push stall": 1,
+    "Root progress snapshot": 1
+  },
+  "status": "CURATED_RESEARCH_ARCHIVE_READY_FOR_ROOT_REVIEW",
+  "unchanged_at_base": [
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/CLEAN_BUILD_README.md",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "1d3ef4e21336aca06e5bba0b22e8fb9010c52729df5f742046f77f8d7fe60673"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_COST_EVIDENCE_FILTERED.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "1901969c87b9b0ee3748abd03c5f2ced97d63429d97de13dd83a98af940d2310"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_COST_HINTS.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "7b4b05fa015976e0f34094c6fc36a5a5fe5b934cc57da2e9a89708abaec8cbed"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNNER_HANDOFF.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e17fc052ad74afd0c7ec04afbea2e02fb07db244bf434b5d10bdc42aaa18e617"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNNER_INDEPENDENT_REVIEW.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "fce78500c47f45527ef06b6978e374260480f1aa3a6bb7d7cb5bd0a22c70ca2d"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNNER_REAL_SMOKE.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e7a4408223ca5dee8ed950d46dcf10ac4327bc49805517bb2216e27f8c0082c8"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNNER_SELFCHECK.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "1a77213e778c09219bc3f80825216afb259a39b3329ce6704319af7ec6e28407"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNTIME_ENV.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "086d2a83be542887dfbafc8d638458893cd4c8322baac26f655e7085bf81f4b2"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNTIME_OMITTED_MISSING_PATHS.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "0daac9be0c6501d91f96e96eee1b1722f34626bb6fab1a49ebc62c79ebeeea77"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/FRESH_RUNTIME_PREPARE_COMMAND.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "8074a9fd07c402190796105d484b93af6c349821a9e29b41b497039314a4ee2f"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/LOCAL_VERIFICATION_CANDIDATE_ASSESSMENT.md",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "6fe20bc18d31b4847fb7f60c2bc4be1c732eda505780905e12ca7dc1cbc9681c"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/PINNED_RUNTIME_SOURCE_HASHES.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "5a10937c3c97daf4463a73cfb703f2c1d6a1808bc341235d5c22ece41a313107"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/REMOTE_SYNC_VERIFIED.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "31a8937db284a565abc5b5c2e8706d2ef748a4706efc3fb13713d82a4f4ea4ca"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/REPRODUCIBILITY_REVIEW.md",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "d9193fb182f20cf917fc453a0c862dec0f482cc9e642de9fea172a12bc27e245"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/CLEAN_CHECKOUT_ORIGIN.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "969ddbe3d19878df5b41d6fa34b2616ecd862ae3527c71d75fa08428d15086d2"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/CLEAN_SOURCE_LOCK.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/FRESH_COST_HINTS.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "7b4b05fa015976e0f34094c6fc36a5a5fe5b934cc57da2e9a89708abaec8cbed"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/FRESH_RUNTIME_LOCK_PARTS_INDEX.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "19cb3bbe8caa89a2278fa5a2a8e7a762e30c6eab5b4e54a4113ee9c14fe083d7"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/IMMUTABLE_IDENTITY_MANIFEST.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "2676a982311c89150abfdb623da05d20be72839ed5f44ebfbde71bd8f5712895"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/REMOTE_ARCHIVE_VERIFIED.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "4dc97e91e0f06807e54ce5681b7085aebd180fd3613fdd7efe285544a0a13b1c"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/clean-build/ORIGIN.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "082a76e73032059147d45ec53b6a878cee97d7104a7653d8f9d8a0ae105feaae"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/clean-build/invocations/f0066da497544e39bcd09054b5ecd9b7/START.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "6ef65fb7bfc8b4504ac3af830762da96908330646d5fbf48908fc4efc484fd48"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/clean-checkout/README.md",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "1d3ef4e21336aca06e5bba0b22e8fb9010c52729df5f742046f77f8d7fe60673"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/clean-checkout/verification/CANDIDATE_ORIGIN.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "7219a2a6e91c5e741ee4c8f9cc2de70566e14f8feca0f125d18148f5f7ae3284"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/clean-checkout/verification/PRODUCTION_AND_TOOLS_SHA256.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "fd7c8c558ad4450f08f731aeaf8bcf1bdf887ad3a2f18d9a1812e0336c9c1b5d"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/reconstruct_runtime_lock.py",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "b6cdd31213cef79342fbb75d358d9a216acfdb656b8fe9c2749119c1556c4f49"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-000.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "c2ec5719e60dad86216f87e7a2f150182401351a66050e2fcf9d66d65787cc0f"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-001.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "bfdbe09881402dbf64c4ee9b758a6a2683c4bc2d10ecd6946dc89c5f60fa3ead"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-002.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "d6b8268019fc8b997ab2c9d4381df10db4f9319c9d4e1df994d3030f006e890e"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-003.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "7ca98913a5e5db3c47edde8dffb2170b28cce49200c3bef17dfe7f70b8a41bed"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-004.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "d2960348405376f2a654c085f185b9b1375c82b751012e491b89e59b87de765a"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-005.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "10285d58a297e83c33d75bfe385b692d942e880ca46ef63d5ad0ef16ff531795"
+    },
+    {
+      "classification": "ESSENTIAL_PINNED_RUNTIME_LOCK_TEXT_ALREADY_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/durable-clean-build-identities/runtime-lock-parts/FRESH_RUNTIME_LOCK.part-006.jsonfrag",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "ff4611da5c4e1a9cd750b62a3bfcc41dfa66ddb6dde8633fb8ef67b5d1d73e05"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/ORIGIN.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "b05b1789fefdcb9ee9d0fcb4e4fe4ff7b570a894667651fac4edd888adbec737"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/SUMMARY.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "bf382448e1443bbd5c08d7e0117a6f0f1dedd38cce55c3b74984a7c95ddac5da"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/accepted/FreshSmoke/Base.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "d6c1d20c6143543706aa433c66a879ee8d1adce877aaf9efcbf3cccd6cd1b55d"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/accepted/FreshSmoke/Dep.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "d8eac6ebc78961678c4a78edf12a98c056916459e6b83b0834f5621f21f42004"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/accepted/FreshSmoke.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "8fd04fc8e6e8ef8010d6447423a03d715f11db11b45eb23a8539492b0a01cfe8"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/attempts/FreshSmoke/93068a1e0206439a9d7ed313fdf02dab/compiler.log",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/attempts/FreshSmoke/93068a1e0206439a9d7ed313fdf02dab/receipt.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "6b1a346b2f537596194ea7a4e9e149a4d24c7aa212ae13fbc5afbfbd0e56267a"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/attempts/FreshSmoke.Base/310c620575dc48d99b20b6f00ff47df2/compiler.log",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/attempts/FreshSmoke.Base/310c620575dc48d99b20b6f00ff47df2/receipt.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "7e8633304b7a66c451f207856d8eff595144f7caf14dc9ea9e65ecb3f8f72902"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/attempts/FreshSmoke.Dep/b88bf9fda99c4deba32b6050141f6f2e/compiler.log",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/attempts/FreshSmoke.Dep/b88bf9fda99c4deba32b6050141f6f2e/receipt.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "00545437eb236f4c385be0910ba79c02d9574ea99c5357f2fad4736cdacde3ef"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/invocations/1550477f5c5948468ab76604a8e41da8/RESUME_VALIDATION.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "a3fd5bfad7c335e10412c248a56dcf550517d0de785d883188ff31398f6af2ee"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/invocations/1550477f5c5948468ab76604a8e41da8/START.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "5f0a8283bd376478a80cb12dabd6a2b69c587cae8b8624d12efff557ccabeb63"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/invocations/1550477f5c5948468ab76604a8e41da8/SUMMARY.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "bf382448e1443bbd5c08d7e0117a6f0f1dedd38cce55c3b74984a7c95ddac5da"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/invocations/c887deabeb2d4d98ba61ec6b7471815e/RESUME_VALIDATION.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "2e7b3daef4e5191142c11ab34448f7c55541896b76a0e38a338412158309e012"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/invocations/c887deabeb2d4d98ba61ec6b7471815e/START.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "e719b6752d26eabf7e5359609e912d747af24e4373d9d23eb159ab3a98641376"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/build/invocations/c887deabeb2d4d98ba61ec6b7471815e/SUMMARY.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "69c82659a845f970a5a6beb02203538e27bfdea7f8fe5dca637d8bd7f421e46c"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/environment.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "c1b84987540d6a512d6bcf4ee41cee0f9cfab21496498b3e08c6aee8a7137920"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/source/FreshSmoke/Base.lean",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "18ea17d1ea793cb6a6b88d7b82b17e8b3bbb75b48d46b0252317ff28f1c41204"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/source/FreshSmoke/Dep.lean",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "88554206650806f0aba0f759ed113b48243b5f596a48dec834902a597399b2db"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/source/FreshSmoke.lean",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "3c58a0fcf380711085f70a882b318196309b6dddca0b3c6834bd77c9685d59d9"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh-real-smoke/source-lock.json",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "4faf55165e233069a8ade2c8d9e8e164ff8bfa4f9c54046f11a9152565a69524"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/fresh_project_build.py",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66"
+    },
+    {
+      "classification": "UNCHANGED_AT_BASE",
+      "path": "research/continuations/20261023-parallel-graphs-a/fresh-build-runner/test_fresh_project_build.py",
+      "scope": "A fresh build tooling, durable identities and resource retry",
+      "sha256": "feddfcccd1885d03d3cdedf130926acd5637c11fa34eb4c3ff48a01043a2c895"
+    }
+  ],
+  "utc": "2026-10-23T13:48:34.291133+00:00"
+}

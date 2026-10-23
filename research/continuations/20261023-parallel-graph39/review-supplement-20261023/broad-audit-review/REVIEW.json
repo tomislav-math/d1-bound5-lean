@@ -1,0 +1,40 @@
+{
+  "status": "PASS_INDEPENDENT_STRUCTURAL_REVIEW_NO_LEAN_EXECUTION",
+  "utc": "2026-10-23T13:37:08.269293+00:00",
+  "reviewed_files": {
+    "clean_broad_audit.py": "89dc770741a3d280a1b8498f507bce3fa6b124634793c8b6f2d1ee40bd4d9db5",
+    "test_clean_broad_audit.py": "60192ca9d94d305aec5844d4d55be443d9c3659dd42db21fb12af5b2ed8128a3",
+    "CLEAN_BROAD_GUARD_TESTS.json": "d2dc27625331caf560ff41eb534421c7988c80311aefd39c89ce9bcb9274cdc3",
+    "CLEAN_BROAD_AUDIT_INVOCATION.json": "36a9920cc8cec0d85ba3e220e95afb1ae748ff7f21cf71479665bdeb20279aae"
+  },
+  "fixed_findings": [
+    {
+      "issue": "Exact-audit summary marker integers were not independently checked against actual log content, and stored audit commands were not validated.",
+      "resolution": "Actual logs are hash-checked and marker counts recomputed; stored commands must match frozen Lean, -j1, autoImplicit=false, source-root and exact harness path."
+    },
+    {
+      "issue": "SIGTERM could leave direct Lean child running and stale RUNNING evidence.",
+      "resolution": "SIGTERM handler raises InterruptedError, triggering subprocess.run direct-child kill/reap and outer failed-evidence handler."
+    }
+  ],
+  "reviewed_guards": [
+    "Exact invocation SHA and known option set; pinned source-only helper/builder loading excludes stale bytecode caches.",
+    "Successful 4406-source exact118 audit, matching source/runtime lock hashes, input-freeze hash, exact114/4 counts, zero exits, exact commands and logs are required.",
+    "Shared nonblocking build lock excludes writers using the builder lock. Fresh helper.freeze equals the exact-audited input snapshot before and after the broad run.",
+    "Broad harness fixed SHA b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61; source and output are separate from candidate/build/exact-audit evidence.",
+    "Command is frozen lean -j1 -DautoImplicit=false -R <external audit parent> <Audit.lean>; no -o, frozen clean environment and clean source cwd. Imports resolve through clean artifact root and pinned external runtime.",
+    "Post-run source, runtime, artifact, Git, exact-audit evidence and broad log hashes are unchanged; broad/private/exported/target marker cardinalities and target names are checked.",
+    "PASS remains supplementary: main_theorem_complete=false and final fresh kernel replay is a separate required gate."
+  ],
+  "remaining_blockers": [],
+  "owner_test_evidence": {
+    "count": 16,
+    "report_sha256": "d2dc27625331caf560ff41eb534421c7988c80311aefd39c89ce9bcb9274cdc3",
+    "scope": "Owner ran lightweight structural fixtures; this review did not launch Lean or rerun a compiler/checker."
+  },
+  "limits": [
+    "Code review is not proof acceptance and does not certify the still-pending execution.",
+    "Input freezing assumes no noncooperating transient writers, as in the already reviewed exact audit helper.",
+    "SIGKILL or machine loss may leave incomplete RUNNING evidence; such evidence cannot become PASS."
+  ]
+}

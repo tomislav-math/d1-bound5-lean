@@ -1,0 +1,42 @@
+{
+  "actions_not_performed": [
+    "No remote mutation",
+    "No move, delete, canonical install, Git/index edit or compiler launch"
+  ],
+  "actions_performed": [
+    "Read local preserved policy, README, inventory and plan",
+    "Verify manifest hashes and operation set/count/hash/path consistency",
+    "Write this independent review only"
+  ],
+  "checked": {
+    "exact_extra_set_and_hashes": true,
+    "explicit_operations": 353,
+    "head": "9b418359968913eb3e73beeee72ffa1ce953c9f1",
+    "index_sha256": "93949b0590bb4a2374076059ae1c70cead388440aea9fa085924a60ea80eda3f",
+    "inventory_file_hashes": 10,
+    "only_root_install_is_separate": true,
+    "preserved_bytes": 7475134,
+    "selected_namespace_matches_frozen": 4405,
+    "tracked_deletions": 0,
+    "unique_destinations_below_owned_research": true
+  },
+  "implementation_requirements": [
+    "Use a genuine atomic no-replace rename primitive; existence-check followed by ordinary overwriting rename is insufficient. The revised plan explicitly requires this.",
+    "Write and flush per-file intent before rename, reconcile source/destination hashes after interruption, and flush completed receipts. Any stronger crash-durability claim additionally requires appropriate file/directory fsync.",
+    "Rollback must also use no-replace semantics and refuse changed archives or recreated original paths.",
+    "Parent must independently confirm the listed candidate gates and review the eventual executor before relocation."
+  ],
+  "inventory_manifest_sha256": "d15c9ace8ef70adad1459acace0acef2c985da06071027053425f11156eaedcc",
+  "plan_sha256": "8d8412630d8f8b724599b89bd3ebfc7d4446d99de432ba40001e4c9d5df85b40",
+  "policy_assessment": [
+    "Preserving untracked trials under research with honest status follows the policy; no tracked work is deleted.",
+    "Snapshot alone does not authorize stale execution: refreshed HEAD/index/source guards and coordinated exclusive canonical writers remain mandatory.",
+    "The plan keeps root installation, manifests, staging and proof acceptance separate; no final verification gate is asserted by this review."
+  ],
+  "policy_sha256": "f9be79625f5ba7387e5165b46cd4d0175c24f64ccc8d9f0bea01f611e3a8652b",
+  "proof_acceptance_claim": false,
+  "reviewer": "graph_batch_a",
+  "schema": 1,
+  "status": "READ_ONLY_PLAN_REVIEW_PASS_CONDITIONAL_ON_EXECUTION_GUARDS",
+  "utc": "2026-10-23T13:41:21.683434+00:00"
+}

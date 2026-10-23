@@ -1,0 +1,31 @@
+{
+  "acceptance_scope": "Source-only proposal validation; not clean compilation or kernel completion",
+  "independent_review_scope": "Exact final script and manifest hashes; quote Char, adjacent custom-notation Char and space Char regression checks; no remaining blocking finding",
+  "independent_reviewer": "graph39",
+  "lexical_repairs": [
+    "Recognize Char literals and official escapes before strings",
+    "Consume identifier apostrophes atomically using official identifier ranges",
+    "Treat escaped identifiers atomically and support zero-hash raw strings",
+    "Recognize only unambiguous spaced standard primed sum/product tokens",
+    "Reject custom notation/syntax/infix/prefix/postfix declarations as unreviewed token-table changes"
+  ],
+  "manifest_equality": "Exact byte equality with independently reviewed final umbrella source manifest",
+  "ordinary_print_axioms": 90,
+  "production_modules": 4406,
+  "production_source_changes": [],
+  "reviewed_benign_findings": 15,
+  "reviewed_policy_manifest_sha256": "d7395bfa8af0914ed2d3cb9a7d298b32754553886c88f2c1dc375ff2857d65dd",
+  "source_changes_during_scan": [],
+  "source_manifest_sha256": "fa84386224dedc9b6a9a4fa76679b7bdaf1250cf1927e0ae59c170bc4eee9550",
+  "source_policy_report_sha256": "46b5b3cdc7a4228a53a05b7e62cb0e549ad212b67282fbd2c0fa4cce97ac8b9b",
+  "source_policy_sha256": "11c2f2406ed479a76d08fac8c228562bb2e9dec8e9de9d0198500d3e91243821",
+  "status": "PASS_PORTABLE_SOURCE_POLICY_PROPOSAL",
+  "supersedes_script_sha256": "cce5c449af39b54c934aa97b06b5ac3eab11880c6a375a6348d86d846b65e447",
+  "test_command": "python -m unittest -q test_source_policy.py",
+  "test_scope": "Disposable non-Lean fixtures; no compiler launched",
+  "test_source_sha256": "b3a505d7bf9609c877395dae6986efa7b8119af2b5ca0af04088f376db13455e",
+  "unittest_cases_passed": 27,
+  "unreviewed_findings": [],
+  "unreviewed_options": [],
+  "utc": "2026-10-23T13:09:09.431637+00:00"
+}

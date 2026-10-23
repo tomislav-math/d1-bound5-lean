@@ -1,0 +1,29 @@
+{
+  "command": [
+    "<frozen clean lean executable>",
+    "-j1",
+    "-DautoImplicit=false",
+    "-R",
+    "/workspace/scratch/fed64f41ca78/lean-offload/repository-verification-proposal/scripts",
+    "/workspace/scratch/fed64f41ca78/lean-offload/repository-verification-proposal/scripts/Audit.lean"
+  ],
+  "cwd": "<immutable clean checkout>",
+  "environment": "Exact clean118-audit INPUT_FREEZE.json environment, not inherited shell environment",
+  "guards": [
+    "harness SHA before and after",
+    "full source/runtime/artifact/receipt freeze before and after",
+    "clean checkout Git commit/tree and blob identities unchanged"
+  ],
+  "harness": "/workspace/scratch/fed64f41ca78/lean-offload/repository-verification-proposal/scripts/Audit.lean",
+  "harness_sha256": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61",
+  "output_artifacts": "None; omit -o and preserve stdout/stderr log outside checkout",
+  "pinned_shell_reason": "Lean.Util.Path.moduleNameOfFileName uses -R for the input module name; this -R is the harness actual parent while frozen LEAN_PATH still imports only clean project artifacts.",
+  "required_success": {
+    "AXIOM_AUDIT_PASS:": 1,
+    "BROAD_PROJECT_AXIOM_AUDIT_PASS": 1,
+    "FINAL_TARGET_AXIOMS_PASS": 4,
+    "exit_code": 0
+  },
+  "scope": "Separate broad compatibility gate; not an end-to-end execution of newly proposed check.sh",
+  "status": "RECIPE_ONLY_BROAD_AUDIT_NOT_EXECUTED"
+}

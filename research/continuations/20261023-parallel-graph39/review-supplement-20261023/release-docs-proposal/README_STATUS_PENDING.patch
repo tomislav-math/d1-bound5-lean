@@ -1,0 +1,123 @@
+--- a/README.md
++++ b/README.md
+@@ -18,41 +18,61 @@
+ The dated reading copy differs from the verified v4 manuscript only by its
+ displayed date. The numerical supplement includes the available current and
+ historical implementations, with their original evidence and clearly stated
+-reproduction requirements. The Lean formalization below remains incomplete.
++reproduction requirements. The Lean theorem is assembled; its final acceptance
++gates remain pending, as recorded below and in `STATUS.md`.
+ The repository is private; no public release or licence has been selected.
+ 
+ ## Lean 4 formalization
+ 
+-Private, in-progress Lean 4/mathlib formalization of the main theorem of
++Private Lean 4/mathlib formalization of the main theorem of
+ *A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*, v4.
+ 
+-**The main theorem has not been proved in this project.** `D1Bound5.MainStatement`
+-is its specification as a proposition, not an asserted theorem. No public
++`D1Bound5.main_statement : D1Bound5.MainStatement` is assembled in
++`D1Bound5/MainTheorem.lean`. It states the uniform upper bound `A.card ≤ 5`.
++**Final verification is pending:** the clean source build, the 118 exact
++statement/axiom checks, the separate broad compatibility audit, and the
++full-root fresh kernel replay must all be tied to the same reviewed snapshot.
++See `STATUS.md` for individual gate results and evidence references. No public
+ license or release has been selected.
+ 
+ The target quantifies over every degree-two totally complex number field and
+ its **full ring of integers**. Entries are distinct and nonzero. A value
+ `x*y+1` and its square root may be zero. Equal absolute values are permitted.
+ 
+-## Reproduce the current proof modules
++## Reproduce the formal verification
+ 
+ Pinned Lean: `leanprover/lean4:v4.33.1`.
+ Pinned mathlib: `0df444a360eaa60ab8c11dca51a86af692955474`.
+ The complete dependency revisions are in `lake-manifest.json`.
+ 
+-With elan and Python 3 available, run from a clean checkout:
++Follow [the verification instructions](scripts/verification/README.md) to
++prepare a clean committed checkout, an immutable public Lean/mathlib cache,
++and reviewed source/runtime locks. Keep the initially empty project build and
++evidence directories outside the source checkout. From that checkout, run:
+ 
+ ```sh
+-bash scripts/fetch_cache.sh
+-bash scripts/check.sh --replay
++D1_WORK=/absolute/path/to/new-verification-work
++D1_SOURCE_SHA=reviewed_source_lock_sha256
++D1_RUNTIME_SHA=reviewed_runtime_lock_sha256
++bash scripts/check.sh \
++  --source-lock "$D1_WORK/source-lock.json" --source-lock-sha256 "$D1_SOURCE_SHA" \
++  --runtime-lock "$D1_WORK/runtime-lock.json" --runtime-lock-sha256 "$D1_RUNTIME_SHA" \
++  --build-dir "$D1_WORK/build" --evidence-dir "$D1_WORK/evidence-001" \
++  --jobs 4 --hints scripts/verification/resource_hints.json --replay
+ ```
+ 
+-The script builds, scans proof sources, audits transitive axiom dependencies,
+-and replays project modules through the bundled Lean kernel checker. The
+-checker uses the same Lean kernel; it is not an independent external verifier.
+-The accepted axiom baseline is `propext`, `Classical.choice`, `Quot.sound`.
+-No private manuscript, old project, certificate service, or API key is needed
+-to build the proof modules currently committed here.
++The complete wrapper gate checks source policy, compiles all 4406 project
++modules from an empty project artifact tree, checks 114 original declaration
++types and transitive axioms plus four independent target checks, and runs
++`leanchecker --verbose --fresh D1Bound5`. `COMPLETE_VERIFICATION_PASS` with
++exit 0 records these combined checks. Without `--replay`, exit 3 means that
++fresh replay is still pending. The broad compatibility audit has its own
++separate result and must also be recorded for this project's final acceptance.
++
++The checker uses the installed Lean kernel. The accepted axiom baseline is
++`propext`, `Classical.choice`, `Quot.sound`. No private manuscript, historical
++D1Bound5 build artifact, certificate service, or API key is required. Resource
++requirements and the safe resume procedure are described in the full guide.
+ 
+ The manual-only GitHub workflow is prepared but is not automatically triggered
+ by commits. It requires prior confirmation of an existing free Actions
+--- a/STATUS.md
++++ b/STATUS.md
+@@ -1,4 +1,42 @@
+ # Status
++
++## 23 October 2026 — final theorem assembled; acceptance gates pending
++
++The candidate contains `D1Bound5.main_statement : D1Bound5.MainStatement` in
++`D1Bound5/MainTheorem.lean`, and the canonical `D1Bound5` root includes its
++complete reviewed closure. The statement quantifies over every degree-two
++totally complex number field `K` and every finite set of nonzero elements of
++its full ring of integers `𝓞 K`. If `x*y+1` is a square in `𝓞 K` for every
++distinct pair, then the set has at most five elements. Zero square values and
++roots, tied absolute values, and half-integral bases remain included.
++
++**This entry does not declare the final formalization accepted.** Replace each
++pending item below only with the actual result and a hash-bound evidence
++reference for the same final source/runtime/artifact snapshot.
++
++| Final gate | Status | Evidence reference |
++|---|---|---|
++| Final source policy, exact production/configuration manifest and root closure | PENDING final snapshot reconciliation | PENDING receipt |
++| Clean build of all 4406 project modules from an initially empty project artifact tree | PENDING completion | PENDING receipt |
++| 114 original type/transitive-axiom checks and four independent target checks | PENDING | PENDING receipt |
++| Preserved broad compatibility audit, including private project declarations | PENDING | PENDING receipt |
++| Official installed-kernel `leanchecker --verbose --fresh D1Bound5` | PENDING | PENDING receipt |
++
++Final source commit/tree: PENDING. Final source-lock SHA256: PENDING.
++Final verification summary and log manifest: PENDING. The permitted transitive
++axioms are `propext`, `Classical.choice`, and `Quot.sound`.
++
++The reproducible entrypoint and public dependency preparation are documented
++in `README.md` and `scripts/verification/README.md`. The wrapper's success
++covers source/build/exact-audit/fresh-replay checks; the broad compatibility
++result remains separately recorded. Failed, interrupted, or timed-out attempts
++remain in the evidence and do not count as successful gates.
++
++The entries below retain their historical scopes and results. Their earlier
++statements about unassembled branches, stopped work, or smaller module counts
++are historical; they do not describe the current candidate or certify its
++pending final gates.
++
+ 
+ ## 19 October 2026 — unit-pair field range and 33 Pell prefixes verified
+ 

@@ -1,0 +1,53 @@
+{
+  "candidate_policy_context": "Existing independent candidate policy receipt binds commit 102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2. Its production files contain no plain or escaped double-quote Char literal spelling, so the found lexical edge case does not alter that exact historical hash-bound source result.",
+  "conditions": [
+    "Final package must contain these exact reviewed helper/policy copies and final committed tool manifest.",
+    "Actual clean source build, immutable target/axiom audits and successful official fresh root replay remain required for theorem acceptance."
+  ],
+  "owner_full_source_policy_evidence": {
+    "copied_as": "OWNER_FULL_SOURCE_POLICY_REPORT.json",
+    "owner_reported_noncompiler_fixture_tests": 27,
+    "production_modules": 4406,
+    "reviewed_source_manifest_sha256": "fa84386224dedc9b6a9a4fa76679b7bdaf1250cf1927e0ae59c170bc4eee9550",
+    "sha256": "46b5b3cdc7a4228a53a05b7e62cb0e549ad212b67282fbd2c0fa4cce97ac8b9b",
+    "source": "lean-offload/source-policy-candidate-validation-final-reviewed/SOURCE_POLICY_REPORT.json",
+    "status": "SOURCE_POLICY_PASS_SOURCE_ONLY"
+  },
+  "remaining_blocking_findings": [],
+  "resolved_findings": [
+    {
+      "finding": "Separate exact-type/axiom and fresh-kernel phases could check different coherent artifact snapshots.",
+      "fix": "Hash-check the audit INPUT_FREEZE.json against audit SUMMARY and require a freshly reconstructed input freeze to equal it under the shared build lock before either pending or replay acceptance; post-replay freeze equality remains."
+    },
+    {
+      "finding": "SourceFileLoader can execute timestamp/size-valid stale bytecode despite verified .py source and dont_write_bytecode.",
+      "fix": "Wrapper and audit helper compile the already verified source bytes into ModuleType namespaces, with pre/post hashes; bytecode cache is not an input.",
+      "fixture": "A disposable Python-only fixture with source VALUE=2 and valid old cache VALUE=1 executed 1 under the old loader."
+    },
+    {
+      "finding": "Double-quote Char literals could be mistaken for string boundaries and hide an intervening #eval from source policy.",
+      "fix": "Lexer treats Char literals, escaped identifiers, identifier primes and raw strings according to reviewed official Lean parser rules. The standard spaced Mathlib sum/product prime branch excludes valid one-character literal layouts. New notation/syntax/infix/prefix/postfix declarations require review.",
+      "fixture": "Independent in-memory tests now retain #eval for plain quote Char, custom sum notation adjacent quote Char, and custom sum notation space Char. Custom notation itself is flagged."
+    }
+  ],
+  "reviewed_files_sha256": {
+    "check.py": "5efbb2a45a37d5272607863986f524891db71fefff64b23c66877a1b56f2eca0",
+    "clean_final_audits.py": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87",
+    "reviewed_source_policy.json": "d7395bfa8af0914ed2d3cb9a7d298b32754553886c88f2c1dc375ff2857d65dd",
+    "source_policy.py": "11c2f2406ed479a76d08fac8c228562bb2e9dec8e9de9d0198500d3e91243821"
+  },
+  "source_policy_review": [
+    "Only exact standard Omega imports have finding exceptions; whole source hashes and occurrence identities are required.",
+    "Only seven exact source-hash-pinned codegen occurrences are exceptions; resource options use exact reviewed safe name/value pairs.",
+    "Unresolved findings/options/errors/source changes/missing imports/cycles/unreachable production sources cause failure.",
+    "Review manifest has no private absolute input paths. Exact global source bytes are bound by the repository wrapper release manifest/source lock, separately from lexical policy."
+  ],
+  "status": "PASS_INDEPENDENT_PORTABLE_GATE_CODE_REVIEW_NO_LEAN_EXECUTION",
+  "utc": "2026-10-23T13:09:54.795174+00:00",
+  "wrapper_review": [
+    "Commit-selected production and required tool/config bytes are checked.",
+    "No --replay yields explicit pending status and exit 3.",
+    "With replay the exact command is installed leanchecker --verbose --fresh D1Bound5, with exact replay scope banner and input equality required.",
+    "Compiler, target-axiom and installed-kernel results retain separate statuses."
+  ]
+}

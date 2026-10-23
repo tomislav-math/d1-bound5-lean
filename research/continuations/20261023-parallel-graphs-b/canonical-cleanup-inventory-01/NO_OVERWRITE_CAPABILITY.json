@@ -1,0 +1,14 @@
+{
+  "execution_claim": false,
+  "filesystem_operations_performed": false,
+  "header": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h",
+  "header_declarations": [
+    "#define RENAME_EXCL 0x00000004",
+    "int renamex_np(const char *, const char *, unsigned int);",
+    "int renameatx_np(int, const char *, int, const char *, unsigned int);"
+  ],
+  "proposed_backend": "A future reviewed Darwin executor can use renamex_np(source,destination,RENAME_EXCL), check errno/return value and retain all plan guards. No fallback to overwriting rename.",
+  "renameatx_np_symbol_available": true,
+  "renamex_np_symbol_available": true,
+  "status": "READ_ONLY_SYMBOL_AND_SDK_HEADER_INSPECTION"
+}

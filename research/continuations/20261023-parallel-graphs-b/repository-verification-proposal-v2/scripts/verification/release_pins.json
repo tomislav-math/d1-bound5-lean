@@ -1,0 +1,50 @@
+{
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "configuration_sha256": {
+    "lake-manifest.json": "7ba6f92faaef8900c85a20ac695495111285a1b0c355cb1441a69b34ba9500f4",
+    "lakefile.lean": "fa17c8e0e386fe8ffadcab88a9a328337c3db37cc7d64681e7ca26836c73bfb3",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  },
+  "exact_declaration_audit_count": 114,
+  "expected_project_modules": 4406,
+  "historical_audit": "records/verification-history/20261023/Audit.before.lean",
+  "independent_target_axiom_check_count": 4,
+  "lean_toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "namespace": "D1Bound5",
+  "official_fresh_replay": {
+    "LEAN_NUM_THREADS": "0",
+    "flags": [
+      "--verbose",
+      "--fresh"
+    ],
+    "module": "D1Bound5"
+  },
+  "release": "full-ring D(1) upper bound 5",
+  "required_tools": [
+    "scripts/Audit.lean",
+    "scripts/check.sh",
+    "scripts/fresh_project_build.py",
+    "scripts/source_audit.py",
+    "scripts/verification/FinalIntegrationAudit.lean",
+    "scripts/verification/FinalTargetAudit.lean",
+    "scripts/verification/README.md",
+    "scripts/verification/check.py",
+    "scripts/verification/clean_final_audits.py",
+    "scripts/verification/prepare_manifests.py",
+    "scripts/verification/resource_hints.json",
+    "scripts/verification/reviewed_source_policy.json",
+    "scripts/verification/source_policy.py",
+    "scripts/verification/test_check.py",
+    "scripts/verification/test_prepare_manifests.py",
+    "scripts/verification/test_source_policy.py"
+  ],
+  "roots": [
+    "D1Bound5"
+  ],
+  "schema": 1
+}

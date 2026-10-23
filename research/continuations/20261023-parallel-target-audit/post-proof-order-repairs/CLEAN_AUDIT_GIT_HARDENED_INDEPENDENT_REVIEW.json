@@ -1,0 +1,55 @@
+{
+  "builder_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+  "limitations": [
+    "Independent source/delta review and inspection of recorded 22 tests; no compiler or test rerun by this reviewer",
+    "Valid only for the exact recorded hashes",
+    "Clean source build, immutable audits and fresh kernel gate remain separate execution requirements"
+  ],
+  "prior_runner_sha256": "fad9fe1f7ddffa8a303b00fb48bc85735784ad1c5afe69b46c20027aab3a044c",
+  "production_source_changes": [],
+  "reviewed_changes": [
+    "Require exact expected Git commit and tree identities before and after audits",
+    "Require exact Git checkout root and clean tracked/untracked status",
+    "Hash actual selected production/auxiliary/harness file bytes as Git blobs, defeating assume-unchanged omissions",
+    "Require selected regular committed files and reject path/symlink escapes",
+    "Execute exact hash-pinned builder source bytes through compile/exec; ignore pre-existing Python bytecode cache",
+    "Disable bytecode writes so audit imports do not dirty checkout",
+    "Preserve prior complete fresh-build receipt, runtime, environment, immutable harness and no-artifact-output guards"
+  ],
+  "reviewer": "audit_target",
+  "runner_sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87",
+  "status": "PASS_INDEPENDENT_DELTA_SOURCE_REVIEW",
+  "test_report_reviewed": {
+    "runner_sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87",
+    "scope": "Disposable structural fixtures plus read-only real smoke receipts; no Lean/checker launched",
+    "status": "PASS",
+    "tests": [
+      "complete_fixture_chain",
+      "failed_compiler_receipt",
+      "foreign_origin",
+      "stale_source_receipt",
+      "missing_dependency_receipt",
+      "wrong_dependency_chain",
+      "changed_artifact",
+      "extra_artifact",
+      "unexpected_compiler",
+      "changed_log",
+      "unfinished_summary",
+      "unaccounted_module",
+      "nonempty_origin",
+      "artifact_symlink_escape",
+      "real_three_module_source_build_receipts_read_only",
+      "git_exact_committed_blob",
+      "git_wrong_commit",
+      "git_wrong_tree",
+      "git_untracked_file",
+      "git_hidden_modified_blob",
+      "real_clean_candidate_git_read_only",
+      "timestamp_valid_stale_pyc_is_ignored"
+    ],
+    "tests_sha256": "665e2465e949d6da7e2f95d8e3db9dd54e7917703c34202ffcfb04b7c3b3d6bf"
+  },
+  "test_report_sha256": "984bd727deb3fceceef36ca6cbdb45039ee1af805f1de061ca06826c03949331",
+  "tests_sha256": "665e2465e949d6da7e2f95d8e3db9dd54e7917703c34202ffcfb04b7c3b3d6bf",
+  "utc": "2026-10-23T12:59:06.862418+00:00"
+}
