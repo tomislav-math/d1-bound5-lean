@@ -55,3 +55,15 @@ Graph39 RIGHT pilot recovery now PASS: four 114-row noncomputable cached-data de
 Latest checked archive: 20261023-economical-graph39-right-pilot12-v4. graph39 RIGHT heads 0..11, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-right000. graph39 RIGHT heads 0..97, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-right001. graph39 RIGHT heads 98..235, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 7 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-right002. graph39 RIGHT heads 236..455, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 11 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
