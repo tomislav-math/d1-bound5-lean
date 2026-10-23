@@ -51,3 +51,7 @@ Graph5 RightCached compiler recovery: a 240s timeout was resolved with `set_opti
 are unchanged. Guarded build, exact-type/transitive-axiom audit and installed-kernel replay passed in
 20261023-economical-graph5-right-pilot12-v2; the failed attempt is archived. Consider this compiler-only
 adaptation for future large data modules when needed; reuse existing matching PASS artifacts without recompilation.
+
+Latest checked archive: 20261023-economical-graph5-right000. graph5 RIGHT heads 0..105, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
+Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
