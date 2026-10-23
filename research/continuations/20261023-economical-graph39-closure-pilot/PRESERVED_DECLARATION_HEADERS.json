@@ -1,0 +1,21 @@
+{
+  "SmallPairGraphClosure39Chunk00": [
+    "theorem indexed_chunk00_checked :\n    pairIndexedWitnessesPrefixBool smallPairA_39 smallPairB_39 anchorRoot\n      (10^1100) smallPairClosure_39 64\n      (witnesses.drop 0) (destinations.drop 0) = true "
+  ],
+  "SmallPairGraphClosure39Coverage": [
+    "theorem indexed_coverage_checked :\n    decide (anchorRoot * anchorRoot = smallPairA_39 * smallPairB_39 + 1 \u2227\n      witnesses.map PairRootWitness.vertex = smallPairClosure_39) = true "
+  ],
+  "SmallPairGraphInputs39": [
+    "def smallPairA_39 : QuadInt 1 2 ",
+    "def smallPairB_39 : QuadInt 1 2 ",
+    "def smallPairClosure_39 : List (QuadInt 1 2) ",
+    "def smallPairLarge_39 : List (QuadInt 1 2) ",
+    "def colors : \u2115 "
+  ],
+  "SmallPairGraphWitnessData39": [
+    "def anchorRoot : QuadInt 1 2 ",
+    "def rootPairs : List (QuadInt 1 2 \u00d7 QuadInt 1 2) ",
+    "def witnesses : List (PairRootWitness 1 2) ",
+    "def destinations : List (Option \u2115 \u00d7 Option \u2115) "
+  ]
+}

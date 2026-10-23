@@ -67,3 +67,11 @@ Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. M
 Latest checked archive: 20261023-economical-graph39-right002. graph39 RIGHT heads 236..455, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 11 targeted installed-kernel replays passed.
 Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-parent-integration. graph39 both complete light-side certificates, six original parent theorem headers preserved.
+Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-closure-pilot. graph39 closure witness rows 0..63 over all 915 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
