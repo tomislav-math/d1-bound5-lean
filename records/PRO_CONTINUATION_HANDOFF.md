@@ -29,3 +29,7 @@ prompt and is PAUSED BY THE USER; do not resume or edit it without direction.
 Graph19 Cached data modules use `set_option compiler.extract_closed false` based on verified Graph5 recovery.
 Original declaration header and literal body bytes are unchanged; guarded build, exact-type/axiom audit and
 installed-kernel replay passed. No Graph19 timeout is claimed; the original model is (tau,nu)=(1,1). Reuse existing matching PASS artifacts.
+
+Latest checked archive: 20261023-economical-graph24-left-pilot12. graph24 LEFT heads 0..11, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
