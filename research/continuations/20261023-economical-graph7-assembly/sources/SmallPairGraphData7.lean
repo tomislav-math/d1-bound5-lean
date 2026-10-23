@@ -1,0 +1,3 @@
+import D1Bound5.SmallPairGraphArithmetic7
+import D1Bound5.SmallPairGraphClosure7
+import D1Bound5.SmallPairGraphTriangle7
