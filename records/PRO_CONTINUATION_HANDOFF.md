@@ -41,3 +41,13 @@ Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. Ma
 Latest checked archive: 20261023-economical-graph5-left002. graph5 LEFT heads 269..430, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
 Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph5-right-pilot12-v2. graph5 RIGHT heads 0..11, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 5 targeted installed-kernel replays passed.
+Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
+
+Graph5 RightCached compiler recovery: a 240s timeout was resolved with `set_option compiler.extract_closed false`
+(disables installed compiler closed-term caching). The complete original declaration header and literal body bytes
+are unchanged. Guarded build, exact-type/transitive-axiom audit and installed-kernel replay passed in
+20261023-economical-graph5-right-pilot12-v2; the failed attempt is archived. Consider this compiler-only
+adaptation for future large data modules when needed; reuse existing matching PASS artifacts without recompilation.
