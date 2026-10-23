@@ -1,0 +1,307 @@
+{
+  "acceptance_scope": "Source policy only; not proof completion.",
+  "namespace": "D1Bound5",
+  "ordinary_print_axioms": "Permitted as an observational command, recorded separately. It does not declare an axiom.",
+  "rationale": {
+    "BENIGN_CODE_GENERATION_OPTION": "compiler.extract_closed=false disables closed-term extraction/caching. It does not bypass kernel type checking. Restricted to seven exact reviewed source occurrences.",
+    "BENIGN_STANDARD_TACTIC_IMPORT": "Exact ordinary import of the standard Lean Omega tactic module; no project metaprogramming body. Module source hash and precise occurrence must match.",
+    "EXPLICIT_IMPLICIT_PARAMETER_POLICY": "autoImplicit=false disables automatically introduced implicit parameters.",
+    "RESOURCE_LIMIT_ONLY": "Natural-number elaboration heartbeat/recursion limits observed in reviewed sources; these do not weaken proof validity. Only exact reviewed name/value pairs are accepted."
+  },
+  "reviewed_codegen_options": [
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData5RightCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "174a4812ed2fbfeb4d23516569052ae7073577cc3c2257f28007b293d6951974",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData7LeftCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "1e7dad5fe4ece8306d275bd65e86742048e1b79138665c484b1a303b88515d8f",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData7RightCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "890910120eb7f5b60dbb62195cc2ea5911cdb4e4de729325cb1bb690fda0b803",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData19LeftCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "54f65cb170b1a717efe70c45dd4225d31ba01dd05f2bc5d5cdf530f10fa7c465",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData19RightCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "93a39c05c9137d84562ea2f7ec5428f2f4c1771248025ece5e808770aa01a52f",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData24LeftCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "ac6d1d8851ba790027cf4e0c1f8fd0170367d364294aebda7edef31e4840c5c7",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData24RightCached",
+      "name": "compiler.extract_closed",
+      "source_sha256": "30130ab86b138093e7a29ce3e1bfdd0a681aa2f3587c5a1dbafa7431325760d8",
+      "value": "false"
+    }
+  ],
+  "reviewed_findings": [
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 3,
+      "module": "D1Bound5.BennettResidueCoefficient",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "8c207032d119b0629e3cee3a36cfe0f7dd94d73784c8b28b8cba78efa262f829",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.BennettFirstOrder",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "4664fa466c459928f5c91a9d33b2ed5293a525ebaff57c8ca43c89a6c3955693",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 4,
+      "module": "D1Bound5.MainCaseReduction",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "94580cd4f5977bc9f503aba3da8004380cecfe272766c2d856a70706a14c5d2b",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.BennettClearedResidues",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "ec76df5d4e2c4d6b07d0919f3d7f1eca9b85a57c220d930e6ae87c93827d8f29",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 3,
+      "module": "D1Bound5.BennettChooseNonzero",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "242284e834a07d1f10f92c6ff0dc397a65048f9ca805d58c05766b00a9bc4ab5",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.BennettResidualMajorant",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "b75484763e5bdb67dae9e19c0cad718baf723c8291fc2f17c55a13171ba3db40",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.BennettTwoCoefficientConstants",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "034cf7aa6d3e853901a9f7bd5f2be74a2cd9af0c2f34f1de6a52a0f80541821b",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.BennettResidualEvaluation",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "d030bc1b298c007855437a873b058dcac35949cc3daa110cf555bdf87d4fd831",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 6,
+      "module": "D1Bound5.BennettChooseGamma",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "ed364c7393e2791f97fcc92aa240c1e9f11c109de4d2306c76becc3f16ded4f0",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.BennettTwoBetaBound",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "6be0ec4b4373f2704cbfdc6beb52a3796d8063f1c67fa2c91242af5752323182",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 6,
+      "module": "D1Bound5.FiniteHomogeneousTwo",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "0f528bdfa4bbe6e6461cbf40c954a5b8c6a03faf9be9e291dd140696bc0e3dfa",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.FiniteMHeight",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "6928941a5a34ad2fa5a5df87a96078a75cfb91e880665ed0fbfc978d07ef85b6",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 4,
+      "module": "D1Bound5.FinitePHeight",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "314dc2ce401e7d406d8613d27c9a6ab48d94b1783ab8ee80b2eda5b7bee22fae",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 4,
+      "module": "D1Bound5.FinitePMonomial",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "2cdd205c10074edc08dfd393515a0eb70dfdf8436260ab250c4bad687559c5be",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.UnitPairAxes",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "source_sha256": "962949e26b960ded71475c07a864292143df862dfb3852bf3e50c4c82e49d4cf",
+      "token": "Elab"
+    }
+  ],
+  "reviewed_resource_options": [
+    {
+      "disposition": "EXPLICIT_IMPLICIT_PARAMETER_POLICY",
+      "name": "autoImplicit",
+      "observed_count": 1256,
+      "value": "false"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 3367,
+      "value": "0"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 1,
+      "value": "1000000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 1,
+      "value": "100000000"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 176,
+      "value": "12000000"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 9,
+      "value": "12000000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 4,
+      "value": "2000000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 9,
+      "value": "4000000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 6,
+      "value": "6000000"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 1,
+      "value": "6000000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 1,
+      "value": "800000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 12,
+      "value": "8000000"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxHeartbeats",
+      "observed_count": 1,
+      "value": "8000000 in"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxRecDepth",
+      "observed_count": 3626,
+      "value": "100000"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxRecDepth",
+      "observed_count": 194,
+      "value": "32768"
+    },
+    {
+      "disposition": "RESOURCE_LIMIT_ONLY",
+      "name": "maxRecDepth",
+      "observed_count": 2,
+      "value": "4096 in"
+    }
+  ],
+  "reviewed_source_manifest_sha256": "fa84386224dedc9b6a9a4fa76679b7bdaf1250cf1927e0ae59c170bc4eee9550",
+  "schema": 1,
+  "scope": "Explicit dispositions from the independently reviewed final production source inventory. This manifest cannot authorize custom axioms, execution escapes or kernel/trust overrides."
+}

@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "started_at": "2026-10-23T23:52:30Z",
+  "authorization": "User requested broken source link fixes; delegated by root. Exactly two source-only changes, no formal declarations, proof status, visibility, or other metadata edits.",
+  "official_update_documentation": "https://github.com/prove2me/prove2me_workspace/blob/main/references/contribute.md",
+  "patches": [
+    {
+      "id": "c45f56c0-f653-4ec2-94e5-d0eeda056120",
+      "method": "PATCH",
+      "endpoint": "/theorems/c45f56c0-f653-4ec2-94e5-d0eeda056120",
+      "before": {
+        "definition_id": "c45f56c0-f653-4ec2-94e5-d0eeda056120",
+        "definition_name": "D1Bound5_IsD1",
+        "definition_title": "$D(1)$-sets in a commutative ring",
+        "natural_language_statement": "Let $R$ be a commutative ring with identity and let $A$ be a finite subset of $R$. The set $A$ has property $D(1)$ if every element of $A$ is nonzero and\n$$\n\\forall a,b\\in A,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in R,\\quad r^2=ab+1.\n$$\nZero is allowed as a square value. This predicate gives the finite-set formulation of a Diophantine tuple.",
+        "created_at": "2026-10-23T15:04:11.236222+00:00",
+        "vote_count": 0,
+        "tags": [
+          "d1bound5",
+          "diophantine-tuples",
+          "number-theory"
+        ],
+        "definition": "import Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Algebra.Ring.Basic\n\nset_option autoImplicit false\n\nnamespace D1Bound5\n\n/-- Distinct nonzero entries; zero is permitted as a square value. -/\ndef IsD1 {R : Type*} [CommRing R] (A : Finset R) : Prop :=\n  (∀ x ∈ A, x ≠ 0) ∧\n  ∀ x ∈ A, ∀ y ∈ A, x ≠ y → ∃ r : R, r * r = x * y + 1\n\n\n\n\n\n\n\n\n\n\nend D1Bound5\n",
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Basic.lean#L7-L10; mathematical definition in Section 1 of Franušić and Pejković, A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings (2026), https://github.com/tomislav-math/diophantine-tuples-bound-five",
+        "deprecated_at": null,
+        "deprecated_by": null,
+        "visibility": "private",
+        "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "audits": [],
+        "readback": null
+      },
+      "before_sha256": "cab65c39c445edc115f3cdc7d03a1d7fc1e5b40f3df9739aef0728e7bfb77244",
+      "request": {
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Basic.lean#L7-L10"
+      },
+      "request_sha256": "fb7ddec282c10dac71e9ec101491e0385ace4ded483eec30f10f9e4b6430234d",
+      "started_at": "2026-10-23T23:52:30Z",
+      "status": "VERIFIED",
+      "response": {
+        "theorem_id": "c45f56c0-f653-4ec2-94e5-d0eeda056120",
+        "theorem_name": "D1Bound5_IsD1",
+        "theorem_title": "$D(1)$-sets in a commutative ring",
+        "status": "Definition",
+        "formal_statement": "",
+        "natural_language_statement": "Let $R$ be a commutative ring with identity and let $A$ be a finite subset of $R$. The set $A$ has property $D(1)$ if every element of $A$ is nonzero and\n$$\n\\forall a,b\\in A,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in R,\\quad r^2=ab+1.\n$$\nZero is allowed as a square value. This predicate gives the finite-set formulation of a Diophantine tuple.",
+        "created_at": "2026-10-23T15:04:11.236222+00:00",
+        "vote_count": 0,
+        "tags": [
+          "d1bound5",
+          "diophantine-tuples",
+          "number-theory"
+        ],
+        "definition": "import Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Algebra.Ring.Basic\n\nset_option autoImplicit false\n\nnamespace D1Bound5\n\n/-- Distinct nonzero entries; zero is permitted as a square value. -/\ndef IsD1 {R : Type*} [CommRing R] (A : Finset R) : Prop :=\n  (∀ x ∈ A, x ≠ 0) ∧\n  ∀ x ∈ A, ∀ y ∈ A, x ≠ y → ∃ r : R, r * r = x * y + 1\n\n\n\n\n\n\n\n\n\n\nend D1Bound5\n",
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Basic.lean#L7-L10",
+        "deprecated_at": null,
+        "deprecated_by": null
+      },
+      "response_sha256": "dd00950e85993ce5ccca54e23160eff276ff2a8ff3c23a2690e5a1153e6503b9",
+      "after": {
+        "definition_id": "c45f56c0-f653-4ec2-94e5-d0eeda056120",
+        "definition_name": "D1Bound5_IsD1",
+        "definition_title": "$D(1)$-sets in a commutative ring",
+        "natural_language_statement": "Let $R$ be a commutative ring with identity and let $A$ be a finite subset of $R$. The set $A$ has property $D(1)$ if every element of $A$ is nonzero and\n$$\n\\forall a,b\\in A,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in R,\\quad r^2=ab+1.\n$$\nZero is allowed as a square value. This predicate gives the finite-set formulation of a Diophantine tuple.",
+        "created_at": "2026-10-23T15:04:11.236222+00:00",
+        "vote_count": 0,
+        "tags": [
+          "d1bound5",
+          "diophantine-tuples",
+          "number-theory"
+        ],
+        "definition": "import Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Algebra.Ring.Basic\n\nset_option autoImplicit false\n\nnamespace D1Bound5\n\n/-- Distinct nonzero entries; zero is permitted as a square value. -/\ndef IsD1 {R : Type*} [CommRing R] (A : Finset R) : Prop :=\n  (∀ x ∈ A, x ≠ 0) ∧\n  ∀ x ∈ A, ∀ y ∈ A, x ≠ y → ∃ r : R, r * r = x * y + 1\n\n\n\n\n\n\n\n\n\n\nend D1Bound5\n",
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Basic.lean#L7-L10",
+        "deprecated_at": null,
+        "deprecated_by": null,
+        "visibility": "private",
+        "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "audits": [],
+        "readback": null
+      },
+      "after_sha256": "0ae34f1c61a6aaa35eb5e1d61bb2611413719a7ac896cb4a4591135f51e7e3ee",
+      "changed_keys": [
+        "source"
+      ],
+      "source_is_exact_pure_url": true,
+      "all_non_source_fields_unchanged": true,
+      "completed_at": "2026-10-23T23:52:31Z"
+    },
+    {
+      "id": "ffbfc684-901b-4e85-94ab-70088a3a9525",
+      "method": "PATCH",
+      "endpoint": "/theorems/ffbfc684-901b-4e85-94ab-70088a3a9525",
+      "before": {
+        "definition_id": "ffbfc684-901b-4e85-94ab-70088a3a9525",
+        "definition_name": "D1Bound5_MainStatement",
+        "definition_title": "Uniform bound of five in imaginary quadratic integer rings",
+        "natural_language_statement": "The proposition that, for every imaginary quadratic number field $K$ and every finite $D(1)$-set $A$ in its full ring of integers $\\mathcal O_K$,\n$$\n|A|\\le 5.\n$$\nHere $K$ is a number field of degree two over $\\mathbb Q$ with no real embedding. The $D(1)$ condition requires nonzero entries and, for each pair of distinct entries $a,b$, a square root of $ab+1$ in $\\mathcal O_K$. This definition names the proposition asserted by the main theorem.",
+        "created_at": "2026-10-23T15:04:23.792985+00:00",
+        "vote_count": 0,
+        "tags": [
+          "d1bound5",
+          "diophantine-tuples",
+          "number-theory"
+        ],
+        "definition": "import Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Algebra.Ring.Basic\nimport Definitions.Def_D1Bound5_IsD1\nimport Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex\n\nopen scoped NumberField\n\nuniverse u\n\nset_option autoImplicit false\n\nnamespace D1Bound5\n\n/-- The requested theorem as a proposition, not an asserted theorem.\n`RingOfIntegers` is mathlib's full integral closure of the integers.\nDegree two and totally complex specify an imaginary quadratic number field. -/\ndef MainStatement : Prop :=\n  ∀ (K : Type u) [Field K] [NumberField K] [NumberField.IsTotallyComplex K],\n    Module.finrank ℚ K = 2 →\n    ∀ A : Finset (𝓞 K), IsD1 A → A.card ≤ 5\n\n\n\n\n\nend D1Bound5\n",
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Specification.lean#L10-L16; Theorem 1.1 of Franušić and Pejković, A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings (2026), https://github.com/tomislav-math/diophantine-tuples-bound-five",
+        "deprecated_at": null,
+        "deprecated_by": null,
+        "visibility": "private",
+        "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "audits": [],
+        "readback": null
+      },
+      "before_sha256": "c9f047e416385b310cd80d96d226485611ff7a1497d56f03d9e1e28df759e70f",
+      "request": {
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Specification.lean#L10-L16"
+      },
+      "request_sha256": "01ed94e0de76cf51333f637ca0665b8731779d171c32dd266ca63703bb6c49b4",
+      "started_at": "2026-10-23T23:52:32Z",
+      "status": "VERIFIED",
+      "response": {
+        "theorem_id": "ffbfc684-901b-4e85-94ab-70088a3a9525",
+        "theorem_name": "D1Bound5_MainStatement",
+        "theorem_title": "Uniform bound of five in imaginary quadratic integer rings",
+        "status": "Definition",
+        "formal_statement": "",
+        "natural_language_statement": "The proposition that, for every imaginary quadratic number field $K$ and every finite $D(1)$-set $A$ in its full ring of integers $\\mathcal O_K$,\n$$\n|A|\\le 5.\n$$\nHere $K$ is a number field of degree two over $\\mathbb Q$ with no real embedding. The $D(1)$ condition requires nonzero entries and, for each pair of distinct entries $a,b$, a square root of $ab+1$ in $\\mathcal O_K$. This definition names the proposition asserted by the main theorem.",
+        "created_at": "2026-10-23T15:04:23.792985+00:00",
+        "vote_count": 0,
+        "tags": [
+          "d1bound5",
+          "diophantine-tuples",
+          "number-theory"
+        ],
+        "definition": "import Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Algebra.Ring.Basic\nimport Definitions.Def_D1Bound5_IsD1\nimport Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex\n\nopen scoped NumberField\n\nuniverse u\n\nset_option autoImplicit false\n\nnamespace D1Bound5\n\n/-- The requested theorem as a proposition, not an asserted theorem.\n`RingOfIntegers` is mathlib's full integral closure of the integers.\nDegree two and totally complex specify an imaginary quadratic number field. -/\ndef MainStatement : Prop :=\n  ∀ (K : Type u) [Field K] [NumberField K] [NumberField.IsTotallyComplex K],\n    Module.finrank ℚ K = 2 →\n    ∀ A : Finset (𝓞 K), IsD1 A → A.card ≤ 5\n\n\n\n\n\nend D1Bound5\n",
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Specification.lean#L10-L16",
+        "deprecated_at": null,
+        "deprecated_by": null
+      },
+      "response_sha256": "53f93a53133689e3e91f673dda782b21c8baafde66169acf88b22462ff7a4ae7",
+      "after": {
+        "definition_id": "ffbfc684-901b-4e85-94ab-70088a3a9525",
+        "definition_name": "D1Bound5_MainStatement",
+        "definition_title": "Uniform bound of five in imaginary quadratic integer rings",
+        "natural_language_statement": "The proposition that, for every imaginary quadratic number field $K$ and every finite $D(1)$-set $A$ in its full ring of integers $\\mathcal O_K$,\n$$\n|A|\\le 5.\n$$\nHere $K$ is a number field of degree two over $\\mathbb Q$ with no real embedding. The $D(1)$ condition requires nonzero entries and, for each pair of distinct entries $a,b$, a square root of $ab+1$ in $\\mathcal O_K$. This definition names the proposition asserted by the main theorem.",
+        "created_at": "2026-10-23T15:04:23.792985+00:00",
+        "vote_count": 0,
+        "tags": [
+          "d1bound5",
+          "diophantine-tuples",
+          "number-theory"
+        ],
+        "definition": "import Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Algebra.Ring.Basic\nimport Definitions.Def_D1Bound5_IsD1\nimport Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex\n\nopen scoped NumberField\n\nuniverse u\n\nset_option autoImplicit false\n\nnamespace D1Bound5\n\n/-- The requested theorem as a proposition, not an asserted theorem.\n`RingOfIntegers` is mathlib's full integral closure of the integers.\nDegree two and totally complex specify an imaginary quadratic number field. -/\ndef MainStatement : Prop :=\n  ∀ (K : Type u) [Field K] [NumberField K] [NumberField.IsTotallyComplex K],\n    Module.finrank ℚ K = 2 →\n    ∀ A : Finset (𝓞 K), IsD1 A → A.card ≤ 5\n\n\n\n\n\nend D1Bound5\n",
+        "source": "https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Specification.lean#L10-L16",
+        "deprecated_at": null,
+        "deprecated_by": null,
+        "visibility": "private",
+        "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "audits": [],
+        "readback": null
+      },
+      "after_sha256": "ab55f2b1cc3fad5dc8570cbba5d1af9169684dc02e2ef07d8dfc51b02c9957ed",
+      "changed_keys": [
+        "source"
+      ],
+      "source_is_exact_pure_url": true,
+      "all_non_source_fields_unchanged": true,
+      "completed_at": "2026-10-23T23:52:32Z"
+    }
+  ],
+  "completed_at": "2026-10-23T23:52:32Z"
+}

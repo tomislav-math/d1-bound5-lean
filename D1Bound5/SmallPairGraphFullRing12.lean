@@ -1,0 +1,31 @@
+import D1Bound5.SmallPairGraphData12
+
+open scoped NumberField
+open Module
+
+namespace D1Bound5
+open QuadInt
+
+/-- Complete large-extension triangle exclusion for pair-table row 12. -/
+theorem smallPairGraph_12_excludes_three_full_ring
+    {K : Type*} [Field K] [NumberField K] [NumberField.IsTotallyComplex K]
+    (hK : finrank ℚ K = 2) (phi : K →+* ℂ)
+    (e : QuadInt 0 1 ≃+* 𝓞 K) (t : Fin 3 → QuadInt 0 1)
+    (ht : IsD1Tuple t)
+    (hpair : ∀ i, PairExtension smallPairA_12 smallPairB_12 (t i))
+    (hlarge : ∀ i, 9 ≤ (t i).norm) (hbound : ∀ i, (t i).norm ≤ 10^1100)
+    (hneA : ∀ i, t i ≠ smallPairA_12) (hneB : ∀ i, t i ≠ smallPairB_12) : False := by
+  have hpos : 0 < discriminant 0 1 := by decide
+  have hroot : ∃ r0, r0*r0 = smallPairA_12*smallPairB_12+1 :=
+    (hasSquareRoot_iff hpos _).1 (by decide +kernel)
+  apply small_pair_graph_excludes_three_full_ring hK phi hpos e smallPairA_12 smallPairB_12
+    (by decide) (by decide) (by decide) hroot (by decide) (by decide)
+    (10^1100) seedRootDisk_0_1 smallPairClosure_12 smallPairLarge_12
+    smallPairSieve_0_1 smallPairSieve_0_1_valid ?_
+    smallPairSeeds_12_checked smallPairClosure_12_checked smallPairFilter_12_checked
+    smallPairNoTriangle_12_checked t ht hpair hlarge hbound hneA hneB
+  intro q hq
+  rw [seedRootDisk_0_1_eq, List.mem_toFinset] at hq
+  exact hq
+
+end D1Bound5

@@ -109,3 +109,5 @@ import D1Bound5.BennettResidueCoefficient
 import D1Bound5.BennettFirstOrder
 import D1Bound5.BennettFirstOrderResidues
 import D1Bound5.BennettPoleSeries
+
+import D1Bound5.MainTheorem

@@ -1,0 +1,14 @@
+import D1Bound5.SmallPairLightData14RightCachedChunk00
+import D1Bound5.SmallPairLightData14RightCachedChunk01
+import D1Bound5.SmallPairLightData14RightCachedChunk02
+import D1Bound5.SmallPairLightData14RightCachedChunk03
+import D1Bound5.SmallPairLightData14RightCachedChunk04
+
+namespace D1Bound5.PairLightPrepared14
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+noncomputable
+def rightCached : List PairLightCachedVertex := rightCachedChunk00 ++ rightCachedChunk01 ++ rightCachedChunk02 ++ rightCachedChunk03 ++ rightCachedChunk04
+
+end D1Bound5.PairLightPrepared14

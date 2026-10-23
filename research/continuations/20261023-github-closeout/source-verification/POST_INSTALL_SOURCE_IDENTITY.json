@@ -1,0 +1,38 @@
+{
+  "status": "POST_INSTALL_SOURCE_IDENTITY_PASS",
+  "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+  "source_manifest_count": 4406,
+  "tool_manifest_count": 75,
+  "configuration_pin_count": 3,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "/Users/tp/Lean/D1Bound5-github-closeout-20261023/scripts/source_audit.py",
+        "--project",
+        "/Users/tp/Lean/D1Bound5-github-closeout-20261023",
+        "--out",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-github-closeout/source-verification/source-policy-only"
+      ],
+      "exit_code": 0,
+      "output": "SOURCE_POLICY_PASS_SOURCE_ONLY\n4406 production modules; source-only gate\n"
+    },
+    {
+      "command": [
+        "python3",
+        "/Users/tp/Lean/D1Bound5-github-closeout-20261023/scripts/fresh_project_build.py",
+        "prepare-source-lock",
+        "--source-root",
+        "/Users/tp/Lean/D1Bound5-github-closeout-20261023",
+        "--roots",
+        "D1Bound5",
+        "--out",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-github-closeout/source-verification/source-lock.json"
+      ],
+      "exit_code": 0,
+      "output": "{\"path\": \"/Users/tp/Lean/D1Bound5/research/continuations/20261023-github-closeout/source-verification/source-lock.json\", \"sha256\": \"b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c\", \"schema\": 1}\n"
+    }
+  ],
+  "lean_execution": false,
+  "canonical_guide_claim_review": "PASS: explicitly reproduction instructions, not completed packaged-command evidence; source-only scope and separate broad/fresh gates stated."
+}

@@ -1,5 +1,40 @@
 # Status
 
+## 23 October 2026 — Lean formalization completed and verified
+
+`D1Bound5.main_statement : D1Bound5.MainStatement` proves that every finite
+Diophantine $D(1)$ set of nonzero elements in the **full ring of integers** of
+an imaginary quadratic field has cardinality at most five. Half-integral
+integer bases, zero pair-square roots, and equal absolute values are included.
+
+The completed local verification comprises:
+
+- A build of all 4,406 project modules from initially empty project outputs.
+- 114 integration checks and four independent target checks, including exact types and transitive axioms.
+- A broad audit of 29,145 declarations, with 29,602 declarations covered when private declarations are included.
+- A successful fresh replay of the complete `D1Bound5` root through the installed Lean kernel.
+
+The permitted transitive axioms are `propext`, `Classical.choice`, and
+`Quot.sound`; the audits found no `sorryAx`. The replay and audits were checked
+against the same recorded source and build identities. The
+[final verification record](research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/FINAL_CLOSEOUT_AUDIT.json)
+contains the results and supporting evidence references.
+
+Read the [main theorem](D1Bound5/MainTheorem.lean), its
+[formal specification](D1Bound5/Specification.lean), and the
+[reproduction instructions](scripts/verification/README.md).
+The [repository home page](README.md) links the paper and numerical supplement.
+The private Prove2Me transfer has its own
+[transfer records](research/continuations/20261023-prove2me-full-upload/).
+
+The dated entries below are preserved as history. Their statements about
+unfinished proofs or interrupted checks describe earlier stages and are
+superseded by the completed verification recorded above.
+
+---
+
+# Status
+
 ## 23 October 2026 — assembled proof; recovery verification interrupted
 
 This entry supersedes older present-tense completion claims below. The frozen

@@ -1,0 +1,177 @@
+{
+  "schema": "d1-final-closeout-audit-v1",
+  "utc": "2026-10-23T23:29:21.653974+00:00",
+  "status": "PINNED_CANDIDATE_FRESH_REPLAY_AND_EXACT_TYPE_AXIOM_GATES_PASS",
+  "read_only": true,
+  "root_theorem": "D1Bound5.main_statement",
+  "root_imports_MainTheorem": true,
+  "exact_target": "For every totally complex number field K of Q-degree two and every finite subset A of the full ring of integers O_K, nonzero elements and pairwise products plus one being squares imply card(A) <= 5. No estimate, coordinate-model or certificate premise is added.",
+  "allowed_transitive_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "audit_checks": [
+    {
+      "log": "/tmp/d1bound5-verification-20261023/evidence/clean118/FinalIntegrationAudit.log",
+      "rows": 114,
+      "unique_names": 114,
+      "forbidden_axiom_rows": [],
+      "root_axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "sorryAx_present": false
+    },
+    {
+      "log": "/tmp/d1bound5-verification-20261023/evidence/clean118/FinalTargetAudit.log",
+      "rows": 4,
+      "unique_names": 4,
+      "forbidden_axiom_rows": [],
+      "root_axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "sorryAx_present": false
+    },
+    {
+      "log": "/tmp/d1bound5-verification-20261023/evidence/broad/Audit.log",
+      "rows": 29145,
+      "unique_names": 29145,
+      "forbidden_axiom_rows": [],
+      "root_axioms": [
+        "propext, Classical.choice, Quot.sound"
+      ],
+      "sorryAx_present": false
+    }
+  ],
+  "broad_including_private_declarations": 29602,
+  "fresh_replay": {
+    "status": "FRESH_INTEGRATED_KERNEL_REPLAY_PASS",
+    "exit_code": 0,
+    "expected_banner_seen": true,
+    "seconds": 10446.673796083996,
+    "oom_event_deltas": {
+      "oom": 0,
+      "oom_group_kill": 0,
+      "oom_kill": 0
+    },
+    "freeze_hash_matches": true,
+    "run_log_hash_matches": true,
+    "memory_log_hash_matches": true
+  },
+  "post_run_input_validation": {
+    "already_performed": true,
+    "basis": "The hash-pinned final_kernel.py calls validate(frozen) after replay and before final RESULT. Any failed file hash, artifact-universe inventory, bundled-library inventory or clean-path guard changes status to INVALIDATED_INPUT_CHANGED. Final status remains PASS.",
+    "frozen_pin_count": 82466,
+    "artifact_file_count": 34293,
+    "shared_library_count": 34,
+    "runner_current_hash_matches_frozen": true,
+    "duplicate_full_sweep_performed_here": false
+  },
+  "audit_to_replay_bridge": {
+    "shared_pins": 22037,
+    "shared_hash_mismatches": [],
+    "extra_audit_pins_rehashed_now": {
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-sweep-runner-optimization/fresh_project_build.py": true,
+      "/workspace/scratch/fed64f41ca78/recovery-20261023/audit-runner-adapters/clean_final_audits_recovery.py": true,
+      "/workspace/scratch/fed64f41ca78/recovery-20261023/source/scripts/verification/FinalIntegrationAudit.lean": true,
+      "/workspace/scratch/fed64f41ca78/recovery-20261023/source/scripts/verification/FinalTargetAudit.lean": true
+    },
+    "same_build_id": true,
+    "same_identity_hash": true,
+    "build_id": "2c06f4e3f2014ea78ba92a0b48e5ad92",
+    "identity_hash": "8f423712a4950a66821d8a82716de9c6e9cbc83ad175d3d54ff8ddf1d47eda39",
+    "project_modules": 4406
+  },
+  "evidence": [
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/clean118/SUMMARY.json",
+      "sha256": "3e750d49ea1da3cf45bb08b1f4e795d1cdc79305a2defdbabfe66204195b5d35",
+      "bytes": 1979
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/clean118/INPUT_FREEZE.json",
+      "sha256": "8adcb1cd4118798dfc7da032d3670b64ab83f7fdd7c02b1ca30283a8c6fc2c3b",
+      "bytes": 4743816
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/clean118/FinalIntegrationAudit.log",
+      "sha256": "bffaf22047f81c70ab5dfa01cf03aa0f80ba5853f1b4cf3847727a872a07550d",
+      "bytes": 286196
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/clean118/FinalTargetAudit.log",
+      "sha256": "b824675d347aee31f43607fccce12a03e3acce6082ed35d201e06a854d32f0de",
+      "bytes": 307
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/broad/SUMMARY.json",
+      "sha256": "6c012a609685f59693d4754aae8e58d0451a61fd7d438c400d33269ce0e18877",
+      "bytes": 1102
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/broad/EVIDENCE_FREEZE.json",
+      "sha256": "36cec179c8cdffe08d478a3ff3c9d408a51a12f4d06591c879e78309e6c2ade5",
+      "bytes": 1503
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/broad/Audit.log",
+      "sha256": "f857510ab877e870aad1e507ae615c34c7941588f26d94e152e4d5cfffd34509",
+      "bytes": 2099338
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/final-kernel/RECOVERY_FREEZE.json",
+      "sha256": "207ac0600670d2e7cd575ddaead353c3a7a77c3ef5c839a4e48a4204194d28ab",
+      "bytes": 22570373
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/final-kernel/run/RESULT.json",
+      "sha256": "e93d08e6bc2e2f4b7717fcb1b4147355c57930d5daad81a9686f6d01d9e099c1",
+      "bytes": 5968
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/final-kernel/run/00000-D1Bound5.log",
+      "sha256": "1418aa9dd60f08a8b7176dea22d5a7c14c0ea52a74f979452b7cd9cddf6d6441",
+      "bytes": 32
+    },
+    {
+      "path": "/tmp/d1bound5-verification-20261023/evidence/final-kernel/run/00000-D1Bound5.memory.json",
+      "sha256": "070839bbb53884134b44824b760ba282246b33228629201b1879865249caf5cc",
+      "bytes": 6232842
+    },
+    {
+      "path": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/scripts/verification/FinalIntegrationAudit.lean",
+      "sha256": "005f05312ef81f9a961e1c8adefb00b98e514cca3794adcc438118e4edf5d1ac",
+      "bytes": 52454
+    },
+    {
+      "path": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/scripts/verification/FinalTargetAudit.lean",
+      "sha256": "b21a0deae156faabd97ad38e87920a5f9f16700cad843c3e38e040c90aaa61d7",
+      "bytes": 1483
+    },
+    {
+      "path": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/MainTheorem.lean",
+      "sha256": "0d4652828c5f48475a6e80d8d00fa209e39c0638a58ebd99fd719e271c2670f6",
+      "bytes": 1343
+    },
+    {
+      "path": "/workspace/scratch/fed64f41ca78/recovery-20261023/final-kernel-preparation/final_kernel.py",
+      "sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843",
+      "bytes": 33494
+    }
+  ],
+  "material_unresolved_proof_issue": null,
+  "limitations": [
+    "Upstream checker skips unsafe/partial declarations; this is Lean-kernel replay, not a separate independent prover. The safe root theorem has only the allowed transitive axioms.",
+    "Earlier exact/broad SUMMARY main_theorem_complete=false reserved the separate fresh gate; preserve those historical receipts unchanged.",
+    "This closeout does not claim Prove2Me completion, canonical repository release installation or durable archive transfer; root handles those separate tasks."
+  ],
+  "main_theorem_complete": true,
+  "completion_scope": "Verified local Lean formalization of D1Bound5.main_statement, including exact type, allowed transitive axioms and fresh integrated kernel replay; separate from Prove2Me publication/proof progress.",
+  "durable_final_run": {
+    "root_reported_preserved_and_hash_verified": true,
+    "result": "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/run/RESULT.json",
+    "log": "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/run/00000-D1Bound5.log",
+    "memory_log": "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/run/00000-D1Bound5.memory.json",
+    "persistence_receipt": "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/run/PERSISTENCE_VERIFIED.json"
+  }
+}

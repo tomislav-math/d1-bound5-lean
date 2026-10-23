@@ -92,8 +92,8 @@ The finite decisions use exact integer and rational arithmetic; decimal
 diagnostics are not certificates. The completeness of the enumerations also
 uses the descent and continued-fraction arguments in the article. Sample
 checks of a determinant identity do not prove the identity for arbitrary
-order. These Python checks are separate from the ongoing Lean formalization,
-whose main theorem remains unproved.
+order. These Python checks accompany the completed Lean formalization; the main
+theorem and its local verification results are recorded in [STATUS.md](../STATUS.md).
 
 The separate external-review archive named `D1_bound5_finite_checks.zip` was
 not available to the authors' working session and is not included. This

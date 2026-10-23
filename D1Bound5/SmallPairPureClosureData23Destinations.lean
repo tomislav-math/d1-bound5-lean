@@ -1,0 +1,18 @@
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk00
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk01
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk02
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk03
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk04
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk05
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk06
+import D1Bound5.SmallPairPureClosureData23DestinationsChunk07
+
+namespace D1Bound5.PairLightClosurePrepared23
+set_option autoImplicit false
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+noncomputable def destinations : List (Option Nat × Option Nat) :=
+  destinationsChunk00 ++ destinationsChunk01 ++ destinationsChunk02 ++ destinationsChunk03 ++ destinationsChunk04 ++ destinationsChunk05 ++ destinationsChunk06 ++ destinationsChunk07
+
+end D1Bound5.PairLightClosurePrepared23

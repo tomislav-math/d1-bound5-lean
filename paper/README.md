@@ -15,7 +15,7 @@ from the frozen verified v4 is `\date{} -> \date{15 October 2026}`.
 The mathematics, funding, AI declaration, affiliations and bibliography are
 unchanged. The filename identifies the subject and release date. Future
 revisions can use the same title with their own release date. The frozen v4
-remains the target of the ongoing Lean formalization.
+is the source manuscript for the completed Lean formalization.
 
 The article is a standalone TeX file using standard packages, with no custom
 `.sty` files. A TeX Live installation with Latin Modern and `latexmk` can build
