@@ -1,0 +1,87 @@
+{
+  "archive": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5",
+  "merged": {
+    "bytes": 2569298,
+    "module": "SmallPairGraphData24",
+    "sha256": "2aa693e12c96589d02b80b3b2ec841cb1710322a772b7f7d793b6832b70c0232"
+  },
+  "originals": {
+    "SmallPairGraphArithmetic24": {
+      "bytes": 567,
+      "headers": [
+        "theorem smallPairSeeds_24_checked :\n    pairSeedsCoveredBool smallPairA_24 smallPairB_24\n      seedRootDisk_1_1 smallPairClosure_24 = true ",
+        "theorem smallPairFilter_24_checked :\n    largePairVertices smallPairA_24 smallPairB_24 smallPairClosure_24 = smallPairLarge_24 ",
+        "theorem smallPairLarge_24_count : smallPairLarge_24.length = 892 "
+      ],
+      "sha256": "7455bd6044ae044909b79f11651e5bc1422eca78a814090097ef6fa1c60abaf0"
+    },
+    "SmallPairGraphClosure24": {
+      "bytes": 734,
+      "headers": [
+        "theorem PairGraphPrepared24.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_24 smallPairB_24 anchorRoot\n      (10^1100) smallPairClosure_24 witnesses destinations = true ",
+        "theorem smallPairClosure_24_checked :\n    pairClosureBool smallPairA_24 smallPairB_24\n      (10^1100) smallPairClosure_24 = true "
+      ],
+      "sha256": "0c6805a96c8b599fda9d60ba0db4d3f2f4998ed6491b53c04ee55fb00fab7505"
+    },
+    "SmallPairGraphData24": {
+      "bytes": 124,
+      "headers": [],
+      "sha256": "a54f7aafedbf536aa1d98306a92d2d674fc2f308d2158e8c49bcafb18886062e"
+    },
+    "SmallPairGraphInputs24": {
+      "bytes": 1005612,
+      "headers": [
+        "def smallPairA_24 : QuadInt 1 1 ",
+        "def smallPairB_24 : QuadInt 1 1 ",
+        "def smallPairClosure_24 : List (QuadInt 1 1) ",
+        "def smallPairLarge_24 : List (QuadInt 1 1) ",
+        "def colors : \u2115 "
+      ],
+      "sha256": "0c23919a4646059158c9a8cacfaafd3c1a79a639601d57f38c3cac30e782c7c9"
+    },
+    "SmallPairGraphTriangle24": {
+      "bytes": 396,
+      "headers": [
+        "theorem smallPairNoTriangle_24_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_24 = true "
+      ],
+      "sha256": "d05dedd245c5cebc36beddf4a2f6edc6bcec29c9f6e516216db54a3a3283b9ad"
+    },
+    "SmallPairGraphWitnessData24": {
+      "bytes": 537193,
+      "headers": [
+        "def anchorRoot : QuadInt 1 1 ",
+        "def rootPairs : List (QuadInt 1 1 \u00d7 QuadInt 1 1) ",
+        "def witnesses : List (PairRootWitness 1 1) ",
+        "def destinations : List (Option \u2115 \u00d7 Option \u2115) "
+      ],
+      "sha256": "fd8fbf65587bce4f5b90f8b2d8d410ac6a68e67ceb761f14efc9d24fe5805453"
+    },
+    "SmallPairLightAssembly24": {
+      "bytes": 2047,
+      "headers": [
+        "theorem sieve_eq : sieve = smallPairSieve_1_1 ",
+        "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_24 PairGraphPrepared24.colors).1.map pairLightCoordinates ",
+        "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared24.leftCached.map pairLightCachedCoordinates ",
+        "theorem leftRows_eq : leftRows = PairSelectedPrepared24.leftRows ",
+        "theorem left_checked :\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_24 PairGraphPrepared24.colors).1 = true ",
+        "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_24 PairGraphPrepared24.colors).2.map pairLightCoordinates ",
+        "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared24.rightCached.map pairLightCachedCoordinates ",
+        "theorem rightRows_eq : rightRows = PairSelectedPrepared24.rightRows ",
+        "theorem right_checked :\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_24 PairGraphPrepared24.colors).2 = true "
+      ],
+      "sha256": "5d6d18f9f1f129e5028b73c72098f606d4d4c2a27b0cd91b2ca88e200d120df8"
+    },
+    "SmallPairRawSelectedData24": {
+      "bytes": 1021841,
+      "headers": [
+        "def leftCached : List (PairResidueVertex 1 1) ",
+        "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+        "def rightCached : List (PairResidueVertex 1 1) ",
+        "def rightRows : List (\u2115 \u00d7 List \u2115) "
+      ],
+      "sha256": "fc33ea35dabe28b60160ef27eb6299d6429bf47175266c44435214c301ed054c"
+    }
+  },
+  "schema": 1,
+  "status": "ACTUAL_PINNED_GRAPH24_SOURCE_CATALOG_NOT_A_PROOF"
+}
