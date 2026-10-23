@@ -41,3 +41,7 @@ Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. Ma
 Latest checked archive: 20261023-economical-graph7-left001. graph7 LEFT heads 105..267, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
 Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph7-left002. graph7 LEFT heads 268..431, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
+Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. MainTheorem UNPROVED, root integration unverified.
