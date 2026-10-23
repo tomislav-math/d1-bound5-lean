@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T17:05:47.221097+00:00",
+  "reviewer": "/root/graph39",
+  "status": "PASS_CONCRETE_AUTHORIZED_TRANSPORT_PLAN",
+  "plan_sha256": "ca08e2eb5069497d5c4337f9bec25e9488c8c607077de71c7a72f68b21fb026e",
+  "helper_sha256": "383ab515ab879472424c92287a6394a0d91b6e67d0d2681b3d3fcf7e729d696d",
+  "static_review_sha256": "7e0323af95579826a9ed54c437d79be328c77868eb5e72c88137a4a8697a6ee3",
+  "build_id": "2c06f4e3f2014ea78ba92a0b48e5ad92",
+  "batch": 1,
+  "incoming": "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/incoming-9b44ad373b2a4dc79ebbb50e05f0b4e5",
+  "destination": "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000001",
+  "files": {
+    "PREPARED.json": {
+      "bytes": 105569,
+      "sha256": "28062d12f554accff9ddb47bc10e2e0a74e8c262142cb0a016e2a33a7712ce71",
+      "chunks": 1
+    },
+    "batch.tar.gz": {
+      "bytes": 14038298,
+      "sha256": "52509b259d103b8623f5b3fbea9cd34ea53e91b43164f36867eaf548603e1536",
+      "chunks": 47
+    }
+  },
+  "independent_checks": [
+    "Root explicitly approved these archive/PREPARED hashes and exact destination before transfer.",
+    "Both complete source files and every48 planned chunk independently rehashed; lengths/base64 lengths and source metadata before/after matched the exact plan.",
+    "PREPARED snapshot actual build ID, batch1, source specification1ac23af8e9bb59582d70e899205f5f396b8cc0525b6ac0929a4e22d8f8e5dfd4,64 selected/cumulative modules and absent predecessor match plan labels.",
+    "Remote read-only check confirmed incoming and destination canonical, absent and with no symlink ancestors.",
+    "Approved destination is outside the Git repository."
+  ],
+  "next_gate": "Execute only the reviewed plan under root authorization, then require successful independent ba0c33df exporter verify-arrival with root-pinned hashes. Transport success alone is not durable acceptance.",
+  "claim_limits": [
+    "No actual transport, arrival verification, Lean run, Git mutation or proof acceptance was performed by reviewer.",
+    "The remote absence check is a point-in-time observation; helper must retain its own exclusive creation guards at execution."
+  ]
+}

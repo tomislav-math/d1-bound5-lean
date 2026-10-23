@@ -68,8 +68,8 @@
   },
   "main_theorem_status": "PROOF_SOURCE_AND_PRIOR_CLEAN_BUILD_AUDITS_PASSED_FINAL_FRESH_GATE_INCOMPLETE_AFTER_WORKSPACE_LOSS",
   "accepted_root_manifest_unchanged": true,
-  "active_work": "Preparing exact-source verification recovery in a new local subtree after complete workspace file loss. New source/runtime setup is authorized; old successful build/audit summaries preserved; fresh exit130 is unaccepted. Preparing reviewed research-only private Git checkpoint before new proof execution.",
-  "current_private_head": "1fe0adf1028af0e41ea578660c8d48875cde6588",
+  "active_work": "Full4406 build resumed with V3 prefix memory reservations after exact same-source isolated retry PASS. Durable artifact checkpointing continues; final exact118/broad/fresh recovery checks pending.",
+  "current_private_head": "4cd4629bce642069da902be22b4433aa57dc7276",
   "agent_verified_pending_remote_archive": {},
   "canonical_candidate_modules": 4406,
   "clean_build": {
@@ -131,7 +131,7 @@
     "input_freeze_sha256": "698a3a0fecaa49f8451b7fc3e55df85802cab02e14bded5b7a10504dd9b00c95",
     "independent_review": "PASS"
   },
-  "updated_utc": "2026-10-23T16:36:44.349873+00:00",
+  "updated_utc": "2026-10-23T16:57:57.662991+00:00",
   "clean_broad_audit": {
     "status": "FAILED_NO_BROAD_ACCEPTANCE",
     "actual_exit_code": 1,
@@ -172,7 +172,7 @@
     "durable_recovery_base": "Full proof sources, historical archives, complete clean-build summary and final audit summaries on authorized Mac. Runtime/artifacts/full fresh freeze and final accepted receipt chain require reconstruction or rebuilding."
   },
   "recovery": {
-    "status": "NEW_SOURCE_RUNTIME_PREPARATION_AUTHORIZED",
+    "status": "FULL_BUILD_RESUMED_V3_AFTER_SAME_SOURCE_ISOLATED_RETRY_PASS",
     "new_local_subtree": "recovery-20261023",
     "source_policy": "Exact4406 proof sources plus3 unchanged configuration pins from durable source lock; one source checkout and empty new artifact store.",
     "identity_policy": "New candidate/runtime/build identities; no relabeling of previous receipts.",
@@ -180,6 +180,86 @@
     "owners": {
       "runtime": "compute_offload",
       "source_and_tools": "integration"
+    },
+    "source_bytes_verified_against_original_lock": true,
+    "source_modules": 4406,
+    "configuration_pins": 3,
+    "immutable_audits": 2,
+    "project_artifacts_imported": 0,
+    "runtime_root": "/tmp/d1bound5-verification-20261023/runtime",
+    "proposed_build_root": "/tmp/d1bound5-verification-20261023/clean-build",
+    "clean_build": {
+      "root_exec_session": 18292,
+      "build_id": "2c06f4e3f2014ea78ba92a0b48e5ad92",
+      "identity_hash": "8f423712a4950a66821d8a82716de9c6e9cbc83ad175d3d54ff8ddf1d47eda39",
+      "origin_sha256": "c2f3ad9fe463b99529db5586397a291f268c18fed12f5b27eaf30cc6876f3795",
+      "source_commit": "b4c81242dd9c9cee6966a1e08bce0f94c66f1491",
+      "source_tree": "ee490da49ba30447d92745140f48c1ae3c34f263",
+      "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+      "runtime_lock_sha256": "5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc",
+      "runner_sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0",
+      "pilot_target": 64,
+      "deferred": 4342,
+      "observed_completed_at_least": 42,
+      "expected_pilot_exit_code": 3,
+      "full_build_passed": false
+    },
+    "pilot_actual_exit_code": 3,
+    "pilot_completed_modules": 64,
+    "pilot_failed_modules": 0,
+    "pilot_active_modules": 0,
+    "pilot_deferred_modules": 4342,
+    "pilot_summary_sha256": "9ad229a741c67c1d9921267057f11e3ca099d62c51326113a7d2109c6b1465c5",
+    "pilot_summary_bytes": 214203,
+    "pilot_invocation": "90e850e7446b4589bf02ced1f8e55b91",
+    "full_build_passed": false,
+    "full_resume_exec_session": 81347,
+    "full_resume_actual_exit_code": 1,
+    "first64_durable_receipt_sha256": "4610db5add050ab49dbeb7fa32b728a26a325bdffc7c4995daef2b63da85528c",
+    "first64_durably_verified": true,
+    "completed_modules_last_quiescent": 360,
+    "full_v3_resume_exec_session": 88972,
+    "full_v3_resume_actual_exit_code": null,
+    "full_v3_invocation_sha256": "63b125c1cb6eb8945b5de71d0657181b5adb6715932acc71ad63b6894c2788d3",
+    "resource_hints_v3_sha256": "3d4d6a8d901fb0076ee375ade19916ec1b39e4afbf7909016361919941a9ae95",
+    "first_full_resume_failure": {
+      "exec_session": 81347,
+      "actual_exit_code": 1,
+      "completed_modules": 359,
+      "module": "D1Bound5.PellLightPrefixData43",
+      "compiler_exit_code": -9,
+      "log_empty": true,
+      "source_unchanged": true,
+      "oom_counter_before": 1,
+      "oom_counter_after": 2,
+      "failed_receipt_sha256": "5f8e79473436c443a45d886c20378f4d065993787fc2c24e3e29c68dc18c077d",
+      "summary_sha256": "835dfad0bcae0409f42dd37bf73db7bb6228208dc0b01ae82547a94291ba1350"
+    },
+    "isolated_retry": {
+      "exec_session": 91477,
+      "actual_driver_exit_code": 3,
+      "driver_status": "STOPPED_OR_DEFERRED_INCOMPLETE",
+      "compiler_exit_code": 0,
+      "compiler_status": "COMPILE_PASS",
+      "seconds": 17.181372863000433,
+      "receipt_sha256": "6c551ac5a86c4da2ceb9695955783a5406c646f76aa616f39667f14feede09c0",
+      "summary_sha256": "543a0d737104884b2265776ad9507d67930a3e4de3c2423f59b91ecebccafc73",
+      "VmHWM_bytes": 1858072576,
+      "oom_events_unchanged_at": 2,
+      "claim_limit": "One measured module; no proven family memory bound."
+    },
+    "incremental_durability": {
+      "confirmed_modules": 147,
+      "latest_receipt_sha256": "37716c0c2edbcc444ce7bd65b6cc22688c593bbb6e9ebe0f4add2139e57d1b51",
+      "next_batch_status": "100 additional modules being transferred; not yet confirmed at this update."
     }
-  }
+  },
+  "latest_research_push": {
+    "status": "PUSH_VERIFIED",
+    "commit": "4cd4629bce642069da902be22b4433aa57dc7276",
+    "reviewed_files": 165,
+    "scope": "research-only completed summaries and incident/recovery evidence",
+    "receipt": "research/continuations/20261023-parallel-resume/POST_LOSS_RESEARCH_PUSH_RECEIPT.json"
+  },
+  "updated_at_utc": "2026-10-23T17:25:52.483555+00:00"
 }

@@ -1,0 +1,54 @@
+{
+  "build_id": "5dc783eabefa40a9a0919cb489496962",
+  "canonical_source_inventory_sha256": "579f9333350d6bc2e30d241f6e32bb16dbe405df4c903d8d118761d7defe064d",
+  "clean_env_sha256": "11e514202dd3fe1cf57b8a24a594c160812bee832fd781d0ca98bbde9e035b0d",
+  "clean_origin_sha256": "082a76e73032059147d45ec53b6a878cee97d7104a7653d8f9d8a0ae105feaae",
+  "commands": {
+    "dry_run": [
+      "python3",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "run",
+      "--freeze",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json"
+    ],
+    "execute": [
+      "python3",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "run",
+      "--freeze",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json",
+      "--output",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/clean-fresh-run",
+      "--execute"
+    ],
+    "freeze": [
+      "python3",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "freeze",
+      "--project-root",
+      "/workspace/scratch/fed64f41ca78/clean-checkout",
+      "--project-build-root",
+      "/workspace/scratch/fed64f41ca78/clean-build/artifacts",
+      "--lean-env",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_ENV.json",
+      "--source-lock",
+      "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_SOURCE_LOCK.json",
+      "--runtime-lock",
+      "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_RUNTIME_LOCK.json",
+      "--manifest",
+      "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/CANONICAL_SOURCE_INVENTORY.json",
+      "--freeze",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json"
+    ]
+  },
+  "execution_conditions": [
+    "Completed exact clean source build with no active compiler",
+    "Clean118 exact-type and allowed-transitive-axiom audit PASS",
+    "Quiescent memory budget and all frozen inputs unchanged"
+  ],
+  "runtime_lock_sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+  "script_sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843",
+  "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+  "status": "PREPARED_CLEAN_CONFIGURATION_NOT_FROZEN_NOT_PROOF",
+  "utc": "2026-10-23T12:46:46.420631+00:00"
+}

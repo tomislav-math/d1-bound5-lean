@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T17:09:08.391137+00:00",
+  "reviewer": "/root/graph39",
+  "status": "PASS_INDEPENDENT_PREPARATION_DELTA_REVIEW_ONLY",
+  "reviewed_files": {
+    "FINAL_INSTALL_MAP.json": "43ca8d15b626f78dbf148c3684d49243be648ec72f2c3108bda9c696176abfc8",
+    "FINAL_INSTALLATION_PLAN.md": "b576767b669f6a73f791a6fda51e64c9f6e5ed70ee62586e43c43687cbdd7e04",
+    "INSTALL_COPY_COMMANDS.txt": "2145e6aedc1a31df7a866c15dfae919f9e0f29a096911a1eaf5e8cadf355ee15",
+    "RECOVERY_IDENTITY_MAP.json": "de41c3b781c656a2477331c14637d0e4bc7397f1b6b2e8ac62a6504310506b7f",
+    "MANIFEST_RECONCILIATION.json": "a9c63acd10c21cc0223ffa0f2aa860be7c7e138d1e69d5ead9cff68e858adac4",
+    "records/verification-tools-sha256.txt": "c59350169bc424c4d620548c0e7e25d13a2f71e35360bd92edb37943220828a3",
+    "GIT_CHECKPOINT.json": "0e825b7d2674a73d1e5726fa61106867a0b467bab13d14f29b7e8c75b6ff89cc",
+    "scripts/fresh_project_build.py": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0",
+    "scripts/verification/clean_final_audits.py": "553767859804a0ae0fb29fe7bb6f2844d3d331b06898971a6994b2d533166830",
+    "research-only/clean_broad_audit_recovery.py": "e27e4ba3bd62f7a3463690ba0383754a3d99293685b07c6deb40ef7a5d6a43e4"
+  },
+  "checks": [
+    "Exact25 canonical target set unchanged from installation02; only builder, exact-audit helper and derived tools-manifest rows change.",
+    "All6 current-package canonical payloads independently rehashed locally; all19 frozenV2 referenced payloads independently rehashed remotely.",
+    "All25 plain copy commands agree exactly with the explicit map source-package, path, destination and phase order. No copy was executed.",
+    "Reversing only two manifest hash rows reproduces exact installation02 manifest8bbb2035; all other75-row entries remain identical.",
+    "Reversing only exact-helper BUILD_RUNNER_SHA produces reviewed6f2581 source; reversing only research broad adapter HELPER_SHA produces reviewedc366b42f source.",
+    "Selected builder bytes equal independently reviewed optimizer349a4e81; new origin is explicitly required.",
+    "Research broad adapter has no canonical installation target. Broad Lean source, both exact Lean harnesses, source policy, wrapper, release pins, README,4406 proof-source manifest and3 configuration pins remain unchanged.",
+    "Preservation353 precedes umbrella change, copied tooling and final manifests; interruption recovery is explicitly separated and original preservation cannot be restarted after umbrella mutation.",
+    "New candidate b4c81242/treeee490da4 is distinguished from old historical candidate/summaries; complete recovery build,118 checks,broad and fresh replay remain pending actual terminal evidence.",
+    "Release source-equivalence bridge preserves original recovery execution identities and does not claim packaged check.sh ran end-to-end."
+  ],
+  "boundaries": [
+    "Preparation only; this receipt authorizes no canonical preservation, installation, Git mutation, Lean or checker invocation.",
+    "Checkpoint HEAD4cd4629b/raw-indexd5e2412d and25 before-conditions are historical point-in-time inputs; refresh after any Git/input change and before execution.",
+    "Ordinary copy commands are not atomic or self-guarding; coordinator must enforce documented before/after checks and stop on failure.",
+    "Final README/STATUS and publication claims require actual complete recovery gate receipts, not the64-module pilot or historical old-run summaries."
+  ]
+}

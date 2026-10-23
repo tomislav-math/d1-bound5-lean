@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T17:11:11.772095+00:00",
+  "status": "PASS_NARROW_PREPARED_COMMAND_DOCUMENTATION_DELTA",
+  "reviewer": "/root/graph39",
+  "original_review_sha256": "ac0c3dfb570d35ecf1187e2daad89b67d99cf568d522da0aa3e385ab556be805",
+  "files": {
+    "FINAL_INSTALLATION_PLAN.md": "e5c6c165bec5892ae1de1c648301b0610e1643ddaf59e81901cb91c92424dda5",
+    "RECOVERY_IDENTITY_MAP.json": "dfadb634c3c3771d9bfbaac1c036ab4d199d3bd181c1bc4ec7defecc6fd415fb",
+    "recovery-evidence/CLEAN118_INVOCATION.json": "572678ee337686a968645696aeeadcded5576cea02c2398a39388a1acf1aa8a2",
+    "recovery-evidence/BROAD_INVOCATION.json": "39d69b27f274401d8daf8a5b80484605d554425715ce4c0af5398c2be592c31e"
+  },
+  "checks": [
+    "Removing only the added recovery-identity section exactly reproduces prior reviewed planb576767b.",
+    "Removing only prepared_recovery_audit_commands exactly reproduces prior identity-mapde41c3b7.",
+    "Both command snapshots byte-match integration revision02; broad pins the exact copied CLEAN118 hash.",
+    "Both actual referenced adapter sources match the invocation pins.",
+    "Map,25 canonical targets,copy recipe,tools manifest and all selected payload identities remain unchanged.",
+    "Commands remain prepared-only, exact118 waits for completed quiescent4406 build, broad waits for exact118 PASS, and full-root replay remains a separate required gate."
+  ],
+  "limitations": [
+    "No invocation, compilation,installation or Git action performed.",
+    "Command snapshots are recovery-environment evidence, not hidden portable-release prerequisites or proof of completed gates."
+  ]
+}

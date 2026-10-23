@@ -1,0 +1,35 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "test_final_inventory.py"
+  ],
+  "covered": [
+    "Exact original wildcard-prefix membership including exotic sidecars and excluded directories",
+    "Addition/deletion/rename/content rewrite/inode replacement/chmod and nested-directory changes",
+    "Transient member removal with restored names detected by directory metadata",
+    "Regular hardlinks allowed; alias mutation/addition detected; symlinks and FIFO refused",
+    "Deterministic initial capture, earlier-subtree, and final capture mutation races",
+    "Real Pins SHA256 verification, cache invalidation, dependency and leaf receipts, compiler logs, source and configuration hashes",
+    "Runtime guard called and failure retained; unchanged fresh/resumed final status distinguished",
+    "Last-bundle mutation cannot produce PASS; final errors preserved as GUARD_FAILED with exit2",
+    "Snapshot creation only after worker-pool shutdown"
+  ],
+  "exit_code": 0,
+  "failed": 0,
+  "limitations": [
+    "Fixtures are synthetic and do not claim a full source build or installed-kernel replay.",
+    "Filesystem consistency retains the stated coordinated, nonhostile-writer assumption; no arbitrary hostile change-and-restore guarantee."
+  ],
+  "log_sha256": "cb907af5921d05b03bf886ac6a0d3554d7995d4f5d1d66b4dcb409b6737c118e",
+  "runner_changed": false,
+  "runner_sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0",
+  "schema": 1,
+  "scope": "Synthetic temporary-filesystem and drained-final-scheduler fixtures only; no Lean process, production source, project cache, Git, or proof-acceptance claim.",
+  "seconds": 0.13977110999985598,
+  "skipped": 0,
+  "started_utc": "2026-10-23T16:49:42.224683+00:00",
+  "status": "PASS",
+  "test_count": 35,
+  "test_sha256": "b0b5e0c718be9b058946a2283fed949d3b6dc5bda6c7f65707db60fdd9edd511"
+}

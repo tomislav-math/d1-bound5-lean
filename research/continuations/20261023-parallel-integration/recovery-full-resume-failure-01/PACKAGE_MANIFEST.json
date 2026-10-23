@@ -1,0 +1,74 @@
+{
+  "created_utc": "2026-10-23T17:23:26.359356+00:00",
+  "files": {
+    "ORIGIN.json": {
+      "bytes": 2195,
+      "sha256": "c2f3ad9fe463b99529db5586397a291f268c18fed12f5b27eaf30cc6876f3795",
+      "source_path": "/tmp/d1bound5-verification-20261023/clean-build/ORIGIN.json"
+    },
+    "actual-tool-return/response-dd98cb.json": {
+      "bytes": 4299,
+      "sha256": "5c34692788c08801340d086207cd2a94339986f64f7725b5a3364095b95a67f5",
+      "source_path": "/tmp/d1bound5-verification-20261023/evidence/tool-observations/build-exec81347/response-dd98cb.json"
+    },
+    "failed-attempt/compiler.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/tmp/d1bound5-verification-20261023/clean-build/attempts/D1Bound5.PellLightPrefixData43/e25bc5e7bc8a451482c6da632b1ac30b/compiler.log"
+    },
+    "failed-attempt/receipt.json": {
+      "bytes": 1423,
+      "sha256": "5f8e79473436c443a45d886c20378f4d065993787fc2c24e3e29c68dc18c077d",
+      "source_path": "/tmp/d1bound5-verification-20261023/clean-build/attempts/D1Bound5.PellLightPrefixData43/e25bc5e7bc8a451482c6da632b1ac30b/receipt.json"
+    },
+    "invocation/RESUME_VALIDATION.json": {
+      "bytes": 2229,
+      "sha256": "51f94e636b3814d6051251aae97d00515c1c81e1f9e40c0f0d983c324b51b9ff",
+      "source_path": "/tmp/d1bound5-verification-20261023/clean-build/invocations/3f807ee382aa4ecd8de0cafa0aaad2a9/RESUME_VALIDATION.json"
+    },
+    "invocation/START.json": {
+      "bytes": 2589,
+      "sha256": "3c2365d9ebb3bb4df96ee0e26cadb7f09d70a6b8594b2537a00585f16fade0d3",
+      "source_path": "/tmp/d1bound5-verification-20261023/clean-build/invocations/3f807ee382aa4ecd8de0cafa0aaad2a9/START.json"
+    },
+    "invocation/SUMMARY.json": {
+      "bytes": 214403,
+      "sha256": "835dfad0bcae0409f42dd37bf73db7bb6228208dc0b01ae82547a94291ba1350",
+      "source_path": "/tmp/d1bound5-verification-20261023/clean-build/invocations/3f807ee382aa4ecd8de0cafa0aaad2a9/SUMMARY.json"
+    },
+    "launch/CONTROL.before-retry.json": {
+      "bytes": 48,
+      "sha256": "7548d1d79080871eb48fec2e7e4f985bc292ba10ce2b81162ad4622aed613b6d",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/PREVIOUS_CONTROL.json"
+    },
+    "launch/FULL_RESUME_INVOCATION.json": {
+      "bytes": 2122,
+      "sha256": "4a2484ad34840b9d5d550698a05bdce22f12c152b5878d66cdf2cce7b6f7ea01",
+      "source_path": "/workspace/scratch/fed64f41ca78/recovery-20261023/launch/FULL_RESUME_INVOCATION.json"
+    },
+    "launch/RESOURCE_HINTS.before-retry.json": {
+      "bytes": 5795,
+      "sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/PREVIOUS_RESOURCE_HINTS.json"
+    },
+    "launch/ROOT_FULL_RESUME_GATE.json": {
+      "bytes": 957,
+      "sha256": "f546929b06b828d5a8c9a163513db145ae5a9cfe189d6ad78ebe8b9783877b27",
+      "source_path": "/workspace/scratch/fed64f41ca78/recovery-20261023/launch/ROOT_FULL_RESUME_GATE.json"
+    },
+    "resource-observations/POST_RESUME_FAILURE_MEMORY.json": {
+      "bytes": 314,
+      "sha256": "38953a37ae775df000e547947030416002060c17fd59801836a1e6a0db55b30a",
+      "source_path": "/tmp/d1bound5-verification-20261023/evidence/resource-events/POST_RESUME_FAILURE_MEMORY.json"
+    }
+  },
+  "notes": [
+    "Actual root exec81347 returned exit1. Original per-invocation summary reports BUILD_FAILED,359 accepted modules,zero active modules. Failed PellLightPrefixData43 compiler exit_code -9 and empty original compiler.log are retained unchanged.",
+    "The actual response-dd98cb.json tool return explicitly reports output truncation. It is not represented as a complete driver stdout log.",
+    "Root attributed observation: actual root exec at17:13:02 read cgroup memory.events oom1/oom_kill1; postfailure root read at approximately17:18 observed oom2/oom_kill2. No original standalone raw files exist for those two earlier observations. This sentence is a newly written attribution, not reconstructed raw evidence.",
+    "POST_RESUME_FAILURE_MEMORY.json is the later independently saved original postfailure snapshot showing2/2. The event increase and -9 are reported as observed evidence; no successful compile or final theorem acceptance is claimed.",
+    "Proof sources,runtime,runner,Git and prior records were not modified by this archive operation."
+  ],
+  "schema": 1,
+  "status": "ORIGINAL_FAILED_ATTEMPT_EVIDENCE_NOT_ACCEPTANCE"
+}

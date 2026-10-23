@@ -1,0 +1,23 @@
+{
+  "checks": [
+    "fresh source build publishes four modules with all sidecars",
+    "unchanged resume recursively validates all four receipts",
+    "corrupted ancestor sidecar invalidates the whole dependent receipt chain",
+    "IR and IR signature artifacts are included in recursive guards",
+    "root receipt hash is checked even without a dependent module",
+    "source lock mismatch fails closed before compiling",
+    "fresh mode refuses any pre-existing build directory",
+    "compiler nonzero exit survives in immutable failed attempt receipt",
+    "timeout terminates owned compiler group and never publishes partial output",
+    "external runtime content change fails pinned inventory validation",
+    "external cache cannot supply the project namespace",
+    "module lookup follows first package owner even when its child artifact is missing",
+    "source checkout containing any oleans is rejected",
+    "cooperative stop is incomplete/nonzero and exact resume can finish",
+    "SIGINT marks active attempt interrupted and terminates its owned process group"
+  ],
+  "real_lean_project_build_launched": false,
+  "runner_sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0",
+  "status": "PASS_FAKE_COMPILER_LIFECYCLE_SELFCHECK",
+  "test_count": 15
+}

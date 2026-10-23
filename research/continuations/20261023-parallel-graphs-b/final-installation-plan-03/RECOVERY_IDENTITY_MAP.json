@@ -1,0 +1,64 @@
+{
+  "adapters_independent_review_sha256": "7c54e9de84ec6d78a12ed7c0988395164e5dae97462529dffad8eb6afe039bd7",
+  "broad_observer": {
+    "broad_source_sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+    "canonical_target": null,
+    "change": "HELPER_SHA constant only",
+    "payload": "research-only/clean_broad_audit_recovery.py",
+    "sha256": "e27e4ba3bd62f7a3463690ba0383754a3d99293685b07c6deb40ef7a5d6a43e4"
+  },
+  "builder": {
+    "canonical_target": "scripts/fresh_project_build.py",
+    "payload": "scripts/fresh_project_build.py",
+    "requires_new_empty_build_origin": true,
+    "sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0"
+  },
+  "exact_audit_helper": {
+    "canonical_target": "scripts/verification/clean_final_audits.py",
+    "change": "BUILD_RUNNER_SHA constant only",
+    "payload": "scripts/verification/clean_final_audits.py",
+    "sha256": "553767859804a0ae0fb29fe7bb6f2844d3d331b06898971a6994b2d533166830"
+  },
+  "final_recovery_gate_claims": {
+    "complete_4406_build": "PENDING_ACTUAL_TERMINAL_EVIDENCE",
+    "exact_118": "PENDING_ON_COMPLETED_RECOVERY_ARTIFACTS",
+    "official_fresh_full_root": "PENDING",
+    "packaged_check_sh_end_to_end": "NOT_EXECUTED_BY_THIS_PLAN",
+    "separate_broad": "PENDING_ON_COMPLETED_RECOVERY_ARTIFACTS"
+  },
+  "old_candidate": {
+    "commit": "102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2",
+    "official_fresh_replay_success": false,
+    "old_artifacts_or_receipts_reused_by_recovery": false,
+    "source_build_and_118_and_broad_summary_survive_as_history": true,
+    "source_lock_unchanged": true
+  },
+  "prepared_recovery_audit_commands": {
+    "evidence_path_revision": 2,
+    "files_sha256": {
+      "BROAD_INVOCATION.json": "39d69b27f274401d8daf8a5b80484605d554425715ce4c0af5398c2be592c31e",
+      "CLEAN118_INVOCATION.json": "572678ee337686a968645696aeeadcded5576cea02c2398a39388a1acf1aa8a2"
+    },
+    "runtime_lock_sha256": "5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc",
+    "scope": "Exact path-bound recovery command snapshots; not portable release inputs or evidence of success",
+    "status": "PREPARED_NOT_EXECUTED"
+  },
+  "private_canonical_checkpoint": "4cd4629bce642069da902be22b4433aa57dc7276",
+  "recovery_candidate": {
+    "commit": "b4c81242dd9c9cee6966a1e08bce0f94c66f1491",
+    "configuration_files": 3,
+    "selected_production_sources": 4406,
+    "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+    "tracked_candidate_files": 4411,
+    "tree": "ee490da49ba30447d92745140f48c1ae3c34f263"
+  },
+  "release_bridge_rules": [
+    "Require exact equality of all4406 relative source paths/hashes and3 configuration pins; count alone is insufficient.",
+    "Preserve new candidate commit/tree and actual source/runtime/runner/build identities on their own receipts.",
+    "Old historical successful summaries do not replace recovery final gates or missing detailed receipts.",
+    "A future release clone derives its actual HEAD/tree and new runtime paths, starts an initially empty project build, and does not require either local candidate commit.",
+    "Do not relabel direct verified steps as a completed packaged check.sh invocation."
+  ],
+  "schema": 1,
+  "status": "RECOVERY_IDENTITIES_AND_REPRODUCTION_MAPPING_ONLY_FINAL_GATES_PENDING"
+}

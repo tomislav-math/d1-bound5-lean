@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T17:04:31.388469+00:00",
+  "reviewer": "/root/graph39",
+  "status": "PASS_STATIC_TRANSPORT_HELPER_REVIEW_CONCRETE_PLAN_PENDING",
+  "files": {
+    "transport.py": "383ab515ab879472424c92287a6394a0d91b6e67d0d2681b3d3fcf7e729d696d",
+    "test_transport.py": "d5586e86fb7074ce348c5407b9698d054875a374c4ccaa3695605d1053f1b503",
+    "PROTOCOL.md": "dd5b7d9b9ea84508cd509302fe054ca85fcfe934113bd2822e6b319ff5dc83c0",
+    "VALIDATION.json": "9c0f47129f0d690493ec478c92472fc5a205f90bc94db01a3eb0dfaf0d8e1794"
+  },
+  "checks": [
+    "Only batch.tar.gz and PREPARED.json are permitted; each file is bounded to128MiB, chunks to300000 raw bytes and each emitted base64 piece to50000 characters.",
+    "Plan pins source file identity, byte length, chunk hashes and full hash. Emit checks source identity before/after the bounded read and verifies the chunk bytes.",
+    "Plan hash and canonical fixed Mac base/build/batch paths are validated before incoming/destination use. Existing destinations and output files are not overwritten.",
+    "Assembly requires exact incoming membership, rejects invalid/symlink chunks, verifies encoded/decoded length and chunk SHA, writes files exclusively, and checks whole output SHA/length.",
+    "Partial failure leaves incomplete files, cannot produce durable acceptance, and cannot be blindly retried over an existing destination.",
+    "Successful transport explicitly remains NOT_VERIFIED_NOT_DURABLE. Reviewed exporterba0c33df independently verifies arrival semantics and fsyncs durable storage.",
+    "Synthetic fixture loader executes tool source bytes directly; six owner-reported fixtures and Python3.8 syntax check were inspected, not rerun by reviewer."
+  ],
+  "operational_limits": [
+    "Root must approve the concrete archive/PREPARED hashes, actual build ID and batch number, destination and previous durable pointer before real transfer. This static receipt does not approve a future plan.",
+    "The helper does not compare transport build/batch labels with the PREPARED snapshot; concrete plan review must check that equality.",
+    "After partial assembly, the same numbered destination is intentionally unavailable without a separate reviewed recovery/quarantine action. Do not treat a new incoming UUID as permission to overwrite a partial final directory.",
+    "One coordinator owns each incoming directory; uncertain append results must be inspected by encoded length and decoded hash, never blindly repeated.",
+    "Runtime/source/build/Git mutation, actual capture or transport, and proof acceptance were not performed by this reviewer."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "AUDIT_IMPORT_UNION_COVERED_BY_EXISTING_RUNTIME",
+  "utc": "2026-10-23T16:44:38.484312+00:00",
+  "harnesses": {
+    "/workspace/scratch/fed64f41ca78/recovery-20261023/restored-tools/scripts/Audit.lean": {
+      "sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+      "imports": [
+        [
+          "D1Bound5"
+        ],
+        [
+          "Lean.Util.CollectAxioms"
+        ]
+      ]
+    },
+    "/workspace/scratch/fed64f41ca78/recovery-20261023/restored-tools/scripts/verification/FinalIntegrationAudit.lean": {
+      "sha256": "005f05312ef81f9a961e1c8adefb00b98e514cca3794adcc438118e4edf5d1ac",
+      "imports": [
+        [
+          "D1Bound5.MainTheorem"
+        ],
+        [
+          "Lean.Util.CollectAxioms"
+        ],
+        [
+          "Lean.Elab.Command"
+        ]
+      ]
+    },
+    "/workspace/scratch/fed64f41ca78/recovery-20261023/restored-tools/scripts/verification/FinalTargetAudit.lean": {
+      "sha256": "b21a0deae156faabd97ad38e87920a5f9f16700cad843c3e38e040c90aaa61d7",
+      "imports": [
+        [
+          "D1Bound5.MainTheorem"
+        ],
+        [
+          "Lean.Util.CollectAxioms"
+        ],
+        [
+          "Lean.Elab.Command"
+        ]
+      ]
+    }
+  },
+  "additional_mathlib_roots": [],
+  "full_builtin_runtime_retained": true,
+  "production_mathlib_roots": 93,
+  "downloaded_package_modules": 3492,
+  "unused_advertised_missing_paths_omitted": [
+    "/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/Cli/.lake/build/lib/lean"
+  ]
+}

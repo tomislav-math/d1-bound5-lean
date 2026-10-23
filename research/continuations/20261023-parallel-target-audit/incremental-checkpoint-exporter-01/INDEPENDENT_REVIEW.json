@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T17:00:12.602055+00:00",
+  "reviewer": "/root/graph39",
+  "status": "PASS_INDEPENDENT_STATIC_REVIEW_WITH_SYNTHETIC_EVIDENCE",
+  "reviewed_files": {
+    "checkpoint_export.py": "ba0c33df4af964330946840fc386874a67447339ffa3a31449625cf5b26a1a19",
+    "test_checkpoint_export.py": "4e30a1ba93440ea3cbad55973a9b9f7289c4a9446dcde5a4737ad53aa54a3b2c",
+    "README.md": "04609cf075d6128833d2e3fc0dcc6d9b0f4215b5fbc578b0b0cc025c2f26c2b5",
+    "SPEC_TEMPLATE.json": "e0040911eb3854197b41163390c238a125b83fec1bf483e3696084746b0360a1",
+    "LINUX_FIXTURE_REPORT.json": "3238ba1562ab271ee543f0d30791b1711bd0695be77b83f76e33d67fa71db971",
+    "LINUX_FIXTURE_LOG.txt": "4a637dbd6998e5cfa91c6678e3776000d546f7095bf6e1ac5d805bf75bf97ea6"
+  },
+  "remote_fixture_evidence": {
+    "MAC_FIXTURE_REPORT.json": "f1d88dc97a378ebb0f854196d33b15251855fb1a2f2d52efa6da79ecf929d80e",
+    "MAC_FIXTURE_LOG.txt": "44ee59182ec7f1aa8ddb1e1060064d71864ae7eb7d8fd5559348e914ea5f9a39",
+    "remote_source_test_readme_hashes_independently_matched": true
+  },
+  "resolved_review_findings": [
+    "Prepare output confinement previously used lexical absolute paths. Final code requires canonical absolute paths and rejects symlink ancestors and .. before creating output; protects source/build/runtime roots, extra files, metadata and predecessor inputs.",
+    "Arrival now fsyncs archive/prepared files and the full destination ancestor chain before exclusive confirmation, then syncs directory entries again. Original foreign-machine runtime paths are compared lexically rather than resolved through destination-machine aliases.",
+    "Fixtures now execute exact exporter source bytes via ModuleType plus compile/exec, with __file__ and before/after source-hash assertions; direct python -B test execution avoids hidden project bytecode inputs.",
+    "Documentation distinguishes the payload-byte cap from additional snapshot/tar metadata overhead."
+  ],
+  "reviewed_properties": [
+    "Only pinned accepted-pointer names are considered, in source-lock topological order; active/failed/unaccepted work and later arrivals are excluded.",
+    "Each captured original UUID receipt is checked against source, build ID, origin identity, exact compiler argv, log hash, complete sidecar membership and direct dependency identities.",
+    "Original source/configuration, origin, source/runtime locks, builder source, selected invocation START, pointer, receipt, compiler log and all artifact bundle bytes are retained.",
+    "Selected input identity/content and bundle membership are checked through copy and compression. No rewritten receipts or new compiler results are synthesized.",
+    "A previous batch can be used only through an explicitly hash-pinned DURABLE_ACCEPTED_SNAPSHOT with the same spec/build/identity; cumulative dependencies must exactly match.",
+    "Arrival independently verifies archive hash/length, safe regular unique member names, exact membership, all content hashes, archived original identities and cumulative receipt dependencies without extraction.",
+    "Output creation is exclusive; preparation is explicitly not durable, and arrival confirmation is explicitly not whole-build, audit, theorem or fresh-kernel acceptance."
+  ],
+  "test_evidence": {
+    "owner_linux_python": "3.12.14",
+    "owner_mac_python": "3.8.9",
+    "synthetic_cases_each": 33,
+    "exit_code_each": 0,
+    "reports_and_exact_pins_inspected": true,
+    "reviewer_reran_fixtures": false,
+    "historical_failed_Mac_alias_fixture_preserved": true
+  },
+  "limits": [
+    "No actual accepted build snapshot, transport or arrival was performed by this reviewer. No Lean, checker, Git or canonical-source operation was launched.",
+    "The caller must select persistent storage, coordinate nonhostile writers, require successful verifier exit and retain every predecessor archive/sidecar/confirmation. Pathnames and receipt status alone do not identify a storage service or prove hardware durability.",
+    "The newest cumulative confirmation references earlier artifact bytes; it does not replace those earlier archives.",
+    "The source/runtime reproduction records and terminal full-build/audit/fresh-replay gates remain separate. A different build identity requires a new checkpoint chain.",
+    "Source-code review and synthetic fixtures are not an actual-platform artifact-recovery or mathematical verification result."
+  ]
+}

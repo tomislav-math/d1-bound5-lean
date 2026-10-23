@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-10-23T17:23:26.378545+00:00",
+  "files": {
+    "CONTROL_MATRIX_ONLY.json": {
+      "bytes": 213409,
+      "sha256": "a60759c5c821845eab9c5751b21b93a219e93bc505de4dbbf8e9e325b5acc91f",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/CONTROL_MATRIX_ONLY.json"
+    },
+    "CONTROL_PREFIX_ONLY.json": {
+      "bytes": 211016,
+      "sha256": "b5df4edf37f7112ec070ad99b5c29cd22f3fcf62c2a6123afd0bb8747685e8df",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/CONTROL_PREFIX_ONLY.json"
+    },
+    "CONTROL_RETRY43.json": {
+      "bytes": 213401,
+      "sha256": "031b7dbceb3b513d1e543d4c8c6ea46d481b8395fc6955d2468bd901feb9149d",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/CONTROL_RETRY43.json"
+    },
+    "FAILED_PREFIX43_COMPILER.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/FAILED_PREFIX43_COMPILER.log"
+    },
+    "FAILED_PREFIX43_RECEIPT.json": {
+      "bytes": 1423,
+      "sha256": "5f8e79473436c443a45d886c20378f4d065993787fc2c24e3e29c68dc18c077d",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/FAILED_PREFIX43_RECEIPT.json"
+    },
+    "FAILED_SUMMARY.json": {
+      "bytes": 214403,
+      "sha256": "835dfad0bcae0409f42dd37bf73db7bb6228208dc0b01ae82547a94291ba1350",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/FAILED_SUMMARY.json"
+    },
+    "MANIFEST.json": {
+      "bytes": 1902,
+      "sha256": "3f05d562f66c9e3930b0b2dd2684ef4675a88b3c680a31b912f734253a7acc26",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/MANIFEST.json"
+    },
+    "MATRIX_ONLY_INVOCATION.json": {
+      "bytes": 1605,
+      "sha256": "2d806d8b0155b14798618ed26345dff0bdfa631ebe06b2e81eed688f45b52300",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/MATRIX_ONLY_INVOCATION.json"
+    },
+    "PREFIX_ONLY_INVOCATION.json": {
+      "bytes": 1605,
+      "sha256": "ea0be446914873a66c5589b4c3cd3daa5b63240c2cf499c8a56144d332f981bd",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/PREFIX_ONLY_INVOCATION.json"
+    },
+    "PREVIOUS_CONTROL.json": {
+      "bytes": 48,
+      "sha256": "7548d1d79080871eb48fec2e7e4f985bc292ba10ce2b81162ad4622aed613b6d",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/PREVIOUS_CONTROL.json"
+    },
+    "PREVIOUS_RESOURCE_HINTS.json": {
+      "bytes": 5795,
+      "sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/PREVIOUS_RESOURCE_HINTS.json"
+    },
+    "PROPOSAL.json": {
+      "bytes": 6300,
+      "sha256": "fbe2a7b2c8b07b443e558695b90dc7d3516690680829d9baadd32a96c2acba53",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/PROPOSAL.json"
+    },
+    "README.txt": {
+      "bytes": 958,
+      "sha256": "3a66dd5a45f4f516fea63e2df8440b6e4935f359784a209ca06529181a283e4c",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/README.txt"
+    },
+    "RESOURCE_HINTS_V3.json": {
+      "bytes": 42010,
+      "sha256": "3d4d6a8d901fb0076ee375ade19916ec1b39e4afbf7909016361919941a9ae95",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/RESOURCE_HINTS_V3.json"
+    },
+    "RETRY43_INVOCATION.json": {
+      "bytes": 1601,
+      "sha256": "c3c46c60bb036c7d75ddd9c5aef16f229110c19c2ae7253a27cbab8e345862d8",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/RETRY43_INVOCATION.json"
+    },
+    "ROOT_RETRY_REVIEW.json": {
+      "bytes": 639,
+      "sha256": "538051750615750ed04d5c695257416b19c182190447d8e0392a5b5cd27af570",
+      "source_path": "/tmp/d1bound5-operational-prefix-v3-20261023/ROOT_RETRY_REVIEW.json"
+    }
+  },
+  "notes": [
+    "Exact14 payload files pinned by the original MANIFEST plus that MANIFEST and separately added ROOT_RETRY_REVIEW. Original manifest intentionally excludes the later root review.",
+    "Isolated retry43 selected by root. Prefix-only and matrix-only templates are unexecuted optional proposals; their presence does not claim selection or execution. This archive contains no live observer outputs.",
+    "Only operational resource hints/control/invocations are proposed; proof source,runtime,builder,build identity are unchanged. Original failure/hints/control bytes are retained."
+  ],
+  "schema": 1,
+  "status": "IMMUTABLE_RESOURCE_PROPOSAL_AND_ROOT_REVIEW_NOT_EXECUTION_RESULT"
+}

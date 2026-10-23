@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T16:52:42.071604+00:00",
+  "reviewer": "/root/graph39",
+  "status": "PASS_INDEPENDENT_RUNTIME_IDENTITY_AND_COMPLETENESS_REVIEW",
+  "runtime_lock_sha256": "5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc",
+  "prior_runtime_lock_sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+  "scope": "Read-only prerequisite review; no project proof compilation or fresh kernel replay",
+  "bound_metadata": {
+    "RUNTIME_QUARANTINE.json": "e586a7990096ed0ca05f3c6f818075864eb23964b09f2ce730bbe26b3709d0b5",
+    "AUDIT_IMPORT_UNION.json": "0ca9ae96aff9124da10779a80f9219e068ed14edcdf6a4dd97d16b471de8f57c",
+    "CACHE_ROOTS_PRODUCTION.json": "e4e8f693426a6269ed7c77abcfbea4d89d1d1a254a73373227b1cdea6ea536a7",
+    "RELEASE_ARCHIVE_INVENTORY.json": "7d85fe9969a46e8c2c99da089b26af4d77d90145282e4cce41b5625e829e4d43",
+    "RELEASE_BOOTSTRAP.json": "9be15f56097032ca8f3103e23e04356d6b6a5fdcbe8a5fb596e0ddef5b7c1743",
+    "CACHE_BOOTSTRAP_RESULT.json": "7a205e46ba698c18f65252eadd82a3d031c0c93e1d58b695ca907d005f4e1826",
+    "RUNTIME_LOCK_V2_COMMAND.json": "91ff32cc8e65319a2ccf675c8a9f55f379f31771dfbebcaad812ff7f24baca65"
+  },
+  "independent_checks": {
+    "durable_old_and_new_locks_reconstructed_and_expected_full_hashes_matched": true,
+    "new_locked_files": 60423,
+    "same_prior_mapped_hashes": 60412,
+    "changed_prior_mapped_hashes": 11,
+    "changed_paths_all_Lake_trace_metadata": true,
+    "added_paths": 0,
+    "removed_prior_paths": 67578,
+    "removed_prior_official_runtime_paths_are_only_four_copy_temporary_names": true,
+    "prior_header_proxy_external_modules_covered": 5024,
+    "prior_header_proxy_required_artifact_parts_covered": 25120,
+    "missing_required_parts": 0,
+    "live_locked_member_inventory_equal": true,
+    "symlink_directories": 0,
+    "external_project_artifact_namespace_absent": true,
+    "live_first_package_owner_resolution_modules_checked": 5987,
+    "source_lock_hash_matched": true,
+    "source_lock_direct_external_imports_covered": 96,
+    "exact_production_Mathlib_roots": 93,
+    "actual_three_harness_source_hashes_and_import_headers_checked": true,
+    "quarantined_originals_absent_from_runtime_and_lock": true,
+    "quarantine_files_present_with_recorded_sizes_outside_all_locked_roots": true,
+    "small_lean_checker_and_shim_binary_hashes_recomputed": true,
+    "lock_hash_unchanged_after_review": true
+  },
+  "observations": [
+    "Full builtin runtime retained; the three audit harnesses add only Lean builtin imports beyond selected project modules.",
+    "New runtime paths are under /tmp/d1bound5-verification-20261023/runtime; locked inputs do not depend on old workspace binary paths.",
+    "The repeated shim entry in extra_files is redundant but harmless because files are keyed by canonical path.",
+    "RELEASE_BOOTSTRAP archive_removed_after_verified_extraction is a historical operation record, not a current absence guarantee; release archive/copy leftovers currently exist outside locked runtime roots."
+  ],
+  "limits": [
+    "No repeat full payload hash scan of the several-gigabyte runtime/cache was performed. Full file hashes derive from owner-generated V2 lock and comparison with prior pinned lock; small critical binaries were independently rehashed.",
+    "The selected module/part coverage calculation uses the prior reviewed source-header import proxy, augmented by live package-owner resolution and actual audit import headers. It is not a replacement for Lean import checks.",
+    "The newly selected builder must run its normal full initial runtime/source inventory and hash guard before proof compilation.",
+    "No existing clean-build receipts are accepted by this runtime review; new build identity and fresh origin are required.",
+    "This record makes no theorem or full fresh replay success claim."
+  ],
+  "source_or_git_mutation": false
+}

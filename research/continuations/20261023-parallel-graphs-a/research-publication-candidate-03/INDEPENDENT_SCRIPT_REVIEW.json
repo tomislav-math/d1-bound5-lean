@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T17:14:46.348379+00:00",
+  "status": "PASS_NARROW_STATIC_REVIEW_OWNER_SPEC_PENDING",
+  "reviewer": "/root/graph39",
+  "script_sha256": "93e967b39c71f8641065cbf6d805e12ddbeede36ea8f6980d3b8154d56610105",
+  "resolved_findings": [
+    "Canonical spelling equality rejects duplicate-slash/dot aliases that could otherwise evade exact Git-tree key classification.",
+    "Lean .ilean artifacts are excluded explicitly even if valid UTF8 text.",
+    "Duplicate owner-group names and duplicate list-manifest paths are rejected.",
+    "Candidate own metadata folder cannot be included as owner-reviewed payload."
+  ],
+  "reviewed_guards": [
+    "Only explicitly hash-pinned owner manifest/extra paths under research can be selected; selected regular files require canonical spelling and no symlink components.",
+    "Strict UTF8,5MiB cap,NUL exclusion and exact six credential patterns loaded from pinned canonical preflight apply to all selected payloads.",
+    "Base classification compares exact canonical paths and Git blob content with selected SHA, distinguishing identical,changed andnew files.",
+    "Selected bytes and file identity are rechecked; owner metadata/spec must remain pinned. HEAD,branch,raw index,index listing,policy andpreflight identities remain unchanged before/after generation.",
+    "Current progress is excluded unless root explicitly supplies the exact frozen canonical path SHA; no general mutable-progress permission is inferred.",
+    "Generated files use exclusive creation; script invokes only read-only Git operations and labels output as research candidate for root review, not proof or publication acceptance."
+  ],
+  "limits": [
+    "No script execution,owner-spec acceptance,Git mutation or remote mutation was performed by this reviewer.",
+    "Final owner specification,finalized package evidence and eventual concrete selected path set remain separately reviewable inputs.",
+    "Candidate own metadata is intentionally outside selected owner payload; root must include and policy-review it explicitly if publishing it.",
+    "Coordinated nonhostile writers are assumed; terminal guard errors can leave unaccepted new output files. Root must require successful terminal execution and fresh exact-index review."
+  ]
+}

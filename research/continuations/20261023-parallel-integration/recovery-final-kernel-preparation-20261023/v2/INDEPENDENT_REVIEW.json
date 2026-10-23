@@ -1,0 +1,32 @@
+{
+  "exact_json_delta_checks": {
+    "broad": "Only --invocation, its exact hash, and --out changed; selected exact118 invocation is revised572678ee",
+    "exact118": "Only --out changed to /tmp/d1bound5-verification-20261023/evidence/clean118",
+    "final_kernel": "Only freeze path in freeze/dry_run/execute and execute output path changed; plan command identical"
+  },
+  "input_sha256": {
+    "recovery-20261023/evidence-path-revision-02/BROAD_INVOCATION.diff": "ebe75b346555d4c95317884e375cde5464cce5c07cc253223177932713721a9f",
+    "recovery-20261023/evidence-path-revision-02/BROAD_INVOCATION.json": "39d69b27f274401d8daf8a5b80484605d554425715ce4c0af5398c2be592c31e",
+    "recovery-20261023/evidence-path-revision-02/CLEAN118_INVOCATION.diff": "34c75c014d086e665e16c76a9f6bd736d4cf1f2047485bf01a23f9f9304bf74b",
+    "recovery-20261023/evidence-path-revision-02/CLEAN118_INVOCATION.json": "572678ee337686a968645696aeeadcded5576cea02c2398a39388a1acf1aa8a2",
+    "recovery-20261023/evidence-path-revision-02/EXPECTED_AUDIT_GATE_BINDINGS.json": "05e31c6db7f3d43e0f8014ee355e3a65add3688fde4f3276f9ace4814554dca9",
+    "recovery-20261023/evidence-path-revision-02/RECOVERY_CONFIGURATION.diff": "fa0ab911a3454bebc580b549d66e411b19e87ff286bd46a636134d2b4ca5cde8",
+    "recovery-20261023/evidence-path-revision-02/RECOVERY_CONFIGURATION.json": "656570ee199f6c2e8155619948ed3739fd131835c20535074bd527c499480c6b",
+    "recovery-20261023/evidence-path-revision-02/REVISION_REVIEW_INPUT.json": "1835fd65690be54250bed200e5e814db165ee87a7839e117a8fd55f8340771aa"
+  },
+  "no_lean_freeze_checker_or_git_command": true,
+  "no_live_evidence_directory_created": true,
+  "prior_review_sha256": "a1354148f9769c0f25f63c081bc26812510e5353a0a38473d195edf407e142e6",
+  "proof_acceptance_claim": false,
+  "required_before_execution": "Root must record actual complete4406 plus exact118 and broad terminal acceptance, freeze exact inputs, and durably export audit/freezes/checkpoints before long official fresh replay. /tmp placement alone is not durable storage.",
+  "reviewer": "graph_batch_a",
+  "schema": 1,
+  "status": "OUTPUT_PATH_DELTA_REVIEW_PASS_ACTUAL_GATES_PENDING",
+  "unchanged_and_verified": [
+    "Exact helpers and final_kernel.py hashes still match pinned invocation/configuration values.",
+    "Source/runtime/build identity, official D1Bound5 --fresh command, memory/time resources, audit scopes and all acceptance guards remain unchanged.",
+    "Original v1 review bytes remain unchanged.",
+    "Revised expected-only audit map binds new exact118/broad invocation hashes and new configuration; no actual result is asserted."
+  ],
+  "utc": "2026-10-23T17:08:34.359461+00:00"
+}

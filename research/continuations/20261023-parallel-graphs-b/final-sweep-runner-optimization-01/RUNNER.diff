@@ -1,0 +1,130 @@
+--- fresh_project_build.before.py
++++ fresh_project_build.py
+@@ -7,6 +7,7 @@
+ installed-kernel replay. Python 3.8+, Linux/macOS, standard library only.
+ """
+ import argparse
++from bisect import bisect_left
+ import concurrent.futures
+ import fcntl
+ import hashlib
+@@ -15,6 +16,7 @@
+ from pathlib import Path
+ import re
+ import signal
++import stat
+ import subprocess
+ import sys
+ import threading
+@@ -82,6 +84,66 @@
+     base = Path(base)
+     return sorted({p for pattern in [base.name+'*', base.with_suffix('.ir').name+'*']
+                    for p in base.parent.glob(pattern) if p.is_file()})
++
++
++
++class FinalArtifactInventory:
++    """One stable artifact-tree snapshot for the drained final verification sweep.
++
++    Membership is indexed only; expected hashes still pass through Pins.verify.
++    A second complete metadata/membership snapshot must match before acceptance.
++    As with the build lock, this assumes coordinated, nonhostile filesystem writers.
++    """
++    def __init__(self, root):
++        self.root = Path(root)
++        self.metadata, self.names = self.capture()
++
++    @staticmethod
++    def metadata_of(path):
++        st = path.lstat()
++        check(not stat.S_ISLNK(st.st_mode), 'Symlink in final artifact inventory: ' + str(path))
++        check(stat.S_ISDIR(st.st_mode) or stat.S_ISREG(st.st_mode),
++              'Nonregular final artifact entry: ' + str(path))
++        return (st.st_dev, st.st_ino, st.st_mode, st.st_size, st.st_mtime_ns, st.st_ctime_ns)
++
++    def capture(self):
++        metadata = {}; names = {}
++        def visit(directory):
++            before = self.metadata_of(directory)
++            check(stat.S_ISDIR(before[2]), 'Missing final artifact directory: ' + str(directory))
++            metadata[str(directory)] = before
++            with os.scandir(str(directory)) as entries:
++                paths = sorted((directory/entry.name for entry in entries), key=lambda p: p.name)
++            files = []
++            for path in paths:
++                row = self.metadata_of(path)
++                if stat.S_ISDIR(row[2]): visit(path)
++                else:
++                    metadata[str(path)] = row; files.append(path.name)
++            names[str(directory)] = tuple(files)
++            check(self.metadata_of(directory) == before,
++                  'Artifact directory changed during inventory: ' + str(directory))
++        visit(self.root)
++        # Catch a replacement in an already visited subtree before indexing is used.
++        for path, expected in metadata.items():
++            check(self.metadata_of(Path(path)) == expected,
++                  'Artifact entry changed during inventory: ' + path)
++        return metadata, names
++
++    def files(self, base):
++        base = Path(base)
++        names = self.names.get(str(base.parent), ())
++        found = set()
++        for prefix in [base.name, base.with_suffix('.ir').name]:
++            position = bisect_left(names, prefix)
++            while position < len(names) and names[position].startswith(prefix):
++                found.add(base.parent/names[position]); position += 1
++        return sorted(found)
++
++    def verify_unchanged(self):
++        current_metadata, current_names = self.capture()
++        check(current_metadata == self.metadata and current_names == self.names,
++              'Artifact tree changed during final verification sweep')
+ 
+ 
+ def strip_comments(text):
+@@ -370,9 +432,10 @@
+         check(base.is_file(), 'Missing olean: ' + str(base))
+         return {str(p.relative_to(root or self.art)): sha(p) for p in artifact_files(base)}
+ 
+-    def guard_bundle(self, n, expected):
++    def guard_bundle(self, n, expected, final_inventory=None):
+         base = self.art/module_path(n, '.olean')
+-        actual = {str(p.relative_to(self.art)) for p in artifact_files(base)}
++        files = artifact_files(base) if final_inventory is None else final_inventory.files(base)
++        actual = {str(p.relative_to(self.art)) for p in files}
+         check(actual == set(expected), 'Artifact sidecar inventory changed: ' + n)
+         for p, h in expected.items(): self.pins.verify(self.art/p, h)
+ 
+@@ -389,13 +452,13 @@
+     def ancestors(self, n):
+         return self.ancestor_cache[n]
+ 
+-    def guard_dependencies(self, n):
++    def guard_dependencies(self, n, final_inventory=None):
+         ancestors = self.ancestors(n); self.guard_source(list(ancestors)+[n])
+         for dep in ancestors:
+             check(dep in self.accepted, 'Unaccepted dependency: ' + dep)
+             accepted = self.accepted[dep]
+             self.pins.verify(accepted['path'], accepted['receipt_sha256'])
+-            self.guard_bundle(dep, accepted['row']['artifact_bundle'])
++            self.guard_bundle(dep, accepted['row']['artifact_bundle'], final_inventory)
+ 
+     def resume_passes(self):
+         rejected = []
+@@ -583,10 +646,14 @@
+         if self.failed: self.summary('BUILD_FAILED', waiting, active); return 1
+         if waiting: self.summary('STOPPED_OR_DEFERRED_INCOMPLETE', waiting, active); return 3
+         self.guard_runtime(full=True); self.guard_source(self.names); self.validate_artifact_inventory()
++        # Workers have drained; use one indexed membership snapshot for this sweep only.
++        final_inventory = FinalArtifactInventory(self.art)
+         for n in self.names:
+             self.pins.verify(self.accepted[n]['path'], self.accepted[n]['receipt_sha256'])
+             self.pins.verify(self.accepted[n]['path'].parent/'compiler.log', self.accepted[n]['row']['log_sha256'])
+-            self.guard_dependencies(n); self.guard_bundle(n, self.accepted[n]['row']['artifact_bundle'])
++            self.guard_dependencies(n, final_inventory)
++            self.guard_bundle(n, self.accepted[n]['row']['artifact_bundle'], final_inventory)
++        final_inventory.verify_unchanged()
+         status = 'FRESH_PROJECT_SOURCE_BUILD_PASS' if not self.a.resume else 'PROJECT_SOURCE_BUILD_COMPLETE_RESUMED'
+         self.summary(status, waiting, active); return 0
+ 

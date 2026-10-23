@@ -1,0 +1,254 @@
+{
+  "broad_observer_canonical_installation": false,
+  "canonical_actions_performed": false,
+  "configuration_files_unchanged": 3,
+  "count": 25,
+  "delta_from_frozen_v2": [
+    "scripts/Audit.lean",
+    "scripts/verification/README.md",
+    "scripts/fresh_project_build.py",
+    "scripts/verification/clean_final_audits.py"
+  ],
+  "delta_from_previous_installation": [
+    "scripts/fresh_project_build.py",
+    "scripts/verification/clean_final_audits.py",
+    "records/verification-tools-sha256.txt"
+  ],
+  "git_actions_performed": false,
+  "preservation_phase": 1,
+  "readme_only_delta_from_frozen_v2": false,
+  "recovery_candidate_commit": "b4c81242dd9c9cee6966a1e08bce0f94c66f1491",
+  "recovery_candidate_tree": "ee490da49ba30447d92745140f48c1ae3c34f263",
+  "revision": 3,
+  "rows": [
+    {
+      "after_sha256": "a45a579195a0e787c3e1986e2e0ee671ca64fa82aa030d0c68908c1f61f5982d",
+      "before_sha256": "33c5f8a0eb94b1ab1196054d8189a968dbe6da8f19ae818d962e435ea72a43c2",
+      "meaning": "Preserve all legacy imports, append MainTheorem only",
+      "payload_package": "final-installation-plan",
+      "payload_path": "D1Bound5.lean",
+      "phase": 2,
+      "target": "D1Bound5.lean"
+    },
+    {
+      "after_sha256": "940982c822825c7d4b9e40b9c8897e84ff0682c61f6aef7a22e90796b13823e8",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "records/verification-history/20261023/Audit.before.lean",
+      "phase": 3,
+      "target": "records/verification-history/20261023/Audit.before.lean"
+    },
+    {
+      "after_sha256": "f9be79625f5ba7387e5165b46cd4d0175c24f64ccc8d9f0bea01f611e3a8652b",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "records/verification-history/20261023/GIT_SYNC_POLICY.before.md",
+      "phase": 3,
+      "target": "records/verification-history/20261023/GIT_SYNC_POLICY.before.md"
+    },
+    {
+      "after_sha256": "2326e0229f2ce0c55fb62894e2125dbda2ce7c531be85c11266d0e6615e5a771",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "records/verification-history/20261023/proof-source.before.sha256.txt",
+      "phase": 3,
+      "target": "records/verification-history/20261023/proof-source.before.sha256.txt"
+    },
+    {
+      "after_sha256": "71fda5b348750271a2680b5456988b5c6a9ae6f27161b96cddb10efc90da0468",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "records/verification-history/20261023/verification-tools.before.sha256.txt",
+      "phase": 3,
+      "target": "records/verification-history/20261023/verification-tools.before.sha256.txt"
+    },
+    {
+      "after_sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+      "before_condition": "exact previous hash",
+      "before_sha256": "940982c822825c7d4b9e40b9c8897e84ff0682c61f6aef7a22e90796b13823e8",
+      "payload_package": "final-installation-plan",
+      "payload_path": "scripts/Audit.lean",
+      "phase": 3,
+      "target": "scripts/Audit.lean"
+    },
+    {
+      "after_sha256": "54a9ab27026a78217bc0a45a29bf51f5e7e8bdcd109e760548c01c6d9b0bfedc",
+      "before_condition": "exact previous hash",
+      "before_sha256": "5168d9c6bafca978068d2ae1a3c6d537c5ff2e0442c419ebb7da8c7f2d79b8ac",
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/check.sh",
+      "phase": 3,
+      "target": "scripts/check.sh"
+    },
+    {
+      "after_sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "final-installation-plan",
+      "payload_path": "scripts/fresh_project_build.py",
+      "phase": 3,
+      "target": "scripts/fresh_project_build.py"
+    },
+    {
+      "after_sha256": "a2549507ce239f5b34d2b5870a5e52c296f71df702516ad4a7dcc314004d016a",
+      "before_condition": "exact previous hash",
+      "before_sha256": "0536a2d41b5cfbdf5b60e967b1be826f785ee19cc42cb29cc96be35f88fae472",
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/source_audit.py",
+      "phase": 3,
+      "target": "scripts/source_audit.py"
+    },
+    {
+      "after_sha256": "005f05312ef81f9a961e1c8adefb00b98e514cca3794adcc438118e4edf5d1ac",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/FinalIntegrationAudit.lean",
+      "phase": 3,
+      "target": "scripts/verification/FinalIntegrationAudit.lean"
+    },
+    {
+      "after_sha256": "b21a0deae156faabd97ad38e87920a5f9f16700cad843c3e38e040c90aaa61d7",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/FinalTargetAudit.lean",
+      "phase": 3,
+      "target": "scripts/verification/FinalTargetAudit.lean"
+    },
+    {
+      "after_sha256": "b7933056724c55d48f896c6b5c743ddd4efe9cb86612c32138b067cee0e88008",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "final-installation-plan",
+      "payload_path": "scripts/verification/README.md",
+      "phase": 3,
+      "target": "scripts/verification/README.md"
+    },
+    {
+      "after_sha256": "fb3d7193d470a7717e2eebedf92d17c1492f10006027010e01e3fd71d3be62ae",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/SOURCE_POLICY_VALIDATION.json",
+      "phase": 3,
+      "target": "scripts/verification/SOURCE_POLICY_VALIDATION.json"
+    },
+    {
+      "after_sha256": "82749dc3164e32b2273ec91bf2cb4b178283d9b92a8eab543534d4b583879883",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/check.py",
+      "phase": 3,
+      "target": "scripts/verification/check.py"
+    },
+    {
+      "after_sha256": "553767859804a0ae0fb29fe7bb6f2844d3d331b06898971a6994b2d533166830",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "final-installation-plan",
+      "payload_path": "scripts/verification/clean_final_audits.py",
+      "phase": 3,
+      "target": "scripts/verification/clean_final_audits.py"
+    },
+    {
+      "after_sha256": "d593d2bea0fff0fab2aa1bdeb6350ff7e1cf929599d5ac1d2f671774b2bd97cf",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/prepare_manifests.py",
+      "phase": 3,
+      "target": "scripts/verification/prepare_manifests.py"
+    },
+    {
+      "after_sha256": "0725e34a6da18722fe8b0efe620f6d29ba1557fbe0b6e908ed25f76cb7f4a51f",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/release_pins.json",
+      "phase": 3,
+      "target": "scripts/verification/release_pins.json"
+    },
+    {
+      "after_sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/resource_hints.json",
+      "phase": 3,
+      "target": "scripts/verification/resource_hints.json"
+    },
+    {
+      "after_sha256": "d7395bfa8af0914ed2d3cb9a7d298b32754553886c88f2c1dc375ff2857d65dd",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/reviewed_source_policy.json",
+      "phase": 3,
+      "target": "scripts/verification/reviewed_source_policy.json"
+    },
+    {
+      "after_sha256": "11c2f2406ed479a76d08fac8c228562bb2e9dec8e9de9d0198500d3e91243821",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/source_policy.py",
+      "phase": 3,
+      "target": "scripts/verification/source_policy.py"
+    },
+    {
+      "after_sha256": "eadd23a0c0da14f1b954f7fc2c7f52dd106eeb198321f5bbbabab7dd7a408fd4",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/test_check.py",
+      "phase": 3,
+      "target": "scripts/verification/test_check.py"
+    },
+    {
+      "after_sha256": "f66861eb84c87023191a3ed43877f99bf9672326f92960ba8aea9e1dc94d3038",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/test_prepare_manifests.py",
+      "phase": 3,
+      "target": "scripts/verification/test_prepare_manifests.py"
+    },
+    {
+      "after_sha256": "b3a505d7bf9609c877395dae6986efa7b8119af2b5ca0af04088f376db13455e",
+      "before_condition": "absent; refuse an unexpected existing file",
+      "before_sha256": null,
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "scripts/verification/test_source_policy.py",
+      "phase": 3,
+      "target": "scripts/verification/test_source_policy.py"
+    },
+    {
+      "after_sha256": "af5813a4364be84328e0e67bc940f8388c6539b435eb180b7a1fa66857bbe80b",
+      "before_condition": "exact previous hash",
+      "before_sha256": "2326e0229f2ce0c55fb62894e2125dbda2ce7c531be85c11266d0e6615e5a771",
+      "payload_package": "repository-verification-proposal-v2",
+      "payload_path": "records/proof-source-sha256.txt",
+      "phase": 4,
+      "target": "records/proof-source-sha256.txt"
+    },
+    {
+      "after_sha256": "c59350169bc424c4d620548c0e7e25d13a2f71e35360bd92edb37943220828a3",
+      "before_condition": "exact previous hash",
+      "before_sha256": "71fda5b348750271a2680b5456988b5c6a9ae6f27161b96cddb10efc90da0468",
+      "payload_package": "final-installation-plan",
+      "payload_path": "records/verification-tools-sha256.txt",
+      "phase": 4,
+      "target": "records/verification-tools-sha256.txt"
+    }
+  ],
+  "status": "PROPOSAL_ONLY_DO_NOT_EXECUTE_BEFORE_RELEASE_GATES",
+  "supersedes_installation_map_sha256": "cd83528b50a0f2a89b3225498c530efd4aa4defa9da0ebd34522ad69a0d5abfb",
+  "tool_manifest_rows": 75,
+  "unchanged_selected_namespace_files": 4405
+}

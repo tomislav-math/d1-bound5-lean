@@ -1,0 +1,64 @@
+{
+  "baseline": {
+    "anon": 146333696,
+    "current": 1222135808,
+    "events": {
+      "high": 0,
+      "low": 0,
+      "max": 4130469,
+      "oom": 2,
+      "oom_group_kill": 0,
+      "oom_kill": 2
+    },
+    "file": 874004480,
+    "floor": 349691904,
+    "kernel": 200339456,
+    "limit": 8589934592
+  },
+  "ending": {
+    "anon": 153010176,
+    "current": 6880960512,
+    "events": {
+      "high": 0,
+      "low": 0,
+      "max": 4131920,
+      "oom": 2,
+      "oom_group_kill": 0,
+      "oom_kill": 2
+    },
+    "file": 6422765568,
+    "floor": 458620928,
+    "kernel": 303669248,
+    "limit": 8589934592
+  },
+  "limitations": "Sampled VmRSS and kernel-reported VmHWM are observations, not a proven future bound or proof acceptance.",
+  "oom_deltas": {
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "peak_observed_child_fields": {
+    "RssAnon": 1482944512,
+    "RssFile": 444399616,
+    "RssShmem": 0,
+    "VmHWM": 1858072576,
+    "VmPeak": 24388186112,
+    "VmRSS": 1856331776,
+    "VmSize": 24388186112
+  },
+  "samples": 202,
+  "seconds": 101.2365971590043,
+  "selected_command": [
+    "/tmp/d1bound5-verification-20261023/runtime/lean-4.33.1-linux/bin/lean",
+    "-j1",
+    "-DautoImplicit=false",
+    "-R",
+    "/workspace/scratch/fed64f41ca78/recovery-20261023/source",
+    "-o",
+    "/tmp/d1bound5-verification-20261023/clean-build/attempts/D1Bound5.PellLightPrefixData43/db0ba2d01c3b45148321a6950bacafd7/stage/D1Bound5/PellLightPrefixData43.olean",
+    "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/PellLightPrefixData43.lean"
+  ],
+  "selected_proc": "/proc/132107",
+  "selected_start_ticks": "3823668",
+  "status": "OBSERVED_CHILD_EXITED"
+}
