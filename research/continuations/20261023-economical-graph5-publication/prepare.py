@@ -19,10 +19,15 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   handoff=R/'records/PRO_CONTINUATION_HANDOFF.md'
   assert '32/48 finite graph endpoints' in handoff.read_text()
   side="RIGHT" if "-right" in O.name else "LEFT"
-  entry=f"\nLatest checked archive: {O.name}. graph5 {side} heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails.\nGuarded builds, exact-type/transitive-axiom audit and {a['targeted_kernel_replays']} targeted installed-kernel replays passed.\nGraph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.\n"
+  scope=a.get("scope_description",f"graph5 closure witness rows {a['start_offset']}..{a['start_offset']+a['heads']-1} over all {a['global_closure_vertices']} original vertices" if a.get("global_closure_vertices") else f"graph5 {side} heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails")
+  entry=f"\nLatest checked archive: {O.name}. {scope}.\nGuarded builds, exact-type/transitive-axiom audit and {a['targeted_kernel_replays']} targeted installed-kernel replays passed.\nGraph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.\n"
   assert 'Latest checked archive: '+O.name not in handoff.read_text()
   handoff.write_text(handoff.read_text()+entry)
   paths=[handoff]+list(Path(__file__).resolve().parent.glob('*.py'))+[p for p in O.rglob('*') if p.is_file() and p.name not in {'PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','INDEX_REVIEW.json','POST_PUSH_RECEIPT.json'}]+[P/n for n in ['PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','POST_PUSH_RECEIPT.json','INDEX_REVIEW.json'] if (P/n).exists()]
+  if "parent-integration" in O.name:
+   paths += [p for p in (W.parent/"20261023-economical-graph5-parent-proposal").rglob("*") if p.is_file()]
+  if "closure" in O.name or "assembly" in O.name:
+   paths += [p for p in (W.parent/"20261023-graph5-closure").rglob("*") if p.is_file()]
   paths=sorted(set(str(p.relative_to(R)) for p in paths));assert not any('__pycache__' in x for x in paths)
   (O/'PUBLICATION_PATHS.txt').write_text('\n'.join(paths)+'\n');(O/'PUBLICATION_HASHES.json').write_text(json.dumps({p:sha(R/p) for p in paths},indent=2,sort_keys=True)+'\n')
   print(json.dumps({'status':'PUBLICATION_SCOPE_VALIDATED','paths':len(paths),'heads':a['heads'],'kernel_replays':a['targeted_kernel_replays']}))
