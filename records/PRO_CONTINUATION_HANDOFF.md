@@ -45,3 +45,19 @@ Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. M
 Latest checked archive: 20261023-economical-graph24-right000. graph24 RIGHT heads 0..100, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-left001. graph24 LEFT heads 101..247, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-right001. graph24 RIGHT heads 101..247, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-left002. graph24 LEFT heads 248..445, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-right002. graph24 RIGHT heads 248..445, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
