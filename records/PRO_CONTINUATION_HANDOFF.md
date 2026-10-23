@@ -55,3 +55,7 @@ adaptation for future large data modules when needed; reuse existing matching PA
 Latest checked archive: 20261023-economical-graph5-right000. graph5 RIGHT heads 0..105, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph5-right001. graph5 RIGHT heads 106..271, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
+Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
