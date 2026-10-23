@@ -65,3 +65,7 @@ Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. M
 Latest checked archive: 20261023-economical-graph19-parent-integration. graph19 both complete light-side certificates, six original parent theorem headers preserved.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph19-closure-pilot. graph19 closure witness rows 0..63 over all 893 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. MainTheorem UNPROVED, root integration unverified.
