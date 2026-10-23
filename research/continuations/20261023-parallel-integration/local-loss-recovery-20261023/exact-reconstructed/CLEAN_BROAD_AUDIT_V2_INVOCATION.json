@@ -1,0 +1,24 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_V2_COMMENT_FIX",
+  "argv": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/clean_broad_audit_v2.py",
+    "--invocation",
+    "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/CLEAN_AUDIT_INVOCATION.json",
+    "--invocation-sha256",
+    "0424734528208217a08f76635f49733b5268aecec86167f4217dc0bd7d4de17a",
+    "--broad-audit",
+    "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/broad-compatibility-v2/Audit.lean",
+    "--out",
+    "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-broad-audit-v2",
+    "--timeout",
+    "1800"
+  ],
+  "runner_sha256": "c366b42fa40ac2f84e6bc5e2a7b7539f05e82021ccc0d736a4d4f775e4cd5db9",
+  "broad_source_sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+  "exact118_helper_sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87",
+  "requires": "Completed clean4406source build and successful exact118audits with matching frozen inputs",
+  "main_theorem_complete": false,
+  "supersedes_failed_invocation_sha256": "36a9920cc8cec0d85ba3e220e95afb1ae748ff7f21cf71479665bdeb20279aae",
+  "comment_fix": "Only /-- to /- before the final run_cmd; every other Lean source byte unchanged."
+}

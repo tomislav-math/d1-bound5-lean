@@ -1,0 +1,47 @@
+{
+  "accepted_fresh_project_modules": 4406,
+  "audits": [
+    {
+      "audit_sha256": "005f05312ef81f9a961e1c8adefb00b98e514cca3794adcc438118e4edf5d1ac",
+      "command": [
+        "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+        "-j1",
+        "-DautoImplicit=false",
+        "-R",
+        "/workspace/scratch/fed64f41ca78/clean-checkout",
+        "/workspace/scratch/fed64f41ca78/clean-checkout/verification/FinalIntegrationAudit.lean"
+      ],
+      "exit_code": 0,
+      "expected_pass_markers": 114,
+      "log_sha256": "b069a4524212745513d68b418bc204b368ac348b6332285abca5c818b539b6ed",
+      "name": "FinalIntegrationAudit",
+      "observed_pass_markers": 114,
+      "seconds": 23.650626967995777
+    },
+    {
+      "audit_sha256": "b21a0deae156faabd97ad38e87920a5f9f16700cad843c3e38e040c90aaa61d7",
+      "command": [
+        "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+        "-j1",
+        "-DautoImplicit=false",
+        "-R",
+        "/workspace/scratch/fed64f41ca78/clean-checkout",
+        "/workspace/scratch/fed64f41ca78/clean-checkout/verification/FinalTargetAudit.lean"
+      ],
+      "exit_code": 0,
+      "expected_pass_markers": 4,
+      "log_sha256": "b824675d347aee31f43607fccce12a03e3acce6082ed35d201e06a854d32f0de",
+      "name": "FinalTargetAudit",
+      "observed_pass_markers": 4,
+      "seconds": 4.52858723999816
+    }
+  ],
+  "fresh_kernel_replay": "REQUIRED_SEPARATE_GATE",
+  "input_freeze_sha256": "698a3a0fecaa49f8451b7fc3e55df85802cab02e14bded5b7a10504dd9b00c95",
+  "main_theorem_complete": false,
+  "post_audit_all_input_hashes_equal": true,
+  "runtime_lock_sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+  "seconds": 242.44791649800027,
+  "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+  "status": "CLEAN_SOURCE_BUILD_EXACT_TYPE_AXIOM_AUDITS_PASS"
+}

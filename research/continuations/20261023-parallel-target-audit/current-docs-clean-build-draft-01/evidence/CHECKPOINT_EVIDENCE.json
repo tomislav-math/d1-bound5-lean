@@ -1,0 +1,138 @@
+{
+  "broad_v1": {
+    "exit_code": 1,
+    "reason": "Doc-comment /-- before run_cmd at line123; markers do not override failure",
+    "status": "FAILED_NO_BROAD_ACCEPTANCE"
+  },
+  "broad_v2": {
+    "all_guards_equal": true,
+    "exit_code": 0,
+    "markers": {
+      "exported_project_declarations": 29145,
+      "including_private_declarations": 29602,
+      "independent_target_markers": 4,
+      "individual_exported_audit_lines": 29145
+    },
+    "status": "CLEAN_BROAD_COMPATIBILITY_AUDIT_PASS"
+  },
+  "candidate": {
+    "artifact_root": "/workspace/scratch/fed64f41ca78/clean-build/artifacts",
+    "build_id": "5dc783eabefa40a9a0919cb489496962",
+    "commit": "102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2",
+    "configuration_sha256": {
+      "lake-manifest.json": "7ba6f92faaef8900c85a20ac695495111285a1b0c355cb1441a69b34ba9500f4",
+      "lakefile.lean": "fa17c8e0e386fe8ffadcab88a9a328337c3db37cc7d64681e7ca26836c73bfb3",
+      "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+    },
+    "identity_hash": "7ca96197709d13bf0a3cbf07da2358e16c6a37cf75b267610989d2afb47c1891",
+    "runtime_lock_sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+    "selected_committed_blob_count": 4412,
+    "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+    "source_root": "/workspace/scratch/fed64f41ca78/clean-checkout",
+    "tree": "b6dd4139f839698609352d7f9866b4b429d32475"
+  },
+  "canonical_installation": "NOT_PERFORMED_BY_THIS_DRAFT",
+  "clean_build": {
+    "active": 0,
+    "actual_outer_exit_0": "Reported by root; summary and guarded per-module provenance are retained",
+    "completed": 4406,
+    "completed_through_guarded_resumes": true,
+    "empty_project_origin": true,
+    "expected": 4406,
+    "failed": 0,
+    "status": "PROJECT_SOURCE_BUILD_COMPLETE_RESUMED",
+    "waiting": 0
+  },
+  "exact118": {
+    "exit_codes": [
+      0,
+      0
+    ],
+    "markers": [
+      114,
+      4
+    ],
+    "postflight_equal": true,
+    "status": "CLEAN_SOURCE_BUILD_EXACT_TYPE_AXIOM_AUDITS_PASS"
+  },
+  "fresh_full_root_kernel_replay": "IN_PROGRESS_REPORTED_BY_ROOT; freeze/dry-run PASS, rootexec92175; no successful final replay receipt claimed",
+  "global_final_acceptance": false,
+  "live_tested_candidate_4406_source_and_3_config_hashes_equal": true,
+  "log_hashes_revalidated": {
+    "lean-offload/results-clean-broad-audit-v2/Audit.log": "f857510ab877e870aad1e507ae615c34c7941588f26d94e152e4d5cfffd34509",
+    "lean-offload/results-clean-broad-audit/Audit.log": "b8c6f2dee23d8d845c824e1ec8437b8bd7c51cf2b65de6ba80f512a957651dce",
+    "lean-offload/results-clean-final-audits/FinalIntegrationAudit.log": "b069a4524212745513d68b418bc204b368ac348b6332285abca5c818b539b6ed",
+    "lean-offload/results-clean-final-audits/FinalTargetAudit.log": "b824675d347aee31f43607fccce12a03e3acce6082ed35d201e06a854d32f0de"
+  },
+  "portable_check_sh_executed_end_to_end": false,
+  "proof_source_to_manifest_map_equality": true,
+  "source_receipts": {
+    "clean-build/ORIGIN.json": {
+      "bytes": 2179,
+      "local_path": "/workspace/scratch/fed64f41ca78/clean-build/ORIGIN.json",
+      "sha256": "082a76e73032059147d45ec53b6a878cee97d7104a7653d8f9d8a0ae105feaae",
+      "snapshot_copy": "evidence/CLEAN_BUILD_ORIGIN.json"
+    },
+    "clean-build/SUMMARY.json": {
+      "bytes": 214212,
+      "local_path": "/workspace/scratch/fed64f41ca78/clean-build/SUMMARY.json",
+      "sha256": "a1f72a5787940ae47eec852c68c4bea88f00e845371dfd67a425728a694523af",
+      "snapshot_copy": "evidence/CLEAN_BUILD_SUMMARY.json"
+    },
+    "lean-offload/final-installation-plan-02/FINAL_INSTALL_MAP.json": {
+      "bytes": 11051,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/final-installation-plan-02/FINAL_INSTALL_MAP.json",
+      "sha256": "cd83528b50a0f2a89b3225498c530efd4aa4defa9da0ebd34522ad69a0d5abfb",
+      "snapshot_copy": null
+    },
+    "lean-offload/final-installation-plan-02/records/verification-tools-sha256.txt": {
+      "bytes": 7739,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/final-installation-plan-02/records/verification-tools-sha256.txt",
+      "sha256": "8bbb2035cb90b849e96a0d1b5b9b0f3e37eb29c44fa4c92b4c502fa42f4875b9",
+      "snapshot_copy": null
+    },
+    "lean-offload/fresh-durable-locks/CLEAN_SOURCE_LOCK.json": {
+      "bytes": 2007397,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/fresh-durable-locks/CLEAN_SOURCE_LOCK.json",
+      "sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+      "snapshot_copy": null
+    },
+    "lean-offload/repository-verification-proposal/records/proof-source-sha256.txt": {
+      "bytes": 495373,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/repository-verification-proposal/records/proof-source-sha256.txt",
+      "sha256": "af5813a4364be84328e0e67bc940f8388c6539b435eb180b7a1fa66857bbe80b",
+      "snapshot_copy": null
+    },
+    "lean-offload/results-clean-broad-audit-v2/SUMMARY.json": {
+      "bytes": 1128,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-broad-audit-v2/SUMMARY.json",
+      "sha256": "ca6cf12fca5019030ad4eaf5ef4c69467f99f539f224f54aec97ac32b1288908",
+      "snapshot_copy": "evidence/BROAD_V2_SUMMARY.json"
+    },
+    "lean-offload/results-clean-broad-audit/SUMMARY.json": {
+      "bytes": 811,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-broad-audit/SUMMARY.json",
+      "sha256": "3f59624818a3e49c1e2705de1182e33a86650aa45ae3dcf1f088ced8dd2a17f2",
+      "snapshot_copy": "evidence/BROAD_V1_FAILED_SUMMARY.json"
+    },
+    "lean-offload/results-clean-final-audits/INPUT_FREEZE.json": {
+      "bytes": 4629147,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-final-audits/INPUT_FREEZE.json",
+      "sha256": "698a3a0fecaa49f8451b7fc3e55df85802cab02e14bded5b7a10504dd9b00c95",
+      "snapshot_copy": null
+    },
+    "lean-offload/results-clean-final-audits/SUMMARY.json": {
+      "bytes": 1925,
+      "local_path": "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-final-audits/SUMMARY.json",
+      "sha256": "5b5a21c944be0923563a6948ce37a39506b8ae9c69a31353fc750f8b2e79db14",
+      "snapshot_copy": "evidence/CLEAN_118_SUMMARY.json"
+    }
+  },
+  "status": "RESEARCH_DOCUMENTATION_DRAFT_NOT_INSTALLED_FINAL_KERNEL_PENDING",
+  "unchanged_original_documents": {
+    "LOCAL_START_HERE.txt": "2f395f205b085186c9a0a4713faee59741233d5c4a0b3e399c0d6b745191189a",
+    "README.md": "6854a48fb949019dddd5a0a1dfbc6c3686fbafa029b67f8157becb0cba4e6695",
+    "STATUS.md": "422d07136bbb9ad5c3240576bf92e101e54e48745a71253f2e7c3f4b97d2aeeb"
+  },
+  "utc": "2026-10-23T16:25:35.882694+00:00"
+}

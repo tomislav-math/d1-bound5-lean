@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "created_utc": "2026-10-23T16:35:30.873527+00:00",
+  "status": "PASS_EXACT_RECOVERY_IDENTITY_AND_STATIC_DELTA_REVIEW",
+  "reviewer": "/root/graph39",
+  "review_kind": "New independent review after workspace loss; not byte-identical recreation of lost receipt66bdced8",
+  "recovery_manifest_sha256": "60fef8473113accbdf242fd261710f86bc45897b03ab946a3311a0c2ac05e943",
+  "checked_files": [
+    {
+      "path": "exact-reconstructed/broad-compatibility-v2/Audit.lean",
+      "sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+      "bytes": 5534,
+      "original_durable_bytes_equal": null
+    },
+    {
+      "path": "exact-reconstructed/clean_broad_audit_v2.py",
+      "sha256": "c366b42fa40ac2f84e6bc5e2a7b7539f05e82021ccc0d736a4d4f775e4cd5db9",
+      "bytes": 11699,
+      "original_durable_bytes_equal": null
+    },
+    {
+      "path": "exact-reconstructed/CLEAN_BROAD_AUDIT_V2_INVOCATION.json",
+      "sha256": "c8ef385487ebf8cfecdf330e47668cf8d6037f75ccfe9a5f6472d2aacf68a1de",
+      "bytes": 1337,
+      "original_durable_bytes_equal": null
+    },
+    {
+      "path": "durable-original-summaries/CLEAN_BUILD_SUMMARY.json",
+      "sha256": "a1f72a5787940ae47eec852c68c4bea88f00e845371dfd67a425728a694523af",
+      "bytes": 214212,
+      "original_durable_bytes_equal": true
+    },
+    {
+      "path": "durable-original-summaries/CLEAN_BUILD_ORIGIN.json",
+      "sha256": "082a76e73032059147d45ec53b6a878cee97d7104a7653d8f9d8a0ae105feaae",
+      "bytes": 2179,
+      "original_durable_bytes_equal": true
+    },
+    {
+      "path": "durable-original-summaries/CLEAN_118_SUMMARY.json",
+      "sha256": "5b5a21c944be0923563a6948ce37a39506b8ae9c69a31353fc750f8b2e79db14",
+      "bytes": 1925,
+      "original_durable_bytes_equal": true
+    },
+    {
+      "path": "durable-original-summaries/BROAD_V2_SUMMARY.json",
+      "sha256": "ca6cf12fca5019030ad4eaf5ef4c69467f99f539f224f54aec97ac32b1288908",
+      "bytes": 1128,
+      "original_durable_bytes_equal": true
+    },
+    {
+      "path": "durable-original-summaries/BROAD_V1_FAILED_SUMMARY.json",
+      "sha256": "3f59624818a3e49c1e2705de1182e33a86650aa45ae3dcf1f088ced8dd2a17f2",
+      "bytes": 811,
+      "original_durable_bytes_equal": true
+    },
+    {
+      "path": "OBSERVATIONS_FROM_TOOL_HISTORY.json",
+      "sha256": "d64652c8a63de2366decb84899a7db6a58ce2276ce768e87e3ee12b87c83f4cd",
+      "bytes": 3301,
+      "original_durable_bytes_equal": null
+    }
+  ],
+  "checks": [
+    "All9 manifest files independently rehashed with byte lengths.",
+    "All5 exact-existing durable summary copies compared byte-for-byte with their original archived locations.",
+    "Recovered Audit, runner and invocation hashes match the independently retained pre-loss identities.",
+    "Reversing only /- Optional broad compatibility audit. to /-- Optional broad compatibility audit. produces original Audit SHA b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61.",
+    "Reversing only BROAD_SHA pin produces reviewed original runner SHA89dc770741a3d280a1b8498f507bce3fa6b124634793c8b6f2d1ee40bd4d9db5.",
+    "Invocation preserves exact118 helper and invocation pins, timeout1800, and separate v2 output."
+  ],
+  "limits": [
+    "This static identity review does not execute Lean or prove the theorem.",
+    "Surviving summaries record historical build/audit outcomes; missing detailed receipts and logs are not recreated or implicitly accepted.",
+    "Fresh replay was reported interrupted with exit130 by coordinator; no full fresh replay acceptance is claimed.",
+    "Original lost peer review receipt66bdced8 is not recovered.",
+    "No canonical sources, Git index, or installation paths were modified."
+  ]
+}

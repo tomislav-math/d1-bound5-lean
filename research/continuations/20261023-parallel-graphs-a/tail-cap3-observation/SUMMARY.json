@@ -1,0 +1,292 @@
+{
+  "actual_mathlib_compiler_histogram": {
+    "1": 20,
+    "2": 28,
+    "3": 72
+  },
+  "all_active_slots_without_observed_lean_histogram": {
+    "0": 86,
+    "1": 32,
+    "2": 2
+  },
+  "average_cgroup_cpu_cores": 3.3225117077517994,
+  "cgroup_cpu_stat_delta": {
+    "burst_usec": 0,
+    "nice_usec": 0,
+    "nr_bursts": 0,
+    "nr_periods": 605,
+    "nr_throttled": 0,
+    "system_usec": 46837044,
+    "throttled_usec": 0,
+    "usage_usec": 200941901,
+    "user_usec": 154104856
+  },
+  "cgroup_nonreclaimable_mib": {
+    "max": 2252.1875,
+    "min": 1184.69921875
+  },
+  "compiler_started_by_observer": false,
+  "completed_in_window": 31,
+  "control_or_source_changes": false,
+  "distinct_sampled_mathlib_modules": 32,
+  "duration_seconds": 60.478914350002015,
+  "first": {
+    "active_scheduler_slots": {
+      "mathlib": 3
+    },
+    "actual_compilers": {
+      "mathlib": 2,
+      "pure": 1
+    },
+    "completed": 3322,
+    "ready_waiting": {
+      "mathlib": 29,
+      "pure": 1
+    },
+    "remaining": {
+      "mathlib": 1083,
+      "pure": 1
+    }
+  },
+  "last": {
+    "active_scheduler_slots": {
+      "mathlib": 2
+    },
+    "actual_compilers": {
+      "mathlib": 3
+    },
+    "completed": 3353,
+    "ready_waiting": {
+      "mathlib": 25
+    },
+    "remaining": {
+      "mathlib": 1053
+    }
+  },
+  "limits": [
+    "Scheduler/process snapshots are not atomic; an active slot without observed Lean may be guarding, starting or collecting a finished process.",
+    "RssAnon is not exact private/PSS; smaps_rollup unavailable.",
+    "Short sample peaks and future larger modules remain unbounded by this measurement.",
+    "Cgroup CPU includes orchestration, not just Lean."
+  ],
+  "mathlib_VmHWM_mib": {
+    "largest_module_max": 3573.9765625,
+    "median_module_max": 3220.400390625
+  },
+  "mathlib_sampled_RssAnon_mib": {
+    "largest_module_max": 285.37890625,
+    "median_module_max": 245.5234375
+  },
+  "mathlib_scheduler_slot_histogram": {
+    "2": 93,
+    "3": 27
+  },
+  "maximum_ready_mathlib": 31,
+  "memory_events_delta": {
+    "high": 0,
+    "low": 0,
+    "max": 0,
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "minimum_ready_mathlib": 25,
+  "per_module_sample_maxima_kib": {
+    "D1Bound5.CoherentDirectFour": {
+      "RssAnon": 275972,
+      "RssFile": 3041248,
+      "VmHWM": 3317220,
+      "samples": 12
+    },
+    "D1Bound5.CoherentFourParameters": {
+      "RssAnon": 266824,
+      "RssFile": 3044028,
+      "VmHWM": 3315268,
+      "samples": 11
+    },
+    "D1Bound5.CoherentParameterForms": {
+      "RssAnon": 267224,
+      "RssFile": 3039356,
+      "VmHWM": 3307196,
+      "samples": 10
+    },
+    "D1Bound5.CoherentRetainedAnalyticData": {
+      "RssAnon": 241420,
+      "RssFile": 3000652,
+      "VmHWM": 3242072,
+      "samples": 5
+    },
+    "D1Bound5.CoherentRetainedGap": {
+      "RssAnon": 264104,
+      "RssFile": 3042724,
+      "VmHWM": 3306828,
+      "samples": 10
+    },
+    "D1Bound5.CoherentRetainedIntegral": {
+      "RssAnon": 254184,
+      "RssFile": 3040388,
+      "VmHWM": 3299840,
+      "samples": 10
+    },
+    "D1Bound5.CoherentRetainedMixedForms": {
+      "RssAnon": 264628,
+      "RssFile": 3051684,
+      "VmHWM": 3316312,
+      "samples": 8
+    },
+    "D1Bound5.CoherentRetainedMixedFourSizes": {
+      "RssAnon": 253424,
+      "RssFile": 3038792,
+      "VmHWM": 3292472,
+      "samples": 8
+    },
+    "D1Bound5.CoherentRetainedMixedGap": {
+      "RssAnon": 254384,
+      "RssFile": 3041156,
+      "VmHWM": 3295540,
+      "samples": 9
+    },
+    "D1Bound5.CoherentRetainedMixedSizes": {
+      "RssAnon": 261364,
+      "RssFile": 3005304,
+      "VmHWM": 3266668,
+      "samples": 7
+    },
+    "D1Bound5.CoherentThreeSeparated": {
+      "RssAnon": 241260,
+      "RssFile": 3043096,
+      "VmHWM": 3285528,
+      "samples": 6
+    },
+    "D1Bound5.CoherentThreeZeroBootstrap": {
+      "RssAnon": 241520,
+      "RssFile": 3035936,
+      "VmHWM": 3277456,
+      "samples": 5
+    },
+    "D1Bound5.CoherentTwoGap": {
+      "RssAnon": 252624,
+      "RssFile": 3037860,
+      "VmHWM": 3291744,
+      "samples": 8
+    },
+    "D1Bound5.CoherentTwoMainGap": {
+      "RssAnon": 244324,
+      "RssFile": 3038300,
+      "VmHWM": 3283284,
+      "samples": 6
+    },
+    "D1Bound5.CoherentTwoUpper": {
+      "RssAnon": 277864,
+      "RssFile": 3038736,
+      "VmHWM": 3316600,
+      "samples": 6
+    },
+    "D1Bound5.CrossBlockGrowth": {
+      "RssAnon": 255240,
+      "RssFile": 3020684,
+      "VmHWM": 3278340,
+      "samples": 9
+    },
+    "D1Bound5.CrossBlockTuple": {
+      "RssAnon": 245876,
+      "RssFile": 3019144,
+      "VmHWM": 3266356,
+      "samples": 7
+    },
+    "D1Bound5.CrossBlockUpper": {
+      "RssAnon": 292228,
+      "RssFile": 3015696,
+      "VmHWM": 3307924,
+      "samples": 11
+    },
+    "D1Bound5.DescentDenominator": {
+      "RssAnon": 241540,
+      "RssFile": 3014516,
+      "VmHWM": 3257412,
+      "samples": 8
+    },
+    "D1Bound5.EvenDeterminant": {
+      "RssAnon": 242912,
+      "RssFile": 3018572,
+      "VmHWM": 3261484,
+      "samples": 8
+    },
+    "D1Bound5.FiniteA3IntegralRows": {
+      "RssAnon": 267636,
+      "RssFile": 3382816,
+      "VmHWM": 3650536,
+      "samples": 18
+    },
+    "D1Bound5.FiniteA4IntegralRows": {
+      "RssAnon": 269884,
+      "RssFile": 3380464,
+      "VmHWM": 3650348,
+      "samples": 17
+    },
+    "D1Bound5.FiniteA5IntegralRows": {
+      "RssAnon": 272244,
+      "RssFile": 3387508,
+      "VmHWM": 3659752,
+      "samples": 25
+    },
+    "D1Bound5.FiniteMFullRing": {
+      "RssAnon": 249184,
+      "RssFile": 3082848,
+      "VmHWM": 3333740,
+      "samples": 7
+    },
+    "D1Bound5.FiniteMIntegralRows": {
+      "RssAnon": 237336,
+      "RssFile": 3022348,
+      "VmHWM": 3259684,
+      "samples": 5
+    },
+    "D1Bound5.FiniteMInterval": {
+      "RssAnon": 243304,
+      "RssFile": 3081880,
+      "VmHWM": 3325184,
+      "samples": 9
+    },
+    "D1Bound5.FiniteMRowBound": {
+      "RssAnon": 250208,
+      "RssFile": 3088036,
+      "VmHWM": 3338320,
+      "samples": 7
+    },
+    "D1Bound5.FiniteN2FullRing": {
+      "RssAnon": 239420,
+      "RssFile": 3079016,
+      "VmHWM": 3320064,
+      "samples": 6
+    },
+    "D1Bound5.FiniteN2IntegralRows": {
+      "RssAnon": 244452,
+      "RssFile": 3015244,
+      "VmHWM": 3259696,
+      "samples": 13
+    },
+    "D1Bound5.FiniteN2RowBound": {
+      "RssAnon": 241372,
+      "RssFile": 3081192,
+      "VmHWM": 3322564,
+      "samples": 7
+    },
+    "D1Bound5.FiniteN3IntegralRows": {
+      "RssAnon": 240824,
+      "RssFile": 3007912,
+      "VmHWM": 3250784,
+      "samples": 13
+    },
+    "D1Bound5.FinitePIntegralRows": {
+      "RssAnon": 18344,
+      "RssFile": 374560,
+      "VmHWM": 392904,
+      "samples": 1
+    }
+  },
+  "proof_completion_claim": false,
+  "samples": 120,
+  "samples_at_mathlib_cap_with_more_ready": 27,
+  "status": "TAIL_CAP3_BOTTLENECK_OBSERVATION_COMPLETE"
+}

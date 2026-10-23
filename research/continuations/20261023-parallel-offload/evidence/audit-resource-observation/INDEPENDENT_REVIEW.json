@@ -1,0 +1,33 @@
+{
+  "status": "PASS_INDEPENDENT_RESOURCE_OBSERVER_REVIEW_NO_AUDIT_EXECUTION",
+  "utc": "2026-10-23T13:57:30.375170+00:00",
+  "reviewed_files_sha256": {
+    "measure_invocation.py": "7679dea565323e50d874bf096c0eb509d47033e1a35a26ca31eedcc806e7716f",
+    "test_observer.py": "f4c561a5a0ed4ce63121c543dcbe1cdb1d2d76b3375b82ad91e2dfa009288ef9",
+    "VALIDATION.json": "efd6cdb8f96ea974001e7af3e1129540a9efa61dc276cf33afed898db00cf476",
+    "PREPARED_COMMANDS.json": "17820a2639fe3a54ad534f9e50f56b9f1794ad4357941d2f441cb25b6df04caa",
+    "README.md": "e710eb31545df07a0c1b7a4e46798a5d6fc2a5e44642d7d91ef3cdf5817a4ac2"
+  },
+  "fixed_findings": [
+    "Output confinement originally checked direct argv only; final code confines output to the observer observations directory and checks recursively pinned nested invocation paths.",
+    "Exceptions after child creation could leave the child running; final code checks waitability, terminates/reaps the owned child session with escalation and records incomplete observation."
+  ],
+  "reviewed_behavior": [
+    "Dry-run is default; execution requires explicit --execute.",
+    "The pinned audit argv is used without a shell or cwd/environment/stdio overrides. The distinct child session is explicitly disclosed and supports owned signal forwarding.",
+    "Exact invocation and nested invocation hashes, runner hash and observer hash are recorded, with after-execution equality booleans.",
+    "Output directories and files are new and cannot overwrite prior evidence; candidate/build/audit output paths are excluded.",
+    "Normal child exit codes and signal-derived shell status are retained. Observation success is distinct from child/audit success.",
+    "Linux wait4 produces raw accounting for the waited outer audit process and accounted descendants. The report explicitly avoids interpreting largest-process high-water as simultaneous process-tree RSS or per-Lean attribution."
+  ],
+  "owner_fixture_tests": 5,
+  "owner_fixture_status": "PASS_NON_LEAN_FIXTURES_ONLY",
+  "no_reviewer_controller_or_lean_execution": true,
+  "no_reviewer_production_or_git_mutation": true,
+  "remaining_blockers": [],
+  "limits": [
+    "Resource observations do not weaken or replace source, build, exact-type, axiom, broad or fresh-kernel acceptance gates.",
+    "Observer failure, SIGKILL or host failure may leave incomplete evidence, which is never proof acceptance.",
+    "Existing freeze semantics require no noncooperating transient writers."
+  ]
+}

@@ -1,0 +1,42 @@
+# Prepared recipe only; not executed. Read FINAL_INSTALLATION_PLAN.md first.
+# Execute only after all release gates, successful preservation, and exact before/payload hash review.
+# D1_REPO, D1_V2 and D1_FINAL are the absolute paths defined in that plan.
+# These copies do not perform the required guards; the coordinator must complete them first.
+# Stop after any failure/interruption. Compare affected before/after hashes; review recovery before continuing.
+# These plain copies are non-atomic. Never restart preservation after umbrella installation.
+
+
+# Phase 2
+cp "$D1_FINAL/D1Bound5.lean" "$D1_REPO/D1Bound5.lean"
+
+# Phase 3
+mkdir -p "$D1_REPO/scripts/verification"
+mkdir -p "$D1_REPO/records/verification-history/20261023"
+cp "$D1_V2/records/verification-history/20261023/Audit.before.lean" "$D1_REPO/records/verification-history/20261023/Audit.before.lean"
+cp "$D1_V2/records/verification-history/20261023/GIT_SYNC_POLICY.before.md" "$D1_REPO/records/verification-history/20261023/GIT_SYNC_POLICY.before.md"
+cp "$D1_V2/records/verification-history/20261023/proof-source.before.sha256.txt" "$D1_REPO/records/verification-history/20261023/proof-source.before.sha256.txt"
+cp "$D1_V2/records/verification-history/20261023/verification-tools.before.sha256.txt" "$D1_REPO/records/verification-history/20261023/verification-tools.before.sha256.txt"
+cp "$D1_FINAL/scripts/Audit.lean" "$D1_REPO/scripts/Audit.lean"
+cp "$D1_V2/scripts/check.sh" "$D1_REPO/scripts/check.sh"
+cp "$D1_V2/scripts/fresh_project_build.py" "$D1_REPO/scripts/fresh_project_build.py"
+cp "$D1_V2/scripts/source_audit.py" "$D1_REPO/scripts/source_audit.py"
+cp "$D1_V2/scripts/verification/FinalIntegrationAudit.lean" "$D1_REPO/scripts/verification/FinalIntegrationAudit.lean"
+cp "$D1_V2/scripts/verification/FinalTargetAudit.lean" "$D1_REPO/scripts/verification/FinalTargetAudit.lean"
+cp "$D1_FINAL/scripts/verification/README.md" "$D1_REPO/scripts/verification/README.md"
+cp "$D1_V2/scripts/verification/SOURCE_POLICY_VALIDATION.json" "$D1_REPO/scripts/verification/SOURCE_POLICY_VALIDATION.json"
+cp "$D1_V2/scripts/verification/check.py" "$D1_REPO/scripts/verification/check.py"
+cp "$D1_V2/scripts/verification/clean_final_audits.py" "$D1_REPO/scripts/verification/clean_final_audits.py"
+cp "$D1_V2/scripts/verification/prepare_manifests.py" "$D1_REPO/scripts/verification/prepare_manifests.py"
+cp "$D1_V2/scripts/verification/release_pins.json" "$D1_REPO/scripts/verification/release_pins.json"
+cp "$D1_V2/scripts/verification/resource_hints.json" "$D1_REPO/scripts/verification/resource_hints.json"
+cp "$D1_V2/scripts/verification/reviewed_source_policy.json" "$D1_REPO/scripts/verification/reviewed_source_policy.json"
+cp "$D1_V2/scripts/verification/source_policy.py" "$D1_REPO/scripts/verification/source_policy.py"
+cp "$D1_V2/scripts/verification/test_check.py" "$D1_REPO/scripts/verification/test_check.py"
+cp "$D1_V2/scripts/verification/test_prepare_manifests.py" "$D1_REPO/scripts/verification/test_prepare_manifests.py"
+cp "$D1_V2/scripts/verification/test_source_policy.py" "$D1_REPO/scripts/verification/test_source_policy.py"
+
+# Phase 4
+cp "$D1_V2/records/proof-source-sha256.txt" "$D1_REPO/records/proof-source-sha256.txt"
+cp "$D1_FINAL/records/verification-tools-sha256.txt" "$D1_REPO/records/verification-tools-sha256.txt"
+
+# After all copies, recheck every after_sha256 and both full manifests; run source policy and source-lock reconciliation.

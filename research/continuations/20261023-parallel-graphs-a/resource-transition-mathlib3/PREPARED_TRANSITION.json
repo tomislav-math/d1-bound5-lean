@@ -1,0 +1,171 @@
+{
+  "build_id": "5dc783eabefa40a9a0919cb489496962",
+  "compatibility": {
+    "final_audit_accepts_resumed_completion_status": true,
+    "final_audit_helper_sha256": "6f2581bf0084f72447c007eb077bf2915590aac47dd6531abba636ed11d24f87",
+    "kernel_freeze_accepts_resumed_completion_status": true,
+    "kernel_helper_sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843",
+    "resource_cli_cap_excluded_from_identity": true,
+    "resume_requires_same_fresh_origin": true
+  },
+  "compiler_started_by_preparer": false,
+  "control_before_sha256": "c2939711dda2309536dbdb7f2264fbeb2991ed1456bdcc61db6706002f35deca",
+  "control_mutated_by_preparer": false,
+  "execution_fields": {
+    "drain_completed_modules": null,
+    "drain_exit": "PENDING_ROOT_COLLECTION",
+    "drain_summary_sha256": null,
+    "new_invocation": null,
+    "resume_started": false,
+    "resume_validation_sha256": null
+  },
+  "guards_unchanged": [
+    "Exact source/runtime/runner and environment identity",
+    "Recursive accepted receipt/source/dependency/artifact/log verification on resume",
+    "Explicit -j1 per compiler",
+    "V2 timeout hints and global timeout1200",
+    "Heavy exclusion and measured cgroup admission with existing reservation defaults",
+    "No project artifact import from another build tree",
+    "Final original-type/axiom audit and installed-kernel replay gates"
+  ],
+  "identity_hash": "7ca96197709d13bf0a3cbf07da2358e16c6a37cf75b267610989d2afb47c1891",
+  "known_heavy_modules_already_accepted": [
+    "D1Bound5.FiniteA5Matrix",
+    "D1Bound5.FinitePMatrix"
+  ],
+  "live_controller_launched": false,
+  "measurement_summary": {
+    "cgroup_limit_mib": 8192,
+    "cgroup_nonreclaimable_mib": {
+      "max": 4380.453125,
+      "min": 989.95703125
+    },
+    "distinct_mathlib_modules": 14,
+    "mathlib_VmHWM_mib": {
+      "largest_module_max": 1427.921875,
+      "median_module_max": 1342.3515625
+    },
+    "mathlib_sampled_RssAnon_mib": {
+      "largest_module_max": 119.10546875,
+      "median_module_max": 70.95703125
+    },
+    "sample_count": 90,
+    "sample_seconds": 45.166171073913574,
+    "smaps_rollup_access_denied": true
+  },
+  "measurements_file_sha256": "07f644e081c3acef78a40d79460340cb32df6914d6859f038f3563239e6473fa",
+  "new_argv": [
+    "python3",
+    "-u",
+    "/workspace/scratch/fed64f41ca78/clean-checkout/scripts/fresh_project_build.py",
+    "run",
+    "--source-root",
+    "/workspace/scratch/fed64f41ca78/clean-checkout",
+    "--build-dir",
+    "/workspace/scratch/fed64f41ca78/clean-build",
+    "--source-lock",
+    "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_SOURCE_LOCK.json",
+    "--source-lock-sha256",
+    "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+    "--runtime-lock",
+    "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_RUNTIME_LOCK.json",
+    "--runtime-lock-sha256",
+    "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+    "--expected-modules",
+    "4406",
+    "--jobs",
+    "7",
+    "--max-mathlib-jobs",
+    "3",
+    "--hints",
+    "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_COST_HINTS_V2.json",
+    "--control",
+    "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_BUILD_CONTROL.json",
+    "--timeout",
+    "1200",
+    "--resume"
+  ],
+  "old_argv": [
+    "python3",
+    "-u",
+    "/workspace/scratch/fed64f41ca78/clean-checkout/scripts/fresh_project_build.py",
+    "run",
+    "--source-root",
+    "/workspace/scratch/fed64f41ca78/clean-checkout",
+    "--build-dir",
+    "/workspace/scratch/fed64f41ca78/clean-build",
+    "--source-lock",
+    "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_SOURCE_LOCK.json",
+    "--source-lock-sha256",
+    "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+    "--runtime-lock",
+    "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_RUNTIME_LOCK.json",
+    "--runtime-lock-sha256",
+    "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
+    "--expected-modules",
+    "4406",
+    "--jobs",
+    "7",
+    "--max-mathlib-jobs",
+    "2",
+    "--hints",
+    "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_COST_HINTS_V2.json",
+    "--control",
+    "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_BUILD_CONTROL.json",
+    "--timeout",
+    "1200",
+    "--resume"
+  ],
+  "old_invocation": "094b5d0e2c1243d4ae3d9805d9b3efd1",
+  "old_runner_pid_snapshot": 45334,
+  "only_argv_change": {
+    "flag": "--max-mathlib-jobs",
+    "new": "3",
+    "old": "2"
+  },
+  "origin_sha256": "082a76e73032059147d45ec53b6a878cee97d7104a7653d8f9d8a0ae105feaae",
+  "parent_authorized_resource_change": {
+    "cap4_authorized": false,
+    "jobs_cap_unchanged": 7,
+    "max_mathlib_jobs_from": 2,
+    "max_mathlib_jobs_to": 3
+  },
+  "pins": {
+    "CLEAN_SOURCE_LOCK.json": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+    "FRESH_COST_HINTS_V2.json": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
+    "FRESH_RUNTIME_LOCK.json": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404"
+  },
+  "proof_acceptance_claim": false,
+  "resume_control": {
+    "defer": [],
+    "jobs": 7,
+    "stop": false
+  },
+  "root_sequence": [
+    "Atomically set only jobs7/stoptrue/defer[]; current runner drains active Lean jobs naturally.",
+    "Collect original exec session exit and immutable invocation summary. Require no active jobs and no failures. Expected exit3 for incomplete drain; if already complete exit0, no resume needed. Any other outcome requires review.",
+    "Preserve original invocation START/SUMMARY and all existing attempts; do not edit receipts or source.",
+    "After full drain, atomically restore jobs7/stopfalse/defer[] and launch the exact new argv with --resume.",
+    "Record new invocation and RESUME_VALIDATION; require accepted exact matching PASS receipts reused and rejected list reviewed.",
+    "Completion remains pending until every module plus final audit/replay gates pass."
+  ],
+  "runner_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+  "schema": 1,
+  "snapshot_active": [
+    "D1Bound5.SmallPairParallelRight21_003Part12",
+    "D1Bound5.SmallPairParallelRight21_003Part13",
+    "D1Bound5.SmallPairParallelRight21_003Part14",
+    "D1Bound5.SmallPairParallelRight21_003Part15",
+    "D1Bound5.SmallPairParallelRight23_000Part00",
+    "D1Bound5.SmallPairParallelRight23_000Part01"
+  ],
+  "snapshot_completed_modules": 2547,
+  "snapshot_status": "RUNNING",
+  "status": "PREPARED_RESOURCE_TRANSITION_NOT_EXECUTED",
+  "stop_control": {
+    "defer": [],
+    "jobs": 7,
+    "stop": true
+  },
+  "utc": "2026-10-23T13:58:49Z"
+}

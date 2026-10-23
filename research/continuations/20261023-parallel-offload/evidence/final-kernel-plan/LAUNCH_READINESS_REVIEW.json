@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "status": "READ_ONLY_LAUNCH_CONFIGURATION_REVIEW_PASS_EXECUTION_PENDING",
+  "utc": "2026-10-23T14:33:33.019371+00:00",
+  "no_freeze_or_lean_or_checker_launched": true,
+  "reviewed_configuration_path": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_CONFIGURATION.json",
+  "reviewed_configuration_sha256": "3468cfb54102472a80b434d3fe4cf48790eed66f540d9b28ecfa412fab387164",
+  "verified_bindings": {
+    "script_sha256": {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843"
+    },
+    "clean_env_sha256": {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_ENV.json",
+      "sha256": "11e514202dd3fe1cf57b8a24a594c160812bee832fd781d0ca98bbde9e035b0d"
+    },
+    "source_lock_sha256": {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_SOURCE_LOCK.json",
+      "sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c"
+    },
+    "runtime_lock_sha256": {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_RUNTIME_LOCK.json",
+      "sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404"
+    },
+    "canonical_source_inventory_sha256": {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/CANONICAL_SOURCE_INVENTORY.json",
+      "sha256": "579f9333350d6bc2e30d241f6e32bb16dbe405df4c903d8d118761d7defe064d"
+    },
+    "clean_origin_sha256": {
+      "path": "/workspace/scratch/fed64f41ca78/clean-build/ORIGIN.json",
+      "sha256": "082a76e73032059147d45ec53b6a878cee97d7104a7653d8f9d8a0ae105feaae"
+    }
+  },
+  "python3_resolves_to": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "build_id": "5dc783eabefa40a9a0919cb489496962",
+  "module_count": 4406,
+  "origin_environment_exact": true,
+  "current_runner_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+  "origin_runner_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+  "official_checker_sha256": "84bc3e7cd6efa5bfecd1e7c37571fed9428fb2b3e16da0ddf62f2163573486d0",
+  "expected_official_checker_argv": [
+    "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+    "--verbose",
+    "--fresh",
+    "D1Bound5"
+  ],
+  "expected_checker_cwd": "/workspace/scratch/fed64f41ca78/clean-checkout",
+  "expected_checker_threads": "0",
+  "limits": {
+    "address_space_mib": 32768,
+    "sampled_rss_mib": 6144,
+    "reserve_mib": 1024,
+    "checker_timeout_seconds": 86400
+  },
+  "commands": {
+    "dry_run": [
+      "python3",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "run",
+      "--freeze",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json"
+    ],
+    "execute": [
+      "python3",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "run",
+      "--freeze",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json",
+      "--output",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/clean-fresh-run",
+      "--execute"
+    ],
+    "freeze": [
+      "python3",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/final_kernel.py",
+      "freeze",
+      "--project-root",
+      "/workspace/scratch/fed64f41ca78/clean-checkout",
+      "--project-build-root",
+      "/workspace/scratch/fed64f41ca78/clean-build/artifacts",
+      "--lean-env",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_ENV.json",
+      "--source-lock",
+      "/workspace/scratch/fed64f41ca78/lean-offload/CLEAN_SOURCE_LOCK.json",
+      "--runtime-lock",
+      "/workspace/scratch/fed64f41ca78/lean-offload/FRESH_RUNTIME_LOCK.json",
+      "--manifest",
+      "/workspace/scratch/fed64f41ca78/lean-offload/integration-owned/CANONICAL_SOURCE_INVENTORY.json",
+      "--freeze",
+      "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json"
+    ]
+  },
+  "required_before_freeze_or_execute": [
+    {
+      "path": "/workspace/scratch/fed64f41ca78/clean-build/SUMMARY.json",
+      "status_one_of": [
+        "FRESH_PROJECT_SOURCE_BUILD_PASS",
+        "PROJECT_SOURCE_BUILD_COMPLETE_RESUMED"
+      ],
+      "expected_modules": 4406,
+      "completed_modules": 4406,
+      "note": "No active compiler; full accepted receipt chain is validated by freeze."
+    },
+    {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-final-audits/SUMMARY.json",
+      "status": "CLEAN_SOURCE_BUILD_EXACT_TYPE_AXIOM_AUDITS_PASS",
+      "counts": [
+        114,
+        4
+      ]
+    },
+    {
+      "path": "/workspace/scratch/fed64f41ca78/lean-offload/results-clean-broad-audit/SUMMARY.json",
+      "status": "CLEAN_BROAD_COMPATIBILITY_AUDIT_PASS"
+    },
+    "Both audit processes fully exited; no runtime/source/artifact writes or other proof processes during replay."
+  ],
+  "expected_files": {
+    "freeze": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CLEAN_FREEZE.json",
+    "result": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/clean-fresh-run/RESULT.json",
+    "checker_log": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/clean-fresh-run/00000-D1Bound5.log",
+    "memory_samples": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/clean-fresh-run/00000-D1Bound5.memory.json",
+    "exclusive_lock": "/workspace/scratch/fed64f41ca78/lean-offload/final-kernel-plan/CHECKER_LOCK"
+  },
+  "freeze_expected": {
+    "schema": 3,
+    "status": "FROZEN_INPUTS_NOT_PROOF",
+    "target": "D1Bound5",
+    "project_order_count": 4406
+  },
+  "dry_run_expected": {
+    "status": "DRY_RUN_NO_CHECKER_LAUNCHED",
+    "mode": "fresh",
+    "target": "D1Bound5",
+    "frozen_project_modules": 4406
+  },
+  "dry_run_limit": "The dry run displays metadata only; freeze and execute validate the full input universe.",
+  "only_fresh_success_status": "FRESH_INTEGRATED_KERNEL_REPLAY_PASS",
+  "expected_checker_log_banner": "replaying D1Bound5 with --fresh",
+  "required_final_result_conditions": [
+    "Supervisor exit zero; exactly one run for D1Bound5 in fresh mode.",
+    "Official checker run exit_code zero, termination_reason null, expected_banner_seen true.",
+    "Result freeze_sha256 matches the retained CLEAN_FREEZE.json.",
+    "No frozen input changes; all OOM event deltas zero.",
+    "Separate completed clean build and exact118/broad audit evidence remains required."
+  ],
+  "failure_interpretation": "Any REFUSED_OR_INCOMPLETE, INCOMPLETE_CHECKER_FAILURE_OR_RESOURCE_LIMIT, INVALIDATED_INPUT_CHANGED, or INVALIDATED_CGROUP_OOM_EVENT means the full fresh gate is not passed; do not infer a mathematical counterexample.",
+  "preservation": "The first-launch output and freeze are absent at review. Preserve them after use; any justified later attempt needs a separate output directory. Do not overwrite evidence. Large freeze or memory JSON may need lossless indexed text splitting for private Git archival."
+}

@@ -1,0 +1,59 @@
+--- before/STATUS.md
++++ proposed/STATUS.md
+@@ -1,4 +1,56 @@
+ # Status
++
++## 23 October 2026 — full candidate build and audits passed; fresh replay in progress
++
++This checkpoint supersedes earlier progress counts while preserving every
++historical entry below. It describes the tested candidate, not an accepted
++final release or an executed installation.
++
++The assembled declaration is `D1Bound5.main_statement : D1Bound5.MainStatement`.
++For every imaginary quadratic field `K`, each finite nonzero `D(1)` set in the
++full integer ring `𝓞 K` has cardinality at most five. The full ring includes
++half-integral bases; equal moduli and zero pair square roots are allowed.
++The assertion is an upper bound, not a sharpness construction. The independent
++target harness expands the proposition and applies it using only its stated
++hypotheses; its four axiom checks allow only the fixed standard baseline.
++
++| Gate | Recorded result |
++|---|---|
++| Source build from an empty project artifact tree | PASS: all 4406 modules; guarded resumes; no active, failed or waiting modules |
++| Exact original declarations and independent target | PASS: 114 type/axiom + 4 target axiom markers, both audits exit 0, input hashes equal afterwards |
++| Broad compatibility, original attempt | FAILED: exit 1 from a doc-comment before `run_cmd`; retained as failure history |
++| Broad compatibility, corrected v2 | PASS: exit 0; 29,145 exported declarations, 29,602 including private declarations, four target markers; all guards equal |
++| Fresh official full-root kernel replay | IN PROGRESS, root-owned; freeze/dry-run passed; no successful replay receipt claimed |
++| Canonical preservation, installation and publication | PENDING; reviewed plans are not execution receipts |
++
++The build summary is `a1f72a5787940ae47eec852c68c4bea88f00e845371dfd67a425728a694523af`.
++The exact118 summary is `5b5a21c944be0923563a6948ce37a39506b8ae9c69a31353fc750f8b2e79db14`;
++its input freeze is `698a3a0fecaa49f8451b7fc3e55df85802cab02e14bded5b7a10504dd9b00c95`.
++The broad-v2 summary is `ca6cf12fca5019030ad4eaf5ef4c69467f99f539f224f54aec97ac32b1288908`.
++The failed original broad summary remains `3f59624818a3e49c1e2705de1182e33a86650aa45ae3dcf1f088ced8dd2a17f2`.
++Exact summary copies, original locations and log hashes are recorded in
++[research/continuations/20261023-parallel-target-audit/current-docs-clean-build-draft-01/evidence/CHECKPOINT_EVIDENCE.json](research/continuations/20261023-parallel-target-audit/current-docs-clean-build-draft-01/evidence/CHECKPOINT_EVIDENCE.json).
++
++The tested commit is `102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2`, tree
++`b6dd4139f839698609352d7f9866b4b429d32475`. Its path-independent source lock is
++`b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c`, and its
++runtime lock is `c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404`.
++The audits allow only `propext`, `Classical.choice`, and `Quot.sound`.
++The corrected broad harness removes one hyphen from a doc-comment; it changes
++no production proof source or audit body. Both original and corrected evidence
++remain separately identified.
++
++The reviewed revision-02 installation map has 25 explicit targets. After the
++remaining proof gates, preserve the 353 reviewed extra sources, install the
++exact umbrella and tools, and verify the complete 4406-path production set,
++all source hashes, all three configuration pins, both manifests and the source
++lock. A matching import-closure lock alone does not exclude unused extra files.
++Preserve the tested runtime, paths, commit/tree, origin and receipt identities;
++a later source-equivalence record must not rename them as a run of the released
++commit or as an end-to-end run of the portable wrapper.
++The detailed pending bridge is [research/continuations/20261023-parallel-target-audit/current-docs-clean-build-draft-01/SOURCE_EQUIVALENCE_BRIDGE_OUTLINE.md](research/continuations/20261023-parallel-target-audit/current-docs-clean-build-draft-01/SOURCE_EQUIVALENCE_BRIDGE_OUTLINE.md).
++
++The historical entries below retain their original dates, statements and evidence.
+ 
+ ## 19 October 2026 — unit-pair field range and 33 Pell prefixes verified
+ 

@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "reviewer": "graph39",
+  "recorded_at_utc": "2026-10-23T14:14:58.141Z",
+  "status": "INDEPENDENT_STATIC_REVIEW_PASS_PREPARATION_ONLY",
+  "scope": "Exact reviewed 353-file preservation executor, journaled inverse recovery and immutable source/Git guards. This review does not authorize or claim canonical execution, proof acceptance or publication.",
+  "inputs_sha256": {
+    "canonical-cleanup-executor/preserve_sources.py": "39e139cf55c34506a7ee0ea592d4e0bf89258bec1d2b0c1e1765dbfa7b1dc455",
+    "canonical-cleanup-executor/test_preserve_sources.py": "3dc279ab34a5806912619274de7b6dcbc37e984ff553603c8056730c8bc8fcc9",
+    "canonical-cleanup-executor/FIXTURE_TESTS.log": "2004132982233bd96177626087137e2e1197b242dec934edc455063bf81a53ab",
+    "canonical-cleanup-executor/FIXTURE_TEST_REPORT.json": "fb57a75a485a1a6b3c6b3d49fe94bb8071578be4cfefc704608957797fcbcabf",
+    "canonical-cleanup-executor/INTEGRATION_REVIEW.json": "807d55afe330dde9a5fb596e80ca49b00d8b52f10e17fde9aaa80b59c8015a80",
+    "canonical-cleanup-executor/README_EXECUTOR.md": "3efefd9cfe7ad1ad81fa28e1467da8caaeedb956720d9d15463b0be6721192c7",
+    "canonical-cleanup-inventory/PREPARED_RELOCATION_PLAN.json": "8d8412630d8f8b724599b89bd3ebfc7d4446d99de432ba40001e4c9d5df85b40",
+    "canonical-cleanup-inventory/FINAL_MANIFEST.json": "c68e3d02eea98c09a5b878a2fa64d5ff1ebade34551e72464742d1e15feb207f",
+    "canonical-cleanup-inventory/CANONICAL_FILES.json": "80c4898468bb108fc80cec1a17b85febb4dda5d030f1bc5c942d833835fb3229",
+    "canonical-cleanup-inventory/GIT_INDEX_PRODUCTION.json": "faf76051aa4f8dc4343826a4dc8eba1bf5e65f87156c69e8d19602c1e1e65144",
+    "canonical-cleanup-inventory/GIT_HEAD_PRODUCTION.json": "6be7a19452caaafcab6c80ce5a8803bf1e1b3ca7acd065ef11165af0d9691d8b",
+    "canonical-cleanup-inventory/EXTRA_UNTRACKED_SOURCES.json": "0258eb9bb6ed9b0ffe62b7c7d4471e027b77e8ffeee141fbfb5ab4c5e5ccf487"
+  },
+  "inspected_scope": {
+    "planned_sources": 353,
+    "planned_bytes": 7475134,
+    "original_inventory_sources": 4759,
+    "selected_closure_sources": 4406,
+    "original_head_sources": 107,
+    "original_index_sources": 107
+  },
+  "findings": [
+    "Production CLI fixes the canonical Mac root, Darwin platform, exact plan and inventory-manifest hashes. Its explicit mutation list equals the pinned extra-source set. Each unique source is a non-umbrella Lean helper absent from the original HEAD/index maps; destination is exactly the plan destination plus original relative path.",
+    "Exact production/archive membership and original metadata are guarded around transitions; original hashes are checked at initial/final checkpoints and before/after every moved file. All three configuration pins and GIT_SYNC_POLICY.md are actually rehashed in each guard_state.",
+    "Git invocations are read-only with GIT_OPTIONAL_LOCKS=0. Guards pin branch, reviewed refreshed HEAD, SHA256 of exact git ls-files --stage -z bytes, absence of index.lock/unmerged stages, and original production HEAD/index maps. The production fingerprint is the logical raw stage-list output, not raw .git/index bytes; the fixture suite separately checks unchanged raw index bytes.",
+    "Shared no-follow archive-parent flock and per-session flock prevent competing cooperating executors. Source/destination traversal and static symlinks are rejected. Darwin RENAME_EXCL and Linux fixture RENAME_NOREPLACE have no overwriting fallback; same-filesystem placement is required.",
+    "Before every rename, each newly created directory component and its parent are fsynced, then an exact intent is appended and fsynced. Both rename parent directories are fsynced before the completed receipt. Final recovery also fsyncs both expected parents before either recovered_done or not_applied is appended.",
+    "Recovery accepts only an exact original-identity journal transition sequence. One original-hash/metadata pathname resolves an outstanding intent; both paths, neither path, changed bytes or malformed journal fail closed. Rollback reverses completed moves only, under the same identity and no-overwrite guards.",
+    "Fresh preflight creates no session/archive/lock or receipt. Mutating CLI actions require explicit --execute. Result statuses describe preservation or restoration only and explicitly deny proof/publication/Git-mutation claims.",
+    "The frozen fixture report records 55 passing Linux tests in 12.188 seconds, with zero failures/errors. I inspected final recovery-ordering regressions and independently rehashed the report, log, tests, executor, README and all four inventory inputs. I did not rerun the fixture suite."
+  ],
+  "resolved_review_findings": [
+    {
+      "issue": "New session/archive directory entries lacked explicit durability before source moves.",
+      "resolution": "durable_mkdir now flushes each newly created directory and its parent before proceeding; final fixture suite verifies ordering and rejects invalid parent paths."
+    },
+    {
+      "issue": "Resume after rename-before-directory-fsync could make recovered_done durable before the recovered directory state.",
+      "resolution": "reconcile_pending now fsyncs both expected parent directories before either terminal event; regressions cover not_applied and a real no-replace rename interrupted before its first parent fsync."
+    }
+  ],
+  "limitations": [
+    "This was a read-only review of implementation, fixture source and recorded fixture output. No canonical preflight, source relocation, rollback, Git/index mutation, Lean compiler or checker was executed by this reviewer.",
+    "Darwin runtime behavior and hardware/filesystem power-loss guarantees were not tested. Directory/file fsync calls request durability; no stronger hardware guarantee is claimed.",
+    "Path checks and advisory locks assume coordinated nonhostile filesystem writers. They are not an adversarial defense against concurrent directory or lock replacement.",
+    "Torn or ambiguous journals fail closed and may need separate manual recovery. The original rollback requires the original source, Git, configuration and executor identity and deliberately stops after separate publication changes.",
+    "Required proof build, strict/broad audits, fresh kernel replay, reviewed current Git checkpoint, exclusive operational access, canonical execution and publication remain separate coordinator-owned gates."
+  ],
+  "executions_by_reviewer": {
+    "fixture_suite": false,
+    "canonical": false,
+    "git_mutation": false,
+    "lean": false,
+    "checker": false
+  },
+  "remaining_blocking_code_findings": []
+}

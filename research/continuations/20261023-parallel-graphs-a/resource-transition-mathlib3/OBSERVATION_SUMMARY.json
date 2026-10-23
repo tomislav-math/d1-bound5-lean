@@ -1,0 +1,103 @@
+{
+  "cgroup_cpu_stat_delta": {
+    "burst_usec": 0,
+    "nice_usec": 0,
+    "nr_bursts": 0,
+    "nr_periods": 603,
+    "nr_throttled": 193,
+    "system_usec": 76010519,
+    "throttled_usec": 10427857,
+    "usage_usec": 360185287,
+    "user_usec": 284174768
+  },
+  "cgroup_memory_events_delta": {
+    "high": 0,
+    "low": 0,
+    "max": 5071,
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "cgroup_nonreclaimable_mib": {
+    "max": 4391.08203125,
+    "min": 965.75
+  },
+  "distinct_mathlib_modules": 8,
+  "duration_seconds": 60.385774103000585,
+  "interpretation": [
+    "No OOM or OOM kill occurred in this observation window.",
+    "memory.events max increased; this records cgroup-limit pressure/reclaim events and is not zero-pressure evidence.",
+    "RssAnon is measured anonymous resident memory, not exact private/PSS; smaps_rollup is permission-denied.",
+    "VmHWM includes shared file pages and must not be summed as private memory.",
+    "Sampling can miss short peaks; observed graph modules do not establish all later analytic jobs safe.",
+    "Mean CPU use is cgroup-wide, including orchestration and observer, not isolated Lean CPU."
+  ],
+  "mathlib_VmHWM_mib": {
+    "largest_module_max": 1403.3515625,
+    "median_module_max": 1388.712890625
+  },
+  "mathlib_sampled_RssAnon_mib": {
+    "largest_module_max": 121.79296875,
+    "median_module_max": 100.9609375
+  },
+  "mean_cgroup_cpu_cores": 5.9647374294751705,
+  "observed_mathlib_process_count_histogram": {
+    "0": 94,
+    "1": 26
+  },
+  "per_module_sample_maxima_kib": {
+    "D1Bound5.SmallPairLightAdaptiveRight28_003": {
+      "RssAnon": 109312,
+      "RssFile": 1310404,
+      "VmHWM": 1437032,
+      "samples": 4
+    },
+    "D1Bound5.SmallPairLightAdaptiveRight30_000": {
+      "RssAnon": 68564,
+      "RssFile": 1166004,
+      "VmHWM": 1234568,
+      "samples": 2
+    },
+    "D1Bound5.SmallPairLightAdaptiveRight30_001": {
+      "RssAnon": 101328,
+      "RssFile": 1319488,
+      "VmHWM": 1420816,
+      "samples": 3
+    },
+    "D1Bound5.SmallPairLightAdaptiveRight30_002": {
+      "RssAnon": 107564,
+      "RssFile": 1328792,
+      "VmHWM": 1436356,
+      "samples": 3
+    },
+    "D1Bound5.SmallPairLightAdaptiveRight36_000": {
+      "RssAnon": 78740,
+      "RssFile": 1300752,
+      "VmHWM": 1379492,
+      "samples": 3
+    },
+    "D1Bound5.SmallPairLightAdaptiveRight36_001": {
+      "RssAnon": 74384,
+      "RssFile": 1305208,
+      "VmHWM": 1379592,
+      "samples": 2
+    },
+    "D1Bound5.SmallPairLightRight28": {
+      "RssAnon": 124716,
+      "RssFile": 1297412,
+      "VmHWM": 1423268,
+      "samples": 6
+    },
+    "D1Bound5.SmallPairLightRight30": {
+      "RssAnon": 105440,
+      "RssFile": 1328920,
+      "VmHWM": 1434360,
+      "samples": 3
+    }
+  },
+  "proof_completion_claim": false,
+  "recommendation": "Retain authorized cap3 and unchanged memory admission/heavy exclusions; do not raise cap4. Continue ordinary root monitoring, with final proof gates unchanged.",
+  "samples": 120,
+  "source_control_artifact_mutations_by_observer": false,
+  "status": "CAP3_RESOURCE_OBSERVATION_COMPLETED_NO_OOM"
+}

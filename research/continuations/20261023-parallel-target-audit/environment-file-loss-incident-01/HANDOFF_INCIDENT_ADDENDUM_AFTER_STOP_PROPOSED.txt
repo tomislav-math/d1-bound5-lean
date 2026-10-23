@@ -1,0 +1,21 @@
+Current incident addendum after process stop — proposal only
+
+The clean build of 4406 modules, exact 118 checks and broad-v2 audit previously
+passed. Their exact full summaries remain preserved on the Mac, including the
+214,212-byte clean-build summary with SHA
+a1f72a5787940ae47eec852c68c4bea88f00e845371dfd67a425728a694523af.
+
+The final fresh replay is INCOMPLETE AND INVALIDATED BY ENVIRONMENT FILE LOSS.
+Root reports the required local frozen inputs, full receipt chain, runtime,
+artifacts and freeze bodies were lost. Root then stopped session 92175 with
+Ctrl-C: actual exit code 130. Supervisor PID 115971 and checker PID 116049 were
+confirmed gone at 16:31:35 UTC according to root; OOM counters stayed 1/1.
+This is environment invalidation and interruption, not a Lean rejection or a
+completed fresh verification. The underlying cause remains undetermined.
+
+Initial root and offload messages used different approximate time labels; keep
+their provenance rather than inventing a corrected timeline. Preserve original
+summaries and incident outputs. Those summaries do not substitute for the full
+missing provenance. Inventory surviving durable exact files, then prepare a
+reviewed recovery/rebuild plan. Only root updates canonical CURRENT_PROGRESS
+and handoff. This addendum is not installed and no original history is changed.

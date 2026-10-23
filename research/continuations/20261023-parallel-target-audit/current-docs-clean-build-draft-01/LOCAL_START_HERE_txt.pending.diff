@@ -1,0 +1,110 @@
+--- before/LOCAL_START_HERE.txt
++++ proposed/LOCAL_START_HERE.txt
+@@ -1,45 +1,70 @@
+-D1Bound5 local handoff for a new ChatGPT Pro conversation
++D1Bound5 continuation checkpoint — 23 October 2026
++Research-only draft; not installed in D1Bound5Handoff or the canonical repository.
+ 
+-Read this file, D1_bound5_formalization_prompt.txt, ENVIRONMENT_STATUS.txt,
+-and MAC_RUNTIME_NOTE.txt.
+-This directory is a prepared working copy on the author's Mac, so no upload
+-from the author's phone and no Library access are needed if Remote Desktop
+-Commander is available in the new conversation.
++Read this checkpoint together with the original D1_bound5_formalization_prompt.txt
++and its preservation/verification constraints. Keep that prompt and the original
++handoff files unchanged. The old statement that formalization has not started
++is historical; do not create a replacement project or restart completed work.
+ 
+-The complete official handoff archive remains in the author's ChatGPT Library
+-as D1_bound5_formalization_handoff.zip, library_file_id
+-libfile_38fb595e5368819180206aac46292b80, version 1.
+-The long prompt is separately saved as D1_bound5_formalization_prompt.txt,
+-library_file_id libfile_60b8c06907e4819187eeaeb0cbb50de6.
++MATHEMATICAL TARGET
++Za svako imaginarno kvadratno polje K, svaki konačan skup A u punom prstenu
++cijelih O_K, sastavljen od nenultih elemenata, za koji je ab+1 kvadrat u O_K
++za sve različite a,b iz A, ima najviše pet elemenata. Jednake norme i nulti
++kvadratni korijeni parova dopušteni su. Ovo je gornja granica ≤5, a ne tvrdnja
++o postojanju peteročlanog primjera.
+ 
+-LOCAL PATH ADAPTATION TO THE LONG PROMPT
++Formal names: D1Bound5.main_statement, D1Bound5.MainStatement, D1Bound5.IsD1.
++The independent target harness expands the statement with no additional
++estimate, classification, coordinate-model or certificate premise.
+ 
+-The original verification ZIP has already been expanded into verification/.
+-Its manuscript is verification/output/D1_bound5-v4.tex and the PDF is beside
+-it. Read verification/README.txt and verification/revision_v4/REVISION_REPORT.txt.
+-Run python3 verification/revision_v4/run_checks.py when needed.
++COMPLETED RECEIPTS
++- Fresh-origin project build completed through guarded resumes: 4406/4406,
++  no active/failed/waiting modules. Root observed the builder's actual exit0.
++  Summary SHA a1f72a5787940ae47eec852c68c4bea88f00e845371dfd67a425728a694523af.
++- Clean exact audit: 114 original named declarations + 4 target axiom checks, exit0
++  for both harnesses, all input hashes equal afterwards. Summary SHA
++  5b5a21c944be0923563a6948ce37a39506b8ae9c69a31353fc750f8b2e79db14.
++- Broad v2 audit: exit0, 29145 exported/29602 including private declarations,
++  four target markers, all source/artifact/runtime/Git/evidence guards equal.
++  Summary SHA ca6cf12fca5019030ad4eaf5ef4c69467f99f539f224f54aec97ac32b1288908.
++- Original broad attempt failed with exit1 at the doc-comment before run_cmd.
++  Keep its summary/log and original source. The reviewed v2 removes exactly one
++  hyphen from that comment; the runner changes only its expected source hash.
+ 
+-All text, source code, data, PDF and log files from the verification ZIP and
+-its recursively nested historical archives have been preserved byte for byte.
+-Only 120 rendered PNG review images are omitted. Three nested ZIP containers
+-have been expanded into adjacent directories ending in _unpacked; their
+-original fingerprints and every extracted file path/hash are in SOURCE_MAP.json.
+-This is a derived working copy, not a new edition of the paper or evidence.
++STILL REQUIRED
++1. The official fresh full-root kernel replay is running under root session 92175.
++   Do not start a second replay. Inspect its actual exit/result and pre/post guards. These receipts do not claim that replay.
++2. Capture the final execution evidence quiescently using the reviewed export
++   plan; preserve failure/resource history. Do not infer success from markers
++   when a process exits nonzero.
++3. Root coordinates the reviewed preservation of 353 extra sources and the
++   revision-02 installation map, then verifies the final source/config/tool
++   identities and updates current documentation from actual receipts.
++4. Root alone handles exact staging, private Git preflight, commit and push.
++   Refresh reviewed HEAD/index after any research-only checkpoint commit;
++   never alter the frozen historical preservation plan to conceal that change.
+ 
+-Old manifests are retained as SHA256SUMS.original for provenance. They refer
+-to the complete original archives, including omitted PNGs. Verify this local
+-copy with the new root SHA256SUMS instead. The old archive path references in
+-historical READMEs map to their _unpacked directories. Do not reconstruct or
+-pretend to have the original ZIP containers locally. They remain in Library.
++IDENTITIES AND LOCATIONS
++Mac repository: /Users/tp/Lean/D1Bound5.
++Original preserved handoff: /Users/tp/Lean/D1Bound5Handoff.
++Tested source: /workspace/scratch/fed64f41ca78/clean-checkout.
++Tested project artifacts: /workspace/scratch/fed64f41ca78/clean-build/artifacts.
++Tested commit 102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2,
++tree b6dd4139f839698609352d7f9866b4b429d32475.
++Source lock b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c.
++Runtime lock c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404.
++Exact audit freeze 698a3a0fecaa49f8451b7fc3e55df85802cab02e14bded5b7a10504dd9b00c95.
++Build origin, runtime paths, artifacts and Git identities belong to the actual
++tested run. A future byte-equivalent release needs an explicit bridge; it does
++not retroactively become that run. The portable check.sh was not executed
++end-to-end by these component-runner receipts.
+ 
+-The main source SHA256 must be
+-776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3.
+-No formalization of the article has been started. No GitHub repository or
+-Prove2Me project has been created. GitHub authorization, including workflow,
+-has been confirmed. Credentials are outside this directory and must not be
+-printed, committed or uploaded. See ENVIRONMENT_STATUS.txt for their locations.
++Reviewed current install plan:
++research/continuations/20261023-parallel-graphs-b/final-installation-plan-02/.
++Its map SHA is cd83528b50a0f2a89b3225498c530efd4aa4defa9da0ebd34522ad69a0d5abfb.
++The original final-installation-plan-01 and failed broad-v1 records remain historical.
+ 
+-Use a NEW /Users/tp/Lean/D1Bound5 directory for proof development, after checking
+-for intervening work. Keep this handoff copy as evidence. Continue the actual
+-formalization, not another generic planning exercise. Follow the full prompt's
+-mathematical statement, preservation, verification and publication constraints.
++This checkpoint's exact evidence and proposed documents are under
++research/continuations/20261023-parallel-target-audit/current-docs-clean-build-draft-01/.
++It is a pending-status draft. No canonical document, handoff, source, runtime,
++Git index or Git history was changed by preparing it.

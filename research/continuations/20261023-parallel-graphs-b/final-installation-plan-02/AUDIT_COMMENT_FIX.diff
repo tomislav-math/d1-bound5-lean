@@ -1,0 +1,11 @@
+--- scripts/Audit.lean (frozen V2)
++++ scripts/Audit.lean (corrected broad v2)
+@@ -119,7 +119,7 @@
+     unless bad.isEmpty do Lean.throwError "Unexpected axioms {name}: {bad}"
+     Lean.logInfo m!"FINAL_TARGET_AXIOMS_PASS {name}: {ax}"
+ 
+-/-- Optional broad compatibility audit. This is distinct from the 114-declaration
++/- Optional broad compatibility audit. This is distinct from the 114-declaration
+ release audit and the four independent target checks above. -/
+ run_cmd do
+   let env ← Lean.getEnv

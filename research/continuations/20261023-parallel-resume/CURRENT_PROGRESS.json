@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-23T13:28:38.641220+00:00",
+  "utc": "2026-10-23T16:03:10.385916+00:00",
   "verified_working_graph_endpoints": [
     1,
     2,
@@ -66,14 +66,14 @@
     "36": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph36-endpoint-audit/VERIFICATION_SUMMARY.json",
     "39": "research/continuations/20261023-parallel-graph39/linux-endpoint/results-graph39-verified/VERIFICATION_SUMMARY.json"
   },
-  "main_theorem_status": "COMPILED_EXACT_TYPE_AND_AXIOMS_PASS_FINAL_CLEAN_GATES_PENDING",
+  "main_theorem_status": "PROOF_SOURCE_AND_PRIOR_CLEAN_BUILD_AUDITS_PASSED_FINAL_FRESH_GATE_INCOMPLETE_AFTER_WORKSPACE_LOSS",
   "accepted_root_manifest_unchanged": true,
-  "active_work": "All48 finite endpoints, MainTheorem, canonical candidate root,114types/axioms and independent target gate PASS. Clean4406source build resumed after3resource-only240s timeouts; all3timedoutmodules now compile unchanged. Clean final audits and official fresh root kernel replay still pending.",
-  "current_private_head": "9b418359968913eb3e73beeee72ffa1ce953c9f1",
+  "active_work": "Preparing exact-source verification recovery in a new local subtree after complete workspace file loss. New source/runtime setup is authorized; old successful build/audit summaries preserved; fresh exit130 is unaccepted. Preparing reviewed research-only private Git checkpoint before new proof execution.",
+  "current_private_head": "1fe0adf1028af0e41ea578660c8d48875cde6588",
   "agent_verified_pending_remote_archive": {},
   "canonical_candidate_modules": 4406,
   "clean_build": {
-    "status": "RUNNING_RESUMED_NOT_ACCEPTED",
+    "status": "PROJECT_SOURCE_BUILD_COMPLETE_RESUMED",
     "local_candidate_commit": "102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2",
     "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
     "runtime_lock_sha256": "c50d017cd71b3ee22d299302c15a64d5e82a9b71f95ef6040ca077dc56dbd404",
@@ -82,26 +82,104 @@
     "initial_project_artifacts": 0,
     "source_path": "/workspace/scratch/fed64f41ca78/clean-checkout",
     "build_path": "/workspace/scratch/fed64f41ca78/clean-build",
-    "root_exec_session": 29025,
+    "root_exec_session": 30875,
     "started_utc": "2026-10-23T12:38:43Z",
     "candidate_is_remote_release": false,
-    "completed_modules_observed": 1235,
-    "validated_prior_passes": 411,
+    "completed_modules_observed": 4406,
+    "validated_prior_passes": 3564,
     "first_invocation": "f0066da497544e39bcd09054b5ecd9b7",
-    "current_invocation": "094b5d0e2c1243d4ae3d9805d9b3efd1",
+    "current_invocation": "d3e722b6f2aa4013916750e08682c222",
     "first_invocation_exit_code": 1,
     "first_invocation_failure_kind": "Three240s resource timeouts, all resolved by longer limits with unchanged sources.",
     "current_invocation_failures_observed": 0,
     "default_timeout_seconds": 1200,
     "resource_hints_sha256": "ddb33bfc01f6a9279185c2444ad618b04fe05b96ffee1216955484fcd12791aa",
-    "active_modules_observed": [
-      "D1Bound5.SmallPairLightAdaptiveLeft33_001Part00",
-      "D1Bound5.SmallPairLightAdaptiveLeft33_001Part01",
-      "D1Bound5.SmallPairLightData38",
-      "D1Bound5.SmallPairLightData3Left",
-      "D1Bound5.SmallPairLightData3RightCached",
-      "D1Bound5.SmallPairLightData40",
-      "D1Bound5.SmallPairLightData42"
-    ]
+    "active_modules_observed": [],
+    "max_mathlib_jobs": 5,
+    "memory_reserve_mib": 1024,
+    "planned_resource_transitions": [
+      {
+        "old_invocation": "094b5d0e2c1243d4ae3d9805d9b3efd1",
+        "old_exit_code": 3,
+        "drained_completed_modules": 2611,
+        "reason": "Graceful resource-only increase from2to3Mathlib lanes; no source/runtime/runner change.",
+        "evidence": "research/continuations/20261023-parallel-graphs-a/resource-transition-mathlib3/ROOT_EXECUTION_RECEIPT.json"
+      },
+      {
+        "old_invocation": "929db4e315db4a22aac28e8fd8dd230c",
+        "old_exit_code": 3,
+        "drained_completed_modules": 3564,
+        "reason": "Graceful resource-only increase from3to5Mathlib lanes with1024MiB reserve; no source/runtime/runner change.",
+        "evidence": "research/continuations/20261023-parallel-graphs-a/resource-transition-mathlib5/ROOT_EXECUTION_RECEIPT.json"
+      }
+    ],
+    "cap5_observation": {
+      "no_new_oom": true,
+      "nonreclaimable_peak_mib": 5179,
+      "memory_max_event_increase": 28292,
+      "further_concurrency_increase_recommended": false
+    },
+    "actual_exit_code": 0,
+    "terminal_summary_sha256": "a1f72a5787940ae47eec852c68c4bea88f00e845371dfd67a425728a694523af"
+  },
+  "clean_final_audits": {
+    "status": "CLEAN_SOURCE_BUILD_EXACT_TYPE_AXIOM_AUDITS_PASS",
+    "actual_exit_code": 0,
+    "accepted_fresh_project_modules": 4406,
+    "exact_pass_markers": 118,
+    "post_audit_all_input_hashes_equal": true,
+    "input_freeze_sha256": "698a3a0fecaa49f8451b7fc3e55df85802cab02e14bded5b7a10504dd9b00c95",
+    "independent_review": "PASS"
+  },
+  "updated_utc": "2026-10-23T16:36:44.349873+00:00",
+  "clean_broad_audit": {
+    "status": "FAILED_NO_BROAD_ACCEPTANCE",
+    "actual_exit_code": 1,
+    "root_exec_session": 60341,
+    "cause": "Audit.lean documentation comment immediately before run_cmd is syntactically invalid; minimal separate v2 audit preparation in progress. Original failed run retained.",
+    "log_sha256": "b8c6f2dee23d8d845c824e1ec8437b8bd7c51cf2b65de6ba80f512a957651dce"
+  },
+  "clean_broad_audit_v2": {
+    "status": "CLEAN_BROAD_COMPATIBILITY_AUDIT_PASS",
+    "actual_exit_code": 0,
+    "root_exec_session": 97621,
+    "source_sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+    "summary_sha256": "ca6cf12fca5019030ad4eaf5ef4c69467f99f539f224f54aec97ac32b1288908",
+    "log_sha256": "f857510ab877e870aad1e507ae615c34c7941588f26d94e152e4d5cfffd34509",
+    "public_declarations": 29145,
+    "including_private_declarations": 29602,
+    "all_guards_equal": true
+  },
+  "fresh_kernel": {
+    "status": "INTERRUPTED_AFTER_LOCAL_FROZEN_INPUT_LOSS",
+    "root_exec_session": 92175,
+    "freeze_actual_exit_code": 0,
+    "dry_run_actual_exit_code": 0,
+    "freeze_sha256": "a5e29fb591a0adf4cb72821bd7575e1d7edacd3fa274d9b9f92c2e2fd7541278",
+    "project_modules": 4406,
+    "command": "leanchecker --verbose --fresh D1Bound5",
+    "full_fresh_gate_passed": false,
+    "observed_proc_directory": "/proc/116049",
+    "root_tool_exit_code": 130,
+    "interruption": "Coordinator sent Ctrl-C after all regular task workspace files disappeared; no successful replay result was observed.",
+    "owned_processes_confirmed_absent_utc": "2026-10-23T16:31:35.488044+00:00",
+    "new_oom_events": 0
+  },
+  "workspace_incident": {
+    "observed_utc_approx": "2026-10-23T16:28:00+00:00",
+    "confirmed_regular_files_remaining": 0,
+    "cause": "Unknown; external size-management marker observed, attribution unproven.",
+    "durable_recovery_base": "Full proof sources, historical archives, complete clean-build summary and final audit summaries on authorized Mac. Runtime/artifacts/full fresh freeze and final accepted receipt chain require reconstruction or rebuilding."
+  },
+  "recovery": {
+    "status": "NEW_SOURCE_RUNTIME_PREPARATION_AUTHORIZED",
+    "new_local_subtree": "recovery-20261023",
+    "source_policy": "Exact4406 proof sources plus3 unchanged configuration pins from durable source lock; one source checkout and empty new artifact store.",
+    "identity_policy": "New candidate/runtime/build identities; no relabeling of previous receipts.",
+    "resource_policy": "Reduced disk footprint; no old duplicate artifact archive; incremental durable evidence checkpoints required.",
+    "owners": {
+      "runtime": "compute_offload",
+      "source_and_tools": "integration"
+    }
   }
 }

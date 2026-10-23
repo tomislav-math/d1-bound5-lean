@@ -1,0 +1,29 @@
+--- scripts/verification/README.md (frozen V2)
++++ scripts/verification/README.md (proposed clarification)
+@@ -9,6 +9,8 @@
+ Use Git, Python 3.8+ with its standard library, and Linux or macOS. Install the exact Lean distribution named by `lean-toolchain` (`leanprover/lean4:v4.33.1`), including `leanchecker`. Prepare a separate public Mathlib checkout/cache at revision `0df444a360eaa60ab8c11dca51a86af692955474`; its package revisions must match `lake-manifest.json`. Public cache preparation may use the pinned distribution's `lake exe cache get` in that external checkout. Do not copy any previous D1Bound5 artifact into the verification build or external cache.
+ 
+ Clone the selected repository commit into a clean source directory. Keep build, evidence, and external cache directories outside it. Commit the selected production sources, configuration pins, verification tools and manifests before running the gate. `check.sh` verifies their actual Git blob contents, including files hidden from ordinary status by Git flags.
++
++Use the final repository commit containing the reviewed production sources, configuration, verification tools and manifests. The verifier derives its source root and Git commit/tree from this clone; it does not require the earlier local verification-candidate commit or that machine's receipts. An ordinary user of the release should not regenerate committed release manifests. Manifest preparation below is a maintainer operation after intentional reviewed changes.
+ 
+ Set absolute paths for this machine:
+ 
+@@ -43,6 +45,8 @@
+ 
+ Review both generated locks, including all external search paths. The release scope is exactly 4406 project modules, including the umbrella. The source lock is independent of the checkout location; a runtime lock contains absolute machine paths and must be regenerated on another machine. Every selected runtime/cache file is hashed. External roots containing a D1Bound5 artifact owner are rejected. Keep this public cache immutable during verification. Any necessary loader environment override must be explicitly supplied to `prepare-runtime-lock --environment` and included in its recorded runtime identity.
+ 
++Generate both locks in the new work directory and review them against the committed release inputs. Do not copy an old machine's runtime lock or build receipts. A new machine, relocated checkout, changed runtime, or different build directory requires a new initially empty build. `--resume` is for the same frozen checkout/runtime/build identity only; every invocation still requires a new empty evidence directory.
++
+ Set `D1_SOURCE_SHA` and `D1_RUNTIME_SHA` to the reviewed SHA256 values, rather than treating an unreviewed fresh hash as approval. Configuration and verification tool fingerprints are separately checked against the committed release manifests.
+ 
+ ## Run the complete gate
+@@ -62,6 +66,8 @@
+ To resume this same fresh-origin build, repeat with `--resume` and a **new** empty evidence directory. Accepted modules are reused only when their complete source/dependency/artifact receipt chain still matches. A completed resumed build is explicitly labelled `PROJECT_SOURCE_BUILD_COMPLETE_RESUMED`; it does not claim all modules were rebuilt in the last invocation.
+ 
+ Without `--replay`, successful source/build/audit checks end with `SOURCE_BUILD_AND_AUDITS_PASS_FRESH_REPLAY_PENDING` and exit **3**. This is deliberately not full success. Errors and interruptions exit **1**, preserve available logs, and cannot become complete acceptance. The wrapper invokes only `leanchecker --verbose --fresh D1Bound5`, with `LEAN_NUM_THREADS=0`, and verifies the exact root banner and the same frozen inputs used by the type/axiom audits. Do not invoke this pinned checker's unsupported `--help` flag or omit its module target.
++
++These are reproduction instructions, not a record that this packaged command has already completed. Published evidence must identify the exact command, commit/tree, source/runtime locks, logs and gate outcomes. The portable wrapper uses the installed official checker directly; the separate Linux container watchdog used during development is not a required repository input. Reducing build jobs changes compilation concurrency, not the memory needed by the single fresh replay process. The broad compatibility audit remains a separately reported gate.
+ 
+ For a separate source-only inspection:
+ 

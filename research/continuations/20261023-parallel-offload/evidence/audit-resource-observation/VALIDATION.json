@@ -1,0 +1,47 @@
+{
+  "status": "PASS_NON_LEAN_FIXTURES_ONLY",
+  "observer_sha256": "7679dea565323e50d874bf096c0eb509d47033e1a35a26ca31eedcc806e7716f",
+  "tests_sha256": "f4c561a5a0ed4ce63121c543dcbe1cdb1d2d76b3375b82ad91e2dfa009288ef9",
+  "no_lean_or_audit_execution": true,
+  "cases": [
+    {
+      "case": "dry_run_never_launches_fixture",
+      "pass": true
+    },
+    {
+      "case": "wrong_invocation_hash_rejected_before_exec",
+      "pass": true
+    },
+    {
+      "case": "argv_cwd_env_exit_and_waited_descendant_rusage",
+      "pass": true,
+      "raw_rusage": {
+        "ru_idrss": 0,
+        "ru_inblock": 0,
+        "ru_isrss": 0,
+        "ru_ixrss": 0,
+        "ru_majflt": 0,
+        "ru_maxrss": 14464,
+        "ru_minflt": 6581,
+        "ru_msgrcv": 0,
+        "ru_msgsnd": 0,
+        "ru_nivcsw": 1626,
+        "ru_nsignals": 0,
+        "ru_nswap": 0,
+        "ru_nvcsw": 4,
+        "ru_oublock": 16,
+        "ru_stime": 0.0394,
+        "ru_utime": 0.033756
+      },
+      "wall_seconds": 0.09320757299792604
+    },
+    {
+      "case": "owned_child_signal_forwarded_reaped_and_recorded",
+      "pass": true
+    },
+    {
+      "case": "injected_exception_terminates_and_reaps_only_owned_child",
+      "pass": true
+    }
+  ]
+}

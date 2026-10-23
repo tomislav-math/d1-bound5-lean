@@ -1,0 +1,69 @@
+{
+  "schema": 1,
+  "status": "OBSERVED_WORKSPACE_FILE_LOSS_RECOVERY_INVENTORY_NOT_PROOF_RESULT",
+  "observer": "compute_offload",
+  "observed_date_utc": "2026-10-23",
+  "first_failure_window_utc": "18:28",
+  "task_workspace": "/workspace/scratch/fed64f41ca78",
+  "observations": [
+    "Earlier reads in this turn successfully read capture-tool files and prepared scope; subsequent exec process creation failed once, then normal exec recovered but those files were absent.",
+    "A read-only recursive Path.rglob inventory counted zero regular files in the entire task workspace; directory skeletons remained.",
+    "clean-build ORIGIN/SUMMARY and all capture-tool regular files were absent. Integration independently reported its integration-owned directory absent.",
+    "Supervisor PID115971 and official checker PID116049 remained visible in ps at the time of inspection. This report does not determine their eventual outcome.",
+    "All attempted ordinary reads of those processes' fd symlinks, maps, map_files, exe, cwd and root returned Permission denied. No escalation or permission bypass was attempted.",
+    "An earlier empty-fd summary skipped permission errors; it did not establish that no open deleted files survived.",
+    "/tmp/flora-workspace-size-management existed with timestamp18:28 and contained no regular files when inspected. Its name/timestamp alone do not establish the cause.",
+    "Filesystem usage at read-only check was8.8GiB used,22GiB available on32GiB overlay.",
+    "The observer performed no deletion, cleanup, signal, Git action or frozen-input reconstruction."
+  ],
+  "cause": "UNDETERMINED",
+  "remote_survival": {
+    "base": "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload",
+    "evidence_file_count": 2461,
+    "evidence_logical_bytes": 43127805,
+    "final_kernel_sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843",
+    "historical_archive": {
+      "path": "historical-transfer/accepted-artifacts.tar.xz",
+      "bytes": 575714908
+    },
+    "historical_export_manifest_bytes": 21158317,
+    "historical_inventory_bytes": 14048701,
+    "supplement_archive": {
+      "path": "historical-supplement/accepted-artifacts.tar.xz",
+      "bytes": 680324
+    },
+    "graph_source_transfer_archives": "All11 graph transfer.b64 files observed present.",
+    "preparation_packages": "Observer7 files, export-plan4 files, final-kernel-plan31 files including resource assessment, prior compiled/audit receipts, historical normalized provenance survive.",
+    "verification_limit": "Inventory confirmed paths/counts/sizes and exact final_kernel.py hash; large archives were not rehashed during this read-only assessment."
+  },
+  "runtime_reconstruction": {
+    "official_release_url": "https://github.com/leanprover/lean4/releases/download/v4.33.1/lean-4.33.1-linux.tar.zst",
+    "official_release_sha256": "890afd185370f85666025b883914ab4f4b339136f8c96167b69cfb62aecaf235",
+    "lean_binary_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+    "compat_source_sha256": "8f94646ac471551f0a1e3bfad2225bdb532d000c325f7fe6ae2be942e6b27469",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "cache_files_previous_run": 8690,
+    "availability": "Runtime setup source and exact recorded identities survive remotely; Linux binary/cache payloads were deliberately excluded from evidence archives. No runtime reconstruction has been launched."
+  },
+  "pending_unarchived": {
+    "capture_tool_sha256": "699d8cf983cf4413375688b236cfd9201a55cb9aac6ee539cdbc4dd89eb9d806",
+    "capture_test_sha256": "e143fba64efcdd07f50a6c63b7c01414ce7587273349c6aafcbbedb1554dd905",
+    "prepared_scope_sha256": "be275b5725e3e7c6a124eebd86f222943007db85fea27eb03763b5d66991e531",
+    "validation": "Prior9 fixtures passed on b7390906 source; final one-line ilean refusal tested by a metadata-only fixture; final peer receipt and metadata recheck were pending.",
+    "actual_capture": false,
+    "lost_gate_outputs": "No final clean-build history, exact118/broad/v2 actual outputs, CLEAN_FREEZE or fresh result had been copied by this observer. Other agents' durable holdings must be inventoried independently.",
+    "reported_clean_freeze": {
+      "bytes": 41460092,
+      "sha256": "a5e29fb591a0adf4cb72821bd7575e1d7edacd3fa274d9b9f92c2e2fd7541278",
+      "evidence": "Root's prior tool-observed announcement; bytes not recovered by this observer."
+    },
+    "new_freeze_review_addition": "Attempt to append FREEZE_REVIEW.json to prepared scope failed at initial missing-file read before any write.",
+    "peer_recovery_update": "Graph39 reports no exact final capture.py copy found in its remote20261023 research search. Its retained review notes confirm the one-line ilean code delta, but cannot certify final missing preparation metadata or recover exact source bytes."
+  },
+  "claim_limits": [
+    "Do not infer full fresh replay success from prior source compilation or audit reports.",
+    "Do not substitute reconstructed receipts for exact lost outputs.",
+    "Preserve prior durable scoped evidence under its original scope.",
+    "Recovery work must use a new directory and renewed source/runtime/acceptance gates as directed by root."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "findings": [
+    "Production CLI fixes the canonical root and pins the reviewed353-file plan and4759-source inventory; each mutation target is an explicit, unique, untracked, non-umbrella helper with the original hash and byte count.",
+    "Complete canonical/archive membership, source fingerprints and recorded metadata, all three configuration pins plus policy, expected HEAD, full logical index hash, and original tracked-source maps are checked. The code invokes only read-only Git commands.",
+    "Actual Linux RENAME_NOREPLACE fixtures preserved both bytestrings in an injected destination race and preserved a dangling destination symlink; the Darwin RENAME_EXCL call has no overwriting fallback and received source review only.",
+    "Shared archive and per-session no-follow locks exclude competing executor instances. Newly created directory entries are fsynced in parent order before the durable intent and rename; exact fsync ordering received a fixture test.",
+    "Journal replay accepts only exact scoped transition sequences. Interrupted before/after rename cases recover in both directions, reverse rollback restores every original bytestring and recorded metadata, and ambiguous/tampered states refuse acceptance.",
+    "Fresh preflight is read-only and requires absent session/archive paths. Preserve/rollback require --execute. Successful result receipts explicitly deny proof/publication claims; repeated completed resumes validate unchanged receipts.",
+    "All53 final Linux fixture cases pass; raw Git index bytes and HEAD remain identical during successful preserve/rollback cycles."
+  ],
+  "limitations": [
+    "No canonical preflight, source move, rollback, Git mutation, compiler or checker was executed by this review.",
+    "The Darwin rename/fsync runtime and hardware power-loss behavior were not tested; process-interruption fixtures ran on Linux.",
+    "Path guards and cooperative locks do not claim defense against a hostile local process replacing directory components or lock files. Coordinator exclusion of other filesystem writers remains required.",
+    "Final proof build/audit/replay and production preservation/publication remain separate pending gates."
+  ],
+  "production_inventory_manifest_sha256": "c68e3d02eea98c09a5b878a2fa64d5ff1ebade34551e72464742d1e15feb207f",
+  "production_plan_sha256": "8d8412630d8f8b724599b89bd3ebfc7d4446d99de432ba40001e4c9d5df85b40",
+  "reviewed_executor_sha256": "23a2c4a0aefa23fbc1161bca760f9c9e14f54e72388855a19a019ec463317303",
+  "reviewed_readme_sha256": "3efefd9cfe7ad1ad81fa28e1467da8caaeedb956720d9d15463b0be6721192c7",
+  "reviewer": "integration",
+  "schema": 1,
+  "scope": "Exact source-preservation executor safety under coordinator exclusion of other source/Git writers; no canonical execution or theorem acceptance.",
+  "status": "INDEPENDENT_FIXTURE_AND_SOURCE_REVIEW_PASS_PREPARATION_ONLY",
+  "test_report_sha256": "431b13cd114791d244b12dbb23a8ee7cca7064652cd57a54d423618c268707d8"
+}

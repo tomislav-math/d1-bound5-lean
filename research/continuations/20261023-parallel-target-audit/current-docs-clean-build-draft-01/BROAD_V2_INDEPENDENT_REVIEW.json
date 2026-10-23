@@ -1,0 +1,28 @@
+{
+  "exact_runner_delta": "Only BROAD_SHA changes from old source hash to new source hash",
+  "exact_source_delta": "Remove exactly one hyphen from /-- Optional broad compatibility audit. before final run_cmd; all other bytes unchanged",
+  "invocation_sha256": "c8ef385487ebf8cfecdf330e47668cf8d6037f75ccfe9a5f6472d2aacf68a1de",
+  "mutations": {
+    "Git": false,
+    "Lean_or_checker": false,
+    "canonical": false
+  },
+  "new_runner_sha256": "c366b42fa40ac2f84e6bc5e2a7b7539f05e82021ccc0d736a4d4f775e4cd5db9",
+  "new_source_sha256": "0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f",
+  "old_runner_sha256": "89dc770741a3d280a1b8498f507bce3fa6b124634793c8b6f2d1ee40bd4d9db5",
+  "old_source_sha256": "b97f8db3c51c98441c3733e8e9516830bebda9c85dd65197b871f079f0b4af61",
+  "original_failed_log_sha256": "b8c6f2dee23d8d845c824e1ec8437b8bd7c51cf2b65de6ba80f512a957651dce",
+  "original_failed_receipt_sha256": "3f59624818a3e49c1e2705de1182e33a86650aa45ae3dcf1f088ced8dd2a17f2",
+  "remaining_requirement": "New actual exit0 and successful v2 receipt required; v1 markers with exit1 are not success",
+  "status": "INDEPENDENT_READ_ONLY_MINIMAL_DELTA_REVIEW_PASS_NOT_EXECUTION",
+  "unchanged_scope": [
+    "All production Lean files",
+    "All audit statements and run_cmd bodies",
+    "Allowed axiom list",
+    "Build/artifact/runtime guards",
+    "Exact118 helper pin",
+    "Original v1 source, runner, invocation and failed results"
+  ],
+  "utc": "2026-10-23T16:18:40.113686+00:00",
+  "verification": "Python byte-equality assertions for both deltas and exact invocation hashing; no Lean executed by reviewer"
+}

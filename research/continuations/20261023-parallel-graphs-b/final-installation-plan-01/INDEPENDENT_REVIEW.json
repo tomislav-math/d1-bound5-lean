@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "reviewer": "graph39",
+  "recorded_at_utc": "2026-10-23T14:48:19.764Z",
+  "status": "INDEPENDENT_INSTALLATION_PLAN_REVIEW_PASS_PREPARATION_ONLY",
+  "inputs_sha256": {
+    "FINAL_INSTALLATION_PLAN.md": "7d3fdcb31e71c3eeca97eaf9d6fd3411d582a9b9c269a7ad92e3371ae9d3a1f9",
+    "INSTALL_COPY_COMMANDS.txt": "58c796632be914cec65987f6157e84ed7a5ef7c83ad5d5c3a30b07bd62a122d6",
+    "FINAL_INSTALL_MAP.json": "4708cf7a98e3b8c3de56c747a486524a7f912d015d06a737e6a40c21343dccfd",
+    "README_RECONCILIATION.diff": "ecf3fb1ce5e1ba17bbca5f7ef81dc687dca76c76a5966b108b2c780c1d6599ec",
+    "MANIFEST_RECONCILIATION.json": "4180d81b451bf58d5157ea252e4354eb3261b744833f1366538fbaab9dbf9be2",
+    "UMBRELLA.diff": "56a28146fb22c34c9d2468115cc9148402b3ad14b13d21d3fdc14fce2a824017",
+    "GIT_CHECKPOINT.json": "d14fc6d2151d576165a7374b05903b0d399205d732a0678abe13d61edd9fd8eb",
+    "D1Bound5.lean": "a45a579195a0e787c3e1986e2e0ee671ca64fa82aa030d0c68908c1f61f5982d",
+    "scripts/verification/README.md": "b7933056724c55d48f896c6b5c743ddd4efe9cb86612c32138b067cee0e88008",
+    "records/verification-tools-sha256.txt": "e03b9e0d129b7f3de828d978dcea444c3c42cf2e784d2a8b67d0705a0e264761",
+    "frozen_v2/PACKAGE_MANIFEST.json": "e1cc35542d5b26939686ba98eb3bc7c4d075aadb7997a970f8c3ef3ceb62121d"
+  },
+  "checks": [
+    "Independently parsed all 25 copy recipes without executing them. Their unique targets and payload locations exactly match the installation map, in phases 1 umbrella, 22 tool/history files, and 2 manifests. Rehashed all 25 payloads successfully.",
+    "Compared the 75-row frozen V2 and derived tool manifests: the sole changed row is scripts/verification/README.md. The exact source manifest, release pins and executable tool bytes remain unchanged.",
+    "The sequence finishes the reviewed 353-source preservation under its original guarded identity before changing the umbrella. It preserves legacy imports and appends MainTheorem using exact reviewed umbrella bytes.",
+    "The plan requires installed source-policy PASS plus exact 4406-path manifest and path-independent source-lock equality, all three configuration pins, both full manifests and every installed target hash. Counts alone cannot establish identity.",
+    "The future release identity bridge preserves the tested candidate's actual commit/tree, source/runtime locks, build origin and audit freezes. Matching released source bytes is distinguished from executing packaged check.sh end-to-end in the later clone.",
+    "The README now gives stable reproduction guidance, preserves truthful historical timeout facts, requires new machine/runtime/build identities, and reports broad compatibility separately. Top-level README/STATUS updates remain contingent on actual gate receipts and preserve dated history.",
+    "Root retains the existing private Git policy, explicit staging, unchanged preflight/index helpers, staged/post-commit blob verification and non-forced private publication. This review does not validate a future live Git checkpoint."
+  ],
+  "resolved_clarifications": [
+    "The plain cp recipe is explicitly non-atomic and does not implement the guards. Any failed/interrupted copy stops the installation; affected bytes are classified against before/after hashes, with separately reviewed recovery from immutable payload or original Git bytes.",
+    "Rollback guards are stated exactly as source/configuration/policy/executor/HEAD/index identities. Ordinary tool content alone is not guarded; phase-2 umbrella installation invalidates the original inventory and forbids restarting preservation."
+  ],
+  "limitations": [
+    "Preparation-only read-only review. No copy recipe, canonical preservation, source scan, compiler, checker, Git/index mutation or remote operation was executed by this reviewer.",
+    "The coordinator must recheck the live checkpoint, exact before hashes, file types/paths and exclusive filesystem access before actual operations. The recipes are not an atomic installer.",
+    "No fresh proof acceptance or packaged-CLI success is inferred from payload equality, documentation review or this plan. Source build, exact118 checks, broad audit and fresh root replay remain separate required actual evidence.",
+    "The proposed future 4406-source publication mapping was reviewed structurally; all 4406 canonical source hashes and eventual committed blobs must be revalidated during installation/publication."
+  ],
+  "remaining_blocking_findings": []
+}
