@@ -1,0 +1,28 @@
+{
+  "actual_transfer_performed": false,
+  "code_delta": "Exactly RAW_CHUNK300000->600000 and TEXT_PIECE50000->100000; no other source bytes changed.",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/tmp/d1bound5-checkpoint-transfer-large-20261023/test_transport.py",
+    "-v"
+  ],
+  "fixture_cases": 8,
+  "fixture_loader": "Source bytes compiled/executed directly into ModuleType; no cached Python bytecode loader.",
+  "original_source_sha256": "64498cb3ef2e717b5de7ba1377c7122abf4a0b4879eb37c28d023905a9974600",
+  "original_test_sha256": "74fcab559c788a6fbd044ab932c584286cd0bb2261429797fe2b3828257b3277",
+  "pending": [
+    "Independent graph39 review",
+    "Offload actual800000-character remote probe",
+    "Offload Mac fixtures",
+    "Root approval before selecting03 for any real batch"
+  ],
+  "python38_ast_syntax_pass": true,
+  "python38_runtime_executed": false,
+  "returncode": 0,
+  "selected02_changed": false,
+  "source_sha256": "57275bab4046248dcb1a24ab8ba03b519da96e13b04a581b6511523ea5a22167",
+  "status": "LINUX_SYNTHETIC_FIXTURES_PASS_PREPARATION_ONLY",
+  "stderr": "test_bad_chunk_refuses_acceptance (__main__.TransportTests.test_bad_chunk_refuses_acceptance) ... ok\ntest_duplicate_append_refused (__main__.TransportTests.test_duplicate_append_refused) ... ok\ntest_exact_bounded_roundtrip_not_durable (__main__.TransportTests.test_exact_bounded_roundtrip_not_durable) ... ok\ntest_exact_piece_and_archive_bounds (__main__.TransportTests.test_exact_piece_and_archive_bounds) ... ok\ntest_existing_plan_not_overwritten (__main__.TransportTests.test_existing_plan_not_overwritten) ... ok\ntest_legacy_archive_name_refused (__main__.TransportTests.test_legacy_archive_name_refused) ... ok\ntest_plan_and_source_changes_refused (__main__.TransportTests.test_plan_and_source_changes_refused) ... ok\ntest_unexpected_and_symlink_paths_refused (__main__.TransportTests.test_unexpected_and_symlink_paths_refused) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.129s\n\nOK\n",
+  "stdout": "",
+  "test_sha256": "beb6c54833c5166ce09beb525ef47feb543710395ea2fddfe7c663aaad0aa815"
+}

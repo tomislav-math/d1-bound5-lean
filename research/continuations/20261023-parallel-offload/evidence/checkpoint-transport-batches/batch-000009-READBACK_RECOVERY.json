@@ -1,0 +1,17 @@
+{
+  "action": "Retried only read-only remote receipt fetch and new local receipt creation using explicit /tmp workdir; no assembly/verifier/transport write was repeated.",
+  "cause": "unproven",
+  "generated_utc": "2026-10-23T18:09:57.811871+00:00",
+  "observed_error": "exec-server rejected CreateProcess: No such file or directory (os error2), before local receipt mkdir",
+  "proof_acceptance_claim": false,
+  "read_only_followup": {
+    "/tmp/d1bound5-checkpoint-batches-20261023": "present",
+    "/tmp/d1bound5-verification-20261023": "present",
+    "/workspace/scratch/fed64f41ca78": "absent",
+    "explicit_workdir_tmp": "exec succeeded"
+  },
+  "receipt_local_path": "/tmp/d1bound5-checkpoint-batches-20261023/confirmed/batch-000009/DURABLE_BATCH.json",
+  "receipt_sha256": "74ef37de0eb6704c476038ba9ef63df18047e812f5f22951a70a28632f60ef08",
+  "schema": 1,
+  "status": "EXACT_RECEIPT_READBACK_RECOVERED_WITH_EXPLICIT_TMP_WORKDIR"
+}

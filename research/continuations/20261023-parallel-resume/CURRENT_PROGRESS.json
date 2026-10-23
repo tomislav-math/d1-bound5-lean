@@ -66,10 +66,10 @@
     "36": "research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph36-endpoint-audit/VERIFICATION_SUMMARY.json",
     "39": "research/continuations/20261023-parallel-graph39/linux-endpoint/results-graph39-verified/VERIFICATION_SUMMARY.json"
   },
-  "main_theorem_status": "PROOF_SOURCE_AND_PRIOR_CLEAN_BUILD_AUDITS_PASSED_FINAL_FRESH_GATE_INCOMPLETE_AFTER_WORKSPACE_LOSS",
+  "main_theorem_status": "Completed proof source and historical full clean build/exact118/broad passes retained. Current recovery build and final official fresh replay are not yet accepted.",
   "accepted_root_manifest_unchanged": true,
-  "active_work": "Full4406 build resumed with V3 prefix memory reservations after exact same-source isolated retry PASS. Durable artifact checkpointing continues; final exact118/broad/fresh recovery checks pending.",
-  "current_private_head": "4cd4629bce642069da902be22b4433aa57dc7276",
+  "active_work": "Same-identity full build resumed after exact source restoration. At18:25:07UTC all1810 prior accepted modules revalidated, seven previously interrupted modules active, no new failures. Durable original-artifact checkpoints continue in parallel. Exact118/broad/finalfresh and canonical release gates remain pending.",
+  "current_private_head": "d63b0a4d60d9fb7dfcea8ce521fdb7d91adf58b7",
   "agent_verified_pending_remote_archive": {},
   "canonical_candidate_modules": 4406,
   "clean_build": {
@@ -172,7 +172,7 @@
     "durable_recovery_base": "Full proof sources, historical archives, complete clean-build summary and final audit summaries on authorized Mac. Runtime/artifacts/full fresh freeze and final accepted receipt chain require reconstruction or rebuilding."
   },
   "recovery": {
-    "status": "FULL_BUILD_RESUMED_V3_AFTER_SAME_SOURCE_ISOLATED_RETRY_PASS",
+    "status": "SAME_IDENTITY_BUILD_RUNNING_AFTER_SECOND_LOSS_EXACT_RESTORATION",
     "new_local_subtree": "recovery-20261023",
     "source_policy": "Exact4406 proof sources plus3 unchanged configuration pins from durable source lock; one source checkout and empty new artifact store.",
     "identity_policy": "New candidate/runtime/build identities; no relabeling of previous receipts.",
@@ -202,7 +202,8 @@
       "deferred": 4342,
       "observed_completed_at_least": 42,
       "expected_pilot_exit_code": 3,
-      "full_build_passed": false
+      "full_build_passed": false,
+      "scope": "Historical recovery pilot invocation metadata; actual fullV3 running observation is recorded separately."
     },
     "pilot_actual_exit_code": 3,
     "pilot_completed_modules": 64,
@@ -217,9 +218,9 @@
     "full_resume_actual_exit_code": 1,
     "first64_durable_receipt_sha256": "4610db5add050ab49dbeb7fa32b728a26a325bdffc7c4995daef2b63da85528c",
     "first64_durably_verified": true,
-    "completed_modules_last_quiescent": 360,
+    "completed_modules_last_quiescent": 1810,
     "full_v3_resume_exec_session": 88972,
-    "full_v3_resume_actual_exit_code": null,
+    "full_v3_resume_actual_exit_code": 1,
     "full_v3_invocation_sha256": "63b125c1cb6eb8945b5de71d0657181b5adb6715932acc71ad63b6894c2788d3",
     "resource_hints_v3_sha256": "3d4d6a8d901fb0076ee375ade19916ec1b39e4afbf7909016361919941a9ae95",
     "first_full_resume_failure": {
@@ -249,17 +250,70 @@
       "claim_limit": "One measured module; no proven family memory bound."
     },
     "incremental_durability": {
-      "confirmed_modules": 147,
-      "latest_receipt_sha256": "37716c0c2edbcc444ce7bd65b6cc22688c593bbb6e9ebe0f4add2139e57d1b51",
-      "next_batch_status": "100 additional modules being transferred; not yet confirmed at this update."
+      "confirmed_modules": 847,
+      "confirmed_batches": 9,
+      "latest_receipt_sha256": "74ef37de0eb6704c476038ba9ef63df18047e812f5f22951a70a28632f60ef08",
+      "exporter_sha256": "af6d8285c226671ac1fa6f214717c357eb0ed4a1cdebd67e043b37fc96001771",
+      "transport_sha256": "57275bab4046248dcb1a24ab8ba03b519da96e13b04a581b6511523ea5a22167",
+      "next_batch_status": "Resumed authorized chain after producer independently reverified all seven restored spec pins; only remote-confirmed batches count.",
+      "claim_limit": "Durable original accepted snapshots do not substitute final build/audit/kernel gates."
+    },
+    "observed_running_build": {
+      "utc": "2026-10-23T18:02:36.217704+00:00",
+      "exec_session": 88972,
+      "status": "RUNNING",
+      "completed_modules": 1752,
+      "expected_modules": 4406,
+      "failed_modules": 0,
+      "active_modules": 6,
+      "oom_counter": 2,
+      "terminal_exit_code": null
+    },
+    "second_loss_resume": {
+      "root_exec_session": 92469,
+      "actual_terminal_exit_code": null,
+      "invocation": "b93538c3f6114869b1805a3d66079cf0",
+      "invocation_record_sha256": "9990c54b9ee9206e1ed155825645fd411e211398f28af5101188ace7572c6bf7",
+      "source_restoration_sha256": "9041111fcac586b09831abb823ec67e19e3fddbaf34b17e9a42d61d603b30b40",
+      "root_independent_exit_observation_sha256": "132394edf0bc3a08dc80d4252e0061de00e280fca9e2888bcd7bcac688d0cc0c",
+      "source_files_verified_each_copy": 4411,
+      "source_commit": "b4c81242dd9c9cee6966a1e08bce0f94c66f1491",
+      "source_tree": "ee490da49ba30447d92745140f48c1ae3c34f263",
+      "build_identity_unchanged": true,
+      "observed_utc": "2026-10-23T18:25:07.747659+00:00",
+      "status": "RUNNING",
+      "prior_accepted_revalidated": 1810,
+      "completed_modules": 1810,
+      "active_modules": 7,
+      "failed_modules": 0,
+      "runtime_and_artifacts_retained_in_tmp": true,
+      "original_source_path_restored": true,
+      "authoritative_source_and_tools_duplicate_retained_in_tmp": true
     }
   },
   "latest_research_push": {
     "status": "PUSH_VERIFIED",
-    "commit": "4cd4629bce642069da902be22b4433aa57dc7276",
-    "reviewed_files": 165,
-    "scope": "research-only completed summaries and incident/recovery evidence",
-    "receipt": "research/continuations/20261023-parallel-resume/POST_LOSS_RESEARCH_PUSH_RECEIPT.json"
+    "commit": "d63b0a4d60d9fb7dfcea8ce521fdb7d91adf58b7",
+    "receipt": "research/continuations/20261023-parallel-resume/OPERATIONAL_RESEARCH_PUSH_RECEIPT.json",
+    "receipt_sha256": "8047cafb76a149db4ee6aae3beb8743c9607b7dd5bdf22b54ce8f912a14ed3e3",
+    "scope": "144 reviewed research text files; no canonical installation."
   },
-  "updated_at_utc": "2026-10-23T17:25:52.483555+00:00"
+  "updated_at_utc": "2026-10-23T18:25:26.583161+00:00",
+  "workspace_incident_02": {
+    "observed_utc": "2026-10-23T18:07:13Z",
+    "missing": "/workspace/scratch/fed64f41ca78 entire directory",
+    "cause": "unverified",
+    "root_build_exec_session": 88972,
+    "actual_exit_code": 1,
+    "build_status": "BUILD_FAILED",
+    "completed_modules": 1810,
+    "active_modules": 0,
+    "scheduler_failure": "FileNotFoundError",
+    "interrupted_unaccepted_modules": 7,
+    "oom_counter_unchanged": 2,
+    "original_summary_sha256": "2a6aae1f27ee75ccfcae74bcc00d7e242c3ddc855c31c7807286250c857befaa",
+    "actual_root_tool_return_sha256": "3e999d343de50278cdfb72e6ac9ac311560378efef85d0b3bb2ae753e98bf18f",
+    "surviving": "/tmp runtime, build artifacts, original accepted/interrupted receipts, logs, checkpoint helpers, Mac sources and privateGit",
+    "recovery": "Exact source archive being restored to /tmp duplicate then original identity paths. No artifact relabeling or identity change."
+  }
 }

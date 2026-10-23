@@ -1,0 +1,13 @@
+--- selected02/transport.py
++++ proposed03/transport.py
+@@ -9,8 +9,8 @@
+ import re
+ import uuid
+ 
+-RAW_CHUNK = 300000
+-TEXT_PIECE = 50000
++RAW_CHUNK = 600000
++TEXT_PIECE = 100000
+ MAX_ARCHIVE = 128 * 1024 * 1024
+ REMOTE_BASE = Path('/Users/tp/Lean/D1Bound5ProofObjects')
+ FILES = ('batch.tar.xz', 'PREPARED.json')

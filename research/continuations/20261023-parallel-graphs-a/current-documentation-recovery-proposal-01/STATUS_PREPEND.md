@@ -1,0 +1,58 @@
+# Status
+
+## 23 October 2026 — assembled proof; recovery verification interrupted
+
+This entry supersedes older present-tense completion claims below. The frozen
+candidate contains `D1Bound5.main_statement : D1Bound5.MainStatement`: every
+finite nonzero D(1) set in the full ring of integers of an imaginary quadratic
+field has cardinality at most five. Pair-square roots may be zero; equal
+absolute values and half-integral integer bases are included. No sharpness
+assertion is part of the target.
+
+The earlier candidate completed the fresh 4,406-module source build, exact
+114+4 declaration-occurrence audit and corrected broad audit. The broad audit's
+first attempt failed on a documentation-comment placement; that failure and
+the later corrected result remain separate. Original summary bytes survive in
+[the historical evidence package](research/continuations/20261023-parallel-target-audit/current-docs-clean-build-draft-01/).
+Its successful runs used commit
+`102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2`, tree
+`b6dd4139f839698609352d7f9866b4b429d32475`.
+The following official fresh full-root replay was interrupted with exit 130
+after environment file loss. It did not pass. Lost original full logs,
+receipt/artifact chains and freeze bodies are not claimed to have survived.
+
+Recovery uses candidate commit
+`b4c81242dd9c9cee6966a1e08bce0f94c66f1491`, tree
+`ee490da49ba30447d92745140f48c1ae3c34f263`, with the required source lock
+`b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c`.
+Its new build origin is
+`c2f3ad9fe463b99529db5586397a291f268c18fed12f5b27eaf30cc6876f3795`;
+runtime lock:
+`5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc`.
+It began with empty project outputs. Its recorded resource failure and
+subsequent guarded retries are retained, not rewritten as successful attempts.
+
+A second workspace loss at **18:07 UTC on 23 October** interrupted the current
+recovery invocation. Root collected actual exit 1; its terminal summary SHA256
+is `2a6aae1f27ee75ccfcae74bcc00d7e242c3ddc855c31c7807286250c857befaa`.
+The Mac repository and `/tmp` runtime/artifacts survived. Source/tool restoration
+and exact byte verification are pending at this checkpoint. No mathematical
+source change or new build identity is proposed for that restoration.
+
+The following remain pending: complete recovery build; exact 118-occurrence
+audit; separate broad audit; official fresh full-root replay; reviewed
+preservation of obsolete untracked helpers; canonical installation; and the
+final source-equivalence/release record. No historical result is relabelled as
+a current gate or an end-to-end `check.sh` execution.
+
+Read the timestamped
+[CURRENT_PROGRESS](research/continuations/20261023-parallel-resume/CURRENT_PROGRESS.json)
+and its incident/resume records for subsequent operational changes. The
+[prepared installation plan](research/continuations/20261023-parallel-graphs-b/final-installation-plan-04/FINAL_INSTALLATION_PLAN.md)
+and [identity checklist](research/continuations/20261023-parallel-graphs-a/current-documentation-recovery-proposal-01/APPLICATION_AND_IDENTITY_CHECKLIST.md)
+remain preparation, not evidence of installation or acceptance.
+
+The complete pre-existing STATUS text follows unchanged.
+
+---
+

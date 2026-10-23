@@ -1,0 +1,11 @@
+--- before-explicit-pathspec
++++ explicit4411pathspec
+@@ -66,7 +66,7 @@
+     return found
+ rows = verify_source(S)
+ git(S, 'init', '--quiet')
+-git(S, '-c', 'gc.auto=0', 'add', '--all')
++git(S, '-c', 'gc.auto=0', 'add', '--pathspec-from-file=-', '--pathspec-file-nul', data=b'\0'.join(n.encode('utf-8') for n in sorted(expected))+b'\0')
+ require(git(S, 'write-tree').decode().strip() == TREE, 'Git tree differs')
+ commit_bytes = (A/'RECOVERY_SOURCE_COMMIT_OBJECT.txt').read_bytes()
+ require(sha(commit_bytes) == 'dc70eaf6182cd34da08e67e02103271a90184b13ee2d699df7a242e568947078', 'Commit object bytes differ')

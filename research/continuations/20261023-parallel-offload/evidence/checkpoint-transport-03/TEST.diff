@@ -1,0 +1,33 @@
+--- selected02/test_transport.py
++++ proposed03/test_transport.py
+@@ -17,7 +17,7 @@
+         self.root = Path(self.temp.name).resolve()
+         t.REMOTE_BASE = self.root / 'remote'
+         self.source = self.root/'source'; self.source.mkdir()
+-        self.data = bytes(range(256)) * 1300
++        self.data = bytes(range(256)) * 2500
+         (self.source/'batch.tar.xz').write_bytes(self.data)
+         (self.source/'PREPARED.json').write_text(json.dumps({'schema': 1, 'status': 'PREPARED_NOT_DURABLE', 'archive_bytes': len(self.data), 'archive_sha256': t.digest(self.data)})+'\n')
+         self.plan = self.root/'plan.json'
+@@ -73,6 +73,21 @@
+         path=self.root/'legacy-name-plan.json';path.write_bytes(changed)
+         with self.assertRaises(ValueError):t.load_plan(path,t.digest(changed))
+ 
++    def test_exact_piece_and_archive_bounds(self):
++        self.assertEqual(t.RAW_CHUNK, 600000)
++        self.assertEqual(t.TEXT_PIECE, 100000)
++        self.assertEqual(t.MAX_ARCHIVE, 128 * 1024 * 1024)
++        self.assertEqual(t.FILES, ('batch.tar.xz', 'PREPARED.json'))
++        chunks = self.value['files']['batch.tar.xz']['chunks']
++        self.assertEqual([row['raw_bytes'] for row in chunks], [600000, 40000])
++        pieces = [t.emit(str(self.plan), self.pin, 'batch.tar.xz', 0, k) for k in range(8)]
++        self.assertEqual([len(piece) for piece in pieces], [100000] * 8)
++        self.assertEqual(base64.b64decode(''.join(pieces), validate=True), self.data[:600000])
++        with self.assertRaises(ValueError):
++            t.emit(str(self.plan), self.pin, 'batch.tar.xz', 0, 8)
++        with self.assertRaises(ValueError):
++            t.emit(str(self.plan), self.pin, 'batch.tar.xz', 0, -1)
++
+     def test_existing_plan_not_overwritten(self):
+         before=self.plan.read_bytes()
+         with self.assertRaises(FileExistsError):t.plan(str(self.source),'synthetic_build',1,str(self.plan))

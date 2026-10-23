@@ -1,0 +1,23 @@
+{
+  "compressed_sha256": "153d44a64d84b1d12aa79acc20c977209592bfc1968b5a28253dc1e4b126443b",
+  "compressed_to_original_ratio": 0.22997987879013512,
+  "independently_checked": [
+    "Single standard XZ/CRC64 stream exact original byte equality, original/compressed SHA and lengths, eof and empty unused_data.",
+    "Part-size arithmetic stays below5MiB with76-column base64 LF wrapping.",
+    "Original/compressed/ordered-part identity, pre/post source guards, no-overwrite, bounded decode, independent remote reconstruction and fsync requirements retained.",
+    "Semantic compressed base64 parts explicitly permanent archive evidence; no proof or final acceptance inference.",
+    "Old raw-part format and original scope remain unchanged; benchmark is only the existing pinned runtime lock, not any actual future freeze."
+  ],
+  "limitations": [
+    "Specification review only; future implementation and actual capture must enforce the listed guards and retain actual results."
+  ],
+  "original_sha256": "5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc",
+  "reviewed_files": {
+    "ENCODING_AMENDMENT.json": "292dc4550335a85387727ea27e87ee0ae110f1ed3fd231487a020559aa54cb66",
+    "README.md": "5ad69c8f397c0dffe168c64c517403d68495f282ed5c66a4d2e64bf6cd36d020",
+    "READ_ONLY_BENCHMARK.json": "2dbafa3ed0d25da3a7caec4a2dbd6e622d941b4c3dfbd494d71b3008e2666185"
+  },
+  "scope": "Read-only specification and pinned runtime-lock benchmark review; no final evidence capture, Lean, Git, source or proof changes.",
+  "status": "PASS_NARROW_STORAGE_ENCODING_PREPARATION_ONLY",
+  "utc": "2026-10-23T17:54:11.852292+00:00"
+}

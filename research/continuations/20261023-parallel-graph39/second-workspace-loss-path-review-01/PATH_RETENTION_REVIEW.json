@@ -1,0 +1,103 @@
+{
+  "actions": "Only read exact reviewed source and small existing records, and wrote this separate research report. No source/build/runtime/runner/control/Git changes, no compiler/checker launch, no process signal, no new full runtime hashing.",
+  "build_origin": {
+    "contents": {
+      "build_id": "2c06f4e3f2014ea78ba92a0b48e5ad92",
+      "created_utc": "2026-10-23T16:56:12Z",
+      "identity": {
+        "build_dir": "/tmp/d1bound5-verification-20261023/clean-build",
+        "environment": {
+          "HOME": "/root",
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "LD_PRELOAD": "/tmp/d1bound5-verification-20261023/runtime/proc_self_exe_compat.so",
+          "LEAN_NUM_THREADS": "1",
+          "LEAN_PATH": "/tmp/d1bound5-verification-20261023/clean-build/artifacts:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/batteries/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/Qq/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/aesop/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/proofwidgets/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/importGraph/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/packages/plausible/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/mathlib/.lake/build/lib/lean:/tmp/d1bound5-verification-20261023/runtime/lean-4.33.1-linux/lib/lean",
+          "LEAN_SYSROOT": "/tmp/d1bound5-verification-20261023/runtime/lean-4.33.1-linux",
+          "OMP_NUM_THREADS": "1",
+          "PATH": "/tmp/d1bound5-verification-20261023/runtime/lean-4.33.1-linux/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+        },
+        "lean_arguments": [
+          "-j1",
+          "-DautoImplicit=false",
+          "-R",
+          "/workspace/scratch/fed64f41ca78/recovery-20261023/source"
+        ],
+        "runner_sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0",
+        "runtime_lock_sha256": "5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc",
+        "schema": 1,
+        "source_lock_sha256": "b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c",
+        "source_root": "/workspace/scratch/fed64f41ca78/recovery-20261023/source"
+      },
+      "identity_hash": "8f423712a4950a66821d8a82716de9c6e9cbc83ad175d3d54ff8ddf1d47eda39",
+      "initial_artifact_inventory": []
+    },
+    "path": "/tmp/d1bound5-verification-20261023/clean-build/ORIGIN.json",
+    "sha256": "c2f3ad9fe463b99529db5586397a291f268c18fed12f5b27eaf30cc6876f3795"
+  },
+  "builder": {
+    "path": "/tmp/d1bound5-verification-20261023/runtime/fresh_project_build.py",
+    "sha256": "349a4e81d9ae80f66e505f3fa927cbde3a0a287cdb1e9971f1d6295d2b797da0"
+  },
+  "final_checker": {
+    "remote_path": "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/final_kernel.py",
+    "sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843"
+  },
+  "final_freeze_relocation": {
+    "alternative_without_gate_change": "Rebuild a fresh initially empty project at a new /tmp source_root/build identity and rerun audits, then use unchanged e04. This discards resume reuse and is unnecessary unless root chooses that tradeoff.",
+    "blocking_checks": [
+      "clean_lock_evidence lines 215-218: original lean_arguments must name selected project path",
+      "clean_build_evidence lines 255-257: original source_root must equal selected project",
+      "clean_build_evidence lines 283-286: each recorded compiler argv must name selected project source path"
+    ],
+    "current_e04_result": "Unsupported by the unchanged gate, even if the duplicate source is byte-identical and the original build/audits completed.",
+    "legitimate_future_revision_only": [
+      "Create a separately reviewed new gate revision/freeze schema that explicitly distinguishes immutable original compilation source_root from chosen replay source_root; preserve e04 and every old ORIGIN/receipt/command.",
+      "Before long replay, validate exact duplicate source set and all 4406 source hashes, lengths, imports, 3 configuration pins and candidate commit/tree against the original source lock and reviewed source manifests. Record an explicit source-equivalence bridge with original and duplicate roots and exact manifest/lock hashes. Do not assert the historical compiler ran from the duplicate.",
+      "Continue validating all original clean-build provenance, empty origin, complete successful SUMMARY, source/dependency/log/artifact receipts and recorded compiler argv using the original compilation root stored in ORIGIN. Compare source bytes to the duplicate through the same relative-name/hash mapping.",
+      "Bind completed exact118/broad audit evidence and its original frozen artifact/source identities through the explicit equality bridge; do not rewrite or relabel old audits as executed at the duplicate.",
+      "Keep the actual artifact root and runtime/cache paths unchanged. Generate a NEW freeze with the duplicate source/cwd plus exact new gate, bridge, locks, environment, manifests, audit provenance and old build records pinned under retained /tmp paths. Preserve source policy and package-owner exclusivity, full artifact/runtime universe checks and all pre/post checks.",
+      "Use unchanged official leanchecker --verbose --fresh D1Bound5, unchanged full import/replay scope and resource gates. Nothing in a path bridge constitutes kernel acceptance.",
+      "The new freeze should pin duplicate source paths, not require the old live workspace source paths after the completed-build/audit equivalence snapshot; otherwise the long replay remains exposed to the same disappearance. This is a new explicit provenance design, not something e04 currently allows."
+    ],
+    "path_independent_part": "The source lock stores relative source paths, hashes, byte lengths, imports/topological order and auxiliary hashes; builder source_lock lines 195-215 do not store the root directory. Its bytes can remain unchanged for an identical duplicate."
+  },
+  "observed_second_incident": {
+    "all_children_drained": true,
+    "builder_actual_exit_record": "/tmp/d1bound5-verification-20261023/evidence/tool-observations/full-v3-31b8fb.json",
+    "builder_actual_exit_sha256": "3e999d343de50278cdfb72e6ac9ac311560378efef85d0b3bb2ae753e98bf18f",
+    "cause": "Unestablished. Workspace absence is observed; no deletion or source/control/process mutation was performed by this reviewer.",
+    "completed_modules_at_failure": 1810,
+    "observer_interruption_report_sha256": "21a49588f30217771e47ce38f7e4bf55a2de148a8954a4fa50bbe28b4019ab63",
+    "observer_manifest_sha256": "1a50248724e050c1112c9291a2d07d764111353e8bd0c95ea862554478fad8c0",
+    "observer_package": "/tmp/d1bound5-operational-prefix-v3-20261023/build-memory-observation-01",
+    "oom_delta_in_observation": 0,
+    "qualification": "1810 accepted pointers survive, but reuse still requires the original guarded resume revalidation; no complete build claim."
+  },
+  "reviewer": "graph39",
+  "same_identity_resume": {
+    "guard_sources": [
+      "Build.__init__ lines 315-377: source closure/auxiliary equality, no source artifacts, identity equality, full runtime/source/inventory and resume checks",
+      "guard_runtime lines 396-423: actual executing runner and lock bytes, runtime universe and selected bundles",
+      "resume_passes lines 463-485: PASS/zero-exit, build/identity/source hashes, recursively accepted dependency receipts, log and artifact bundle checks"
+    ],
+    "inode_semantics": "Pins is newly constructed each invocation. Restored source inodes/mtimes need not equal the previous invocation, but before/after fingerprint equality during hashing and exact SHA256 checks remain mandatory. No cached prior metadata is trusted across invocations.",
+    "mount_namespace": "A bind mount is not implemented or recommended by this review: it would need separately authorized environment setup, recorded mount identity and lifecycle checks, and its cleanup safety is not established.",
+    "movable_auxiliary_paths": [
+      "Exact builder source pathname (identity binds its SHA, not filename)",
+      "Source-lock filename (contents and SHA unchanged)",
+      "Runtime-lock filename (contents and SHA unchanged; its internal absolute runtime paths must stay fixed)",
+      "Hints/control/launch/evidence paths (operational, not identity fields; record exact new argv and before/after control bytes)"
+    ],
+    "must_not_move_for_same_identity": [
+      "Resolved source_root",
+      "Resolved build_dir",
+      "Runtime/cache paths in runtime lock and environment"
+    ],
+    "required": "Restore the exact source closure and configuration at the original resolved source_root, retain the existing /tmp build_dir and runtime paths and environment, and use the exact builder/lock bytes. Preserve all old records and start a new --resume invocation.",
+    "retention_limit": "Moving auxiliary paths reduces exposure but leaves live source access at the original path. A durable byte-exact /tmp backup enables restoration; it is not a guarantee that the platform will retain either directory.",
+    "symlink": "A source-root symlink to a new /tmp tree changes Path.resolve() and therefore identity/Lean -R; not a supported continuation. Do not bypass the guard."
+  },
+  "status": "READ_ONLY_PATH_RETENTION_REVIEW_NO_RELOCATION_OR_PROOF_ACCEPTANCE",
+  "utc": "2026-10-23T18:14:28.209631+00:00"
+}

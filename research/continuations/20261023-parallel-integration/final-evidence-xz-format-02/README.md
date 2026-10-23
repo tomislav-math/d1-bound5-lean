@@ -1,0 +1,3 @@
+This narrow preparation adds optional single-file XZ3 compression before the already specified ordered base64 split. It does not change any existing evidence or the original raw-parts scope. The benchmark reads only the pinned runtime-lock JSON and proves exact roundtrip byte/hash equality; it is not a benchmark or capture of a final freeze that does not yet exist.
+
+Every future compressed original retains its raw size/SHA, compressed size/SHA, ordered stored/decoded part hashes, exact single-stream reconstruction and destination verification. All semantic parts remain permanently retained. A compressed transport receipt is never a proof-acceptance result. This package introduces no generic capture framework or executable production code.

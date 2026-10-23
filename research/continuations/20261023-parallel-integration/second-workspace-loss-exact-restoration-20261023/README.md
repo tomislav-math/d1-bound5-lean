@@ -1,0 +1,5 @@
+Exact second-incident source/tool recovery is complete. The original archive and every selected source/config/audit byte were hash-verified. The same Git tree and original raw commit object reconstruct commit b4c81242dd9c9cee6966a1e08bce0f94c66f1491 at both roots. The new Git index/stat metadata is not claimed byte-identical to the lost index.
+
+Root reviewed the original restoration algorithm and requested the single explicit4411-path staging refinement. Both versions and exact diff remain preserved. Actual restoration tool session7702 completed with exit0; its original tool response remains in conversation history and was not separately captured as a raw JSON file. SOURCE_RESTORATION.json is the script-generated original receipt.
+
+No build artifact, runtime, acceptance receipt, proof source content, Mac canonical source or Git index was modified. Root independently verifies restored state before any resume. The cause of workspace disappearance remains unproven. All archive chunks, original source archive and authoritative source/tools duplicate remain retained under/tmp for this session.

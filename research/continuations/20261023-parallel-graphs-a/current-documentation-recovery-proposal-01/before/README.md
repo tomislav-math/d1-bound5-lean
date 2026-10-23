@@ -1,0 +1,73 @@
+# A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings
+
+**Zrinka Franušić and Tomislav Pejković**
+
+15 October 2026
+
+Every D(1)-tuple in the full ring of integers of an imaginary quadratic field
+has at most five elements. The paper combines structural and approximation
+estimates with bounded exact computations.
+
+| Material | Link |
+|---|---|
+| Paper, 58 pages | [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) |
+| Standalone manuscript source | [LaTeX](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
+| Numerical programs, recorded outputs and reproduction instructions | [Verification guide](verification/README.md) |
+| Lean proof progress and outstanding work | [Status](STATUS.md) |
+
+The dated reading copy differs from the verified v4 manuscript only by its
+displayed date. The numerical supplement includes the available current and
+historical implementations, with their original evidence and clearly stated
+reproduction requirements. The Lean formalization below remains incomplete.
+The repository is private; no public release or licence has been selected.
+
+## Lean 4 formalization
+
+Private, in-progress Lean 4/mathlib formalization of the main theorem of
+*A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*, v4.
+
+**The main theorem has not been proved in this project.** `D1Bound5.MainStatement`
+is its specification as a proposition, not an asserted theorem. No public
+license or release has been selected.
+
+The target quantifies over every degree-two totally complex number field and
+its **full ring of integers**. Entries are distinct and nonzero. A value
+`x*y+1` and its square root may be zero. Equal absolute values are permitted.
+
+## Reproduce the current proof modules
+
+Pinned Lean: `leanprover/lean4:v4.33.1`.
+Pinned mathlib: `0df444a360eaa60ab8c11dca51a86af692955474`.
+The complete dependency revisions are in `lake-manifest.json`.
+
+With elan and Python 3 available, run from a clean checkout:
+
+```sh
+bash scripts/fetch_cache.sh
+bash scripts/check.sh --replay
+```
+
+The script builds, scans proof sources, audits transitive axiom dependencies,
+and replays project modules through the bundled Lean kernel checker. The
+checker uses the same Lean kernel; it is not an independent external verifier.
+The accepted axiom baseline is `propext`, `Classical.choice`, `Quot.sound`.
+No private manuscript, old project, certificate service, or API key is needed
+to build the proof modules currently committed here.
+
+The manual-only GitHub workflow is prepared but is not automatically triggered
+by commits. It requires prior confirmation of an existing free Actions
+allowance. No paid service or spending setting is enabled by this project.
+
+## Research records
+
+- `STATUS.md`: current completion gates and recovery directions.
+- `records/paper-to-lean.md`: exact accepted declarations and source labels.
+- `records/statement-review.md`: specification back-translation and limitations.
+- `records/open-obligations.md`: mathematical dependencies not yet formalized.
+- `records/build-record.md`: actual commands, results and source commits.
+
+The frozen undated manuscript is included at
+`verification/v4/output/D1_bound5-v4.tex`. Its SHA256 is
+`776933702a89ba3ee6bee39045f3f1643fd899541586cc2acbcc420b1fa03ef3`.
+External Python checks are evidence only, never Lean proof terms. Historical
+large extension graphs have not been regenerated in this session.
