@@ -33,3 +33,7 @@ installed-kernel replay passed. No Graph7 timeout is claimed. Reuse existing mat
 Latest checked archive: 20261023-economical-graph19-left-pilot12. graph19 LEFT heads 0..11, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
 Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph19-left000. graph19 LEFT heads 0..100, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
+Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. MainTheorem UNPROVED, root integration unverified.
