@@ -1,0 +1,43 @@
+{
+  "active_batch3_modified": false,
+  "archive_bytes": 59393753,
+  "archive_chunk_jobs": 198,
+  "average_concurrent_combined_jobs": 7.835036532183504,
+  "base64_archive_bytes_per_second": 323969.17060079693,
+  "combined_chunk_jobs": 199,
+  "combined_job_ms": {
+    "max": 19193,
+    "mean": 9624.180904522613,
+    "median": 10183,
+    "min": 1645,
+    "p90": 14096,
+    "p95": 16369
+  },
+  "current_base64_chunk_chars": 400000,
+  "current_raw_chunk_bytes": 300000,
+  "facts": [
+    "Only combined local-read plus remote-write timings exist; they do not isolate network payload time from per-call latency.",
+    "Average7.835/8 workers are busy; adding workers is not supported by utilization evidence.",
+    "198 archive chunks plus1 PREPARED job produce199 combined read/write jobs for59.39MB."
+  ],
+  "input_sha256": {
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/checkpoint-transport-batches/batch-000002-CHUNK_EXECUTION.json": "e20fc8855cd6194fc55e27eb64ed603b55709fa50e336622ab6a359e7564d3fc",
+    "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/checkpoint-transport-batches/batch-000002-TRANSPORT_PLAN.json": "3dd900190dbe6d663940c03fcdb5f554db9323c35784593abacf242e64128dc6"
+  },
+  "metadata_chunk_jobs": 1,
+  "no_new_upload_channel": true,
+  "proposal_only": {
+    "base64_chunk_chars": 800000,
+    "constraint": "First validate complete per-chunk read/write, hash and arrival with existing tools and source guards; do not infer success or change active batch3.",
+    "expected_effect": "Halves call count for equal archive bytes, but measured throughput gain is unknown because payload and fixed overhead are not separated.",
+    "next_controlled_test_raw_chunk_bytes": 600000,
+    "projected_archive_chunk_count": 99,
+    "same_transport_tools": true,
+    "workers_unchanged": 8
+  },
+  "raw_archive_bytes_per_second": 242976.8738596477,
+  "schema": 1,
+  "status": "OBSERVED_TIMING_ANALYSIS_NOT_TRANSPORT_CHANGE",
+  "transport_wall_seconds": 244.442,
+  "workers": 8
+}

@@ -1,0 +1,84 @@
+{
+  "active_batch3_modified": false,
+  "chunk_proposal_only": "Test600000 rawbytes/800000base64characters through same tools with unchanged8workers and exact chunk/arrival hashes; current combined timings cannot separate per-call latency from payload overhead.",
+  "decoded_raw_tar_bytes": 239052800,
+  "decoded_raw_tar_sha256": "d6747493f893a7651a56579e77c4a1cb8227f2d5c45f8edb8969eb794ff70863",
+  "exporter_or_arrival_code_modified": false,
+  "format_change_requirements": [
+    "Versioned exporter and arrival helper; keep frozen gzip exporter, original archives and old accepted receipt chain intact.",
+    "Explicit new archive name/format and preset3; exact per-member bytes, SHA, snapshot/dependency/receipt guards unchanged.",
+    "Reader must select the declared reviewed format and verify exact contents; no new upload channel.",
+    "New actual transport plus durable-arrival verification is required before treating a new XZ batch as archived."
+  ],
+  "git_or_lean_operation": false,
+  "gzip3_baseline_actual_exit": 0,
+  "gzip3_baseline_runtime_seconds": 3.08,
+  "input_sha256": {
+    "BENCHMARK_RESULT.json": "0659745562c737fbc5e284b3a7439b735bfd2f1499695d3109c56f31c225e05e",
+    "GZIP3_BASELINE.json": "0908adf6952dc7756dd8cacc8e0e1ab4326b22911774e9af4b55c0f5496c46ce",
+    "TRANSPORT_TIMING_ANALYSIS.json": "3998f856087a9cf5f668f54f8b9a7608cd83b9fccf4c9aa7d98edee280c37bc4"
+  },
+  "main_benchmark_actual_exit": 0,
+  "main_benchmark_runtime_seconds": 165.41,
+  "measured_max_rss_bytes": 138149888,
+  "model_limits": [
+    "Compression timings measured on the Mac arm64 destination; future compression on Linux source host may differ.",
+    "Transfer estimate assumes observed batch2 byte throughput persists; round-trip verification/arrival work is not included in modeled total.",
+    "One batch only; module mix and timing variance may change compression ratios and durations.",
+    "No size benefit or throughput improvement from larger chunk size has yet been measured."
+  ],
+  "rows": [
+    {
+      "compressed_bytes": 59393743,
+      "compression_seconds": 2.4508143749999998,
+      "kind": "gzip",
+      "level": 3,
+      "modeled_compress_plus_transfer_seconds": 246.8927732188198,
+      "modeled_seconds_saved_vs_gzip3": 0.0,
+      "modeled_transfer_seconds": 244.4419588438198,
+      "peak_process_rss_bytes": 25313280
+    },
+    {
+      "compressed_bytes": 54136378,
+      "compression_seconds": 62.149051541999995,
+      "kind": "gzip",
+      "level": 9,
+      "modeled_compress_plus_transfer_seconds": 284.95370426492184,
+      "modeled_seconds_saved_vs_gzip3": -38.06093104610204,
+      "modeled_transfer_seconds": 222.80465272292187,
+      "peak_process_rss_bytes": 23609344
+    },
+    {
+      "compressed_bytes": 40619280,
+      "compression_seconds": 12.512336000000005,
+      "kind": "xz",
+      "level": 3,
+      "modeled_compress_plus_transfer_seconds": 179.68577664383338,
+      "modeled_seconds_saved_vs_gzip3": 67.20699657498642,
+      "modeled_transfer_seconds": 167.17344064383337,
+      "peak_process_rss_bytes": 61177856
+    },
+    {
+      "compressed_bytes": 35152160,
+      "compression_seconds": 84.11349754199999,
+      "kind": "xz",
+      "level": 6,
+      "modeled_compress_plus_transfer_seconds": 228.78636060758197,
+      "modeled_seconds_saved_vs_gzip3": 18.10641261123783,
+      "modeled_transfer_seconds": 144.672863065582,
+      "peak_process_rss_bytes": 138149888
+    }
+  ],
+  "schema": 1,
+  "selected_proposal": {
+    "estimated_breakeven_sourcehost_xz3_compression_seconds": 79.71933257498644,
+    "format": "xz",
+    "modeled_fraction_faster": 0.27221127495465897,
+    "modeled_seconds_saved": 67.20699657498642,
+    "preset": 3,
+    "size_reduction_vs_original_gzip3_percent": 31.610181292972005
+  },
+  "status": "MEASURED_LOSSLESS_COMPRESSION_RECOMMENDATION_NOT_IMPLEMENTED",
+  "unchanged_original_archive_sha256": "8cb1e274875167131b34f533b7cf1d510591cdb877cba4b09d7ee25386adc353",
+  "utc": "2026-10-23T17:32:31.259956+00:00"
+}

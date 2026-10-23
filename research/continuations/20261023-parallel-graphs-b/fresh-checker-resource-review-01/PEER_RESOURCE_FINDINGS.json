@@ -1,0 +1,18 @@
+{
+  "captured_by": "/root/graph_inventory",
+  "findings": [
+    "32GiB RLIMIT_AS is a hard virtual-space cap, not a physical-RAM cap.",
+    "6GiB VmRSS and cgroup limit minus1GiB resident-floor reserve are checked every0.5s; TERM gets up to5s before KILL.",
+    "Admission requires physical_budget + baseline resident_floor + reserve <= finite cgroup limit; at8GiB/6GiB/1GiB this requires baseline floor<=1GiB.",
+    "resident_floor sums anon,kernel,shmem,file_dirty,file_writeback; clean file cache is omitted.",
+    "Stop checks current VmRSS; VmHWM is recorded as a peak, not used as the stop threshold.",
+    "Sampling and termination grace permit overshoot; the enclosing cgroup is the sole hard physical limit.",
+    "OOM event deltas invalidate the final result; timeout excludes pre/post frozen-input validation.",
+    "Exact full-root fresh banner, exit0, and unchanged post-input guards remain mandatory; no fallback."
+  ],
+  "peer": "/root/graph39",
+  "recommendation": "No configuration change or checker launch based solely on old interrupted run.",
+  "schema": 1,
+  "script_sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843",
+  "status": "CAPTURED_PEER_READ_ONLY_FINDINGS_NOT_AN_EXECUTION_RECEIPT"
+}

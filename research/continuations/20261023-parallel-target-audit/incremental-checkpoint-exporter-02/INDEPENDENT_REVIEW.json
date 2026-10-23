@@ -1,0 +1,46 @@
+{
+  "ast_added_or_removed_functions": [],
+  "ast_changed_existing_functions": [
+    "prepare",
+    "verify_arrival"
+  ],
+  "claim_boundary": "Prepared exporter revision only. No actual XZ capture, transfer, arrival confirmation, source compilation, Git/canonical mutation or full proof acceptance performed or inferred. Root selects versions and actual concrete batch identities separately; original gzip batches stay bound to preserved original verifier.",
+  "confirmed_scope": [
+    "Writer is explicit w:xz preset3; reader is explicit r:xz; basename is batch.tar.xz.",
+    "PREPARED and DURABLE now record archive_format=tar.xz; arrival requires the exact label and basename.",
+    "All other source/receipt/identity/dependency/capture guards and durable fsync/exclusive-write logic remain unchanged from independently reviewed ba0c33df source.",
+    "previous_record is unchanged; it binds actual prior receipt bytes/hash/schema/status/build/spec/identity/cumulative map without assuming that prior archive was XZ.",
+    "The new mixed-format fixture executes exact old gzip prepare/arrival before new XZ prepare/arrival, checks the old/new verifier hashes and exact predecessor hash, and leaves old source bytes intact.",
+    "Transport02 filenames match this exporter; neither transport completion nor source review alone establishes a durable checkpoint."
+  ],
+  "fixture_evidence": {
+    "independent_review_read_reports_logs_and_test_source": true,
+    "linux_log_sha256": "366930845f9f535871d8f7d1556d689a5795e4f17840e9a0e617c40f3bc93b2a",
+    "linux_report_sha256": "945f01d9b7c6597a38a7cb7d28b0a6bb0ef9f88eae80cf778178f9c83155979c",
+    "mac_log_sha256": "adcdc9d69fa504252f5dde114b4705fbd6cbe5664c5c30459d2796c00ad3ba97",
+    "mac_report_sha256": "108eacc3d3d93063bc33405c752bcfced4720548f6cb0a76e74336c4a5dbee66",
+    "mac_source_test_legacy_hashes_independently_rechecked": true,
+    "reported_actual_exit_code_each_platform": 0,
+    "reported_test_count_each_platform": 35,
+    "tests_rerun_by_reviewer": false
+  },
+  "legacy_source_sha256": "ba0c33df4af964330946840fc386874a67447339ffa3a31449625cf5b26a1a19",
+  "reviewed_files": {
+    "EXPORTER_XZ_ONLY.diff": "bd98767337b1c7f5c2eee6cbe886fa15ee0032ff66e6f1b403887c2b761585ab",
+    "LINUX_FIXTURE_LOG.txt": "366930845f9f535871d8f7d1556d689a5795e4f17840e9a0e617c40f3bc93b2a",
+    "LINUX_FIXTURE_REPORT.json": "945f01d9b7c6597a38a7cb7d28b0a6bb0ef9f88eae80cf778178f9c83155979c",
+    "README.md": "38bfd14b1e229dcf366188ff01f5e99f1d05af28c9b283025c928a3dccf22e2b",
+    "checkpoint_export.py": "af6d8285c226671ac1fa6f214717c357eb0ed4a1cdebd67e043b37fc96001771",
+    "legacy_checkpoint_export.py": "ba0c33df4af964330946840fc386874a67447339ffa3a31449625cf5b26a1a19",
+    "test_checkpoint_export.py": "2442067667bb821682db915b0574c1f73f9b0e2e8a895d6a22f013900ceb6ab3"
+  },
+  "reviewer": "/root/graph39",
+  "source_sha256": "af6d8285c226671ac1fa6f214717c357eb0ed4a1cdebd67e043b37fc96001771",
+  "status": "INDEPENDENT_STATIC_DELTA_REVIEW_PASS_PREPARATION_ONLY",
+  "unchanged_limitations": [
+    "Cooperative nonhostile writers and caller quiescence/stability assumptions retained.",
+    "Payload-byte cap excludes archive/metadata overhead; transport has its own compressed-file cap.",
+    "Archive format and current verifier hash are recorded per batch; historical mixed-format archives require their actual reviewed verifier version."
+  ],
+  "utc": "2026-10-23T17:33:02.592841+00:00"
+}

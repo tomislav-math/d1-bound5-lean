@@ -1,0 +1,39 @@
+{
+  "above_6_5GiB_elapsed_seconds": [
+    564.697,
+    565.202
+  ],
+  "accepted_prefix_pointer_count_at_end": 53,
+  "continued_observer_directory": "/tmp/d1bound5-operational-prefix-v3-20261023/full-v3-prefix-observation-02",
+  "continued_observer_script_sha256": "f12ac7982cdc9c7c6b8d641b3b097aee08decb7c684ff30629631a7721f35b82",
+  "interpretation": [
+    "No prefix HWM sample reached1950MiB near-reservation alert during this bounded window.",
+    "The global cgroup floor exceeded6.5GiB for two adjacent samples and then drained. This was reported promptly; root retained existing controls and no new OOM event occurred.",
+    "Per-process RSS values are not added because mapped resident pages can be shared. Cgroup floor is tracked separately.",
+    "End of this15minute window is not completion of all prefix modules. A separately recorded observer02 continues at0.5second cadence; samples overlap briefly.",
+    "Kernel-reported HWM is observed only until sampling ends/process disappears, so a process still running at window end may later peak higher."
+  ],
+  "live_control_changed_by_observer": false,
+  "max_observed_cgroup_floor_bytes": 7358230528,
+  "max_observed_prefix_HWM_bytes": 1958658048,
+  "observed_processes": 10,
+  "observer_actual_exit_code": 0,
+  "oom_deltas": {
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "peak_floor_elapsed_seconds": 565.202,
+  "root_reported_live_control_sha256": "7548d1d79080871eb48fec2e7e4f985bc292ba10ce2b81162ad4622aed613b6d",
+  "samples": 1787,
+  "samples_above_6_5GiB": 2,
+  "scope_limitations": [
+    "No source/runner/runtime/hint/control changes",
+    "No compiler launch or process signals by observer",
+    "No full build/axiom/broad/fresh gate result inferred"
+  ],
+  "seconds": 900.2591515910026,
+  "status": "BOUNDED_READ_ONLY_RESOURCE_OBSERVATION_COMPLETE_NOT_PROOF_ACCEPTANCE",
+  "terminal_reason": "BOUNDED_OBSERVATION_TIME_EXPIRED",
+  "utc": "2026-10-23T17:41:46.978265+00:00"
+}

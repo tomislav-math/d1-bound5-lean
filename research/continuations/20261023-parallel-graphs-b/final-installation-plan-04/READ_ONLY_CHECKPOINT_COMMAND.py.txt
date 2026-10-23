@@ -1,0 +1,34 @@
+from pathlib import Path
+import subprocess,json,hashlib,datetime
+r=Path("/Users/tp/Lean/D1Bound5")
+p=r/"research/continuations/20261023-parallel-graphs-b/final-installation-plan-03"
+def git(*args):return subprocess.check_output(["git","-C",str(r),*args])
+def h(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+head=git("rev-parse","HEAD").decode().strip()
+index=git("ls-files","--stage","-z")
+assert head=="ae7e7feb1777f64b15153ad1fd239effa4bf2237"
+assert hashlib.sha256(index).hexdigest()=="2c4b59e2a4c0df2180c7a35a16d674f398c84d72722b2cf4b05fb8db37b12dbb"
+assert not git("diff","--cached","--name-only","-z")
+assert not (r/".git/index.lock").exists()
+old=json.loads((p/"FINAL_INSTALL_MAP.json").read_text())
+checked={}
+for row in old["rows"]:
+ q=r/row["target"]
+ assert not q.is_symlink()
+ if row["before_sha256"] is None:
+  assert not q.exists(),str(q)
+  checked[row["target"]]=None
+ else:
+  assert h(q)==row["before_sha256"],str(q)
+  checked[row["target"]]=h(q)
+configs={n:h(r/n) for n in ["lean-toolchain","lakefile.lean","lake-manifest.json"]}
+assert configs==json.loads((p/"GIT_CHECKPOINT.json").read_text())["configuration_sha256"]
+assert h(r/"GIT_SYNC_POLICY.md")=="f9be79625f5ba7387e5165b46cd4d0175c24f64ccc8d9f0bea01f611e3a8652b"
+tracked=[n.decode() for n in git("ls-files","-z").split(b"\0") if n]
+tracked=[n for n in tracked if n=="D1Bound5.lean" or n.startswith("D1Bound5/") and n.endswith(".lean")]
+assert len(tracked)==107
+destinations={n:(r/n).exists() for n in ["research/continuations/20261023-final-source-preservation/obsolete-untracked","research/continuations/20261023-final-source-preservation/session-001"]}
+assert not any(destinations.values())
+assert git("rev-parse","HEAD").decode().strip()==head and git("ls-files","--stage","-z")==index
+result={"schema":1,"status":"READ_ONLY_TARGET_CHECKPOINT_NOT_EXECUTION_AUTHORIZATION","utc":datetime.datetime.now(datetime.timezone.utc).isoformat(),"head":head,"branch":git("branch","--show-current").decode().strip(),"ls_files_stage_z_sha256":hashlib.sha256(index).hexdigest(),"staged_diff_empty":True,"index_lock_absent":True,"tracked_production_sources":len(tracked),"configuration_sha256":configs,"policy_sha256":h(r/"GIT_SYNC_POLICY.md"),"root_sha256":h(r/"D1Bound5.lean"),"checked_canonical_before_targets":checked,"preservation_destinations_present":destinations,"refresh_before_execution_if_any_git_change":True,"preservation_invoked":False,"canonical_or_git_mutation":False}
+print("BEGINRESULT"+json.dumps(result,sort_keys=True)+"ENDRESULT")

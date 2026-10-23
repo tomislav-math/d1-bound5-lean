@@ -1,0 +1,21 @@
+{
+  "files": {
+    "README.md": "b819b340ae086b9a71c2e10f7167f182c1c2ebb4aef47e218bbd0b379baaffee",
+    "SCOPE.json": "95ee7e0d951f3c9ea9d6c9fe4a0e4c8dd8c4e9e4a111001a8a8f573d705974e4",
+    "SPLIT_FORMAT.json": "7bdac24cb3e0feca0437374031f7d3372fbc037efb3ba8ab4a2afc3346cf612b"
+  },
+  "findings": {
+    "accepted_chain_complement": "Original invocation RESUME_VALIDATION/SUMMARY and later launch/control/resource histories are explicitly covered; accepted snapshot already contains selected invocation START and original source/locks/runner/receipts/logs/artifacts.",
+    "audit_and_kernel": "Full original freezes/logs/failure attempts and final checker results/tool observations are covered; missing and partial records remain explicit.",
+    "durability": "Unique appended batches, pre/post identity checks, exact original-byte and destination reconstruction checks cover the earlier summary-only loss gap.",
+    "nonaccepted_attempts": "All receipt/log originals and partial stage/superseded bytes are covered separately with no acceptance claim; active outputs excluded until drained.",
+    "parts": "Lossless ordered raw-byte accounting and both encoded/decoded hashes are sufficient. Retained base64 parts are semantic archive evidence, not disposable transport; their eventual stage allowlist must classify them explicitly."
+  },
+  "limitations": [
+    "Preparation only; exact future selected launch paths must be reconciled with actual generated files before capture.",
+    "The review does not claim any actual supplemental capture, build success, audit pass, fresh replay, or remote byte verification.",
+    "No Lean, Git, transport, source/runtime/build mutation performed."
+  ],
+  "reviewer": "audit_target",
+  "status": "READ_ONLY_COMPLEMENT_SCOPE_REVIEW_PASS"
+}

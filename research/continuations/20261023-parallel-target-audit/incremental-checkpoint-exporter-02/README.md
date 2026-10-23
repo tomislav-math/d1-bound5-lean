@@ -1,0 +1,15 @@
+# Checkpoint exporter 02: explicit XZ preset 3
+
+Prepared separately for root selection. No real XZ export has been run by this preparation package. Existing gzip archives, the original ba0c33df exporter and the fixed recovery specification remain unchanged.
+
+The only format changes are the fixed filename `batch.tar.xz`, a `tarfile` XZ writer with preset 3, an explicit XZ reader, and `archive_format: "tar.xz"` in prepared/durable metadata. The new arrival verifier requires that exact format label and archive basename. Receipt schema remains 1, and all build/source/runtime identity, source/receipt/dependency, copy/transport, safe-member and fsync guards are unchanged. No source, proof, runtime, builder, build ID or checkpoint-specification change is involved.
+
+Use the same `prepare` and `verify-arrival` command arguments documented in the original reviewed package, selecting this separately hash-pinned script and the `batch.tar.xz` file. The original specification remains SHA `1ac23af8e9bb59582d70e899205f5f396b8cc0525b6ac0929a4e22d8f8e5dfd4`. Every next batch still requires the exact preceding remote-confirmed DURABLE receipt. The 100-module/512MiB original-payload limits and root's minimum50 rule (except terminal tail) remain in force; transport separately limits each compressed file to128MiB. XZ metadata/container overhead is outside the original-payload cap, as with gzip.
+
+Confirmed gzip predecessors are deliberately accepted without relabelling them. Their exact receipt bytes and cumulative accepted maps are chained into the next XZ batch. Their old gzip archives must continue to be read with the preserved original gzip verifier; the new reader does not pretend that old archives are XZ. A durable XZ receipt records its own current verifier SHA. Restore/reverify each historical archive using its actual recorded format and reviewed verifier version.
+
+`EXPORTER_XZ_ONLY.diff` contains the exact source delta. `legacy_checkpoint_export.py` is byte-identical to the old reviewed ba0c33df source and exists solely for the mixed-format fixture and recovery reference. The35 synthetic fixtures include the original33 adapted checks, a genuine old exporter/old arrival confirmation followed by a new XZ successor with the same build/specification, and rejection of a wrong explicit format. Both tool versions are loaded from exact source bytes with no cached project bytecode.
+
+The benchmark belongs to the independently preserved graphs-a/checkpoint-compression-study-01 package. Root selected preset3 for preparation after measuring a representative59.39MB gzip archive as40.62MB XZ3 with exact decoded-tar equality; the slower preset6 did not justify its incremental size saving. Benchmark results are performance observations, not proof acceptance.
+
+No new actual exporter use or format switch is authorized by this README. Root selects the independently reviewed/durable new exporter and coordinated transport version separately. Active gzip batches continue under their original immutable pins.

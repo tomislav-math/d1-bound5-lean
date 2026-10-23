@@ -1,0 +1,51 @@
+--- legacy-ba0c33df/checkpoint_export.py
++++ xz-preset3/checkpoint_export.py
+@@ -349,8 +349,8 @@
+                     'scope': 'Only listed stable COMPILE_PASS modules; unaccepted/active work excluded; no whole-build or kernel PASS claim.'}
+         snapshot_raw = encoded(snapshot)
+         (temp / 'SNAPSHOT.json').write_bytes(snapshot_raw)
+-        archive = out / 'batch.tar.gz'
+-        with tarfile.open(str(archive), 'w:gz', compresslevel=3) as tar:
++        archive = out / 'batch.tar.xz'
++        with tarfile.open(str(archive), 'w:xz', preset=3) as tar:
+             for name in sorted(list(files) + ['SNAPSHOT.json']):
+                 data = temp / name
+                 info = tarfile.TarInfo(name)
+@@ -366,7 +366,7 @@
+                     'Bundle membership changed during compression')
+         with archive.open('rb') as f:
+             os.fsync(f.fileno())
+-        sidecar = {'schema': SCHEMA, 'status': 'PREPARED_NOT_DURABLE',
++        sidecar = {'schema': SCHEMA, 'status': 'PREPARED_NOT_DURABLE', 'archive_format': 'tar.xz',
+                    'archive_sha256': file_sha(archive), 'archive_bytes': archive.stat().st_size,
+                    'snapshot_sha256': data_sha(snapshot_raw), 'snapshot': snapshot}
+         exclusive(out / 'PREPARED.json', encoded(sidecar))
+@@ -382,8 +382,10 @@
+     prepared_raw = stable_bytes(args.prepared, args.prepared_sha256)
+     prepared = json.loads(prepared_raw)
+     require(prepared['schema'] == SCHEMA and prepared['status'] == 'PREPARED_NOT_DURABLE', 'Invalid prepared record')
++    require(prepared.get('archive_format') == 'tar.xz', 'Expected explicit tar.xz format')
+     require(prepared['archive_sha256'] == args.archive_sha256, 'Transport archive pin mismatch')
+     archive = canonical_path(args.archive)
++    require(archive.name == 'batch.tar.xz', 'Expected batch.tar.xz archive name')
+     destination = canonical_path(args.destination)
+     require(archive.parent == destination and canonical_path(args.prepared).parent == destination,
+             'Archive and prepared sidecar must already be stored in durable destination')
+@@ -399,7 +401,7 @@
+     expected['SNAPSHOT.json'] = {'sha256': prepared['snapshot_sha256'], 'bytes': len(encoded(snapshot))}
+     small = {}
+     seen = set()
+-    with tarfile.open(str(archive), 'r:gz') as tar:
++    with tarfile.open(str(archive), 'r:xz') as tar:
+         for member in tar:
+             name = safe_relative(member.name)
+             require(member.isfile() and name not in seen and name in expected,
+@@ -489,7 +491,7 @@
+               'build_id': snapshot['build_id'], 'identity_hash': snapshot['identity_hash'],
+               'spec_sha256': snapshot['spec_sha256'], 'batch_number': snapshot['batch_number'],
+               'previous_durable_sha256': args.previous_sha256, 'modules': modules,
+-              'cumulative': cumulative, 'archive_name': archive.name, 'archive_sha256': args.archive_sha256,
++              'cumulative': cumulative, 'archive_format': 'tar.xz', 'archive_name': archive.name, 'archive_sha256': args.archive_sha256,
+               'archive_bytes': before[2], 'prepared_name': Path(args.prepared).name,
+               'prepared_sha256': args.prepared_sha256, 'snapshot_sha256': prepared['snapshot_sha256'],
+               'file_count': len(expected), 'payload_bytes': snapshot['payload_bytes'],

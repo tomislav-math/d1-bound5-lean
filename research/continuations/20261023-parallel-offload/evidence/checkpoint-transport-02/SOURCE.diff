@@ -1,0 +1,31 @@
+--- transport01.py
++++ transport02.py
+@@ -13,7 +13,7 @@
+ TEXT_PIECE = 50000
+ MAX_ARCHIVE = 128 * 1024 * 1024
+ REMOTE_BASE = Path('/Users/tp/Lean/D1Bound5ProofObjects')
+-FILES = ('batch.tar.gz', 'PREPARED.json')
++FILES = ('batch.tar.xz', 'PREPARED.json')
+ 
+ 
+ def require(test, message):
+@@ -72,8 +72,8 @@
+                       'sha256': whole.hexdigest(), 'chunks': parts}
+     prepared = json.loads((source / 'PREPARED.json').read_bytes())
+     require(prepared.get('schema') == 1 and prepared.get('status') == 'PREPARED_NOT_DURABLE', 'Unexpected exporter preparation status')
+-    require(prepared['archive_sha256'] == rows['batch.tar.gz']['sha256'], 'Exporter archive hash differs')
+-    require(prepared['archive_bytes'] == rows['batch.tar.gz']['bytes'], 'Exporter archive length differs')
++    require(prepared['archive_sha256'] == rows['batch.tar.xz']['sha256'], 'Exporter archive hash differs')
++    require(prepared['archive_bytes'] == rows['batch.tar.xz']['bytes'], 'Exporter archive length differs')
+     token = uuid.uuid4().hex
+     base = REMOTE_BASE / ('recovery-' + build_id)
+     value = {'schema': 1, 'status': 'TRANSPORT_PREPARED_NOT_DURABLE', 'raw_chunk_bytes': RAW_CHUNK,
+@@ -83,7 +83,7 @@
+              'required_final_gate': 'Independent reviewed exporter verify-arrival with root-pinned hashes and prior durable chain.'}
+     save_new(canonical(out), value)
+     return {'plan': str(out), 'plan_sha256': digest(Path(out).read_bytes()),
+-            'archive_sha256': rows['batch.tar.gz']['sha256'], 'archive_bytes': rows['batch.tar.gz']['bytes'],
++            'archive_sha256': rows['batch.tar.xz']['sha256'], 'archive_bytes': rows['batch.tar.xz']['bytes'],
+             'prepared_sha256': rows['PREPARED.json']['sha256'], 'destination': value['destination']}
+ 
+ 

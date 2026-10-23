@@ -1,0 +1,39 @@
+{
+  "authorization_boundary": "No concrete XZ batch plan or root selection reviewed here. Actual transport requires root selection and concrete authorized archive/PREPARED/build/batch/destination/prior-chain identities. No transfer, compiler, Git or canonical mutation performed by reviewer.",
+  "exact_delta": {
+    "occurrences": 5,
+    "substitution_from": "batch.tar.gz",
+    "substitution_to": "batch.tar.xz",
+    "whole_file_equality_after_only_substitution": true
+  },
+  "findings": [
+    "All five archive-name literals consistently select batch.tar.xz; PREPARED archive SHA/length checks bind that selected file.",
+    "No other code changed: canonical paths, exact file allowlist, exclusive incoming/destination creation, source identities, bounded chunk lengths/hashes, full-file assembly checks, and NOT_DURABLE result semantics are retained.",
+    "Compression format is deliberately outside the opaque transport acceptance boundary; independently reviewed XZ exporter verify-arrival must validate actual archive members and dependency chain before durable acceptance.",
+    "Existing gzip helper and chain remain unchanged. Partial/uncertain attempts retain original no-overwrite recovery limitations."
+  ],
+  "fixture_evidence": {
+    "includes_legacy_archive_name_refusal": true,
+    "independent_rerun": false,
+    "owner_report_returncode": 0,
+    "owner_report_status": "SYNTHETIC_FIXTURES_PASS",
+    "python38_syntax_reported_pass": true,
+    "reported_cases": 7
+  },
+  "limitations": [
+    "Coordinated nonhostile filesystem writers remain required.",
+    "Transport success alone is never durable checkpoint acceptance."
+  ],
+  "prior_reviewed_source_sha256": "383ab515ab879472424c92287a6394a0d91b6e67d0d2681b3d3fcf7e729d696d",
+  "reviewed_files": {
+    "PROTOCOL.md": "a71c57ad653851e858aaecd4f3ba8c882b35e713974f8f158397cb8809f309b0",
+    "SOURCE.diff": "e622eee0c2c0a1ec2e4d4a238cd53fcc72894cc8954902e212ce325abfaa442f",
+    "VALIDATION.json": "5998d399b6a4a8b1eab33e62c5ebc3de6d26474de6019c0161d01e2e4c93d097",
+    "test_transport.py": "74fcab559c788a6fbd044ab932c584286cd0bb2261429797fe2b3828257b3277",
+    "transport.py": "64498cb3ef2e717b5de7ba1377c7122abf4a0b4879eb37c28d023905a9974600"
+  },
+  "reviewer": "/root/graph39",
+  "source_sha256": "64498cb3ef2e717b5de7ba1377c7122abf4a0b4879eb37c28d023905a9974600",
+  "status": "INDEPENDENT_STATIC_DELTA_REVIEW_PASS_PREPARATION_ONLY",
+  "utc": "2026-10-23T17:30:28.872787+00:00"
+}

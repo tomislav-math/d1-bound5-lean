@@ -1,0 +1,52 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/checkpoint-transport-01/transport.py",
+        "assemble",
+        "--plan",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/checkpoint-transport-batches/batch-000004-TRANSPORT_PLAN.json",
+        "--plan-sha256",
+        "d605b29b52060915a7bd7fab22579ae83b770f69a3c84d09674ba677f503e437"
+      ],
+      "returncode": 0,
+      "seconds": 0.549379709,
+      "stderr": "",
+      "stdout": "{\"destination\": \"/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000004\", \"files\": {\"PREPARED.json\": {\"bytes\": 321768, \"sha256\": \"9dc41cc6b9d7d1f878f4701febef5e691dcb2b8103c6e150b0978bdd3466a533\"}, \"batch.tar.gz\": {\"bytes\": 55613554, \"sha256\": \"00ccb28ca3197c03e81f9b028424bb17d15a46c5228624c053758a83d100aaf4\"}}, \"required_next_step\": \"Independent reviewed exporter verify-arrival with root-pinned hashes and prior durable chain.\", \"status\": \"EXACT_BYTES_ARRIVED_NOT_VERIFIED_NOT_DURABLE\", \"transport_plan_sha256\": \"d605b29b52060915a7bd7fab22579ae83b770f69a3c84d09674ba677f503e437\"}\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-target-audit/incremental-checkpoint-exporter-01/checkpoint_export.py",
+        "verify-arrival",
+        "--archive",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000004/batch.tar.gz",
+        "--archive-sha256",
+        "00ccb28ca3197c03e81f9b028424bb17d15a46c5228624c053758a83d100aaf4",
+        "--prepared",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000004/PREPARED.json",
+        "--prepared-sha256",
+        "9dc41cc6b9d7d1f878f4701febef5e691dcb2b8103c6e150b0978bdd3466a533",
+        "--destination",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000004",
+        "--previous",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000003/DURABLE_BATCH.json",
+        "--previous-sha256",
+        "b66e80f1890e99ed1c8e9a5e19917e1593a624b1b2268b2c1c4477332cf35666"
+      ],
+      "returncode": 0,
+      "seconds": 0.721212458,
+      "stderr": "",
+      "stdout": "{\"cumulative_modules\": 347, \"new_modules\": 100, \"path\": \"/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000004/DURABLE_BATCH.json\", \"sha256\": \"dc3254219d00599a810e435a89308dd5e06ed6368046c257cd0e37ca69c23111\", \"status\": \"DURABLE_ACCEPTED_SNAPSHOT\"}\n"
+    }
+  ],
+  "cumulative_modules": 347,
+  "durable_bytes": 215691,
+  "durable_sha256": "dc3254219d00599a810e435a89308dd5e06ed6368046c257cd0e37ca69c23111",
+  "new_modules": 100,
+  "prior_diagnostic": "batch-000004-PREFLIGHT_DIAGNOSTIC.json",
+  "status": "DURABLE_ACCEPTED_SNAPSHOT"
+}
