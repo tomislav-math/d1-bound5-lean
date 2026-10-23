@@ -29,3 +29,7 @@ prompt and is PAUSED BY THE USER; do not resume or edit it without direction.
 Graph5 RightCached compiler recovery used `set_option compiler.extract_closed false` after a 240s timeout.
 The complete original declaration header and literal body bytes are unchanged; guarded build, exact-type/axiom
 audit and installed-kernel replay passed. Preserve the failed attempt and reuse existing matching PASS artifacts.
+
+Latest checked archive: 20261023-economical-graph7-left-pilot12. graph7 LEFT heads 0..11, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
+Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. MainTheorem UNPROVED, root integration unverified.
