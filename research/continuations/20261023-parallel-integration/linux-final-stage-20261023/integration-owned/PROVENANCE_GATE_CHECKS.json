@@ -1,0 +1,46 @@
+{
+  "checks": [
+    {
+      "reason": "NOT_SUCCESSFUL_RECEIPT",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "running receipt"
+    },
+    {
+      "reason": "NOT_SUCCESSFUL_RECEIPT",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "failed receipt"
+    },
+    {
+      "reason": "ARTIFACT_MISMATCH",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "wrong artifact bytes"
+    },
+    {
+      "reason": "SOURCE_CLOSURE_MISMATCH",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "wrong source closure"
+    },
+    {
+      "reason": "DEPENDENCY_ARTIFACT_GUARD_MISMATCH",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "missing dependency guard"
+    },
+    {
+      "reason": "EXTERNAL_IMPORT_GUARD_MISMATCH",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "wrong external bytes"
+    },
+    {
+      "reason": "UNPINNED_COMPILER_COMMAND",
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "unrecognized compiler"
+    },
+    {
+      "result": "REJECTED_AS_REQUIRED",
+      "test": "existing dependency artifact without acceptance receipt"
+    }
+  ],
+  "positive_control": "CURRENT_FULL_RING4_CLOSURE_ACCEPTED",
+  "production_sources_or_artifacts_modified": false,
+  "status": "PROVENANCE_REJECTION_CHECKS_PASS"
+}

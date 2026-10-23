@@ -1,3 +1,9 @@
+## 2026-10-23 12:40 UTC: main theorem compiled; clean verification running
+
+All 48 finite graph endpoints are verified and their reviewed archives are pushed privately at cec1b4b11174cafa9017b23d850d14a5b1b61f7e. MainTheorem and the complete canonical candidate root compile. The 114 exact declaration type/axiom checks and independent full-ring mathematical target audit pass, allowing only propext, Classical.choice, and Quot.sound. Two proof-order elaboration repairs preserve every theorem header and are independently reviewed.
+
+Final acceptance is still pending: the fresh 4406-module source build started at 12:38 UTC in the isolated Linux clean-checkout/clean-build paths recorded in CURRENT_PROGRESS.json. It starts with zero project artifacts and reuses only pinned public external dependencies. Local verification candidate commit 102905a54f1b4db67ed81dd9d2c01d4eb6fd97c2 is not a private repository release commit. After the source build, rerun the exact-type/axiom gates on those clean artifacts and run the official leanchecker --fresh D1Bound5 once, with the reviewed resource guard. Never claim final completion before these gates pass. The Mac canonical root and accepted manifests remain unchanged for now.
+
 # EXPLICIT USER RESUMPTION — 2026-10-23T11:02:59.252317+00:00
 
 The current user explicitly resumed intensive parallel formalization after the prior stop. Active owner: current manual root and its delegated agents, documented in research/continuations/20261023-parallel-resume/START.json. Prior stop preserved in research/continuations/20261023-parallel-resume/PRIOR_USER_STOP.json. Paused automations remain unchanged. Earlier token-economy and one-worker guidance below is superseded for this invocation by the new request, while exact mathematical and verification requirements remain.

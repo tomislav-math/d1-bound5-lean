@@ -1,0 +1,39 @@
+{
+  "artifact_bundle": {
+    "FreshSmoke/Dep.olean": "b13454618cf8920ce451a55953dcc6af89323b0822928f9f18bdc7be756dcbf9"
+  },
+  "build_id": "f40a061e9ff9438d867405206e0faaea",
+  "command": [
+    "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+    "-j1",
+    "-DautoImplicit=false",
+    "-R",
+    "/workspace/scratch/fed64f41ca78/lean-offload/fresh-real-smoke/source",
+    "-o",
+    "/workspace/scratch/fed64f41ca78/lean-offload/fresh-real-smoke/build/attempts/FreshSmoke.Dep/b88bf9fda99c4deba32b6050141f6f2e/stage/FreshSmoke/Dep.olean",
+    "/workspace/scratch/fed64f41ca78/lean-offload/fresh-real-smoke/source/FreshSmoke/Dep.lean"
+  ],
+  "dependencies": {
+    "FreshSmoke.Base": {
+      "artifact_bundle": {
+        "FreshSmoke/Base.olean": "5ee623568219d1a3e8d56422336b5191254bb9284913ec26d1b0a322a246f123"
+      },
+      "receipt_sha256": "7e8633304b7a66c451f207856d8eff595144f7caf14dc9ea9e65ecb3f8f72902"
+    }
+  },
+  "exit_code": 0,
+  "identity_hash": "02d26ab3b9f4552dd6609d9d6d9e945239557d618a3c13b19f456d00c877a771",
+  "invocation": "c887deabeb2d4d98ba61ec6b7471815e",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "module": "FreshSmoke.Dep",
+  "profile": {
+    "kind": "pure",
+    "reservation": 268435456,
+    "timeout": 240.0
+  },
+  "schema": 1,
+  "seconds": 0.32078899300177,
+  "source_sha256": "88554206650806f0aba0f759ed113b48243b5f596a48dec834902a597399b2db",
+  "started_utc": "2026-10-23T12:31:18Z",
+  "status": "COMPILE_PASS"
+}

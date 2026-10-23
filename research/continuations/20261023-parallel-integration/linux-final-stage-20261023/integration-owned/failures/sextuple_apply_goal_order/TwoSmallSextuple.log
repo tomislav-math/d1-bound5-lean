@@ -1,0 +1,29 @@
+/workspace/scratch/fed64f41ca78/lean-offload/project/D1Bound5/TwoSmallSextuple.lean:64:16: error: Application type mismatch: The argument
+  i
+has type
+  Fin 3
+but is expected to have type
+  Fin 2
+in the application
+  j i
+/workspace/scratch/fed64f41ca78/lean-offload/project/D1Bound5/TwoSmallSextuple.lean:67:4: error: Type mismatch
+  properCommonExtension_first_two t ht (k i)
+    (id (Decidable.byContradiction fun a => two_small_fifth_large._proof_1_3 i a))
+has type
+  ProperCommonExtension {t 0, t 1} (t (k i))
+but is expected to have type
+  3 ≤ ‖phi ↑(t (k i))‖
+/workspace/scratch/fed64f41ca78/lean-offload/project/D1Bound5/TwoSmallSextuple.lean:71:4: error: Type mismatch
+  LE.le.trans hlarge (hmon hi)
+has type
+  3 ≤ (fun i => ‖phi ↑(t i)‖) (k i)
+but is expected to have type
+  ‖phi ↑(t (k i))‖ ≤ 10 ^ 550
+/workspace/scratch/fed64f41ca78/lean-offload/project/D1Bound5/TwoSmallSextuple.lean:73:16: error: Application type mismatch: The argument
+  i
+has type
+  Fin 2
+but is expected to have type
+  Fin 3
+in the application
+  k i

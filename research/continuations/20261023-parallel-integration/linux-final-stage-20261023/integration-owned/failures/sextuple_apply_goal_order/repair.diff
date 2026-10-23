@@ -1,0 +1,13 @@
+--- TwoSmallSextuple.original.lean
++++ TwoSmallSextuple.lean
+@@ -58,8 +58,8 @@
+     refine ⟨ht.1.comp hk, fun i => ht.2.1 (k i), ?_⟩
+     intro i l hil
+     exact ht.2.2 (k i) (k l) (fun h => hil (hk h))
+-  apply IsD1Tuple.small_pair_excludes_three_in_disk hK phi
+-    (fun i => t (j i)) ha ?_ hnondeg (fun i => t (k i)) hs
++  refine IsD1Tuple.small_pair_excludes_three_in_disk hK phi
++    (fun i => t (j i)) ha ?_ hnondeg (fun i => t (k i)) hs ?_ ?_ ?_
+   · intro i
+     have hi : j i ≤ (1 : Fin 6) := by change i.val ≤ 1; omega
+     exact lt_of_le_of_lt (hmon hi) hsmall

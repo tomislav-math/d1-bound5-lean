@@ -1,0 +1,106 @@
+{
+  "actual_source_parser_probe": {
+    "bytes": 185858624,
+    "module_count": 4406,
+    "roots": [
+      "D1Bound5",
+      "D1Bound5.MainTheorem"
+    ],
+    "seconds": 30.895541910002066,
+    "status": "PASS_HISTORICAL_UNION_NOT_FINAL_RELEASE_ROOT"
+  },
+  "local_verification_candidate_assessment": "LOCAL_VERIFICATION_CANDIDATE_ASSESSMENT.md",
+  "peer_review": "/root/graph39: artifact search path and module identity",
+  "persistence_note": "Local review files prepared while Mac connector unavailable; coordinator can include them in isolated local verification commit/evidence, then mirror to owned research scope when connectivity returns.",
+  "production_build_launched_by_reviewer": false,
+  "production_build_pass_claim": false,
+  "real_lean_smoke": {
+    "claims": "Three real Init-only modules validate CLI/root/import/artifact publication and exact resume. No D1Bound5 clean build or installed-kernel replay claimed.",
+    "exact_resume": {
+      "active": [],
+      "build_id": "f40a061e9ff9438d867405206e0faaea",
+      "compiled_this_invocation": [],
+      "completed_modules": 3,
+      "expected_modules": 3,
+      "external_cache_used": true,
+      "failed": [],
+      "fresh_project_origin": true,
+      "identity_hash": "02d26ab3b9f4552dd6609d9d6d9e945239557d618a3c13b19f456d00c877a771",
+      "installed_kernel_replay_claim": false,
+      "invocation": "1550477f5c5948468ab76604a8e41da8",
+      "roots": [
+        "FreshSmoke"
+      ],
+      "runtime_guard_policy": "Full cache hashes/inventory at start/end; compiler/loader and selected external bundles before/after each module; periodic full metadata/hash checkpoints. No concurrent writers to pinned runtime/cache roots permitted.",
+      "status": "PROJECT_SOURCE_BUILD_COMPLETE_RESUMED",
+      "validated_passes_from_prior_invocations": [
+        "FreshSmoke",
+        "FreshSmoke.Base",
+        "FreshSmoke.Dep"
+      ],
+      "waiting": []
+    },
+    "fresh_build": {
+      "active": [],
+      "build_id": "f40a061e9ff9438d867405206e0faaea",
+      "compiled_this_invocation": [
+        "FreshSmoke.Base",
+        "FreshSmoke.Dep",
+        "FreshSmoke"
+      ],
+      "completed_modules": 3,
+      "expected_modules": 3,
+      "external_cache_used": true,
+      "failed": [],
+      "fresh_project_origin": true,
+      "identity_hash": "02d26ab3b9f4552dd6609d9d6d9e945239557d618a3c13b19f456d00c877a771",
+      "installed_kernel_replay_claim": false,
+      "invocation": "c887deabeb2d4d98ba61ec6b7471815e",
+      "roots": [
+        "FreshSmoke"
+      ],
+      "runtime_guard_policy": "Full cache hashes/inventory at start/end; compiler/loader and selected external bundles before/after each module; periodic full metadata/hash checkpoints. No concurrent writers to pinned runtime/cache roots permitted.",
+      "status": "FRESH_PROJECT_SOURCE_BUILD_PASS",
+      "validated_passes_from_prior_invocations": [],
+      "waiting": []
+    },
+    "lean_version": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+    "receipt_files": {
+      "fresh-real-smoke/build/attempts/FreshSmoke.Base/310c620575dc48d99b20b6f00ff47df2/receipt.json": "7e8633304b7a66c451f207856d8eff595144f7caf14dc9ea9e65ecb3f8f72902",
+      "fresh-real-smoke/build/attempts/FreshSmoke.Dep/b88bf9fda99c4deba32b6050141f6f2e/receipt.json": "00545437eb236f4c385be0910ba79c02d9574ea99c5357f2fad4736cdacde3ef",
+      "fresh-real-smoke/build/attempts/FreshSmoke/93068a1e0206439a9d7ed313fdf02dab/receipt.json": "6b1a346b2f537596194ea7a4e9e149a4d24c7aa212ae13fbc5afbfbd0e56267a"
+    },
+    "runner_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+    "runtime_lock_sha256": "10ec78e0743af81861bac8770d22a917ddfa2a84ee977c3d4a96e72bcd1f9724",
+    "source_lock_sha256": "4faf55165e233069a8ade2c8d9e8e164ff8bfa4f9c54046f11a9152565a69524",
+    "status": "PASS_REAL_PINNED_LEAN_SMOKE"
+  },
+  "real_lean_smoke_report_sha256": "e7a4408223ca5dee8ed950d46dcf10ac4327bc49805517bb2216e27f8c0082c8",
+  "remaining_acceptance_conditions": [
+    "Coordinator freezes final root-only production manifest and passes source audit inside immutable clean candidate",
+    "All actual project source compilation receipts pass in the new empty project artifact tree",
+    "Exact main type, strict axiom audit and agreed installed-kernel replay complete with their real outcomes"
+  ],
+  "reproducibility_review": "REPRODUCIBILITY_REVIEW.md",
+  "reviewed_properties": [
+    "Exact reviewed source-lock closure and mandatory expected count",
+    "Fresh empty output origin and isolated source checkout",
+    "Pinned external cache; no project namespace in external roots",
+    "Lean package-owner module resolution",
+    "Recursive source and artifact/receipt identity on resume",
+    "Olean sidecars and IR artifacts guarded and published",
+    "Compiler -j1 and explicit autoImplicit=false",
+    "Bounded scheduler with adaptive memory admission and explicit heavy classes",
+    "Owned process-group cleanup and preserved failure/timeout/interrupted receipts",
+    "Nonzero incomplete or failed build and complete final receipt revalidation",
+    "Separate source, statement, axiom and installed-kernel gates remain required"
+  ],
+  "reviewer": "/root/graph_inventory",
+  "runner_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+  "runtime_guard_assumption": "No concurrent writers to pinned cache/runtime roots; full start/end inventory and hashes, periodic full checks, per-module compiler/loader and selected external bundles inherited through project dependencies. Not claimed as all external transitive files before every module.",
+  "selfcheck_count": 15,
+  "selfcheck_sha256": "1a77213e778c09219bc3f80825216afb259a39b3329ce6704319af7ec6e28407",
+  "selfcheck_status": "PASS_FAKE_COMPILER_LIFECYCLE_SELFCHECK",
+  "status": "REVIEW_PASS_FOR_CONTROLLED_FRESH_RUN",
+  "utc": "2026-10-23T12:36:03.733951+00:00"
+}

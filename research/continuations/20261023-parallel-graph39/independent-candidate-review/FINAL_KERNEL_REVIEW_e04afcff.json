@@ -1,0 +1,22 @@
+{
+  "conditions": [
+    "Freeze only after completed clean source DAG and explicit canonical target type/axiom audit; no proof acceptance is asserted by this review.",
+    "Fresh upstream installed leanchecker must still execute successfully with exact canonical D1Bound5 target and frozen inputs.",
+    "Any future supervisor source change requires a fresh exact-hash review before acceptance."
+  ],
+  "remaining_blocking_findings": [],
+  "resolved_recommendation": [
+    "Original source/runtime lock files are explicitly supplied, hash-matched to ORIGIN.identity, and pinned.",
+    "Source lock exact project scope, relative source paths, byte counts, hashes, import dependencies and configuration hashes are checked against final inventory.",
+    "Runtime compiler/toolchain, exact -j1 -DautoImplicit=false -R options and full approved environment recipe match the source-build runner.",
+    "Every runtime/cache lock entry is rehashed, and every frozen external artifact and shared library must be represented unchanged in the lock.",
+    "Each accepted module receipt command exactly matches reviewed compiler, options, staged output path and source input."
+  ],
+  "reviewed_path": "lean-offload/final-kernel-plan/final_kernel.py",
+  "reviewed_sha256": "e04afcfff00b176bc3ffe51870d82c4c467415c9bac5769cbc28e89e63e21843",
+  "scope": "Read-only independent comparison of final checker provenance gates with fresh_project_build.py. No Lean/compiler/checker execution or candidate edits. Container-specific gate only.",
+  "status": "PASS_INDEPENDENT_CODE_REVIEW_NO_EXECUTION",
+  "supersedes_recommendation_in": "FINAL_KERNEL_REVIEW_bf6455be.json",
+  "upstream_execution_semantics": "Unchanged installed leanchecker --verbose --fresh D1Bound5; all actual compiled root imports replayed. Runtime/OS assumptions and bounded-memory limitations remain explicit.",
+  "utc": "2026-10-23T12:45:54.939544+00:00"
+}

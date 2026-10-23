@@ -1,0 +1,21 @@
+{
+  "handoff": "Recommendation sent to compute_offload owner; any amended supervisor requires a new exact code-hash review before final freeze.",
+  "recommendation": {
+    "fresh_kernel_effect": "None: actual root constants still replay under upstream installed kernel; this does not weaken or replace --fresh.",
+    "item": "Pin and validate original source/runtime locks and exact compiler argv",
+    "reason": "Current ORIGIN includes source/runtime lock hashes, but clean_build_evidence does not read those lock files or compare identity.lean_arguments and row.command. Its coherent source/artifact/dependency receipt validation is sound as provenance metadata, but full exact reviewed compiler/runtime/options provenance needs these extra comparisons."
+  },
+  "reviewed_checks": [
+    "Exact fresh command uses upstream installed leanchecker --verbose --fresh D1Bound5.",
+    "Search roots are explicit absolute nonempty; official builtin root explicit; first package owner resolution; second project package owner rejected.",
+    "All selected main/server/private olean and sibling ir/ir.sig inputs, bundled shared libraries, supervisor, executable and shim are pinned.",
+    "Clean origin paths, empty output assertion, exact completed module set, accepted receipts, source hashes, output bundles, logs and dependency receipt chain are validated.",
+    "Virtual 32GiB address cap and sampled physical-memory budget are distinguished; enclosing cgroup is the actual hard physical limit.",
+    "Fresh installed checker acceptance remains separate from exact target type and standard-axiom harness acceptance."
+  ],
+  "reviewed_path": "lean-offload/final-kernel-plan/final_kernel.py",
+  "reviewed_sha256": "55a4a7263ba085e31de3b3eab7b742dda6b5340611fb4444ef81e186cc907419",
+  "scope": "Read-only independent review; no Lean/compiler/checker execution. Linux container supervisor is not advertised as a universal portable runner.",
+  "status": "NO_BLOCKING_FRESH_KERNEL_SEMANTICS_FINDING_PROVENANCE_HARDENING_RECOMMENDED",
+  "utc": "2026-10-23T12:43:10.765009+00:00"
+}

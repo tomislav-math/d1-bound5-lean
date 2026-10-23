@@ -1,0 +1,434 @@
+--- SmallPairRepresentativeProperties.original.lean
++++ SmallPairRepresentativeProperties.lean
+@@ -14,7 +14,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_1,smallPairB_1} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_1_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_1_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -29,7 +29,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_2,smallPairB_2} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_2_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_2_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -44,7 +44,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_3,smallPairB_3} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_3_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_3_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -59,7 +59,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_4,smallPairB_4} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_4_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_4_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -74,7 +74,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_5,smallPairB_5} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_5_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_5_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -89,7 +89,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_6,smallPairB_6} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_6_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_6_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -104,7 +104,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_7,smallPairB_7} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_7_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_7_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -119,7 +119,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_8,smallPairB_8} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_8_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_8_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -134,7 +134,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_9,smallPairB_9} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_9_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_9_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -149,7 +149,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_10,smallPairB_10} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_10_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_10_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -164,7 +164,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_11,smallPairB_11} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_11_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_11_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -179,7 +179,7 @@
+     (e : QuadInt 0 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_12,smallPairB_12} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_12_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_12_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -194,7 +194,7 @@
+     (e : QuadInt 0 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_13,smallPairB_13} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_13_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_13_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -209,7 +209,7 @@
+     (e : QuadInt 0 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_14,smallPairB_14} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_14_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_14_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -224,7 +224,7 @@
+     (e : QuadInt 0 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_15,smallPairB_15} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_15_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_15_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -239,7 +239,7 @@
+     (e : QuadInt 0 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_16,smallPairB_16} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_16_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_16_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -254,7 +254,7 @@
+     (e : QuadInt 0 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_17,smallPairB_17} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_17_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_17_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -269,7 +269,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_18,smallPairB_18} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_18_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_18_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -284,7 +284,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_19,smallPairB_19} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_19_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_19_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -299,7 +299,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_20,smallPairB_20} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_20_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_20_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -314,7 +314,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_21,smallPairB_21} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_21_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_21_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -329,7 +329,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_22,smallPairB_22} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_22_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_22_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -344,7 +344,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_23,smallPairB_23} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_23_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_23_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -359,7 +359,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_24,smallPairB_24} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_24_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_24_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -374,7 +374,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_25,smallPairB_25} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_25_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_25_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -389,7 +389,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_26,smallPairB_26} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_26_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_26_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -404,7 +404,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_27,smallPairB_27} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_27_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_27_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -419,7 +419,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_28,smallPairB_28} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_28_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_28_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -434,7 +434,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_29,smallPairB_29} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_29_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_29_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -449,7 +449,7 @@
+     (e : QuadInt 1 1 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_30,smallPairB_30} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_30_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_30_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -464,7 +464,7 @@
+     (e : QuadInt 0 5 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_31,smallPairB_31} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_31_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_31_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -479,7 +479,7 @@
+     (e : QuadInt 0 6 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_32,smallPairB_32} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_32_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_32_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -494,7 +494,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_33,smallPairB_33} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_33_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_33_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -509,7 +509,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_34,smallPairB_34} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_34_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_34_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -524,7 +524,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_35,smallPairB_35} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_35_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_35_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -539,7 +539,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_36,smallPairB_36} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_36_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_36_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -554,7 +554,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_37,smallPairB_37} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_37_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_37_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -569,7 +569,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_38,smallPairB_38} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_38_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_38_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -584,7 +584,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_39,smallPairB_39} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_39_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_39_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -599,7 +599,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_40,smallPairB_40} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_40_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_40_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -614,7 +614,7 @@
+     (e : QuadInt 1 2 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_41,smallPairB_41} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_41_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_41_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -629,7 +629,7 @@
+     (e : QuadInt 1 3 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_42,smallPairB_42} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_42_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_42_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -644,7 +644,7 @@
+     (e : QuadInt 1 3 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_43,smallPairB_43} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_43_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_43_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -659,7 +659,7 @@
+     (e : QuadInt 1 4 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_44,smallPairB_44} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_44_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_44_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -674,7 +674,7 @@
+     (e : QuadInt 1 5 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_45,smallPairB_45} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_45_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_45_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -689,7 +689,7 @@
+     (e : QuadInt 1 6 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_46,smallPairB_46} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_46_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_46_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -704,7 +704,7 @@
+     (e : QuadInt 1 6 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_47,smallPairB_47} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_47_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_47_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h
+@@ -719,7 +719,7 @@
+     (e : QuadInt 1 8 ≃+* 𝓞 K) :
+     SmallPairGraphProperty {smallPairA_48,smallPairB_48} := by
+   intro t ht hproper hlarge hbound
+-  apply smallPairGraph_48_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound
++  refine smallPairGraph_48_excludes_three_full_ring hK phi e t ht ?_ hlarge hbound ?_ ?_
+   · intro j
+     exact ⟨(hproper j).2.2 _ (by simp), (hproper j).2.2 _ (by simp)⟩
+   · intro j h

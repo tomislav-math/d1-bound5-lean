@@ -1,0 +1,39 @@
+{
+  "auxiliary": {},
+  "module_count": 3,
+  "namespace": "FreshSmoke",
+  "roots": [
+    "FreshSmoke"
+  ],
+  "schema": 1,
+  "scope": "Only the exact reachable project import closure; unused files are not compiled.",
+  "sources": {
+    "FreshSmoke": {
+      "bytes": 104,
+      "imports": [
+        "FreshSmoke.Dep"
+      ],
+      "relative_path": "FreshSmoke.lean",
+      "sha256": "3c58a0fcf380711085f70a882b318196309b6dddca0b3c6834bd77c9685d59d9"
+    },
+    "FreshSmoke.Base": {
+      "bytes": 76,
+      "imports": [],
+      "relative_path": "FreshSmoke/Base.lean",
+      "sha256": "18ea17d1ea793cb6a6b88d7b82b17e8b3bbb75b48d46b0252317ff28f1c41204"
+    },
+    "FreshSmoke.Dep": {
+      "bytes": 105,
+      "imports": [
+        "FreshSmoke.Base"
+      ],
+      "relative_path": "FreshSmoke/Dep.lean",
+      "sha256": "88554206650806f0aba0f759ed113b48243b5f596a48dec834902a597399b2db"
+    }
+  },
+  "topological_order": [
+    "FreshSmoke.Base",
+    "FreshSmoke.Dep",
+    "FreshSmoke"
+  ]
+}

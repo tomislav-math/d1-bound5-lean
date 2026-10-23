@@ -1,0 +1,50 @@
+{
+  "builder_sha256": "d2b952a6e59bcaf4a55d172bf64996bbc8ce3d661ca2972ff4018690d096dd66",
+  "limitations": [
+    "Static independent code review plus inspection of recorded 15 structural tests; no compiler or test suite was rerun by this reviewer",
+    "Review is scoped to exact recorded script hashes; any change requires renewed review",
+    "Current-artifact target pass and this runner review do not themselves establish a successful clean build or final kernel replay"
+  ],
+  "production_source_changes": [],
+  "reviewed_properties": [
+    "Hard pins both immutable theorem/axiom harnesses and reviewed build utility",
+    "Requires exact 4406-module canonical source lock and complete fresh build summary",
+    "Reconstructs every accepted receipt, direct dependency chain, source hash, compiler command, compiler log and artifact sidecar bundle",
+    "Rejects nonempty build origin, unaccepted output files, foreign receipts and symlink escapes",
+    "Recomputes source/runtime locks and confirms exact clean origin environment",
+    "Project imports resolve only within isolated clean artifacts; external imports in pinned runtime",
+    "Build shared lock prevents active build mutation during audit",
+    "Sequential official Lean invocations use frozen executable and environment, no output artifact argument",
+    "Full freeze repeated after both audits and required byte/hash identical",
+    "Separate fresh kernel gate remains required"
+  ],
+  "reviewer": "audit_target",
+  "runner_sha256": "fad9fe1f7ddffa8a303b00fb48bc85735784ad1c5afe69b46c20027aab3a044c",
+  "status": "PASS_INDEPENDENT_SOURCE_REVIEW",
+  "test_report_reviewed": {
+    "runner_sha256": "fad9fe1f7ddffa8a303b00fb48bc85735784ad1c5afe69b46c20027aab3a044c",
+    "scope": "Disposable structural fixtures plus read-only real smoke receipts; no Lean/checker launched",
+    "status": "PASS",
+    "tests": [
+      "complete_fixture_chain",
+      "failed_compiler_receipt",
+      "foreign_origin",
+      "stale_source_receipt",
+      "missing_dependency_receipt",
+      "wrong_dependency_chain",
+      "changed_artifact",
+      "extra_artifact",
+      "unexpected_compiler",
+      "changed_log",
+      "unfinished_summary",
+      "unaccounted_module",
+      "nonempty_origin",
+      "artifact_symlink_escape",
+      "real_three_module_source_build_receipts_read_only"
+    ],
+    "tests_sha256": "5c7742225dc2ba73dad69752848d333a95fc592392362fe49e7c09233040798e"
+  },
+  "test_report_sha256": "15003bce20661b0e27874cb23688c6945f346b486117b843667875f079bc3458",
+  "tests_sha256": "5c7742225dc2ba73dad69752848d333a95fc592392362fe49e7c09233040798e",
+  "utc": "2026-10-23T12:39:30.755052+00:00"
+}
