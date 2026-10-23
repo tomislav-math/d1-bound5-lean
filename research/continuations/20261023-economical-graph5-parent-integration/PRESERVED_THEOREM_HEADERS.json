@@ -1,0 +1,65 @@
+{
+  "SmallPairLightAdaptiveData5": [
+    "def leftCached000 : List PairLightCachedVertex ",
+    "def leftRows000 : List (Nat \u00d7 List Nat) ",
+    "def leftCached001 : List PairLightCachedVertex ",
+    "def leftRows001 : List (Nat \u00d7 List Nat) ",
+    "def leftCached002 : List PairLightCachedVertex ",
+    "def leftRows002 : List (Nat \u00d7 List Nat) ",
+    "def leftCached003 : List PairLightCachedVertex ",
+    "def leftRows003 : List (Nat \u00d7 List Nat) ",
+    "def rightCached000 : List PairLightCachedVertex ",
+    "def rightRows000 : List (Nat \u00d7 List Nat) ",
+    "def rightCached001 : List PairLightCachedVertex ",
+    "def rightRows001 : List (Nat \u00d7 List Nat) ",
+    "def rightCached002 : List PairLightCachedVertex ",
+    "def rightRows002 : List (Nat \u00d7 List Nat) ",
+    "def rightCached003 : List PairLightCachedVertex ",
+    "def rightRows003 : List (Nat \u00d7 List Nat) "
+  ],
+  "SmallPairLightAdaptiveLeft5_000": [
+    "theorem left_prefix_000_checked :\n    pairLightSelectedFloorPrefixBool 0 1 PairLightPrepared5.sieve 105\n      leftCached000 leftRows000 = true "
+  ],
+  "SmallPairLightAdaptiveLeft5_001": [
+    "theorem left_prefix_001_checked :\n    pairLightSelectedFloorPrefixBool 0 1 PairLightPrepared5.sieve 164\n      leftCached001 leftRows001 = true "
+  ],
+  "SmallPairLightAdaptiveLeft5_002": [
+    "theorem left_prefix_002_checked :\n    pairLightSelectedFloorPrefixBool 0 1 PairLightPrepared5.sieve 162\n      leftCached002 leftRows002 = true "
+  ],
+  "SmallPairLightAdaptiveRight5_000": [
+    "theorem right_prefix_000_checked :\n    pairLightSelectedFloorPrefixBool 0 1 PairLightPrepared5.sieve 106\n      rightCached000 rightRows000 = true "
+  ],
+  "SmallPairLightAdaptiveRight5_001": [
+    "theorem right_prefix_001_checked :\n    pairLightSelectedFloorPrefixBool 0 1 PairLightPrepared5.sieve 166\n      rightCached001 rightRows001 = true "
+  ],
+  "SmallPairLightAdaptiveRight5_002": [
+    "theorem right_prefix_002_checked :\n    pairLightSelectedFloorPrefixBool 0 1 PairLightPrepared5.sieve 158\n      rightCached002 rightRows002 = true "
+  ],
+  "SmallPairLightAdaptiveValidation5": [
+    "theorem left_coverage_checked :\n    decide (PairLightPrepared5.leftCached.map Prod.fst = PairLightPrepared5.leftVertices) = true ",
+    "theorem left_signatures_checked :\n    (PairLightPrepared5.leftCached.all fun x =>\n      decide (x.2 = pairLightCoordinateSignature PairLightPrepared5.sieve x.1)) = true ",
+    "theorem right_coverage_checked :\n    decide (PairLightPrepared5.rightCached.map Prod.fst = PairLightPrepared5.rightVertices) = true ",
+    "theorem right_signatures_checked :\n    (PairLightPrepared5.rightCached.all fun x =>\n      decide (x.2 = pairLightCoordinateSignature PairLightPrepared5.sieve x.1)) = true "
+  ],
+  "SmallPairLightData5": [
+    "def sieve : List (Nat \u00d7 Nat) ",
+    "def leftVertices : List PairLightCoordinate ",
+    "def leftCached : List PairLightCachedVertex ",
+    "def leftRows : List (Nat \u00d7 List Nat) ",
+    "def rightVertices : List PairLightCoordinate ",
+    "def rightCached : List PairLightCachedVertex ",
+    "def rightRows : List (Nat \u00d7 List Nat) "
+  ],
+  "SmallPairLightLeft5": [
+    "theorem left_coverage_checked :\n    decide (leftCached.map Prod.fst = leftVertices) = true ",
+    "theorem left_signatures_checked :\n    (leftCached.all fun x => decide (x.2 = pairLightCoordinateSignature sieve x.1)) = true ",
+    "theorem left_independent_checked :\n    pairLightSelectedFloorIndependentBool 0 1 sieve leftCached leftRows = true ",
+    "theorem left_certificate_checked :\n    pairLightSelectedFloorIndependentCertificateBool 0 1 sieve\n      leftVertices leftCached leftRows = true "
+  ],
+  "SmallPairLightRight5": [
+    "theorem right_coverage_checked :\n    decide (rightCached.map Prod.fst = rightVertices) = true ",
+    "theorem right_signatures_checked :\n    (rightCached.all fun x => decide (x.2 = pairLightCoordinateSignature sieve x.1)) = true ",
+    "theorem right_independent_checked :\n    pairLightSelectedFloorIndependentBool 0 1 sieve rightCached rightRows = true ",
+    "theorem right_certificate_checked :\n    pairLightSelectedFloorIndependentCertificateBool 0 1 sieve\n      rightVertices rightCached rightRows = true "
+  ]
+}
