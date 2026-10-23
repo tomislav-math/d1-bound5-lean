@@ -57,3 +57,7 @@ Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. M
 Latest checked archive: 20261023-economical-graph19-right001. graph19 RIGHT heads 101..247, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
 Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph19-right002. graph19 RIGHT heads 248..445, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 10 targeted installed-kernel replays passed.
+Graph19 endpoint remains incomplete; current endpoint inventory remains 34/48. MainTheorem UNPROVED, root integration unverified.
