@@ -1,0 +1,35 @@
+{
+  "SmallPairGraphArithmetic3": [
+    "theorem smallPairSeeds_3_checked :\n    pairSeedsCoveredBool smallPairA_3 smallPairB_3\n      seedRootDisk_0_1 smallPairClosure_3 = true ",
+    "theorem smallPairFilter_3_checked :\n    largePairVertices smallPairA_3 smallPairB_3 smallPairClosure_3 = smallPairLarge_3 ",
+    "theorem smallPairLarge_3_count : smallPairLarge_3.length = 827 "
+  ],
+  "SmallPairGraphData3": [],
+  "SmallPairGraphTriangle3": [
+    "theorem smallPairNoTriangle_3_checked :\n    pairGraphTriangleFreeBool smallPairSieve_0_1 smallPairLarge_3 = true "
+  ],
+  "SmallPairLightAssembly3": [
+    "theorem sieve_eq : sieve = smallPairSieve_0_1 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_3 PairGraphPrepared3.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared3.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared3.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_3 PairGraphPrepared3.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_3 PairGraphPrepared3.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared3.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared3.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_3 PairGraphPrepared3.colors).2 = true "
+  ],
+  "SmallPairRawSelectedData3": [],
+  "SmallPairRawSelectedData3LeftCached": [
+    "def leftCached : List (PairResidueVertex 0 1) "
+  ],
+  "SmallPairRawSelectedData3LeftRows": [
+    "def leftRows : List (\u2115 \u00d7 List \u2115) "
+  ],
+  "SmallPairRawSelectedData3RightCached": [
+    "def rightCached : List (PairResidueVertex 0 1) "
+  ],
+  "SmallPairRawSelectedData3RightRows": [
+    "def rightRows : List (\u2115 \u00d7 List \u2115) "
+  ]
+}
