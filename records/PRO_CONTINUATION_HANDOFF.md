@@ -69,3 +69,7 @@ Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. Mai
 Latest checked archive: 20261022-economical-graph3-closure-rest001. graph3 closure witness rows 64..319 over the complete 829-vertex list.
 Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
 Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261022-economical-graph3-closure-rest002-v2. graph3 closure witness rows 320..575, including an exact-header decomposition of timed-out rows 448..511 into four 16-row proofs.
+Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
+Graph3 endpoint remains incomplete; current endpoint inventory remains31/48. MainTheorem UNPROVED, root integration unverified.

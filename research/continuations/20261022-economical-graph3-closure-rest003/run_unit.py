@@ -37,7 +37,7 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   assert len(sys.argv)==2 and git('rev-parse','HEAD')==sys.argv[1]
   assert not (O/'PLAN.json').exists()
   C=W.parent/'20261022-graph3-closure';P=C/'proposal'
-  prior=json.loads((W.parent/'20261022-economical-graph3-closure-rest002/VERIFICATION_SUMMARY.json').read_text())
+  prior=json.loads((W.parent/'20261022-economical-graph3-closure-rest002-v2/VERIFICATION_SUMMARY.json').read_text())
   assert prior['status']=='SCOPED_VERIFICATION_PASS' and prior['heads']==256 and prior['start_offset']==320 and prior['global_closure_vertices']==829
   assert all(sha(R/'D1Bound5'/(n+'.lean'))==h for n,h in prior['source_closure'].items())
   assert all(d.artifacts(n)==v for n,v in prior['artifacts'].items()) and d.manifest_matches(prior['configuration'])

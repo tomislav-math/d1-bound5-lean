@@ -47,6 +47,8 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   paths += [W.parent/'20261022-economical-graph3-closure-pilot/run_unit.py']
   paths += list(W.parent.glob('20261022-economical-graph3-closure-*/run_unit.py'))+[W.parent/'20261022-economical-graph3-assembly/run_unit.py']
   paths += [p for p in (W.parent/'20261022-economical-graph3-right-pilot12').rglob('*') if p.is_file()]
+  paths += [p for p in (W.parent/'20261022-economical-graph3-closure-rest002').rglob('*') if p.is_file()]
+  paths += [p for p in (W.parent/'20261022-economical-graph3-closure-rest002-v2').rglob('*') if p.is_file() and p.name not in {'PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','INDEX_REVIEW.json','POST_PUSH_RECEIPT.json'}]
   paths=sorted(set(str(p.relative_to(R)) for p in paths));assert not any('__pycache__' in x for x in paths)
   (O/'PUBLICATION_PATHS.txt').write_text('\n'.join(paths)+'\n');(O/'PUBLICATION_HASHES.json').write_text(json.dumps({p:sha(R/p) for p in paths},indent=2,sort_keys=True)+'\n')
   print(json.dumps({'status':'PUBLICATION_SCOPE_VALIDATED','paths':len(paths),'heads':a['heads'],'kernel_replays':a['targeted_kernel_replays']}))

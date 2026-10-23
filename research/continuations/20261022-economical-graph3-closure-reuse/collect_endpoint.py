@@ -8,7 +8,7 @@ import fcntl,hashlib,importlib.util,json,re,subprocess,sys
 R=Path('/Users/tp/Lean/D1Bound5');C=R/'research/continuations';W=C/'20261018T010800CEST-main-continuation';O=C/'20261022-economical-graph3-assembly'
 BASE=C/'20261022-economical-graph43-assembly/CURRENT_ENDPOINT_INVENTORY.json'
 BASE_SHA='2ecc11303a32aa96af21adfc537cadc66c64f99a8ae3b36c855780b3d2ddbce1'
-SCOPES={'left-pilot12-v2': 4, 'left000': 10, 'left001': 10, 'left002': 6, 'right-pilot12-v2': 5, 'right000': 10, 'right001': 10, 'right002': 6, 'parent-integration': 9, 'closure-pilot': 4, 'closure-rest001': 4, 'closure-rest002': 4, 'closure-rest003': 5, 'assembly': 7}
+SCOPES={'left-pilot12-v2': 4, 'left000': 10, 'left001': 10, 'left002': 6, 'right-pilot12-v2': 5, 'right000': 10, 'right001': 10, 'right002': 6, 'parent-integration': 9, 'closure-pilot': 4, 'closure-rest001': 4, 'closure-rest002-v2': 8, 'closure-rest003': 5, 'assembly': 7}
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def load(p):return json.loads(Path(p).read_text())
 def merge(dest,src):
