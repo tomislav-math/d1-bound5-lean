@@ -1,0 +1,39 @@
+{
+  "reviewer": "independent graph39 agent",
+  "status": "SOURCE_SEMANTICS_PASS_NOT_COMPILATION",
+  "sha256": {
+    "PairLightClosure.lean": "ef69d3a60e5b156fbd56cb019ebd0325abef2ca7d10021397aca371566944128",
+    "PairLightClosureBridge.lean": "0da6268742f73a449f0c5571cfb1ac1e208c0ee42ca0b3c987a294921bc357aa"
+  },
+  "reference_modules": [
+    "PairLightArithmetic",
+    "PairLightArithmeticBridge",
+    "Coordinates",
+    "DescentAlgebra",
+    "PairClosureIndexedWitness",
+    "PairClosureIndexedChunks"
+  ],
+  "verified": [
+    "Multiplication uses omega^2=tau*omega-nu with the original coefficient signs.",
+    "The reused norm is x^2+tau*x*y+nu*y^2.",
+    "Mutation is exactly a+b+(2*a*b+1)*z+2*r0*r*s.",
+    "The second mutation sign negates only the right square root.",
+    "None destinations retain strict bound<norm; some i retains exact globally indexed lookup.",
+    "Mapped coordinate lookup is injective and includes out-of-range indices.",
+    "Complete traversal rejects both forms of unmatched tails.",
+    "Prefix and drop retain the entire original destination vertex list.",
+    "Unconditional equivalence allows arbitrary integer parameters, zero roots, duplicated vertices, and malformed certificate data.",
+    "No mathematical hypotheses are silently added or dropped by the stated full-check equality."
+  ],
+  "required_final_integration": [
+    "The full-check equality is for pairIndexedWitnessesCheckedBool, not the coverage wrapper.",
+    "Final closure must separately retain the original anchor-root equation and ordered witness-vertex coverage.",
+    "Transferred literal data must be proved equal to mapped original data; external Python equality is not enough.",
+    "Compile, original-type/axiom audit, and installed-kernel checks are still required."
+  ],
+  "not_claimed": [
+    "Compilation",
+    "Kernel verification",
+    "Final theorem completion"
+  ]
+}

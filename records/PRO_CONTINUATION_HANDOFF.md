@@ -1,3 +1,9 @@
+# EXPLICIT USER RESUMPTION — 2026-10-23T11:02:59.252317+00:00
+
+The current user explicitly resumed intensive parallel formalization after the prior stop. Active owner: current manual root and its delegated agents, documented in research/continuations/20261023-parallel-resume/START.json. Prior stop preserved in research/continuations/20261023-parallel-resume/PRIOR_USER_STOP.json. Paused automations remain unchanged. Earlier token-economy and one-worker guidance below is superseded for this invocation by the new request, while exact mathematical and verification requirements remain.
+
+---
+
 # Current D1 formalization handoff
 
 MainTheorem UNPROVED. Canonical-root integration and a pinned clean-checkout build remain unverified.
