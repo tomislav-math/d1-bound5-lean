@@ -79,3 +79,7 @@ Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. Ma
 Latest checked archive: 20261023-economical-graph5-closure-rest002. graph5 closure witness rows 320..575 over all 863 original vertices.
 Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
 Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph5-closure-rest003. graph5 closure witness rows 576..862 over all 863 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
+Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
