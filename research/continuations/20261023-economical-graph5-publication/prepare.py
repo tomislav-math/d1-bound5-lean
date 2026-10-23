@@ -18,7 +18,8 @@ with (W/'continuation-driver.lock').open('r+') as owner:
   assert not a.get('graph5_endpoint_complete',False)
   handoff=R/'records/PRO_CONTINUATION_HANDOFF.md'
   assert '32/48 finite graph endpoints' in handoff.read_text()
-  entry=f"\nLatest checked archive: {O.name}. graph5 LEFT heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails.\nGuarded builds, exact-type/transitive-axiom audit and {a['targeted_kernel_replays']} targeted installed-kernel replays passed.\nGraph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.\n"
+  side="RIGHT" if "-right" in O.name else "LEFT"
+  entry=f"\nLatest checked archive: {O.name}. graph5 {side} heads {a['start_offset']}..{a['start_offset']+a['heads']-1}, complete original tails.\nGuarded builds, exact-type/transitive-axiom audit and {a['targeted_kernel_replays']} targeted installed-kernel replays passed.\nGraph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.\n"
   assert 'Latest checked archive: '+O.name not in handoff.read_text()
   handoff.write_text(handoff.read_text()+entry)
   paths=[handoff]+list(Path(__file__).resolve().parent.glob('*.py'))+[p for p in O.rglob('*') if p.is_file() and p.name not in {'PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','INDEX_REVIEW.json','POST_PUSH_RECEIPT.json'}]+[P/n for n in ['PUBLICATION_PATHS.txt','PUBLICATION_HASHES.json','POST_PUSH_RECEIPT.json','INDEX_REVIEW.json'] if (P/n).exists()]

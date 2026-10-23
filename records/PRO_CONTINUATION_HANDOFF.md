@@ -33,3 +33,7 @@ Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. Ma
 Latest checked archive: 20261023-economical-graph5-left000. graph5 LEFT heads 0..104, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph5-left001. graph5 LEFT heads 105..268, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 8 targeted installed-kernel replays passed.
+Graph5 endpoint remains incomplete; current endpoint inventory remains 32/48. MainTheorem UNPROVED, root integration unverified.
