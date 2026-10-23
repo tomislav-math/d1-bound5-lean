@@ -33,3 +33,7 @@ installed-kernel replay passed. No Graph19 timeout is claimed; the original mode
 Latest checked archive: 20261023-economical-graph24-left-pilot12. graph24 LEFT heads 0..11, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
 Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-right-pilot12. graph24 RIGHT heads 0..11, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 5 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
