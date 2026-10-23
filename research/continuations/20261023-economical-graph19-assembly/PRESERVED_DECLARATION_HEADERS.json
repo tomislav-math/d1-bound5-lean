@@ -1,0 +1,35 @@
+{
+  "SmallPairGraphArithmetic19": [
+    "theorem smallPairSeeds_19_checked :\n    pairSeedsCoveredBool smallPairA_19 smallPairB_19\n      seedRootDisk_1_1 smallPairClosure_19 = true ",
+    "theorem smallPairFilter_19_checked :\n    largePairVertices smallPairA_19 smallPairB_19 smallPairClosure_19 = smallPairLarge_19 ",
+    "theorem smallPairLarge_19_count : smallPairLarge_19.length = 892 "
+  ],
+  "SmallPairGraphData19": [],
+  "SmallPairGraphTriangle19": [
+    "theorem smallPairNoTriangle_19_checked :\n    pairGraphTriangleFreeBool smallPairSieve_1_1 smallPairLarge_19 = true "
+  ],
+  "SmallPairLightAssembly19": [
+    "theorem sieve_eq : sieve = smallPairSieve_1_1 ",
+    "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_19 PairGraphPrepared19.colors).1.map pairLightCoordinates ",
+    "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared19.leftCached.map pairLightCachedCoordinates ",
+    "theorem leftRows_eq : leftRows = PairSelectedPrepared19.leftRows ",
+    "theorem left_checked :\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_19 PairGraphPrepared19.colors).1 = true ",
+    "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_19 PairGraphPrepared19.colors).2.map pairLightCoordinates ",
+    "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared19.rightCached.map pairLightCachedCoordinates ",
+    "theorem rightRows_eq : rightRows = PairSelectedPrepared19.rightRows ",
+    "theorem right_checked :\n    pairIndependentBool smallPairSieve_1_1 (pairSplitByMask smallPairLarge_19 PairGraphPrepared19.colors).2 = true "
+  ],
+  "SmallPairRawSelectedData19": [],
+  "SmallPairRawSelectedData19LeftCached": [
+    "def leftCached : List (PairResidueVertex 1 1) "
+  ],
+  "SmallPairRawSelectedData19LeftRows": [
+    "def leftRows : List (\u2115 \u00d7 List \u2115) "
+  ],
+  "SmallPairRawSelectedData19RightCached": [
+    "def rightCached : List (PairResidueVertex 1 1) "
+  ],
+  "SmallPairRawSelectedData19RightRows": [
+    "def rightRows : List (\u2115 \u00d7 List \u2115) "
+  ]
+}
