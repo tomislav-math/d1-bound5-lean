@@ -69,3 +69,15 @@ Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. M
 Latest checked archive: 20261023-economical-graph24-closure-pilot. graph24 closure witness rows 0..63 over all 894 original vertices.
 Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
 Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-closure-rest001. graph24 closure witness rows 64..319 over all 894 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-closure-rest002. graph24 closure witness rows 320..575 over all 894 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph24-closure-rest003. graph24 closure witness rows 576..893 over all 894 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
+Graph24 endpoint remains incomplete; current endpoint inventory remains 35/48. MainTheorem UNPROVED, root integration unverified.

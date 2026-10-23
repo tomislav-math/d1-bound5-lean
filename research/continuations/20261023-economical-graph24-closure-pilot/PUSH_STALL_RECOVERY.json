@@ -1,0 +1,26 @@
+{
+  "status": "REMOTE_PROCESS_TERMINATED_AFTER_STALL",
+  "utc": "2026-10-23T07:37:42.101374+00:00",
+  "local_commit": "5661bab74669be95d4b42602c154a23e97dbf2c5",
+  "remote_head": "673da5fcc0947452ebfc155e45529fe03fd6fe2c",
+  "process_pid": 43358,
+  "observed_signal": "SIGTERM",
+  "observed_runtime_seconds": 547.89,
+  "git_exit_code": null,
+  "own_descendants_remaining": false,
+  "safety_refusal": false,
+  "reason": "no output or completion despite responsive read-only ls-remote",
+  "next_step": "single ordinary non-forced retry with temporary HTTP/1.1 and transfer low-speed timeout, no credential or persistent config changes",
+  "recovery_result": {
+    "status": "PUSH_VERIFIED",
+    "retry_pid": 43803,
+    "exit": 0,
+    "runtime_seconds": 3.09,
+    "post_push_receipt_sha256": "9157eff7ed7e308a75318eaf1e20e91a7db40b67235e32b16f677c9b98c8bba9",
+    "temporary_git_options": {
+      "http.version": "HTTP/1.1",
+      "http.lowSpeedLimit": 1000,
+      "http.lowSpeedTime": 60
+    }
+  }
+}

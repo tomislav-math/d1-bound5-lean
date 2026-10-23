@@ -5,6 +5,9 @@ R=Path('/Users/tp/Lean/D1Bound5');C=R/'research/continuations';P=Path(__file__).
 assert len(sys.argv)>=4
 previous=sys.argv[1];scopes=sys.argv[2:];assert len(set(scopes))==len(scopes)
 allpaths=set()
+for name in ["PUSH_PENDING_STATUS.json","PUSH_STALL_RECOVERY.json"]:
+ q=C/previous/name
+ if q.exists():allpaths.add(str(q.relative_to(R)))
 for name in scopes:
  assert name.startswith('20261023-economical-graph24-')
  r=subprocess.run(['/Users/tp/.local/bin/python3.12','-B',str(P/'prepare.py'),name,previous],cwd=R,capture_output=True,text=True,timeout=120)
