@@ -65,3 +65,7 @@ Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. Ma
 Latest checked archive: 20261023-economical-graph7-parent-integration. graph7 both complete light-side certificates, six original parent theorem headers preserved.
 Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
 Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph7-closure-pilot. graph7 closure witness rows 0..63 over all 864 original vertices.
+Guarded builds, exact-type/transitive-axiom audit and 4 targeted installed-kernel replays passed.
+Graph7 endpoint remains incomplete; current endpoint inventory remains 33/48. MainTheorem UNPROVED, root integration unverified.

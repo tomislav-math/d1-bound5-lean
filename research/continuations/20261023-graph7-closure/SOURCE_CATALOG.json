@@ -1,0 +1,87 @@
+{
+  "archive": "/Users/tp/Lean/D1Bound5/research/continuations/20261018T010800CEST-main-continuation/prepared-light-remaining39/D1Bound5",
+  "merged": {
+    "bytes": 2473594,
+    "module": "SmallPairGraphData7",
+    "sha256": "200908b02ee8a75c180b3c832bd2d09f05eec2b008979c942791f2c442e7539c"
+  },
+  "originals": {
+    "SmallPairGraphArithmetic7": {
+      "bytes": 555,
+      "headers": [
+        "theorem smallPairSeeds_7_checked :\n    pairSeedsCoveredBool smallPairA_7 smallPairB_7\n      seedRootDisk_0_1 smallPairClosure_7 = true ",
+        "theorem smallPairFilter_7_checked :\n    largePairVertices smallPairA_7 smallPairB_7 smallPairClosure_7 = smallPairLarge_7 ",
+        "theorem smallPairLarge_7_count : smallPairLarge_7.length = 862 "
+      ],
+      "sha256": "0ef8f8f7ef4980a5fe56eb3d4d2cef1633b5b0a5f1a82e3a730cb933da8ef799"
+    },
+    "SmallPairGraphClosure7": {
+      "bytes": 720,
+      "headers": [
+        "theorem PairGraphPrepared7.indexed_checked :\n    pairClosureIndexedWitnessBool smallPairA_7 smallPairB_7 anchorRoot\n      (10^1100) smallPairClosure_7 witnesses destinations = true ",
+        "theorem smallPairClosure_7_checked :\n    pairClosureBool smallPairA_7 smallPairB_7\n      (10^1100) smallPairClosure_7 = true "
+      ],
+      "sha256": "fc243ab4da5645f2dc9ad466a9bd60e2636e7f7d7fc15c1c9ed43c751d65e46d"
+    },
+    "SmallPairGraphData7": {
+      "bytes": 121,
+      "headers": [],
+      "sha256": "0b5248e9d769d4b846d8041ffc4d7d27076a8977dc92d73d4c7b03a4e05605be"
+    },
+    "SmallPairGraphInputs7": {
+      "bytes": 971649,
+      "headers": [
+        "def smallPairA_7 : QuadInt 0 1 ",
+        "def smallPairB_7 : QuadInt 0 1 ",
+        "def smallPairClosure_7 : List (QuadInt 0 1) ",
+        "def smallPairLarge_7 : List (QuadInt 0 1) ",
+        "def colors : \u2115 "
+      ],
+      "sha256": "0c6a50693b080eb714e72cba8f1a8cabf6d56ceae0b49770b8a8581c06335097"
+    },
+    "SmallPairGraphTriangle7": {
+      "bytes": 389,
+      "headers": [
+        "theorem smallPairNoTriangle_7_checked :\n    pairGraphTriangleFreeBool smallPairSieve_0_1 smallPairLarge_7 = true "
+      ],
+      "sha256": "efb51cead5ee589182506fdea1bbed0ad81ca5350a9d4650ae572872801ea0eb"
+    },
+    "SmallPairGraphWitnessData7": {
+      "bytes": 518691,
+      "headers": [
+        "def anchorRoot : QuadInt 0 1 ",
+        "def rootPairs : List (QuadInt 0 1 \u00d7 QuadInt 0 1) ",
+        "def witnesses : List (PairRootWitness 0 1) ",
+        "def destinations : List (Option \u2115 \u00d7 Option \u2115) "
+      ],
+      "sha256": "6df63399d3ee83002db99287e6754e42b3171d28d703f58caae2f87a7ae198b9"
+    },
+    "SmallPairLightAssembly7": {
+      "bytes": 2022,
+      "headers": [
+        "theorem sieve_eq : sieve = smallPairSieve_0_1 ",
+        "theorem leftVertices_eq :\n    leftVertices = (pairSplitByMask smallPairLarge_7 PairGraphPrepared7.colors).1.map pairLightCoordinates ",
+        "theorem leftCached_eq :\n    leftCached = PairSelectedPrepared7.leftCached.map pairLightCachedCoordinates ",
+        "theorem leftRows_eq : leftRows = PairSelectedPrepared7.leftRows ",
+        "theorem left_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_7 PairGraphPrepared7.colors).1 = true ",
+        "theorem rightVertices_eq :\n    rightVertices = (pairSplitByMask smallPairLarge_7 PairGraphPrepared7.colors).2.map pairLightCoordinates ",
+        "theorem rightCached_eq :\n    rightCached = PairSelectedPrepared7.rightCached.map pairLightCachedCoordinates ",
+        "theorem rightRows_eq : rightRows = PairSelectedPrepared7.rightRows ",
+        "theorem right_checked :\n    pairIndependentBool smallPairSieve_0_1 (pairSplitByMask smallPairLarge_7 PairGraphPrepared7.colors).2 = true "
+      ],
+      "sha256": "3330b68bf7724ac46a5fc6f17a0e8a8c79929dc9b37d5578ceafa6ff03ac1e0f"
+    },
+    "SmallPairRawSelectedData7": {
+      "bytes": 978662,
+      "headers": [
+        "def leftCached : List (PairResidueVertex 0 1) ",
+        "def leftRows : List (\u2115 \u00d7 List \u2115) ",
+        "def rightCached : List (PairResidueVertex 0 1) ",
+        "def rightRows : List (\u2115 \u00d7 List \u2115) "
+      ],
+      "sha256": "ef94b41838acb81fdaa98d496cb31c577614c6d5066b6669e82b81def333492b"
+    }
+  },
+  "schema": 1,
+  "status": "ACTUAL_PINNED_GRAPH7_SOURCE_CATALOG_NOT_A_PROOF"
+}
