@@ -1,0 +1,404 @@
+{
+  "codegen_option_primary_source": {
+    "declaration": "compiler.extract_closed",
+    "line": 73,
+    "path": "lean-offload/lean-4.33.1-linux/src/lean/Lean/Compiler/LCNF/ConfigOptions.lean",
+    "sha256": "64d1420fb4534c951249036c80a40c4b9aff407d24fc6a0e90e58bd090eff9a1"
+  },
+  "external_imports_not_scanned": [
+    "Init",
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Util.CollectAxioms",
+    "Mathlib.Algebra.BigOperators.Fin",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+    "Mathlib.Algebra.BigOperators.NatAntidiagonal",
+    "Mathlib.Algebra.CharP.Frobenius",
+    "Mathlib.Algebra.CharP.Two",
+    "Mathlib.Algebra.CharZero.Infinite",
+    "Mathlib.Algebra.Group.Int.Units",
+    "Mathlib.Algebra.Order.Archimedean.Real.Basic",
+    "Mathlib.Algebra.Order.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.Order.Floor.Semiring",
+    "Mathlib.Algebra.Order.Ring.Abs",
+    "Mathlib.Algebra.Polynomial.BigOperators",
+    "Mathlib.Algebra.Polynomial.Degree.Operations",
+    "Mathlib.Algebra.Polynomial.Div",
+    "Mathlib.Algebra.Polynomial.Monic",
+    "Mathlib.Algebra.Polynomial.PartialFractions",
+    "Mathlib.Algebra.Polynomial.Reverse",
+    "Mathlib.Algebra.Polynomial.RingDivision",
+    "Mathlib.Algebra.Polynomial.Roots",
+    "Mathlib.Algebra.QuadraticAlgebra.Basic",
+    "Mathlib.Algebra.QuadraticAlgebra.NormDeterminant",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.Ring.Equiv",
+    "Mathlib.Algebra.Squarefree.Basic",
+    "Mathlib.Analysis.Analytic.Binomial",
+    "Mathlib.Analysis.CStarAlgebra.Matrix",
+    "Mathlib.Analysis.Calculus.Deriv.MeanValue",
+    "Mathlib.Analysis.Calculus.Deriv.Pow",
+    "Mathlib.Analysis.Complex.Basic",
+    "Mathlib.Analysis.Complex.Norm",
+    "Mathlib.Analysis.Complex.Polynomial.Basic",
+    "Mathlib.Analysis.InnerProductSpace.Basic",
+    "Mathlib.Analysis.InnerProductSpace.PiL2",
+    "Mathlib.Analysis.Normed.Group.Basic",
+    "Mathlib.Analysis.Normed.Ring.Basic",
+    "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+    "Mathlib.Analysis.SpecialFunctions.Gaussian.GaussianIntegral",
+    "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+    "Mathlib.Analysis.SpecificLimits.Normed",
+    "Mathlib.Combinatorics.Enumerative.Catalan.Basic",
+    "Mathlib.Data.Complex.Basic",
+    "Mathlib.Data.Fin.Tuple.Sort",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Insert",
+    "Mathlib.Data.Finset.Prod",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Data.Int.GCD",
+    "Mathlib.Data.Int.Interval",
+    "Mathlib.Data.Int.Sqrt",
+    "Mathlib.Data.List.Basic",
+    "Mathlib.Data.List.Defs",
+    "Mathlib.Data.List.Range",
+    "Mathlib.Data.Rat.Lemmas",
+    "Mathlib.Data.Real.Basic",
+    "Mathlib.Data.Sym.Basic",
+    "Mathlib.Data.Sym.Card",
+    "Mathlib.Data.ZMod.Basic",
+    "Mathlib.LinearAlgebra.Dimension.Free",
+    "Mathlib.LinearAlgebra.Lagrange",
+    "Mathlib.LinearAlgebra.Matrix.Determinant.Basic",
+    "Mathlib.LinearAlgebra.Matrix.NonsingularInverse",
+    "Mathlib.LinearAlgebra.Matrix.Permutation",
+    "Mathlib.LinearAlgebra.Matrix.Polynomial",
+    "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+    "Mathlib.LinearAlgebra.Matrix.ToLinearEquiv",
+    "Mathlib.NumberTheory.DiophantineApproximation.Basic",
+    "Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex",
+    "Mathlib.NumberTheory.NumberField.Norm",
+    "Mathlib.NumberTheory.Real.Irrational",
+    "Mathlib.RingTheory.Binomial",
+    "Mathlib.RingTheory.Coprime.Lemmas",
+    "Mathlib.RingTheory.Int.Basic",
+    "Mathlib.RingTheory.MvPolynomial.Symmetric.Defs",
+    "Mathlib.RingTheory.PowerSeries.Binomial",
+    "Mathlib.RingTheory.PowerSeries.Trunc",
+    "Mathlib.Tactic",
+    "Mathlib.Tactic.ComputeDegree",
+    "Mathlib.Tactic.Convert",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.GCongr",
+    "Mathlib.Tactic.IntervalCases",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.LinearCombination",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Topology.Algebra.InfiniteSum.Order"
+  ],
+  "findings": [
+    {
+      "category": "meta_namespace_review",
+      "line": 4,
+      "module": "D1Bound5.MainCaseReduction",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 5,
+      "module": "D1Bound5.BennettClearedResidues",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 3,
+      "module": "D1Bound5.BennettResidueCoefficient",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 3,
+      "module": "D1Bound5.BennettChooseNonzero",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 7,
+      "module": "D1Bound5.BennettResidualMajorant",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 7,
+      "module": "D1Bound5.BennettTwoCoefficientConstants",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 5,
+      "module": "D1Bound5.BennettResidualEvaluation",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 6,
+      "module": "D1Bound5.BennettChooseGamma",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 7,
+      "module": "D1Bound5.BennettTwoBetaBound",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 6,
+      "module": "D1Bound5.FiniteHomogeneousTwo",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 5,
+      "module": "D1Bound5.FiniteMHeight",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 4,
+      "module": "D1Bound5.FinitePHeight",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 4,
+      "module": "D1Bound5.FinitePMonomial",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "line": 7,
+      "module": "D1Bound5.UnitPairAxes",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    }
+  ],
+  "global_main_theorem_complete": false,
+  "limitations": "Static source audit only; does not replace compiler, exact-type, transitive-axiom or kernel verification. Root must revalidate this exact source manifest after any final edits.",
+  "missing_sources": [],
+  "module_count": 4395,
+  "ordinary_print_axioms_count": 87,
+  "reviewed_codegen_options": [
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData5RightCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData7LeftCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData7RightCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData19LeftCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData19RightCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData24LeftCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    },
+    {
+      "disposition": "BENIGN_CODE_GENERATION_OPTION",
+      "line": 6,
+      "module": "D1Bound5.SmallPairLightData24RightCached",
+      "name": "compiler.extract_closed",
+      "reason": "Disables compiler LCNF closed-term caching; no kernel or proof trust modification.",
+      "value": "false"
+    }
+  ],
+  "reviewed_findings": [
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 4,
+      "module": "D1Bound5.MainCaseReduction",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.BennettClearedResidues",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 3,
+      "module": "D1Bound5.BennettResidueCoefficient",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 3,
+      "module": "D1Bound5.BennettChooseNonzero",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.BennettResidualMajorant",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.BennettTwoCoefficientConstants",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.BennettResidualEvaluation",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 6,
+      "module": "D1Bound5.BennettChooseGamma",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.BennettTwoBetaBound",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 6,
+      "module": "D1Bound5.FiniteHomogeneousTwo",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 5,
+      "module": "D1Bound5.FiniteMHeight",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 4,
+      "module": "D1Bound5.FinitePHeight",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 4,
+      "module": "D1Bound5.FinitePMonomial",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    },
+    {
+      "category": "meta_namespace_review",
+      "disposition": "BENIGN_STANDARD_TACTIC_IMPORT",
+      "line": 7,
+      "module": "D1Bound5.UnitPairAxes",
+      "reason": "Official Lean omega tactic import; no project Meta command or environment mutation.",
+      "source_line": "import Lean.Elab.Tactic.Omega",
+      "token": "Elab"
+    }
+  ],
+  "root_module": "D1Bound5.MainTheorem",
+  "scanner_errors": [],
+  "scanner_sha256": "59182c3069ced8ce3ca14f2ce53f8d5c45ed8278f2ecce721a062f08ea812edf",
+  "scope": "Project production sources in exact current MainTheorem import closure; comments/string literals excluded. External mathlib/Lean modules and out-of-closure research audit scripts are not production sources in this scan. Ordinary #print axioms is recorded separately.",
+  "sensitive_options": [],
+  "source_bytes": 185820990,
+  "source_changes_during_scan": [],
+  "status": "PASS_SOURCE_REVIEWED",
+  "unresolved_findings": [],
+  "utc": "2026-10-23T11:55:22Z"
+}

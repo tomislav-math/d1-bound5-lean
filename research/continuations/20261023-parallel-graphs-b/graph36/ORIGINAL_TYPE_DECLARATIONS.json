@@ -1,0 +1,624 @@
+[
+  {
+    "header": ":\n    pairSeedsCoveredBool smallPairA_36 smallPairB_36\n      seedRootDisk_1_2 smallPairClosure_36 = true",
+    "kind": "theorem",
+    "local_name": "smallPairSeeds_36_checked",
+    "name": "D1Bound5.smallPairSeeds_36_checked",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ":\n    largePairVertices smallPairA_36 smallPairB_36 smallPairClosure_36 = smallPairLarge_36",
+    "kind": "theorem",
+    "local_name": "smallPairFilter_36_checked",
+    "name": "D1Bound5.smallPairFilter_36_checked",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ": smallPairLarge_36.length = 1121",
+    "kind": "theorem",
+    "local_name": "smallPairLarge_36_count",
+    "name": "D1Bound5.smallPairLarge_36_count",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ":\n    pairClosureIndexedWitnessBool smallPairA_36 smallPairB_36 anchorRoot\n      (10^1100) smallPairClosure_36 witnesses destinations = true",
+    "kind": "theorem",
+    "local_name": "PairGraphPrepared36.indexed_checked",
+    "name": "D1Bound5.PairGraphPrepared36.indexed_checked",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt",
+      "open PairGraphPrepared36"
+    ]
+  },
+  {
+    "header": ":\n    pairClosureBool smallPairA_36 smallPairB_36\n      (10^1100) smallPairClosure_36 = true",
+    "kind": "theorem",
+    "local_name": "smallPairClosure_36_checked",
+    "name": "D1Bound5.smallPairClosure_36_checked",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt",
+      "open PairGraphPrepared36"
+    ]
+  },
+  {
+    "header": ": QuadInt 1 2",
+    "kind": "def",
+    "local_name": "smallPairA_36",
+    "name": "D1Bound5.smallPairA_36",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ": QuadInt 1 2",
+    "kind": "def",
+    "local_name": "smallPairB_36",
+    "name": "D1Bound5.smallPairB_36",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ": List (QuadInt 1 2)",
+    "kind": "def",
+    "local_name": "smallPairClosure_36",
+    "name": "D1Bound5.smallPairClosure_36",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ": List (QuadInt 1 2)",
+    "kind": "def",
+    "local_name": "smallPairLarge_36",
+    "name": "D1Bound5.smallPairLarge_36",
+    "namespace": "D1Bound5",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ": \u2115",
+    "kind": "def",
+    "local_name": "colors",
+    "name": "D1Bound5.PairGraphPrepared36.colors",
+    "namespace": "D1Bound5.PairGraphPrepared36",
+    "opens": [
+      "open QuadInt"
+    ]
+  },
+  {
+    "header": ": QuadInt 1 2",
+    "kind": "def",
+    "local_name": "anchorRoot",
+    "name": "D1Bound5.PairGraphPrepared36.anchorRoot",
+    "namespace": "D1Bound5.PairGraphPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (QuadInt 1 2 \u00d7 QuadInt 1 2)",
+    "kind": "def",
+    "local_name": "rootPairs",
+    "name": "D1Bound5.PairGraphPrepared36.rootPairs",
+    "namespace": "D1Bound5.PairGraphPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (PairRootWitness 1 2)",
+    "kind": "def",
+    "local_name": "witnesses",
+    "name": "D1Bound5.PairGraphPrepared36.witnesses",
+    "namespace": "D1Bound5.PairGraphPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Option \u2115 \u00d7 Option \u2115)",
+    "kind": "def",
+    "local_name": "destinations",
+    "name": "D1Bound5.PairGraphPrepared36.destinations",
+    "namespace": "D1Bound5.PairGraphPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (PairResidueVertex 1 2)",
+    "kind": "def",
+    "local_name": "leftCached",
+    "name": "D1Bound5.PairSelectedPrepared36.leftCached",
+    "namespace": "D1Bound5.PairSelectedPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (\u2115 \u00d7 List \u2115)",
+    "kind": "def",
+    "local_name": "leftRows",
+    "name": "D1Bound5.PairSelectedPrepared36.leftRows",
+    "namespace": "D1Bound5.PairSelectedPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (PairResidueVertex 1 2)",
+    "kind": "def",
+    "local_name": "rightCached",
+    "name": "D1Bound5.PairSelectedPrepared36.rightCached",
+    "namespace": "D1Bound5.PairSelectedPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (\u2115 \u00d7 List \u2115)",
+    "kind": "def",
+    "local_name": "rightRows",
+    "name": "D1Bound5.PairSelectedPrepared36.rightRows",
+    "namespace": "D1Bound5.PairSelectedPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": sieve = smallPairSieve_1_2",
+    "kind": "theorem",
+    "local_name": "sieve_eq",
+    "name": "D1Bound5.PairLightPrepared36.sieve_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    leftVertices = (pairSplitByMask smallPairLarge_36 PairGraphPrepared36.colors).1.map pairLightCoordinates",
+    "kind": "theorem",
+    "local_name": "leftVertices_eq",
+    "name": "D1Bound5.PairLightPrepared36.leftVertices_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    leftCached = PairSelectedPrepared36.leftCached.map pairLightCachedCoordinates",
+    "kind": "theorem",
+    "local_name": "leftCached_eq",
+    "name": "D1Bound5.PairLightPrepared36.leftCached_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": leftRows = PairSelectedPrepared36.leftRows",
+    "kind": "theorem",
+    "local_name": "leftRows_eq",
+    "name": "D1Bound5.PairLightPrepared36.leftRows_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairIndependentBool smallPairSieve_1_2 (pairSplitByMask smallPairLarge_36 PairGraphPrepared36.colors).1 = true",
+    "kind": "theorem",
+    "local_name": "left_checked",
+    "name": "D1Bound5.PairLightPrepared36.left_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    rightVertices = (pairSplitByMask smallPairLarge_36 PairGraphPrepared36.colors).2.map pairLightCoordinates",
+    "kind": "theorem",
+    "local_name": "rightVertices_eq",
+    "name": "D1Bound5.PairLightPrepared36.rightVertices_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    rightCached = PairSelectedPrepared36.rightCached.map pairLightCachedCoordinates",
+    "kind": "theorem",
+    "local_name": "rightCached_eq",
+    "name": "D1Bound5.PairLightPrepared36.rightCached_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": rightRows = PairSelectedPrepared36.rightRows",
+    "kind": "theorem",
+    "local_name": "rightRows_eq",
+    "name": "D1Bound5.PairLightPrepared36.rightRows_eq",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairIndependentBool smallPairSieve_1_2 (pairSplitByMask smallPairLarge_36 PairGraphPrepared36.colors).2 = true",
+    "kind": "theorem",
+    "local_name": "right_checked",
+    "name": "D1Bound5.PairLightPrepared36.right_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairGraphTriangleFreeBool smallPairSieve_1_2 smallPairLarge_36 = true",
+    "kind": "theorem",
+    "local_name": "smallPairNoTriangle_36_checked",
+    "name": "D1Bound5.smallPairNoTriangle_36_checked",
+    "namespace": "D1Bound5",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "leftCached000",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftCached000",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "leftRows000",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftRows000",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "leftCached001",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftCached001",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "leftRows001",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftRows001",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "leftCached002",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftCached002",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "leftRows002",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftRows002",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "leftCached003",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftCached003",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "leftRows003",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftRows003",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "leftCached004",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftCached004",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "leftRows004",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.leftRows004",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "rightCached000",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightCached000",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "rightRows000",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightRows000",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "rightCached001",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightCached001",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "rightRows001",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightRows001",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "rightCached002",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightCached002",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "rightRows002",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightRows002",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "rightCached003",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightCached003",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "rightRows003",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightRows003",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "rightCached004",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightCached004",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "rightRows004",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.rightRows004",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 76\n      leftCached000 leftRows000 = true",
+    "kind": "theorem",
+    "local_name": "left_prefix_000_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.left_prefix_000_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 91\n      leftCached001 leftRows001 = true",
+    "kind": "theorem",
+    "local_name": "left_prefix_001_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.left_prefix_001_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 119\n      leftCached002 leftRows002 = true",
+    "kind": "theorem",
+    "local_name": "left_prefix_002_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.left_prefix_002_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 275\n      leftCached003 leftRows003 = true",
+    "kind": "theorem",
+    "local_name": "left_prefix_003_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.left_prefix_003_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 76\n      rightCached000 rightRows000 = true",
+    "kind": "theorem",
+    "local_name": "right_prefix_000_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.right_prefix_000_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 91\n      rightCached001 rightRows001 = true",
+    "kind": "theorem",
+    "local_name": "right_prefix_001_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.right_prefix_001_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 120\n      rightCached002 rightRows002 = true",
+    "kind": "theorem",
+    "local_name": "right_prefix_002_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.right_prefix_002_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorPrefixBool 1 2 PairLightPrepared36.sieve 273\n      rightCached003 rightRows003 = true",
+    "kind": "theorem",
+    "local_name": "right_prefix_003_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.right_prefix_003_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    decide (PairLightPrepared36.leftCached.map Prod.fst = PairLightPrepared36.leftVertices) = true",
+    "kind": "theorem",
+    "local_name": "left_coverage_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.left_coverage_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    (PairLightPrepared36.leftCached.all fun x =>\n      decide (x.2 = pairLightCoordinateSignature PairLightPrepared36.sieve x.1)) = true",
+    "kind": "theorem",
+    "local_name": "left_signatures_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.left_signatures_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    decide (PairLightPrepared36.rightCached.map Prod.fst = PairLightPrepared36.rightVertices) = true",
+    "kind": "theorem",
+    "local_name": "right_coverage_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.right_coverage_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    (PairLightPrepared36.rightCached.all fun x =>\n      decide (x.2 = pairLightCoordinateSignature PairLightPrepared36.sieve x.1)) = true",
+    "kind": "theorem",
+    "local_name": "right_signatures_checked",
+    "name": "D1Bound5.PairLightAdaptivePrepared36.right_signatures_checked",
+    "namespace": "D1Bound5.PairLightAdaptivePrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 Nat)",
+    "kind": "def",
+    "local_name": "sieve",
+    "name": "D1Bound5.PairLightPrepared36.sieve",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCoordinate",
+    "kind": "def",
+    "local_name": "leftVertices",
+    "name": "D1Bound5.PairLightPrepared36.leftVertices",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "leftCached",
+    "name": "D1Bound5.PairLightPrepared36.leftCached",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "leftRows",
+    "name": "D1Bound5.PairLightPrepared36.leftRows",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCoordinate",
+    "kind": "def",
+    "local_name": "rightVertices",
+    "name": "D1Bound5.PairLightPrepared36.rightVertices",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List PairLightCachedVertex",
+    "kind": "def",
+    "local_name": "rightCached",
+    "name": "D1Bound5.PairLightPrepared36.rightCached",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ": List (Nat \u00d7 List Nat)",
+    "kind": "def",
+    "local_name": "rightRows",
+    "name": "D1Bound5.PairLightPrepared36.rightRows",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    decide (leftCached.map Prod.fst = leftVertices) = true",
+    "kind": "theorem",
+    "local_name": "left_coverage_checked",
+    "name": "D1Bound5.PairLightPrepared36.left_coverage_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    (leftCached.all fun x => decide (x.2 = pairLightCoordinateSignature sieve x.1)) = true",
+    "kind": "theorem",
+    "local_name": "left_signatures_checked",
+    "name": "D1Bound5.PairLightPrepared36.left_signatures_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorIndependentBool 1 2 sieve leftCached leftRows = true",
+    "kind": "theorem",
+    "local_name": "left_independent_checked",
+    "name": "D1Bound5.PairLightPrepared36.left_independent_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorIndependentCertificateBool 1 2 sieve\n      leftVertices leftCached leftRows = true",
+    "kind": "theorem",
+    "local_name": "left_certificate_checked",
+    "name": "D1Bound5.PairLightPrepared36.left_certificate_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    decide (rightCached.map Prod.fst = rightVertices) = true",
+    "kind": "theorem",
+    "local_name": "right_coverage_checked",
+    "name": "D1Bound5.PairLightPrepared36.right_coverage_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    (rightCached.all fun x => decide (x.2 = pairLightCoordinateSignature sieve x.1)) = true",
+    "kind": "theorem",
+    "local_name": "right_signatures_checked",
+    "name": "D1Bound5.PairLightPrepared36.right_signatures_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorIndependentBool 1 2 sieve rightCached rightRows = true",
+    "kind": "theorem",
+    "local_name": "right_independent_checked",
+    "name": "D1Bound5.PairLightPrepared36.right_independent_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  },
+  {
+    "header": ":\n    pairLightSelectedFloorIndependentCertificateBool 1 2 sieve\n      rightVertices rightCached rightRows = true",
+    "kind": "theorem",
+    "local_name": "right_certificate_checked",
+    "name": "D1Bound5.PairLightPrepared36.right_certificate_checked",
+    "namespace": "D1Bound5.PairLightPrepared36",
+    "opens": []
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "scope": "orchestration only; all Lean sources unchanged",
+  "events": [
+    {
+      "event": "Owned numerical session89671 interrupted via native Ctrl-C",
+      "exit_code": 130,
+      "active_receipt": "SmallPairLightData8LeftCachedChunk05",
+      "receipt_status": "INTERRUPTED_NO_PASS",
+      "lingering_compilers": 0
+    },
+    {
+      "event": "First restart encountered unrelated receipt schema without name",
+      "exception": "KeyError: name",
+      "lean_compilers_started": 0
+    },
+    {
+      "event": "Owned guarded_compile_a.py skips unrelated unnamed receipts using get",
+      "source_and_dependency_artifact_guards": "unchanged",
+      "workers": 2
+    }
+  ],
+  "proof_claims": "Only matching COMPILED_ONLY receipts are reused; exact-type/axiom audits and kernel milestones run separately"
+}

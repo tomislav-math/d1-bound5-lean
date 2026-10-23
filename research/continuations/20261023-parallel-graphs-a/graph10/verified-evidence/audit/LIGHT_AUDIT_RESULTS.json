@@ -1,0 +1,36 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+      "-j1",
+      "-DautoImplicit=false",
+      "/workspace/scratch/fed64f41ca78/lean-offload/graph10-owned/FullLightAudit.lean"
+    ],
+    "exit": 0,
+    "label": "light-exact-types-axioms",
+    "log_sha256": "face02c828f534ca4893b224fa0355d730229d2c388f312c5597bc691f7fee7b",
+    "seconds": 1.8710967879997042
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairLightLeft10"
+    ],
+    "exit": 0,
+    "label": "SmallPairLightLeft10-kernel",
+    "log_sha256": "41d1a32e7024083273a1b1ee4f345f9666b3a30875b73d083ded0fbf69b41ae3",
+    "seconds": 3.278466322000895
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairLightRight10"
+    ],
+    "exit": 0,
+    "label": "SmallPairLightRight10-kernel",
+    "log_sha256": "07384320f7f72e8199636368b540d603172c9e26d718b673d94418867fe249c4",
+    "seconds": 3.535230268000305
+  }
+]

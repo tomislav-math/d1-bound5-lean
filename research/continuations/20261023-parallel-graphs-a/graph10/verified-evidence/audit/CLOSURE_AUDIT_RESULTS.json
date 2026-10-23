@@ -1,0 +1,91 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+      "-j1",
+      "-DautoImplicit=false",
+      "/workspace/scratch/fed64f41ca78/lean-offload/graph10-owned/FullClosureAudit.lean"
+    ],
+    "exit": 0,
+    "label": "closure-exact-types-axioms",
+    "log_sha256": "5f0755a7d6b74bdee9c6815ee95e938ec04c00d60f5b3cedf520e6013d87744c",
+    "seconds": 3.0772374119987944
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairPureClosure10"
+    ],
+    "exit": 0,
+    "label": "SmallPairPureClosure10-kernel",
+    "log_sha256": "6a66bb4007ca216e8eafb940fd2cf69b0010d3ebc7d238ff92fbccacefd8fb37",
+    "seconds": 4.240711417001876
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairPureClosureAdapter10"
+    ],
+    "exit": 0,
+    "label": "SmallPairPureClosureAdapter10-kernel",
+    "log_sha256": "864b445edfb282405a65fd7b4dc528bb302738fce4a7b24b9e63e9222fd2bd87",
+    "seconds": 6.1414085239994165
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphClosure10"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphClosure10-kernel",
+    "log_sha256": "2ae910fdd3d00657868585d82a7eb3f66aabd9c1ab8459927db4c5bf1f16c7f5",
+    "seconds": 4.39149392499894
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphArithmetic10"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphArithmetic10-kernel",
+    "log_sha256": "c9fcda4801c144cada3d632be63f350db8220f76550e0943deb584a4e63c7552",
+    "seconds": 8.812973388998216
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairLightAssembly10"
+    ],
+    "exit": 0,
+    "label": "SmallPairLightAssembly10-kernel",
+    "log_sha256": "4c16bd4e756c56fc2ce790f95f6e4c26cedc57477bd32b40e7fd2eb1af82b13d",
+    "seconds": 5.8016905919976125
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphTriangle10"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphTriangle10-kernel",
+    "log_sha256": "15c932e5cdf1e8dbb0d83e472914fc30a979d161e861cdee063a889128ad0638",
+    "seconds": 4.7908639240013144
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphData10"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphData10-kernel",
+    "log_sha256": "888943f1ec4ad0799cb308310724b1cb1f0a7e4833c1590bc84c6237a1b3ce03",
+    "seconds": 4.185874175997014
+  }
+]

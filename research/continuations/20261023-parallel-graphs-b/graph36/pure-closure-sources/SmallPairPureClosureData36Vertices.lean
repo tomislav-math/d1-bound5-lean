@@ -1,0 +1,19 @@
+import D1Bound5.SmallPairPureClosureData36VerticesChunk00
+import D1Bound5.SmallPairPureClosureData36VerticesChunk01
+import D1Bound5.SmallPairPureClosureData36VerticesChunk02
+import D1Bound5.SmallPairPureClosureData36VerticesChunk03
+import D1Bound5.SmallPairPureClosureData36VerticesChunk04
+import D1Bound5.SmallPairPureClosureData36VerticesChunk05
+import D1Bound5.SmallPairPureClosureData36VerticesChunk06
+import D1Bound5.SmallPairPureClosureData36VerticesChunk07
+import D1Bound5.SmallPairPureClosureData36VerticesChunk08
+
+namespace D1Bound5.PairLightClosurePrepared36
+set_option autoImplicit false
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+noncomputable def vertices : List PairLightCoordinate :=
+  verticesChunk00 ++ verticesChunk01 ++ verticesChunk02 ++ verticesChunk03 ++ verticesChunk04 ++ verticesChunk05 ++ verticesChunk06 ++ verticesChunk07 ++ verticesChunk08
+
+end D1Bound5.PairLightClosurePrepared36

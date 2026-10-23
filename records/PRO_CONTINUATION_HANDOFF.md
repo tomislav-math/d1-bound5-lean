@@ -7,7 +7,8 @@ The current user explicitly resumed intensive parallel formalization after the p
 # Current D1 formalization handoff
 
 MainTheorem UNPROVED. Canonical-root integration and a pinned clean-checkout build remain unverified.
-37/48 finite graph endpoints are verified working endpoints; 11 remain.
+48/48 finite graph endpoints are verified working endpoints; all finite graph obligations are closed.
+Graph15 new complete verified endpoint evidence: research/continuations/20261023-parallel-graphs-b/linux-evidence/results-graph15-endpoint-audit/VERIFICATION_SUMMARY.json.
 Graph4 new complete verified endpoint evidence: research/continuations/20261023-parallel-graphs-a/graph4/verified-evidence/audit/CLOSURE_VERIFICATION_SUMMARY.json.
 Active parallel continuation summary: research/continuations/20261023-parallel-resume/CURRENT_PROGRESS.json.
 The following historical endpoint inventory records the prior36 endpoints.

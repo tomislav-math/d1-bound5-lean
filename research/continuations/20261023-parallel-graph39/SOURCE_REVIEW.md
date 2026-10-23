@@ -1,0 +1,9 @@
+# Graph39 source review
+
+The reviewed source proposal preserves the original model `(tau, nu) = (1, 2)`, anchors `(-1,-1)` and `(1,1)`, all 915 closure vertices, and all 914 filtered vertices. The two verified light sides contain 458 and 456 heads. The closure cutoff remains norm `10^1100`, hence complex modulus `10^550` in the later full-ring bridge.
+
+The indexed closure checker tests both mutation signs for every witness. Each supplied destination is looked up in the entire original vertex list, including when the witness list is dropped to a later prefix. `none` is accepted only for a candidate whose norm strictly exceeds the cutoff. The final coverage premise is the exact ordered equality of the witness vertices and the full vertex list, together with the original anchor-root equation. The simultaneous witness/destination recursion rejects mismatched nonempty tails. The exact prefix/drop join therefore preserves all coverage and cannot discard a sign or an unmatched tail.
+
+The first 64 rows were already fully verified in the earlier closure pilot. Four further 64-row chunks (offsets 64 through 319) had current accepted guarded builds left by the stopped session, although the visible handoff did not yet describe these compilations. They are reused only after exact source/dependency/artifact reconciliation and are included in the new exact-type, transitive-axiom and installed-kernel audits. The remaining prepared chunks cover offsets 320 through 914 and are joined by the unchanged original closure assertion.
+
+The assembly scope is prepared separately and will not be claimed until its checks pass. Its extra final audit imports the restored GraphData39 facade and checks all 28 original public declaration types from the preserved original merged source. MainTheorem remains unproved and accepted-root integration is not claimed by this graph-local work.

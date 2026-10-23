@@ -1,0 +1,22 @@
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk00
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk01
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk02
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk03
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk04
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk05
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk06
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk07
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk08
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk09
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk10
+import D1Bound5.SmallPairPureClosureData8RootPairsChunk11
+
+namespace D1Bound5.PairLightClosurePrepared8
+set_option autoImplicit false
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+noncomputable def rootPairs : List (PairLightCoordinate × PairLightCoordinate) :=
+  rootPairsChunk00 ++ rootPairsChunk01 ++ rootPairsChunk02 ++ rootPairsChunk03 ++ rootPairsChunk04 ++ rootPairsChunk05 ++ rootPairsChunk06 ++ rootPairsChunk07 ++ rootPairsChunk08 ++ rootPairsChunk09 ++ rootPairsChunk10 ++ rootPairsChunk11
+
+end D1Bound5.PairLightClosurePrepared8

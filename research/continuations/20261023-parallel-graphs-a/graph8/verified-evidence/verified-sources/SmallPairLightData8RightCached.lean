@@ -1,0 +1,18 @@
+import D1Bound5.SmallPairLightData8RightCachedChunk00
+import D1Bound5.SmallPairLightData8RightCachedChunk01
+import D1Bound5.SmallPairLightData8RightCachedChunk02
+import D1Bound5.SmallPairLightData8RightCachedChunk03
+import D1Bound5.SmallPairLightData8RightCachedChunk04
+import D1Bound5.SmallPairLightData8RightCachedChunk05
+import D1Bound5.SmallPairLightData8RightCachedChunk06
+import D1Bound5.SmallPairLightData8RightCachedChunk07
+
+namespace D1Bound5.PairLightPrepared8
+set_option autoImplicit false
+set_option maxRecDepth 100000
+set_option maxHeartbeats 0
+
+noncomputable def rightCached : List PairLightCachedVertex :=
+  rightCachedChunk00 ++ rightCachedChunk01 ++ rightCachedChunk02 ++ rightCachedChunk03 ++ rightCachedChunk04 ++ rightCachedChunk05 ++ rightCachedChunk06 ++ rightCachedChunk07
+
+end D1Bound5.PairLightPrepared8

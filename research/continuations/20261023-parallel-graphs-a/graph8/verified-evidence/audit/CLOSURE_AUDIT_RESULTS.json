@@ -1,0 +1,91 @@
+[
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+      "-j1",
+      "-DautoImplicit=false",
+      "/workspace/scratch/fed64f41ca78/lean-offload/graph8-owned/FullClosureAudit.lean"
+    ],
+    "exit": 0,
+    "label": "closure-exact-types-axioms",
+    "log_sha256": "2ce9d85f4924f35e6dd196787b7371568060ac2a2d820a7c64c7c31ef0acdefc",
+    "seconds": 2.6215356009997777
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairPureClosure8"
+    ],
+    "exit": 0,
+    "label": "SmallPairPureClosure8-kernel",
+    "log_sha256": "84dea66793bfd9051183774b41a120c9a78ca188b61d3695c7dc23f282adedbe",
+    "seconds": 3.8747386450013437
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairPureClosureAdapter8"
+    ],
+    "exit": 0,
+    "label": "SmallPairPureClosureAdapter8-kernel",
+    "log_sha256": "8c31e2139067f49b6726b7534eb35a062569b71cc4b27a6aaedc83c644498895",
+    "seconds": 5.532949784999801
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphClosure8"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphClosure8-kernel",
+    "log_sha256": "1b3e0e01c11b8f51e3c84daea3b1ea3480313512c715df965f908213cd87ab70",
+    "seconds": 3.9786910439979692
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphArithmetic8"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphArithmetic8-kernel",
+    "log_sha256": "ff4024ccd92078e375edca1679f9f08f011ea13c16bc3fffbf8a6e1ac0c28c17",
+    "seconds": 7.934610611999233
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairLightAssembly8"
+    ],
+    "exit": 0,
+    "label": "SmallPairLightAssembly8-kernel",
+    "log_sha256": "7adca07451b98f98035e96368062172e335953dd49c322507e7ba10289e3a914",
+    "seconds": 5.13344147799944
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphTriangle8"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphTriangle8-kernel",
+    "log_sha256": "fb961d567227949691d146e3148e4cd060a1918919e42076c3fcbf765cd79e12",
+    "seconds": 4.429072769999038
+  },
+  {
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphData8"
+    ],
+    "exit": 0,
+    "label": "SmallPairGraphData8-kernel",
+    "log_sha256": "07c99f1ff5c2d07065cd04956e2b2cb336585ba6e041808475a068468438af6e",
+    "seconds": 4.280042460999539
+  }
+]
