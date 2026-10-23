@@ -35,3 +35,17 @@ Metadata correction: Graph24 closure-rest003 `parts` was recorded as [64,64,64,6
 Latest checked archive: 20261023-economical-graph39-left-pilot12. graph39 LEFT heads 0..11, complete original tails.
 Guarded builds, exact-type/transitive-axiom audit and 6 targeted installed-kernel replays passed.
 Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-left000. graph39 LEFT heads 0..96, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 9 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-left001. graph39 LEFT heads 97..232, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 7 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Latest checked archive: 20261023-economical-graph39-left002. graph39 LEFT heads 233..457, complete original tails.
+Guarded builds, exact-type/transitive-axiom audit and 11 targeted installed-kernel replays passed.
+Graph39 endpoint remains incomplete; current endpoint inventory remains 36/48. MainTheorem UNPROVED, root integration unverified.
+
+Graph39: all 458 LEFT heads are checked, with the original model (1,2) and complete tails. RIGHT Cached data runtime compilation timed out twice at 240 s under two distinct compiler configurations; neither is a PASS. Failed evidence is archived with the left-side publication. Next: add the explicitly chosen noncomputable modifier only to the necessary data definition and dependent data aliases, preserve the logical type and literal body, then require original-type/transitive-axiom audit and installed-kernel replay. The modifier changes the declaration header; no whole-header byte-identity claim is made. Existing PASS modules must not be recompiled for uniformity.
