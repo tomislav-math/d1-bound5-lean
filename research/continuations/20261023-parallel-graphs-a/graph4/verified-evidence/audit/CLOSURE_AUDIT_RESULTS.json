@@ -1,0 +1,73 @@
+[
+  {
+    "label": "closure-exact-types-axioms",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/lean",
+      "-j1",
+      "-DautoImplicit=false",
+      "/workspace/scratch/fed64f41ca78/lean-offload/graph4-owned/FullClosureAudit.lean"
+    ],
+    "exit": 0,
+    "seconds": 3.175942188998306
+  },
+  {
+    "label": "SmallPairPureClosure4-kernel",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairPureClosure4"
+    ],
+    "exit": 0,
+    "seconds": 4.180219891000888
+  },
+  {
+    "label": "SmallPairPureClosureAdapter4-kernel",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairPureClosureAdapter4"
+    ],
+    "exit": 0,
+    "seconds": 6.246258710001712
+  },
+  {
+    "label": "SmallPairGraphClosure4-kernel",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphClosure4"
+    ],
+    "exit": 0,
+    "seconds": 4.865985518001253
+  },
+  {
+    "label": "SmallPairGraphArithmetic4-kernel",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphArithmetic4"
+    ],
+    "exit": 0,
+    "seconds": 8.653075143000024
+  },
+  {
+    "label": "SmallPairLightAssembly4-kernel",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairLightAssembly4"
+    ],
+    "exit": 0,
+    "seconds": 5.291083172996878
+  },
+  {
+    "label": "SmallPairGraphTriangle4-kernel",
+    "command": [
+      "/workspace/scratch/fed64f41ca78/lean-offload/lean-4.33.1-linux/bin/leanchecker",
+      "--verbose",
+      "D1Bound5.SmallPairGraphTriangle4"
+    ],
+    "exit": 0,
+    "seconds": 4.748530982000375
+  }
+]

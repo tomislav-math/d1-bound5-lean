@@ -7,7 +7,10 @@ The current user explicitly resumed intensive parallel formalization after the p
 # Current D1 formalization handoff
 
 MainTheorem UNPROVED. Canonical-root integration and a pinned clean-checkout build remain unverified.
-36/48 finite graph endpoints are verified working endpoints; 12 remain.
+37/48 finite graph endpoints are verified working endpoints; 11 remain.
+Graph4 new complete verified endpoint evidence: research/continuations/20261023-parallel-graphs-a/graph4/verified-evidence/audit/CLOSURE_VERIFICATION_SUMMARY.json.
+Active parallel continuation summary: research/continuations/20261023-parallel-resume/CURRENT_PROGRESS.json.
+The following historical endpoint inventory records the prior36 endpoints.
 Authoritative inventory: research/continuations/20261023-economical-graph24-assembly/CURRENT_ENDPOINT_INVENTORY.json.
 Graph24 endpoint proof state: the same folder's ENDPOINT_PROOF_STATE.json.
 

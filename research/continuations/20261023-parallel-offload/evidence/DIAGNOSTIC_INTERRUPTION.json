@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-23T11:29:49Z",
+  "command": "leanchecker --help",
+  "status": "INTERRUPTED_EXIT_130",
+  "cause": "Official leanchecker does not support --help; without an explicit module it starts a broad replay. Diagnostic process was terminated using its own tool session10496. Scoped audit session39919 also interrupted; completed row receipts preserved.",
+  "observed_memory_peak_bytes": 8585383936,
+  "observed_memory_after_termination_bytes": 5308604416,
+  "observed_anonymous_memory_after_bytes": 1145532416,
+  "oom_kill_counter": 1,
+  "oom_victim_not_identified": true,
+  "future_rule": "Always supply explicit target modules. Never invoke --help or an empty target list.",
+  "proof_sources_changed": false,
+  "proof_acceptance_claimed_from_diagnostic": false
+}
