@@ -1,0 +1,97 @@
+from pathlib import Path
+import os,stat,subprocess,hashlib,json,datetime
+R=Path("/Users/tp/Lean/D1Bound5");B=R/"research/continuations/20261023-parallel-graphs-b"
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def read(p):return json.loads(p.read_text())
+def require(ok,msg):
+ if not ok:raise RuntimeError(msg)
+def safe(p):
+ require(p==R or R in p.parents,"Escaping path")
+ cur=R
+ for n in p.relative_to(R).parts:
+  cur=cur/n;require(not cur.is_symlink(),"Symlink path "+str(cur))
+def verify(p,h):
+ safe(p);require(p.is_file() and sha(p)==h,"Hash mismatch "+str(p))
+def g(*a):return subprocess.check_output(["git","-C",str(R),*a],env={**os.environ,"GIT_OPTIONAL_LOCKS":"0"})
+start=datetime.datetime.now(datetime.timezone.utc).isoformat()
+head=g("rev-parse","HEAD").decode().strip();raw=g("ls-files","--stage","-z")
+require(head=="633360160e367b064fdfe6660b3ff7cb616fbc68","Unexpected HEAD")
+require(hashlib.sha256(raw).hexdigest()=="48312ef312016a2e3bcd6dee4c02279e1ae5f0372e95d82c2736586e85dc3d4f","Unexpected index")
+require(g("branch","--show-current").decode().strip()=="main","Wrong branch")
+require(g("rev-parse","--show-toplevel").decode().strip()==str(R),"Wrong root")
+require(not (R/".git/index.lock").exists(),"Git index lock")
+require(not g("diff","--cached","--name-only").strip(),"Staged diff not empty")
+pins={
+"canonical-cleanup-inventory-01/FINAL_MANIFEST.json":"c68e3d02eea98c09a5b878a2fa64d5ff1ebade34551e72464742d1e15feb207f",
+"canonical-cleanup-executor-01/PACKAGE_MANIFEST.json":"b229cb2ed52108706798ddbc02873a1316ae020705ba9243f8d01bfd8b6eeb30",
+"repository-verification-proposal-v2/PACKAGE_MANIFEST.json":"e1cc35542d5b26939686ba98eb3bc7c4d075aadb7997a970f8c3ef3ceb62121d",
+"final-installation-plan-01/PACKAGE_MANIFEST.json":"69f6e44b80caf791d9fe7e3f570d87e712f8b5de001c186ae2f57d68d4cb13e2",
+"final-installation-plan-02/PACKAGE_MANIFEST.json":"385b716f89dd10c41dc739f19c741e17ccd21164e4c210a142c06d74bed56e40",
+"final-installation-plan-03/PACKAGE_MANIFEST.json":"b4ab64b4441a5605683bfb8c67a947af3b8737de7c64a4825adc6441e85f1aaa",
+"final-installation-plan-04/PACKAGE_MANIFEST.json":"34bc8f9beda6fcc895c662aa97669e87d53ccd8f44230d78ea30e9b4fb61723e"}
+counts={}
+for name,h in pins.items():
+ p=B/name;verify(p,h);m=read(p)
+ for n,v in m["files"].items():
+  verify(p.parent/n,v["sha256"] if isinstance(v,dict) else v)
+  if isinstance(v,dict):require((p.parent/n).stat().st_size==v["bytes"],"Package length mismatch "+n)
+ counts[name]=len(m["files"])
+I=B/"canonical-cleanup-inventory-01";E=B/"canonical-cleanup-executor-01";V=B/"repository-verification-proposal-v2";F=B/"final-installation-plan-04"
+verify(E/"preserve_sources.py","39e139cf55c34506a7ee0ea592d4e0bf89258bec1d2b0c1e1765dbfa7b1dc455")
+plan=read(I/"PREPARED_RELOCATION_PLAN.json");inv=read(I/"CANONICAL_FILES.json")
+idx={}
+for entry in raw.split(b"\0"):
+ if not entry:continue
+ meta,n=entry.split(b"\t",1);mode,oid,stage=meta.decode().split();n=n.decode()
+ require(stage=="0","Unmerged index")
+ if n=="D1Bound5.lean" or (n.startswith("D1Bound5/") and n.endswith(".lean")):idx[n]={"mode":mode,"oid":oid}
+hs={}
+for entry in g("ls-tree","-r","-z","HEAD").split(b"\0"):
+ if not entry:continue
+ meta,n=entry.split(b"\t",1);mode,kind,oid=meta.decode().split();n=n.decode()
+ if n=="D1Bound5.lean" or (n.startswith("D1Bound5/") and n.endswith(".lean")):hs[n]={"mode":mode,"kind":kind,"oid":oid}
+require(idx==read(I/"GIT_INDEX_PRODUCTION.json") and hs==read(I/"GIT_HEAD_PRODUCTION.json"),"Tracked production maps changed")
+def names():
+ found={"D1Bound5.lean"}
+ for folder,dirs,files in os.walk(R/"D1Bound5",followlinks=False):
+  for n in dirs:require(not (Path(folder)/n).is_symlink(),"Symlink directory")
+  for n in files:
+   p=Path(folder)/n;require(p.is_file() and not p.is_symlink(),"Nonregular source");found.add(p.relative_to(R).as_posix())
+ return found
+require(names()==set(inv) and len(inv)==4759,"Production file set changed")
+def stamp(p):
+ s=p.lstat();return {"size":s.st_size,"mtime_ns":s.st_mtime_ns,"inode":s.st_ino,"mode":s.st_mode}
+total=0
+for n,row in inv.items():
+ p=R/n;safe(p);require(stamp(p)==row["stat"],"Source metadata changed "+n);verify(p,row["sha256"]);require(stamp(p)==row["stat"],"Concurrent source write "+n);total+=row["bytes"]
+for n,h in plan["inventory_snapshot"]["pins"].items():verify(R/n,h)
+verify(R/"GIT_SYNC_POLICY.md",plan["inventory_snapshot"]["policy_sha256"])
+extra={r["from"] for r in plan["planned_operations"]};require(len(extra)==353 and not(extra&set(idx)) and not(extra&set(hs)),"Extra scope invalid")
+for row in plan["planned_operations"]:
+ require(inv[row["from"]]["sha256"]==row["sha256"] and inv[row["from"]]["bytes"]==row["bytes"],"Plan source mismatch")
+destinations={"session":R/"research/continuations/20261023-final-source-preservation/session-001","archive":R/plan["destination"],"work":Path("/Users/tp/Lean/D1Bound5-final-install-work-20261023")}
+for n,p in destinations.items():require(not p.exists() and not p.is_symlink(),"Destination occupied "+n)
+verify(F/"FINAL_INSTALL_MAP.json","191fd8ae49ca50b70695dd37526aa65bab3547c89a8ee6b170c3035c8eaa52d4")
+m=read(F/"FINAL_INSTALL_MAP.json");require(len(m["rows"])==25,"Wrong install map count")
+existing=absent=0
+for row in m["rows"]:
+ src=(F if row["payload_package"]=="final-installation-plan" else V)/row["payload_path"];verify(src,row["after_sha256"])
+ dst=R/row["target"];safe(dst)
+ if row["before_sha256"] is None:
+  require(not dst.exists() and not dst.is_symlink(),"Unexpected target already exists "+row["target"]);absent+=1
+ else:verify(dst,row["before_sha256"]);existing+=1
+proof={}
+for line in (V/"records/proof-source-sha256.txt").read_text().splitlines():
+ h,n=line.split(None,1);proof[n]=h
+require(len(proof)==4406 and set(proof)==set(inv)-extra,"Selected source scope mismatch")
+for n,h in proof.items():
+ if n=="D1Bound5.lean":verify(F/n,h)
+ else:verify(R/n,h)
+for line in (V/"records/verification-history/20261023/verification-tools.before.sha256.txt").read_text().splitlines():
+ h,n=line.split(None,1);verify(R/n,h)
+require(names()==set(inv),"Source set changed during check")
+for n,row in inv.items():require(stamp(R/n)==row["stat"],"Source metadata changed during check "+n)
+require(head==g("rev-parse","HEAD").decode().strip() and raw==g("ls-files","--stage","-z"),"Git changed during readiness check")
+require(not (R/".git/index.lock").exists(),"Git lock appeared")
+out={"status":"READ_ONLY_CANONICAL_INPUT_AND_PAYLOAD_READINESS_PASS","utc_start":start,"utc_finish":datetime.datetime.now(datetime.timezone.utc).isoformat(),"head":head,"ls_files_stage_z_sha256":hashlib.sha256(raw).hexdigest(),"index_empty":True,"git_identity_stable":True,"tracked_source_maps":len(idx),"canonical_sources_full_hash_and_metadata_pass":len(inv),"canonical_bytes_hashed":total,"selected_namespace_sources_match_candidate":4405,"selected_final_scope":len(proof),"extras":len(extra),"source_set_stable":True,"configuration_pins_and_policy_pass":True,"package_manifest_sha256":pins,"package_file_counts":counts,"installation_map_sha256":sha(F/"FINAL_INSTALL_MAP.json"),"installation_payloads_pass":25,"existing_targets_before_hash_pass":existing,"new_target_paths_absent":absent,"destinations_absent":{n:str(p) for n,p in destinations.items()},"all58_historical_tools_unchanged":True,"audit_source_sha256":sha(F/"scripts/Audit.lean"),"tools_manifest_sha256":sha(F/"records/verification-tools-sha256.txt"),"preservation_invoked":False,"canonical_mutations":False,"git_mutations":False,"lean_or_checker_launched":False,"final_proof_gates_certified_by_this_check":False}
+print("BEGINREADINESS"+json.dumps(out,sort_keys=True,indent=2)+"ENDREADINESS")

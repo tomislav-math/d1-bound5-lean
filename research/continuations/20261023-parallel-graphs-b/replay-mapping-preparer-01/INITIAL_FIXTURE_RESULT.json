@@ -1,0 +1,10 @@
+{
+  "status": "INITIAL_SYNTHETIC_TEST_EXPECTATION_CORRECTED",
+  "actual_exit": 1,
+  "tests_run": 53,
+  "failures": 1,
+  "failing_test": "test_mutated_staged_body_rejected_with_failure_receipt",
+  "observed": "produce did not raise because Inputs.recheck recaptured unchanged source bytes and replaced the tampered in-memory cache before copying",
+  "resolution": "Changed fixture to assert reconstructed copied bytes equal original source bytes after cache refresh; production source not changed",
+  "not_a_production_or_proof_failure": true
+}

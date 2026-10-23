@@ -1,0 +1,61 @@
+{
+  "actual_driver_93360_exit_code": null,
+  "actual_observer_exit_code": null,
+  "assessment": "Owned observer and driver processes are absent and tool sessions unknown while files remain. Raw observer records stop without SUMMARY. No actual terminal exit is inferred from the stale RUNNING builder summary. No OOM counter increase was observed. Root owns any subsequent launch after process and lock inspection.",
+  "build_lock_nonblocking_ex_was_available_and_released": true,
+  "independent_process_scan": {
+    "matching_observer_builder_or_lean_processes": [],
+    "unreadable_or_raced_proc_entries": 0
+  },
+  "last_frozen_build_summary_accepted": 3261,
+  "last_frozen_build_summary_active": 6,
+  "last_frozen_build_summary_sha256": "2eb3cdc158a145a6615facc54097a1bb25785ed951d89aca6de7e95263f997fd",
+  "last_frozen_build_summary_status": "RUNNING",
+  "last_sample": {
+    "anon": 137392128,
+    "current": 3031117824,
+    "elapsed": 1166.432,
+    "events": {
+      "high": 0,
+      "low": 0,
+      "max": 4227926,
+      "oom": 2,
+      "oom_group_kill": 0,
+      "oom_kill": 2
+    },
+    "floor": 450838528,
+    "kernel": 306208768
+  },
+  "limitations": [
+    "Read-only observations; no process signal or build/control/source/runtime mutation.",
+    "No cleanup-cause, platform-survival, hard memory bound, or proof-acceptance claim.",
+    "Individual RSS values are not summed; cgroup floor is a sampled accounting proxy."
+  ],
+  "oom_delta_to_last_sample": {
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "peak_floor_sample": {
+    "anon": 5919772672,
+    "current": 8587649024,
+    "elapsed": 674.301,
+    "events": {
+      "high": 0,
+      "low": 0,
+      "max": 4227870,
+      "oom": 2,
+      "oom_group_kill": 0,
+      "oom_kill": 2
+    },
+    "floor": 6313111552,
+    "kernel": 392384512
+  },
+  "sample_count": 2328,
+  "schema": 1,
+  "status": "SECOND_PROCESS_SESSION_LOSS_OBSERVER_TERMINAL_EXIT_UNKNOWN",
+  "summary_file_exists": false,
+  "tool_error_observed": "write_stdin failed: Unknown process id 47362",
+  "tool_session": 47362,
+  "utc": "2026-10-23T19:05:41.599516+00:00"
+}

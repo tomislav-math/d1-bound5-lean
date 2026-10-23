@@ -1,0 +1,99 @@
+{
+  "accepted_chain": {
+    "binary_archives": "Already durable batch.tar.gz files remain at the remote proof-object root; local cleanup does not remove the remote authoritative archive.",
+    "include_ledger_metadata": [
+      "Each PREPARED.json and independently verified DURABLE_BATCH.json",
+      "Exact prior-durable hashes and cumulative accepted map",
+      "Actual arrival/verification/cleanup receipts and original transport logs"
+    ],
+    "local_root": "/tmp/d1bound5-checkpoint-batches-20261023",
+    "remote_root": "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92",
+    "separation": "Supplemental evidence never uses PREPARED_NOT_DURABLE accepted-batch schema or masquerades as accepted compilation."
+  },
+  "build_id": "2c06f4e3f2014ea78ba92a0b48e5ad92",
+  "capture_batches": [
+    {
+      "discover_regular_files_under": [
+        "/tmp/d1bound5-verification-20261023/clean-build/invocations",
+        "/tmp/d1bound5-verification-20261023/clean-build/attempts",
+        "/tmp/d1bound5-verification-20261023/evidence/tool-observations",
+        "/tmp/d1bound5-verification-20261023/evidence/resource-events"
+      ],
+      "exact_files": [
+        "/tmp/d1bound5-verification-20261023/clean-build/ORIGIN.json",
+        "/tmp/d1bound5-verification-20261023/clean-build/SUMMARY.json"
+      ],
+      "exclude_rules": [
+        "Do not recursively rearchive build/artifacts: the accepted checkpoint chain owns every accepted artifact bundle.",
+        "Do not read active attempt outputs as if terminal. Do not delete or mutate attempt/build/source/runtime files."
+      ],
+      "include_rules": [
+        "All original invocation START.json, RESUME_VALIDATION.json if generated, SUMMARY.json, including every failed/controlled-stop invocation.",
+        "All attempt receipt.json and compiler.log originals. Accepted attempts may be linked to exact accepted checkpoint batch records; unaccepted attempts and partial stage/superseded artifact bytes must be retained separately, never treated as accepted.",
+        "Capture top-level mutable SUMMARY only as a uniquely named terminal snapshot; retain source path, capture time and original SHA.",
+        "Capture exact selected launch invocation, matching resource hints and control bytes, original root launch/review and observer invocation/script; link before/after control snapshots when they exist.",
+        "Original raw tool-return JSON, including truncation metadata, and original resource/OOM samples. Missing prior raw driver chunks are explicitly reported as missing, never reconstructed."
+      ],
+      "label": "build-terminal-NNN",
+      "when": "After a particular invocation has terminated and all its workers have drained; preserve each failed or controlled-stop invocation immediately, not only the final success."
+    },
+    {
+      "additional_originals": [
+        "Actual launch prerequisite record, actual terminal tool observations and optional resource-observer outputs, actual freeze/dry-run return records, audit/helper/harness references by durable exact SHA.",
+        "All failed audit attempts in their separate output directories, if any; never overwrite or omit a failure in favor of a later success.",
+        "Every byte of each large INPUT_FREEZE/RECOVERY_FREEZE body must be preserved; summaries alone are insufficient."
+      ],
+      "exact_files": [
+        "/tmp/d1bound5-verification-20261023/evidence/clean118/SUMMARY.json",
+        "/tmp/d1bound5-verification-20261023/evidence/clean118/INPUT_FREEZE.json",
+        "/tmp/d1bound5-verification-20261023/evidence/clean118/FinalIntegrationAudit.log",
+        "/tmp/d1bound5-verification-20261023/evidence/clean118/FinalTargetAudit.log",
+        "/tmp/d1bound5-verification-20261023/evidence/broad/SUMMARY.json",
+        "/tmp/d1bound5-verification-20261023/evidence/broad/EVIDENCE_FREEZE.json",
+        "/tmp/d1bound5-verification-20261023/evidence/broad/Audit.log",
+        "/tmp/d1bound5-verification-20261023/evidence/final-kernel/RECOVERY_FREEZE.json"
+      ],
+      "label": "audit-and-freeze-before-fresh-NNN",
+      "launch_condition": "Root verifies all accepted artifact batches are durably confirmed and this complete pre-fresh evidence batch is remotely hash-verified; archival status itself is not a proof gate.",
+      "pinned_preparation_files": [
+        "/workspace/scratch/fed64f41ca78/recovery-20261023/evidence-path-revision-02/CLEAN118_INVOCATION.json",
+        "/workspace/scratch/fed64f41ca78/recovery-20261023/evidence-path-revision-02/BROAD_INVOCATION.json",
+        "/workspace/scratch/fed64f41ca78/recovery-20261023/evidence-path-revision-02/RECOVERY_CONFIGURATION.json",
+        "/workspace/scratch/fed64f41ca78/recovery-20261023/evidence-path-revision-02/EXPECTED_AUDIT_GATE_BINDINGS.json"
+      ],
+      "when": "After full4406 build and exact118/broad audits have actually terminated and official final freeze has been generated; before a long official fresh run."
+    },
+    {
+      "additional_originals": [
+        "Exact actual execute invocation and raw terminal tool-return JSON, pre/post resource samples, final peer reviews if created.",
+        "If interruption prevented a file from being generated, retain the existing RUNNING/partial files and actual interruption exit with an explicit missing-file list; never synthesize a successful terminal result."
+      ],
+      "exact_files": [
+        "/tmp/d1bound5-verification-20261023/evidence/final-kernel/run/RESULT.json",
+        "/tmp/d1bound5-verification-20261023/evidence/final-kernel/run/00000-D1Bound5.log",
+        "/tmp/d1bound5-verification-20261023/evidence/final-kernel/run/00000-D1Bound5.memory.json"
+      ],
+      "label": "fresh-terminal-NNN",
+      "optional_during_run": "Only root-authorized immutable log-prefix snapshots with exact byte length/hash and explicit PARTIAL_NOT_TERMINAL status; never present a prefix as a complete checker log.",
+      "when": "After the official checker and supervisor have terminated, whichever result occurred."
+    }
+  ],
+  "capture_safety": [
+    "Use an explicit original-file inventory with regular-file/no-symlink checks, unique absent destination, and pre/post source stat+SHA checks. Stop if a supposedly terminal input changes.",
+    "Record all paths, byte lengths and SHA256 values. Losslessly reconstruct and verify split originals at destination before recording REMOTE_BYTES_VERIFIED.",
+    "Preserve original bytes; no JSON reserialization of evidence. Inventory policy and split metadata are new records, clearly identified.",
+    "No Lean/checker/Git/source/runtime mutation is performed by evidence capture. No existing remote file is overwritten.",
+    "Every unexpected file in the named terminal evidence/attempt directories is reported for explicit inclusion or reasoned exclusion; no silent deletion."
+  ],
+  "future_paths": "New retry/control/observer paths are added by explicit selected launch records, not guessed or silently collected from unrelated directories.",
+  "identity_hash": "8f423712a4950a66821d8a82716de9c6e9cbc83ad175d3d54ff8ddf1d47eda39",
+  "known_immutable_failure_packages": {
+    "research/continuations/20261023-parallel-integration/recovery-full-resume-failure-01": "905b4e7a38d150f868cad156662accd0c5304ff44ff4c9a12f33f8343f90b30a",
+    "research/continuations/20261023-parallel-integration/recovery-prefix-resource-proposal-01": "868f30698bb8f53317e36d47c47c3fffe67a33a925e112eeeb73688d4bda838c"
+  },
+  "main_theorem_complete": false,
+  "schema": 1,
+  "source_commit": "b4c81242dd9c9cee6966a1e08bce0f94c66f1491",
+  "source_tree": "ee490da49ba30447d92745140f48c1ae3c34f263",
+  "status": "PREPARED_SCOPE_ONLY_NO_CAPTURE_NO_ACCEPTANCE"
+}

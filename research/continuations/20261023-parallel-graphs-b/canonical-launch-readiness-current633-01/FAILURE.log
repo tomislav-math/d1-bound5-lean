@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<stdin>", line 13, in <module>
+  File "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-graphs-b/canonical-launch-readiness-current633-01/READ_ONLY_COMMAND.py.txt", line 35, in <module>
+    for n,v in m["files"].items():verify(p.parent/n,v)
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-graphs-b/canonical-launch-readiness-current633-01/READ_ONLY_COMMAND.py.txt", line 14, in verify
+    safe(p);require(p.is_file() and sha(p)==h,"Hash mismatch "+str(p))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-graphs-b/canonical-launch-readiness-current633-01/READ_ONLY_COMMAND.py.txt", line 7, in require
+    if not ok:raise RuntimeError(msg)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Hash mismatch /Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-graphs-b/final-installation-plan-03/D1Bound5.lean

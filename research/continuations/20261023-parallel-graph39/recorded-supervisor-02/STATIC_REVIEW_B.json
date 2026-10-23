@@ -1,0 +1,58 @@
+{
+  "canonical_or_git_mutation": false,
+  "findings": [],
+  "independently_verified": {
+    "modified_existing_functions": [
+      "run"
+    ],
+    "new_functions": [
+      "observe_child_host",
+      "observe_self_host",
+      "proc_identity",
+      "proc_status"
+    ],
+    "scope": "Optional process-identity observations and explicit namespace-local PID field names only; no argv, cwd, subprocess launch, wait, resource-control, or proof-acceptance change.",
+    "unchanged_call_ast": {
+      "child.wait": true,
+      "subprocess.Popen": true
+    }
+  },
+  "inputs": {
+    "AST_SCOPE_CHECK.json": {
+      "bytes": 618,
+      "sha256": "a253cf6569c6ca763f017d8fe115e46f302f9428c3750ff7366476d750b1caee"
+    },
+    "README.md": {
+      "bytes": 2965,
+      "sha256": "538a09b29c66f817eea9523aa62bcbcde55ed163e79534da3d49d82e33d54868"
+    },
+    "SOURCE.diff": {
+      "bytes": 5973,
+      "sha256": "a2760cae04d3fdacfc09c16d6b863606a53b68805b9b36adf602f37f7bec045f"
+    },
+    "original_supervisor.py": {
+      "bytes": 3801,
+      "sha256": "4863dbab5d2a1f6c9415d89c6da1c8e9f2dcbefa660fe92bcf93526ffa721a79"
+    },
+    "recorded_supervisor.py": {
+      "bytes": 7020,
+      "sha256": "2cbdfc01bb5df99e21038d5cf8b5dfd737a4947f7abfc8b4583315e6b71aad49"
+    }
+  },
+  "limits": [
+    "Read-only static review; no process launched and no real proc traversal or integration fixture duplication.",
+    "Inherited output-parent fsync, postlaunch exception, in-memory final log and platform-survival limitations are accurately documented.",
+    "No proof, compiler, checker, source-build, or release acceptance is inferred."
+  ],
+  "review_notes": [
+    "The stat parser isolates comm using its first opening and final closing delimiter, then indexes PPid and starttime at the documented stat offsets; it does not split a potentially spaced comm field.",
+    "A child is associated with a mounted proc entry only after unique PPid, NSpid depth/local PID, namespace identity, stat/status consistency and stable repeated stat checks. Absence, ambiguity, races and access failures produce UNAVAILABLE, not guessed host IDs.",
+    "Recorded host identity is an observation, not a guarantee the child remains alive; Popen.wait remains authoritative for the actual process return.",
+    "Original supervisor and existing build evidence remain untouched. Any consumer of old pid field names must use the revision02 explicit field names; README makes this format change clear."
+  ],
+  "reviewer": "graph_inventory",
+  "runtime_or_driver_launched": false,
+  "schema": 1,
+  "status": "STATIC_REVIEW_PASS_PREPARATION_ONLY",
+  "utc": "2026-10-23T19:16:19.757610+00:00"
+}

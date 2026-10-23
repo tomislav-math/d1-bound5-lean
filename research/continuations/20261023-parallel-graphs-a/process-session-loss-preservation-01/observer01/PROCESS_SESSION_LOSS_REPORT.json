@@ -1,0 +1,151 @@
+{
+  "actual_driver_92469_exit_code": null,
+  "actual_observer_exit_code": null,
+  "assessment": "Raw observations stop without a successful observer SUMMARY. Last periodic process snapshot already saw no matching owned Lean child while old builder SUMMARY still reported1973/7active. This supports process disappearance with stale summary; it does not establish the cleanup cause or any terminal exit code. Root separately observed free build lock and resumed unchanged identity.",
+  "current_exact_observer_process_matches": [],
+  "files_retained": true,
+  "last_sample": {
+    "anon": 130920448,
+    "build": {
+      "active": [
+        "D1Bound5.SmallPairLightData46Right",
+        "D1Bound5.SmallPairLightData47",
+        "D1Bound5.SmallPairLightData48Left",
+        "D1Bound5.SmallPairLightData48Right",
+        "D1Bound5.SmallPairLightData4LeftCachedChunk00",
+        "D1Bound5.SmallPairLightData4LeftCachedChunk01",
+        "D1Bound5.SmallPairLightData4LeftCachedChunk02"
+      ],
+      "completed_modules": 1973,
+      "failed": [],
+      "invocation": "b93538c3f6114869b1805a3d66079cf0",
+      "status": "RUNNING"
+    },
+    "control_sha256": "7548d1d79080871eb48fec2e7e4f985bc292ba10ce2b81162ad4622aed613b6d",
+    "current": 3301408768,
+    "elapsed": 506.109,
+    "events": {
+      "high": 0,
+      "low": 0,
+      "max": 4215602,
+      "oom": 2,
+      "oom_group_kill": 0,
+      "oom_kill": 2
+    },
+    "floor": 457740288,
+    "kernel": 297115648,
+    "owned_lean_memory": []
+  },
+  "limitations": [
+    "No signal or build/control/source mutation by observer/reviewer.",
+    "No proof acceptance, actual old process exit, or guarantee about future process retention.",
+    "The previous workspace-loss incident remains separate and unchanged."
+  ],
+  "oom_delta_to_last_sample": {
+    "oom": 0,
+    "oom_group_kill": 0,
+    "oom_kill": 0
+  },
+  "peak_floor_sample": {
+    "anon": 5483868160,
+    "build": {
+      "active": [
+        "D1Bound5.SmallPairLightAdaptiveLeft40_000Part03",
+        "D1Bound5.SmallPairLightAdaptiveLeft40_001Part00",
+        "D1Bound5.SmallPairLightAdaptiveLeft40_001Part01",
+        "D1Bound5.SmallPairLightAdaptiveRight40_000Part00",
+        "D1Bound5.SmallPairLightAdaptiveRight40_000Part01",
+        "D1Bound5.SmallPairLightAdaptiveRight40_000Part02",
+        "D1Bound5.SmallPairLightData46Left"
+      ],
+      "completed_modules": 1891,
+      "failed": [],
+      "invocation": "b93538c3f6114869b1805a3d66079cf0",
+      "status": "RUNNING"
+    },
+    "control_sha256": "7548d1d79080871eb48fec2e7e4f985bc292ba10ce2b81162ad4622aed613b6d",
+    "current": 8587673600,
+    "elapsed": 435.933,
+    "events": {
+      "high": 0,
+      "low": 0,
+      "max": 4214686,
+      "oom": 2,
+      "oom_group_kill": 0,
+      "oom_kill": 2
+    },
+    "floor": 5894619136,
+    "kernel": 410480640,
+    "owned_lean_memory": [
+      {
+        "VmHWM": 1441071104,
+        "VmPeak": 5097205760,
+        "VmRSS": 1438556160,
+        "VmSize": 5090906112,
+        "VmSwap": 0,
+        "pid": 153736,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightAdaptiveRight40_000Part00.lean"
+      },
+      {
+        "VmHWM": 1415225344,
+        "VmPeak": 5097205760,
+        "VmRSS": 1415225344,
+        "VmSize": 5090906112,
+        "VmSwap": 0,
+        "pid": 153740,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightAdaptiveRight40_000Part01.lean"
+      },
+      {
+        "VmHWM": 1387409408,
+        "VmPeak": 5097205760,
+        "VmRSS": 1385431040,
+        "VmSize": 5090906112,
+        "VmSwap": 0,
+        "pid": 153744,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightAdaptiveRight40_000Part02.lean"
+      },
+      {
+        "VmHWM": 1115004928,
+        "VmPeak": 5097205760,
+        "VmRSS": 1114411008,
+        "VmSize": 5090906112,
+        "VmSwap": 0,
+        "pid": 153408,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightAdaptiveLeft40_000Part03.lean"
+      },
+      {
+        "VmHWM": 1092837376,
+        "VmPeak": 5097205760,
+        "VmRSS": 1092837376,
+        "VmSize": 5090906112,
+        "VmSwap": 0,
+        "pid": 153427,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightAdaptiveLeft40_001Part00.lean"
+      },
+      {
+        "VmHWM": 1076457472,
+        "VmPeak": 5097205760,
+        "VmRSS": 1076183040,
+        "VmSize": 5090906112,
+        "VmSwap": 0,
+        "pid": 153431,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightAdaptiveLeft40_001Part01.lean"
+      },
+      {
+        "VmHWM": 746246144,
+        "VmPeak": 5066764288,
+        "VmRSS": 745889792,
+        "VmSize": 5060464640,
+        "VmSwap": 0,
+        "pid": 152724,
+        "source": "/workspace/scratch/fed64f41ca78/recovery-20261023/source/D1Bound5/SmallPairLightData46Left.lean"
+      }
+    ]
+  },
+  "sample_count": 1011,
+  "samples_mtime_utc": "2026-10-23T18:32:59.110966+00:00",
+  "status": "OBSERVER_PROCESS_SESSION_LOST_TERMINAL_EXIT_UNKNOWN",
+  "tool_error_observed": "write_stdin failed: Unknown process id 72015",
+  "tool_session": 72015,
+  "utc": "2026-10-23T18:37:53.071888+00:00"
+}

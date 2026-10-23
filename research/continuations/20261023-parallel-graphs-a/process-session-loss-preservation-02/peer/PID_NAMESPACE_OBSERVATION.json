@@ -1,0 +1,42 @@
+{
+  "actions": "No running process interrupted, new supervisor revision selected, build/control/source mutation or Lean launch by reviewer.",
+  "assessment": "OS getpid/Popen child PID are namespace-local while mounted /proc exposes host IDs in this environment. Direct /proc/<Popen.pid>/stat may therefore describe an unrelated host process. Recorded child PID/start ticks are not sufficient for cross-namespace ownership. Exact argv plus NSpid and host entry start ticks are needed for independent process inspection.",
+  "child_record": {
+    "pid": 5,
+    "proc_start_ticks": "147",
+    "spec_sha256": "523d6257bfc61316a40ea02707eedd0799667014d8b65081da4d80c4ae425ed6",
+    "utc": "2026-10-23T19:06:26.431930+00:00"
+  },
+  "child_record_sha256": "d542957fb975df13fec12f3b77e6ba45d4a6a28a919265852d227cc4c13312da",
+  "current_observer_os_getpid": 5,
+  "current_proc_self_stat_pid": "165783",
+  "effect_on_actual_return": "Popen.wait still waits the real child and remains valid for its actual exit status. No acceptance inference from PID metadata or missing result.",
+  "host_proc_matches": [
+    {
+      "argv": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /tmp/d1bound5-recorded-supervisor-20261023.py /tmp/d1bound5-process-session-loss-02-20261023/RECORDED_BUILD_SPEC.json 523d6257bfc61316a40ea02707eedd0799667014d8b65081da4d80c4ae425ed6 ",
+      "namespace_pid_line": "NSpid:\t164971\t2",
+      "proc_entry": "164971",
+      "start_ticks": "4442595",
+      "stat_pid": "164971"
+    },
+    {
+      "argv": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /tmp/d1bound5-second-loss-recovery-20261023/authoritative-workspace/lean-offload/final-sweep-runner-optimization/fresh_project_build.py run --source-root /workspace/scratch/fed64f41ca78/recovery-20261023/source --build-dir /tmp/d1bound5-verification-20261023/clean-build --source-lock /tmp/d1bound5-second-loss-recovery-20261023/authoritative-workspace/recovery-20261023/restored-tools/original-identities/CLEAN_SOURCE_LOCK.json --source-lock-sha256 b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c --runtime-lock /tmp/d1bound5-second-loss-recovery-20261023/authoritative-workspace/recovery-20261023/runtime/RECOVERY_RUNTIME_LOCK_V2.json --runtime-lock-sha256 5c83f7bd62e806af5aca7f63dde0f124ca04cea9dee5028744f8e606826b16fc --expected-modules 4406 --jobs 7 --max-mathlib-jobs 5 --memory-reserve-mib 1024 --timeout 1200 --hints /tmp/d1bound5-operational-prefix-v3-20261023/RESOURCE_HINTS_V3.json --control /tmp/d1bound5-second-loss-recovery-20261023/CONTROL_RESUME.json --resume ",
+      "namespace_pid_line": "NSpid:\t164974\t5",
+      "proc_entry": "164974",
+      "start_ticks": "4442598",
+      "stat_pid": "164974"
+    },
+    {
+      "argv": "python /tmp/d1bound5-second-workspace-incident-graph39-20261023/observe_resume_memory03.py ",
+      "namespace_pid_line": "NSpid:\t165022\t2",
+      "proc_entry": "165022",
+      "start_ticks": "4443979",
+      "stat_pid": "165022"
+    }
+  ],
+  "old_observer_absence_claim_boundary": "Prior empty /proc matching scans are observations limited to their accessible view; combined independent build-lock availability and missing terminal record support safe parent-controlled retry, not an inferred exit code.",
+  "proc_namespace_link": "pid:[4026532417]",
+  "schema": 1,
+  "status": "OBSERVED_PID_NAMESPACE_METADATA_LIMITATION",
+  "utc": "2026-10-23T19:08:25.866704+00:00"
+}

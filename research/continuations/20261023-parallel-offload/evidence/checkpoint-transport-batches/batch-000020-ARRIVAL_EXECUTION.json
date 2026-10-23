@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "batch_number": 20,
+  "root_selection_sha256": "bd9bdc7163895af58ef2d4ebc58e0d4352f4f217f7faa886ae92df6d404c5c9b",
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/checkpoint-transport-03/transport.py",
+        "assemble",
+        "--plan",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-offload/evidence/checkpoint-transport-batches/batch-000020-TRANSPORT_PLAN.json",
+        "--plan-sha256",
+        "e293585a9e2ecdb02670f09109520e13d89105ca0bd8be9048c57fdd7ce1b9a0"
+      ],
+      "returncode": 0,
+      "seconds": 0.067792833,
+      "stdout": "{\"destination\": \"/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000020\", \"files\": {\"PREPARED.json\": {\"bytes\": 1394238, \"sha256\": \"7733e0367f4e057e102fc150ba5b9f6dfe11f5d9e0c637e23263dd49ba7141e8\"}, \"batch.tar.xz\": {\"bytes\": 3608136, \"sha256\": \"f7770d1ed72850f95c8c8fb938ae0d8ad1ca9577736647e3a1f3f32b4eb6de5f\"}}, \"required_next_step\": \"Independent reviewed exporter verify-arrival with root-pinned hashes and prior durable chain.\", \"status\": \"EXACT_BYTES_ARRIVED_NOT_VERIFIED_NOT_DURABLE\", \"transport_plan_sha256\": \"e293585a9e2ecdb02670f09109520e13d89105ca0bd8be9048c57fdd7ce1b9a0\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/tp/Lean/D1Bound5/research/continuations/20261023-parallel-target-audit/incremental-checkpoint-exporter-02/checkpoint_export.py",
+        "verify-arrival",
+        "--archive",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000020/batch.tar.xz",
+        "--archive-sha256",
+        "f7770d1ed72850f95c8c8fb938ae0d8ad1ca9577736647e3a1f3f32b4eb6de5f",
+        "--prepared",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000020/PREPARED.json",
+        "--prepared-sha256",
+        "7733e0367f4e057e102fc150ba5b9f6dfe11f5d9e0c637e23263dd49ba7141e8",
+        "--destination",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000020",
+        "--previous",
+        "/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000019/DURABLE_BATCH.json",
+        "--previous-sha256",
+        "593e233749b5689e4a309b117590e233d07623ca4169eff7b6bc149bc2550e4f"
+      ],
+      "returncode": 0,
+      "seconds": 0.39094625,
+      "stdout": "{\"cumulative_modules\": 1947, \"new_modules\": 100, \"path\": \"/Users/tp/Lean/D1Bound5ProofObjects/recovery-2c06f4e3f2014ea78ba92a0b48e5ad92/batch-000020/DURABLE_BATCH.json\", \"sha256\": \"b6ff2834cf13b07f9ac83276f07f6ca264b77958cc7204bb0ffa5d3656dee9b6\", \"status\": \"DURABLE_ACCEPTED_SNAPSHOT\"}\n",
+      "stderr": ""
+    }
+  ],
+  "all_returncodes_zero": true
+}

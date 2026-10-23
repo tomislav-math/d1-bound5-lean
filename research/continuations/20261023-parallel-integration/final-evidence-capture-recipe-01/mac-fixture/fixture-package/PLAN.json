@@ -1,0 +1,68 @@
+{
+  "files": [
+    {
+      "bytes": 42,
+      "logical": "small.json",
+      "sha256": "39ab0ffab0325ba2f2d9789ad4dc3a32198a8d73458f514d31ac430ed2173985",
+      "source": "/tmp/d1bound5-final-evidence-capture-20261023/cross-machine-fixture/synthetic-inputs/small.json",
+      "status": "COMPLETE_ORIGINAL"
+    },
+    {
+      "bytes": 160,
+      "logical": "binary.bin",
+      "sha256": "e4d17aed8dadbfc85bf8536277c25db807899218043bb871b44568ab5515ab94",
+      "source": "/tmp/d1bound5-final-evidence-capture-20261023/cross-machine-fixture/synthetic-inputs/binary.bin",
+      "status": "COMPLETE_ORIGINAL"
+    },
+    {
+      "bytes": 0,
+      "logical": "empty.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source": "/tmp/d1bound5-final-evidence-capture-20261023/cross-machine-fixture/synthetic-inputs/empty.log",
+      "status": "COMPLETE_ORIGINAL"
+    },
+    {
+      "bytes": 6000000,
+      "logical": "large.json",
+      "sha256": "c2df91ebc59d782f2839526846be270634701f43763fe65394e3687480a78fe3",
+      "source": "/tmp/d1bound5-final-evidence-capture-20261023/cross-machine-fixture/synthetic-inputs/large.json",
+      "status": "COMPLETE_ORIGINAL"
+    }
+  ],
+  "inventories": [
+    {
+      "entries": [
+        {
+          "disposition": "include",
+          "path": "small.json",
+          "reason": "synthetic fixture"
+        },
+        {
+          "disposition": "include",
+          "path": "binary.bin",
+          "reason": "synthetic fixture"
+        },
+        {
+          "disposition": "include",
+          "path": "empty.log",
+          "reason": "synthetic fixture"
+        },
+        {
+          "disposition": "include",
+          "path": "large.json",
+          "reason": "synthetic fixture"
+        }
+      ],
+      "root": "/tmp/d1bound5-final-evidence-capture-20261023/cross-machine-fixture/synthetic-inputs"
+    }
+  ],
+  "label": "synthetic-independent-mac-roundtrip",
+  "missing": [
+    {
+      "reason": "synthetic missing evidence, never fabricated",
+      "source": "/tmp/d1bound5-final-evidence-capture-20261023/cross-machine-fixture/synthetic-inputs/never-produced/RESULT.json"
+    }
+  ],
+  "phase": 2,
+  "schema": 1
+}

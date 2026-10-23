@@ -1,0 +1,445 @@
+--- final_kernel_e04.py
++++ final_kernel_bridge.py
+@@ -179,7 +179,7 @@
+     return result
+ 
+ 
+-def clean_lock_evidence(root, project, build_root, env, order, sources, manifest, source_lock_path, runtime_lock_path):
++def clean_lock_evidence(root, project, build_root, env, order, sources, manifest, source_lock_path, runtime_lock_path, compile_project=None):
+     origin = json.loads((build_root.parent / 'ORIGIN.json').read_text())
+     identity = origin['identity']
+     source_lock = json.loads(source_lock_path.read_text())
+@@ -212,7 +212,7 @@
+         pins[str(path)] = expected
+     toolchain = root / 'lean-4.33.1-linux'
+     compiler = str(toolchain / 'bin/lean')
+-    arguments = ['-j1', '-DautoImplicit=false', '-R', str(project)]
++    arguments = ['-j1', '-DautoImplicit=false', '-R', str(project if compile_project is None else compile_project)]
+     if (runtime_lock['lean'] != compiler or runtime_lock['toolchain'] != str(toolchain)
+             or identity['lean_arguments'] != arguments):
+         raise ValueError('Clean build compiler/toolchain/options differ from reviewed Lean configuration')
+@@ -238,7 +238,7 @@
+     return pins, compiler, arguments
+ 
+ 
+-def clean_build_evidence(project, build_root, env, order, sources, inventory, manifest, compiler, lean_arguments):
++def clean_build_evidence(project, build_root, env, order, sources, inventory, manifest, compiler, lean_arguments, compile_project=None):
+     """Validate and pin the portable DAG runner's completed clean receipts.
+ 
+     This is provenance validation, never proof checking. Only the upstream
+@@ -252,7 +252,8 @@
+     digest = hashlib.sha256(json.dumps(identity, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
+     if origin['identity_hash'] != digest or origin['initial_artifact_inventory'] != []:
+         raise ValueError('Clean build identity/empty-origin evidence is invalid')
+-    if (Path(identity['source_root']).resolve() != project or
++    if ((Path(identity['source_root']).resolve() != project if compile_project is None else
++         identity['source_root'] != str(compile_project)) or
+             Path(identity['build_dir']).resolve() != build or build_root.name != 'artifacts'):
+         raise ValueError('Clean build origin paths differ from selected source/artifacts')
+     if approved_environment(identity['environment']) != approved_environment(env):
+@@ -280,13 +281,14 @@
+         if receipt_hash != index['receipt_sha256']:
+             raise ValueError('Clean receipt hash differs: ' + name)
+         row = json.loads(receipt.read_text())
+-        source = str(project / (name.replace('.', '/') + '.lean'))
++        source = str((project if compile_project is None else compile_project) / (name.replace('.', '/') + '.lean'))
++        current_source = str(project / (name.replace('.', '/') + '.lean'))
+         output = str(receipt.parent / 'stage' / (name.replace('.', '/') + '.olean'))
+         if row['command'] != [compiler, *lean_arguments, '-o', output, source]:
+             raise ValueError('Clean receipt compiler command differs from the reviewed recipe: ' + name)
+         if (row['status'] != 'COMPILE_PASS' or row['exit_code'] != 0 or row['module'] != name
+                 or row['build_id'] != origin['build_id'] or row['identity_hash'] != digest
+-                or row['source_sha256'] != sources[source]):
++                or row['source_sha256'] != sources[current_source]):
+             raise ValueError('Clean module receipt is not accepted for this source/build: ' + name)
+         expected_deps = {n: accepted[n] for n in dependencies[name]}
+         if row['dependencies'] != expected_deps:
+@@ -307,9 +309,287 @@
+             raise ValueError('Clean compiler log changed: ' + name)
+         pins.update({str(pointer): sha(pointer), str(receipt): receipt_hash, str(log): row['log_sha256']})
+         accepted[name] = {'receipt_sha256': receipt_hash, 'artifact_bundle': bundle}
+-    return pins, {'build_id': origin['build_id'], 'identity_hash': digest,
++    bridge_fields = {} if compile_project is None else {
++        'accepted_receipt_chain_sha256': bridge_digest(accepted),
++        'artifact_bundles_sha256': bridge_digest({p: h for row in accepted.values() for p, h in row['artifact_bundle'].items()})}
++    return pins, {**bridge_fields, 'build_id': origin['build_id'], 'identity_hash': digest,
+                   'status': summary['status'], 'module_count': len(order),
+                   'scope': 'Exact source/artifact/dependency receipts from initially empty project output; external runtime caches retained'}
++
++
++# Optional explicit source relocation. These checks bind historical evidence;
++# they do not execute Lean, repeat an axiom audit, or manufacture proof acceptance.
++BRIDGE_COMMIT = 'b4c81242dd9c9cee6966a1e08bce0f94c66f1491'
++BRIDGE_TREE = 'ee490da49ba30447d92745140f48c1ae3c34f263'
++BRIDGE_SOURCE_LOCK = 'b3be4592f1c30e40abb6677cb5319d0420538adb20f6d05e743205be19d59d3c'
++BRIDGE_COUNT = 4406
++BRIDGE_HARNESSES = {
++    'scripts/verification/FinalIntegrationAudit.lean': '005f05312ef81f9a961e1c8adefb00b98e514cca3794adcc438118e4edf5d1ac',
++    'scripts/verification/FinalTargetAudit.lean': 'b21a0deae156faabd97ad38e87920a5f9f16700cad843c3e38e040c90aaa61d7'}
++BRIDGE_BROAD_SHA = '0e4779bb1f294d3588dd409e9afe616855346da52172596efabd9adca594537f'
++BRIDGE_POLICY_SHA = '46b5b3cdc7a4228a53a05b7e62cb0e549ad212b67282fbd2c0fa4cce97ac8b9b'
++BRIDGE_POLICY_MANIFEST_SHA = 'fa84386224dedc9b6a9a4fa76679b7bdaf1250cf1927e0ae59c170bc4eee9550'
++
++
++def bridge_require(condition, message):
++    if not condition:
++        raise ValueError('Relocation bridge: ' + message)
++
++
++def bridge_digest(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
++
++
++def bridge_path(value, live=True):
++    p = Path(value)
++    bridge_require(isinstance(value, str) and p.is_absolute() and str(p) == value and
++                   '..' not in p.parts and '.' not in p.parts, 'noncanonical absolute path')
++    if live:
++        bridge_require(p.resolve(strict=True) == p, 'symlink/alias path: ' + value)
++        for parent in (p, *p.parents):
++            bridge_require(not parent.is_symlink(), 'symlink path component: ' + value)
++    return p
++
++
++def bridge_git_storage(project):
++    # A retained clone must not consult another workspace, object store, or
++    # configuration include. Reject indirect/partial forms rather than repair
++    # them. This only inspects metadata and never invokes Git writes/network.
++    gitdir = bridge_path(str(project/'.git'))
++    bridge_require(gitdir.is_dir(), 'Standalone Git directory is required')
++    for p in gitdir.rglob('*'):
++        bridge_require(not p.is_symlink() and (p.is_dir() or p.is_file()), 'Nonregular/symlink Git metadata')
++        bridge_require(not p.name.endswith('.promisor'), 'Promisor Git object store is forbidden')
++    for name in ('commondir', 'gitdir', 'shallow', 'config.worktree'):
++        bridge_require(not (gitdir/name).exists(), 'Indirect/shallow Git metadata is forbidden: ' + name)
++    for name in ('objects/info/alternates', 'objects/info/http-alternates'):
++        p = gitdir/name
++        bridge_require(not p.exists() or not p.read_bytes().strip(), 'External Git object alternates are forbidden')
++    config = (gitdir/'config').read_text()
++    bridge_require(re.search(r'^\s*\[\s*include', config, re.I | re.M) is None and
++                   re.search(r'^\s*(?:partialclone|promisor)\s*(?:=|[;#]|$)', config, re.I | re.M) is None,
++                   'External include/partial/promisor Git configuration is forbidden')
++
++
++def bridge_git(project, expected):
++    bridge_git_storage(project)
++    # Read only. Never rely on status alone: assume-unchanged/index flags cannot
++    # hide modified blobs, and ignored/untracked payloads are inventoried below.
++    git_env = {'PATH': '/usr/bin:/bin', 'GIT_CONFIG_NOSYSTEM': '1',
++               'GIT_CONFIG_GLOBAL': '/dev/null', 'GIT_OPTIONAL_LOCKS': '0'}
++    def git(*words):
++        return subprocess.check_output(['git', '--no-optional-locks', '-c', 'core.fsmonitor=false',
++                                        '-C', str(project), *words], env=git_env)
++    bridge_require(git('rev-parse', '--show-toplevel').decode().strip() == str(project), 'Git top-level mismatch')
++    for flag in ('--absolute-git-dir', '--git-common-dir'):
++        selected = Path(git('rev-parse', flag).decode().strip())
++        if not selected.is_absolute(): selected = project/selected
++        bridge_require(selected.resolve(strict=True) == project/'.git', 'External Git metadata directory')
++    bridge_require(git('rev-parse', 'HEAD').decode().strip() == BRIDGE_COMMIT, 'Git candidate mismatch')
++    bridge_require(git('rev-parse', 'HEAD^{tree}').decode().strip() == BRIDGE_TREE, 'Git tree mismatch')
++    bridge_require(git('status', '--porcelain=v1', '--untracked-files=all') == b'', 'Git worktree/index is not clean')
++    bridge_require(git('rev-parse', '--show-object-format').decode().strip() == 'sha1', 'Unexpected Git object format')
++    entries = {}
++    for raw in git('ls-tree', '-r', '-z', 'HEAD').split(b'\0'):
++        if not raw:
++            continue
++        head, name = raw.split(b'\t', 1)
++        mode, kind, oid = head.decode().split()
++        relative = name.decode()
++        bridge_require(mode in ('100644', '100755') and kind == 'blob', 'Nonregular tracked path')
++        bridge_require(relative not in entries, 'Duplicate Git path')
++        entries[relative] = oid
++    bridge_require(set(entries) == set(expected), 'Git tracked scope differs from exact source/config/harness set')
++    actual = {}
++    dirs = {}
++    for parent, dirnames, filenames in os.walk(project, followlinks=False):
++        parent = Path(parent)
++        if parent == project:
++            bridge_require('.git' in dirnames and (project/'.git').is_dir() and not (project/'.git').is_symlink(), 'A regular local Git directory is required')
++            dirnames.remove('.git')
++        for name in dirnames:
++            bridge_require(not (parent/name).is_symlink(), 'Symlink directory in replay source')
++        st = parent.stat()
++        dirs[str(parent.relative_to(project))] = [st.st_dev, st.st_ino, st.st_mtime_ns, st.st_ctime_ns]
++        for name in filenames:
++            path = bridge_path(str(parent/name))
++            bridge_require(path.is_file(), 'Nonregular replay source file')
++            relative = str(path.relative_to(project))
++            body = path.read_bytes()
++            actual[relative] = hashlib.sha256(body).hexdigest()
++            if relative in entries:
++                blob = hashlib.sha1(b'blob ' + str(len(body)).encode() + b'\0' + body).hexdigest()
++                bridge_require(blob == entries[relative], 'Actual bytes differ from committed blob: ' + relative)
++    bridge_require(actual == expected, 'Extra/missing/changed replay source/config/harness file')
++    bridge_require(git('rev-parse', 'HEAD').decode().strip() == BRIDGE_COMMIT and
++                   git('rev-parse', 'HEAD^{tree}').decode().strip() == BRIDGE_TREE and
++                   git('status', '--porcelain=v1', '--untracked-files=all') == b'', 'Git identity changed during scan')
++    bridge_git_storage(project)
++    return {'commit': BRIDGE_COMMIT, 'tree': BRIDGE_TREE, 'object_format': 'sha1',
++            'clean_worktree': True, 'selected_committed_blobs': entries}, dirs
++
++
++def bridge_load(path, expected_sha, project, build_root, root, source_lock_path, runtime_lock_path, manifest_path):
++    bridge_require(re.fullmatch('[0-9a-f]{64}', expected_sha or '') is not None, 'Missing explicit reviewed manifest SHA256')
++    path = bridge_path(str(path))
++    bridge_require(sha(path) == expected_sha, 'Manifest SHA256 differs')
++    data = json.loads(path.read_text())
++    required = {'schema', 'kind', 'original_compile_root', 'replay_source_root', 'artifact_root',
++                'distribution_root', 'candidate_commit', 'candidate_tree', 'source_lock_sha256',
++                'runtime_lock_sha256', 'source_inventory_sha256', 'build_origin_sha256',
++                'build_summary_sha256', 'build_id', 'build_identity_hash', 'records', 'retained_files'}
++    bridge_require(set(data) == required and data['schema'] == 1 and
++                   data['kind'] == 'D1BOUND5_REPLAY_SOURCE_RELOCATION', 'Manifest schema/keys differ')
++    original = bridge_path(data['original_compile_root'], live=False)
++    replay = bridge_path(data['replay_source_root'])
++    bridge_require(replay == project and replay != original and not replay.is_relative_to(original) and
++                   not original.is_relative_to(replay), 'Compile/replay roots must be explicit disjoint identities')
++    bridge_require(str(build_root) == data['artifact_root'] and str(root) == data['distribution_root'], 'Artifact/runtime relocation is forbidden')
++    bridge_require(data['candidate_commit'] == BRIDGE_COMMIT and data['candidate_tree'] == BRIDGE_TREE and
++                   data['source_lock_sha256'] == BRIDGE_SOURCE_LOCK, 'Unreviewed source candidate/lock')
++    for p, key in [(source_lock_path, 'source_lock_sha256'), (runtime_lock_path, 'runtime_lock_sha256'),
++                   (manifest_path, 'source_inventory_sha256'), (build_root.parent/'ORIGIN.json', 'build_origin_sha256'),
++                   (build_root.parent/'SUMMARY.json', 'build_summary_sha256')]:
++        bridge_path(str(p))
++        bridge_require(sha(p) == data[key], 'Pinned bridge input changed: ' + key)
++    origin = json.loads((build_root.parent/'ORIGIN.json').read_text())
++    bridge_require(origin['identity']['source_root'] == str(original) and origin['build_id'] == data['build_id'] and
++                   origin['identity_hash'] == data['build_identity_hash'], 'Original compile identity mismatch')
++    sl = json.loads(source_lock_path.read_text())
++    bridge_require(sl['module_count'] == BRIDGE_COUNT and len(sl['sources']) == BRIDGE_COUNT and
++                   set(sl['auxiliary']) == {'lean-toolchain', 'lakefile.lean', 'lake-manifest.json'}, 'Exact production/config scope mismatch')
++    expected = {v['relative_path']: v['sha256'] for v in sl['sources'].values()}
++    bridge_require(len(expected) == BRIDGE_COUNT, 'Duplicate source-lock relative path')
++    expected.update(sl['auxiliary']); expected.update(BRIDGE_HARNESSES)
++    git_identity, directories = bridge_git(project, expected)
++    records = {'exact_summary', 'exact_input_freeze', 'integration_log', 'target_log',
++               'broad_summary', 'broad_evidence_freeze', 'broad_log', 'source_policy_report', 'source_policy_manifest'}
++    bridge_require(set(data['records']) == records, 'Exact audit record roles are required')
++    retained = data['retained_files']
++    bridge_require(isinstance(retained, dict), 'Explicit retained-file mapping required')
++    destinations = set()
++    for old, row in retained.items():
++        bridge_path(old, live=False)
++        bridge_require(set(row) == {'path', 'sha256'}, 'Invalid retained mapping row')
++        new = bridge_path(row['path'])
++        bridge_require(not new.is_relative_to(original), 'Retained evidence still depends on old source root')
++        bridge_require(row['path'] not in destinations, 'Retained-file destination collision')
++        destinations.add(row['path'])
++        bridge_require(new.is_file() and sha(new) == row['sha256'], 'Retained evidence changed')
++    bridge_require(sha(path) == expected_sha, 'Manifest changed during validation')
++    return {'path': str(path), 'sha256': expected_sha, 'manifest': data, 'original': str(original),
++            'replay': str(project), 'git_identity': git_identity, 'directories': directories,
++            'expected_sources': expected, 'source_lock_path': str(source_lock_path),
++            'runtime_lock_path': str(runtime_lock_path), 'source_inventory_path': str(manifest_path)}
++
++
++def bridge_artifact_inventory(artifact_root):
++    artifact_root = bridge_path(str(artifact_root))
++    result = {}
++    for parent, dirs, files in os.walk(artifact_root, followlinks=False):
++        for name in dirs:
++            bridge_require(not (Path(parent)/name).is_symlink(), 'Symlink directory in isolated artifacts')
++        for name in files:
++            part = bridge_path(str(Path(parent)/name))
++            bridge_require(part.is_file(), 'Nonregular isolated artifact part')
++            result[str(part)] = sha(part)
++    return result
++
++
++def bridge_bind(context, pins, build_pins, build_evidence, artifacts, compiler, origin):
++    data = context['manifest']; original = Path(context['original']); replay = Path(context['replay'])
++    retained = data['retained_files']; used = set(); extra = {}; mapped = {}
++    def bind(old, expected=None):
++        old_path = bridge_path(old, live=False)
++        if old_path.is_relative_to(original):
++            relative = str(old_path.relative_to(original))
++            bridge_require(relative in context['expected_sources'], 'Unselected old source path in evidence')
++            new = replay/relative
++        elif old in retained:
++            used.add(old); new = bridge_path(retained[old]['path'])
++            bridge_require(expected is None or retained[old]['sha256'] == expected, 'Retained evidence expected hash mismatch')
++        else:
++            new = bridge_path(old)
++            bridge_require(old in pins, 'Historical non-source input requires explicit retained mapping: ' + old)
++        actual = sha(new)
++        bridge_require(expected is None or actual == expected, 'Historical evidence bytes changed: ' + old)
++        bridge_require(str(new) not in pins or pins[str(new)] == actual, 'Historical/current frozen input mismatch')
++        extra[str(new)] = actual; mapped[old] = str(new)
++        return new
++    def record(role):
++        old = data['records'][role]
++        bridge_require(old in retained, 'Record must have explicit immutable mapping: ' + role)
++        return bind(old, retained[old]['sha256'])
++    paths = {role: record(role) for role in data['records']}
++    exact = json.loads(paths['exact_summary'].read_text()); audited = json.loads(paths['exact_input_freeze'].read_text())
++    bridge_require(exact['status'] == 'CLEAN_SOURCE_BUILD_EXACT_TYPE_AXIOM_AUDITS_PASS' and
++                   exact['post_audit_all_input_hashes_equal'] is True and exact['accepted_fresh_project_modules'] == BRIDGE_COUNT and
++                   exact['input_freeze_sha256'] == sha(paths['exact_input_freeze']) and
++                   exact['source_lock_sha256'] == data['source_lock_sha256'] and exact['runtime_lock_sha256'] == data['runtime_lock_sha256'], 'Exact audit summary is not accepted for these inputs')
++    bridge_require(audited['schema'] == 1 and audited['source_root'] == str(original) and
++                   audited['artifact_root'] == data['artifact_root'] and audited['build_dir'] == str(Path(data['artifact_root']).parent) and
++                   audited['build_id'] == data['build_id'] and audited['identity_hash'] == data['build_identity_hash'] and
++                   audited['source_lock_sha256'] == data['source_lock_sha256'] and audited['runtime_lock_sha256'] == data['runtime_lock_sha256'] and
++                   audited['accepted_modules'] == BRIDGE_COUNT and audited['lean'] == compiler and
++                   audited['environment'] == origin['identity']['environment'] and audited['git_identity'] == context['git_identity'], 'Exact audit identity differs from completed build/replay clone')
++    rt = json.loads(Path(context['runtime_lock_path']).read_text())
++    bridge_require(audited['runtime_inventory_sha256'] == bridge_digest(rt['files']) and
++                   audited['runtime_file_count'] == len(rt['files']), 'Exact audited runtime inventory differs')
++    for key in ('accepted_receipt_chain_sha256', 'artifact_bundles_sha256'):
++        bridge_require(audited[key] == build_evidence[key], 'Exact audited build artifact/receipt identity differs')
++    for old, expected in audited['files'].items(): bind(old, expected)
++    # Completeness in both directions: no current source, pin, or accepted part
++    # may silently fall outside the exact audited snapshot.
++    required = {**build_pins, **{p: h for p, h in artifacts.items() if Path(p).is_relative_to(Path(data['artifact_root']))}}
++    required.update({str(replay/p): h for p, h in context['expected_sources'].items()})
++    audited_current = {new: audited['files'][old] for old, new in mapped.items() if old in audited['files']}
++    artifact_root = bridge_path(data['artifact_root'])
++    actual_parts = bridge_artifact_inventory(artifact_root)
++    audited_parts = {p: h for p, h in audited_current.items() if Path(p).is_relative_to(artifact_root)}
++    bridge_require(actual_parts == audited_parts, 'Extra/missing/changed isolated artifact membership')
++    for p, expected in required.items():
++        bridge_require(audited_current.get(p) == expected, 'Current build/source input absent from exact audit: ' + p)
++    expected_audits = [('FinalIntegrationAudit', 'integration_log', 114, 'ORIGINAL_TYPE_AXIOMS_PASS', 'scripts/verification/FinalIntegrationAudit.lean'),
++                       ('FinalTargetAudit', 'target_log', 4, 'FINAL_TARGET_AXIOMS_PASS', 'scripts/verification/FinalTargetAudit.lean')]
++    bridge_require(len(exact['audits']) == 2, 'Wrong exact audit count')
++    for row, (name, log, count, marker, harness) in zip(exact['audits'], expected_audits):
++        bridge_require(row['name'] == name and row['exit_code'] == 0 and row['expected_pass_markers'] == row['observed_pass_markers'] == count and
++                       row['audit_sha256'] == BRIDGE_HARNESSES[harness] and row['log_sha256'] == sha(paths[log]) and
++                       paths[log].read_text().count(marker) == count and
++                       row['command'] == [compiler, '-j1', '-DautoImplicit=false', '-R', str(original), str(original/harness)], 'Exact audit command/log/marker mismatch')
++    broad = json.loads(paths['broad_summary'].read_text()); bf = json.loads(paths['broad_evidence_freeze'].read_text())
++    bridge_require(broad['status'] == 'CLEAN_BROAD_COMPATIBILITY_AUDIT_PASS' and broad['exit_code'] == 0 and
++                   broad['all_clean_source_artifact_runtime_git_and_evidence_guards_equal'] is True and
++                   broad['exact_audit_input_freeze_sha256'] == bf['exact_audit_input_freeze_sha256'] == sha(paths['exact_input_freeze']) and
++                   broad['broad_source_sha256'] == BRIDGE_BROAD_SHA and broad['log_sha256'] == sha(paths['broad_log']), 'Broad audit summary/input binding mismatch')
++    for old, expected in bf['files'].items(): bind(old, expected)
++    command = broad['command']
++    bridge_require(len(command) == 6 and command[:4] == [compiler, '-j1', '-DautoImplicit=false', '-R'] and
++                   command[4] == bf['command_root'] == str(Path(command[5]).parent) and
++                   bf['files'].get(command[5]) == BRIDGE_BROAD_SHA, 'Broad historical command/source mismatch')
++    for role in ('exact_summary', 'exact_input_freeze', 'integration_log', 'target_log'):
++        old = data['records'][role]
++        bridge_require(bf['files'].get(old) == sha(paths[role]), 'Broad evidence omits exact audit record')
++    text = paths['broad_log'].read_text(); lines = [s.strip() for s in text.splitlines()]
++    public = [int(m.group(1)) for s in lines if (m := re.fullmatch(r'AXIOM_AUDIT_PASS: (\d+) project declarations', s))]
++    private = [int(m.group(1)) for s in lines if (m := re.fullmatch(r'BROAD_PROJECT_AXIOM_AUDIT_PASS (\d+) declarations', s))]
++    targets = [m.group(1) for s in lines if (m := re.match(r'^FINAL_TARGET_AXIOMS_PASS (D1Bound5\.[^: ]+):', s))]
++    individual = sum(s.startswith('AUDIT D1Bound5.') or s.startswith('AUDIT D1Bound5:') for s in lines)
++    bridge_require(len(public) == len(private) == 1 and public[0] > 0 and private[0] >= public[0] and individual == public[0] and
++                   len(targets) == 4 and set(targets) == {'D1Bound5.MainStatement', 'D1Bound5.IsD1', 'D1Bound5.IsD1Tuple', 'D1Bound5.main_statement'}, 'Broad audit markers differ')
++    bridge_require(broad['markers'] == {'exported_project_declarations': public[0], 'including_private_declarations': private[0],
++                   'independent_target_markers': 4, 'individual_exported_audit_lines': individual}, 'Broad recorded markers differ')
++    bridge_require(sha(paths['source_policy_report']) == BRIDGE_POLICY_SHA and
++                   sha(paths['source_policy_manifest']) == BRIDGE_POLICY_MANIFEST_SHA, 'Reviewed source-policy evidence differs')
++    policy = json.loads(paths['source_policy_report'].read_text()); sm = json.loads(paths['source_policy_manifest'].read_text())
++    bridge_require(policy['status'] == 'SOURCE_POLICY_PASS_SOURCE_ONLY' and policy['production_module_count'] == policy['reachable_module_count'] == BRIDGE_COUNT and
++                   all(policy[k] == [] for k in ('errors', 'unreviewed_findings', 'unreviewed_options', 'source_changes_during_scan')), 'Source-only policy is not accepted')
++    sl = json.loads(Path(context['source_lock_path']).read_text())
++    bridge_require(sm == {n: {k: row[k] for k in ('bytes', 'relative_path', 'sha256')} for n, row in sl['sources'].items()}, 'Source-policy map differs from exact source lock')
++    bridge_require(used == set(retained), 'Unused/ambiguous retained mapping entries')
++    bridge_require(sha(context['path']) == context['sha256'], 'Bridge mapping changed during binding')
++    extra[context['path']] = context['sha256']
++    return extra
+ 
+ 
+ def cgroup():
+@@ -332,6 +612,14 @@
+ def build_freeze(args, root, env, roots, checker):
+     project = args.project_root.resolve()
+     build_root = args.project_build_root.resolve()
++    relocation = None
++    if getattr(args, 'source_relocation_manifest', None) is not None:
++        bridge_require(args.target == 'D1Bound5', 'Relocation supports the full canonical root only')
++        bridge_require(str(args.project_root) == str(project), 'Replay root alias is forbidden')
++        relocation = bridge_load(args.source_relocation_manifest, args.source_relocation_sha256,
++                                 project, build_root, root, args.source_lock.resolve(),
++                                 args.runtime_lock.resolve(), args.manifest.resolve())
++    compile_project = None if relocation is None else Path(relocation['original'])
+     order, source_files = closure_manifest(args.manifest, project, args.target)
+     validate_clean_paths(root, project, build_root, roots, env, order)
+     runtime = json.loads((root / 'RUNTIME_SETUP.json').read_text())
+@@ -346,9 +634,10 @@
+     artifacts = artifact_inventory(roots)
+     lock_pins, compiler, lean_arguments = clean_lock_evidence(
+         root, project, build_root, env, order, source_files, args.manifest,
+-        args.source_lock.resolve(), args.runtime_lock.resolve())
++        args.source_lock.resolve(), args.runtime_lock.resolve(), compile_project=compile_project)
+     build_pins, build_evidence = clean_build_evidence(
+-        project, build_root, env, order, source_files, artifacts, args.manifest, compiler, lean_arguments)
++        project, build_root, env, order, source_files, artifacts, args.manifest, compiler, lean_arguments,
++        compile_project=compile_project)
+     clean_runner = root / 'fresh_project_build.py'
+     clean_origin = json.loads((build_root.parent / 'ORIGIN.json').read_text())
+     if sha(clean_runner) != clean_origin['identity']['runner_sha256']:
+@@ -365,6 +654,18 @@
+                  if (project / n).is_file())
+     pins = {**source_files, **artifacts, **{str(p): sha(p) for p in extra},
+             **{str(p): h for p, h in expected.items()}, **shared_libraries, **lock_pins, **build_pins}
++    bridge_record = {}
++    if relocation is not None:
++        # Builder may have been copied byte-for-byte since its historical audit.
++        audit_build_pins = {p: h for p, h in build_pins.items() if p != str(clean_runner)}
++        pins.update(bridge_bind(relocation, pins, audit_build_pins, build_evidence, artifacts, compiler, clean_origin))
++        bridge_require(all(Path(p).is_relative_to(Path('/tmp')) for p in pins),
++                       'Relocated freeze must have no live input outside retained /tmp roots')
++        after = bridge_load(args.source_relocation_manifest, args.source_relocation_sha256,
++                            project, build_root, root, args.source_lock.resolve(),
++                            args.runtime_lock.resolve(), args.manifest.resolve())
++        bridge_require(after == relocation, 'Replay source/Git/mapping changed during freeze')
++        bridge_record = {'source_relocation': relocation}
+     parent_names = set()
+     for p in artifacts:
+         if not p.endswith('.olean'):
+@@ -377,7 +678,7 @@
+         # Structural dotted-name prefixes only; Data4 does not select Data40.
+         if n != 'D1Bound5' and n in parent_names:
+             raise ValueError('Exact serial module has dotted descendants: ' + n)
+-    return {'schema': 3, 'status': 'FROZEN_INPUTS_NOT_PROOF', 'utc': utc(),
++    return {**bridge_record, 'schema': 3 if relocation is None else 4, 'status': 'FROZEN_INPUTS_NOT_PROOF', 'utc': utc(),
+             'target': args.target, 'project_order': order,
+             'source_inventory_sha256': sha(args.manifest),
+             'source_inventory_scope': 'Caller-provided source import graph; not an acceptance ledger',
+@@ -392,8 +693,22 @@
+ 
+ 
+ def validate(frozen):
+-    if frozen.get('schema') != 3:
+-        raise ValueError('A schema-3 freeze with explicit clean source/artifact paths is required')
++    if frozen.get('schema') not in (3, 4):
++        raise ValueError('A schema-3 or explicit relocation schema-4 freeze is required')
++    if frozen.get('schema') == 4:
++        prior = frozen['source_relocation']
++        current = bridge_load(Path(prior['path']), prior['sha256'], Path(frozen['project_root']),
++                              Path(frozen['project_build_root']), Path(frozen['distribution_root']),
++                              Path(prior['source_lock_path']), Path(prior['runtime_lock_path']),
++                              Path(prior['source_inventory_path']))
++        bridge_require(current == prior, 'Replay source/Git/mapping no longer matches freeze')
++        build_root = Path(frozen['project_build_root'])
++        bridge_require(bridge_artifact_inventory(build_root) ==
++                       {p: h for p, h in frozen['artifacts'].items() if Path(p).is_relative_to(build_root)},
++                       'Isolated artifact membership/bytes changed since relocation freeze')
++        bridge_require(frozen['pins'].get(prior['path']) == prior['sha256'] and
++                       all(Path(p).is_relative_to(Path('/tmp')) for p in frozen['pins']),
++                       'Relocation manifest missing from pins or old live input retained')
+     validate_clean_paths(Path(frozen['distribution_root']), Path(frozen['project_root']),
+                          Path(frozen['project_build_root']), frozen['roots'],
+                          frozen['env'], frozen['project_order'])
+@@ -549,6 +864,8 @@
+     ap.add_argument('--lean-env', type=Path, help='Pinned clean-build environment JSON; required for freeze')
+     ap.add_argument('--source-lock', type=Path, help='Original reviewed clean source lock; required for freeze')
+     ap.add_argument('--runtime-lock', type=Path, help='Original reviewed clean runtime lock; required for freeze')
++    ap.add_argument('--source-relocation-manifest', type=Path, help='Optional explicit retained source/evidence bridge; freeze only')
++    ap.add_argument('--source-relocation-sha256', help='Externally reviewed bridge manifest SHA256; required with manifest')
+     ap.add_argument('--target', type=module_name, default='D1Bound5')
+     ap.add_argument('--manifest', type=Path)
+     ap.add_argument('--freeze', type=Path, default=Path(__file__).resolve().parent / 'FREEZE.json')
+@@ -560,6 +877,9 @@
+     ap.add_argument('--timeout-seconds', type=int, default=86400)
+     ap.add_argument('--execute', action='store_true')
+     args = ap.parse_args()
++    relocation_flags = (args.source_relocation_manifest is not None, args.source_relocation_sha256 is not None)
++    if any(relocation_flags) and (args.action != 'freeze' or not all(relocation_flags)):
++        ap.error('Relocation manifest and SHA256 must occur together, and only on freeze')
+     root = args.offload_root.resolve()
+     env = json.loads(args.lean_env.read_text()) if args.lean_env is not None else None
+     roots = search_roots(env) if env is not None else []

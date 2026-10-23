@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/tmp/d1bound5-recorded-supervisor-02-20261023/test_recorded_supervisor.py"
+  ],
+  "cwd": "/tmp",
+  "fixture_coverage": [
+    "Stat comm with spaces, nested/embedded parentheses and malformed fields",
+    "Self identity stat/status/local PID consistency, start-time races and missing fields/namespace",
+    "Unique host child PPid/NSpid depth/local PID/namespace match; unrelated host directory equal to local PID is not assumed child",
+    "Wrong host PID/status/parent/namespace/local/depth, disappearing/permission-denied proc, ambiguous candidates",
+    "Actual tiny Python child exit0 and exit7, exact stdout/stderr/log hash and inherited environment preserved",
+    "Python3.8 syntax and unchanged execution calls"
+  ],
+  "fixture_exit_code": 0,
+  "fixtures": 32,
+  "limitations": [
+    "No Lean, checker, current driver, process signals, Git, source, runtime or build mutation.",
+    "Synthetic proc inputs plus small temporary Python children only.",
+    "Host identity is optional and point-in-time; this is not a process-survival, proof-acceptance or concurrency guarantee.",
+    "Original documented limitations about missing ACTUAL_RETURN, parent-directory fsync and full log hashing remain unchanged.",
+    "Future real invocation requires root selection/review; original running supervisor remains unchanged."
+  ],
+  "log_sha256": "8d2728b4b7c35a227a38c9c94499cbbc95dd33f1035610268db389b496b2e3e0",
+  "original_sha256": "4863dbab5d2a1f6c9415d89c6da1c8e9f2dcbefa660fe92bcf93526ffa721a79",
+  "reviewer": "/root/integration",
+  "schema": 1,
+  "seconds": 0.2118105179979466,
+  "source_sha256": "2cbdfc01bb5df99e21038d5cf8b5dfd737a4947f7abfc8b4583315e6b71aad49",
+  "source_test_original_pre_post_hashes_equal": true,
+  "static_findings": [
+    "No blocking issue found in the narrow metadata delta.",
+    "Exact sha/utc/write helper ASTs and subprocess.Popen/child.wait call ASTs equal original4863.",
+    "Only namespace-scoped metadata plus four optional proc observation functions changed; argv/cwd/wait/log/return behavior preserved.",
+    "Missing/raced/inaccessible/ambiguous process observations return UNAVAILABLE; process wait remains authority for actual exit."
+  ],
+  "status": "INDEPENDENT_STATIC_AND_SYNTHETIC_FIXTURES_PASS_NOT_PROOF_ACCEPTANCE",
+  "test_sha256": "d2ac0a5f0857d8200407cc1ba55d6ed4d83a1ce854bd4326950f55b41f30632f",
+  "utc": "2026-10-23T19:16:19.959032+00:00"
+}

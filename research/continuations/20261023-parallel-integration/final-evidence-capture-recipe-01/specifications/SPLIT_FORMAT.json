@@ -1,0 +1,25 @@
+{
+  "avoid_rewriting_existing_evidence": "A new uniquely named supplemental batch with manifest and remote verification receipt is appended; older frozen packages remain unchanged.",
+  "binary_attempt_artifacts": "May instead remain in a separately named remote supplemental proof-object tar archive, pinned by SHA/member manifest; no acceptance status. Never add large binary proof objects to Git.",
+  "direct_storage": "Original UTF-8 text below the strict limit is copied byte-for-byte. All larger files and binary files use lossless parts.",
+  "encoding": "RFC4648 standard base64; each part may be wrapped at76ASCII characters with LF; decode ignoring only ASCII whitespace.",
+  "git_single_file_strict_limit_bytes": 5242880,
+  "large_indexes": "If an index itself reaches the strict limit, split it using the same byte-preserving format and retain a small top-level index of ordered parts.",
+  "maximum_part_stored_bytes": 4249493,
+  "part_naming": "parts/<stable-original-id>/part-000000.b64, monotonically increasing zero-based index",
+  "per_original_manifest_fields": [
+    "original_absolute_path",
+    "logical_archive_path",
+    "original_bytes",
+    "original_sha256",
+    "capture_utc",
+    "original_pre_stat",
+    "original_post_stat",
+    "status terminal or explicitly partial",
+    "parts with index,raw_offset,decoded_bytes,decoded_sha256,stored_path,stored_bytes,stored_sha256"
+  ],
+  "raw_chunk_bytes": 3145728,
+  "schema": 1,
+  "status": "FORMAT_PREPARATION_NOT_CAPTURE",
+  "verification": "Verify each stored/decoded part; require contiguous offsets with no gaps/overlaps; concatenate decoded parts in index order; require exact original total bytes and SHA256. Retain actual reconstructed verification receipt."
+}

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "status": "PASS_60_SYNTHETIC_PREPARER_GUARD_FIXTURES",
+  "reviewer": "graph_batch_a",
+  "utc": "2026-10-23T19:06:55.010794+00:00",
+  "source_sha256": "56405b88302409143fa9e712a320cc8030799be1ede3cc022afe72675250f8a5",
+  "test_sha256": "1f4c51725449d10a1348fc69e40f406e71d6cc6461b2eb0c979ee076bb9a4aa9",
+  "log_sha256": "cf6c70e0ca0613ec7301a354d06984d0b926e251424609d4c5533941286cd963",
+  "tests_run": 60,
+  "actual_test_process_exit": 0,
+  "source_hash_equal_before_after": true,
+  "coverage": [
+    "terminal full-build and exact/broad acceptance refusal on running/pending/failed/mismatched identities",
+    "actual marker/log/hash/command/freeze bindings including source/configuration/harness/helper presence",
+    "workspace-absent pinned mirror fallback and refusal of changed existing workspace bytes",
+    "new retained directory, no overwrite, symlink/output overlap protections, source/clone changes and partial failure retention",
+    "read-only default, shared build-lock exclusion, FIFO/nonregular input and build-lock refusal with nonblocking opens",
+    "source-only bridge loading rather than stale pyc; copied metadata stays byte-identical; no subprocess launched by preparer fixture",
+    "generated mapping successfully loaded by real reviewed829d bridge_load with synthetic constants and mocked Git",
+    "inventory JSON file SHA distinguished from relative-path map digest; file/directory fsync exercised"
+  ],
+  "fixture_boundaries": [
+    "All data and artifacts are synthetic temporary files under/tmp; no production inputs/cache/source files or actual Git mutated",
+    "Bulk inspection uses a minimal bridge dependency stub; one explicit compatibility test loads the real829d bridge code with synthetic constants and mocked Git",
+    "Full real bridge_bind/freeze/checker acceptance is not performed here and remains a mandatory later gate",
+    "No Lean or compiler process launched; outer Python unittest launcher only"
+  ],
+  "historical_initial_fixture_result": "INITIAL_FIXTURE_RESULT.json records one incorrect test expectation corrected after observing that input recheck restores original cached bytes; no production source fix was needed",
+  "proof_acceptance_claim": false
+}

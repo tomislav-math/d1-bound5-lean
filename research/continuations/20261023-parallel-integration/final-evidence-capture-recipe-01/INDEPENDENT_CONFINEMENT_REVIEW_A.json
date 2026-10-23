@@ -1,0 +1,23 @@
+{
+  "status": "PASS_NARROW_STATIC_CONFINEMENT_AND_SCHEMA_REVIEW",
+  "reviewer": "graph_batch_a",
+  "utc": "2026-10-23T18:53:04.354459+00:00",
+  "recipe_path": "/tmp/d1bound5-final-evidence-capture-20261023/evidence_parts.py",
+  "recipe_sha256": "5069eaad566b280b765e9cd5771652bb6b8984b7f1578d9add8152d37def98ab",
+  "scope": [
+    "verify output confinement relative to live package/recipe and historical source/missing/inventory identities",
+    "schema/path validation, ordered stored paths and no-overwrite behavior"
+  ],
+  "findings": [
+    "Live package, output, recipe and reconstructed paths are constrained through canonical absolute/relative validation, no-symlink checks and new-directory/O_EXCL creation. Existing files cannot be overwritten.",
+    "Manifest and pinned plan must match exact selected scope; recorded inventories bind their roots/member/stat identities, original rows and compression metadata. Ordered part/direct path checks and exact package inventory reject path substitution and unexpected members.",
+    "Historical original/source/missing/inventory names are foreign-machine lexical identities. Their protection is intentionally lexical; source-independent verification must not dereference all old paths on the destination host. Live target checks remain separate."
+  ],
+  "resolved_review_point": "A proposed blanket symlink-ancestor check for historical paths was withdrawn after peer review: it would reject intended Linux-/tmp to Mac-/private/tmp portability. No provenance-aware alias extension is required for this supplemental byte archive.",
+  "not_claimed": [
+    "No execution of capture/verify or fixture suite by this reviewer",
+    "No proof or gate acceptance",
+    "No guarantee against malicious concurrent filesystem mutation beyond implemented before/after guards"
+  ],
+  "code_edits": false
+}

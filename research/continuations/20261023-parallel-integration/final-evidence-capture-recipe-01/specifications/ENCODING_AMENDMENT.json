@@ -1,0 +1,51 @@
+{
+  "applies_to": "New supplemental phase2/3 large log/freeze files; original raw-part format and existing frozen evidence remain unchanged.",
+  "compression_identity": [
+    "encoding=xz-single-stream-preset3-crc64",
+    "compressed_bytes",
+    "compressed_sha256",
+    "compressor implementation/version",
+    "roundtrip_original_bytes_and_sha_verified"
+  ],
+  "no_acceptance_change": "This changes storage encoding only, never source proofs, runner guards, artifact acceptance, actual exit statuses, or final fresh-launch prerequisites.",
+  "original_identity": [
+    "original_absolute_path",
+    "logical_archive_path",
+    "original_bytes",
+    "original_sha256",
+    "capture_utc",
+    "pre_stat",
+    "post_stat"
+  ],
+  "part_encoding": {
+    "fields": [
+      "index",
+      "compressed_offset",
+      "decoded_bytes",
+      "decoded_sha256",
+      "stored_path",
+      "stored_bytes",
+      "stored_sha256"
+    ],
+    "maximum_stored_part_bytes": 4249493,
+    "raw_chunk_bytes": 3145728,
+    "strict_git_file_limit_bytes": 5242880,
+    "text_encoding": "Standard RFC4648 base64 wrapped at76ASCII columns with LF",
+    "underlying_bytes": "The one compressed XZ stream, partitioned in order."
+  },
+  "retention": "All ordered base64 parts, original/compressed/part identity manifests and reconstruction/arrival receipts are permanent semantic archive evidence, explicitly included in Git allowlists. Large reconstructed raw bodies can remain outside Git while their exact lossless part representation remains committed.",
+  "schema": 1,
+  "scope_anchors": {
+    "original_scope_manifest": "77740e6172afe193fa38bb5d0e2a7ab6a97d9665d5d9232f9f4c40edb506adda",
+    "original_split_format_sha256": "7bdac24cb3e0feca0437374031f7d3372fbc037efb3ba8ab4a2afc3346cf612b"
+  },
+  "selection": "For an explicitly inventoried original file, use a single standard XZ stream at preset3/CRC64 if measured compressed size is smaller; otherwise retain the existing raw-part format. Record selected encoding for each original.",
+  "status": "PREPARED_ENCODING_AMENDMENT_ONLY_NOT_CAPTURE_NOT_ACCEPTANCE",
+  "verification": [
+    "Require regular no-symlink source and unique absent destination; pre/post source stat and SHA equality.",
+    "Verify all stored and decoded part hashes, exact contiguous compressed offsets and exact compressed whole length/SHA.",
+    "Decompress exactly one XZ stream; require decoder eof, empty unused_data, expected original total length and original SHA. Reject any output beyond declared original length and any trailing or concatenated stream.",
+    "Destination reconstructs the full original byte body independently and verifies exact byte count/SHA. Fsync new evidence files and their parent directories before reporting durable receipt.",
+    "No existing file is overwritten; source/runtime/build/proof files are read only. Missing/partial original evidence remains explicitly missing/partial."
+  ]
+}

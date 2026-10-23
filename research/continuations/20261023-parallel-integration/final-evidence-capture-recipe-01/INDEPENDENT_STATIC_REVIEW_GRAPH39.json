@@ -1,0 +1,71 @@
+{
+  "findings_resolved": [
+    "Capture and reconstruction reject output overlap with explicit sources, declared missing originals, inventory roots and actual local plan/package/recipe inputs before directory creation.",
+    "Independent reconstruction validates plan/schema/status/path uniqueness and historical inventories without requiring vanished foreign originals.",
+    "Directory snapshot membership/stat bindings, included original capture stats and exact compressor metadata are checked against the plan.",
+    "Relative empty/dot paths, noncanonical/control-character paths, symlinks and special local inputs are refused. NUL-containing bodies use encoded parts.",
+    "The executing recipe hash is pinned before and after capture/reconstruction; package membership and original length/SHA are checked independently."
+  ],
+  "limits": [
+    "This is byte preservation and reconstruction, never theorem/build/audit/kernel acceptance. Actual capture plans and terminal evidence quiescence remain the coordinator responsibility.",
+    "Recorded foreign source/missing/inventory paths are protected lexically during cross-machine verification. They are not resolved through unrelated destination-host symlinks. Actual local package, recipe and output paths are canonical and symlink-free. Use a newly owned proof-object destination.",
+    "Coordinated nonhostile filesystem writers are assumed; this is not transactional security against concurrent privileged path mutation. fsync follows the OS/filesystem contract and does not guarantee hardware retention.",
+    "No actual final capture, Lean/checker run, runtime/source/build/control mutation or Git/index change occurred in this review."
+  ],
+  "pins": {
+    "FIXTURE_FINAL.log": {
+      "bytes": 5639,
+      "sha256": "076a7b47bb36d062ca59279983c299f4cbcb2d37b9b35ee4a5298ddd0cedf261"
+    },
+    "FIXTURE_VALIDATION.json": {
+      "bytes": 1128,
+      "sha256": "8dff61a832af246817ed85f6af013eeb5bcd1a5fa3ea16efab82adf63d848b81"
+    },
+    "README.md": {
+      "bytes": 5965,
+      "sha256": "f0b1ebabf2cfb61a99db764df6da886d2d3b4bb1a7c254ed59c8f229844d536f"
+    },
+    "evidence_parts.py": {
+      "bytes": 25323,
+      "sha256": "5069eaad566b280b765e9cd5771652bb6b8984b7f1578d9add8152d37def98ab"
+    },
+    "mac-results/MAC_FIXTURE.log": {
+      "bytes": 3613,
+      "sha256": "ac7295720d991ace86b721a725a43a08053a1a8e08c279292fb29d14b9ea854c"
+    },
+    "mac-results/MAC_RECONSTRUCTION.json": {
+      "bytes": 2230,
+      "sha256": "0be1b4e58e92c5dde6650851d10e6d0501ad3c4bd95cae525c7cbb1cb17eff56"
+    },
+    "mac-results/MAC_VALIDATION.json": {
+      "bytes": 1495,
+      "sha256": "607c9c610d2d5588495fac8225bc58fd7c0ae3c37949552f7d9880efa6ec3e10"
+    },
+    "test_evidence_parts.py": {
+      "bytes": 15516,
+      "sha256": "39c4b06457758f02f22f36c0eacff09d3cf1971013185e05874b3a26d41934d4"
+    }
+  },
+  "reviewer": "graph39",
+  "schema": 1,
+  "scope": "Read-only review of the exact supplemental evidence capture and cross-machine reconstruction recipe; no actual terminal evidence captured and no proof gate executed.",
+  "status": "INDEPENDENT_STATIC_REVIEW_PASS_SUPPLEMENTAL_BYTES_ONLY",
+  "utc": "2026-10-23T18:57:07.908904+00:00",
+  "validation_observed": {
+    "cross_machine_cases": "Small JSON, NUL/binary, empty original, and 6 MB large XZ original.",
+    "evidence_basis": "Read owner-provided pinned reports/logs and inspected source; did not rerun tests or perform an actual capture.",
+    "linux_exit_code": 0,
+    "linux_fixtures": 62,
+    "mac_exit_code": 0,
+    "mac_fixtures": 62,
+    "mac_independent_reconstruction_exit_code": 0,
+    "mac_python": "3.8.9"
+  },
+  "verified_properties": [
+    "Explicit parent-reviewed file/absence/inventory plan; phase and selected scope/amendment identities remain recorded. No Lean, Git, network or subprocess invocation.",
+    "New destinations only, exclusive no-follow file creation, file and directory fsync, partial failures retained without a success receipt or overwrite.",
+    "Small NUL-free UTF-8 bodies are copied exactly; large/binary originals use ordered canonical bounded base64 parts. Phase 2/3 uses single-stream XZ preset 3 / CRC64 only when smaller.",
+    "Bounded decompression rejects trailing or concatenated XZ, validates encoded and original complete byte lengths and hashes, and reads reconstructed outputs back before issuing a reconstruction receipt.",
+    "All semantic base64 parts are permanent evidence, distinct from disposable transport. Index files over the strict Git size limit fail closed."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "limitations": [
+    "No guarantee against platform-wide cleanup, service/session namespace reset, SIGKILL, host restart or storage loss.",
+    "Post-launch Python or I/O failure can leave an owned driver alive without ACTUAL_RETURN; inspect owned process identities and build lock before retry.",
+    "Child /proc start ticks are an optional observation: a short-lived child can disappear before inspection. PID/start ticks are meaningful only in their observed PID namespace; cross-namespace observation may differ.",
+    "The script fsyncs files/output directory but does not fsync the parent entry of the newly created output directory. No hard power-loss durability claim.",
+    "Full log is read into memory for final SHA; acceptable for this selected builder output, not a universal bound for arbitrary drivers."
+  ],
+  "pins": {
+    "smoke_report": {
+      "bytes": 1095,
+      "path": "/tmp/d1bound5-process-session-loss-02-20261023/SUPERVISOR_SMOKE_CHECKS.json",
+      "sha256": "52eff25df7eff88914fb48574883cd4ca0ef5ad992324d7c91b984db3ac0a59d"
+    },
+    "spec": {
+      "bytes": 1476,
+      "path": "/tmp/d1bound5-process-session-loss-02-20261023/RECORDED_BUILD_SPEC.json",
+      "sha256": "523d6257bfc61316a40ea02707eedd0799667014d8b65081da4d80c4ae425ed6"
+    },
+    "supervisor": {
+      "bytes": 3801,
+      "path": "/tmp/d1bound5-recorded-supervisor-20261023.py",
+      "sha256": "4863dbab5d2a1f6c9415d89c6da1c8e9f2dcbefa660fe92bcf93526ffa721a79"
+    }
+  },
+  "proof_acceptance": false,
+  "properties": [
+    "Exact spec SHA and driver SHA checked before launch. Complete reviewed builder argv/cwd and its internal resource/admission/watchdog logic are unchanged.",
+    "New canonical output directory and exclusive metadata/log creation. Full child stdout/stderr is file-backed; actual child return is obtained from Popen.wait, then log and result metadata are fsynced.",
+    "Missing result is explicitly UNKNOWN, never inferred success from stale builder metadata.",
+    "Whole supervisor detached by parent launch, rather than detaching a raw compiler or bypassing the builder."
+  ],
+  "reviewer": "graph39",
+  "schema": 1,
+  "scope": "Exact selected builder launch only; any future checker wrapper invocation requires its own reviewed exact spec and unchanged watchdog.",
+  "status": "INDEPENDENT_STATIC_REVIEW_NO_BLOCKER_FOR_EXACT_BUILD_SPEC",
+  "utc": "2026-10-23T19:07:09.165717+00:00",
+  "validation_basis": "Static inspection of exact source/spec and owner-provided six synthetic exit0/exit7/stdout smoke report. No supervisor launch, process signal, control mutation or Lean/checker execution by reviewer."
+}
