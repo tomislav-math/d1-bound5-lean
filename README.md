@@ -4,7 +4,7 @@ This repository contains the **Lean 4 formalization** of the main theorem in
 [A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)
 by **Zrinka Franušić and Tomislav Pejković**.
 
-Manuscript: 15 October 2026. Lean formalization completed and verified: 23 October 2026.
+Manuscript version: 15 October 2026.
 
 Let $K$ be an imaginary quadratic field and let $A$ be a finite subset of
 $\mathcal O_K\setminus\{0\}$. If $ab+1$ is a square in $\mathcal O_K$ for every
