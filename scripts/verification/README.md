@@ -1,21 +1,52 @@
-# Reproduce the release verification
+# Reproduce the Lean verification
 
-The required gate consists of four separate checks: accepted source policy, an initially empty project build, 114 exact declaration type/transitive-axiom checks plus four independent target checks, and the installed official Lean checker's fresh replay of the complete `D1Bound5` root. Only their combined success produces `COMPLETE_VERIFICATION_PASS` and exit 0. The only permitted axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+Run `scripts/check.sh` with the source and runtime locks prepared below and
+the `--replay` option. Success means **`COMPLETE_VERIFICATION_PASS` and exit
+code 0**. The command checks source policy, builds all 4,406 project modules
+from initially empty outputs, checks 114 declaration types and transitive
+axioms plus four independent targets, and replays the complete root through
+the official Lean kernel.
 
-The optional broad compatibility audit remains at `scripts/Audit.lean`. It preserves the historical `AUDIT` lines, `AXIOM_AUDIT_PASS` marker, and named diagnostics, then adds exact target and private-project checks. It is a separate gate: `check.sh` reports it as `NOT_RUN_PENDING_SEPARATE_GATE`. The original file and manifests are preserved under `records/verification-history/20261023/`; those historical receipts do not certify changed files.
+Allow several hours, depending on the machine. The recorded fresh kernel
+replay alone took about **2 hours 54 minutes**, with a peak resident memory
+of about **5.1 GiB**. Compilation takes additional time and memory. Allow
+headroom for the operating system and reduce `--jobs` on smaller machines.
+The [recorded verification](../../research/continuations/20261023-parallel-offload/evidence/final-kernel-plan/FINAL_CLOSEOUT_AUDIT.json)
+identifies the measured run.
 
-## Inputs
+## Download only the verification files
 
-Use Git, Python 3.8+ with its standard library, and Linux or macOS. Install the exact Lean distribution named by `lean-toolchain` (`leanprover/lean4:v4.33.1`), including `leanchecker`. Prepare a separate public Mathlib checkout/cache at revision `0df444a360eaa60ab8c11dca51a86af692955474`; its package revisions must match `lake-manifest.json`. Public cache preparation may use the pinned distribution's `lake exe cache get` in that external checkout. Do not copy any previous D1Bound5 artifact into the verification build or external cache.
+The proof check needs `D1Bound5/`, `scripts/`, `records/` and the root
+Lean and Lake files. The manuscript, numerical archive and `research/`
+are not required as build inputs.
 
-Clone the selected repository commit into a clean source directory. Keep build, evidence, and external cache directories outside it. Commit the selected production sources, configuration pins, verification tools and manifests before running the gate. `check.sh` verifies their actual Git blob contents, including files hidden from ordinary status by Git flags.
+```sh
+git clone --depth 1 --filter=blob:none --sparse \
+  https://github.com/tomislav-math/d1-bound5-lean.git
+cd d1-bound5-lean
+git sparse-checkout set D1Bound5 scripts records
+```
 
-Use the final repository commit containing the reviewed production sources, configuration, verification tools and manifests. The verifier derives its source root and Git commit/tree from this clone; it does not require the earlier local verification-candidate commit or that machine's receipts. An ordinary user of the release should not regenerate committed release manifests. Manifest preparation below is a maintainer operation after intentional reviewed changes.
+Use a clean committed checkout. Keep the build, evidence and public cache
+directories outside it. The verifier checks file contents against both
+the manifests and Git, including files hidden from ordinary status by Git flags.
+
+## Prepare the environment
+
+Use Git, Python 3.8+ with its standard library, and Linux or macOS. Install
+the official **Lean 4.33.1** distribution named by `lean-toolchain`, including
+`leanchecker`. Prepare a separate public Mathlib checkout/cache at revision
+`0df444a360eaa60ab8c11dca51a86af692955474`; its package revisions must match
+`lake-manifest.json`. The pinned distribution's `lake exe cache get` may be
+used in that external checkout.
+
+The external cache must contain only public dependencies. Do not copy old
+D1Bound5 build artifacts into it or into the new project build directory.
 
 Set absolute paths for this machine:
 
 ```sh
-D1_SOURCE=/absolute/path/to/clean-committed-checkout
+D1_SOURCE=/absolute/path/to/d1-bound5-lean
 D1_WORK=/absolute/path/to/new-verification-work
 D1_TOOLCHAIN=/absolute/path/to/lean-4.33.1
 D1_CACHE=/absolute/path/to/public-mathlib-checkout
@@ -23,12 +54,31 @@ D1_RUNNER="$D1_SOURCE/scripts/fresh_project_build.py"
 mkdir -p "$D1_WORK"
 ```
 
-## Freeze sources and the public runtime
+## Prepare and check the locks
+
+Generate the source lock:
 
 ```sh
 python3 "$D1_RUNNER" prepare-source-lock \
   --source-root "$D1_SOURCE" --roots D1Bound5 \
   --out "$D1_WORK/source-lock.json"
+```
+
+The expected SHA256 of this lock is:
+
+```text
+511466d8d0ea4a23e7d8d6746a5ad3efec153184a02ca4e44ec8789b7788d5ed
+```
+
+This value covers the 4,406-module source closure and pinned configuration,
+and is independent of the checkout location. The
+[source comparison record](../../records/documentation-update/README.md)
+identifies the documentation-only change from the verified proof sources.
+The verification command below checks the lock against this expected value.
+
+Generate a separate runtime lock for this machine:
+
+```sh
 python3 - "$D1_RUNNER" "$D1_TOOLCHAIN" "$D1_CACHE" "$D1_WORK/runtime-lock.json" <<'PY'
 import pathlib, subprocess, sys
 runner, toolchain, cache, output = sys.argv[1:]
@@ -43,17 +93,20 @@ subprocess.run(command, check=True)
 PY
 ```
 
-Review both generated locks, including all external search paths. The release scope is exactly 4406 project modules, including the umbrella. The source lock is independent of the checkout location; a runtime lock contains absolute machine paths and must be regenerated on another machine. Every selected runtime/cache file is hashed. External roots containing a D1Bound5 artifact owner are rejected. Keep this public cache immutable during verification. Any necessary loader environment override must be explicitly supplied to `prepare-runtime-lock --environment` and included in its recorded runtime identity.
+Review the runtime lock's toolchain, dependency revisions and external search
+paths against the pinned inputs above. Its hash cannot be shared between
+machines because it records absolute paths and the local runtime files.
+Keep the public cache unchanged during verification. If a loader environment
+override is necessary, supply it explicitly to `prepare-runtime-lock
+--environment` so that it becomes part of the recorded runtime identity.
 
-Generate both locks in the new work directory and review them against the committed release inputs. Do not copy an old machine's runtime lock or build receipts. A new machine, relocated checkout, changed runtime, or different build directory requires a new initially empty build. `--resume` is for the same frozen checkout/runtime/build identity only; every invocation still requires a new empty evidence directory.
+## Run the complete verification
 
-Set `D1_SOURCE_SHA` and `D1_RUNTIME_SHA` to the reviewed SHA256 values, rather than treating an unreviewed fresh hash as approval. Configuration and verification tool fingerprints are separately checked against the committed release manifests.
-
-## Run the complete gate
+After reviewing the generated runtime lock, calculate its hash and run:
 
 ```sh
-D1_SOURCE_SHA=reviewed_source_lock_sha256
-D1_RUNTIME_SHA=reviewed_runtime_lock_sha256
+D1_SOURCE_SHA=511466d8d0ea4a23e7d8d6746a5ad3efec153184a02ca4e44ec8789b7788d5ed
+D1_RUNTIME_SHA=$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$D1_WORK/runtime-lock.json")
 bash "$D1_SOURCE/scripts/check.sh" \
   --source-lock "$D1_WORK/source-lock.json" --source-lock-sha256 "$D1_SOURCE_SHA" \
   --runtime-lock "$D1_WORK/runtime-lock.json" --runtime-lock-sha256 "$D1_RUNTIME_SHA" \
@@ -61,34 +114,63 @@ bash "$D1_SOURCE/scripts/check.sh" \
   --jobs 4 --hints "$D1_SOURCE/scripts/verification/resource_hints.json" --replay
 ```
 
-The project build directory must initially be empty. The scheduler runs each compiler with one thread and records source, dependency, runtime, artifact, command and log identities. Use fewer jobs on smaller machines. Optional `--hints` supplies reviewed per-module timeout/memory scheduling estimates; it does not change proof identities. The wrapper defaults to `--build-timeout 1200` seconds per module because the initial 240-second setting timed out on three unchanged sources in the genuine clean build. The three original timeout cases subsequently compiled unchanged under increased resource limits. Completion of the whole build is determined separately by its recorded gate outcome. Individual hint timeouts override the default; measured heavy matrix hints retain their 4900 MiB reservation and 600-second limit. Use `--build-timeout` to set a different positive default. Failed and interrupted attempts remain recorded. The included `scripts/verification/resource_hints.json` is byte-identical to the operational `RESOURCE_HINTS_V3.json` (SHA256 `3d4d6a8d901fb0076ee375ade19916ec1b39e4afbf7909016361919941a9ae95`). It retains the previous 11 entries and adds 2048 MiB admission estimates for the 64 numeric prefix-data modules after an aggregate-memory OOM. The unchanged prefix43 source then compiled in an isolated retry in 17.18 seconds, with observed peak resident memory of approximately 1772 MiB. These are scheduling estimates, not proven memory bounds. The preserved JSON text about a remaining prefix phase capped at two jobs records the original proposal; that phase was not executed. The selected full recovery run used seven configured jobs, with its observed reservation budget admitting at most three prefix jobs concurrently. Review scheduling estimates for the machine; they are optional execution inputs, not proof-source dependencies. Historical receipt names and proposal comments are provenance annotations; the scheduler does not open those paths or execute those comments. Completion of each verification gate must still be established by its actual terminal evidence.
+The build directory must initially be empty. The scheduler runs each compiler
+with one thread and records its inputs, outputs and logs. The optional
+`--hints` file supplies per-module timeout and memory estimates; it does not
+change proof identities. The default build timeout is 1,200 seconds per module,
+with individual hint timeouts taking precedence.
 
-To resume this same fresh-origin build, repeat with `--resume` and a **new** empty evidence directory. Accepted modules are reused only when their complete source/dependency/artifact receipt chain still matches. A completed resumed build is explicitly labelled `PROJECT_SOURCE_BUILD_COMPLETE_RESUMED`; it does not claim all modules were rebuilt in the last invocation.
+| Result | Meaning |
+|---|---|
+| `COMPLETE_VERIFICATION_PASS`, exit 0 | All required checks, including fresh kernel replay, passed |
+| `SOURCE_BUILD_AND_AUDITS_PASS_FRESH_REPLAY_PENDING`, exit 3 | Source, build and audit checks passed, but replay was omitted |
+| Exit 1 | An error or interruption occurred; inspect the saved logs |
 
-Without `--replay`, successful source/build/audit checks end with `SOURCE_BUILD_AND_AUDITS_PASS_FRESH_REPLAY_PENDING` and exit **3**. This is deliberately not full success. Errors and interruptions exit **1**, preserve available logs, and cannot become complete acceptance. The wrapper invokes only `leanchecker --verbose --fresh D1Bound5`, with `LEAN_NUM_THREADS=0`, and verifies the exact root banner and the same frozen inputs used by the type/axiom audits. Do not invoke this pinned checker's unsupported `--help` flag or omit its module target.
+The only permitted transitive axioms are `propext`, `Classical.choice` and
+`Quot.sound`. Fresh replay uses `leanchecker --verbose --fresh D1Bound5`
+with `LEAN_NUM_THREADS=0`. Lowering build concurrency does not reduce the
+memory required by this single replay process.
 
-These are reproduction instructions, not a record that this packaged command has already completed. Published evidence must identify the exact command, commit/tree, source/runtime locks, logs and gate outcomes. The portable wrapper uses the installed official checker directly; the separate Linux container watchdog used during development is not a required repository input. Reducing build jobs changes compilation concurrency, not the memory needed by the single fresh replay process. The broad compatibility audit remains a separately reported gate.
+To resume an interrupted build, repeat the command with `--resume` and a
+new empty evidence directory, keeping the source, runtime and build identities
+unchanged. Accepted modules are reused only if their complete receipt chains
+still match. A new machine, changed runtime or different build directory
+requires a new initially empty build.
 
-For a separate source-only inspection:
+## Optional checks
+
+The broad audit in `scripts/Audit.lean` is separate from the required checks
+above. The wrapper reports it as `NOT_RUN_PENDING_SEPARATE_GATE`.
+
+For a source-only inspection:
 
 ```sh
 python3 "$D1_SOURCE/scripts/source_audit.py" \
   --project "$D1_SOURCE" --out "$D1_WORK/source-policy-only"
 ```
 
-Only `SOURCE_POLICY_PASS_SOURCE_ONLY` with exit 0 accepts source policy. Its exact reviewed Omega imports/code-generation options are bound to source hashes and locations. Unreviewed findings fail. Source-only success does not establish compilation, theorem types, axiom closure or fresh replay.
+`SOURCE_POLICY_PASS_SOURCE_ONLY` with exit 0 establishes source-policy
+compliance only. It does not establish compilation, theorem types, axioms
+or kernel replay.
 
-## Release-maintainer manifest preparation
+## Maintaining the manifests
 
-After reviewing intentional tool edits, prepare replacement manifests outside the checkout:
+Ordinary users should use the committed manifests. After an intentional,
+reviewed edit, maintainers can prepare replacements outside the checkout:
 
 ```sh
 python3 "$D1_SOURCE/scripts/verification/prepare_manifests.py" \
   --project "$D1_SOURCE" --source-lock "$D1_WORK/source-lock.json" \
   --source-lock-sha256 "$D1_SOURCE_SHA" \
-  --prior-tools-manifest "$D1_SOURCE/records/verification-history/20261023/verification-tools.before.sha256.txt" \
-  --updated-tool scripts/Audit.lean --updated-tool scripts/check.sh \
-  --updated-tool scripts/source_audit.py --out "$D1_WORK/manifest-proposal"
+  --prior-tools-manifest /absolute/path/to/previous-verification-tools-sha256.txt \
+  --updated-tool scripts/verification/README.md \
+  --out "$D1_WORK/manifest-proposal"
 ```
 
-This preserves all historical tool entries, rejects unexpected historical changes, and adds the explicit required tool set in `release_pins.json`. It refuses disconnected production sources. Review the proposed manifest changes, then install and commit them through the repository's existing `GIT_SYNC_POLICY.md`. Manifest preparation is labelled `MANIFEST_PROPOSAL_ONLY_NOT_PROOF_ACCEPTANCE`; refreshing fingerprints never creates proof evidence. Repository publication helpers and historical audit scopes retain their separate policies.
+List every intentionally changed tool with `--updated-tool`. Review the
+proposed differences and commit the updated files and manifests together.
+Refresh the published source-lock hash if source bytes change. Preparing
+manifests does not produce proof-verification evidence.
+
+Earlier operational details and resource incidents are preserved in the
+[archived guide](../../records/verification-history/documentation-guide-before-cleanup.md).

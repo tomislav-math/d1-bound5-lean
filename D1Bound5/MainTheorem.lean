@@ -14,8 +14,7 @@ namespace D1Bound5
 
 /-- The full-ring cardinality bound, assembled from the three exhaustive
 ordered cases. The entries may have equal moduli, and pair square roots
-may be zero. This research module is not accepted until its entire import
-closure has compiled and passed the project verification gates. -/
+may be zero. -/
 theorem main_statement : MainStatement.{u} := by
   apply mainStatement_iff_three_ordered_cases.mpr
   intro K _ _ _ hK phi

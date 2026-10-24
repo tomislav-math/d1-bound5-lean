@@ -1,3 +1,5 @@
+> Historical instructions for the former private development phase, retained for provenance and superseded by the current public documentation.
+
 # Private Git synchronization policy
 
 Author request, 16 October 2026: upload all outstanding D1Bound5 work and

@@ -1,6 +1,10 @@
-# Numerical verification
+# Numerical verification archive
 
-This directory contains executable checks and recorded outputs for the finite
+The current numerical supplement is maintained in the
+[article repository](https://github.com/tomislav-math/diophantine-tuples-bound-five/tree/main/verification).
+Use its guide to reproduce all eleven groups of checks.
+
+This directory preserves earlier executable checks and recorded outputs for the finite
 arithmetic and polynomial calculations in *A uniform bound of five for
 Diophantine tuples in imaginary quadratic integer rings*, by Zrinka Franušić
 and Tomislav Pejković.
@@ -12,10 +16,13 @@ retained because the existing programs verify their SHA-256 digests. Run
 relationship. Authors, funding, declarations, references and mathematics are
 unchanged.
 
-## Start here
+## Reproduce the archived checks
 
-Use Python 3.10 or newer. The current v4 checks, the complete historical v2
-enumerations and the focused v3 review use only the Python standard library.
+The labels v2, v3 and v4 identify successive working versions of the manuscript
+and the checks recorded for each version. They do not identify separate current
+releases.
+
+Use Python 3.10 or newer. These archived checks use only the Python standard library.
 Do not pass `-O`, because the checkers use assertions.
 
 From the repository root:
@@ -42,7 +49,7 @@ cp -R verification/review-v3 "$work/review-v3"
 ```
 
 The complete v2 run includes all 48 extension graphs up to modulus `10^550`,
-the exceptional-pair graphs in 1016 fields, and the ten small-triple closures.
+the graphs for the pair {-1,1} in 1016 fields, and the ten small-triple closures.
 These are bounded descent or continued-fraction computations, not searches
 through every lattice point in a disk of that radius.
 
@@ -56,7 +63,7 @@ the checkers record their original results.
 | Tail enumeration, counts 90/118/16/0, six orbits and determinant constants | `historical-v2/revision_v2/checks/structural_v2.py` |
 | Five finite approximation families, integrality, divisibility, determinant and coefficient identities, P/Q rows | `historical-v2/revision_v2/checks/approximation_exact.py` |
 | 72 small-pair classes and 48 graphs through modulus `10^550` | `historical-v2/revision_v2/checks/small_v2_exact.py pairs` |
-| Exceptional pair, 1016 fields and Pell enumeration | `historical-v2/revision_v2/checks/small_v2_exact.py pell` |
+| Pair {-1,1}, 1016 fields and Pell enumeration | `historical-v2/revision_v2/checks/small_v2_exact.py pell` |
 | Small triples and closures through `10^40` | `historical-v2/revision_v2/checks/small_v2_exact.py triples` |
 | Section 7 transformation identities and constants | `historical-v2/revision_v2/checks/small_v2_constants.py` |
 | Five regions, 40 pair representatives, 41 coefficient tuples, overlaps, 57 triples and final cutoffs | `v4/revision_v4/checks/completion_v4.py` |
@@ -78,7 +85,7 @@ are not part of this computational supplement.
 The archived complete historical runs give:
 
 - 48 graphs with 36,931 vertices, 36,854 edges and no triangles.
-- 1,016 exceptional-pair fields, 409 nonempty graphs, 19,612 vertices,
+- 1,016 fields for the pair {-1,1}, 409 nonempty graphs, 19,612 vertices,
   9,806 edges and no triangles.
 - Ten small-triple closure sizes
   `61, 89, 64, 105, 71, 112, 112, 57, 83, 55`.
