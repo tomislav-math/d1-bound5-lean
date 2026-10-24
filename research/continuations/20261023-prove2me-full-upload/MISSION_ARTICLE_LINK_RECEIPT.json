@@ -1,0 +1,165 @@
+{
+  "schema": 1,
+  "started_at": "2026-10-24T00:05:41Z",
+  "authorization": "User requested a visible link to the article GitHub page on the private Prove2Me mission; no publication and no article repository edits.",
+  "official_documentation": "https://github.com/prove2me/prove2me_workspace/blob/main/references/mission_captain.md#edit-a-live-mission",
+  "article_url": "https://github.com/tomislav-math/diophantine-tuples-bound-five",
+  "article_title": "A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings",
+  "article_repository_public_verified": true,
+  "mission_id": "458763a2-e999-4896-81fd-7915d24557a0",
+  "mission_page_url": "https://prove2.me/missions/458763a2-e999-4896-81fd-7915d24557a0",
+  "method": "PATCH",
+  "endpoint": "/missions/458763a2-e999-4896-81fd-7915d24557a0",
+  "before": {
+    "id": "458763a2-e999-4896-81fd-7915d24557a0",
+    "name": "No Diophantine sextuples in rings of integers of imaginary quadratic fields",
+    "description": "## Overview\n\nA Diophantine tuple, or $D(1)$-tuple, in a commutative ring with identity is a finite set of nonzero elements such that $ab+1$ is a square in the ring whenever $a$ and $b$ are distinct elements of the set. This project formalizes a uniform bound for $D(1)$-tuples in the full rings of integers of imaginary quadratic number fields. Every such tuple has at most five elements.\n\n## Mathematical setting\n\nLet $K$ be an imaginary quadratic number field, that is, an extension of $\\mathbb Q$ of degree two that admits no embedding into $\\mathbb R$. Let $\\mathcal O_K$ denote its full ring of integers, consisting of the elements of $K$ that are integral over $\\mathbb Z$.\n\nA finite set $S\\subseteq\\mathcal O_K\\setminus\\{0\\}$ is a $D(1)$-tuple if\n$$\n\\forall a,b\\in S,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in\\mathcal O_K,\\quad r^2=ab+1.\n$$\nThe value $ab+1=0$ is allowed, with $r=0$. Requiring the square roots to lie in $K$ instead of $\\mathcal O_K$ gives the same notion, since $\\mathcal O_K$ is integrally closed in $K$.\n\n## Main theorem\n\nFor every imaginary quadratic number field $K$ and every $D(1)$-tuple $S$ in $\\mathcal O_K$,\n$$\n|S|\\le 5.\n$$\nEquivalently, $\\mathcal O_K$ contains no $D(1)$-tuple with six elements.\n\n[Adžaga](https://doi.org/10.1142/S1664360719500206) established a uniform bound of $42$. Cipu and Fujita established bounds of [$24$ in 2024](https://doi.org/10.1112/blms.12929) and [$22$ in 2026](https://doi.org/10.1007/s00605-026-02233-y). Whether a $D(1)$-tuple with five elements exists in the ring of integers of any imaginary quadratic field remains an open question ([Dujella, Problem 1.11](https://web.math.pmf.unizg.hr/~duje/pdf/open2.pdf)).\n\n## Scope\n\nThe theorem concerns the full ring of integers in every case. In particular, for a positive squarefree integer $d\\equiv3\\pmod4$, it applies to $K=\\mathbb Q(\\sqrt{-d})$, whose ring of integers strictly contains $\\mathbb Z[\\sqrt{-d}]$. No further hypotheses are imposed on the entries.\n\n## Lean formalization\n\nThe Lean 4 development `D1Bound5` uses mathlib's full ring of integers `𝓞 K`. Its main declaration is `D1Bound5.main_statement`, whose type is `D1Bound5.MainStatement`.\n\nThe proposition `D1Bound5.MainStatement` quantifies over types `K` with instances `Field K`, `NumberField K` and `NumberField.IsTotallyComplex K`, subject to `Module.finrank ℚ K = 2`, and over finite sets `A : Finset (𝓞 K)`. It asserts `A.card ≤ 5` whenever `D1Bound5.IsD1 A` holds. The definition `D1Bound5.IsD1` requires every member to be nonzero and, for distinct members `x` and `y`, a witness `r` in the same ring satisfying `r * r = x * y + 1`.\n\n## Reference and source code\n\nZrinka Franušić and Tomislav Pejković, *[A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)*, preprint, 2026.\n\n[Lean formalization](https://github.com/tomislav-math/d1-bound5-lean)\n",
+    "created_at": "2026-10-23T15:52:54.357981+00:00",
+    "mission_type": "ResearchPaper",
+    "visibility": "private",
+    "release_requested_at": null,
+    "fields": [
+      {
+        "id": "e76e77ab-38dd-426d-a533-0b37fb6dbabc",
+        "slug": "number-theory",
+        "name": "Number Theory"
+      }
+    ],
+    "creator": {
+      "id": "984a2865-cb31-427e-96f8-229b0b32fb6a",
+      "username": "tp"
+    },
+    "main_theorem": {
+      "theorem_id": "4bb5d407-713b-46ac-967d-97d7abf88598",
+      "theorem_name": "D1Bound5.main_statement",
+      "theorem_title": "No Diophantine sextuples in imaginary quadratic integer rings",
+      "formal_statement": "theorem D1Bound5.main_statement : MainStatement.{u} := by sorry\n",
+      "natural_language_statement": "Let $K$ be an imaginary quadratic number field and let $\\mathcal O_K$ be its full ring of integers. Let $A\\subseteq\\mathcal O_K\\setminus\\{0\\}$ be finite. Suppose that, for every pair of distinct elements $a,b\\in A$, there exists $r\\in\\mathcal O_K$ such that $r^2=ab+1$. Then\n$$\n|A|\\le 5.\n$$\nEquivalently, no full ring of integers of an imaginary quadratic field contains a Diophantine sextuple. The bound is uniform over all imaginary quadratic fields, including $K=\\mathbb Q(\\sqrt{-d})$ with $d>0$ squarefree and $d\\equiv3\\pmod4$, for which $\\mathcal O_K$ strictly contains $\\mathbb Z[\\sqrt{-d}]$. The case $ab+1=0$ is allowed, with $r=0$.",
+      "status": "Open",
+      "deprecated_at": null
+    }
+  },
+  "before_sha256": "908d0a0d32079514824a68dd216f9467670a6dbbb64c3566dce43424bfae4293",
+  "root_before": {
+    "theorem_id": "4bb5d407-713b-46ac-967d-97d7abf88598",
+    "theorem_name": "D1Bound5.main_statement",
+    "theorem_title": "No Diophantine sextuples in imaginary quadratic integer rings",
+    "status": "Open",
+    "formal_statement": "theorem D1Bound5.main_statement : MainStatement.{u} := by sorry\n",
+    "natural_language_statement": "Let $K$ be an imaginary quadratic number field and let $\\mathcal O_K$ be its full ring of integers. Let $A\\subseteq\\mathcal O_K\\setminus\\{0\\}$ be finite. Suppose that, for every pair of distinct elements $a,b\\in A$, there exists $r\\in\\mathcal O_K$ such that $r^2=ab+1$. Then\n$$\n|A|\\le 5.\n$$\nEquivalently, no full ring of integers of an imaginary quadratic field contains a Diophantine sextuple. The bound is uniform over all imaginary quadratic fields, including $K=\\mathbb Q(\\sqrt{-d})$ with $d>0$ squarefree and $d\\equiv3\\pmod4$, for which $\\mathcal O_K$ strictly contains $\\mathbb Z[\\sqrt{-d}]$. The case $ab+1=0$ is allowed, with $r=0$.",
+    "created_at": "2026-10-23T15:04:42.107575+00:00",
+    "vote_count": 0,
+    "tags": [
+      "d1bound5",
+      "diophantine-tuples",
+      "number-theory"
+    ],
+    "preamble": "import Definitions.Def_D1Bound5_MainStatement\n\nopen scoped NumberField\nopen Module\n\nuniverse u\n\nopen D1Bound5\n\nset_option autoImplicit false\n\n",
+    "source": "Zrinka Franušić and Tomislav Pejković, A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings, preprint, 2026, Theorem 1.1. Article and verification material: https://github.com/tomislav-math/diophantine-tuples-bound-five\n\nFormal proposition D1Bound5.MainStatement in the canonical D1Bound5/Specification.lean file: https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Specification.lean#L13-L16\n\nLean source repository: https://github.com/tomislav-math/d1-bound5-lean",
+    "deprecated_at": null,
+    "deprecated_by": null,
+    "visibility": "private",
+    "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "audits": [],
+    "readback": null
+  },
+  "root_before_sha256": "b61086f3b7ee600bdda91e11bc1ab2689c752cd783f12a4bbcc0acd75a60811f",
+  "request": {
+    "description": "## Overview\n\nThe source article is [*A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*](https://github.com/tomislav-math/diophantine-tuples-bound-five) by Zrinka Franušić and Tomislav Pejković.\n\nA Diophantine tuple, or $D(1)$-tuple, in a commutative ring with identity is a finite set of nonzero elements such that $ab+1$ is a square in the ring whenever $a$ and $b$ are distinct elements of the set. This project formalizes a uniform bound for $D(1)$-tuples in the full rings of integers of imaginary quadratic number fields. Every such tuple has at most five elements.\n\n## Mathematical setting\n\nLet $K$ be an imaginary quadratic number field, that is, an extension of $\\mathbb Q$ of degree two that admits no embedding into $\\mathbb R$. Let $\\mathcal O_K$ denote its full ring of integers, consisting of the elements of $K$ that are integral over $\\mathbb Z$.\n\nA finite set $S\\subseteq\\mathcal O_K\\setminus\\{0\\}$ is a $D(1)$-tuple if\n$$\n\\forall a,b\\in S,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in\\mathcal O_K,\\quad r^2=ab+1.\n$$\nThe value $ab+1=0$ is allowed, with $r=0$. Requiring the square roots to lie in $K$ instead of $\\mathcal O_K$ gives the same notion, since $\\mathcal O_K$ is integrally closed in $K$.\n\n## Main theorem\n\nFor every imaginary quadratic number field $K$ and every $D(1)$-tuple $S$ in $\\mathcal O_K$,\n$$\n|S|\\le 5.\n$$\nEquivalently, $\\mathcal O_K$ contains no $D(1)$-tuple with six elements.\n\n[Adžaga](https://doi.org/10.1142/S1664360719500206) established a uniform bound of $42$. Cipu and Fujita established bounds of [$24$ in 2024](https://doi.org/10.1112/blms.12929) and [$22$ in 2026](https://doi.org/10.1007/s00605-026-02233-y). Whether a $D(1)$-tuple with five elements exists in the ring of integers of any imaginary quadratic field remains an open question ([Dujella, Problem 1.11](https://web.math.pmf.unizg.hr/~duje/pdf/open2.pdf)).\n\n## Scope\n\nThe theorem concerns the full ring of integers in every case. In particular, for a positive squarefree integer $d\\equiv3\\pmod4$, it applies to $K=\\mathbb Q(\\sqrt{-d})$, whose ring of integers strictly contains $\\mathbb Z[\\sqrt{-d}]$. No further hypotheses are imposed on the entries.\n\n## Lean formalization\n\nThe Lean 4 development `D1Bound5` uses mathlib's full ring of integers `𝓞 K`. Its main declaration is `D1Bound5.main_statement`, whose type is `D1Bound5.MainStatement`.\n\nThe proposition `D1Bound5.MainStatement` quantifies over types `K` with instances `Field K`, `NumberField K` and `NumberField.IsTotallyComplex K`, subject to `Module.finrank ℚ K = 2`, and over finite sets `A : Finset (𝓞 K)`. It asserts `A.card ≤ 5` whenever `D1Bound5.IsD1 A` holds. The definition `D1Bound5.IsD1` requires every member to be nonzero and, for distinct members `x` and `y`, a witness `r` in the same ring satisfying `r * r = x * y + 1`.\n\n## Reference and source code\n\nZrinka Franušić and Tomislav Pejković, *[A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)*, preprint, 2026.\n\n[Lean formalization](https://github.com/tomislav-math/d1-bound5-lean)\n"
+  },
+  "request_sha256": "96289830486a17fc7db053c1eee5376c5db58a9aa788bae39afa260de526c397",
+  "added_paragraph": "The source article is [*A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*](https://github.com/tomislav-math/diophantine-tuples-bound-five) by Zrinka Franušić and Tomislav Pejković.\n\n",
+  "status": "VERIFIED",
+  "response": {
+    "id": "458763a2-e999-4896-81fd-7915d24557a0",
+    "name": "No Diophantine sextuples in rings of integers of imaginary quadratic fields",
+    "description": "## Overview\n\nThe source article is [*A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*](https://github.com/tomislav-math/diophantine-tuples-bound-five) by Zrinka Franušić and Tomislav Pejković.\n\nA Diophantine tuple, or $D(1)$-tuple, in a commutative ring with identity is a finite set of nonzero elements such that $ab+1$ is a square in the ring whenever $a$ and $b$ are distinct elements of the set. This project formalizes a uniform bound for $D(1)$-tuples in the full rings of integers of imaginary quadratic number fields. Every such tuple has at most five elements.\n\n## Mathematical setting\n\nLet $K$ be an imaginary quadratic number field, that is, an extension of $\\mathbb Q$ of degree two that admits no embedding into $\\mathbb R$. Let $\\mathcal O_K$ denote its full ring of integers, consisting of the elements of $K$ that are integral over $\\mathbb Z$.\n\nA finite set $S\\subseteq\\mathcal O_K\\setminus\\{0\\}$ is a $D(1)$-tuple if\n$$\n\\forall a,b\\in S,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in\\mathcal O_K,\\quad r^2=ab+1.\n$$\nThe value $ab+1=0$ is allowed, with $r=0$. Requiring the square roots to lie in $K$ instead of $\\mathcal O_K$ gives the same notion, since $\\mathcal O_K$ is integrally closed in $K$.\n\n## Main theorem\n\nFor every imaginary quadratic number field $K$ and every $D(1)$-tuple $S$ in $\\mathcal O_K$,\n$$\n|S|\\le 5.\n$$\nEquivalently, $\\mathcal O_K$ contains no $D(1)$-tuple with six elements.\n\n[Adžaga](https://doi.org/10.1142/S1664360719500206) established a uniform bound of $42$. Cipu and Fujita established bounds of [$24$ in 2024](https://doi.org/10.1112/blms.12929) and [$22$ in 2026](https://doi.org/10.1007/s00605-026-02233-y). Whether a $D(1)$-tuple with five elements exists in the ring of integers of any imaginary quadratic field remains an open question ([Dujella, Problem 1.11](https://web.math.pmf.unizg.hr/~duje/pdf/open2.pdf)).\n\n## Scope\n\nThe theorem concerns the full ring of integers in every case. In particular, for a positive squarefree integer $d\\equiv3\\pmod4$, it applies to $K=\\mathbb Q(\\sqrt{-d})$, whose ring of integers strictly contains $\\mathbb Z[\\sqrt{-d}]$. No further hypotheses are imposed on the entries.\n\n## Lean formalization\n\nThe Lean 4 development `D1Bound5` uses mathlib's full ring of integers `𝓞 K`. Its main declaration is `D1Bound5.main_statement`, whose type is `D1Bound5.MainStatement`.\n\nThe proposition `D1Bound5.MainStatement` quantifies over types `K` with instances `Field K`, `NumberField K` and `NumberField.IsTotallyComplex K`, subject to `Module.finrank ℚ K = 2`, and over finite sets `A : Finset (𝓞 K)`. It asserts `A.card ≤ 5` whenever `D1Bound5.IsD1 A` holds. The definition `D1Bound5.IsD1` requires every member to be nonzero and, for distinct members `x` and `y`, a witness `r` in the same ring satisfying `r * r = x * y + 1`.\n\n## Reference and source code\n\nZrinka Franušić and Tomislav Pejković, *[A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)*, preprint, 2026.\n\n[Lean formalization](https://github.com/tomislav-math/d1-bound5-lean)\n",
+    "created_at": "2026-10-23T15:52:54.357981+00:00",
+    "mission_type": "ResearchPaper",
+    "visibility": "private",
+    "release_requested_at": null,
+    "fields": [
+      {
+        "id": "e76e77ab-38dd-426d-a533-0b37fb6dbabc",
+        "slug": "number-theory",
+        "name": "Number Theory"
+      }
+    ],
+    "creator": {
+      "id": "984a2865-cb31-427e-96f8-229b0b32fb6a",
+      "username": "tp"
+    },
+    "main_theorem": {
+      "theorem_id": "4bb5d407-713b-46ac-967d-97d7abf88598",
+      "theorem_name": "D1Bound5.main_statement",
+      "theorem_title": "No Diophantine sextuples in imaginary quadratic integer rings",
+      "formal_statement": "theorem D1Bound5.main_statement : MainStatement.{u} := by sorry\n",
+      "natural_language_statement": "Let $K$ be an imaginary quadratic number field and let $\\mathcal O_K$ be its full ring of integers. Let $A\\subseteq\\mathcal O_K\\setminus\\{0\\}$ be finite. Suppose that, for every pair of distinct elements $a,b\\in A$, there exists $r\\in\\mathcal O_K$ such that $r^2=ab+1$. Then\n$$\n|A|\\le 5.\n$$\nEquivalently, no full ring of integers of an imaginary quadratic field contains a Diophantine sextuple. The bound is uniform over all imaginary quadratic fields, including $K=\\mathbb Q(\\sqrt{-d})$ with $d>0$ squarefree and $d\\equiv3\\pmod4$, for which $\\mathcal O_K$ strictly contains $\\mathbb Z[\\sqrt{-d}]$. The case $ab+1=0$ is allowed, with $r=0$.",
+      "status": "Open"
+    }
+  },
+  "response_sha256": "00bc323dfbbbc9f6665f2e89dcfe249935c57c7042c26a93f5616957e11bc617",
+  "after": {
+    "id": "458763a2-e999-4896-81fd-7915d24557a0",
+    "name": "No Diophantine sextuples in rings of integers of imaginary quadratic fields",
+    "description": "## Overview\n\nThe source article is [*A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings*](https://github.com/tomislav-math/diophantine-tuples-bound-five) by Zrinka Franušić and Tomislav Pejković.\n\nA Diophantine tuple, or $D(1)$-tuple, in a commutative ring with identity is a finite set of nonzero elements such that $ab+1$ is a square in the ring whenever $a$ and $b$ are distinct elements of the set. This project formalizes a uniform bound for $D(1)$-tuples in the full rings of integers of imaginary quadratic number fields. Every such tuple has at most five elements.\n\n## Mathematical setting\n\nLet $K$ be an imaginary quadratic number field, that is, an extension of $\\mathbb Q$ of degree two that admits no embedding into $\\mathbb R$. Let $\\mathcal O_K$ denote its full ring of integers, consisting of the elements of $K$ that are integral over $\\mathbb Z$.\n\nA finite set $S\\subseteq\\mathcal O_K\\setminus\\{0\\}$ is a $D(1)$-tuple if\n$$\n\\forall a,b\\in S,\\quad a\\ne b\\ \\Longrightarrow\\ \\exists r\\in\\mathcal O_K,\\quad r^2=ab+1.\n$$\nThe value $ab+1=0$ is allowed, with $r=0$. Requiring the square roots to lie in $K$ instead of $\\mathcal O_K$ gives the same notion, since $\\mathcal O_K$ is integrally closed in $K$.\n\n## Main theorem\n\nFor every imaginary quadratic number field $K$ and every $D(1)$-tuple $S$ in $\\mathcal O_K$,\n$$\n|S|\\le 5.\n$$\nEquivalently, $\\mathcal O_K$ contains no $D(1)$-tuple with six elements.\n\n[Adžaga](https://doi.org/10.1142/S1664360719500206) established a uniform bound of $42$. Cipu and Fujita established bounds of [$24$ in 2024](https://doi.org/10.1112/blms.12929) and [$22$ in 2026](https://doi.org/10.1007/s00605-026-02233-y). Whether a $D(1)$-tuple with five elements exists in the ring of integers of any imaginary quadratic field remains an open question ([Dujella, Problem 1.11](https://web.math.pmf.unizg.hr/~duje/pdf/open2.pdf)).\n\n## Scope\n\nThe theorem concerns the full ring of integers in every case. In particular, for a positive squarefree integer $d\\equiv3\\pmod4$, it applies to $K=\\mathbb Q(\\sqrt{-d})$, whose ring of integers strictly contains $\\mathbb Z[\\sqrt{-d}]$. No further hypotheses are imposed on the entries.\n\n## Lean formalization\n\nThe Lean 4 development `D1Bound5` uses mathlib's full ring of integers `𝓞 K`. Its main declaration is `D1Bound5.main_statement`, whose type is `D1Bound5.MainStatement`.\n\nThe proposition `D1Bound5.MainStatement` quantifies over types `K` with instances `Field K`, `NumberField K` and `NumberField.IsTotallyComplex K`, subject to `Module.finrank ℚ K = 2`, and over finite sets `A : Finset (𝓞 K)`. It asserts `A.card ≤ 5` whenever `D1Bound5.IsD1 A` holds. The definition `D1Bound5.IsD1` requires every member to be nonzero and, for distinct members `x` and `y`, a witness `r` in the same ring satisfying `r * r = x * y + 1`.\n\n## Reference and source code\n\nZrinka Franušić and Tomislav Pejković, *[A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)*, preprint, 2026.\n\n[Lean formalization](https://github.com/tomislav-math/d1-bound5-lean)\n",
+    "created_at": "2026-10-23T15:52:54.357981+00:00",
+    "mission_type": "ResearchPaper",
+    "visibility": "private",
+    "release_requested_at": null,
+    "fields": [
+      {
+        "id": "e76e77ab-38dd-426d-a533-0b37fb6dbabc",
+        "slug": "number-theory",
+        "name": "Number Theory"
+      }
+    ],
+    "creator": {
+      "id": "984a2865-cb31-427e-96f8-229b0b32fb6a",
+      "username": "tp"
+    },
+    "main_theorem": {
+      "theorem_id": "4bb5d407-713b-46ac-967d-97d7abf88598",
+      "theorem_name": "D1Bound5.main_statement",
+      "theorem_title": "No Diophantine sextuples in imaginary quadratic integer rings",
+      "formal_statement": "theorem D1Bound5.main_statement : MainStatement.{u} := by sorry\n",
+      "natural_language_statement": "Let $K$ be an imaginary quadratic number field and let $\\mathcal O_K$ be its full ring of integers. Let $A\\subseteq\\mathcal O_K\\setminus\\{0\\}$ be finite. Suppose that, for every pair of distinct elements $a,b\\in A$, there exists $r\\in\\mathcal O_K$ such that $r^2=ab+1$. Then\n$$\n|A|\\le 5.\n$$\nEquivalently, no full ring of integers of an imaginary quadratic field contains a Diophantine sextuple. The bound is uniform over all imaginary quadratic fields, including $K=\\mathbb Q(\\sqrt{-d})$ with $d>0$ squarefree and $d\\equiv3\\pmod4$, for which $\\mathcal O_K$ strictly contains $\\mathbb Z[\\sqrt{-d}]$. The case $ab+1=0$ is allowed, with $r=0$.",
+      "status": "Open",
+      "deprecated_at": null
+    }
+  },
+  "after_sha256": "39f249ce7241be7fb3e0c8dbd7f415e7fcb9aa54313d4934d2d37291e7caf2da",
+  "root_after": {
+    "theorem_id": "4bb5d407-713b-46ac-967d-97d7abf88598",
+    "theorem_name": "D1Bound5.main_statement",
+    "theorem_title": "No Diophantine sextuples in imaginary quadratic integer rings",
+    "status": "Open",
+    "formal_statement": "theorem D1Bound5.main_statement : MainStatement.{u} := by sorry\n",
+    "natural_language_statement": "Let $K$ be an imaginary quadratic number field and let $\\mathcal O_K$ be its full ring of integers. Let $A\\subseteq\\mathcal O_K\\setminus\\{0\\}$ be finite. Suppose that, for every pair of distinct elements $a,b\\in A$, there exists $r\\in\\mathcal O_K$ such that $r^2=ab+1$. Then\n$$\n|A|\\le 5.\n$$\nEquivalently, no full ring of integers of an imaginary quadratic field contains a Diophantine sextuple. The bound is uniform over all imaginary quadratic fields, including $K=\\mathbb Q(\\sqrt{-d})$ with $d>0$ squarefree and $d\\equiv3\\pmod4$, for which $\\mathcal O_K$ strictly contains $\\mathbb Z[\\sqrt{-d}]$. The case $ab+1=0$ is allowed, with $r=0$.",
+    "created_at": "2026-10-23T15:04:42.107575+00:00",
+    "vote_count": 0,
+    "tags": [
+      "d1bound5",
+      "diophantine-tuples",
+      "number-theory"
+    ],
+    "preamble": "import Definitions.Def_D1Bound5_MainStatement\n\nopen scoped NumberField\nopen Module\n\nuniverse u\n\nopen D1Bound5\n\nset_option autoImplicit false\n\n",
+    "source": "Zrinka Franušić and Tomislav Pejković, A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings, preprint, 2026, Theorem 1.1. Article and verification material: https://github.com/tomislav-math/diophantine-tuples-bound-five\n\nFormal proposition D1Bound5.MainStatement in the canonical D1Bound5/Specification.lean file: https://github.com/tomislav-math/d1-bound5-lean/blob/1fe0adf1028af0e41ea578660c8d48875cde6588/D1Bound5/Specification.lean#L13-L16\n\nLean source repository: https://github.com/tomislav-math/d1-bound5-lean",
+    "deprecated_at": null,
+    "deprecated_by": null,
+    "visibility": "private",
+    "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "audits": [],
+    "readback": null
+  },
+  "root_after_sha256": "b61086f3b7ee600bdda91e11bc1ab2689c752cd783f12a4bbcc0acd75a60811f",
+  "changed_mission_keys": [
+    "description"
+  ],
+  "description_matches_request": true,
+  "existing_description_preserved": true,
+  "mission_remains_private": true,
+  "all_other_mission_fields_unchanged": true,
+  "root_entity_unchanged": true,
+  "completed_at": "2026-10-24T00:05:44Z"
+}

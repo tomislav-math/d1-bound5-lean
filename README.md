@@ -1,6 +1,8 @@
-# A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings
+# Lean 4 formalization: a uniform bound of five for Diophantine tuples in imaginary quadratic integer rings
 
-**Zrinka Franušić and Tomislav Pejković**
+This repository contains the **Lean 4 formalization** of the main theorem in
+[A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)
+by **Zrinka Franušić and Tomislav Pejković**.
 
 Manuscript: 15 October 2026. Lean formalization completed and verified: 23 October 2026.
 
@@ -19,7 +21,7 @@ replay through the Lean kernel have passed.
 
 | Material | Location |
 |---|---|
-| Paper | [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) · [LaTeX source](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
+| Paper | [Article repository](https://github.com/tomislav-math/diophantine-tuples-bound-five) · [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) · [LaTeX source](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
 | Main Lean theorem | [MainTheorem.lean](D1Bound5/MainTheorem.lean) |
 | Formal statement and definitions | [Specification.lean](D1Bound5/Specification.lean) · [Basic.lean](D1Bound5/Basic.lean) |
 | Reproduce the Lean verification | [Verification instructions](scripts/verification/README.md) |
