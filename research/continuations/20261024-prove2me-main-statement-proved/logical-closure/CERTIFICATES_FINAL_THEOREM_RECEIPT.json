@@ -1,0 +1,22 @@
+{
+  "theorem_id": "45a2590d-8e06-40fb-a833-d0e57e33fa34",
+  "theorem_name": "D1Bound5.pellFiniteCertificate_exists",
+  "theorem_title": "Pell Finite Certificate exists",
+  "status": "Proved",
+  "formal_statement": "section\nnamespace D1Bound5\nset_option maxRecDepth 32768\nset_option maxHeartbeats 12000000\n\n\n\n\n\n\n\n\n\n\n\n\ntheorem _root_.D1Bound5.pellFiniteCertificate_exists (d : ℤ) (hd : 7 ≤ d) (hupper : d < 10000)\n    (hmod : d % 8 = 7) (hsq : Squarefree d) :\n    Nonempty (PellFiniteCertificate d (10^275)) := by sorry\n\nend D1Bound5\nend\n",
+  "natural_language_statement": "All 1016 eligible parameters have complete, kernel-checked certificates. The excluded cases have explicit nonunit square divisors, so the coverage proof does not trust the Python squarefree predicate.",
+  "created_at": "2026-10-23T23:31:15.917+00:00",
+  "vote_count": 0,
+  "tags": [
+    "diophantine-tuples",
+    "number-theory"
+  ],
+  "preamble": "import Init\nimport Lean.Elab.Tactic.Omega\nimport Mathlib.Algebra.Group.Int.Units\nimport Mathlib.Algebra.Polynomial.Monic\nimport Mathlib.Algebra.QuadraticAlgebra.Basic\nimport Mathlib.Algebra.Ring.Basic\nimport Mathlib.Algebra.Ring.Equiv\nimport Mathlib.Algebra.Squarefree.Basic\nimport Mathlib.Analysis.Complex.Norm\nimport Mathlib.Data.Finset.Card\nimport Mathlib.Data.Fintype.EquivFin\nimport Mathlib.Data.Int.GCD\nimport Mathlib.Data.Int.Sqrt\nimport Mathlib.Data.List.Defs\nimport Mathlib.Data.Rat.Lemmas\nimport Mathlib.Data.ZMod.Basic\nimport Mathlib.LinearAlgebra.Dimension.Free\nimport Mathlib.NumberTheory.DiophantineApproximation.Basic\nimport Mathlib.NumberTheory.NumberField.InfinitePlace.TotallyRealComplex\nimport Mathlib.NumberTheory.NumberField.Norm\nimport Mathlib.NumberTheory.Real.Irrational\nimport Mathlib.RingTheory.Coprime.Lemmas\nimport Mathlib.RingTheory.Int.Basic\nimport Mathlib.Tactic\nimport Mathlib.Tactic.GCongr\nimport Mathlib.Tactic.IntervalCases\nimport Mathlib.Tactic.Linarith\nimport Mathlib.Tactic.LinearCombination\nimport Mathlib.Tactic.NormNum\nimport Mathlib.Tactic.Ring\nimport Definitions.Def_D1Bound5_PellFiniteCertificate_Definitions\nimport Definitions.Def_D1Bound5_UnitPairArithmeticModel_Definitions\n\n",
+  "source": "D1Bound5/PellFiniteFields.lean, lines 91-110, SHA-256 352c30df17c6d6e5a3b765a23814fee880412e130767d7c10f6bf24c2c1ef96d. Project: https://github.com/tomislav-math/d1-bound5-lean",
+  "deprecated_at": null,
+  "deprecated_by": null,
+  "visibility": "private",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "audits": [],
+  "readback": null
+}
