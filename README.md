@@ -1,4 +1,4 @@
-# Lean 4 formalization: a uniform bound of five for Diophantine tuples in imaginary quadratic integer rings
+# Lean 4 formalization of the uniform bound of five for Diophantine tuples in imaginary quadratic integer rings
 
 This repository contains the **Lean 4 formalization** of the main theorem in
 [A uniform bound of five for Diophantine tuples in imaginary quadratic integer rings](https://github.com/tomislav-math/diophantine-tuples-bound-five)
@@ -13,15 +13,20 @@ pair of distinct elements $a,b\in A$, then
 $$|A|\leq 5.$$
 
 The result holds uniformly for the **full ring of integers** of every imaginary
-quadratic field, including the half-integral basis cases.
+quadratic field, including the half-integral basis cases. The square value zero
+is allowed.
 
 The Lean theorem is `D1Bound5.main_statement : D1Bound5.MainStatement`.
 Its complete dependency build, exact statement and axiom checks, and fresh
 replay through the Lean kernel have passed.
 
+The [main theorem on Prove2Me](https://prove2.me/theorems/4bb5d407-713b-46ac-967d-97d7abf88598)
+has status **Proved**. Verification on Prove2Me was completed on 24 October 2026.
+
 | Material | Location |
 |---|---|
 | Paper | [Article repository](https://github.com/tomislav-math/diophantine-tuples-bound-five) · [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) · [LaTeX source](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
+| Prove2Me | [Project](https://prove2.me/missions/458763a2-e999-4896-81fd-7915d24557a0) · [Verified main theorem](https://prove2.me/theorems/4bb5d407-713b-46ac-967d-97d7abf88598) |
 | Main Lean theorem | [MainTheorem.lean](D1Bound5/MainTheorem.lean) |
 | Formal statement and definitions | [Specification.lean](D1Bound5/Specification.lean) · [Basic.lean](D1Bound5/Basic.lean) |
 | Reproduce the Lean verification | [Verification instructions](scripts/verification/README.md) |
@@ -31,4 +36,3 @@ replay through the Lean kernel have passed.
 The project uses **Lean 4.33.1**. Exact Lean and mathlib versions are pinned in
 [lean-toolchain](lean-toolchain), [lakefile.lean](lakefile.lean), and
 [lake-manifest.json](lake-manifest.json).
-
