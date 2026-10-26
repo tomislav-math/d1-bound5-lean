@@ -26,7 +26,7 @@ has status **Proved**. The formalization was completed on 24 October 2026.
 | Material | Location |
 |---|---|
 | Paper | [Article repository](https://github.com/tomislav-math/diophantine-tuples-bound-five) · [PDF](paper/Diophantine_tuples_bound_five_2026-10-15.pdf) · [LaTeX source](paper/Diophantine_tuples_bound_five_2026-10-15.tex) |
-| Prove2Me | [Project](https://prove2.me/missions/458763a2-e999-4896-81fd-7915d24557a0) · [Verified main theorem](https://prove2.me/theorems/4bb5d407-713b-46ac-967d-97d7abf88598) |
+| Prove2Me | [Project](https://prove2.me/missions/No_Diophantine_sextuples_in_rings_of_integers_of_imaginary_quadratic_fields) · [Verified main theorem](https://prove2.me/theorems/4bb5d407-713b-46ac-967d-97d7abf88598) |
 | Main Lean theorem | [MainTheorem.lean](D1Bound5/MainTheorem.lean) |
 | Formal statement and definitions | [Specification.lean](D1Bound5/Specification.lean) · [Basic.lean](D1Bound5/Basic.lean) |
 | Reproduce the Lean verification | [Verification instructions](scripts/verification/README.md) |
